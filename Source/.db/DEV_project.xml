@@ -1,0 +1,15 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<name>DrovioCore</name>
+		<title>Drovio Core</title>
+		<description>DrovIO Core is a number of libraries that support the entire platform. It has mulitple layers for each service and all that layers are the DrovIO's API.
+Some API Services are available to the public through the App Engine. All services are available to the Core and Module Developers.</description>
+		<projectType>1</projectType>
+		<team_id>6</team_id>
+		<online>1</online>
+		<open>0</open>
+		<public>0</public>
+	</ROW>
+</DATA>

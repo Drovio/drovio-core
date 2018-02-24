@@ -1,0 +1,5084 @@
+<DATA>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>1</build>
+		<time>1390211785</time>
+		<title>Initial Development Core Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>2</build>
+		<time>1390233994</time>
+		<title>New Development Core Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>3</build>
+		<time>1390290841</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>4</build>
+		<time>1390319209</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>5</build>
+		<time>1390380891</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>6</build>
+		<time>1390402337</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>7</build>
+		<time>1390464401</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>8</build>
+		<time>1390468214</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>9</build>
+		<time>1390468546</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>10</build>
+		<time>1390479654</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>11</build>
+		<time>1390548883</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>12</build>
+		<time>1390577896</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>13</build>
+		<time>1390808959</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>14</build>
+		<time>1390894079</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>15</build>
+		<time>1390898537</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>16</build>
+		<time>1390985372</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>17</build>
+		<time>1390986674</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>18</build>
+		<time>1391076029</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>19</build>
+		<time>1391077236</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>20</build>
+		<time>1391077447</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>21</build>
+		<time>1391162609</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>22</build>
+		<time>1391507012</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>23</build>
+		<time>1391689325</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>24</build>
+		<time>1391774973</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>25</build>
+		<time>1392018398</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>26</build>
+		<time>1392106685</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>27</build>
+		<time>1392110458</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>28</build>
+		<time>1392194156</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>29</build>
+		<time>1392216771</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>30</build>
+		<time>1392364682</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>31</build>
+		<time>1392453327</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>32</build>
+		<time>1392618462</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>33</build>
+		<time>1392719298</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>34</build>
+		<time>1392794963</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>35</build>
+		<time>1392882342</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>36</build>
+		<time>1392892366</time>
+		<title>Updating Release index structure.</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>37</build>
+		<time>1392892742</time>
+		<title>Clear release index structure.</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>38</build>
+		<time>1392908189</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>39</build>
+		<time>1392992686</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>40</build>
+		<time>1393490053</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>41</build>
+		<time>1393572342</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>42</build>
+		<time>1394550073</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>43</build>
+		<time>1395128315</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>44</build>
+		<time>1395128659</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>45</build>
+		<time>1395136469</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>46</build>
+		<time>1395136778</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>47</build>
+		<time>1395231063</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>48</build>
+		<time>1395656977</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>49</build>
+		<time>1395822731</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>50</build>
+		<time>1395823808</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>51</build>
+		<time>1395846240</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>52</build>
+		<time>1395910150</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>53</build>
+		<time>1396000427</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>54</build>
+		<time>1396025188</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>55</build>
+		<time>1396025906</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>56</build>
+		<time>1396077012</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>57</build>
+		<time>1396081198</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>58</build>
+		<time>1396092510</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>59</build>
+		<time>1396250711</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>60</build>
+		<time>1396360821</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>61</build>
+		<time>1396360929</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>62</build>
+		<time>1396361059</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>63</build>
+		<time>1396430009</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>64</build>
+		<time>1396430205</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>65</build>
+		<time>1396514157</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>66</build>
+		<time>1396514307</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>67</build>
+		<time>1396593346</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>68</build>
+		<time>1396593458</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>69</build>
+		<time>1396602339</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>70</build>
+		<time>1396603000</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>71</build>
+		<time>1396744338</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>72</build>
+		<time>1396869308</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>73</build>
+		<time>1396886816</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>74</build>
+		<time>1396936659</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>75</build>
+		<time>1396994061</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>76</build>
+		<time>1397048288</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>77</build>
+		<time>1397112384</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>78</build>
+		<time>1397112634</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>79</build>
+		<time>1397118153</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>80</build>
+		<time>1397121491</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>81</build>
+		<time>1397128394</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>82</build>
+		<time>1397141957</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>83</build>
+		<time>1397239943</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>84</build>
+		<time>1397241435</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>85</build>
+		<time>1397241679</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>86</build>
+		<time>1397303679</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>87</build>
+		<time>1397470976</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>88</build>
+		<time>1397640272</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>89</build>
+		<time>1397740345</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>90</build>
+		<time>1397743623</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>91</build>
+		<time>1398435929</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>92</build>
+		<time>1398436109</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>93</build>
+		<time>1398755817</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>94</build>
+		<time>1398965357</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>95</build>
+		<time>1399147274</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>96</build>
+		<time>1399361772</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>97</build>
+		<time>1399450077</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>98</build>
+		<time>1399450449</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>99</build>
+		<time>1399718605</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>100</build>
+		<time>1399724603</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>101</build>
+		<time>1399727715</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>102</build>
+		<time>1399728883</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>103</build>
+		<time>1399729231</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>104</build>
+		<time>1399732898</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>105</build>
+		<time>1399743482</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>106</build>
+		<time>1399961877</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>107</build>
+		<time>1399962979</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>108</build>
+		<time>1400052608</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>109</build>
+		<time>1400246348</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>110</build>
+		<time>1400573171</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>111</build>
+		<time>1400740386</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>112</build>
+		<time>1400852577</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>113</build>
+		<time>1400870154</time>
+		<title>Development Release - SDK Bug Fixes</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>114</build>
+		<time>1400919945</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>115</build>
+		<time>1401206016</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>116</build>
+		<time>1401364580</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>117</build>
+		<time>1402472634</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>118</build>
+		<time>1402472998</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>119</build>
+		<time>1402475111</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>120</build>
+		<time>1402488020</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>121</build>
+		<time>1402900250</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>122</build>
+		<time>1402901688</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>123</build>
+		<time>1403020681</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>124</build>
+		<time>1403597523</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>125</build>
+		<time>1404116147</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>126</build>
+		<time>1404120114</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>127</build>
+		<time>1404215275</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>128</build>
+		<time>1404215403</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>129</build>
+		<time>1404229877</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>130</build>
+		<time>1404288783</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>131</build>
+		<time>1404491140</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>132</build>
+		<time>1404815036</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>133</build>
+		<time>1404828591</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>134</build>
+		<time>1404915623</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>135</build>
+		<time>1405060245</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>136</build>
+		<time>1405082722</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>137</build>
+		<time>1405103708</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>138</build>
+		<time>1405175317</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>139</build>
+		<time>1405414553</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>140</build>
+		<time>1405509135</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>141</build>
+		<time>1405667822</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>142</build>
+		<time>1406053745</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>143</build>
+		<time>1406475519</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>144</build>
+		<time>1406616674</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>145</build>
+		<time>1406714365</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>146</build>
+		<time>1406827930</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>147</build>
+		<time>1406913240</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>148</build>
+		<time>1406916685</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>149</build>
+		<time>1407412461</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>150</build>
+		<time>1407508135</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>151</build>
+		<time>1407509544</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>152</build>
+		<time>1407509744</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>153</build>
+		<time>1407786609</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>154</build>
+		<time>1407959036</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>155</build>
+		<time>1408034604</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>156</build>
+		<time>1408137339</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>157</build>
+		<time>1408519997</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>158</build>
+		<time>1408705716</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>159</build>
+		<time>1408901010</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>160</build>
+		<time>1408965137</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>161</build>
+		<time>1409304075</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>162</build>
+		<time>1409310354</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>163</build>
+		<time>1409757502</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>164</build>
+		<time>1409903181</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>165</build>
+		<time>1409907685</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>166</build>
+		<time>1410246189</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>167</build>
+		<time>1410332975</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>168</build>
+		<time>1410457521</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>169</build>
+		<time>1410606033</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>170</build>
+		<time>1410880242</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>171</build>
+		<time>1411022929</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>172</build>
+		<time>1411200991</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>173</build>
+		<time>1411369984</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>174</build>
+		<time>1411992579</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>175</build>
+		<time>1412077398</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>176</build>
+		<time>1412173110</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>177</build>
+		<time>1412592676</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>178</build>
+		<time>1412595374</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>179</build>
+		<time>1413304841</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>180</build>
+		<time>1413875975</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>181</build>
+		<time>1413987311</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>182</build>
+		<time>1414137687</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>183</build>
+		<time>1414593970</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>184</build>
+		<time>1415087896</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>185</build>
+		<time>1415275231</time>
+		<title>Development Release</title>
+		<description>Clean up the SDK from deprecated classes. Let's hope we don't have many crashes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>186</build>
+		<time>1415295015</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>187</build>
+		<time>1415463460</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.1</version>
+		<build>188</build>
+		<time>1415631697</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>1</build>
+		<time>1415779664</time>
+		<title>REST API Enabled Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>2</build>
+		<time>1415864395</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>3</build>
+		<time>1415981155</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>4</build>
+		<time>1416301338</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>5</build>
+		<time>1416302336</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>6</build>
+		<time>1416823104</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>7</build>
+		<time>1416941284</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>8</build>
+		<time>1417100598</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>9</build>
+		<time>1417159243</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>10</build>
+		<time>1417257408</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>11</build>
+		<time>1417261384</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>12</build>
+		<time>1417332988</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>13</build>
+		<time>1417334953</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>14</build>
+		<time>1417436208</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>15</build>
+		<time>1417611925</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>16</build>
+		<time>1417792089</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>17</build>
+		<time>1418133723</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>18</build>
+		<time>1418380349</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>19</build>
+		<time>1418806993</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>20</build>
+		<time>1418810282</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>21</build>
+		<time>1418829344</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>22</build>
+		<time>1418973754</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>23</build>
+		<time>1418978335</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>24</build>
+		<time>1418981701</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>25</build>
+		<time>1419237467</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>26</build>
+		<time>1419326862</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>27</build>
+		<time>1419861378</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>28</build>
+		<time>1419975933</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>29</build>
+		<time>1420200035</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>30</build>
+		<time>1420203112</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>31</build>
+		<time>1420217378</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>32</build>
+		<time>1420329407</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.2</version>
+		<build>33</build>
+		<time>1420470308</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>1</build>
+		<time>1420485212</time>
+		<title>New domain change release</title>
+		<description>All urls must be resolved to the new domain.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>2</build>
+		<time>1420540964</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>3</build>
+		<time>1420563143</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>4</build>
+		<time>1420632574</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>5</build>
+		<time>1420727439</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>6</build>
+		<time>1420970654</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>7</build>
+		<time>1420974054</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>8</build>
+		<time>1421064733</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>9</build>
+		<time>1421064929</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>10</build>
+		<time>1421167822</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>11</build>
+		<time>1421168065</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>12</build>
+		<time>1421224664</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>13</build>
+		<time>1421248113</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>14</build>
+		<time>1421410662</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>15</build>
+		<time>1421514084</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>16</build>
+		<time>1421514611</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>17</build>
+		<time>1421579247</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>18</build>
+		<time>1421761612</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>19</build>
+		<time>1421851624</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>20</build>
+		<time>1421940629</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>21</build>
+		<time>1422023050</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>22</build>
+		<time>1422028531</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>23</build>
+		<time>1422028754</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>24</build>
+		<time>1422031611</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>25</build>
+		<time>1422208353</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>26</build>
+		<time>1422274198</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>27</build>
+		<time>1422609985</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>28</build>
+		<time>1422950804</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>29</build>
+		<time>1423671111</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>30</build>
+		<time>1423825984</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>31</build>
+		<time>1424269168</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>32</build>
+		<time>1424271465</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>33</build>
+		<time>1424352569</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>34</build>
+		<time>1424353672</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>35</build>
+		<time>1424353929</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>36</build>
+		<time>1424421874</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>37</build>
+		<time>1424796135</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>38</build>
+		<time>1424964787</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>39</build>
+		<time>1425055433</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>40</build>
+		<time>1425394235</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>41</build>
+		<time>1425463616</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>42</build>
+		<time>1425480727</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.3</version>
+		<build>43</build>
+		<time>1425570384</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>1</build>
+		<time>1425718080</time>
+		<title>Moving to https - Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>2</build>
+		<time>1426092002</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>3</build>
+		<time>1426157617</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>4</build>
+		<time>1426248305</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>5</build>
+		<time>1426665951</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>6</build>
+		<time>1426666624</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>7</build>
+		<time>1427127676</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>8</build>
+		<time>1427638463</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>9</build>
+		<time>1427874515</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>10</build>
+		<time>1427987016</time>
+		<title>Development Release</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>11</build>
+		<time>1428476347</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>12</build>
+		<time>1429189301</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>13</build>
+		<time>1429629521</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>14</build>
+		<time>1429693375</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>15</build>
+		<time>1429794344</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>16</build>
+		<time>1429861045</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>17</build>
+		<time>1430378494</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>18</build>
+		<time>1430808563</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>19</build>
+		<time>1431251192</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>20</build>
+		<time>1431276080</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>21</build>
+		<time>1431333386</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>22</build>
+		<time>1431500736</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>23</build>
+		<time>1431515436</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>24</build>
+		<time>1431528855</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>25</build>
+		<time>1431536226</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>26</build>
+		<time>1431611669</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>27</build>
+		<time>1431770723</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>28</build>
+		<time>1431902282</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>29</build>
+		<time>1431947819</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>30</build>
+		<time>1431950203</time>
+		<title>Redback Core</title>
+		<description></description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>31</build>
+		<time>1432065904</time>
+		<title>Redback Core</title>
+		<description>Security Checks
+Module Loading</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>32</build>
+		<time>1432219157</time>
+		<title>Redback Core</title>
+		<description>Documentation manual for UI objects added.
+Reset.css added.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>33</build>
+		<time>1432536831</time>
+		<title>Redback Core</title>
+		<description>New loggers created.
+Project library enhancements.
+scss fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>34</build>
+		<time>1432628405</time>
+		<title>Redback Core</title>
+		<description>Async download feature added.
+Issues fixed.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>35</build>
+		<time>1432648116</time>
+		<title>Redback Core</title>
+		<description>Documentation fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>36</build>
+		<time>1432800840</time>
+		<title>Redback Core</title>
+		<description>Resource testing created.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>37</build>
+		<time>1432808338</time>
+		<title>Redback Core</title>
+		<description>Resources fixed to be exported uniform.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>38</build>
+		<time>1432808433</time>
+		<title>Redback Core</title>
+		<description>Resources fixed to be exported uniform.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>39</build>
+		<time>1432809647</time>
+		<title>Redback Core</title>
+		<description>Issues fixed in the project publish process.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>40</build>
+		<time>1432893965</time>
+		<title>Redback Core</title>
+		<description>Preview websites properly.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>41</build>
+		<time>1432900873</time>
+		<title>Redback Core</title>
+		<description>Resource readers updated.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>42</build>
+		<time>1433491108</time>
+		<title>Redback Core</title>
+		<description>Invitation mechanisms added.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>43</build>
+		<time>1433767509</time>
+		<title>Redback Core</title>
+		<description>Resource getters upgraded to interact with production library.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>44</build>
+		<time>1433863222</time>
+		<title>Redback Core</title>
+		<description>New structure for accounts and teams folders.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.4</version>
+		<build>45</build>
+		<time>1434117944</time>
+		<title>Redback Core</title>
+		<description>Security fixes.
+Support for account profile image.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>1</build>
+		<time>1434551678</time>
+		<title>DrovIO Core</title>
+		<description>Migration from Redback.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>2</build>
+		<time>1434800227</time>
+		<title>DrovIO Core</title>
+		<description>Migration continues.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>3</build>
+		<time>1435172794</time>
+		<title>DrovIO Core</title>
+		<description>Migration updates and cache performance upgrades.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>4</build>
+		<time>1435483927</time>
+		<title>DrovIO Core</title>
+		<description>UI library updates.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>5</build>
+		<time>1435496588</time>
+		<title>DrovIO Core</title>
+		<description>Major bugs that broke functionality fixed.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>6</build>
+		<time>1435562059</time>
+		<title>DrovIO Core</title>
+		<description>Developer enhancements in SDK.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>7</build>
+		<time>1435579766</time>
+		<title>DrovIO Core</title>
+		<description>Team dashboard login page redirect created.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>8</build>
+		<time>1435689887</time>
+		<title>DrovIO Core</title>
+		<description>Finishing migration, updating signatures and mails.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>9</build>
+		<time>1435824765</time>
+		<title>DrovIO Core</title>
+		<description>Redirects fixed.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>10</build>
+		<time>1435873185</time>
+		<title>DrovIO Core</title>
+		<description>Enhancements in developing process for all projects.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>11</build>
+		<time>1435925277</time>
+		<title>DrovIO Core</title>
+		<description>Developer plans enabled for application permissions.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>12</build>
+		<time>1436119071</time>
+		<title>DrovIO Core</title>
+		<description>Internal developer SDK fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>13</build>
+		<time>1436127396</time>
+		<title>DrovIO Core</title>
+		<description>Internal developer SDK fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>14</build>
+		<time>1436186292</time>
+		<title>DrovIO Core</title>
+		<description>Updates in literal engine support static literals for production projects.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>15</build>
+		<time>1436445788</time>
+		<title>DrovIO Core</title>
+		<description>Security and performance fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>16</build>
+		<time>1437048986</time>
+		<title>DrovIO Core</title>
+		<description>Enhancements in enterprise dashboard in application player.
+Mobile support added for all pages.
+Creating new developer tools and updating some old ones.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>17</build>
+		<time>1437133617</time>
+		<title>DrovIO Core</title>
+		<description>Website development enhanced and minor issues fixed.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>18</build>
+		<time>1437134084</time>
+		<title>DrovIO Core</title>
+		<description>Fixing project resources.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>19</build>
+		<time>1437741077</time>
+		<title>DrovIO Core</title>
+		<description>Updating enterprise SDK</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>20</build>
+		<time>1438070728</time>
+		<title>DrovIO Core</title>
+		<description>Mobile friendliness updates.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>21</build>
+		<time>1438173551</time>
+		<title>DrovIO Core</title>
+		<description>Minor restructures in the UI library.
+Fixing DEV library bugs.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>22</build>
+		<time>1440242210</time>
+		<title>DrovIO Core</title>
+		<description>Relations SDK</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>23</build>
+		<time>1440247019</time>
+		<title>DrovIO Core</title>
+		<description>Updates in project bundles.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>24</build>
+		<time>1440499872</time>
+		<title>DrovIO Core</title>
+		<description>Minor updates in developer tools (HTML5Editor).</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>25</build>
+		<time>1440501739</time>
+		<title>DrovIO Core</title>
+		<description>Enterprise market mechanism fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>26</build>
+		<time>1440662787</time>
+		<title>DrovIO Core</title>
+		<description>Updates in enterprise market mechanisms.
+Invitation's issues fixed.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>27</build>
+		<time>1440880162</time>
+		<title>DrovIO Core</title>
+		<description>SDK documentation updated with new documents for open objects.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>28</build>
+		<time>1440948732</time>
+		<title>DrovIO Core</title>
+		<description>Compatibility major fixes in relations SDK.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>29</build>
+		<time>1441035983</time>
+		<title>DrovIO Core</title>
+		<description>Updates in profile API to access the team members.
+Updates in retail API, regarding products.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>30</build>
+		<time>1441116709</time>
+		<title>DrovIO Core</title>
+		<description>Beta version of retail products.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>31</build>
+		<time>1441178693</time>
+		<title>DrovIO Core</title>
+		<description>Retail company registration fixed.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>32</build>
+		<time>1441182507</time>
+		<title>DrovIO Core</title>
+		<description>Fixes in retail products engine.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>33</build>
+		<time>1441185442</time>
+		<title>DrovIO Core</title>
+		<description>Retail engine fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>34</build>
+		<time>1441196809</time>
+		<title>DrovIO Core</title>
+		<description>Updating application resources sdk.
+Fixing issues in UI sdk.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>35</build>
+		<time>1441274945</time>
+		<title>DrovIO Core</title>
+		<description>Code fixes in developers IDE.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>36</build>
+		<time>1441275622</time>
+		<title>DrovIO Core</title>
+		<description>Code fixes in development environment.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>37</build>
+		<time>1441646456</time>
+		<title>DrovIO Core</title>
+		<description>Fixes in developers environment.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>38</build>
+		<time>1442151316</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and minor engine updates.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>39</build>
+		<time>1442154705</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>40</build>
+		<time>1442222379</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>41</build>
+		<time>1442239168</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>42</build>
+		<time>1442394923</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.
+Minor features added to enterprise relations.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>43</build>
+		<time>1442577992</time>
+		<title>DrovIO Core</title>
+		<description>Website templates added.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>44</build>
+		<time>1442605416</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>45</build>
+		<time>1442742031</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.
+Introducing the retail invoices API.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>46</build>
+		<time>1442935126</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>47</build>
+		<time>1443028624</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>48</build>
+		<time>1443045456</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>49</build>
+		<time>1443094638</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>50</build>
+		<time>1443136295</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>51</build>
+		<time>1443191960</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>52</build>
+		<time>1443352955</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>53</build>
+		<time>1443387859</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>54</build>
+		<time>1443390626</time>
+		<title>DrovIO Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>55</build>
+		<time>1443442439</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>56</build>
+		<time>1443461206</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>57</build>
+		<time>1443533409</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>58</build>
+		<time>1443645411</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>59</build>
+		<time>1443649030</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>60</build>
+		<time>1443694058</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>61</build>
+		<time>1443880310</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>62</build>
+		<time>1443884049</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>63</build>
+		<time>1443896876</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>64</build>
+		<time>1443910373</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>65</build>
+		<time>1443997575</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>66</build>
+		<time>1444087831</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>67</build>
+		<time>1444218143</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>68</build>
+		<time>1444310392</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>69</build>
+		<time>1444310781</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.5</version>
+		<build>70</build>
+		<time>1444311006</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.6</version>
+		<build>1</build>
+		<time>1444321654</time>
+		<title>Drovio Core</title>
+		<description>Core system working with drovio identity.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.6</version>
+		<build>2</build>
+		<time>1444325246</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and minor improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.6</version>
+		<build>3</build>
+		<time>1444384945</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.6</version>
+		<build>4</build>
+		<time>1444403666</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>1</build>
+		<time>1444507046</time>
+		<title>Drovio Core</title>
+		<description>Updated security and password mechanisms for the identity project.
+API keys updated to be more detailed with referer checking.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>2</build>
+		<time>1444560736</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>3</build>
+		<time>1444570813</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>4</build>
+		<time>1444577729</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>5</build>
+		<time>1444729169</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>6</build>
+		<time>1444763915</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>7</build>
+		<time>1444820827</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>8</build>
+		<time>1444843011</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>9</build>
+		<time>1444843712</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>10</build>
+		<time>1444909644</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>11</build>
+		<time>1444913589</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>12</build>
+		<time>1444994523</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>13</build>
+		<time>1445022441</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>14</build>
+		<time>1445088387</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>15</build>
+		<time>1445090110</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>16</build>
+		<time>1445116083</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>17</build>
+		<time>1445181572</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>18</build>
+		<time>1445190321</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>19</build>
+		<time>1445190531</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>20</build>
+		<time>1445192821</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>21</build>
+		<time>1445210063</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>22</build>
+		<time>1445262376</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>23</build>
+		<time>1445273092</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>24</build>
+		<time>1445356946</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>25</build>
+		<time>1445361665</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>26</build>
+		<time>1445472247</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>27</build>
+		<time>1445522544</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>28</build>
+		<time>1445523294</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>29</build>
+		<time>1445525660</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>30</build>
+		<time>1445530202</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>31</build>
+		<time>1445532113</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>32</build>
+		<time>1445534418</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>33</build>
+		<time>1445605364</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>34</build>
+		<time>1445607634</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>35</build>
+		<time>1445609986</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>36</build>
+		<time>1445611199</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>37</build>
+		<time>1445697547</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>38</build>
+		<time>1445707162</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>39</build>
+		<time>1445855976</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>40</build>
+		<time>1445860585</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>41</build>
+		<time>1445866784</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>42</build>
+		<time>1445959025</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>43</build>
+		<time>1445972398</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>44</build>
+		<time>1446080780</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>45</build>
+		<time>1446119391</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>46</build>
+		<time>1446162505</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>47</build>
+		<time>1446223128</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7</version>
+		<build>48</build>
+		<time>1446228868</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7.49</version>
+		<build>1</build>
+		<time>1446295275</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7.50</version>
+		<build>1</build>
+		<time>1446312948</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.7.51</version>
+		<build>1</build>
+		<time>1446322048</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>1</build>
+		<time>1446466734</time>
+		<title>Drovio Core</title>
+		<description>Updating mobile version for the biggest part of the platform.
+Also some bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>2</build>
+		<time>1446574903</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>3</build>
+		<time>1446627827</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>4</build>
+		<time>1446628325</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>5</build>
+		<time>1446680468</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>6</build>
+		<time>1447100816</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>7</build>
+		<time>1447173984</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>8</build>
+		<time>1447175125</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>9</build>
+		<time>1447176128</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>10</build>
+		<time>1447196621</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>11</build>
+		<time>1447257343</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>12</build>
+		<time>1447258527</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>13</build>
+		<time>1447271994</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>14</build>
+		<time>1447272165</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>15</build>
+		<time>1447325756</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>16</build>
+		<time>1447328857</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>17</build>
+		<time>1447333368</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>18</build>
+		<time>1447419652</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvement.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>19</build>
+		<time>1447431741</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>20</build>
+		<time>1447530177</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>21</build>
+		<time>1447531331</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>22</build>
+		<time>1447532416</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>23</build>
+		<time>1447532736</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>24</build>
+		<time>1447536737</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>25</build>
+		<time>1447537481</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>26</build>
+		<time>1447594539</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>27</build>
+		<time>1447609251</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>28</build>
+		<time>1447611204</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes, documentation updates and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>29</build>
+		<time>1447784863</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>30</build>
+		<time>1447784934</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>31</build>
+		<time>1447880389</time>
+		<title>Drovio Core</title>
+		<description>API key handlers updated to include protections for public keys with whitelist for host origins/referers.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>32</build>
+		<time>1448039537</time>
+		<title>Drovio Core</title>
+		<description>Updates in environment management like localStorage and cookies.
+Other minor bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>33</build>
+		<time>1448120177</time>
+		<title>Drovio Core</title>
+		<description>Multiple updates in small packages:
+- webDocs library minor updates.
+- local storage manager created in the environment package.
+Other minor fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>34</build>
+		<time>1448124517</time>
+		<title>Drovio Core</title>
+		<description>Major bug fixed in identity setup.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>35</build>
+		<time>1448124763</time>
+		<title>Drovio Core</title>
+		<description>Major bug fix in identity function, no2.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>36</build>
+		<time>1448219712</time>
+		<title>Drovio Core</title>
+		<description>Minor fixes in api key handlers.
+Identity api new features added.
+Other bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>37</build>
+		<time>1448481626</time>
+		<title>Drovio Core</title>
+		<description>API engine minor updates to enable API different response status codes and better customization.
+Other minor bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>38</build>
+		<time>1448548605</time>
+		<title>Drovio Core</title>
+		<description>Updates in core page builders including required meta information.
+Other minor improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>39</build>
+		<time>1448557929</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes and minor improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>40</build>
+		<time>1448733423</time>
+		<title>Drovio Core</title>
+		<description>Minor layout updates to UI packages.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>41</build>
+		<time>1448886558</time>
+		<title>Drovio Core</title>
+		<description>Major updates regarding dependency injection and some more internal mechanisms.
+Minor other fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>42</build>
+		<time>1448887400</time>
+		<title>Drovio Core</title>
+		<description>Fixes for previous release including request headers fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>43</build>
+		<time>1449073762</time>
+		<title>Drovio Core</title>
+		<description>Minor bug fixes to environment interface managing local storage, urls and more.
+Also includes other fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>44</build>
+		<time>1449360981</time>
+		<title>Drovio Core</title>
+		<description>Minor bug fixes and performance improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>45</build>
+		<time>1449571186</time>
+		<title>Drovio Core</title>
+		<description>Minor bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>46</build>
+		<time>1449774187</time>
+		<title>Drovio Core</title>
+		<description>Minor bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>47</build>
+		<time>1449854004</time>
+		<title>Drovio Core</title>
+		<description>Web engine major updates in website publisher.
+Other bug fixes and improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>48</build>
+		<time>1449947929</time>
+		<title>Drovio Core</title>
+		<description>Minor web engine updates.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>49</build>
+		<time>1450033403</time>
+		<title>Drovio Core</title>
+		<description>Minor updates in identity API to include teams.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>50</build>
+		<time>1450075109</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>51</build>
+		<time>1450075353</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>52</build>
+		<time>1450075600</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>53</build>
+		<time>1450076395</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>54</build>
+		<time>1450079777</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>55</build>
+		<time>1450295004</time>
+		<title>Drovio Core</title>
+		<description>Fixing dependencies for the identity API.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>56</build>
+		<time>1450307553</time>
+		<title>Drovio Core</title>
+		<description>Login process fixed.
+Minor other bug fixes and performance improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>57</build>
+		<time>1450309616</time>
+		<title>Drovio Core</title>
+		<description>Identity API improvements.
+Minor bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>58</build>
+		<time>1450350158</time>
+		<title>Drovio Core</title>
+		<description>Request and ssl engine updates.
+Minor bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>59</build>
+		<time>1450357986</time>
+		<title>Drovio Core</title>
+		<description>Permissions engine updated. Identity API is being used for permissions now.
+Other minor bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>60</build>
+		<time>1450379386</time>
+		<title>Drovio Core</title>
+		<description>Security updates and minor other bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>61</build>
+		<time>1450443556</time>
+		<title>Drovio Core</title>
+		<description>Internal security upgrades and performance improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>62</build>
+		<time>1450443659</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes on previous release.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>63</build>
+		<time>1450444158</time>
+		<title>Drovio Core</title>
+		<description>Refactoring updates for the new model.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>64</build>
+		<time>1450446467</time>
+		<title>Drovio Core</title>
+		<description>Refactoring part 3.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>65</build>
+		<time>1450449872</time>
+		<title>Drovio Core</title>
+		<description>Identity API upgrades.
+Other minor bug fixes and performance improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>66</build>
+		<time>1450450457</time>
+		<title>Drovio Core</title>
+		<description>Bug fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>67</build>
+		<time>1450553889</time>
+		<title>Drovio Core</title>
+		<description>Security and privileges updates and performance improvements.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>68</build>
+		<time>1452077256</time>
+		<title>Drovio Core</title>
+		<description>Minor fixes.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>69</build>
+		<time>1452080568</time>
+		<title>Drovio Core</title>
+		<description>Version control minor updates.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8</version>
+		<build>70</build>
+		<time>1457210413</time>
+		<title>Drovio Core</title>
+		<description>Test release.</description>
+	</ROW>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<version>0.8.70</version>
+		<build>1</build>
+		<time>1459707760</time>
+		<title>Drovio Core</title>
+		<description>Development release.</description>
+	</ROW>
+</DATA>

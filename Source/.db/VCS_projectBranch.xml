@@ -1,0 +1,12 @@
+<DATA>
+
+	<ROW>
+		<project_id>1</project_id>
+		<branch_name>master</branch_name>
+		<parent></parent>
+		<head>1</head>
+		<last_commit_id>c53cc3766cd7c1da249d893df4f9454bca379566e</last_commit_id>
+		<base_version>0.1</base_version>
+		<current_version>0.8.70</current_version>
+	</ROW>
+</DATA>
