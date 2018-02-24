@@ -1,0 +1,12 @@
+.uiFormInput, textarea {
+	border:1px solid rgba(120, 120, 120, 1);
+	color:#343434;
+	padding:3px;
+	margin:0px;
+}
+.uiFormInput[type=checkbox] {
+	margin:5px 3px;
+	border:none;
+	width:auto;
+	outline:none;
+}

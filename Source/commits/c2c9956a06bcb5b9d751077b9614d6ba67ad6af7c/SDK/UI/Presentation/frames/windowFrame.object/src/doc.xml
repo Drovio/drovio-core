@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\frames">
+  <class name="windowFrame" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1368614999</datecreated>
+      <daterevised>1432203622</daterevised>
+      <extends>
+        <object>\ESS\Prototype\html\WindowFramePrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Simple Window Frame</title>
+      <description>Creates a window frame popup to display content to the user.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="PopupPrototype" name="pp">
+          <description>The PopupPrototype object for setting the behavior.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the object and its variables.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The frame's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="windowFrame">
+          <description>Builds the window frame as a prototype and builds the popup as well.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The frame's title.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The windowFrame's class.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The windowFrame object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getFrame" returntype="string">
+          <description>Returns the server report containing the frame popup.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The server's frame report.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

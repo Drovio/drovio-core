@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\components\ribbon">
+  <class name="rPanel" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1402469433</datecreated>
+      <daterevised>1402469810</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Ribbon Panel Object</title>
+      <description>Builds a ribbon's panel holder with specific style.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="panelContainer">
+          <description>The panel container. Different if grouped.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="rPanel">
+          <description>Builds the panel</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The panel id.</description>
+            </parameter>
+            <parameter name="$grouped" type="boolean" defaultvalue="">
+              <description>Indicates whether this panel will container one or two items.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The rPanel object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertPanelItem" returntype="DOMElement">
+          <description>Create and insert a panel item.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The panel item type. See rPanelItem for more.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The panel title. See rPanelItem for more.</description>
+            </parameter>
+            <parameter name="$imgURL" type="string" defaultvalue="">
+              <description>The panel ico URL. See rPanelItem for more.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>The panel selected property. See rPanelItem for more.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The panel item element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

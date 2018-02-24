@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\database\connectors">
+  <class name="mysql_dbConnector" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1366713180</datecreated>
+      <daterevised>1430314611</daterevised>
+      <extends/>
+      <implements>\API\Comm\database\connectors\iDbConnector</implements>
+      <throws/>
+      <title>MySQL Database Connector</title>
+      <description>Connector for MySQL Databases</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="connection">
+          <description>Connection id</description>
+        </prop>
+        <prop type="string" name="host">
+          <description>The host URL</description>
+        </prop>
+        <prop type="string" name="username">
+          <description>The user's username</description>
+        </prop>
+        <prop type="string" name="password">
+          <description>The user's password</description>
+        </prop>
+        <prop type="string" name="database">
+          <description>The database's name</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setHandler" returntype="void">
+          <description>Initialize the object with the proper properties</description>
+          <parameters>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The host's URL</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The user's username</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The user's password</description>
+            </parameter>
+            <parameter name="$database" type="string" defaultvalue="">
+              <description>The database's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="execute" returntype="mixed">
+          <description>Executes a query to the database. It supports multiple queries separated with ";".
+All types of query are considered transactions.</description>
+          <parameters>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The query to be executed.</description>
+            </parameter>
+            <parameter name="$commit" type="boolean" defaultvalue="">
+              <description>Whether to commit the transaction  after the last query or not.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns FALSE on failure.
+For successful SELECT, SHOW, DESCRIBE or EXPLAIN queries mysqli_query() will return a mysqli_result object.
+For other successful queries mysqli_query() will return TRUE.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="boolean">
+          <description>Commits the current transaction for the database connection.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="rollback" returntype="boolean">
+          <description>Rollbacks the current transaction for the database.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fetch" returntype="array">
+          <description>Fetch an assoc row of the resource given</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The database resource.</description>
+            </parameter>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Whether to fetch as a full array with all the rows.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The fetched array with one or all the rows.</returndescription>
+          <throws/>
+        </method>
+        <method name="seek" returntype="boolean">
+          <description>Adjusts the result pointer to an arbitrary row in the result</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The database resource.</description>
+            </parameter>
+            <parameter name="$row" type="integer" defaultvalue="">
+              <description>The row number.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns TRUE on success or FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="escape" returntype="string">
+          <description>Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection.</description>
+          <parameters>
+            <parameter name="$resource" type="string" defaultvalue="">
+              <description>The string we want to escape.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an escaped string.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="get_num_rows" returntype="integer">
+          <description>Get the resource row count.</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The database resource.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns the number of rows of the resource.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="executeTransaction" returntype="mixed">
+          <description>Executes a transaction to the database.</description>
+          <parameters>
+            <parameter name="$queries" type="array" defaultvalue="">
+              <description>An array of query strings.</description>
+            </parameter>
+            <parameter name="$commit" type="boolean" defaultvalue="">
+              <description>Whether to commit the transaction  after the last query or not.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns FALSE on failure.
+For successful SELECT, SHOW, DESCRIBE or EXPLAIN queries mysqli_query() will return a mysqli_result object.
+For other successful queries mysqli_query() will return TRUE.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="connect" returntype="void">
+          <description>Connects to the server.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+        </method>
+        <method name="select" returntype="void">
+          <description>Selects the database.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+        </method>
+        <method name="disconnect" returntype="void">
+          <description>Disconnects from the server.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

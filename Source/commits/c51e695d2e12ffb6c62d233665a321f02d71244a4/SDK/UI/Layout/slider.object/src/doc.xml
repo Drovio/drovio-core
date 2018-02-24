@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="slider" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1370084562</datecreated>
+      <daterevised>1372405221</daterevised>
+      <extends/>
+      <implements/>
+      <throws>
+        <exception>sgsgs</exception>
+      </throws>
+      <title/>
+      <description/>
+      <deprecated>Use \UI\Presentation\gridSplitter instead.</deprecated>
+    </info>
+    <constants>
+      <const type="String" name="MAIN_FIRST">
+        <description>desc1 ' test</description>
+      </const>
+      <const type="String" name="SIDE_FIRST">
+        <description>desc2 uhk  hjkb jh bg jkgh ih ik h kijh h jk  jk jk ghj gb jhg hjg jh ghjk g jk </description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="String" name="sideFirstClass">
+          <description>skgsjfksdf</description>
+        </prop>
+        <prop type="String" name="containerClass">
+          <description>dklfgndkljfgndkfg</description>
+        </prop>
+        <prop type="" name="containerVerticalLayoutClass">
+          <description/>
+        </prop>
+        <prop type="" name="containerHorizontalLayoutClass">
+          <description/>
+        </prop>
+        <prop type="" name="mainClass">
+          <description/>
+        </prop>
+        <prop type="" name="mainContentClass">
+          <description/>
+        </prop>
+        <prop type="" name="sideExpanderClass">
+          <description/>
+        </prop>
+        <prop type="" name="sideClass">
+          <description/>
+        </prop>
+        <prop type="" name="sideContentClass">
+          <description/>
+        </prop>
+        <prop type="" name="container">
+          <description/>
+        </prop>
+        <prop type="" name="mainContent">
+          <description/>
+        </prop>
+        <prop type="" name="sideContent">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="String" name="vSliderClass" static="true">
+          <description>dikudkfgdlfdgfd " &amp;lt; gg</description>
+        </prop>
+        <prop type="" name="hSliderClass" static="true">
+          <description>d &amp;lt;&amp;gt;</description>
+        </prop>
+        <prop type="" name="orientation" class="undefined">
+          <description/>
+        </prop>
+        <prop type="" name="layout" class="undefined">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters>
+            <parameter name="$orientation" type="String" defaultvalue="">
+              <description>test</description>
+            </parameter>
+            <parameter name="$layout" type="String" defaultvalue="">
+              <description>eik</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \UI\Presentation\gridSplitter construct method instead.</deprecated>
+          <returndescription>It's void</returndescription>
+          <throws>
+            <exception>dsfs</exception>
+            <exception>fsdfd</exception>
+          </throws>
+        </method>
+        <method name="get_container" returntype="DOMElement">
+          <description>Get slider mechanism (container | elements | slider)</description>
+          <parameters>
+            <parameter name="$closed" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \UI\Presentation\gridSplitter::build() and \UI\Presentation\gridSplitter::get() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append_to_main" returntype="void">
+          <description>Append to main content</description>
+          <parameters>
+            <parameter name="$elem" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \UI\Presentation\gridSplitter::appendToMain() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append_to_side" returntype="void">
+          <description>Append to side content</description>
+          <parameters>
+            <parameter name="$elem" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \UI\Presentation\gridSplitter::appendToSide() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

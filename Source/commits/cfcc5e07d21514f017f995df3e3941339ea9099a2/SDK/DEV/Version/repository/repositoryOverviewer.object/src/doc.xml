@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Version" namespace="\repository">
+  <class name="repositoryOverviewer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392200806</datecreated>
+      <daterevised>1392200806</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Repository Overview Manager</title>
+      <description>Builds a repository overviewer, including commits, releases and traunk and branch explorer.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The control id.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the control.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The control id.</description>
+            </parameter>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository path. If empty, it will be loaded from session.</description>
+            </parameter>
+            <parameter name="$includeRelease" type="boolean" defaultvalue="">
+              <description>Sets the includeRelease attribute for the vcs. FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="void">
+          <description>Builds the commit Manager ui object.</description>
+          <parameters>
+            <parameter name="$projectName" type="string" defaultvalue="">
+              <description>The project name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description>Inits the control.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository folder.</description>
+            </parameter>
+            <parameter name="$includeRelease" type="boolean" defaultvalue="">
+              <description>The includeRelease indicator for the vcs.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads the information from the session.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getOverviewSection" returntype="DOMelement">
+          <description>Builds the overview section of the control.</description>
+          <parameters>
+            <parameter name="$targetgroup" type="string" defaultvalue="">
+              <description>The navigator target group.</description>
+            </parameter>
+            <parameter name="$projectName" type="string" defaultvalue="">
+              <description>The project name to be set as header.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The section container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCommitSection" returntype="DOMElement">
+          <description>Builds the commit section of the control.</description>
+          <parameters>
+            <parameter name="$targetgroup" type="string" defaultvalue="">
+              <description>The navigator target group.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The section container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBranchSection" returntype="DOMElement">
+          <description>Builds the branch section of the control.</description>
+          <parameters>
+            <parameter name="$targetgroup" type="string" defaultvalue="">
+              <description>The navigator target group.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The section container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleaseSection" returntype="DOMElement">
+          <description>Builds the release section of the control.</description>
+          <parameters>
+            <parameter name="$targetgroup" type="string" defaultvalue="">
+              <description>The navigator target group.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The section container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNavigationGroup" returntype="DOMelement">
+          <description>Gets a navigation group container for the control.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The container id.</description>
+            </parameter>
+            <parameter name="$groupSelector" type="string" defaultvalue="">
+              <description>The navigation group selector.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The navigation group container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

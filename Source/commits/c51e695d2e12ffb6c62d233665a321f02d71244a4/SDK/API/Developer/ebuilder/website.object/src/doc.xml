@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="website" abstract="" namespace="\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1370441467</datecreated>
+      <daterevised>1375270250</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Ebuilder Website</title>
+      <description>This class is responsible for the development of an eBuilder website.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>Index file name</description>
+      </const>
+      <const type="string" name="CONFIGURATION_FILE">
+        <description>Configuration file name</description>
+      </const>
+      <const type="string" name="REPOSITORY_FOLDER">
+        <description>Website's reporitory folder</description>
+      </const>
+      <const type="string" name="RELEASE_FOLDER">
+        <description>Website's release folder</description>
+      </const>
+      <const type="string" name="CONTENT_FOLDER">
+        <description>Website's content folder</description>
+      </const>
+      <const type="string" name="MAPPING_FOLDER">
+        <description>Website's mapping folder</description>
+      </const>
+      <const type="string" name="TEMPLATE_FOLDER">
+        <description>Website's template folder</description>
+      </const>
+      <const type="string" name="PAGES_FOLDER">
+        <description>Website's pages folder</description>
+      </const>
+      <const type="string" name="STYLES_FOLDER">
+        <description>Website's styles folder</description>
+      </const>
+      <const type="string" name="SCRIPTS_FOLDER">
+        <description>Website's scripts folder</description>
+      </const>
+      <const type="string" name="MEDIA_FOLDER">
+        <description>Website's media folder</description>
+      </const>
+      <const type="string" name="EXTENSIONS_FOLDER">
+        <description>Website's extensions folder</description>
+      </const>
+      <const type="string" name="CONFIGURATION_FOLDER">
+        <description>Website's configuration folder</description>
+      </const>
+      <const type="string" name="CURRENT_RELEASE_FOLDER">
+        <description>Current released website's folder</description>
+      </const>
+      <const type="string" name="RELEASE_HISTORY_FOLDER">
+        <description>Website's history folder</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="websiteId">
+          <description>Website's id</description>
+        </prop>
+        <prop type="string" name="devPath">
+          <description>Website's development root path</description>
+        </prop>
+        <prop type="array" name="reservedSitemaps">
+          <description>Names of sitemaps reserved for eBuilder use</description>
+        </prop>
+        <prop type="array" name="reservedPages">
+          <description>Names of pages in root sitemap reserved for eBuilder use</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the website</description>
+          <parameters>
+            <parameter name="$websiteId" type="integer" defaultvalue="">
+              <description>Website's id. If supplied, it is used for initialization purposes.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new website in the user's folder.</description>
+          <parameters>
+            <parameter name="$wsName" type="string" defaultvalue="">
+              <description>Website name</description>
+            </parameter>
+            <parameter name="$wsDescription" type="string" defaultvalue="">
+              <description>Website description</description>
+            </parameter>
+            <parameter name="$wsProjectId" type="string" defaultvalue="">
+              <description>Website id</description>
+            </parameter>
+            <parameter name="$wsTemplateId" type="string" defaultvalue="">
+              <description>Website's template id</description>
+            </parameter>
+            <parameter name="$defaultLanguageId" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addPage" returntype="boolean">
+          <description>Adds a new page (php) to the website.</description>
+          <parameters>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>Name of the new page.</description>
+            </parameter>
+            <parameter name="$sitemapPath" type="string" defaultvalue="">
+              <description>The sitemap path in which the page will be placed</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSitemapPath" returntype="boolean">
+          <description>Creates a new sitemap path</description>
+          <parameters>
+            <parameter name="$smPath" type="string" defaultvalue="">
+              <description>Parent sitemap path</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process. If parent sitemap path doesn't exist, then the sitemap path will not be created</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addScript" returntype="boolean">
+          <description>Adds a new script (js) to the website.</description>
+          <parameters>
+            <parameter name="$scriptName" type="string" defaultvalue="">
+              <description>Name of the new script.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addStyle" returntype="boolean">
+          <description>Adds a new style (css) to the website.</description>
+          <parameters>
+            <parameter name="$styleName" type="string" defaultvalue="">
+              <description>Name of the new style.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addMedia" returntype="boolean">
+          <description>Adds new media to the website.</description>
+          <parameters>
+            <parameter name="$mediaName" type="string" defaultvalue="">
+              <description>Name of the new media.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPage" returntype="mixed">
+          <description>Acquires an existing page from the website.</description>
+          <parameters>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>Name of the page in the website.</description>
+            </parameter>
+            <parameter name="$sitemapPath" type="string" defaultvalue="">
+              <description>The sitemap path of the page</description>
+            </parameter>
+          </parameters>
+          <returndescription>The returned page, or null if the page doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getScript" returntype="mixed">
+          <description>Acquires an existing script from the website.</description>
+          <parameters>
+            <parameter name="$scriptName" type="string" defaultvalue="">
+              <description>Name of the script in the website.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The returned script, or null if the script doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStyle" returntype="mixed">
+          <description>Acquires an existing style from the website.</description>
+          <parameters>
+            <parameter name="$styleName" type="string" defaultvalue="">
+              <description>Name of the style in the website.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The returned style, or null if the style doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMedia" returntype="mixed">
+          <description>Acquires existing media from the website.</description>
+          <parameters>
+            <parameter name="$mediaName" type="string" defaultvalue="">
+              <description>Name of the media in the website.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The returned media, or null if the media don't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageList" returntype="array">
+          <description>Acquires a list of the website's pages.</description>
+          <parameters>
+            <parameter name="$sitemapPath" type="string" defaultvalue="">
+              <description>A sitemap path as a page source</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array holding the names of the pages.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getScriptList" returntype="array">
+          <description>Acquires a list of the website's scripts.</description>
+          <parameters/>
+          <returndescription>An array holding the names of the scripts.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStyleList" returntype="array">
+          <description>Acquires a list of the website's styles.</description>
+          <parameters/>
+          <returndescription>An array holding the names of the styles.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMediaList" returntype="array">
+          <description>Acquires a list of the website's media.</description>
+          <parameters/>
+          <returndescription>An array holding the names of the media.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="release" returntype="boolean">
+          <description>Maps a developing website to the released website.</description>
+          <parameters/>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="online" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="offline" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setState" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description>Initializes the website with all the names and paths.</description>
+          <parameters>
+            <parameter name="$websiteId" type="integer" defaultvalue="">
+              <description>The website's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="register" returntype="string">
+          <description>Adds a new entry for the new website in the database.</description>
+          <parameters>
+            <parameter name="$wsName" type="string" defaultvalue="">
+              <description>Website's name</description>
+            </parameter>
+            <parameter name="$wsDescription" type="string" defaultvalue="">
+              <description>Website's description</description>
+            </parameter>
+            <parameter name="$wsTypeId" type="string" defaultvalue="">
+              <description>Website's type (from template)</description>
+            </parameter>
+            <parameter name="$wsProjectId" type="string" defaultvalue="">
+              <description>Website's project id</description>
+            </parameter>
+          </parameters>
+          <returndescription>The website's id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createWebsiteStructure" returntype="boolean">
+          <description>Creates the website's structure.</description>
+          <parameters>
+            <parameter name="$wsTemplateId" type="string" defaultvalue="">
+              <description>Website's template id</description>
+            </parameter>
+            <parameter name="$defaultLanguageId" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createWebsiteFolders" returntype="boolean">
+          <description>Creates all the website structure's necessary folders.</description>
+          <parameters/>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createWebsiteMapping" returntype="boolean">
+          <description>Creates the website's mapping file.</description>
+          <parameters/>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createWebsiteConfiguration" returntype="boolean">
+          <description>Creates the website's configuration file.</description>
+          <parameters>
+            <parameter name="$templateId" type="string" defaultvalue="">
+              <description>Website's template id</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createWebsiteHistoryIndexing" returntype="boolean">
+          <description>Creates the website's history indexing file.</description>
+          <parameters/>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateWebsiteHistoryIndexing" returntype="boolean">
+          <description>Updates the website's history indexing file with a new entry.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>Description of the release.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMappingPath" returntype="string">
+          <description>Returns the path to the website mapping folder.</description>
+          <parameters/>
+          <returndescription>The returned path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConfigurationPath" returntype="string">
+          <description>Returns the path to the website configuration folder.</description>
+          <parameters/>
+          <returndescription>The returned path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="objectExists" returntype="boolean">
+          <description>Checks if an object (page, script, style, media) exists in the website.</description>
+          <parameters>
+            <parameter name="$objectPool" type="string" defaultvalue="">
+              <description>Objects pool name. ("scripts", "styles", "pages", "media")</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>Name of the object to check.</description>
+            </parameter>
+            <parameter name="$objectCode" type="string" defaultvalue="">
+              <description>Objects identification code ("scr", "stl", "pg", "media")</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE if the object exists, or FALSE otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjectList" returntype="array">
+          <description>Returns a list of objects in the website.</description>
+          <parameters>
+            <parameter name="$objectType" type="string" defaultvalue="">
+              <description>Type of the objects to acquire. ("script", "style", "page", "media")</description>
+            </parameter>
+            <parameter name="$objectPool" type="string" defaultvalue="">
+              <description>Objects pool name. ("scripts", "styles", "pages", "media")</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array holding the objects' names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createReleaseStructure" returntype="boolean">
+          <description>Creates release structure of the website</description>
+          <parameters/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="releaseWebsite" returntype="void">
+          <description>Initializes website's release ".website" folder</description>
+          <parameters>
+            <parameter name="$currentReleaseFolder" type="string" defaultvalue="">
+              <description>The release folder</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="releaseResources" returntype="void">
+          <description>Releases websites resources</description>
+          <parameters>
+            <parameter name="$currentReleaseFolder" type="string" defaultvalue="">
+              <description>The release folder</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="releaseExtensions" returntype="void">
+          <description>Releases the extensions</description>
+          <parameters>
+            <parameter name="$currentReleaseFolder" type="string" defaultvalue="">
+              <description>The release folder</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="releaseSitemap" returntype="boolean">
+          <description>Releases the website's sitemap</description>
+          <parameters/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_releaseSitemap" returntype="boolean">
+          <description>Helps in website's sitemap release</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>Sitemap's parser</description>
+            </parameter>
+            <parameter name="$rootElement" type="DOMElement" defaultvalue="">
+              <description>Root element of each iteration</description>
+            </parameter>
+            <parameter name="$sitemapPath" type="string" defaultvalue="">
+              <description>Parent sitemap path</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isReservedPage" returntype="boolean">
+          <description>Checks if a page name is reserved by eBuilder</description>
+          <parameters>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>Page name</description>
+            </parameter>
+            <parameter name="$sitemapPath" type="string" defaultvalue="">
+              <description>Page's sitemap path</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the page name is reserved</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isReservedSitemap" returntype="boolean">
+          <description>Checks if a sitemap path is reserved</description>
+          <parameters>
+            <parameter name="$sitemapPath" type="string" defaultvalue="">
+              <description>Sitemap path to check</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the sitemap path is reserved</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

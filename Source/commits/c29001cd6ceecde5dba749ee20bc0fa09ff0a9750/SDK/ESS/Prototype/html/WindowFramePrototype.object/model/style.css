@@ -1,0 +1,49 @@
+.wFrame {
+	border: 1px solid #999;
+	background-color: #FFF;
+	position: relative;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+	min-width: 470px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.wFrame .frameHeader {
+	background: linear-gradient(#f2f2f2, #e2e2e2);
+	background: -webkit-linear-gradient(#f2f2f2, #e2e2e2);
+	background: -moz-linear-gradient(#f2f2f2, #e2e2e2);
+	border-bottom: 1px solid #CCC;
+	text-align: left;
+	padding: 10px;
+	position: relative;
+	text-transform: capitalize;
+	overflow: auto;
+	line-height: 16px;
+	font-weight: bold;
+	color: #555;
+}
+.wFrame .frameHeader .closeBtn {
+	float: right;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	background: url('%resources%/UI/closeX.svg') no-repeat;
+	background-size: cover;
+	background-position: 0px -16px;
+	cursor: pointer;
+	opacity: 0.7;
+}
+.wFrame .frameHeader .closeBtn:hover {
+	opacity: 1;
+}
+.wFrame > .frameBody {
+	position: relative;
+	min-width: 450px;
+	min-height: 40px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}

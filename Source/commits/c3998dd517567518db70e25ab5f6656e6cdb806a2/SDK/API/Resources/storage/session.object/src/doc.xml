@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\storage">
+  <class name="session" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366714680</datecreated>
+      <daterevised>1395426505</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Session Manager</title>
+      <description>Handles all session storage data</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="EXPIRE">
+        <description>The session's expiration time (in seconds)</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Init session</description>
+          <parameters>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>A set of options like the session_id etc.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get" returntype="string" static="true">
+          <description>Get a session variable value</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the variable</description>
+            </parameter>
+            <parameter name="$default" type="string" defaultvalue="">
+              <description>The value that will be returned if the variable doesn't exist</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace of the session variable</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set" returntype="mixed" static="true">
+          <description>Set a session variable value</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the variable</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The value with which the variable will be set</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace of the session variable</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="has" returntype="boolean" static="true">
+          <description>Check if there is a session variable</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable name</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace of the session variable</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="clear" returntype="string" static="true">
+          <description>Deletes a session variable</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable name</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace of the session variable</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="clear_set" returntype="boolean" static="true">
+          <description>Delete a set of session variables under the same namespace</description>
+          <parameters>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace of the session variable</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_name" returntype="string" static="true">
+          <description>Get session name</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_id" returntype="string" static="true">
+          <description>Get session id</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="destroy" returntype="boolean" static="true">
+          <description>Destroy session</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_size" returntype="integer" static="true">
+          <description>Return the in-memory size of the session ($_SESSION) array.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="_setTimers" returntype="boolean" static="true">
+          <description>Set the validation timers</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_setOptions" returntype="boolean" static="true">
+          <description>Set the session options (session id, name etc.)</description>
+          <parameters>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>The array of options</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_start" returntype="void" static="true">
+          <description>Start the session</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_validate" returntype="void" static="true">
+          <description>Validate the session and reset if necessary</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getNS" returntype="string" static="true">
+          <description>Create the namespace string</description>
+          <parameters>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace of the session variable</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

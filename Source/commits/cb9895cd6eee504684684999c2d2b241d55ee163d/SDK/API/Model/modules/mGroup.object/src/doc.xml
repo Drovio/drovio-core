@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\modules">
+  <class name="mGroup" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1399275845</datecreated>
+      <daterevised>1407836004</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Group Manager</title>
+      <description>Manages module groups</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="groupTrails" static="true">
+          <description>All the group trails for each group. Expands incrementally on each different request.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getTrail" returntype="string" static="true">
+          <description>Gets the group path trail for a given group id.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+            <parameter name="$delimiter" type="string" defaultvalue="">
+              <description>The delimiter for the path. By default it is the directory delimiter "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The group path from the root.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the group info in an array.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The module group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array with the group info.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the group directory name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The group directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

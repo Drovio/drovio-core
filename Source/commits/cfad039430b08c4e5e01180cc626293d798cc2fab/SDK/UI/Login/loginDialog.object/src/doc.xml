@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Login" namespace="\">
+  <class name="loginDialog" abstract="">
+    <info>
+      <version>0.4</version>
+      <build>1</build>
+      <datecreated>1424169582</datecreated>
+      <daterevised>1431515284</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Platform Login Dialog</title>
+      <description>Creates a login dialog for use in pages and in applications.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="LGN_TYPE_PAGE">
+        <description>The page login type. It reloads the page after the login.</description>
+      </const>
+      <const type="string" name="LGN_TYPE_APP">
+        <description>The application login type. It reloads the page after the login.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="loginDialog">
+          <description>Builds the login dialog object.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The default username value for the input.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$logintype" type="string" defaultvalue="">
+              <description>The login dialog type.
+See class constants for more information.</description>
+            </parameter>
+            <parameter name="$return_url" type="string" defaultvalue="">
+              <description>Provide a redirect url after successful login.
+Leave empty for default action (reload or redirect to my).
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The login dialog object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Get the login dialog server report in popup form.</description>
+          <parameters>
+            <parameter name="$background" type="boolean" defaultvalue="">
+              <description>Whether the popup will have a background overlay.
+It is TRUE by default.</description>
+            </parameter>
+            <parameter name="$fade" type="boolean" defaultvalue="">
+              <description>Whether the popup will show with a fade.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The server report context.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHeader" returntype="void">
+          <description>build the dialog header.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildMainForm" returntype="void">
+          <description>Build the main dialog form.</description>
+          <parameters>
+            <parameter name="$usernameValue" type="string" defaultvalue="">
+              <description>The default username value for the input.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$logintype" type="string" defaultvalue="">
+              <description>The login dialog type.
+See class constants for more information.</description>
+            </parameter>
+            <parameter name="$return_url" type="string" defaultvalue="">
+              <description>Provide a redirect url after successful login.
+Leave empty for default action (reload or redirect to my).
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildFooter" returntype="void">
+          <description>Build the dialog footer.</description>
+          <parameters>
+            <parameter name="$return_url" type="string" defaultvalue="">
+              <description>Sets the register dialog link with the given return url after registration.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

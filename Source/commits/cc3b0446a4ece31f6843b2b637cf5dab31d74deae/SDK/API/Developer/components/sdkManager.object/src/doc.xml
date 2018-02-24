@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components">
+  <class name="sdkManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363859700</datecreated>
+      <daterevised>1396348643</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>SDK General Manager</title>
+      <description/>
+      <deprecated>Use \DEV\Core\sdk\sdkLibrary instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="RELEASE_PATH">
+        <description>The release path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="deploy" returntype="void" static="true">
+          <description>Deploys all the SDK Libraries.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to deploy to latest.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="void" static="true">
+          <description>Exports all the SDK.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use deploy() instead.</deprecated>
+        </method>
+        <method name="exportLibrary" returntype="void" static="true" class="undefined">
+          <description>Export an entire library to latest.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use export() function instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

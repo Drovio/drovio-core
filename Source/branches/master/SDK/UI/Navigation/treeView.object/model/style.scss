@@ -1,0 +1,94 @@
+.treeView {
+	ul {
+		list-style-type: none;
+		padding:0px;
+		margin:0px;
+	}
+	.treeItem {
+		& {
+			line-height: 20px; 
+			text-indent: 5px;
+		}
+		 a {
+			display: block;
+		}
+		&.highlight > .treeItemContent {
+			background-color: #d3d3d3;
+			background: linear-gradient(left, #e4e4e4, #d3d3d3);
+			background: -webkit-linear-gradient(left, #e4e4e4, #d3d3d3);
+			background: -moz-linear-gradient(left, #e4e4e4, #d3d3d3);
+		}
+		& > .treeItemContent {
+			cursor: pointer;
+			display: block;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			position: relative;
+			font-size: 1.1em;
+			line-height: 23px;
+		}
+		& > .treeViewList > .treeItem {
+			margin-left:18px;
+		}
+		&:not([expandable]) {
+			margin-left: 16px;
+		}
+		& > ul > .treeItem:not([expandable]) {
+			margin-left: 34px !important;
+		}
+		&[expandable='expandable'] {
+			cursor:default;
+		}
+		& > ul {
+			display:none;
+		}
+		&.open > ul,
+		&.open > .subTreeView {
+			display:block;
+		}
+		& > .treePointer {
+			background-image: url('%{media}/icons/custom/list_arrow.svg');
+			background-repeat: no-repeat;
+			background-position: bottom;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			transform-origin:50% 70%;
+			transition: transform 100ms;
+			-moz-transition: -moz-transform 100ms;
+			-moz-transform-origin:50% 70%;
+			-webkit-transition: -webkit-transform 100ms;
+			-webkit-transform-origin:50% 70% 0;
+			float: left;
+			cursor:default;
+		}
+		&.open > .treePointer {
+			transform:rotate(90deg);
+			transition: transform 100ms;
+			-moz-transform:rotate(90deg);
+			-moz-transition: -moz-transform 100ms;
+			-webkit-transform:rotate(90deg);
+			-webkit-transition: -webkit-transform 100ms;
+		}
+		& > .treeView {
+			padding-left:10px;
+		}
+		&[expandable=expandable] > .treeItemContent:hover {
+			text-decoration:underline;
+		}
+		&:not([expandable=expandable]) > .treeItemContent:hover {
+			background-color: rgba(166, 166, 166, 0.3);
+		}
+	}
+	.subTreeView {
+		display:none;
+	}
+	.subTreeView .treeItem {
+		margin-left:18px;
+	}
+	.subTreeView > ul > .treeItem:not([expandable]) {
+		margin-left: 34px !important;
+	}
+}

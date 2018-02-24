@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Resources" namespace="\settings">
+  <class name="accSettings" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1419258640</datecreated>
+      <daterevised>1419258640</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Platform account manager.</title>
+      <description>Manages all external account credentials.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="accountType">
+          <description>The account type.</description>
+        </prop>
+        <prop type="string" name="accountName">
+          <description>The account name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the account manager.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The account type.
+Keep it lowercase.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The account name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new account entry in the list.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateAccount" returntype="boolean">
+          <description>Update the account credentials.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccounts" returntype="array" static="true">
+          <description>Get all stored accounts by type.</description>
+          <parameters/>
+          <returndescription>An array of all accounts by type.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="addAccount" returntype="void">
+          <description>Add a new account to the list.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The account type.
+Keep it lowercase.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The account name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

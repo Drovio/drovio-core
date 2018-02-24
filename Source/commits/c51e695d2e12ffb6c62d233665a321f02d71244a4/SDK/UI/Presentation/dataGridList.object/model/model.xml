@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="dataGridWrapper checkable" data-grid-size="">	
+	<ul class="dataGridList">
+		<li class="dataGridHeader"><div class="dataGridCheck"/><div class="dataGridCell selected" data-column-name="name"/><div class="dataGridCell" data-column-name="size"/>
+		</li>
+		<div class="dataGridContentWrapper">
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow selected"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+			<li class="dataGridRow"><div class="dataGridCheck"/><div class="dataGridCell"/><div class="dataGridCell"/></li>
+		</div>
+	</ul>
+</div>
+</model>

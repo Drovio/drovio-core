@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Navigation" namespace="\toolbarComponents">
+  <class name="toolbarMenu" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383501369</datecreated>
+      <daterevised>1383501369</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Navigation Toolbar Menu</title>
+      <description>Navigation Toolbar Menu</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="MenuPrototype" name="menu">
+          <description>The MenuPrototype object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="toolbarMenu">
+          <description>Builds the toolbar menu.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The menu id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The toolbarMenu object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertMenuItem" returntype="toolbarMenu">
+          <description>Inserts a menu item.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The item header.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The toolbar menu object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

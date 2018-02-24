@@ -1,0 +1,17 @@
+<h1>Session manager</h1>
+<p>This class extends the SDK session manager and acts like a facade to provide a easier interface to handle sessions. All namespaces are prefixed with the application identifier to avoid conflicts with other applications and the system. It's not a protection, it's a feature ;-)</p>
+<p><b>NOTE</b>: Every script that runs in the platform automatically starts the session at the beginning, so you don't have to start the session by yourself.</p>
+<h2>Getting and setting values</h2>
+<p>We separate session values in namespaces so that there are no conflicts. We use namespaces according to the type of value we want to store.</p>
+<div class="code">
+	<pre>// Import and use the class
+importer::import("AEL", "Environment", "session");
+
+use \AEL\Environment\session;
+
+// Set a variable for a user
+session::set($name = "username", $value = "john.doe", $namespace = "user_info");
+
+// Get a variable for a user
+$user_email = session::get($name = "username", $default = "", $namespace = "user_info");</pre>
+</div>

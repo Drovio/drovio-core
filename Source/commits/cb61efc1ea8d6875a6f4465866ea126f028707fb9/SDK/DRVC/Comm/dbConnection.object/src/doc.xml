@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Comm" namespace="\">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>5.0</version>
+      <build>1</build>
+      <datecreated>1444233797</datecreated>
+      <daterevised>1445609837</daterevised>
+      <extends>
+        <object>\SYS\Comm\db\adbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Drovio Identity Database Connection handler</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new database connection instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name to connect to identity to.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

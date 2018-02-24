@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\">
+  <class name="ModuleProtocol" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1406661048</datecreated>
+      <daterevised>1442700535</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Client-Server Module Handler Protocol</title>
+      <description>This is the most valuable and basic protocol for loading dynamic content from modules.
+It uses the AsCoProtocol to send the requests and the HTML Server Report Handlers to receive data.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="addAction" returntype="void" static="true">
+          <description>Adds a custom action to a DOMElement.
+This action will invoke the given module id with the actionName given.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to attach the event listener to.</description>
+            </parameter>
+            <parameter name="$actionName" type="string" defaultvalue="">
+              <description>The name of the data attribute for the action identifier.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to set as action.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the module's default view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array as a number of attributes to be sent to the server along with the request (attrName =&amp;gt; attrValue).</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAsync" returntype="void" static="true">
+          <description>Adds async handler to container.
+This enables the protocol to load the content asynchronously when the object given (holder) enters the DOM.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to attach the event listener to.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the module's default view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The DOM holder/receiver where the content will go.
+It's a CSS selector.
+If left empty, the content will decide the content. If the content's holder is also empty, it goes as child of the sender.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Whether this action will be triggered when on next content.modified.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array as a number of attributes to be sent to the server along with the request (attrName =&amp;gt; attrValue).</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addActionGET" returntype="void" static="true">
+          <description>Inserts a module handler to a DOMElement.
+It interacts with the server (GET Request Method) and gets content.
+It can be invoked by mouse click.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to attach the event listener to.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the module's default view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The DOM holder/receiver where the content will go.
+It's a CSS selector.
+If left empty, the content will decide the content. If the content's holder is also empty, it goes as child of the sender.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array as a number of attributes to be sent to the server along with the request (attrName =&amp;gt; attrValue).</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addActionDL" returntype="void" static="true">
+          <description>Inserts a module handler to a DOMElement.
+It interacts with the server (GET Request Method) and downloads a file.
+It can be invoked by mouse click.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to attach the event listener to.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the module's default view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array as a number of attributes to be sent to the server along with the request (attrName =&amp;amp;gt; attrValue).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addActionPOST" returntype="void" static="true">
+          <description>Inserts a module handler to a DOMElement. The DOMElement must by only form.
+It interacts with the server (POST Request Method) and gets the answer.
+It can be invoked by form submit event.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to attach the event listener to.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the module's default view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The DOM holder/receiver where the content will go.
+It's a CSS selector.
+If left empty, the content will decide the content. If the content's holder is also empty, it goes as child of the sender.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array as a number of attributes to be sent to the server along with the request (attrName =&amp;gt; attrValue).</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>For posting data you should use forms.</deprecated>
+        </method>
+        <method name="addAsyncATTR" returntype="void" static="true">
+          <description>Inserts a number of attributes to be sent to the server along with the request.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to receive the attributes.
+This must be the element that will trigger the event.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array as a number of attributes to be sent to the server along with the request (attrName =&amp;gt; attrValue).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAction" returntype="array" static="true">
+          <description>It creates and returns an action array indicating the action that will be committed upon request.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the module's default view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The DOM holder/receiver where the content will go.
+It's a CSS selector.
+If left empty, the content will decide the content. If the content's holder is also empty, it goes as child of the sender.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The action's data array.</returndescription>
+          <throws/>
+          <deprecated>You should use an action ready function.</deprecated>
+        </method>
+        <method name="addActionReady" returntype="void" static="true">
+          <description>Inserts directly the action array that was generated by the "getAction" method to the item.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item to receive the action</description>
+            </parameter>
+            <parameter name="$action" type="array" defaultvalue="">
+              <description>The action array.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

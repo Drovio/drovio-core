@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1008570389"><title>Get All Templates</title><description>Fetches all available ebuilder tempates for database</description><access>1</access><attributes><attr id="locale"></attr><attr id="status"></attr></attributes></query>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTMLModulePage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362652920</datecreated>
+      <daterevised>1381837068</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Module Page Builder</title>
+      <description>Builds the inner module page with a selected layout.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="addToolbarNavItem" returntype="DOMElement">
+          <description>Inserts a new toolbar navigation item.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The item's title</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The item's class</description>
+            </parameter>
+            <parameter name="$collection" type="DOMElement" defaultvalue="">
+              <description>The ribbon's collection that will appear at item click.</description>
+            </parameter>
+            <parameter name="$ribbonType" type="string" defaultvalue="">
+              <description>The ribbon type.
+See HTMLRibbon for more information.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The ribbon popup type (if float).
+See HTMLRibbon for more information.</description>
+            </parameter>
+            <parameter name="$pinnable" type="boolean" defaultvalue="">
+              <description>Sets the ribbon pinnable.
+See HTMLRibbon for more information.</description>
+            </parameter>
+            <parameter name="$index" type="integer" defaultvalue="">
+              <description>The item's position index.</description>
+            </parameter>
+            <parameter name="$ico" type="mixed" defaultvalue="">
+              <description>Defines whether this item will have an ico. It can be used as DOMElement to set the ico.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getRibbonCollection" returntype="DOMElement">
+          <description>Builds and returns a ribbon collection from HTMLRibbon.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The collection's id.</description>
+            </parameter>
+            <parameter name="$moduleID" type="string" defaultvalue="">
+              <description>Sets the module id for auto loading.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module for auto loading.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReport" returntype="string" class="undefined">
+          <description>Returns the ServerReport of this HTML Module Page.</description>
+          <parameters>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder for the modulePage content.
+By default, it follows the general rules of module protocol and has no holder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNavigationGroup" returntype="DOMElement" static="true">
+          <description>Creates a static navigation group.
+For more information, see the NavigatorProtocol.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the navigation group.</description>
+            </parameter>
+            <parameter name="$groupSelector" type="string" defaultvalue="">
+              <description>The static navigation selector for the group.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getModuleContainer" returntype="DOMElement" static="true" class="undefined">
+          <description>Builds a module container and returns the DOMElement.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module (if any)</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module with GET method during loading.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the module to load at startup (next content.modified).</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id of the module container as a DOM Object.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPageHolder" returntype="string" static="true">
+          <description>Gets the HTMLPage module holder selector.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getActionFactory" returntype="ActionFactory">
+          <description>Creates a new Action Factory.</description>
+          <parameters/>
+          <returndescription>Returns an instance of the Action Factory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

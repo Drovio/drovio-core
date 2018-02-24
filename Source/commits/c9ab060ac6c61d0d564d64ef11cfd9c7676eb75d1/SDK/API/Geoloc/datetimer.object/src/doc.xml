@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Geoloc" namespace="\">
+  <class name="datetimer" abstract="">
+    <info>
+      <version/>
+      <datecreated>1395648195</datecreated>
+      <daterevised>1404895204</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Date time manager</title>
+      <description>Manages the stored date the time and handles how they will be displayed (in the proper timezone) to the user.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="AUTO">
+        <description>The auto timezone value.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Inits the datetimer and sets the timezone according to user's location.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTimezone" returntype="void" static="true">
+          <description>Sets the current timezone for the system and for the user.</description>
+          <parameters>
+            <parameter name="$timezone" type="string" defaultvalue="">
+              <description>The timezone to be set.</description>
+            </parameter>
+            <parameter name="$updateUser" type="boolean" defaultvalue="">
+              <description>Indicates whether the user's timezone settings will be updated.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="live" returntype="DOMElement" static="true">
+          <description>Creates an element that displays a live timestamp (updates with an interval of 30 seconds).</description>
+          <parameters>
+            <parameter name="$time" type="integer" defaultvalue="">
+              <description>The unix timestamp.</description>
+            </parameter>
+            <parameter name="$format" type="string" defaultvalue="">
+              <description>The time format to display on hover (php time format).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The abbr element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadTimezone" returntype="void" static="true">
+          <description>Loads the timezone from the session or from the user's timezone settings.
+If timezone is set to auto, the timezone will be auto determined from the user's location.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

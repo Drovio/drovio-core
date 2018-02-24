@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="autoComplete" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 11:11 (EET)</datecreated>
+      <daterevised>March 11, 2013, 11:11 (EET)</daterevised>
+      <extends>\UI\Interactive\forms\formAutoComplete</extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Interactive\forms\formAutoComplete instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

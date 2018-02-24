@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\formControls">
+  <class name="switchButton" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447686334</datecreated>
+      <daterevised>1447686334</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Switch Button</title>
+      <description>Builds a switch button control input item.
+It is like a checkbox but with better looks.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="switchButton">
+          <description>Build a switch button.</description>
+          <parameters>
+            <parameter name="$active" type="boolean" defaultvalue="">
+              <description>Whether the switch button will be active or not.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The input name of the checkbox.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The checkbox value.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the switch button.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The switchButton object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

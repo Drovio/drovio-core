@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\\tracker"></use><use path="\UBA\Comm\dbConnection"></use><use path="\API\Model\sql\dbQuery"></use><use path="\API\Platform\importer"></use></dependencies>

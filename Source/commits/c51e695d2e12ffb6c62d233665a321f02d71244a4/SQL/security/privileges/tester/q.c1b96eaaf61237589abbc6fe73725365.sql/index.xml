@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1622807987"><title>Grant Tester Access</title><description>Gives testing access to a user for a module group</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

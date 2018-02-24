@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<div class="toc"><div class="toggleButton hide">hide</div>
+<div class="toggleButton show">show</div>
+<div class="ctitle">Contents</div>
+<div class="toc-list"></div>
+</div>
+<h1>Page notifications</h1>
+<p>This class provides a mechanism for displaying page notifications on the bottom left side of the page. It can include an action and a custom callback.</p>
+<p>For now it supports only javascript interface and this is how it is supposed to be used. If there is a notification with the same id, it will return false.</p>
+<div class="code">
+	<pre>// Show a notification
+Function:	show()
+Description:	Show a notification on the page
+Usage:		pageNotification.show(sender, ntf_id, title, actionTitle, actionCallback, disposeCallback, timeout);
+Example:
+
+// Add an action callback function
+// This function will be called then the action button is clicked
+var actionCallback = function() {
+	console.log("action callback called");
+}
+
+// Add a dispose callback function
+// This function will be called then the close button is clicked
+var disposeCallback = function() {
+	console.log("dispose callback called");
+}
+
+// Show notification
+pageNotification.show(jq(document), "notification-unique-id", "Notification title", "More Info", actionCallback, disposeCallback, false);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 October, 2015 [en_US]</p></div>
+</div></body></html>

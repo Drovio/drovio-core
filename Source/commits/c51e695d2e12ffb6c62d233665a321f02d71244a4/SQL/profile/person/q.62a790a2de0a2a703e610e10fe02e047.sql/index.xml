@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1206709991"><title>Get Person By eMail</title><description>Get a person by a given email account</description><access>1</access><attributes><attr id="mail"></attr></attributes></query>

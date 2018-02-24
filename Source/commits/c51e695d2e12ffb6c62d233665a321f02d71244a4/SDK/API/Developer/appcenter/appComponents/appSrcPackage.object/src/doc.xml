@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter\appComponents">
+  <class name="appSrcPackage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1370265167</datecreated>
+      <daterevised>1383069950</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>Application Source Package</title>
+      <description>Application Source Package Manager</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="LIB_NAME">
+        <description>The application's library name.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devPath">
+          <description>The developer's application source root path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the application's source root path.</description>
+          <parameters>
+            <parameter name="$devPath" type="string" defaultvalue="">
+              <description>The developer's path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new package in the application's index.</description>
+          <parameters>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The name of the package.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="createNS" returntype="boolean">
+          <description>Creates a namespace in the application's index.</description>
+          <parameters>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackages" returntype="array">
+          <description>Gets all packages of the application's source.</description>
+          <parameters>
+            <parameter name="$fullNames" type="boolean" defaultvalue="">
+              <description>Packages in fullname.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all packages.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="array">
+          <description>Get a list of namespaces in the application source.</description>
+          <parameters>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of namespaces by key and value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjects" returntype="array">
+          <description>Get all the objects in the given namespace.</description>
+          <parameters>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The namespace (separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of objects.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

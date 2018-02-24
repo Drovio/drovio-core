@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\units\modules">
+  <class name="Sauxiliary" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383742678</datecreated>
+      <daterevised>1383742678</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use Smodule instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="inputValidator" abstract="" namespace="\forms">
+    <info>
+      <version/>
+      <datecreated>April 23, 2013, 14:02 (EEST)</datecreated>
+      <daterevised>April 23, 2013, 14:02 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Input Validator</title>
+      <description>Validates form inputs according to inline rules.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="EMAIL_REGEXP">
+        <description>Email Regular Expression</description>
+      </const>
+      <const type="string" name="USERNAME_REGEXP">
+        <description>Username Regular Expression</description>
+      </const>
+      <const type="string" name="PASSWORD_REGEXP">
+        <description>Password Regular Expression</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" name="checkEmpty" returntype="boolean">
+          <description>Check if the given value is empty</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The value to check</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="checkNotset" returntype="boolean">
+          <description>Check if the given value is not set and empty</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The value to check</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="checkPassword" returntype="boolean">
+          <description>Check if the given value is a valid password</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The password to check</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="checkEmail" returntype="boolean">
+          <description>Check if the given value is a valid email</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The email to check</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="checkUsername" returntype="boolean">
+          <description>Check if the given value is a valid username</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The username to check</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

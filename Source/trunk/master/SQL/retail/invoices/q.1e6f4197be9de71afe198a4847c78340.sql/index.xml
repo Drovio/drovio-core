@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="18349791812254"><title>Close invoice for editing</title><description></description><access></access><attributes><attr id="total_price"></attr><attr id="total_tax"></attr><attr id="total_payments"></attr><attr id="iid"></attr><attr id="cid"></attr></attributes></query>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\DEV\Core\sql\sqlQuery"></use><use path="\API\Platform\importer"></use><use path="\DEV\Profiler\test\sqlTester"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\API\Resources\DOMParser"></use></dependencies>

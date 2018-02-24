@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="expander">
+	<div class="miniature">
+		<span>This is the miniature text to display when the expander is minimized.</span>
+	</div>
+	<div class="expansion">
+		<span>This is the expanded text of this expander to display when the expander is open. It should be used to allow the users to hide a big part of the text.</span>
+	</div>
+	<div class="switch">
+		<span>More</span>
+	</div>
+</div>
+</model>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="person" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1388486040</datecreated>
+      <daterevised>1444298901</daterevised>
+      <extends>
+        <object>\DRVC\Profile\person</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Person Class</title>
+      <description>Manages all person data.</description>
+      <deprecated>Use DRVC\Profile\person instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

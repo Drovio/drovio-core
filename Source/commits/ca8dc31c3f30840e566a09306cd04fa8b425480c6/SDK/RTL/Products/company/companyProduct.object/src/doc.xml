@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\company">
+  <class name="companyProduct" abstract="">
+    <info>
+      <version>2.2</version>
+      <build>1</build>
+      <datecreated>1415001293</datecreated>
+      <daterevised>1418657273</daterevised>
+      <extends>
+        <object>\RTL\Products\globalProduct</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company Product Manager</title>
+      <description/>
+      <deprecated>Use \RTL\Products\cProduct instead. See functions separately for deprecation.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="companyProductID">
+          <description>The company product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company product.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The company product id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Create a new company product.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type.
+It references to EAN, UPC and other code types.</description>
+            </parameter>
+            <parameter name="$productCode" type="integer" defaultvalue="">
+              <description>The unique product code (EAN, UPC etc.)</description>
+            </parameter>
+            <parameter name="$productHierarchy" type="integer" defaultvalue="">
+              <description>The product hierarchy id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The product title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The product description.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProduct instead.</deprecated>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get product information about a company product.</description>
+          <parameters>
+            <parameter name="$includeGlobal" type="boolean" defaultvalue="">
+              <description>If set to TRUE, the array will include global product information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of product information.
+It can include global product information.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProduct instead.</deprecated>
+        </method>
+        <method name="updateInfo" returntype="boolean">
+          <description>Update product information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The product title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The product description</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProduct instead.</deprecated>
+        </method>
+        <method name="getPrices" returntype="array">
+          <description>Get all product prices for the active company.</description>
+          <parameters/>
+          <returndescription>An array of all prices, including the tax rate and the price type title.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductPrice instead.</deprecated>
+        </method>
+        <method name="setPrice" returntype="boolean">
+          <description>Set a price for the current product.</description>
+          <parameters>
+            <parameter name="$priceType" type="integer" defaultvalue="">
+              <description>The price type.</description>
+            </parameter>
+            <parameter name="$price" type="float" defaultvalue="">
+              <description>The product price.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductPrice instead.</deprecated>
+        </method>
+        <method name="removePrice" returntype="boolean">
+          <description>Remove a price from the current product.</description>
+          <parameters>
+            <parameter name="$priceType" type="integer" defaultvalue="">
+              <description>The price type to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductPrice instead.</deprecated>
+        </method>
+        <method name="setTaxRate" returntype="boolean">
+          <description>Set the tax rate id for the current product.</description>
+          <parameters>
+            <parameter name="$taxRate" type="integer" defaultvalue="">
+              <description>The tax rate id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductPrice instead.</deprecated>
+        </method>
+        <method name="setProductStock" returntype="boolean">
+          <description>Set the stock for a product in a given branch in the given storage unit.</description>
+          <parameters>
+            <parameter name="$branchID" type="integer" defaultvalue="">
+              <description>The company branch id.
+It is the generic branch id and not the company's friendly id.</description>
+            </parameter>
+            <parameter name="$quantity" type="float" defaultvalue="">
+              <description>The product quantity.</description>
+            </parameter>
+            <parameter name="$storageID" type="integer" defaultvalue="">
+              <description>The storage id.
+It is optional and it is 1 by default.
+This should change in the next version because storage units must be created manually for every company.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductQuantity instead.</deprecated>
+        </method>
+        <method name="getProductStock" returntype="array">
+          <description>Get the stock for the product in all branches in general (no storage unit involved, sum).</description>
+          <parameters/>
+          <returndescription>An array of stocks per branch.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductQuantity instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

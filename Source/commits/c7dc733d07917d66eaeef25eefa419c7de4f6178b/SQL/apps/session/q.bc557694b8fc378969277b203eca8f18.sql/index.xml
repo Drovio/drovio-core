@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="29596258871675"><title>Get application total sessions count</title><description></description><access></access><attributes><attr id="app_id"></attr><attr id="expire_days"></attr></attributes></query>

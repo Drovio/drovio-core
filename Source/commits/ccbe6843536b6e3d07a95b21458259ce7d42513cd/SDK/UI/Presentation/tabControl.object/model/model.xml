@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="tabControl">
+	<div class="tabs">
+		<ul>
+			<li class="tabMenuItem editable">
+				<span class="tabMenuItemText">Tab Menu Item</span>
+				<div class="closeButton"/>
+			</li>
+		</ul>
+	</div>
+	<div class="pages"/>
+</div>
+</model>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model><button type="button" class="uiFormButton positive">Positive</button>&#13;
+<button type="button" class="uiFormButton">Neutral</button>&#13;
+<button type="button" class="uiFormButton disabled" disabled="disabled">Disabled</button></model>

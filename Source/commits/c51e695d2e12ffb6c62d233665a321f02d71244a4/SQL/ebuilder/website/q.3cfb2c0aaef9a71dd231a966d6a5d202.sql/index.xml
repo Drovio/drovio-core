@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1807515685"><title>Add Website</title><description>Add a new website</description><access>1</access><attributes><attr id="wsName">Website's title</attr><attr id="websiteDescription">Website's description</attr><attr id="siteType_id">Website's type (id)</attr><attr id="status_id">Website's status (id)</attr><attr id="project_id">Project of the website (id)</attr></attributes></query>

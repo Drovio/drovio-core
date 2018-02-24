@@ -1,0 +1,29 @@
+<h1>Platform Generic Form Label</h1>
+<p>Creating a form label is extremely useful when we have to create a form with proper directions and labels. formLabel is an internal object which facilitates the process of creating labels along with inputs to build better and quicker forms.</p>
+<h3>PHP Examples</h3>
+<div class="code">
+	<pre>// Single-line creator of a form label
+	
+// Use class
+use \UI\Forms\formControls\formLabel;
+
+// Create a form label
+$fl = new formLabel();
+
+// This is a UIObject, so we build
+// We use the chain pattern to get the DOMElement immediately
+$label = $fl->build($context = "Label title", $for = "")->get();
+
+// Append item to anything
+DOM::append($anything, $label);</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>formLabel also provides a javascript interface where a developer can create form labels on the client side dynamically.</p>
+<div class="code">
+	<pre>// Create a form label in a single line
+// formLabel.create(context, forInputID);
+var fl = formLabel.create("Label title", "");
+
+// Append to form
+jq("form.userform").append(fl);</pre>
+</div>

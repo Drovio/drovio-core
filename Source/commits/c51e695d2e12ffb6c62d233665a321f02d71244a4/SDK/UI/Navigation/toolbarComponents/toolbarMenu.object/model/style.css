@@ -1,0 +1,27 @@
+.toolbarMenu {
+	height: 100%;
+	float: left;
+}
+.toolbarMenuContainer {
+	height: 100%;
+}
+.toolbarMenuContainer ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	height: 100%;
+}
+.toolbarMenuContainer .subMenuItem {
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0px 5px;
+	cursor: pointer;
+	float: left;
+}
+.toolbarMenuContainer .subMenuItem:hover {
+	border-left: ;
+	color: #FFF;
+}
+.toolbarMenuContainer .subMenuItem .itemHeader {
+	line-height: 28px;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Analytics" namespace="\">
+  <class name="analyzer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1407862633</datecreated>
+      <daterevised>1407862633</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Analytics Class - Analyzer</title>
+      <description>Class to store, load and analyze object visits and loads</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FOLDER">
+        <description>The folter were the analytics data raw  is stored</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="pid">
+          <description>The project id</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The Constructor Method</description>
+          <parameters>
+            <parameter name="$pid" type="string" defaultvalue="">
+              <description>The project id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

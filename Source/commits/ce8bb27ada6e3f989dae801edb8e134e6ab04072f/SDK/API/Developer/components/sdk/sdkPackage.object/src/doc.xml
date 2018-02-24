@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\sdk">
+  <class name="sdkPackage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363863120</datecreated>
+      <daterevised>1396081142</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>SDK Package Manager</title>
+      <description>Handles all operations with SDK packages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="classMap" name="classMap">
+          <description>The classMap Object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void" static="true">
+          <description>Constructor method. Initializes the object variables.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createNS" returntype="boolean" static="true">
+          <description>Create a namespace in the given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="array" static="true">
+          <description>Gets all namespaces in a given package, with an optional parent namespace.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::", if any).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>A nested array of namespaces.</returndescription>
+          <throws/>
+        </method>
+        <method name="load" returntype="void" static="true">
+          <description>Loads all objects in the given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadCSS" returntype="void" static="true">
+          <description>Loads a style package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadJS" returntype="void" static="true">
+          <description>Loads a javascript package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="void" static="true">
+          <description>Exports an entire package (including source code, css and javascript) to latest.
+Performs an inner release.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Only project manager can deploy.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackageObjects" returntype="array" static="true">
+          <description>Get all objects in a package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::", if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of the object information including title, name, package, library and namespace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSObjects" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use getPackageObjects() instead.</deprecated>
+        </method>
+        <method name="getReleasePackageObjects" returntype="array" static="true">
+          <description>Get all objects from the release index map.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of object information including title, name, package, library and namespace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getReleaseObjectPath" returntype="string" static="true">
+          <description>Gets the release object path.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object name (including namespace separated by "::").</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The object path.</returndescription>
+          <throws/>
+        </method>
+        <method name="loadLibrary" returntype="void" static="true" class="undefined">
+          <description>Load all packages of a given library.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

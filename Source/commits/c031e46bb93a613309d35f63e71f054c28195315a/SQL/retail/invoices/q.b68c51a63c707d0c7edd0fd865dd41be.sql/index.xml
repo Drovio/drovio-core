@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="3044957363949"><title>Update invoice extra information</title><description></description><access></access><attributes><attr id="wayOfPayment"></attr><attr id="purposeOfTrafficking"></attr><attr id="wayOfShipping"></attr><attr id="shippingLocation"></attr><attr id="deliveryLocation"></attr><attr id="iid"></attr><attr id="cid"></attr></attributes></query>

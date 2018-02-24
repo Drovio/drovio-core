@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profile" namespace="\">
+  <class name="translator" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1413969840</datecreated>
+      <daterevised>1436943625</daterevised>
+      <extends>
+        <object>\DEV\Profiler\tester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>User Translator</title>
+      <description>Manager class for system translators.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the literal translator mode.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the literal translator mode.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Check the literal translator mode.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to check the status for.
+If NULL, check only if translator is activated.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns whether the user is a translator and the translaction locale is the current locale of the system.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="join" returntype="boolean" static="true">
+          <description>Joins the translator user group.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to translate to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="leave" returntype="void" static="true">
+          <description>Leaves the translator user group.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="profile" returntype="array" static="true">
+          <description>Checks if the user is translator and returns the profile.</description>
+          <parameters/>
+          <returndescription>Returns in array the profile of the translator (id, locale, languageName etc).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="sessionStatus" returntype="boolean" static="true">
+          <description>Performs an inner check of the translator's status.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale value to check against session value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns whether the user is a translator and the translaction locale is the current locale of the system.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

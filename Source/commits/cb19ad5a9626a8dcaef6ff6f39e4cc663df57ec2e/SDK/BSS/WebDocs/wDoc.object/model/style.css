@@ -1,0 +1,50 @@
+.wDoc {
+	overflow: auto;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	font-familly: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	color: #555;
+	font-size: 12px;
+}
+.wDoc h1, .wDoc h2, .wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	color: #444;
+	font-size: initial;
+}
+.wDoc h2, .wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	text-indent: 3px;
+	font-weight: normal;
+}
+.wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	text-indent: 6px;
+}
+.wDoc h1 {
+	font-size: 20px;
+}
+.wDoc h2 {
+	font-size: 18px;
+}
+.wDoc h3 {
+	font-size: 16px;
+}
+.wDoc .code {
+	background: #F0F0F0;
+	padding: 10px 0px;
+	overflow: auto;
+	border: 1px solid #CCC;
+}
+.wDoc pre {
+	white-space: pre-wrap;
+	padding: 0px 15px;
+}
+.wDoc p {
+	font-size: 12px;
+	line-height: 18px;
+	text-indent: 10px;
+	padding: 0px 15px;
+}
+.wDoc a,
+.wDoc a.visited {
+	color: #C00403;
+	text-decoration: underline;
+}

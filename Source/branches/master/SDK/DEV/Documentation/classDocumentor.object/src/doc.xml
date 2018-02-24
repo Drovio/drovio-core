@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Documentation" namespace="\">
+  <class name="classDocumentor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1404242157</datecreated>
+      <daterevised>1432639511</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Class Documentor</title>
+      <description>Handles the documentation process of the classes.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMParser" name="parser">
+          <description>The parser used to read the documentation file.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Creates and initializes a classDocumentor object.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadFile" returntype="boolean">
+          <description>Load a documentation file into class object.</description>
+          <parameters>
+            <parameter name="$filepath" type="string" defaultvalue="">
+              <description>Documentation fie path</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>True on success, False on failure</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="loadContent" returntype="boolean">
+          <description>Load a documentation content in string form into class object.</description>
+          <parameters>
+            <parameter name="$manual" type="string" defaultvalue="">
+              <description>The documentation files content in xml format</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Initalizes a basic form of documentation file into class object</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>class library name</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>class package name</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>class namespace</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="structUpdate" returntype="void">
+          <description>Temporary method. Updates old files structure</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>class library name</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>class package name</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>class namespace</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDoc" returntype="string">
+          <description>Return the class object's loaded documentation content in string</description>
+          <parameters/>
+          <returndescription>Loaded documentation content in string</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array">
+          <description>Retrieves and returns all the class info in an array.</description>
+          <parameters/>
+          <returndescription>title
+description
+datecreated
+dateupdated
+version
+extends
+implements
+deprecated
+throws</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProperties" returntype="array">
+          <description>Retrieves and returns all the properties of the class.</description>
+          <parameters/>
+          <returndescription>public - array of public properties information
+protected - array of protected properties information
+private - array of private properties information</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPropertyArray" returntype="array">
+          <description>Forms an array of property information and returns it.</description>
+          <parameters>
+            <parameter name="$prop" type="DOMElement" defaultvalue="">
+              <description>The property element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>name
+type
+description</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConstants" returntype="array">
+          <description>Returns all class constants.</description>
+          <parameters/>
+          <returndescription>array of constant information</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMethods" returntype="array">
+          <description>Returns all class methods</description>
+          <parameters/>
+          <returndescription>public - array of public methods information
+protected - array of protected methods information
+private - array of private methods information</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMethodArray" returntype="array">
+          <description>Forms an array of method information and returns it.</description>
+          <parameters>
+            <parameter name="$meth" type="DOMElement" defaultvalue="">
+              <description>The method element.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getClassDetails" returntype="array" static="true">
+          <description>Returns class details in an array</description>
+          <parameters>
+            <parameter name="$manual" type="string" defaultvalue="">
+              <description>Object's documentation in xml format</description>
+            </parameter>
+          </parameters>
+          <returndescription>Class details:
+name -&amp;gt; (string) Class name,
+abstract -&amp;gt; (boolean) Class is/isn't abstract,
+namespace -&amp;gt; (string) Class namespace,
+version -&amp;gt; Class version,
+datecreated -&amp;gt; Class creation timestamp,
+daterevised -&amp;gt; Class last revision timestamp,
+title -&amp;gt; Class title,
+description -&amp;gt; Class description,
+deprecated -&amp;gt; (mixed) Class deprication description or FALSE,
+extends -&amp;gt; array of extended object names,
+implements -&amp;gt; array of implemented object names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isValidDocumentation" returntype="boolean" static="true">
+          <description>Checks if the manual's structure is correct</description>
+          <parameters>
+            <parameter name="$manual" type="string" defaultvalue="">
+              <description>Object's documentation in xml format</description>
+            </parameter>
+          </parameters>
+          <returndescription>The validation state of the documentation</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModel" returntype="string" static="true">
+          <description>Returns the documentation model's xml.</description>
+          <parameters/>
+          <returndescription>The model's xml string</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="classDocumentor">
+          <description>Update the documentation content</description>
+          <parameters>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The class object name</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>Documentation content in string (xml formated)</description>
+            </parameter>
+          </parameters>
+          <returndescription>classDocumentor object</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

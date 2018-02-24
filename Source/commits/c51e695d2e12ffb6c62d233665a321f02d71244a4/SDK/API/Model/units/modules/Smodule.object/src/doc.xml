@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\units\modules">
+  <class name="Smodule" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383742637</datecreated>
+      <daterevised>1383742637</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Manager</title>
+      <description>Gets information about modules for the runtime.</description>
+      <deprecated>This class is deprecated. Soon to be moved.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="LIB_PATH">
+        <description>The modules library path.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Gets the info of a module.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module info as fetched from the database.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="directoryName" returntype="string" static="true">
+          <description>Gets the module's directory name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fileName" returntype="string" static="true">
+          <description>The module's filename.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$seed" type="integer" defaultvalue="">
+              <description>The auxiliary's seed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php filename.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="filePath" returntype="string" static="true">
+          <description>Get module filepath from index.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The auxiliary name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module or auxiliary filelpath.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasCSS" returntype="boolean" static="true">
+          <description>Gets whether this module has css code.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module has css, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasJS" returntype="boolean" static="true">
+          <description>Gets whether this module has js code.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module has css, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

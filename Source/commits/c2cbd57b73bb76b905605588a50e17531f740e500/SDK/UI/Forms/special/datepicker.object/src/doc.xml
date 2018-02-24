@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\special">
+  <class name="datepicker" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1391453777</datecreated>
+      <daterevised>1391535392</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Date Picker</title>
+      <description>A UI control control, which gives the ability to select a day through a calendar.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="maxYear">
+          <description>The maximun accepted year</description>
+        </prop>
+        <prop type="integer" name="yearRange">
+          <description>The year range that calendar will display (+/- yearRange), negative value means infinate. Default is 10.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="object">
+          <description>Build the date picker object</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>object id</description>
+            </parameter>
+          </parameters>
+          <returndescription>A datepicker instance</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDay" returntype="string" static="true">
+          <description>Return the selected daypicker day that return with the _REQUEST object</description>
+          <parameters>
+            <parameter name="$data" type="array" defaultvalue="">
+              <description>The _GET or _POST array oblect</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>object id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMonth" returntype="string" static="true">
+          <description>Return the selected daypicker month that return with the _REQUEST object</description>
+          <parameters>
+            <parameter name="$data" type="array" defaultvalue="">
+              <description>The _GET or _POST array oblect</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>object id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getYear" returntype="string" static="true">
+          <description>Return the selected daypicker year that return with the _REQUEST object</description>
+          <parameters>
+            <parameter name="$data" type="array" defaultvalue="">
+              <description>The _GET or _POST array oblect</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>object id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

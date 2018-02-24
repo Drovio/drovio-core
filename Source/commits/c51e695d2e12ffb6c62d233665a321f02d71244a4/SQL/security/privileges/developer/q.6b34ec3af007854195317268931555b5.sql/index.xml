@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="602589690"><title>Check Developer Module</title><description>Check if a user is a developer of a given module</description><access>1</access><attributes><attr id="mid"></attr><attr id="aid"></attr></attributes></query>

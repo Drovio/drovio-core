@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\projects">
+  <class name="projectStatus" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387790528</datecreated>
+      <daterevised>1387790528</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Project Status</title>
+      <description>Manages project statuses.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new project status.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The status name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project id if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

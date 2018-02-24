@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\sdk">
+  <class name="privileges" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1414153041</datecreated>
+      <daterevised>1414153041</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Open SDK Packages Manager</title>
+      <description>Handles all SDK packages that are open to developers.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMParser" name="xmlParser">
+          <description>The DOMParser object that edits the privileges file.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the class and load the privileges file.
+The file will be created, if accidentally erased.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackages" returntype="array">
+          <description>Get all Open SDK Packages by library name.</description>
+          <parameters/>
+          <returndescription>An array of all packages as nested arrays for every library.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setPackages" returntype="boolean">
+          <description>Set the Open SDK packages.</description>
+          <parameters>
+            <parameter name="$packages" type="array" defaultvalue="">
+              <description>An array of all packages as nested arrays for every library.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

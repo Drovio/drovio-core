@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="32325815532962"><title>Delete App Session Version Info</title><description>Delete the database entry from application session table holding information about the app current activated version</description><access></access><attributes><attr id="uid"></attr><attr id="application_id"></attr></attributes></query>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="tester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1375267858</datecreated>
+      <daterevised>1406880684</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Tester profile</title>
+      <description>Manages the tester profile.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="testerModules" static="true">
+          <description>All the user's tester modules.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="testerModule" returntype="boolean" static="true">
+          <description>Checks if a user is tester for the given module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTrunk" returntype="string" static="true">
+          <description>Gets the tester trunk for the connected account.</description>
+          <parameters/>
+          <returndescription>The trunk directory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDBTesterModule" returntype="boolean" static="true">
+          <description>Gets the tester status from the database.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns true if tester, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

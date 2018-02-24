@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\appcenter">
+  <class name="appPackage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1369912433</datecreated>
+      <daterevised>1383477787</daterevised>
+      <extends>\API\Developer\components\prime\packageObject</extends>
+      <implements/>
+      <throws/>
+      <title>Application Center Package Manager</title>
+      <description>Manages all application center's library packages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean">
+          <description>Creates a package index inside the application center library SDK.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name to create the package.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="getNSList" returntype="array">
+          <description>Gets all the namespaces in the given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The given library.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The given package.</description>
+            </parameter>
+            <parameter name="$parentNS" type="string" defaultvalue="">
+              <description>The parent namespace (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all namespaces.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSObjects" returntype="array">
+          <description>Gets all the objects in the given namespace.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The namespace (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of objects.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="void" static="true">
+          <description>Exports the given package to release location.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name to export.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

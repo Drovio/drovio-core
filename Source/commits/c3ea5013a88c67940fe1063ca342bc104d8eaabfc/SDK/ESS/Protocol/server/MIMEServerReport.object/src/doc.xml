@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="MIMEServerReport" abstract="" namespace="\server">
+    <info>
+      <version/>
+      <datecreated>April 16, 2013, 14:51 (EEST)</datecreated>
+      <daterevised>April 16, 2013, 14:51 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Multipurpose Internet Mail Extensions Server Report</title>
+      <description>Returns an http response and performs a download of a server file.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" static="true" returntype="void">
+          <description>Sets the response headers and reads the given file to be downloaded.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The given file path.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The response file Content-type.</description>
+            </parameter>
+            <parameter name="$suggestedFileName" type="string" defaultvalue="">
+              <description>The suggested file name for downloading the server file.</description>
+            </parameter>
+            <parameter name="$ignore_user_abort" type="boolean" defaultvalue="">
+              <description>Indicator for aborting the running script upon user cancelation.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setHeaders" static="true" returntype="void">
+          <description>Set the httpResponse headers.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The given file path.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The response file Content-type.</description>
+            </parameter>
+            <parameter name="$suggestedFileName" type="string" defaultvalue="">
+              <description>The suggested file name for downloading the server file.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

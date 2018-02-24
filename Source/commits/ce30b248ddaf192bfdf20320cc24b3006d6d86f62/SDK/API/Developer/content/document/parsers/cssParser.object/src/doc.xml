@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\content\document\parsers">
+  <class name="cssParser" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365147000</datecreated>
+      <daterevised>1395665721</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>CSS Parser</title>
+      <description>Parses and handles css files.</description>
+      <deprecated>Use \DEV\Tools\parsers\cssParser instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="format" returntype="string" static="true">
+          <description>Formats the given css code according to parameters.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The css code.</description>
+            </parameter>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>If TRUE, sets each selector with its properties in a single line.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

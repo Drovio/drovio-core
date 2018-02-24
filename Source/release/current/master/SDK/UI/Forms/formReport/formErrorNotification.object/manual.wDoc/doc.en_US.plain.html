@@ -1,0 +1,106 @@
+<h1>Form Error Notification Object</h1>
+<p>An extension of the Form Notification Object is the error notification object. This object allows the developer to create a specific error notification that is equipped with an embedded list where errors can be appended. Examples:</p>
+<div class="code">
+	<pre>// Create a form error notification in response of a form post
+	
+// Use the class
+use \UI\Forms\formReport\formErrorNotification;
+	
+// Create the notification object
+$ntf = new formErrorNotification();
+
+// This is a UIObject, so we build
+// We do not have to get the DOMElement in this case, just build
+// There are no parameters in the build process because they are predefined as error notification
+$ntf->build();
+
+// We add an error header
+$header = $ntf->addHeader("Password error", $id = "");
+
+// We can add multiple descriptions to the above header
+// to describe why the error occurred
+$ntf->addDescription($header, "The password is a required field.", $extra = "", $id = "");
+$ntf->addDescription($header, "The password must include numbers, characters and dragon bones...", $extra = "", $id = "");
+
+// After we finish building the notification, we return the report
+// The report prevents the reset of the form (only passwords are being reset)
+return $ntf->getReport();</pre>
+</div>
+<h2>System validation messages</h2>
+<p>Using the <b>getErrorMessage()</b> function you can get pre-defined validation error messages from the system. This is the list of all messages supported at the moment: (messages can change from time to time, these are the descriptions and not the actual messages)</p>
+<style>
+	table.errorMessages {
+		width: 100%;
+	}
+	table.errorMessages tr:first-child {
+		border-bottom: 1px solid #CCC;
+	}
+	table.errorMessages tr th {
+		text-align: left;
+		font-weight: bold;
+		padding: 3px 7px;
+	}
+	table.errorMessages td {
+		padding: 3px 7px;
+	}
+</style>
+<table class="errorMessages">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>err.absent</td>
+			<td>The given value doesn't exist.</td>
+		</tr>
+		<tr>
+			<td>err.access_denied</td>
+			<td>The function doesn't allow access for some reason.</td>
+		</tr>
+		<tr>
+			<td>err.authenticate</td>
+			<td>The account/user failed to authenticate.</td>
+		</tr>
+		<tr>
+			<td>err.exists</td>
+			<td>A given value already exists.</td>
+		</tr>
+		<tr>
+			<td>err.form_invalidate</td>
+			<td>The posting form has been invalidated.</td>
+		</tr>
+		<tr>
+			<td>err.invalid</td>
+			<td>Invalid information during form post.</td>
+		</tr>
+		<tr>
+			<td>err.required</td>
+			<td>The field is required.</td>
+		</tr>
+	</tbody>
+</table>
+<p>Example on how to use the <b>getErrorMessage()</b> functionality:</p>
+<div class="code">
+	<pre>// Create a form error notification in response of a form post
+	
+// Use the class
+use \UI\Forms\formReport\formErrorNotification;
+	
+// Create and build the error notification
+$ntf = new formErrorNotification();
+$ntf->build();
+
+// Check if the posted 'name' field is empty, which is required
+if (empty($_POST['name']))
+{
+	// Add error header
+	$header = $ntf->addHeader("Name field");
+	$errorMessage = $ntf->getErrorMessage("err.required");
+	$ntf->addDescription($header, $errorMessage);
+	return $ntf->getReport();
+}
+
+// Return the error notification just because ;-)
+return $ntf->getReport();</pre>
+</div>

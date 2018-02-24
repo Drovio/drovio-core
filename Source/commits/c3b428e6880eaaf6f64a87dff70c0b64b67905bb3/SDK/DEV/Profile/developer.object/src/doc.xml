@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profile" namespace="\">
+  <class name="developer" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1413969507</datecreated>
+      <daterevised>1450458990</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Profile</title>
+      <description>Manages the developer's profile.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="mWork" static="true">
+          <description>Modules in workspace.</description>
+        </prop>
+        <prop type="array" name="mgWork" static="true">
+          <description>Module groups in workspace.</description>
+        </prop>
+        <prop type="array" name="gmasterWork" static="true">
+          <description>Module groups in master workspace.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="moduleInWorkspace" returntype="boolean" static="true">
+          <description>Checks if the developer has the given module in the workspace.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="moduleGroupInWorkspace" returntype="void" static="true">
+          <description>Checks if the developer has the given module group in the workspace.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The module group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="masterGroup" returntype="boolean" static="true">
+          <description>Checks if the developer has the given module group in the workspace as master.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The module group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWorkspaceModules" returntype="array" static="true">
+          <description>Get all modules in the developer's workspace.</description>
+          <parameters/>
+          <returndescription>An array of all modules' information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getFromDB" returntype="mixed" static="true">
+          <description>Execute the given query with the current user.</description>
+          <parameters>
+            <parameter name="$dbq" type="dbQuery" defaultvalue="">
+              <description>The query to execute.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The result status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

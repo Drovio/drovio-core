@@ -1,0 +1,37 @@
+.uiFormButton {
+	font-family: "Verdana", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size:11px;
+	background-color:#FFF;
+	border:1px solid rgba(166, 166, 166, 1);
+	color:#545454;
+	padding:5px 7px;
+	line-height:16px;
+	cursor:pointer;
+	margin:2px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+	width:auto;
+	text-transform: capitalize;
+}
+.uiFormButton.positive {
+	background-color:#D9E8F6;
+	border:1px solid rgba(0,98,194,1);
+	color:#545454;
+}
+.uiFormButton:hover {
+	background-color:#EEE;
+	border:1px solid rgba(100, 100, 100,1);
+}
+.uiFormButton.disabled, .uiFormButton.positive.disabled {
+	background-color:rgb(200, 200, 200);
+	border:1px solid rgb(166, 166, 166);
+	cursor:default;
+	color:#848484;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.uiFormButton.disabled:hover {
+	border:1px solid rgba(100, 100, 100, 0.5);
+}

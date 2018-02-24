@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Data Grid List</h1>
+<p>Presenting a list of data can be easy and fun. We have created a data grid list object that allows the developers to create a custom list control to present rows of data of the same information (fields).</p>
+<h2>Simple data grid list example</h2>
+<div class="code">
+	<pre>// Create a custom data grid list
+	
+// Use the class
+use \UI\Presentation\dataGridList;
+
+// Create a grid list object
+$gridList = new dataGridList($editable = FALSE);
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$userList = $gridList-&gt;build($id = "userList", $checkable = FALSE, $withBorder = TRUE)-&gt;get();
+
+// Append to body
+DOM::append($body, $userList);
+
+
+// Before adding any rows (including the headers), we can customize the column width ratio
+$ratios = array();
+$ratios[] = 0.1;
+$ratios[] = 0.5;
+$ratios[] = 0.2;
+$ratios[] = 0.2;
+$gridList-&gt;setColumnRatios($ratios);
+
+// Add headers, they must be inserted before any row
+$headers = array();
+$headers[] = "ID";
+$headers[] = "User Name";
+$headers[] = "Gender";
+$headers[] = "Birthdate";
+$gridList-&gt;setHeaders($headers);
+
+
+// Get users and insert them into the list
+foreach ($users as $userInfo)
+{
+	// Create the row to insert into the list
+	$row = array();
+	
+	// Add info into the row
+	$row[] = $userInfo['id'];
+	$row[] = $userInfo['firstname']." ".$userInfo['lastname'];
+	$row[] = $userInfo['gender'];
+	$row[] = $userInfo['bdate'];
+	
+	// Insert the row
+	$gridList-&gt;insertRow($row, $checkName = NULL, $checked = FALSE, $checkValue = "");
+}</pre>
+</div>
+<h2>Creating a data grid list to use in form</h2>
+<p>We can use this grid list as part of the form and sumbmit checked values to handle the information accordingly.</p>
+<div class="code">
+	<pre>// Create a custom data grid list
+	
+// Use the class
+use \UI\Presentation\dataGridList;
+
+// Create a grid list object
+$gridList = new dataGridList($editable = FALSE);
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$userList = $gridList-&gt;build($id = "userList", $checkable = TRUE, $withBorder = TRUE)-&gt;get();
+
+// Append to body
+DOM::append($body, $userList);
+
+// Add headers, they must be inserted before any row
+$headers = array();
+$headers["id"] = "ID";
+$headers["username"] = "User Name";
+$headers["gender"] = "Gender";
+$headers["bdate"] = "Birthdate";
+$gridList-&gt;setHeaders($headers);
+
+
+// Get users and insert them into the list
+foreach ($users as $userInfo)
+{
+	// Create the row to insert into the list
+	$row = array();
+	
+	// Add info into the row
+	$row["id"] = $userInfo['id'];
+	$row["username"] = $userInfo['firstname']." ".$userInfo['lastname'];
+	$row["gender"] = $userInfo['gender'];
+	$row["bdate"] = $userInfo['bdate'];
+	
+	// Insert the row
+	$gridList-&gt;insertRow($row, $checkName = "user[]", $checked = FALSE, $checkValue = $userInfo['id']);
+}
+
+
+// The above code will generate the form post output:
+// $_POST['user'][0] = 1;
+// $_POST['user'][1] = 2;
+// $_POST['user'][2] = 3;
+// $_POST['user'][3] = 4;</pre>
+</div>
+<h2>Javascript interface + examples</h2>
+<p>Data grid list also provides a javascript interface where a developer edit a list adding or removing rows, sorting or even clearing the list.</p>
+<div class="code">
+	<pre>// Javascript interface
+Function:	addRow()
+Description:	Add a new row in the list
+Usage:		dataGridList.addRow(gridList, contents);s
+Example:
+// Get the gridlist
+var gridList = jq(".userList");
+
+// Add row
+var row = new Array();
+row.push("0");
+row.push("User name");
+row.push("Male");
+row.push("DD/MM/YYYY");
+dataGridList.addRow(gridList, row);
+
+
+Function:	removeRow()
+Description:	Remove a row given the row identnifier
+Usage:		dataGridList.removeRow(gridList, identifier);
+
+Function:	replaceCell()
+Description:	Replace a cell content
+Usage:		dataGridList.replaceCell(gridList, row, column, replacement);
+
+Function:	getSelectedRows()
+Description:	Get all selected rows from a checkable grid list
+Usage:		dataGridList.getSelectedRows(gridList);
+
+Function:	removeSelectedRows()
+Description:	Remove all selected rows
+Usage:		dataGridList.removeSelectedRows(gridList);
+
+Function:	sort()
+Description:	Sort a grid list contents according to a given header
+Usage:		dataGridList.sort(gridList, headerCell);
+
+Function:	reset()
+Description:	Reset grid list selected rows.
+Usage:		dataGridList.reset(gridList);
+
+Function:	clear()
+Description:	Clear all rows from the given grid list
+Usage:		dataGridList.clear(gridList);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 10 October, 2015 [en_US]</p></div>
+</div></body></html>

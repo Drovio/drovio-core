@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents\ribbonComponents">
+  <class name="ribbonPanelItem" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365145620</datecreated>
+      <daterevised>1402469704</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Ribbon Panel Item</title>
+      <description>Creates a simple panel item for the current ribbon control.</description>
+      <deprecated>Use \UI\Core\components\ribbon\rPanelItem instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

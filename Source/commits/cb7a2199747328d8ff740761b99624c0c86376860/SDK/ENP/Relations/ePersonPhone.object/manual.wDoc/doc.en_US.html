@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Relations person phone manager</h1>
+<p>Every relation person can have 0 or more phones and they can by of different type (home, work, mobile, fax etc.). You can add phones to a person as easy as two lines of code and you can edit and remove them even easier:</p>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePerson;
+use \ENP\Relations\ePersonPhone;
+
+// Get person id
+$personID = engine::getVar("id");
+
+// Create an empty phone instance
+$pPhone = new ePersonPhone($personID);
+
+// Create new phone (mobile, fax, work, home etc.)
+$pPhone-&gt;create($typeID = 1, $phone = "6931234567", $countryID = "");
+
+
+// Update the phone info
+$pPhone-&gt;update($typeID = 1, $phone = "6931234568", $countryID = "87");
+</pre>
+</div>
+<h2>Getting all person phoes</h2>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePerson;
+use \ENP\Relations\ePersonPhone;
+
+// Get person id
+$personID = engine::getVar("id");
+
+// Get all person phones
+$pPhone = new ePersonPhone($personID);
+$allPhones = $pPhone-&gt;getAllPhones();
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; "1_1_1"
+            [person_id] =&gt; "1"
+            [phone_id] =&gt; "1"
+            [type_id] =&gt; "1"
+            [phone] =&gt; "6931234568"
+            [country_id] =&gt; "87"
+            [type] =&gt; "Home"
+            [country] =&gt; "Greece"
+        )
+)</pre>
+</div>
+<h2>Select a phone type</h2>
+<p>When creating or updating a phone, we need to provide a phone type. This class can provide us with a list of all phone types that the SDK supports:</p>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePersonPhone;
+
+// Get all phone types
+$types = new ePersonPhone::getPhoneTypes();
+
+// The above should return something like this:
+// It is: key =&gt; title
+Array
+(
+    [0] =&gt; "Mobile"
+    [1] =&gt; "Home"
+    [2] =&gt; "Fax"
+    [3] =&gt; "Work fax"
+    [4] =&gt; "Other"
+)</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 01 September, 2015 [en_US]</p></div>
+</div></body></html>

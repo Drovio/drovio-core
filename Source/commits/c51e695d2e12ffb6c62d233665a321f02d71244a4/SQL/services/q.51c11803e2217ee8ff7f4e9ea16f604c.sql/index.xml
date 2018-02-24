@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="435679227"><title>Get person packages</title><description>Get all the packages the person is registered to</description><access>1</access><attributes><attr id="person_id"></attr></attributes></query>

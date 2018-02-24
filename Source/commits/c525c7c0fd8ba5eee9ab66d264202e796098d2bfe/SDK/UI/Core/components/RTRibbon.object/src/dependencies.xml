@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\\RTRibbon"></use><use path="\ESS\Prototype\content\ModuleContainerPrototype"></use><use path="\API\Platform\importer"></use><use path="\UI\Html\DOM"></use><use path="\UI\Html\HTML"></use><use path="\ESS\Protocol\ModuleProtocol"></use><use path="\ESS\Prototype\UIObjectPrototype"></use></dependencies>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\ebuilder">
+  <class name="ebPackage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1369742586</datecreated>
+      <daterevised>1396600515</daterevised>
+      <extends>\API\Developer\components\prime\packageObject</extends>
+      <implements/>
+      <throws/>
+      <title>Ebuilder Package Manager</title>
+      <description>Handles all operations with eBuilder packages.</description>
+      <deprecated>Use \DEV\WebEngine\sdk\webPackage instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="classMap">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new package.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="void" static="true">
+          <description>Activates or deactivates the tester status for the given eBuilder packages.</description>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createNS" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads all objects in the given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadCSS" returntype="void">
+          <description>Loads a style package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadJS" returntype="void">
+          <description>Loads a javascript package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="void">
+          <description>Exports an entire package (including source code, css and javascript) to latest.
+Performs an inner release.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackageObjects" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSObjects" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleasePackageObjects" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="pack" returntype="boolean">
+          <description>Pack an entire package in an archive, new or existing.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>Name of the library</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>Name of the package to pack.</description>
+            </parameter>
+            <parameter name="$archivePath" type="string" defaultvalue="">
+              <description>Directory of the new or existing archive</description>
+            </parameter>
+            <parameter name="$archiveName" type="string" defaultvalue="">
+              <description>Name of the archive to pack into. If empty, a new archive will be created in $destination.</description>
+            </parameter>
+            <parameter name="$innerArchiveDirectory" type="string" defaultvalue="">
+              <description>Inner directory inside the existing archive. Ignored if no archive is provided.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getReleaseObjectPath" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadLibrary" returntype="void">
+          <description>Load all packages of a given library.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

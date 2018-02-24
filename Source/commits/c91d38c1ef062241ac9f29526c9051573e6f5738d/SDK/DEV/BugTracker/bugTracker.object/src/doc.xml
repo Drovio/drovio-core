@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="BugTracker" namespace="\">
+  <class name="bugTracker" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1404149092</datecreated>
+      <daterevised>1405624465</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Bug Tracker</title>
+      <description>Class to report and review bugs</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FOLDER">
+        <description>The folter were the bugs  data is stored</description>
+      </const>
+      <const type="string" name="SV_FEATURE">
+        <description>Severity identification : Feature request</description>
+      </const>
+      <const type="string" name="SV_MINOR">
+        <description>Severity identification : Minor bug</description>
+      </const>
+      <const type="string" name="SV_MAJOR">
+        <description>Severity identification : Major bug</description>
+      </const>
+      <const type="string" name="SV_CRITICAL">
+        <description>Severity identification : Critical bug</description>
+      </const>
+      <const type="string" name="PR_HIGH">
+        <description>Priority identification : high</description>
+      </const>
+      <const type="string" name="PR_NORMAL">
+        <description>Priority identification : normal</description>
+      </const>
+      <const type="string" name="PR_LOW">
+        <description>Priority identification : low</description>
+      </const>
+      <const type="string" name="ST_NEW">
+        <description>Status identification : The bug is new</description>
+      </const>
+      <const type="string" name="ST_ACK">
+        <description>Status identification : The bug was acknoledged by a mainteiner</description>
+      </const>
+      <const type="string" name="ST_CONFIRMED">
+        <description>Status identification : The bug confirmed to be valid</description>
+      </const>
+      <const type="string" name="ST_ASSIGNED">
+        <description>Status identification : The bug was assigned to a developer</description>
+      </const>
+      <const type="string" name="ST_RESOLVED">
+        <description>Status identification : The bug was resolved</description>
+      </const>
+      <const type="string" name="ST_REJECTED">
+        <description>Status identification : The bug was rejected</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The Constructor Method</description>
+          <parameters>
+            <parameter name="$pid" type="string" defaultvalue="">
+              <description>The project id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fileBug" returntype="boolean">
+          <description>Registers a new bug</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The bug title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The bug description</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The bug type</description>
+            </parameter>
+            <parameter name="$severity" type="string" defaultvalue="">
+              <description>The bug severity</description>
+            </parameter>
+            <parameter name="$email" type="string" defaultvalue="">
+              <description>The email of the user who filed the bug. Empty string if the user is a register user</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStatus" returntype="boolean">
+          <description>Changes / Set the bug status</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The bug id</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The status to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setSeverity" returntype="boolean">
+          <description>Changes / Set the bug severity</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The bug id</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The status to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setPriority" returntype="boolean">
+          <description>Changes / Set the bug priority</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The bug id</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The status to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllBugs" returntype="array">
+          <description>Get an array of all bugs</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBug" returntype="array">
+          <description>Get an array with the information of a bug</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>the bug id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="solveBug" returntype="void">
+          <description>Resolves the bug</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The bug id</description>
+            </parameter>
+            <parameter name="$comments" type="string" defaultvalue="">
+              <description>The developers notes for her actions</description>
+            </parameter>
+            <parameter name="$status" type="string" defaultvalue="">
+              <description>The staus to be assigned on the bug</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="_setStatus" returntype="DOMNode">
+          <description>Changes / Set the status of a bug node</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The DOMParser in which the bug data is loaded</description>
+            </parameter>
+            <parameter name="$issue" type="DOMNode" defaultvalue="">
+              <description>The DOMnode representing the status node</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The status value to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>The changed DOMNode</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_setPriority" returntype="DOMNode">
+          <description>Changes / Set the priority of a bug node</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The DOMParser in which the bug data is loaded</description>
+            </parameter>
+            <parameter name="$issue" type="DOMNode" defaultvalue="">
+              <description>The DOMnode representing the status node</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The priority value to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>The changed DOMNode</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_setSeverity" returntype="DOMNode">
+          <description>Changes / Set the severity of a bug node</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The DOMParser in which the bug data is loaded</description>
+            </parameter>
+            <parameter name="$issue" type="DOMNode" defaultvalue="">
+              <description>The DOMnode representing the status node</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The severity value to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>The changed DOMNode</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFile" returntype="void">
+          <description>Creates the file for the bugs to be stored</description>
+          <parameters>
+            <parameter name="$contentFolder" type="string" defaultvalue="">
+              <description>The path to the folder</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>the name of the file</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string">
+          <description>Return the a hashed unique name for the bug data file according to the project it belongs to</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>the project id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

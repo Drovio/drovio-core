@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\reports">
+  <class name="ServerReport" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>6</build>
+      <datecreated>1406662103</datecreated>
+      <daterevised>1409311910</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Server Report Protocol</title>
+      <description>Creates an asynchronous server report according to user request.
+Abstract class that provides the right function handlers for forming a server report.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="reports" static="true">
+          <description>Contains all the reports that will be handled separately.</description>
+        </prop>
+        <prop type="array" name="headers" static="true">
+          <description>Contains all the headers in order to prepare the ground for the reports.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true" abstract="true">
+          <description>Returns the server report.</description>
+          <parameters/>
+          <returndescription>The server report in the form set by the inherited class.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addContent" returntype="void" static="true" abstract="true">
+          <description>Adds a content report to the report stack.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The body of the report content.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAction" returntype="void" static="true" abstract="true">
+          <description>Adds an action report to the report stack.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.
+This may vary according to the handler.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value.
+It can be empty or a context for the event.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addHeader" returntype="void" static="true">
+          <description>Adds a header to the report.</description>
+          <parameters>
+            <parameter name="$header" type="DOMElement" defaultvalue="">
+              <description>The header element to be added.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="clear" returntype="void" static="true">
+          <description>Clears the report stack</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportStack" returntype="void" static="true">
+          <description>Get all the server reports so far.</description>
+          <parameters/>
+          <returndescription>All the reports in an array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setResponseHeaders" returntype="void">
+          <description>Sets the HttpResponse Headers for the report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The header's content type.
+See HttpResponse class for this.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getReport" returntype="string" static="true" abstract="true">
+          <description>Get the report output.</description>
+          <parameters/>
+          <returndescription>The server's report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportContent" returntype="mixed" static="true" abstract="true">
+          <description>Creates a content report for the report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The content type</description>
+            </parameter>
+            <parameter name="$context" type="mixed" defaultvalue="">
+              <description>The content context.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content the inherited classes can handle.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActionContext" returntype="mixed" static="true" abstract="true">
+          <description>Creates an action report for the report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content the inherited classes can handle.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

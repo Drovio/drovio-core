@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\test">
+  <class name="appTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396858737</datecreated>
+      <daterevised>1396883818</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Tester</title>
+      <description>Manages the application tester environment.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Initialize the application tester and set the classLoader for testing.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="play" returntype="mixed" static="true">
+          <description>Run the application given view from the repository.
+Load the html (if any) in the given container (if not null) and then run the view php code to fill the html.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The DOMElement container for the application view content (html).</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php code return value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the application tester mode.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the application tester mode.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Gets the application tester status.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if application is in tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\test">
+  <class name="appTester" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1396858737</datecreated>
+      <daterevised>1408956672</daterevised>
+      <extends>
+        <object>\DEV\Profiler\tester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Tester</title>
+      <description>Manages the application tester environment.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="sub" static="true">
+          <description>The subdomain running the application.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setSubdomain" returntype="void" static="true">
+          <description>Sets the subdomain running the application.</description>
+          <parameters>
+            <parameter name="$sub" type="string" defaultvalue="">
+              <description>The subdomain name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publisherLock" returntype="boolean" static="true">
+          <description>Checks whether the subdomain running the application is publisher locked (some market or app center or dashboard).
+On developer's subdomain it is only application testing.</description>
+          <parameters/>
+          <returndescription>Whether the application is being loaded from the published version.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the application tester mode.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the application tester mode.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Gets the application tester status.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if application is in tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

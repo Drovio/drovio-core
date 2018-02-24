@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Apps" namespace="\">
+  <class name="APPContent" abstract="">
+    <info>
+      <version>6.0</version>
+      <build>1</build>
+      <datecreated>1408802189</datecreated>
+      <daterevised>1440142368</daterevised>
+      <extends>
+        <object>\UI\Content\HTMLContent</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Content Builder</title>
+      <description>Builds an application content with a specified container's id and class.
+It loads application view's html and can parse application's literals.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="HOLDER">
+        <description>The default application content holder.</description>
+      </const>
+      <const type="string" name="CONTAINER_CLASS">
+        <description>The application container class. It is for platform-use only.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="appID">
+          <description>The application's id that loads this object.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the Application Content object.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="APPContent">
+          <description>Build the outer html content container.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element's id. Empty by default.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The element's class. Empty by default.</description>
+            </parameter>
+            <parameter name="$loadHTML" type="boolean" defaultvalue="">
+              <description>Indicator whether to load html from the designer file.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The APPContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLiteral" returntype="mixed">
+          <description>Get an application literal.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal name.
+Leave empty to get all module literals.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$attributes" type="array" defaultvalue="">
+              <description>A list of attributes for the literal.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description>Whether this is going to be wrapped for translation when active.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The literal value.
+See appLiteral for more information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActionFactory" returntype="AppActionFactory">
+          <description>Creates a new Application Action Factory instance.</description>
+          <parameters/>
+          <returndescription>An instance of the Application Action Factory object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppContainer" returntype="DOMElement" static="true">
+          <description>Builds an async application view container and returns the DOMElement.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application ID to load async.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application's view name to load.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module with GET method during loading.
+It is an array (attrName =&amp;gt; attrValue)</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the module to load at startup (next content.modified).</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id attribute of the container DOM Object.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>Set the page loading indicator.</description>
+            </parameter>
+            <parameter name="$preload" type="boolean" defaultvalue="">
+              <description>Set the container to preload the content synchronously.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The outer application receiver container.</returndescription>
+          <throws/>
+          <deprecated>Use getAppViewContainer() instead.</deprecated>
+        </method>
+        <method name="getAppViewContainer" returntype="DOMElement" static="true">
+          <description>Builds an async application view container and returns the DOMElement.
+
+It will load a view of the current running application.</description>
+          <parameters>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application's view name to load.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module with GET method during loading.
+It is an array (attrName =&amp;amp;gt; attrValue)</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>If this is set to true, the application view will load on next content.modified asynchonously.</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id attribute of the container DOM Object.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>Set the page loading indicator.</description>
+            </parameter>
+            <parameter name="$preload" type="boolean" defaultvalue="">
+              <description>If this set to true, the container will ignore the startup attribute and will load the application view synchronously.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The outer application receiver container.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadView" returntype="void" static="true">
+          <description>Load an application view.</description>
+          <parameters>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application view full name (include folders separated with "/").
+If empty, get the default/startup application view name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>If you are loading the view from another view, it will return the view DOMElement.
+It will return the server report otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="mixed">
+          <description>Get the ServerReport of this HTML Application Cpontent or the object holder.</description>
+          <parameters>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The content holder. If empty, it gets the default application content holder.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The report method. See parent class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The server report or the object holder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="loadHTML" returntype="APPContent">
+          <description>Loads the html content of the view.
+It resolves all the resource urls properly.</description>
+          <parameters/>
+          <returndescription>The APPContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadLiterals" returntype="APPContent">
+          <description>Loads application's literals in the designer's html file.</description>
+          <parameters/>
+          <returndescription>The APPContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getParentFilename" returntype="string">
+          <description>Gets the parent's filename for loading the html from external file.</description>
+          <parameters/>
+          <returndescription>The parent script name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

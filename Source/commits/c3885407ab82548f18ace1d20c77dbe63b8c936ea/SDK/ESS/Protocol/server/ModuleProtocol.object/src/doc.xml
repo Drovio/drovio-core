@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="ModuleProtocol" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362640800</datecreated>
+      <daterevised>1406660395</daterevised>
+      <extends>
+        <object>\ESS\Protocol\ModuleProtocol</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Client-Server Module Handler Protocol</title>
+      <description>The most valuable and basic protocol for loading dynamic content.
+It's based on AJAX content loading and defines the controllers for those interactions.</description>
+      <deprecated>Use \ESS\Protocol\ModuleProtocol instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

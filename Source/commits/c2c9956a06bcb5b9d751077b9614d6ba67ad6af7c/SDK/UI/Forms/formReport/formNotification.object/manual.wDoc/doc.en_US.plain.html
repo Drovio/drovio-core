@@ -1,0 +1,19 @@
+<h1>Form Notification Object</h1>
+<p>When we use async forms, there is the need to create specific notifications with the ability to be returned in form report directly. For this reason we created form specific notifications that are equipped with report handlers. They extend the normal system notifications. Examples:</p>
+<div class="code">
+	<pre>// Create a form successful notification in response of a form post
+	
+// Use the class
+use \UI\Forms\formReport\formNotification;
+	
+// Create the notification object
+$ntf = new formNotification();
+
+// This is a UIObject, so we build
+// We do not have to get the DOMElement in this case, just build
+$ntf->build($type = notification::SUCCESS, $header = TRUE, $timeout = FALSE, $disposable = TRUE);
+
+// Get the report directly to the client
+// We can reset the form (if the notification is error) or not
+return $ntf->getReport($fullReset = TRUE, $holder = NULL);</pre>
+</div>

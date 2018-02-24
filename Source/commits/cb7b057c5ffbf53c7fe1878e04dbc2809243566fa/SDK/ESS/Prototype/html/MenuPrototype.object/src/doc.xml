@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="MenuPrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362650640</datecreated>
+      <daterevised>1438076589</daterevised>
+      <extends>
+        <object>\UI\Prototype\MenuPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Menu Prototype</title>
+      <description>This is the menu prototype (implements the composite pattern).
+All menus (and extensions of it) must inherit this prototype and build a proper menu object.</description>
+      <deprecated>Use \UI\Prototype\MenuPrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

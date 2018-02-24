@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\">
+  <class name="BootLoader2" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1420562010</datecreated>
+      <daterevised>1421748134</daterevised>
+      <extends>
+        <object>\ESS\Protocol\BootLoader</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Project Resource Boot Loader</title>
+      <description>This is the manager class for loading and general handling project's resources (javascript and css).</description>
+      <deprecated>Use \ESS\Protocol\BootLoader instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

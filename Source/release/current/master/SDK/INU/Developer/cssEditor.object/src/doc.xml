@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\">
+  <class name="cssEditor" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1366974826</datecreated>
+      <daterevised>1410180046</daterevised>
+      <extends>
+        <object>\UI\Developer\editors\CSSEditor</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>CSS Editor</title>
+      <description>This is a simple html editor with a preview and a css code part.</description>
+      <deprecated>Use \UI\Developer\editors\CSSEditor instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

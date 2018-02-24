@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="3220877710146"><title>Add an invoice product</title><description></description><access></access><attributes><attr id="iid"></attr><attr id="pid"></attr><attr id="title"></attr><attr id="price"></attr><attr id="rate_id"></attr><attr id="rate"></attr><attr id="discount"></attr><attr id="amount"></attr><attr id="total_price"></attr></attributes></query>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebExtensions" namespace="\">
+  <class name="extPlayer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1400831255</datecreated>
+      <daterevised>1400831255</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Extension Player</title>
+      <description>Inits and runs the extension.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="play" returntype="mixed" static="true">
+          <description>Run the extension given view.
+Load the html (if any) in the given container (if not null) and then run the view php code to fill the html.</description>
+          <parameters>
+            <parameter name="$extID" type="integer" defaultvalue="">
+              <description>The extension id.</description>
+            </parameter>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The DOMElement container for the extension view content (html).</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The extension view return value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getViewName" returntype="string" static="true">
+          <description>Gets the extension's developer folder path to the view (no extensions included).</description>
+          <parameters>
+            <parameter name="$extID" type="integer" defaultvalue="">
+              <description>The extension id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view name.
+If empty, get the extension startup view from settings.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getViewPath" returntype="string" static="true">
+          <description>Get the published view name.</description>
+          <parameters>
+            <parameter name="$extID" type="integer" defaultvalue="">
+              <description>The extension id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The published view name (no extensions included).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ENP" package="Relations" namespace="\">
+  <class name="ePerson" abstract="">
+    <info>
+      <version>6.0</version>
+      <build>2</build>
+      <datecreated>1437729356</datecreated>
+      <daterevised>1440951880</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Enterprise person relation</title>
+      <description>This is an abstract person relation manager for teams.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="personID">
+          <description>The current person id.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Creates a person instance.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id.
+Leave empty for creating new person.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new person relation.</description>
+          <parameters>
+            <parameter name="$firstname" type="string" defaultvalue="">
+              <description>The person's first name.</description>
+            </parameter>
+            <parameter name="$lastname" type="string" defaultvalue="">
+              <description>The person's last name.</description>
+            </parameter>
+            <parameter name="$middlename" type="string" defaultvalue="">
+              <description>The person's middle name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get all information for a given person.</description>
+          <parameters/>
+          <returndescription>The person's stored information.
+If the relation has been approved by the person, it will return public information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConnectedPersonInfo" returntype="boolean">
+          <description>Update person information.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="connectToPerson" returntype="boolean">
+          <description>Connect the relation person to an existing drovio person account.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The drovio person id to connect to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDrovioPersonsByMail" returntype="integer">
+          <description>Get the candidate drovio person ids that matches the current person with any email.</description>
+          <parameters/>
+          <returndescription>An array of the matched drovio person ids.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update person information.</description>
+          <parameters>
+            <parameter name="$firstname" type="string" defaultvalue="">
+              <description>The person's first name.</description>
+            </parameter>
+            <parameter name="$lastname" type="string" defaultvalue="">
+              <description>The person's last name.</description>
+            </parameter>
+            <parameter name="$middlename" type="string" defaultvalue="">
+              <description>The person's middle name.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>The person's notes.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the current person from the relations list.
+This will remove the person from any groups also.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPersons" returntype="array" static="true">
+          <description>Get all persons for a given relation type.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The person's group id.
+If empty, get all persons.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all persons with the same relation.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

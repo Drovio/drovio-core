@@ -1,0 +1,149 @@
+/*____________________ UI.Interactive.forms.formAutoSuggest ____________________*/
+.fasppContainer {
+	margin: 0px;
+	min-width:300px;
+	overflow:hidden;
+}
+.fasppContainer .uiMessageBody {
+	margin:0;
+	padding:0;
+}
+.fasppContainer .uiMessageBody > .uiMessageIcon {
+	display:none;
+	background-image:none;
+}
+.fasppContainer .uiMessageBody > .pivot { display:none; }
+.fasppContainer .uiMessageBody > .loading {
+	height:auto;
+}
+.fasppContainer .uiMessageBody > .loading .icon {
+	display:inline-block;
+	height:20px;
+	margin:5px;
+	width:20px;
+	vertical-align:middle;
+	line-height:20px;
+	background-image:url(/Library/Media/images/icons/19x19/loader.svg);
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.uiNotification .fasppGroup {
+	margin-top:10px;
+	background-color:#fff;
+	border:1px solid rgba(166, 166, 166, 1);
+}
+.fasppGroup .suggestionList {
+	margin:0;
+	padding:0;
+	border:0;
+}
+.fasppGroup .groupTitle {
+	padding-top: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgba(166,166,166,1);
+	font-weight:bold;
+	cursor:pointer;
+	text-align:left;
+}
+.uiNotification .fasppGroup .groupTitle {
+	cursor:default;
+}
+.fasppGroup div{
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.fasppGroup li {
+	text-align:left;
+	opacity:.7;
+	padding:4px;
+	list-style-type:none;
+	height:48px;
+	overflow:hidden;
+	white-space:nowrap;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.uiNotification .fasppGroup .suggestionList {
+	overflow-y:auto;
+	max-height:364px;
+}
+.uiNotification .fasppGroup li {
+	border-top: 1px solid rgba(166,166,166,.15);
+	border-bottom: 1px solid rgba(166,166,166,.15);
+}
+.uiNotification .fasppGroup li:first-child {
+	border-top: none;
+}
+.uiNotification .fasppGroup li:last-child {
+	border-bottom: none;
+}
+.uiNotification .fasppGroup li:hover, .fasppGroup li.hover {
+	cursor:pointer;
+	background-color:rgba(166,166,166,.15);
+	opacity:1;
+}
+.fasppGroup .suggestListItem {
+	position:relative;
+}
+.fasppGroup .suggestListItem.selected {
+	border-top: 1px solid rgba(166,166,166,.7);
+	border-bottom: 1px solid rgba(166,166,166,.7);
+	background-color:rgba(166, 166, 166, .25);
+	opacity:1;
+}
+.fasppGroup .suggestListItem.selected:hover {
+	background-color:rgba(166, 166, 166, .25);
+}
+.fasppGroup .listItemImage{
+	display:inline;
+}
+.fasppGroup .listItemImage img{
+	float:left;
+	width:46px;
+	height:46px;
+	margin-right:4px;
+	border:1px solid rgba(166,166,166,0.5);
+	-webkit-border-radius:3px;
+}
+.fasppGroup .listItemTitle{
+	font-weight:bold;
+}
+.fasppGroup .listItemNotes{
+	margin-top:6px;
+}
+.fasppGroup .listItemTag{
+	position:absolute;
+	top:2px;
+	right:4px;
+}
+.fasppGroup .more {
+	border-top: 1px solid rgba(166,166,166,.7);
+	background-color:rgba(166, 166, 166, 0.1);
+	text-align:center;
+	opacity:.9;
+}
+.fasppGroup .more:first-child {
+	background-color:rgba(166,166,166,.15);
+	opacity:1;
+	cursor:default;
+}
+.fasppGroup .more .moreTitle{
+	font-weight:bold;
+	margin-bottom:4px;
+}
+.fasppGroup .more .moreTitle .query{
+	text-decoration:underline;
+}
+.fasppGroup .more .moreSubtitle {
+	font-size:9px;
+}
+.fasppGroup .more .topResultsNum, .fasppGroup .more .totalResultsNum {
+	font-weight:bold;
+}
+

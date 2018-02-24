@@ -1,0 +1,76 @@
+/*____________________ notifications.notification ____________________*/
+.uiNotification {
+	width: auto;
+	overflow: hidden;
+	color: #545454;
+	background-color: #FFF;
+}
+.uiNotification .uiMessageHead, .uiNotification a { outline: none; }
+.uiNotification .uiMessageBody .customMessage {
+	font-weight: bold;
+	font-size: 10px;
+	padding: 5px;
+	margin-top: 10px;
+}
+.uiNotification .notificationFooter { padding: 3px; }
+
+.uiNotification.default { border: 1px solid rgba(166, 166, 166, 1); }
+.uiNotification.default .uiMessageHead {
+	background-color: rgba(166, 166, 166, 0.40);
+	border-bottom: 1px solid rgba(166, 166, 166, 0.3);
+}
+.uiNotification.default .uiMessageHead, .uiNotification.default a { color: rgba(80, 80, 80, 1); }
+.uiNotification.default .uiMessageBody { background-color: #FFF; }
+.uiNotification.default .uiMessageBody .uiMessageIcon { background-image: url(/Library/Media/images/icons/19x19/info_ico.svg); }
+.uiNotification.default .uiMessageBody h2 { color: rgba(80, 80, 80, 1); }
+.uiNotification.default .uiMessageBody .customMessage { color: rgba(80, 80, 80, 1); }
+.uiNotification.default .uiMessageFooter { border-top: 1px solid rgba(166, 166, 166, 0.3); }
+
+.uiNotification.info { border: 1px solid rgba(0,98,194,1); }
+.uiNotification.info .uiMessageHead {
+	background-color: rgba(0,98,194,0.30);
+	border-bottom: 1px solid rgba(0,0,255,0.30);
+}
+.uiNotification.info .uiMessageHead, .uiNotification.info a { color: rgba(0,98,194,1); }
+.uiNotification.info .uiMessageBody { background-color: #D9E8F6; }
+.uiNotification.info .uiMessageBody .uiMessageIcon { background-image: url(/Library/Media/images/icons/19x19/info_ico.svg); }
+.uiNotification.info .uiMessageBody h2 { color: rgba(0,98,194,1); }
+.uiNotification.info .uiMessageBody .customMessage { color: rgba(0,98,194,1); }
+.uiNotification.info .uiMessageFooter { border-top: 1px solid rgba(0,0,255,0.30); }
+
+.uiNotification.success { border: 1px solid rgba(85,142,54,1); }
+.uiNotification.success .uiMessageHead {
+	background-color: rgba(130,189,75,0.30);
+	border-bottom: 1px solid rgba(130,189,75,0.35);
+}
+.uiNotification.success .uiMessageHead, .uiNotification.success a { color: rgba(85,142,54,1); }
+.uiNotification.success .uiMessageBody { background-color: #ECF5E4; }
+.uiNotification.success .uiMessageBody .uiMessageIcon { background-image: url(/Library/Media/images/icons/19x19/success_ico.svg); }
+.uiNotification.success .uiMessageBody h2 { color: rgba(85,142,54,1); }
+.uiNotification.success .uiMessageBody .customMessage { color: rgba(85,142,54,1); }
+.uiNotification.success .uiMessageFooter { border-top: 1px solid rgba(130,189,75,0.3); }
+
+.uiNotification.warning { border: 1px solid rgba(255, 100, 0, 1); }
+.uiNotification.warning .uiMessageHead {
+	background-color: rgba(255,100,0,0.30);
+	border-bottom: 1px solid rgba(255,100,0,0.35);
+}
+.uiNotification.warning .uiMessageHead, .uiNotification.warning a { color: rgba(255,100,0,1); }
+.uiNotification.warning .uiMessageBody { background-color: #FFE8D9; }
+.uiNotification.warning .uiMessageBody .uiMessageIcon { background-image: url(/Library/Media/images/icons/19x19/warning_ico.svg); }
+.uiNotification.warning .uiMessageBody h2 { color: rgba(255,100,0,1); }
+.uiNotification.warning .uiMessageBody .customMessage { color: rgba(255,100,0,1); }
+.uiNotification.warning .uiMessageFooter { border-top: 1px solid rgba(255,100,0,0.30); }
+
+.uiNotification.error { border: 1px solid rgba(192,4,3, 1); }
+.uiNotification.error .uiMessageHead {
+	background-color: rgba(192,4,3,0.30);
+	border-bottom: 1px solid rgba(192,4,3,0.35);
+}
+.uiNotification.error .uiMessageHead, .uiNotification.error a { color: rgba(192,4,3,1); }
+.uiNotification.error .uiMessageBody { background-color: #F6DAD9; }
+.uiNotification.error .uiMessageBody .uiMessageIcon { background-image: url(/Library/Media/images/icons/19x19/error_ico.svg); }
+.uiNotification.error .uiMessageBody h2 { color: rgba(192,4,3,1); }
+.uiNotification.error .uiMessageBody .customMessage { color: rgba(192,4,3,1); }
+.uiNotification.error .uiMessageFooter { border-top: 1px solid rgba(192,4,3,0.3); }
+

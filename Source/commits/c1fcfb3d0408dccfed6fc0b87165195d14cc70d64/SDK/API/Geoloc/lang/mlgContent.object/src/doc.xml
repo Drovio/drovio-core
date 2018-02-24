@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Geoloc" namespace="\lang">
+  <class name="mlgContent" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395646090</datecreated>
+      <daterevised>1395646199</daterevised>
+      <extends>\API\Geoloc\lang\literalManager</extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \API\Literals\literal and moduleLiteral instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

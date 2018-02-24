@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="moduleTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387555001</datecreated>
+      <daterevised>1392025163</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Tester Manager</title>
+      <description>Manages module tester mode.</description>
+      <deprecated>Use DEV\Profiler\test\moduleTester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\">
+  <class name="webDoc" abstract="true">
+    <info>
+      <version>2.0</version>
+      <build>3</build>
+      <datecreated>1425391657</datecreated>
+      <daterevised>1436182206</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web Document</title>
+      <description>This is an abstract web document manager.
+Manages web documents for this platform, providing a function to get the root directory to store the document.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="DOC_CLASS">
+        <description>The main web doc content class.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="directory">
+          <description>The document inner directory.</description>
+        </prop>
+        <prop type="string" name="docName">
+          <description>The document name.</description>
+        </prop>
+        <prop type="boolean" name="rootRelative">
+          <description>Indicates whether the path must be normalized in order to be root relative.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getRootDirectory" returntype="string" abstract="true">
+          <description>This function should return the root directory for the document.
+The inner directory path will be calculated from this root folder.</description>
+          <parameters/>
+          <returndescription>The root directory path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="__construct" returntype="void">
+          <description>Initializes the document.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The document inner directory folder.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The document name.
+Leave empty for new documents.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>Indicates whether the path is system root relative or absolute.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create the document.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The document name.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The initial document content.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document context.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the document's context.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The document body.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document context.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Delete the document object.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Get the document body.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document context.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The document body context.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="string">
+          <description>Load the entire document.
+The document will be loaded in the given locale.
+If no locale is given, the current system locale will be selected.
+If the document isn't translated in the current locale, it will return the system's default locale.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document context.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The entire document as html document.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="string">
+          <description>Export the document to an independent html file.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to export to.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The html document.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDocumentFolderName" returntype="string">
+          <description>Get the document's entire path below the root, including the document name.</description>
+          <parameters/>
+          <returndescription>The document full inner path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getDocPath" returntype="string">
+          <description>Get the document's full path.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document to get the path for.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The file extension.
+This is used for all the files in the document object.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The full document path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="createDocStructure" returntype="void">
+          <description>Create the document structure for the html file.</description>
+          <parameters>
+            <parameter name="$docPath" type="string" defaultvalue="">
+              <description>The document's path to save the initial structure.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="parseContents" returntype="DOMParser">
+          <description>Parse the contents of the document and save in separate file.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The document parser that has already loaded the document.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The updated parser.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

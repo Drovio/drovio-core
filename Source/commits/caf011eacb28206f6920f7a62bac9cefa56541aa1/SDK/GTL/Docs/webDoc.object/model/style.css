@@ -1,0 +1,214 @@
+.wDoc {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	overflow: auto;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	color: #5E6570;
+	font-size: 1.1em;
+}
+.wDoc .body {
+	overflow: auto;
+}
+
+.wDoc .body h1, .wDoc .body h2, .wDoc .body h3, .wDoc .body h4, .wDoc .body h5, .wDoc .body h6 {
+	color: #555;
+	font-size: initial;
+}
+
+.wDoc .body h2, .wDoc .body h3, .wDoc .body h4, .wDoc .body h5, .wDoc .body h6 {
+	text-indent: 3px;
+	font-weight: normal;
+}
+
+.wDoc .body h3, .wDoc .body h4, .wDoc .body h5, .wDoc .body h6 {
+	text-indent: 6px;
+}
+
+.wDoc .body h1 {
+	font-size: 1.6em;
+	margin: 0.67em 0;
+	font-weight: 600;
+}
+
+.wDoc .body h2 {
+	font-size: 1.3em;
+	margin: 0.83em 0;
+	font-weight: 600;
+}
+
+.wDoc .body h3 {
+	font-size: 1.1em;
+	margin: 1em 0;
+	font-weight: 600;
+}
+
+.wDoc .body h4 {
+	margin: 1.33em 0;
+}
+
+.wDoc .body h5 {
+	margin: 1.67em 0;
+}
+
+.wDoc .body p {
+	font-size: 1.1em;
+	line-height: 25px;
+	margin-bottom: 25px;
+	color: #7C858E;
+}
+
+.wDoc .body a, .wDoc .body a.visited {
+	color: #ff5252;
+	text-decoration: underline;
+}
+.wDoc .body .toc {
+	padding: 10px;
+	display: inline-block;
+	min-width: 40%;
+	background: #F8F8F8;
+	border: 1px solid #CCC;
+	overflow: auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.wDoc .body .toc .toggleButton {
+	float: right;
+	cursor: pointer;
+	color: #ff5252;
+	line-height: 22px;
+	padding: 2px 3px;
+	font-size: 0.9em;
+}
+
+.wDoc .body .toc .toggleButton.hide {
+	display: block;
+}
+
+.wDoc .body .toc .toggleButton.show {
+	display: none;
+}
+
+.wDoc .body .toc.closed .toggleButton.hide {
+	display: none;
+}
+
+.wDoc .body .toc.closed .toggleButton.show {
+	display: block;
+}
+
+.wDoc .body .toc .toc-list {
+	display: block;
+}
+
+.wDoc .body .toc .ctitle {
+	border-bottom: 1px solid #CCC;
+	padding: 2px 3px;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 22px;
+}
+
+.wDoc .body .toc.closed .ctitle {
+	border-bottom: none;
+	font-weight: normal;
+}
+
+.wDoc .body .toc .toc-entry {
+	white-space: pre;
+	margin: 2px 0px;
+	cursor: pointer;
+	display: block;
+	color: #7C858E;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.wDoc .body .toc .toc-entry:hover {
+	color: #ff5252;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.wDoc .body .code {
+	background: #f5f5f5;
+	padding: 10px 15px;
+	overflow: auto;
+	font-size: 1.1em;
+}
+
+.wDoc .body .code pre {
+	white-space: pre-wrap;
+}
+
+.wDoc .body .ccode {
+	background: #f5f5f5;
+	padding: 10px 15px;
+	overflow: auto;
+	font-size: 1.1em;
+	white-space: pre-wrap;
+}
+
+.wDoc .body .note {
+	padding: 10px;
+	background: #b6dcf5;
+	border-left: 3px solid #0f4976;
+	color: #0f4976;
+}
+
+.wDoc .body .image {
+	width: 80%;
+	padding: 5px;
+	margin: 5px auto;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.wDoc .body .image:hover {
+	border-color: #ff5252;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.wDoc .body .image img {
+	width: 100%;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.wDoc .body .image:hover img {
+	opacity: 0.5;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.wDoc .body .image:hover img:hover {
+	opacity: 1;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+.wDoc .footer {
+	border-top: 1px solid #CCC;
+	overflow: auto;
+	margin-top: 5px;
+}
+
+.wDoc .footer .updated {
+	float: right;
+	color: rgb(153, 153, 153);
+	font-size: 0.9em;
+}

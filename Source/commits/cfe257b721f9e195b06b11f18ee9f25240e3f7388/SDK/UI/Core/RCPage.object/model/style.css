@@ -1,0 +1,80 @@
+body {
+	font-family: "Lucida Grande", "Verdana", "Lucida Sans Unicode", sans-serif !important;
+	font-size: 11px !important;
+	line-height: initial !important;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+a, a.visited, a:hover {
+	text-decoration: none !important;
+	outline: none !important;
+	color: #353535;
+}
+a img {
+	border: none !important;
+	outline: none !important;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+}
+.h1, .h2, h1, h2 {
+	font-size: 1.5em;
+}
+.h3, h3 {
+	font-size: 1.17em;
+}
+.h4, h4 {
+	font-size: inherit;
+}
+.h5, h5 {
+	font-size: 0.83em;
+}
+.h6, h6 {
+	font-size: 0.67em;
+}
+pre, xmp, plaintext, listing {
+	font-family: monospace;
+	white-space: pre;
+}
+p {
+	margin: 1em 0px;
+}
+#pageReport {
+	position: fixed;
+	right: 30px;
+	top: 50px;
+	z-index: 50;
+	max-width: 80%;
+}
+#pageReport:empty {
+	display: none;
+}
+#pageContainer {
+	height: 100%;
+}
+#pageHelper {
+	display: none !important;
+}
+.uiPageContainer:empty,
+.uiPageContainer > .moduleContainer:empty {
+	background: #FFF url('%{media}/global/splash.png') no-repeat center;
+	background-size: 250px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.noDisplay {
+	display: none !important;
+}
+.fullScreenPage {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+.hasToolbar .fullScreenPage {
+	top: 38px;
+}

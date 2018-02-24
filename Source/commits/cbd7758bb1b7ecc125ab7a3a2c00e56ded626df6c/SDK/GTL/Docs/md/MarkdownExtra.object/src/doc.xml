@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\md">
+  <class name="MarkdownExtra" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1448043542</datecreated>
+      <daterevised>1448043542</daterevised>
+      <extends>
+        <object>\GTL\Docs\md\Markdown</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="" name="em_relist">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected">
+        <method name="_doFencedCodeBlocks_newlines" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="stripFootnotes" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_stripFootnotes_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doFootnotes" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="appendFootnotes" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_appendFootnotes_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="stripAbbreviations" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_stripAbbreviations_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doAbbreviations" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doAbbreviations_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

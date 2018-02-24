@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\components">
+  <class name="RNavToolbar" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1402467326</datecreated>
+      <daterevised>1450544457</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Core Navigation Toolbar</title>
+      <description>It's a singleton pattern implementation for Redback Core Toolbar.
+Builds the system's top navigation toolbar with all the needed items.
+It is a global builder for all redback across all subdomains.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="RNavToolbar" name="instance" static="true">
+          <description>The singleton's instance.</description>
+        </prop>
+        <prop type="RTRibbon" name="ribbon">
+          <description>The ribbon object</description>
+        </prop>
+        <prop type="DOMElement" name="userNav">
+          <description>The user's navigation section.</description>
+        </prop>
+        <prop type="DOMElement" name="domainNav">
+          <description>The domain's navigation section.</description>
+        </prop>
+        <prop type="string" name="domain">
+          <description>The navigation's domain</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="RNavToolbar" static="true">
+          <description>Gets the instance of the RNavToolbar.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The navigation's domain.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The RNavToolbar unique instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="RNavToolbar">
+          <description>Builds the entire toolbar.</description>
+          <parameters>
+            <parameter name="$float" type="boolean" defaultvalue="">
+              <description>Make toolbar float on the website instead of getting the toolbar height.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The RNabToolbar object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getClearAction" returntype="array" static="true">
+          <description>Gets the toolbar's clear action array.
+It sets an action to clear page's items.</description>
+          <parameters/>
+          <returndescription>An array containing the action "type" and the action "value" according to ModuleProtocol.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Initializes the toolbar for the given domain (where the page is built).</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The navigation's domain.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="buildRibbon" returntype="void">
+          <description>Builds the toolbar's ribbon.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildUserNavigation" returntype="void">
+          <description>Builds the user's navigation (whether the user is logged in or guest).</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildProfileTools" returntype="void">
+          <description>Builds the profile tools (for developers and other groups).</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildRegionNav" returntype="void">
+          <description>Builds the region/language selector navigation.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildDomainNavigation" returntype="void">
+          <description>Builds the Domain Navigation</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setToolbarItemNavigation" returntype="void">
+          <description>Sets the navigation on the toolbar items.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The xml parser for the domain navigation xml file.</description>
+            </parameter>
+            <parameter name="$tlbMenu" type="toolbarItem" defaultvalue="">
+              <description>The toolbarItem Object.</description>
+            </parameter>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The menu item where the navigation will be applied.</description>
+            </parameter>
+            <parameter name="$navigation" type="DOMDocumentFragment" defaultvalue="">
+              <description>The fragment of file that indicates the navigation.</description>
+            </parameter>
+            <parameter name="$refId" type="string" defaultvalue="">
+              <description>The ribbon's collection reference id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

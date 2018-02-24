@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\\account"></use><use path="\API\Platform\importer"></use><use path="\API\Login\team" alias="LoginTeam"></use><use path="\ESS\Environment\cookies"></use><use path="\API\Platform\engine"></use><use path="\DRVC\Utils\authToken"></use><use path="\API\Login\accountSession"></use><use path="\DRVC\Profile\account" alias="IDAccount"></use></dependencies>

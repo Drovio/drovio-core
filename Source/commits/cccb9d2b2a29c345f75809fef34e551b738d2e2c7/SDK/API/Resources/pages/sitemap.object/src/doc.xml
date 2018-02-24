@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="sitemap" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396598493</datecreated>
+      <daterevised>1396598493</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Sitemap Manager</title>
+      <description>Generates the Redback Sitemap file</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="generate" returntype="void" static="true">
+          <description>Generates the sitemap.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="fetchPages" returntype="array">
+          <description>Fetch all pages from the database.</description>
+          <parameters/>
+          <returndescription>Returns an array of the full name of each page along with the date updated.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fetchFolders" returntype="array">
+          <description>Fetch all folders (with the domains) from the database.</description>
+          <parameters/>
+          <returndescription>Returns an array of the full name of each folder (with the subdomain) as a url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

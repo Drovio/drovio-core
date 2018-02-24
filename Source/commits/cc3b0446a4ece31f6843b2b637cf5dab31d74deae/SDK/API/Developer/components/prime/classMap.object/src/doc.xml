@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime">
+  <class name="classMap" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1389608594</datecreated>
+      <daterevised>1396360508</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Class object map index manager.</title>
+      <description>Creates a map of all libraries, packages, namespaces and objects of a software kit.</description>
+      <deprecated>Use \DEV\Prototype\sourceMap instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="MAP_FILE">
+        <description>The default map file name.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The vcs object with the repository loaded.</description>
+        </prop>
+        <prop type="string" name="innerPath">
+          <description>The inner path of the repository.</description>
+        </prop>
+        <prop type="string" name="mapFile">
+          <description>The map file name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method for object initialization.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository path.</description>
+            </parameter>
+            <parameter name="$includeRelease" type="boolean" defaultvalue="">
+              <description>Indicates whether the repository includes the release folder.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner repository path.</description>
+            </parameter>
+            <parameter name="$mapFile" type="string" defaultvalue="">
+              <description>The map file name. By default the MAP_FILE constant is used.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createLibrary" returntype="boolean">
+          <description>Create a new library in the map.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createPackage" returntype="boolean">
+          <description>Create a new package in the given library in the map.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createNamespace" returntype="boolean">
+          <description>Create a new namespace in the given package in the map.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::", if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createObject" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace (separated by "::", if any).</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibraryList" returntype="array">
+          <description>Gets all libraries in the map file.</description>
+          <parameters/>
+          <returndescription>An array of all libraries by key and value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="array">
+          <description>Get all packages in the given library from the map file.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all packages in the library.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="array" static="true">
+          <description>Get all namespaces in the given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::", if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all namespaces.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjectList" returntype="array" static="true">
+          <description>Get all objects in the map, in the given library, package and namespace.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The namespace (separated by "::", if any).
+The default value is null, which will select all objects in the package at any depth. If is set to an empty string (""), it will select all objects as children of the package at depth 1.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all items. An item is an array of object information, including title, name, library, package and namespace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createMapFile" returntype="boolean">
+          <description>Create the map file.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure or if the file already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Get the map file item id.</description>
+          <parameters/>
+          <returndescription>The hash item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

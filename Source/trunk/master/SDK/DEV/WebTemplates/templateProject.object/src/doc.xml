@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\">
+  <class name="templateProject" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1442444212</datecreated>
+      <daterevised>1442529274</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Template project class</title>
+      <description>This class represents a template object and uses the template prototype for structure.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="PROJECT_TYPE">
+        <description>The template project type id.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object</description>
+        </prop>
+        <prop type="template" name="template">
+          <description>The template prototype object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialie a website template project.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The template's id.
+Leave empty for new template or name initialization.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The template's unique name.
+Leave empty for new template or id initialization.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getIndexFilePath" returntype="string">
+          <description>Get the index file path according to vcs.</description>
+          <parameters>
+            <parameter name="$update" type="boolean" defaultvalue="">
+              <description>Whether to update the item for commit or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The index file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPages" returntype="array">
+          <description>Get all template pages.</description>
+          <parameters/>
+          <returndescription>An array of all page names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getThemes" returntype="array">
+          <description>Get all template themes.</description>
+          <parameters/>
+          <returndescription>An array of all theme names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectIndex" returntype="boolean">
+          <description>Add an object entry to the main template index.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The name of the group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type (the tag name).</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is another object of the same type with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeObjectIndex" returntype="boolean">
+          <description>Remove an object entry from the template index.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The name of the group.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object type (the tag name).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Get the vcs item id.
+Use this class as a template for template item ids.</description>
+          <parameters>
+            <parameter name="$suffix" type="string" defaultvalue="">
+              <description>The id suffix.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Publish the current template to the given version.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to publish the template.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source's branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="createIndexFile" returntype="void">
+          <description>Create the template structure.
+This function initializes the vcs object and calls the parent to create the template structure.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

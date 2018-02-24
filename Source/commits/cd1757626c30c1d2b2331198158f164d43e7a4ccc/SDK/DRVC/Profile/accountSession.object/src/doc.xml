@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Profile" namespace="\">
+  <class name="accountSession" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1444306297</datecreated>
+      <daterevised>1445439957</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Identity Account Session</title>
+      <description>Singleton class to manage account session for the given team identity</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="sessionID" static="true">
+          <description>The current session id.</description>
+        </prop>
+        <prop type="string" name="mxID" static="true">
+          <description>The current mx id.</description>
+        </prop>
+        <prop type="string" name="salt" static="true">
+          <description>The session salt.</description>
+        </prop>
+        <prop type="string" name="teamName" static="true">
+          <description>The team to access the identity database.</description>
+        </prop>
+        <prop type="dbConnection" name="dbc">
+          <description>The identity database connection.</description>
+        </prop>
+        <prop type="array" name="instances" static="true">
+          <description>An array of instances for each team identity (in case of multiple instances).</description>
+        </prop>
+        <prop type="string" name="staticTeamName" static="true">
+          <description>Static team name for compatibility.</description>
+        </prop>
+        <prop type="string" name="staticMxID" static="true">
+          <description>Static mx id for compatibility.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="accountSession" static="true">
+          <description>Get an accountSession instance for the given attributes.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+            <parameter name="$mxID" type="string" defaultvalue="">
+              <description>The current account's mx id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The accountSession instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="void" static="true">
+          <description>Initialize the identity database and the session.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+            <parameter name="$mxID" type="string" defaultvalue="">
+              <description>The current mx.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use getInstance() to get the singleton.</deprecated>
+        </method>
+        <method name="create" returntype="boolean" static="true">
+          <description>Creates a new account session.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The logged in generated salt.</description>
+            </parameter>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id (if any).</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user in the database or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="void" static="true">
+          <description>Updates the account's data to the session.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get all current session data from the database for the current account.</description>
+          <parameters>
+            <parameter name="$sessionID" type="integer" defaultvalue="">
+              <description>The session id.
+Leave empty for current session.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all session data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Deletes a given account session.</description>
+          <parameters>
+            <parameter name="$sessionID" type="integer" defaultvalue="">
+              <description>The session id.
+Leave empty for current session.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSaltedMix" returntype="string" static="true">
+          <description>Returns the salted mix of account, person and salt.</description>
+          <parameters>
+            <parameter name="$sessionID" type="integer" defaultvalue="">
+              <description>The session id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The account salt.</description>
+            </parameter>
+            <parameter name="$personID" type="string" defaultvalue="">
+              <description>The person id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The salted mix to store to cookies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSalt" returntype="string" static="true">
+          <description>Gets the stored salt for the current account session.</description>
+          <parameters/>
+          <returndescription>The stored session salt.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSessionID" returntype="integer" static="true">
+          <description>Gets the account session id.</description>
+          <parameters/>
+          <returndescription>The account session id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMX" returntype="string" static="true">
+          <description>Gets the current mx id.</description>
+          <parameters/>
+          <returndescription>The current mx id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActiveSessions" returntype="array" static="true">
+          <description>Get all active sessions of the given account.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account to get the active sessions for.
+If empty, get the current account.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new accountSession instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name.</description>
+            </parameter>
+            <parameter name="$mxID" type="string" defaultvalue="">
+              <description>The account's mx id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

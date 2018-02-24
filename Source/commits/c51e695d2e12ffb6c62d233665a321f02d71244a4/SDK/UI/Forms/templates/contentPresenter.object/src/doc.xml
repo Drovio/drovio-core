@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="contentPresenter" abstract="" namespace="\templates">
+    <info>
+      <version/>
+      <datecreated>1376593064</datecreated>
+      <daterevised>1376593064</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>This class is deprecated.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="id">
+          <description/>
+        </prop>
+        <prop type="" name="form">
+          <description/>
+        </prop>
+        <prop type="" name="title">
+          <description/>
+        </prop>
+        <prop type="" name="presenter">
+          <description/>
+        </prop>
+        <prop type="" name="editor">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$moduleID" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$action" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$editable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertContent" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$autofocus" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hidden" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insert_resource" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hidden" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$multi" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPresenterRow" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hidden" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContentLabel" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

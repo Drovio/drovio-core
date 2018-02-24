@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="20043523445391"><title>Update an invoice product</title><description></description><access></access><attributes><attr id="price"></attr><attr id="rate_id"></attr><attr id="rate"></attr><attr id="discount"></attr><attr id="amount"></attr><attr id="total_price"></attr><attr id="iid"></attr><attr id="pid"></attr></attributes></query>

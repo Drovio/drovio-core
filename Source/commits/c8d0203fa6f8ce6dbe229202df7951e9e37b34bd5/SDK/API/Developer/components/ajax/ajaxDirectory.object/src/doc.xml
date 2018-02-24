@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\ajax">
+  <class name="ajaxDirectory" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366635600</datecreated>
+      <daterevised>1396336055</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>AJAX Directory Manager</title>
+      <description>Manages all the ajax directories (in and out of repository).</description>
+      <deprecated>Use \DEV\Core\ajax\ajaxDirectory instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean">
+          <description>Create an ajax directory.</description>
+          <parameters>
+            <parameter name="$dirName" type="string" defaultvalue="">
+              <description>The directory name.</description>
+            </parameter>
+            <parameter name="$parentDir" type="string" defaultvalue="">
+              <description>The parent directory.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete an existing ajax directory.
+It must be empty.</description>
+          <parameters>
+            <parameter name="$dirName" type="string" defaultvalue="">
+              <description>The directory name.</description>
+            </parameter>
+            <parameter name="$parentDir" type="string" defaultvalue="">
+              <description>The parent directory.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getDirs" returntype="array" static="true">
+          <description>Get all the directories of the ajax files.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Indicates whether the result will be a nested array or not.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use ajaxManager::getDirectories() instead.</deprecated>
+          <returndescription>A nested array or a full array with directories separated by "/".</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createMapIndex" returntype="boolean">
+          <description>Create map index entry.</description>
+          <parameters>
+            <parameter name="$dirName" type="string" defaultvalue="">
+              <description>The directory name.</description>
+            </parameter>
+            <parameter name="$parentDir" type="string" defaultvalue="">
+              <description>The parent directory.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="736699215"><title>Get Company Group Kinds</title><description>Get company kinds in a given group</description><access>1</access><attributes><attr id="gid"></attr></attributes></query>

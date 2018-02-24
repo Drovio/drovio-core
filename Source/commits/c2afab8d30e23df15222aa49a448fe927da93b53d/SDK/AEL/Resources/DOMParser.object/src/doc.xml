@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\">
+  <class name="DOMParser" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1421175054</datecreated>
+      <daterevised>1421222414</daterevised>
+      <extends>
+        <object>\API\Resources\DOMParser</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>DOMParser for Applications</title>
+      <description>Class for parsing xml files in the account's application folder.
+
+NOTE: For each call it checks if there is an active application. If not, returns false every time.
+All paths are relative to the application root folder or the application shared folder root.
+The shared folder is one for all applications, so be careful of what you are storing there.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ACCOUNT_MODE">
+        <description>The account file mode.</description>
+      </const>
+      <const type="integer" name="TEAM_MODE">
+        <description>The team file mode.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="mode">
+          <description>The file mode for the class instance.</description>
+        </prop>
+        <prop type="boolean" name="shared">
+          <description>Shared or private application data.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of a DOMParser</description>
+          <parameters>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The file mode.
+See class constants for options.
+It is in account mode by default.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, the DOMParser will have access to the shared application data folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="DOMDocument">
+          <description>Loads an existing xml document.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The document relative path to the account's application folder.</description>
+            </parameter>
+            <parameter name="$preserve" type="boolean" defaultvalue="">
+              <description>Indicates whether the parser will preserve whitespaces during load.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The document loaded.</returndescription>
+          <throws>
+            <exception>exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="save" returntype="boolean">
+          <description>Saves the file in the given filepath.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The relative path in the account's application folder.</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The filename.
+Leave empty if the file name is included in the path.</description>
+            </parameter>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicator whether the parser will save formatted xml or unformatted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the file loaded before by the load() function.</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicator whether the parser will save formatted xml or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPath" returntype="string">
+          <description>Get the root folder for the object.</description>
+          <parameters/>
+          <returndescription>The root folder, according to mode and shared variable.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

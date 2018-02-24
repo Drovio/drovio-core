@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="BugTracker" namespace="\">
+  <class name="btProject" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1412874210</datecreated>
+      <daterevised>1413550748</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Bug Tracker project</title>
+      <description>It can create virtual Bug Tracker projects for a team.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed">
+          <description>Create a virtual Bug Tracker project.
+The request must be from a registered account.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project description.
+It can be empty.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project id on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

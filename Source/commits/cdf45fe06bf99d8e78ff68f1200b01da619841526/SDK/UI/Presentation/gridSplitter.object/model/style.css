@@ -1,0 +1,192 @@
+.sliderContainer {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.sliderContainer > .sliderMain {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+
+.sliderContainer.horizontal > .sliderMain {
+	height: 100%;
+	min-width: 35%;
+	width: 70%;
+}
+
+.sliderContainer.vertical > .sliderMain {
+	width: 100%;
+	height: 70%;
+	min-height: 35%;
+}
+
+.sliderContainer > .sliderSide {
+	position: absolute;
+	overflow: hidden;
+	min-width: 0px;
+	background-clip: content-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.sliderContainer > .sliderSide.leftSnap {
+	padding-left: 2px;
+}
+
+.sliderContainer > .sliderSide.rightSnap {
+	padding-right: 2px;
+}
+
+.sliderContainer > .sliderSide.topSnap {
+	padding-top: 2px;
+}
+
+.sliderContainer > .sliderSide.bottomSnap {
+	padding-bottom: 2px;
+}
+
+.sliderContainer.horizontal > .sliderSide {
+	height: 100%;
+	top: 0;
+	right: 0;	
+	min-width: 15%;
+	width: 30%;
+}
+
+.sliderContainer.vertical > .sliderSide {
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	min-height: 15%;
+	height: 30%;
+}
+
+/* Inverted Layout */
+.sliderContainer.horizontal.invertedLayout > .sliderMain {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.sliderContainer.vertical.invertedLayout > .sliderMain {
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.sliderContainer.horizontal.invertedLayout > .sliderSide {
+	position:relative;
+}
+
+.sliderContainer.vertical.invertedLayout > .sliderSide {
+	position:relative;
+}
+
+.sliderContainer /* Expander */
+.expandersWrapper {
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	z-index: 5;
+}
+
+.sliderContainer > .sliderMain .sideExpander {
+	padding: 5px;
+	border: 1px solid #CCC;
+	background: #EEE;
+	cursor: pointer;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #555;
+}
+
+.sliderContainer > .sliderMain .sideExpander:hover {
+	background: #E5E5E5;
+}
+
+.sliderContainer .expandersWrapper:not(:hover) > .sideExpander:not(:only-child):after {
+	content: "+";
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	border: inherit;
+	background: rgb(230, 230, 230);
+	font-size: 11px;
+	border-radius: 50%;
+	width: 13px;
+	text-align: center;
+	line-height: 12px;
+}
+
+.sliderContainer /* Bar */
+.vSlider {
+	background-color: #BBB;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 4px;
+	z-index: 5;
+}
+
+.sliderContainer .leftSnap > .vSlider {
+	left:0;
+}
+
+.sliderContainer .rightSnap > .vSlider {
+	right:0;
+}
+
+.sliderContainer .vSlider:hover {
+	cursor:col-resize;
+}
+
+.sliderContainer .hSlider {
+	background-color: #BBB;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+}
+
+.sliderContainer .topSnap > .hSlider {
+	top:0;
+}
+
+.sliderContainer .bottomSnap > .hSlider {
+	bottom:0;
+}
+
+.sliderContainer .hSlider:hover {
+	cursor:row-resize;
+}
+
+/* Contents */
+.sliderContainer > .sliderMain > .sliderMainContent {
+	width: 100%;
+	height: 100%;
+	position:relative;
+	box-sizing: border-box;
+}
+
+.sliderContainer > .sliderSide > .sliderSideContent {
+	width: 100%;
+	height: 100%;
+	position:relative;
+	box-sizing: border-box;
+}

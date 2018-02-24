@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter\appComponents">
+  <class name="appSrcObject" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383069523</datecreated>
+      <daterevised>1383547243</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Source Object</title>
+      <description>Application Source Object Manager</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devPath">
+          <description>The application developer path.</description>
+        </prop>
+        <prop type="string" name="appName">
+          <description>The application name. It is used as library to the source object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the object with all the variables.</description>
+          <parameters>
+            <parameter name="$appName" type="string" defaultvalue="">
+              <description>The application name.</description>
+            </parameter>
+            <parameter name="$devPath" type="string" defaultvalue="">
+              <description>The application developer path.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object package name.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The object namespace.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name. Leave empty for new object.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new application source object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceCode" returntype="boolean">
+          <description>Update the application source object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The object's source code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHeader" returntype="string">
+          <description>The object's header code.</description>
+          <parameters/>
+          <returndescription>The object's header code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

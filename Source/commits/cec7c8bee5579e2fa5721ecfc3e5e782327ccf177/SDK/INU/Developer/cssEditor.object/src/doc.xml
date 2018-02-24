@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\">
+  <class name="cssEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1366974826</datecreated>
+      <daterevised>1405605715</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>CSS Editor</title>
+      <description>This is a simple html editor with a preview and a css code part.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CSS_RESOURCES">
+        <description>Directory for cssEditor resources</description>
+      </const>
+      <const type="string" name="CSS_PROPERTIES">
+        <description>Place where the css properties info reside</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="cssName">
+          <description>Name of the css editing area</description>
+        </prop>
+        <prop type="string" name="htmlName">
+          <description>Name of the html editing area</description>
+        </prop>
+        <prop type="string" name="structure">
+          <description>Structure of the html model on which the css will be projected</description>
+        </prop>
+        <prop type="string" name="cssCode">
+          <description>CSS code to load on initializing</description>
+        </prop>
+        <prop type="formFactory" name="formFactory">
+          <description>The formFactory object for building all the form items.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Constructs and initializes a cssEditor.</description>
+          <parameters>
+            <parameter name="$cssName" type="string" defaultvalue="">
+              <description>Name of the css editing area</description>
+            </parameter>
+            <parameter name="$htmlName" type="string" defaultvalue="">
+              <description>Name of the html editing area</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setStructure" returntype="void">
+          <description>Sets the structure of the model of HTML to work with</description>
+          <parameters>
+            <parameter name="$structure" type="string" defaultvalue="">
+              <description>Structure of the html model on which the css will be projected</description>
+            </parameter>
+            <parameter name="$htmlName" type="string" defaultvalue="">
+              <description>The html code name for posting data.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setCss" returntype="void">
+          <description>Set the css code to work with</description>
+          <parameters>
+            <parameter name="$cssCode" type="string" defaultvalue="">
+              <description>CSS code to load on initializing</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCssProperties" returntype="string" static="true">
+          <description>Acquire CSS properties info as an XML document string</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getUserAgentCss" returntype="string" static="true">
+          <description>Acquire User Agent's default CSS</description>
+          <parameters>
+            <parameter name="$browser" type="string" defaultvalue="">
+              <description>Name of the browser. Can be "w3c", "webkit", "firefox", "iexplorer", "opera"</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="cssEditor">
+          <description>Builds and retrns the cssEditor object</description>
+          <parameters>
+            <parameter name="$structure" type="string" defaultvalue="">
+              <description>Structure of the html model on which the css will be projected</description>
+            </parameter>
+            <parameter name="$css" type="string" defaultvalue="">
+              <description>CSS code to load on initializing</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The cssEditor object.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPreviewContainer" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$browsers" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStructureContainer" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssContainer" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$measurement" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tabs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tiles" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssCoder" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$measurement" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tabs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tiles" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTilePage" returntype="DOMElement">
+          <description>Creates and returns a page tile for the cssEditor. It represents a grouping of css properties.</description>
+          <parameters>
+            <parameter name="$tile" type="array" defaultvalue="">
+              <description>Info for a specific grouping</description>
+            </parameter>
+            <parameter name="$measurement" type="array" defaultvalue="">
+              <description>Info relative to css measurement units</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getSelectProperty" returntype="DOMElement">
+          <description>Creates, initializes, and returns a select DOM element.</description>
+          <parameters>
+            <parameter name="$values" type="array" defaultvalue="">
+              <description>CSS property's available values</description>
+            </parameter>
+            <parameter name="$firstEmpty" type="boolean" defaultvalue="">
+              <description>If set to TRUE first value should be empty</description>
+            </parameter>
+            <parameter name="$cssName" type="string" defaultvalue="">
+              <description>Name of the css property</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>Type of the property. This can be "input", "select", "length", "time", "angle", "mixed".</description>
+            </parameter>
+            <parameter name="$browserSupport" type="string" defaultvalue="">
+              <description>A JSON string that holds a css property's browser support.</description>
+            </parameter>
+            <parameter name="$placeholder" type="string" defaultvalue="">
+              <description>Placeholder of the css property value</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>Title of the css property value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getInputProperty" returntype="DOMElement">
+          <description>Creates, initializes, and returns an input DOM element.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>CSS property's value</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>Type of the property. This can be "input", "select", "length", "time", "angle", "mixed".</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Name of the CSS property.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>Title of the CSS property</description>
+            </parameter>
+            <parameter name="$browserSupport" type="string" defaultvalue="">
+              <description>A JSON string that holds a css property's browser support.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="hasModel" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssInfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\SYS\Comm\db\dbConnection"></use><use path="\API\Model\sql\dbQuery"></use><use path="\API\Platform\importer"></use><use path="\ESS\Environment\cookies"></use><use path="\API\Profile\person"></use><use path="\API\Platform\engine"></use><use path="\DEV\Resources\paths"></use><use path="\API\Resources\filesystem\folderManager"></use><use path="\ESS\Environment\session"></use></dependencies>

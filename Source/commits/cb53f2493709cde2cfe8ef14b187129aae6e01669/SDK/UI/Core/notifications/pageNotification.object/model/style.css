@@ -1,0 +1,41 @@
+.page-notification {
+	background: #404040;
+	padding: 15px 20px;
+	color: #FFF;
+	overflow: auto;
+	line-height: 24px;
+	font-size: 1.1em;
+	min-width: 350px;
+}
+
+.page-notification .close_button {
+	float: right;
+	width: 24px;
+	height: 24px;
+	background: url('%{media}/global/closeX.svg') no-repeat;
+	background-size: cover;
+	background-position: 0px 0px;
+	opacity: 1;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	cursor: pointer;
+}
+
+.page-notification .close_button:hover {
+	opacity: 0.7;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.page-notification .action_button {
+	float: left;
+	margin: 0px 15px;
+	color: #3CB0F7;
+	cursor: pointer;
+}
+
+.page-notification .title {
+	float: left;
+}

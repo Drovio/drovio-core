@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Interactive" namespace="\forms">
+  <class name="switchButton" abstract="">
+    <info>
+      <version>4.0</version>
+      <build>2</build>
+      <datecreated>1364469060</datecreated>
+      <daterevised>1447686328</daterevised>
+      <extends>
+        <object>\UI\Forms\interactive\switchButtonForm</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Switch Button</title>
+      <description>Displays an interactive switch button.
+It is an autonomous form that works separately from other forms.</description>
+      <deprecated>Use \UI\Forms\interactive\switchButtonForm instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\database">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1415616125</datecreated>
+      <daterevised>1430314609</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Database Connection Manager</title>
+      <description>Connects to any database with the proper database connector.
+It supports only MySQL for the time being.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="iDbConnector" name="dbConnector">
+          <description>Database connector.</description>
+        </prop>
+        <prop type="string" name="dbType">
+          <description>Database engine.</description>
+        </prop>
+        <prop type="string" name="host">
+          <description>The database URL host.</description>
+        </prop>
+        <prop type="string" name="database">
+          <description>The database name.</description>
+        </prop>
+        <prop type="string" name="error">
+          <description>The transaction error.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="username">
+          <description>Database username.</description>
+        </prop>
+        <prop type="string" name="password">
+          <description>Database password.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the database connection manager.
+Set connection options.</description>
+          <parameters>
+            <parameter name="$dbType" type="string" defaultvalue="">
+              <description>The database engine type.</description>
+            </parameter>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The database host URL.</description>
+            </parameter>
+            <parameter name="$database" type="string" defaultvalue="">
+              <description>The database name.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The user's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The user's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="options" returntype="void">
+          <description>Set connection options.</description>
+          <parameters>
+            <parameter name="$dbType" type="string" defaultvalue="">
+              <description>The database engine type.</description>
+            </parameter>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The database host URL.</description>
+            </parameter>
+            <parameter name="$database" type="string" defaultvalue="">
+              <description>The database name.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The user's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The user's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="execute" returntype="mixed">
+          <description>Executes a query to the database.
+It supports multiple queries separated with ";".</description>
+          <parameters>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The query to be executed.
+It supports many queries separated by ";".</description>
+            </parameter>
+            <parameter name="$commit" type="boolean" defaultvalue="">
+              <description>Whether to commit the transaction  after the last query or not.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns FALSE on failure.
+For successful SELECT, SHOW, DESCRIBE or EXPLAIN queries mysqli_query() will return a mysqli_result object.
+For other successful queries mysqli_query() will return TRUE.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="boolean">
+          <description>Commits the current transaction for the database connection.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="rollback" returntype="boolean">
+          <description>Rollbacks the current transaction for the database.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getError" returntype="string">
+          <description>Gets the error generated by the previous transaction executed.</description>
+          <parameters/>
+          <returndescription>The error message thrown by the database connector.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="escape" returntype="string">
+          <description>Clears a string given and returns the cleared one.</description>
+          <parameters>
+            <parameter name="$resource" type="string" defaultvalue="">
+              <description>The string to be cleared.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cleared string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fetch" returntype="array">
+          <description>Fetch results from resource.</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The database results resource.</description>
+            </parameter>
+            <parameter name="$all" type="boolean" defaultvalue="">
+              <description>Whether it will fetch the entire resource into one array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of results.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="toArray" returntype="array">
+          <description>Transform a resource to an array with the specified key value assignment.</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The resource to parse.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The field of the table that will act as key.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The field of the table that will act as value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The associative array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="seek" returntype="void">
+          <description>Sets the iterator of the resource to a given position</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The database resource.</description>
+            </parameter>
+            <parameter name="$row" type="integer" defaultvalue="">
+              <description>The position where the iterator will be placed.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_num_rows" returntype="number">
+          <description>Returns the count of rows of the given resource.</description>
+          <parameters>
+            <parameter name="$resource" type="resource" defaultvalue="">
+              <description>The database resource.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The row count of the given resource.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="to_array" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$key" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use toArray() instead.</deprecated>
+        </method>
+        <method name="toFullArray" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use fetch(resource, TRUE) instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

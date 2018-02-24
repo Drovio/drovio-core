@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\documentation">
+  <class name="documentor" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1381392484</datecreated>
+      <daterevised>1381843985</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="PLAIN">
+        <description/>
+      </const>
+      <const type="" name="PHP">
+        <description/>
+      </const>
+      <const type="" name="JS">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="pool">
+          <description/>
+        </prop>
+        <prop type="" name="editor">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$editor" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$document" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getEditor" returntype="DOMElement">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPresenter" returntype="string">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildViewer" returntype="void">
+          <description/>
+          <returndescription/>
+          <parameters>
+            <parameter name="$contentType" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildPresenter" returntype="void">
+          <description/>
+          <returndescription/>
+          <parameters>
+            <parameter name="$contentType" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$editable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildSEditor" returntype="void">
+          <description/>
+          <returndescription/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildHtmlEditor" returntype="void">
+          <description/>
+          <returndescription/>
+          <parameters/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildCOdeEditor" returntype="void">
+          <description/>
+          <returndescription/>
+          <parameters/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

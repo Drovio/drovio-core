@@ -1,0 +1,59 @@
+.uiHistoryManager {
+	width: 900px;
+	background-color: #FFF;
+	overflow: auto;
+}
+.uiHistoryManager .historySection {
+	min-height: 20px;
+	padding: 3px;
+}
+.uiHistoryManager h3.vcsHeader {
+	color: rgb(166, 166, 166);
+	margin: 5px 10px;
+}
+.uiHistoryManager .cmContainer .controls {
+	margin-top: 15px;
+	padding: 5px;
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+	overflow: auto;
+}
+.uiHistoryManager .cmContainer .controls .pagination {
+	float: left;
+}
+.uiHistoryManager .cmContainer .controls .pagination .navBtn {
+	width: 75px;
+	text-align: center;
+	margin: 0px 5px;
+	color: #999;
+}
+.uiHistoryManager .cmContainer .controls .pagination .navBtn.active {
+	color: #000;
+	cursor: pointer;
+}
+.uiHistoryManager .cmContainer .controls .pagination .navBtn.active:hover {
+	color: #C00403;
+}
+.uiHistoryManager .cmContainer .controls .pagesInfo {
+	float: right;
+	color: #999;
+}
+.uiHistoryManager #restoreBtn {
+	float: right;
+}
+
+.uiHistoryManager .footer {
+	width: 100%;
+	line-height: 16px;
+	padding: 2px 0px;
+	height: 21px;
+	text-align: center;
+	background: linear-gradient(#f2f2f2, #e2e2e2);
+	background: -webkit-linear-gradient(#f2f2f2, #e2e2e2);
+	background: -moz-linear-gradient(#f2f2f2, #e2e2e2);
+	border-top: 1px solid #e2e2e2;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: auto;
+	color: #777;
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\mail">
+  <class name="rbMailer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366713840</datecreated>
+      <daterevised>1382520664</daterevised>
+      <extends>\API\Comm\mail\mailer</extends>
+      <implements/>
+      <throws/>
+      <title>RB Mailer</title>
+      <description>Configure all mail proccedures from redback.gr mail server for predifined account such as support, info, admin
+</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="SEND">
+        <description/>
+      </const>
+      <const type="" name="RCVE">
+        <description/>
+      </const>
+      <const type="" name="BOTH">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="optionSet">
+          <description>Mail configuration set</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters>
+            <parameter name="$account" type="string" defaultvalue="">
+              <description>The email login account name, which crendential will be used for class interaction.</description>
+            </parameter>
+            <parameter name="$optionSetType" type="string" defaultvalue="">
+              <description>The type of configuration set
+send : to enable send mail options
+recieve : to enable recieve mail options
+both : to enable both, send and recieve mail options</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadPredefinedOptionset" returntype="void">
+          <description>Given the optionset name and type configures mailer class accordingly</description>
+          <parameters>
+            <parameter name="$optionSetName" type="string" defaultvalue="">
+              <description>The account name that class will load / configure</description>
+            </parameter>
+            <parameter name="$optionSetType" type="string" defaultvalue="">
+              <description>The type of configuration set
+send : to enable send mail options
+recieve : to enable recieve mail options
+both : to enable both, send and recieve mail options</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCommonOptionset" returntype="array">
+          <description>Returns the common option set for all redback mail accounts</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="initPredefinedOptionset" returntype="void">
+          <description>Initalizes all available option sets for redback mail accounts</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_crendentials" returntype="array">
+          <description>Load crendentials using redback settings class for the given account</description>
+          <parameters>
+            <parameter name="$mailAcount" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadConfiguration" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$mailAcount" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

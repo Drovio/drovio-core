@@ -1,0 +1,18 @@
+.dialogFrame .formContents {
+	padding: 5px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+.dialogFrame .dialogControls {
+	overflow: auto;
+	padding: 5px;
+	background: linear-gradient(#f2f2f2, #e2e2e2);
+	background: -webkit-linear-gradient(#f2f2f2, #e2e2e2);
+	background: -moz-linear-gradient(#f2f2f2, #e2e2e2);
+	border-top: 1px solid #DDD;
+	box-sizing: border-box;
+	clear: both;
+}
+.dialogFrame .dialogControls .ctrls {
+	float: right;
+}

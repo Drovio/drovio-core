@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\">
+  <class name="RCPage" abstract="">
+    <info>
+      <version>0.7</version>
+      <build>7</build>
+      <datecreated>1402466593</datecreated>
+      <daterevised>1447152595</daterevised>
+      <extends>
+        <object>\UI\Templates\HTMLPageTemplate</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Core HTML Page</title>
+      <description>It's a singleton pattern implementation for Redback Core page.
+Builds the redback's core spine of an HTML page and sets the events to fill the blanks (modules).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="HOLDER">
+        <description>The page holder.</description>
+      </const>
+      <const type="string" name="REPORT">
+        <description>The page report holder.</description>
+      </const>
+      <const type="string" name="HELPER">
+        <description>The page helper holder.</description>
+      </const>
+      <const type="string" name="HAS_TOOLBAR_CLASS">
+        <description>Identifies the page that has toolbar.</description>
+      </const>
+      <const type="string" name="FULL_SCREEN_CLASS">
+        <description>Identifies the page content that is full screen.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="RCPage" name="instance" static="true">
+          <description>The singleton's instance.</description>
+        </prop>
+        <prop type="integer" name="moduleID">
+          <description>The module that the page will load.</description>
+        </prop>
+        <prop type="array" name="pageAttributes">
+          <description>All the page's extra attributes as fetched from the database.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="RCPage" static="true">
+          <description>Gets the instance of the RCPage.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id that the page will load.</description>
+            </parameter>
+            <parameter name="$pageAttributes" type="array" defaultvalue="">
+              <description>The page's attributes from database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The RCPage unique instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="RCPage" static="true">
+          <description>Builds the spine of the page</description>
+          <parameters>
+            <parameter name="$subdomain" type="string" defaultvalue="">
+              <description>The subdomain where the page will be built.</description>
+            </parameter>
+            <parameter name="$dynamic" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be loaded asynchronously (dynamic) in the page.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Initializes the Redback Core Page with the module id to load.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id that the page will load.</description>
+            </parameter>
+            <parameter name="$pageAttributes" type="array" defaultvalue="">
+              <description>The page's attributes from database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="addResources" returntype="void">
+          <description>Adds the initial static resources to the page header (including initial packages for styles and javascript).</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="populateBody" returntype="void" static="true">
+          <description>Builds the body container.</description>
+          <parameters>
+            <parameter name="$subdomain" type="string" defaultvalue="">
+              <description>The subdomain where the page will be built</description>
+            </parameter>
+            <parameter name="$dynamic" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be loaded asynchronously (dynamic) in the page.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildPlatformVersioning" returntype="void">
+          <description>Builds special meta data in the document body to notify if there are platform updates.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getErrorModuleID" returntype="string">
+          <description>Gets the page title according to access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStaticResources" returntype="void">
+          <description>Sets the page's resources when the page is static.</description>
+          <parameters>
+            <parameter name="$resources" type="string" defaultvalue="">
+              <description>The resources generated by the module loaded for this page.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

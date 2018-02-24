@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="554184391"><title>Get account session salt</title><description></description><access>1</access><attributes><attr id="sid"></attr><attr id="aid"></attr></attributes></query>

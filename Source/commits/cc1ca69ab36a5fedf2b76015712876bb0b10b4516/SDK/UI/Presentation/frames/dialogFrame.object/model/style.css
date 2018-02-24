@@ -1,0 +1,16 @@
+.dialogFrame .formContents {
+	padding: 5px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+.dialogFrame .dialogControls {
+	overflow: auto;
+	padding: 5px;
+	background-color: rgba(166, 166, 166, 0.1);
+	border-top: 1px solid #EEE;
+	box-sizing: border-box;
+	clear: both;
+}
+.dialogFrame .dialogControls .ctrls {
+	float: right;
+}

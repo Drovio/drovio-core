@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Window Frame</h1>
+<p>A window frame is a simple desktop-like window that can present information to the user. It is used with popups in order to show a window popup.</p>
+<div class="code">
+	<pre>// Create and show a simple window frame to the user
+	
+// Use the class
+use \UI\Presentation\frames\windowFrame;
+
+// Create a frame
+$frame = new windowFrame($id = "");
+
+// This is a UIObject, so we build
+$frame-&gt;build($title = "Window Frame", $class = "windowFrame");
+
+// We can append anything we like in the frame
+$header = DOM::create("h2", "This is a header in the frame");
+$frame-&gt;append($header);
+
+$p = DOM::create("p", "This is a paragraph in the frame");
+$frame-&gt;append($p);
+
+// After we finish building, we return the frame report
+// This will return a persistent popup
+return $frame-&gt;getFrame();</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 12:52</p></div>
+</div></body></html>

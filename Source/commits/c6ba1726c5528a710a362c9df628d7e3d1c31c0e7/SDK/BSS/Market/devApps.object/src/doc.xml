@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="Market" namespace="\">
+  <class name="devApps" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1444763868</datecreated>
+      <daterevised>1444763868</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer's application finder.</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getDevApplications" returntype="array" static="true">
+          <description>It gets all applications for the current account that are in development mode and not in market or enterprise dashboard.</description>
+          <parameters/>
+          <returndescription>An array of all applications.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

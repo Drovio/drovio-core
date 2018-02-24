@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\views">
+  <class name="appViewManager" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1411981113</datecreated>
+      <daterevised>1411988537</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application View Manager</title>
+      <description>This is the class that is responsible for managing the folders and views of an application.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The application's index file name for views.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="application" name="application">
+          <description>The application object.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+        <prop type="DOMParser" name="dom_parser">
+          <description>The index's DOMParser object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Creates the library index (if not any) and initializing the library.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolders" returntype="array">
+          <description>Get an array of all the folders under the given path.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>Whether to return a single compact array with folders separated by "/" or a nested array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all the folders under the given path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFolder" returntype="boolean">
+          <description>Create a new folder in application views.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The name of the folder to create.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeFolder" returntype="boolean">
+          <description>Remove a view folder.
+The folder must be empty of folders and views.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The folder name to be removed.
+Separate each subfolder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createView" returntype="boolean">
+          <description>Create a view in the given folder.
+It updates the library index and creates a new view object.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeView" returntype="boolean">
+          <description>Remove a given view from the application.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder of the view.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderViews" returntype="array">
+          <description>Get all views in a given folder.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all views.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="updateIndexFile" returntype="void">
+          <description>Updates the views index file in the vcs.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="void">
+          <description>Initializes the DOMParser object and loads the library index file.
+If the index file doesn't exist, it creates it.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

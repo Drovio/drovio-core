@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Connect" namespace="\">
+  <class name="invitations" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1433361614</datecreated>
+      <daterevised>1447176016</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform Invitation Manager</title>
+      <description>Manages team and project invitations for non-registered users.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="TEAM_TYPE">
+        <description>The team invitation type value.</description>
+      </const>
+      <const type="string" name="PROJECT_TYPE">
+        <description>The project invitation type value.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <description>Create a new invitation for a given email for a non-registered user.</description>
+          <parameters>
+            <parameter name="$email" type="string" defaultvalue="">
+              <description>The person's mail to invite.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The team id or the project id.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The context type.
+It should be either for team or for project.
+Use the class constants.</description>
+            </parameter>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id for the user to be when the invitation will be accepted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The invitation token if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountInvitations" returntype="array" static="true">
+          <description>Get all invitations for a given email of a person.</description>
+          <parameters>
+            <parameter name="$email" type="string" defaultvalue="">
+              <description>The person's email to  get the invitations for.
+If empty, get the current person's mail.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>All person invitations.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInvitations" returntype="array" static="true">
+          <description>Get invitations based on the given context and type.</description>
+          <parameters>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The team id or the project id.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The context type.
+It should be either for team or for project.
+Use the class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all invitations mathing the given parameters.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove an invitation from the system.</description>
+          <parameters>
+            <parameter name="$email" type="string" defaultvalue="">
+              <description>The invitation email.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The team id or the project id.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The context type.
+It should be either for team or for project.
+Use the class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getManagedEmail" returntype="string" static="true">
+          <description>Get an email address for a managed account given the account's username.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account username to get the mail address for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The managed email address.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="token" returntype="string" static="true">
+          <description>Generate an one-time token for the invitation.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The key prefix.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The key main context/value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The token generated.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

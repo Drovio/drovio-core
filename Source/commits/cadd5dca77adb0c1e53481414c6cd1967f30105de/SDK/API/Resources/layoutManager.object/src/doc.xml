@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\">
+  <class name="layoutManager" abstract="">
+    <info>
+      <version/>
+      <datecreated>1362651360</datecreated>
+      <daterevised>1404469925</daterevised>
+      <extends>
+        <object>\UI\Layout\layoutManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Layout Loader and Manager</title>
+      <description>Loads any layout for the module's page and appends content to it.</description>
+      <deprecated>Use \UI\Layout\layoutManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="DOMElement" static="true">
+          <description>Loads the layout from the resources directory.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout's name</description>
+            </parameter>
+            <parameter name="$deprecated" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append" returntype="boolean" static="true">
+          <description>Append a given DOMElement to a layout's section.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout's id.</description>
+            </parameter>
+            <parameter name="$sectionId" type="string" defaultvalue="">
+              <description>The section's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The element to be appended to the section.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

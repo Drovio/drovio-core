@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="literalManager" abstract="" namespace="\literals">
+    <info>
+      <version/>
+      <datecreated>1366714740</datecreated>
+      <daterevised>1379349367</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Literal Manager</title>
+      <description>System's literal manager.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Get all locked literals from the given scope</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to get the literals from. If NULL, get the current system locale.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="add" returntype="void" static="true">
+          <description>Add a new literal to the default locale</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's description</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Defines whether the literal is static and is translated along with all other static literals in the beginning of a new locale.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update" returntype="mixed" static="true">
+          <description>Update literal's values to the default locale</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's new value</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's new description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="remove" returntype="mixed" static="true">
+          <description>Remove a literal from the system</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="wrap" returntype="DOMElement" static="true">
+          <description>Wrap a simple span literal.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

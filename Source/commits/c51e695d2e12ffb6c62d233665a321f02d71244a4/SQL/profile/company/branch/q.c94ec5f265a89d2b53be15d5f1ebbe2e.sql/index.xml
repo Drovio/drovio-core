@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="814689500"><title>Create Branch Location</title><description>Create branch location data</description><access>1</access><attributes><attr id="bid"></attr><attr id="address"></attr><attr id="zipcode"></attr><attr id="tid"></attr><attr id="cid"></attr><attr id="longitude"></attr><attr id="latitude"></attr></attributes></query>

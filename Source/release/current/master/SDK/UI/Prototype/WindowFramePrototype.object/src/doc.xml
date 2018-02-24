@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Prototype" namespace="\">
+  <class name="WindowFramePrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1438075137</datecreated>
+      <daterevised>1438075137</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Window Frame Prototype</title>
+      <description>It's the window frame prototype for building frames (windows, dialogs etc.).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="REPLACE_METHOD">
+        <description>The replace method identifier.</description>
+      </const>
+      <const type="string" name="APPEND_METHOD">
+        <description>The append method identifier.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="body">
+          <description>The frame's body container.</description>
+        </prop>
+        <prop type="string" name="id">
+          <description>The frame id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new frame instance.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The frame id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="WindowFramePrototype">
+          <description>Builds the window frame structure.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The frame's title.
+It can be string or DOMElement.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The frame's class.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The WindowFramePrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="append" returntype="WindowFramePrototype">
+          <description>Appends a DOMElement to frame body.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The WindowFramePrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportContent" returntype="void">
+          <description>Adds a report data content to the server report.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The DOMElement report content.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder of the content.
+This holder will be used to append or replace (according to the third parameter) the content.
+This holder will be used to append or replace (according to the third parameter) the content.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The report method, replace or append (use class const).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportAction" returntype="void">
+          <description>Adds a report action content to the server report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value (if any, empty by default).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getFrame" returntype="string">
+          <description>Gets the frame object with a server report.</description>
+          <parameters/>
+          <returndescription>The html server report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

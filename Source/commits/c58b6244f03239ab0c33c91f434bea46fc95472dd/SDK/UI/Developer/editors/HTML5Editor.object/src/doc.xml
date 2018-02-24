@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="HTML5Editor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1437044699</datecreated>
+      <daterevised>1437292549</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML5 Editor.</title>
+      <description>A complete WYSIWYG HTML5 Editor.
+It allows the user to edit an HTML content with all the available features of HTML5.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="htmlName">
+          <description>Name of the html editing area.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of the HTML5Editor.</description>
+          <parameters>
+            <parameter name="$htmlName" type="string" defaultvalue="">
+              <description>The name of the html editing area.
+This is used for the form submit.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="HTML5Editor">
+          <description>Builds the HTML editor as a UI object.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The html content.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The object's id.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The object's class.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The HTML5Editor object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPreviewContainer" returntype="DOMElement">
+          <description>Create the preview container which includes the front and the back side of the editor.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The html content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The preview container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

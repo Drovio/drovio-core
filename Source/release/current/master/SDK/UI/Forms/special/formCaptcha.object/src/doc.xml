@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\special">
+  <class name="formCaptcha" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362996840</datecreated>
+      <daterevised>1382605881</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Form CAPTCHA</title>
+      <description>Builds a captcha control.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="formCaptcha">
+          <description>Builds the captcha control.</description>
+          <parameters>
+            <parameter name="$formID" type="string" defaultvalue="">
+              <description>The form's id where the captcha will be placed.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The captcha element id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Performs the Captcha Protocol validation process and returns the result.</description>
+          <parameters>
+            <parameter name="$formID" type="string" defaultvalue="">
+              <description>The form's id.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The user's input captcha value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

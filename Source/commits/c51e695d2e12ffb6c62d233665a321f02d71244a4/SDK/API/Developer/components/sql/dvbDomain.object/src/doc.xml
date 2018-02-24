@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="dvbDomain" abstract="" namespace="\components\sql">
+    <info>
+      <version/>
+      <datecreated>1372852311</datecreated>
+      <daterevised>1372852311</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer's Query Domain Manager</title>
+      <description>Manages all query domains.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="EXPORT_PATH">
+        <description>The inner export folder.</description>
+      </const>
+      <const type="string" name="REPOSITORY_PATH">
+        <description>The root repository folder.</description>
+      </const>
+      <const type="string" name="INNER_PATH">
+        <description>The inner repository folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="domainName">
+          <description>The domain name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the domain.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The domain name (optional).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a domain in the sql library.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The domain name.</description>
+            </parameter>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The domain parent (separated by ".").</description>
+            </parameter>
+          </parameters>
+          <returndescription>Creation status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Deletes a domain from the sql library.</description>
+          <parameters/>
+          <returndescription>The deletion status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQueries" returntype="array">
+          <description>Gets the sql queries of the domain.</description>
+          <parameters/>
+          <returndescription>Array of queries by key.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

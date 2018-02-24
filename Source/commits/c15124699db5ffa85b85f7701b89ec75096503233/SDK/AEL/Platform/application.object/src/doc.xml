@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Platform" namespace="\">
+  <class name="application" abstract="">
+    <info>
+      <version>2.1</version>
+      <build>9</build>
+      <datecreated>1408802038</datecreated>
+      <daterevised>1421937780</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Manager</title>
+      <description>This is the application manager class.
+It imports application source objects and load application views.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="loadingDepth" static="true">
+          <description>The application view loading depth.</description>
+        </prop>
+        <prop type="integer" name="applicationID" static="true">
+          <description>The application id currently running.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="integer" static="true">
+          <description>Init the literal manager for the application that is currently running.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id currently running.
+
+NOTE: To application developers, this will be set only once the first time and cannot be changed after.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application id currently running.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="import" returntype="void" static="true">
+          <description>Import an application source object</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package name.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The full name of the class (including namespaces separated by "/")</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadView" returntype="mixed" static="true">
+          <description>Load an application view content.</description>
+          <parameters>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application view full name (include folders separated with "/").
+If empty, get the default/startup application view name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application view content object.
+If can be a server report string or the DOMElement of the view.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getViewName" returntype="string" static="true">
+          <description>Get the published view name.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The published view name (no extensions included).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="incLoadingDepth" returntype="void" static="true">
+          <description>Increase the loading depth of app views by one.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="decLoadingDepth" returntype="void" static="true">
+          <description>Decrease the loading depth of app views by one.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLoadingDepth" returntype="integer" static="true">
+          <description>Get the current app view's loading depth, starting from 0.</description>
+          <parameters/>
+          <returndescription>The application view loading depth.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="importPackage" returntype="void">
+          <description>Import an entire application source package.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The application source package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppSettings" returntype="settingsManager" static="true">
+          <description>Gets the settings manager for the application.
+Decides whether to load the settings from the developer folder or the published folder.</description>
+          <parameters/>
+          <returndescription>The appSettings or settingsManager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationPath" returntype="string" static="true">
+          <description>Gets the application's library path to the latest version.</description>
+          <parameters/>
+          <returndescription>The application library path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

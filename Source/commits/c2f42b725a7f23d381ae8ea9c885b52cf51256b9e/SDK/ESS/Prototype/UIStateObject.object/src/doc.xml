@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="UIStateObject" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362994800</datecreated>
+      <daterevised>1424175235</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>UI State Object</title>
+      <description>Saves and gets the state of a ui object during execution and after page reload.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setState" returntype="void" static="true">
+          <description>Sets the state of the object.</description>
+          <parameters>
+            <parameter name="$state" type="string" defaultvalue="">
+              <description>The state value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getState" returntype="mixed" static="true">
+          <description>Gets the state of the object</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

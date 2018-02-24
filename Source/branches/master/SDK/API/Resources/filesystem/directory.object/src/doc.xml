@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\filesystem">
+  <class name="directory" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>3</build>
+      <datecreated>1365505380</datecreated>
+      <daterevised>1440861683</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Directory</title>
+      <description>System's directory object. Used to acquire a directory's details</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getContentList" returntype="array" static="true">
+          <description>Get directory content list.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Whether to include hidden files (files that start with a dot) in the results.</description>
+            </parameter>
+            <parameter name="$includeDotFolders" type="boolean" defaultvalue="">
+              <description>Whether to include dot folders ('.', '..') in the results.</description>
+            </parameter>
+            <parameter name="$relativeNames" type="boolean" defaultvalue="">
+              <description>Return content names, instead of full paths.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>An array of all the contents of a directory.
+['dirs'] for directories
+['files'] for files</returndescription>
+          <throws/>
+        </method>
+        <method name="getContentDetails" returntype="array" static="true">
+          <description>Get directory contents in details.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Whether to include hidden files (files that start with a dot) in the results.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns all the content details of a folder in an array:
+['dirs'] for directories
+['files'] for files</returndescription>
+          <throws/>
+        </method>
+        <method name="isEmpty" returntype="mixed" static="true">
+          <description>Checks if a directory is empty.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The path of the folder.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the folder.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the directory is empty, false otherwise.
+It returns NULL if an error occurred or the directory doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="normalize" returntype="string" static="true">
+          <description>Normalizes a path by collapsing redundant slashes.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The path to be normalized.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The normalized path.</returndescription>
+          <throws/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Check if the given name (file or folder) contains one of the following characters and thus it is not valid.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The file/folder name to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE if the name is valid FALSE otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="formatBytes" returntype="string" static="true">
+          <description>Formats a given size in bytes.</description>
+          <parameters>
+            <parameter name="$bytes" type="float" defaultvalue="">
+              <description>The size in bytes.</description>
+            </parameter>
+            <parameter name="$precision" type="integer" defaultvalue="">
+              <description>The precision of the rounded sizes in digits.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The size formatted in the highest metric possible.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

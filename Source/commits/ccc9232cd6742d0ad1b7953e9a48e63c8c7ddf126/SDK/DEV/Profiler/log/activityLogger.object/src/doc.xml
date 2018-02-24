@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\log">
+  <class name="activityLogger" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1392028162</datecreated>
+      <daterevised>1415261961</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract System Activity Logger</title>
+      <description>Abstract class for activity logging in the system.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="LOG_ROOT_FOLDER">
+        <description>The root folder for storing the log files.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="boolean">
+          <description>Creates a new entry log.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLogs" returntype="array">
+          <description>Get all logs from the given activity.</description>
+          <parameters/>
+          <returndescription>An array of logs with time and description as:
+['time'] = unix timestamp
+['description'] = the log description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getLogFile" returntype="string" abstract="true">
+          <description>Gets the log filename for the activity.
+Use groups (folders) for the same activity and separate days if necessary.</description>
+          <parameters/>
+          <returndescription>The log inner file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="createFile" returntype="boolean">
+          <description>Creates the log file and initializes the content.</description>
+          <parameters>
+            <parameter name="$filePath" type="string" defaultvalue="">
+              <description>The file path to create.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

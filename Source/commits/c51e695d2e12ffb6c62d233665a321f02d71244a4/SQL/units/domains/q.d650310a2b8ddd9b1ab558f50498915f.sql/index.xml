@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1924531003"><title>Get Domain Info Like Description</title><description>Get the domains that match a given description</description><access>1</access><attributes><attr id="description"></attr></attributes></query>

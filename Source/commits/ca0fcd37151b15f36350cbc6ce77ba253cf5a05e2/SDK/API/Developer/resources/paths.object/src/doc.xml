@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\resources">
+  <class name="paths" abstract="">
+    <info>
+      <version/>
+      <datecreated>1381138366</datecreated>
+      <daterevised>1404394386</daterevised>
+      <extends>
+        <object>\DEV\Resources\paths</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback developer paths.</title>
+      <description>Keeps all the developer paths.</description>
+      <deprecated>Use \DEV\Resources\paths instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

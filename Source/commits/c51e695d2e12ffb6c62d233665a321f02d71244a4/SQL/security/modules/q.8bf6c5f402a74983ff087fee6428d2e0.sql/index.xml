@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1613241932"><title>Get Module Guest Access Status</title><description>Get the access status for a guest user</description><access>1</access><attributes><attr id="moduleID"></attr></attributes></query>

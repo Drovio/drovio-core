@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="ReportFactory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1409310194</datecreated>
+      <daterevised>1409310194</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback's Report Factory</title>
+      <description>This is a class for getting specific reports for page reload and redirect.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getReportRedirect" returntype="string" static="true">
+          <description>Creates a specific action report to invoke a page redirect to the client.</description>
+          <parameters>
+            <parameter name="$location" type="string" defaultvalue="">
+              <description>The destination url to redirect.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The subdomain of the location.
+If left empty, the full url will be considered the first parameter, otherwise the url will be resolved to this subdomain.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$formSubmit" type="boolean" defaultvalue="">
+              <description>Indicates whether the report will contain a submit action for forms and allow to unload the form.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportReload" returntype="string" static="true">
+          <description>Creates a specific action report to invoke a page reload to the client.</description>
+          <parameters>
+            <parameter name="$formSubmit" type="boolean" defaultvalue="">
+              <description>Indicates whether the report will contain a submit action for forms and allow to unload the form.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

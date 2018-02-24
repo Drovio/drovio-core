@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="errorLogger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1390826651</datecreated>
+      <daterevised>1392109770</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Error Logger</title>
+      <description>Logs all errors and exceptions of the system.</description>
+      <deprecated>Use DEV\Profiler\log\errorLogger instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

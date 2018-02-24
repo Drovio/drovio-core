@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="Dashboard" namespace="\">
+  <class name="appGrid" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1428050440</datecreated>
+      <daterevised>1428050440</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>BOSS Dashboard Application Decorator Manager</title>
+      <description>This class is responsible for saving the state of the application grid from the BOSS dashboard.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="appGrid" name="instance" static="true">
+          <description>The appGrid instance.</description>
+        </prop>
+        <prop type="string" name="serviceFolder">
+          <description>The team's service folder to store the state file.</description>
+        </prop>
+        <prop type="DOMParser" name="xmlParser">
+          <description>The parser responsible for parsing the state xml file.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="appGrid" static="true">
+          <description>Get the appGrid instance.</description>
+          <parameters/>
+          <returndescription>The appGrid object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getState" returntype="array">
+          <description>Get the current state of the application grid.</description>
+          <parameters/>
+          <returndescription>An array of all applications per slide.
+For each slide there is an array of all applications and their information, including:
+- application_id (id)
+- size (size)
+- position x (pos_x)
+- position y (pos_y)</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setState" returntype="boolean">
+          <description>Set the current state of the application grid.</description>
+          <parameters>
+            <parameter name="$gridState" type="array" defaultvalue="">
+              <description>An array of all applications per slide.
+For each slide there is an array of all applications and their information, including:
+- application_id (id)
+- size (size)
+- position x (pos_x)
+- position y (pos_y)</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Initialize the appGrid object.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="loadFile" returntype="void">
+          <description>Load the state file.
+The file will be created if it doesn't exist.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

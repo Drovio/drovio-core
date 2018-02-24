@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime\indexing">
+  <class name="libraryIndex" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1374577559</datecreated>
+      <daterevised>1396352646</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Library index manager.</title>
+      <description>Manages all library indexing.</description>
+      <deprecated>Use \DEV\Prototype\sourceMap instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getReleasePackageList" returntype="array" static="true">
+          <description>Gets all packages from the released map index file.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The path to the map file.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all packages.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

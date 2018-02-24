@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\units\sql">
+  <class name="dbQuery" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1375974296</datecreated>
+      <daterevised>1408013239</daterevised>
+      <extends>
+        <object>\API\Model\sql\dbQuery</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>The database Query.</title>
+      <description>Represents a redback's database query.</description>
+      <deprecated>Use \API\Model\sql\dbQuery instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

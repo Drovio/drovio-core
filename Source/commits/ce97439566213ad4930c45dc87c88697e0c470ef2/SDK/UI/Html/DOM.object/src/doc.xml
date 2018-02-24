@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="DOM" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1363352880</datecreated>
+      <daterevised>1438000355</daterevised>
+      <extends>
+        <object>\ESS\Prototype\DOMPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Document Object Model</title>
+      <description>Extends the DOM Prototype and is the base class for building all the html for the system pages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="DOMDocument" name="document" static="true">
+          <description>The page document</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="DOMElement" static="true">
+          <description>Creates and returns a DOMElement with the specified tagName and the given attributes</description>
+          <parameters>
+            <parameter name="$tag" type="string" defaultvalue="">
+              <description>The tag of the element.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The content of the element. It can be a string or a DOMElement.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id attribute</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class attribute</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The DOMElement</returndescription>
+          <throws/>
+        </method>
+        <method name="evaluate" returntype="mixed" static="true">
+          <description>Evaluate an XPath Query</description>
+          <description>Evaluate an XPath Query</description>
+          <parameters>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The XPath query to be evaluated</description>
+            </parameter>
+            <parameter name="$context" type="DOMElement" defaultvalue="">
+              <parameter name="$list" type="" defaultvalue="">
+                <description/>
+              </parameter>
+              <parameter name="$list" type="" defaultvalue="">
+                <description/>
+              </parameter>
+              <parameter name="$content" type="" defaultvalue="">
+                <description/>
+              </parameter>
+              <description>The optional contextnode can be specified for doing relative XPath queries.
+By default, the queries are relative to the root element.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <deprecated/>
+          <returndescription>Returns a typed result if possible or a DOMNodeList containing all nodes matching the given XPath expression.
+If the expression is malformed or the contextnode is invalid, DOMXPath::evaluate() returns FALSE.</returndescription>
+          <throws/>
+        </method>
+        <method name="find" returntype="mixed" static="true">
+          <description>Find an element by id (using the evaluate function).</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the element</description>
+            </parameter>
+            <parameter name="$nodeName" type="string" defaultvalue="">
+              <description>The node name of the element. If not set, it searches for all nodes (*).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns the DOMElement or NULL if it doesn't exist.</returndescription>
+          <throws/>
+        </method>
+        <method name="comment" returntype="DOMNode" static="true" class="undefined">
+          <description>Create an html comment and returns the element.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The comment node.</returndescription>
+          <throws/>
+        </method>
+        <method name="import" returntype="DOMNode" static="true" class="undefined">
+          <description>Imports a node to this document. Returns the new node.</description>
+          <parameters>
+            <parameter name="$node" type="DOMNode" defaultvalue="">
+              <description>The node to be imported</description>
+            </parameter>
+            <parameter name="$deep" type="boolean" defaultvalue="">
+              <description>Defines whether all the children of this node will be imported</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The imported node.</returndescription>
+          <throws/>
+        </method>
+        <method name="getHTML" returntype="string" static="true" class="undefined">
+          <description>Returns the HTML form of the document.</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicates whether to format the output.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The html generated by this document.,</returndescription>
+          <throws/>
+        </method>
+        <method name="getXML" returntype="string" static="true" class="undefined">
+          <description>Returns the XML form of the document</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicates whether to format the output.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The xml generated by this document.</returndescription>
+          <throws/>
+        </method>
+        <method name="initialize" returntype="void" static="true" class="undefined">
+          <description>Initializes and clears the  DOMDocument</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="clear" returntype="void" static="true" class="undefined">
+          <description>Clears the DOMDocument</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="document" returntype="DOMDocument" static="true" class="undefined">
+          <description>Get the DOMDocument</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The root document.</returndescription>
+          <throws/>
+        </method>
+        <method name="DOM2HTML" returntype="string" static="true">
+          <description>Parse a given DOMElement and transform it to html.</description>
+          <parameters>
+            <parameter name="$DOMElement" type="DOMElement" defaultvalue="">
+              <description>The DOMElement element to be resolved/transformed to html.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The transformed html.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

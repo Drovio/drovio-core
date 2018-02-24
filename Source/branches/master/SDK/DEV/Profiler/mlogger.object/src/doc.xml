@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="mlogger" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1432299783</datecreated>
+      <daterevised>1446227837</daterevised>
+      <extends>
+        <object>\DEV\Profiler\logger</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Modules logger</title>
+      <description>Logs messages for the modules project.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="mlogger" name="instance" static="true">
+          <description>The mlogger instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="mlogger" static="true">
+          <description>Get the static mlogger instance.</description>
+          <parameters/>
+          <returndescription>The mlogger instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getLogFolder" returntype="string">
+          <description>Get the modules project's log folder</description>
+          <parameters/>
+          <returndescription>The project's log folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

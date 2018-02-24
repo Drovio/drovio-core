@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="logger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366714140</datecreated>
+      <daterevised>1389261593</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Logger</title>
+      <description>Logs all messages for any priority and category.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="EMERGENCY" class="undefined">
+        <description>The system is unusable.</description>
+      </const>
+      <const type="integer" name="ALERT" class="undefined">
+        <description>Action must be taken immediately.</description>
+      </const>
+      <const type="integer" name="CRITICAL" class="undefined">
+        <description>Critical conditions.</description>
+      </const>
+      <const type="integer" name="ERROR" class="undefined">
+        <description>Error conditions.</description>
+      </const>
+      <const type="integer" name="WARNING" class="undefined">
+        <description>Warning conditions.</description>
+      </const>
+      <const type="integer" name="NOTICE" class="undefined">
+        <description>Normal, but significant condition.</description>
+      </const>
+      <const type="integer" name="INFO" class="undefined">
+        <description>Informational message.</description>
+      </const>
+      <const type="integer" name="DEBUG" class="undefined">
+        <description>Debugging message.</description>
+      </const>
+      <const type="string" name="DISK_R">
+        <description>Disk Read log type.</description>
+      </const>
+      <const type="string" name="DISK_W">
+        <description>Disk Write log type.</description>
+      </const>
+      <const type="string" name="DATABASE_IO">
+        <description>Database IO log type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="logPool" static="true">
+          <description>The array of log messages.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="void" static="true">
+          <description>Insert a log message to the pool</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The message content</description>
+            </parameter>
+            <parameter name="$priority" type="integer" defaultvalue="">
+              <description>Priority indicator as defined by logger constants</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log description.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The log type.
+This is used for statistics.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="flush" returntype="array" static="true">
+          <description>Returns all log messages as array</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The array of logs, each entry has a log array with its contents.</returndescription>
+          <throws/>
+        </method>
+        <method name="clear" returntype="void" static="true">
+          <description>Clears all log messages</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getLevelName" returntype="string" static="true">
+          <description>Gets the level name given the level code.</description>
+          <parameters>
+            <parameter name="$level" type="integer" defaultvalue="">
+              <description>The log level.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The level name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLevels" returntype="array" static="true">
+          <description>Get all logger priority levels.</description>
+          <parameters/>
+          <returndescription>An array of levels by key (numeric level) and value (the level name).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="void" static="true">
+          <description>Activate logger.</description>
+          <parameters>
+            <parameter name="$priority" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="void" static="true">
+          <description>Deactivate logger.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="mixed" static="true">
+          <description>Gets the status of the logger.</description>
+          <parameters/>
+          <returndescription>For active logger, it returns the priority, otherwise it returns false.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="record" returntype="void" static="true">
+          <description>Record the message given</description>
+          <parameters>
+            <parameter name="$messageLog" type="array" defaultvalue="">
+              <description>The messageLog array as created by the log function</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

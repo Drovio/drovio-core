@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="expander">
+	<div class="miniature">
+		<span>Miniature</span>
+	</div>
+	<div class="expansion">
+		<span>Expansion</span>
+	</div>
+	<div class="switch">
+		<span>More</span>
+	</div>
+</div>
+</model>

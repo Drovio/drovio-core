@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\storage">
+  <class name="session" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366714680</datecreated>
+      <daterevised>1415088866</daterevised>
+      <extends>
+        <object>\ESS\Environment\session</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Session Manager</title>
+      <description>Handles all session storage processes.</description>
+      <deprecated>Use \ESS\Environment\session instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

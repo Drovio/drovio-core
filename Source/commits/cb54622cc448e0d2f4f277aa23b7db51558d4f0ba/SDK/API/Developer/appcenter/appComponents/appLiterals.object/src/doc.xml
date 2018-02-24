@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter\appComponents">
+  <class name="appLiterals" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383159388</datecreated>
+      <daterevised>1396807667</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Literals</title>
+      <description>Application literal manager.</description>
+      <deprecated>Use \DEV\Apps\components\appLiteral instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The literal file type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The application vcs manager.</description>
+        </prop>
+        <prop type="appSettings" name="appSettings">
+          <description>The application settings manager.</description>
+        </prop>
+        <prop type="string" name="defaultLocale">
+          <description>The application default locale.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the object and creates the literal file.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The application vcs manager object.</description>
+            </parameter>
+            <parameter name="$appSettings" type="appSettings" defaultvalue="">
+              <description>The application settings manager object.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultLocale" returntype="string">
+          <description>Gets the application's default locale.</description>
+          <parameters/>
+          <returndescription>The locale value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates the literal file.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The literal locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed">
+          <description>Gets literal value with the given name and in the given locale.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal name.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The preferred locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the literal value.
+If the name is not set, it returns an array of all literals by name =&amp;gt; value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Sets a literal's value in the given locale.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal value. If empty, the literal will be deleted.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The literal locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getXML" returntype="string">
+          <description>Gets the content xml.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The literal locale. If empty, get the default locale of the application.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The xml file content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the item's id.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The current locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

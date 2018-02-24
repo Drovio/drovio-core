@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="activityLogger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1376128302</datecreated>
+      <daterevised>1392028204</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Activity Logger</title>
+      <description>Logs system activity for later analysis.
+Only important logs!</description>
+      <deprecated>Use DEV\Profiler\log\activityLogger instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="LOG_FOLDER">
+        <description>The inner log folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="void" static="true">
+          <description>Creates a new entry log.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log description.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLogs" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$date" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createFile" returntype="void" static="true">
+          <description>Creates the log file for the day.</description>
+          <parameters>
+            <parameter name="$timestamp" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string" static="true">
+          <description>Gets the log filename for the day.</description>
+          <parameters>
+            <parameter name="$time" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

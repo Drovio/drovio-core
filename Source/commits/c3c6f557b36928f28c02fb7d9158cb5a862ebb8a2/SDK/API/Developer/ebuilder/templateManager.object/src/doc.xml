@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\ebuilder">
+  <class name="templateManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1374478745</datecreated>
+      <daterevised>1387827976</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Template Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="NAME_PREFIX">
+        <description/>
+      </const>
+      <const type="" name="FOLDER_EXT">
+        <description/>
+      </const>
+      <const type="" name="PATH_PROJECT">
+        <description/>
+      </const>
+      <const type="" name="PATH_DEPLOY">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="repositoryPath">
+          <description/>
+        </prop>
+        <prop type="" name="deployPath">
+          <description/>
+        </prop>
+        <prop type="" name="status" static="true">
+          <description/>
+        </prop>
+        <prop type="" name="query" static="true">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getGroupManager" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertToWebsite" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$destination" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTemplate" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createTemplate" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$templateName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$templateDescription" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$templateType" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$templateGroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateTemplateInfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deploy" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteTemplate" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$deployCheck" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTemplates" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$group" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$status" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUserTemplates" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$group" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$status" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllTypes" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="deleteTemplateDbEntry" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getTemplateInfo" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadTemplate" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

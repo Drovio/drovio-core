@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="31170535129593"><title>Update customer company info</title><description></description><access></access><attributes><attr id="is_company"></attr><attr id="cname"></attr><attr id="taxid"></attr><attr id="irs"></attr><attr id="pid"></attr><attr id="cid"></attr></attributes></query>

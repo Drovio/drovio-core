@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="RuntimeException" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362640740</datecreated>
+      <daterevised>1406661150</daterevised>
+      <extends>
+        <object>\ESS\Protocol\debug\RuntimeException</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Runtime Exception</title>
+      <description>Creates a runtime exception and provides the user all the available information (according to debugger level) for reporting the error.</description>
+      <deprecated>Use \ESS\Protocol\debug\RuntimeException instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

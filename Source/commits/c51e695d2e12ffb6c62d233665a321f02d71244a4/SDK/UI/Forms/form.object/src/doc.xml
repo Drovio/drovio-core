@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="form" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>April 18, 2013, 11:07 (EEST)</datecreated>
+      <daterevised>April 18, 2013, 11:07 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Form Factory</title>
+      <description>Usage
+</description>
+      <deprecated>Use \ UI\Forms\formControls\formFactory instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" name="form" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$action" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$method" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$role" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$extra" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="input" returntype="void">
+          <description>Creates a specified type input</description>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$extra" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="button" returntype="void">
+          <description>Create a button (button | submit | reset)</description>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$disabled" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="textarea" returntype="void">
+          <description>Create a textarea input</description>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$disabled" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$readonly" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="label" returntype="void">
+          <description>Create a label</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$for" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$context" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="fieldset" returntype="void">
+          <description>Create a label</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$legend_context" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="select" returntype="void">
+          <description>Create a select list</description>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$multiple" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$options" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="optionGroup" returntype="void">
+          <description>Create a select option group</description>
+          <parameters>
+            <parameter name="$label" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$options" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="option" returntype="void">
+          <description>Create a select option</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$context" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$selected" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$label" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

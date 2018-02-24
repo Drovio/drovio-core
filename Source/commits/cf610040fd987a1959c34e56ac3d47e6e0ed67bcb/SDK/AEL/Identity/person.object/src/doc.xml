@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Identity" namespace="\">
+  <class name="person" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1445586288</datecreated>
+      <daterevised>1445609945</daterevised>
+      <extends>
+        <object>\DRVC\Profile\person</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Identity Person Manager</title>
+      <description>Manages persons for the current team.
+Most of the functionality is referred to the current logged in person.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="person" static="true">
+          <description>Get the person instance.</description>
+          <parameters/>
+          <returndescription>The person instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new person instance for the current team identity.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

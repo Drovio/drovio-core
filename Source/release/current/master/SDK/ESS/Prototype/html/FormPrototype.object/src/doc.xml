@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="FormPrototype" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1362650700</datecreated>
+      <daterevised>1438077197</daterevised>
+      <extends>
+        <object>\UI\Prototype\FormPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Form Builder Prototype</title>
+      <description>It's the prototype for building every form in the system.
+All the form objects must inherit this FormPrototype in order to build the spine of a form well-formed.
+It implements the FormProtocol.</description>
+      <deprecated>Use \UI\Prototype\FormPrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

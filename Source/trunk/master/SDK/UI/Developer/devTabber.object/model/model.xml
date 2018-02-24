@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div id="redWIDE" class="wide preview">
+	<div id="dropPool"/>
+	<div id="WIDETabber" class="tabControl editable">
+		<div class="tabs">
+			<ul>
+				<li class="tabMenuItem editable selected" data-static-nav="">
+					<span class="tabMenuItemText">WIDE::Tab</span>
+					<div class="closeButton"/>
+				</li>
+			</ul>
+		</div>
+		<div class="pages">
+			<div id="aux_tab" class="tabPageContainer editable" data-targetgroupid="pageCollection_WIDETabber"/>
+		</div>
+	</div>
+</div>
+</model>

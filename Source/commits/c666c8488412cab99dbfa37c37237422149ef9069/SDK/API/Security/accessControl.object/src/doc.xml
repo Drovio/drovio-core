@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\">
+  <class name="accessControl" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1362732060</datecreated>
+      <daterevised>1415193499</daterevised>
+      <extends>
+        <object>\API\Platform\accessControl</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Internal Access Control</title>
+      <description>This is the proxy class which is responsible for letting the API execute internal functions and prevent others from executing closed functions and features.</description>
+      <deprecated>Use \API\Platform\accessControl instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

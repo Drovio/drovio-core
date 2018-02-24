@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Literals" namespace="\">
+  <class name="translator" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1405933511</datecreated>
+      <daterevised>1407411571</daterevised>
+      <extends>
+        <object>\DEV\Literals\literalManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Literal Translations Manager</title>
+      <description>System's literal translation engine.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="locale" static="true">
+          <description>The translator's locale</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Gets the initial values for every literal and adds the translations for those that have a translation.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of all translated and non translated literals as 'translated' and 'nonTranslated'.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTranslations" returntype="array" static="true">
+          <description>Get all translations of a given literal.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all translations.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="translate" returntype="boolean" static="true">
+          <description>Create a translation of a literal to the translator's locale.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's translated value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="vote" returntype="boolean" static="true">
+          <description>Vote a literal's translation</description>
+          <parameters>
+            <parameter name="$translation" type="integer" defaultvalue="">
+              <description>The translation id</description>
+            </parameter>
+            <parameter name="$vote" type="mixed" defaultvalue="">
+              <description>The vote value.
+For positive vote, this is set as TRUE.
+For negative vote, this is set as FALSE.
+For removing the vote, this is set as NULL.
+
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="lock" returntype="boolean" static="true">
+          <description>Lock a translated literal and remove all other translations.</description>
+          <parameters>
+            <parameter name="$translation_id" type="integer" defaultvalue="">
+              <description>The translation id to lock to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="wrap" returntype="DOMElement" static="true">
+          <description>Wrap a translatable literal in order to be translated at runtime.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name-id.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The wrapped literal.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

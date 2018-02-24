@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client">
+  <class name="NavigatorProtocol" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362640920</datecreated>
+      <daterevised>1421234511</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Client-sided Navigator Protocol</title>
+      <description>Defines a protocol for the navigation and presentation of elements on the client's browser.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="web" returntype="void" static="true">
+          <description>Adds weblink navigation</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to receive the navigation handler</description>
+            </parameter>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href value</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target value.
+According to W3C, the possible values are:
+- "_blank"
+- "_self"
+- "_parent"
+- "_top"
+- "[framename]"</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="staticNav" returntype="void" static="true">
+          <description>Adds static navigation handler</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to receive the navigation handler</description>
+            </parameter>
+            <parameter name="$ref" type="string" defaultvalue="">
+              <description>The target's id to perform the action</description>
+            </parameter>
+            <parameter name="$targetcontainer" type="string" defaultvalue="">
+              <description>The container's id of the group in which the target resides</description>
+            </parameter>
+            <parameter name="$targetgroup" type="string" defaultvalue="">
+              <description>The group of the items to handle together when performing the action to the target.
+References the data-targetgroupid value</description>
+            </parameter>
+            <parameter name="$navgroup" type="string" defaultvalue="">
+              <description>The group of navigation items, among which the handler element will be selected</description>
+            </parameter>
+            <parameter name="$display" type="string" defaultvalue="">
+              <description>Defines the type of action for the rest items of the group.
+Accepted values:
+- "none" : hides all other items
+- "all" : shows all other items
+- "toggle" : toggles the appearance of the handler item</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="selector" returntype="void" static="true">
+          <description>Adds static navigation group selector (staticNav's targetgroup)</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to receive the selector</description>
+            </parameter>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The name of the group</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

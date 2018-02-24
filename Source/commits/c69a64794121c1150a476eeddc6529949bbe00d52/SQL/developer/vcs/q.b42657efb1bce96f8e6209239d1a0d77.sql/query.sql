@@ -1,0 +1,2 @@
+INSERT INTO VCS_projectCommit (id, project_id, branch_name, parent, time, author_id, summary, description, tags)
+VALUES ('{id}', {pid}, '{branch}', '{parent}', {time}, {author}, '{summary}', '{description}', '{tags}');

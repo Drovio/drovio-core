@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\">
+  <class name="url" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1382514841</datecreated>
+      <daterevised>1414063363</daterevised>
+      <extends>
+        <object>\SYS\Resources\url</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback URL Manager</title>
+      <description>Manages all url resolving for navigation and resources.</description>
+      <deprecated>Use \ESS\Environment\url instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

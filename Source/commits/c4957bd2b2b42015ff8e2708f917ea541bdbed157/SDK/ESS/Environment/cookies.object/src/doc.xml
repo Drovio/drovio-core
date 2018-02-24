@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Environment" namespace="\">
+  <class name="cookies" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1414069434</datecreated>
+      <daterevised>1420204397</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Cookie's Manager</title>
+      <description>This is the system's cookie manager.
+Creates, deletes and reads framework cookies.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" returntype="boolean" static="true">
+          <description>Create a new cookie or update an existing one.
+It uses the php's setcookie function with preset values for domain and paths.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The cookie's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The cookie's value.</description>
+            </parameter>
+            <parameter name="$expiration" type="integer" defaultvalue="">
+              <description>The expiration of the cookie in seconds.
+If set to 0, the cookie will expire at the end of the session.</description>
+            </parameter>
+            <parameter name="$httpOly" type="boolean" defaultvalue="">
+              <description>When TRUE the cookie will be made accessible only through the HTTP protocol.
+This means that the cookie won't be accessible by scripting languages, such as JavaScript.</description>
+            </parameter>
+            <parameter name="$secure" type="boolean" defaultvalue="">
+              <description>Indicates that the cookie should only be transmitted over a secure HTTPS connection from the client.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed" static="true">
+          <description>Get the value of a cookie.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The cookie's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cookie value or NULL if cookie doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a cookie.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The cookie's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

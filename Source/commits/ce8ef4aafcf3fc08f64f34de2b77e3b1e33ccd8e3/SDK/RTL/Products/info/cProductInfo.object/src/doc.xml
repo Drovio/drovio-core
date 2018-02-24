@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\info">
+  <class name="cProductInfo" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1418806095</datecreated>
+      <daterevised>1418918923</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company product info manager</title>
+      <description>Manages product info values for the current company.
+
+NOTE: You must be company manager or product manager to manage data through this class.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="COMPANY_PRODUCT">
+        <description>The company product type.</description>
+      </const>
+      <const type="string" name="GLOBAL_PRODUCT">
+        <description>The global product type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="productID">
+          <description>The product id.</description>
+        </prop>
+        <prop type="string" name="productType">
+          <description>The product type which defines the product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+        <prop type="array" name="productInfo" static="true">
+          <description>Array of all product info at a given time.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the info manager.</description>
+          <parameters>
+            <parameter name="$productID" type="integer" defaultvalue="">
+              <description>The product id.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The product id type.
+Select for company type or global type using the class constants.
+Default is COMPANY_PRODUCT.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean">
+          <description>Add a new product info.
+This functions creates a new product info, with no value.
+
+NOTE:
+To add a company specific info, you must be team admin.
+To add a new generic info you must be product manager.</description>
+          <parameters>
+            <parameter name="$categoryID" type="integer" defaultvalue="">
+              <description>The info category id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The info title.</description>
+            </parameter>
+            <parameter name="$is_bool" type="boolean" defaultvalue="">
+              <description>This defines whether the info should be handled as boolean or not.</description>
+            </parameter>
+            <parameter name="$generic" type="boolean" defaultvalue="">
+              <description>If set to TRUE, this will be a generic category. If FALSE, it will be a company specific category.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Set a product info value for the current product.
+
+NOTE:
+To set a company specific info value, you must be team admin.
+To set a global info value you must be product manager.</description>
+          <parameters>
+            <parameter name="$infoID" type="integer" defaultvalue="">
+              <description>The product info id.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The product info value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed">
+          <description>Get a product info value.</description>
+          <parameters>
+            <parameter name="$infoID" type="mixed" defaultvalue="">
+              <description>The info id to get the value for.
+You can leave empty to get all information about the current product.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all information or the requested info value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array">
+          <description>Get all product info by category.</description>
+          <parameters>
+            <parameter name="$categoryID" type="mixed" defaultvalue="">
+              <description>The category to get info for.
+Leave empty to get all information.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

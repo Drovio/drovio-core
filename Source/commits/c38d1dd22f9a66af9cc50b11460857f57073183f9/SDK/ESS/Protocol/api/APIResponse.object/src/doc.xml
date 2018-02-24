@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\api">
+  <class name="APIResponse" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>6</build>
+      <datecreated>1419000412</datecreated>
+      <daterevised>1434963173</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform API Protocol Handler</title>
+      <description>This is a protocol for formatting all the API responses.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initalizes the headers.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStatus" returntype="void">
+          <description>Set the response header status code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The response status code.
+The default value is 1.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setRedirect" returntype="void">
+          <description>Set a redirect header value for the client.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url to redirect to.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addHeader" returntype="void">
+          <description>Adds a header to the response.</description>
+          <parameters>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>A header context.
+It can be string, number or array.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The header key value.
+If set, the content will be available at the given key, otherwise it will inserted in the array with a numeric key (next array key).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addContent" returntype="void">
+          <description>Adds a response data content to the api response.</description>
+          <parameters>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The response content data.
+It can be string, number or array.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The header key value.
+If set, the content will be available at the given key, otherwise it will inserted in the array with a numeric key (next array key).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getResponse" returntype="string">
+          <description>Returns the API Response in JSON format.</description>
+          <parameters>
+            <parameter name="$allowOrigin" type="string" defaultvalue="">
+              <description>The allow origin header value for the ServerReport response headers.
+If empty, calculate the inner allow origin of the framework (more secure).
+It is wildcard ("*") by default.</description>
+            </parameter>
+            <parameter name="$withCredentials" type="boolean" defaultvalue="">
+              <description>The allow credentials header value for the API response headers.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The JSON response string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setHeaders" returntype="void">
+          <description>Set all the API headers.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

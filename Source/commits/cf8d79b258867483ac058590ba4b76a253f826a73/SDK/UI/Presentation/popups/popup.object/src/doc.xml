@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\popups">
+  <class name="popup" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1371646041</datecreated>
+      <daterevised>1404199438</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback Popup</title>
+      <description>This class builds a simple popup. It extends the system's popup prototype.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="popup">
+          <description>Builds the popup with the given content.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content of the popup.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The popup object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Returns the html server report.</description>
+          <parameters/>
+          <returndescription>The html server report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

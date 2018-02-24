@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\parsers">
+  <class name="jsParser" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1446423473</datecreated>
+      <daterevised>1446423606</daterevised>
+      <extends>
+        <object>\DEV\Tools\codeParser</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Javascript Parser</title>
+      <description>Parses and formats javascript files.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="format" returntype="string" static="true">
+          <description>Formats the given javascript code.
+It is currently deactivated.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The javascript code to be formatted.</description>
+            </parameter>
+            <parameter name="$minify" type="boolean" defaultvalue="">
+              <description>Option to minify the given code.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The formatted js code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="minify" returntype="string" static="true">
+          <description>Minify the given javascript code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The javascript code to be minified.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The javascript code minified</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

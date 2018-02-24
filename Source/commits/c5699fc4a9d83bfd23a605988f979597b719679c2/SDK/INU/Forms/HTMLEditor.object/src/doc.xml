@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Forms" namespace="\">
+  <class name="HTMLEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1410181771</datecreated>
+      <daterevised>1410181771</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use \UI\Developer\editors\HTMLEditor instead.</deprecated>
+    </info>
+    <constants>
+      <const type="" name="HTML_EDITOR">
+        <description/>
+      </const>
+      <const type="" name="HTML_DESIGNER">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getToolsArea" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDesignerToolsArea" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTMLToolbar" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getEditorArea" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$editable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFooterArea" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStylingOptions" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

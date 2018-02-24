@@ -1,0 +1,7 @@
+.uiFormLabel {
+	cursor: pointer;
+	text-transform: capitalize;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}

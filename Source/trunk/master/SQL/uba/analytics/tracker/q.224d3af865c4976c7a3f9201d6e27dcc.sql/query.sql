@@ -1,0 +1,1 @@
+SELECT * FROM `events` WHERE `user_id`='{user_id}'

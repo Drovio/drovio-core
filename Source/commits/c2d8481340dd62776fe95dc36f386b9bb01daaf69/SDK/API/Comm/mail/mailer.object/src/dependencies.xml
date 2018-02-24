@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\API\Platform\importer"></use><use path="\DEV\Profiler\logger"></use><use path="\API\Comm\mail\phpmailer\phpmailer"></use><use path="\API\Comm\mail\phpmailer\POP3"></use><use path="\API\Comm\mail\phpmailer\SMTP"></use></dependencies>

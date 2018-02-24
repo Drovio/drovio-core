@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\modules">
+  <class name="module" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>5</build>
+      <datecreated>1399281006</datecreated>
+      <daterevised>1430399868</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Model Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="mInfo" static="true">
+          <description>All modules information in a single array to work as cache.</description>
+        </prop>
+        <prop type="array" name="mList" static="true">
+          <description>All modules by group id to work as cache.</description>
+        </prop>
+        <prop type="array" name="mScopes" static="true">
+          <description>All module scopes to work as cache.</description>
+        </prop>
+        <prop type="array" name="mStatus" static="true">
+          <description>All module statuses to work as cache.</description>
+        </prop>
+        <prop type="array" name="moduleKeyTypes" static="true">
+          <description>All the security key types for modules. Expands incrementally.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Gets the module's information.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module information in an array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the module's directory name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module's directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="runView" returntype="mixed" static="true">
+          <description>Load a module's view and return the content.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view return value.</returndescription>
+          <throws/>
+          <deprecated>Use loadView() instead.</deprecated>
+        </method>
+        <method name="loadView" returntype="mixed" static="true">
+          <description>Load a module's view and return the content.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view return value.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="object" static="true">
+          <description>Get a module's query as a dbQuery object to be executed by the interDbConnection class.
+It will get the query from tester or from release based on module tester status.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$queryName" type="string" defaultvalue="">
+              <description>The query name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The db query object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasCSS" returntype="boolean" static="true">
+          <description>Gets whether this module has css code.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module has css, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasJS" returntype="boolean" static="true">
+          <description>Gets whether this module has js code.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module has js, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllModules" returntype="array" static="true">
+          <description>Get all modules in the system.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>If set, get all modules in the given group.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all modules with their information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleScopes" returntype="array" static="true">
+          <description>Get all module scopes.</description>
+          <parameters/>
+          <returndescription>An array of all module scopes.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleStatus" returntype="mixed" static="true">
+          <description>Get a specific module's status or get all module statuses.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>If set, get the status of the given module id.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all statuses or an array of the status of the given module.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInnerModules" returntype="array" static="true">
+          <description>Get inner modules of a given module.
+If the module is in tester mode, the inner modules come from the trunk, otherwise from deployed.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to get the inner modules from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all inner module ids.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getKeyTypes" returntype="array" static="true">
+          <description>Get all security key types assigned to this module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to get the key types from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all key type ids.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

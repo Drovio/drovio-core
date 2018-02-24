@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\API\Platform\importer"></use><use path="\API\Platform\engine"></use><use path="\SYS\Resources\pages\page"></use><use path="\UI\Core\RCPage"></use><use path="\ESS\Environment\url"></use><use path="\UI\Html\DOM"></use><use path="\ESS\Protocol\loaders\ModuleLoader"></use><use path="\API\Content\analytics\collectors\pageLoads"></use><use path="\SYS\Comm\db\dbConnection"></use><use path="\API\Model\sql\dbQuery"></use></dependencies>

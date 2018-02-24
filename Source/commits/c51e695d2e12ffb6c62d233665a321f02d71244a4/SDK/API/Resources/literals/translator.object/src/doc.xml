@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="translator" abstract="" namespace="\literals">
+    <info>
+      <version/>
+      <datecreated>1366714860</datecreated>
+      <daterevised>1372764393</daterevised>
+      <extends>\API\Resources\literals\literalManager</extends>
+      <implements/>
+      <throws/>
+      <title>Literal Translator</title>
+      <description>System's literal translation engine.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="locale" static="true">
+          <description>The translator's locale</description>
+        </prop>
+        <prop type="boolean" name="status" static="true">
+          <description>The translator status</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Get the translated values of all literals of a given scope according to translating locale (defined by the user).</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="translate" returntype="mixed" static="true">
+          <description>Create a translation of a literal to the translator's locale.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's translated value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="vote" returntype="mixed" static="true">
+          <description>Vote a literal's translation</description>
+          <parameters>
+            <parameter name="$translation" type="integer" defaultvalue="">
+              <description>The translation id</description>
+            </parameter>
+            <parameter name="$vote" type="mixed" defaultvalue="">
+              <description>The vote value.
+For positive vote, this is set as TRUE.
+For negative vote, this is set as FALSE.
+For removing the vote, this is set as NULL.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="lock" returntype="void" static="true">
+          <description>Lock a translated literal and remove all other translations</description>
+          <parameters>
+            <parameter name="$translation_id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="wrap" returntype="DOMElement" static="true">
+          <description>Wrap a translatable literal in order to be translated on the fly.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The literal's name-id</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="status" returntype="void" static="true">
+          <description>Get the user translator status (if the user is translator or not)</description>
+          <parameters/>
+          <deprecated>Use \API\Profile\translator::status() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

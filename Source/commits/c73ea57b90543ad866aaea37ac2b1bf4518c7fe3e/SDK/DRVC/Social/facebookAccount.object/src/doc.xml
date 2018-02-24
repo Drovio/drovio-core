@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Social" namespace="\">
+  <class name="facebookAccount" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447328276</datecreated>
+      <daterevised>1447328276</daterevised>
+      <extends>
+        <object>\DRVC\Social\externalLoginAccount</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Facebook Account Login</title>
+      <description>Manages facebook login for the identity account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="facebookAccount" name="instance" static="true">
+          <description>The facebookAccount instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="facebookAccount" static="true">
+          <description>Get the facebookAccount instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The facebookAccount instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean">
+          <description>Login via facebook login.
+It creates an account session.</description>
+          <parameters>
+            <parameter name="$parameters" type="array" defaultvalue="">
+              <description>Facebook login parameters.
+Must include:
+- 'code'
+- 'client_id'
+- 'client_secret'
+- 'redirect_url'</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

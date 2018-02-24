@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\globl">
+  <class name="globalProductCodeManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1418819644</datecreated>
+      <daterevised>1420636551</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Global product code manager</title>
+      <description>Manages product codes like EAN, UPC and many more</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="globalProductID">
+          <description>The global product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the manager.</description>
+          <parameters>
+            <parameter name="$productID" type="integer" defaultvalue="">
+              <description>The global product id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean">
+          <description>Add a new product code to this product.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type.
+It references to EAN, UPC and other code types as retrieved from the database.</description>
+            </parameter>
+            <parameter name="$productCode" type="integer" defaultvalue="">
+              <description>The product code.</description>
+            </parameter>
+            <parameter name="$expirationTime" type="integer" defaultvalue="">
+              <description>The duration of the code expiration time in the future.
+Leave empty if this information is not available.
+If empty, the expiration time will be set for the next 3-5 years.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure (the code already exists).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update a product code value.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type.</description>
+            </parameter>
+            <parameter name="$productCode" type="integer" defaultvalue="">
+              <description>The new product code.</description>
+            </parameter>
+            <parameter name="$expirationTime" type="integer" defaultvalue="">
+              <description>The duration of the code expiration time in the future.
+Leave empty if this information is not available.
+If empty, the expiration time will be set for the next 3-5 years.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove an existing product code.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="array">
+          <description>Get all product codes of the given global product.</description>
+          <parameters/>
+          <returndescription>An array of code information, like code, type and product id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCodeTypes" returntype="array" static="true">
+          <description>Get all inventory product code types.</description>
+          <parameters/>
+          <returndescription>An array of all product code types.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addCodeType" returntype="boolean" static="true">
+          <description>Add a new product code type.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The code type title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The code type description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components">
+  <class name="ajaxManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366634340</datecreated>
+      <daterevised>1385109373</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>AJAX Developer Manager</title>
+      <description>Include developer's information.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RELEASE_PATH">
+        <description>The ajax page's release path.</description>
+      </const>
+      <const type="string" name="REPOSITORY_PATH">
+        <description>The root repository folder.</description>
+      </const>
+      <const type="string" name="MAP_PATH">
+        <description>The map root folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPages" returntype="array" static="true">
+          <description>Get all pages in a given directory.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The full directory name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

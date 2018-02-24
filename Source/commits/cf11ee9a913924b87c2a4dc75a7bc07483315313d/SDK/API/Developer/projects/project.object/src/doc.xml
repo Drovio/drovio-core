@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\projects">
+  <class name="project" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387788902</datecreated>
+      <daterevised>1387874292</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Project</title>
+      <description>Manages developer projects, creating, updating and getting the proper information.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new developer project.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project title.</description>
+            </parameter>
+            <parameter name="$category" type="integer" defaultvalue="">
+              <description>The project category id.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>If success, return the project id created. FALSE otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="mixed" static="true">
+          <description>Gets the project information with the given id.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of information if project found, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateBasicInfo" returntype="boolean" static="true">
+          <description>Updates a project's basic information.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id to update.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project's new title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project's new description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateDevInfo" returntype="boolean" static="true">
+          <description>Updates a project's developer information.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id to update.</description>
+            </parameter>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The project's repository.</description>
+            </parameter>
+            <parameter name="$editorSub" type="string" defaultvalue="">
+              <description>The project's editor subdomain.</description>
+            </parameter>
+            <parameter name="$editorPath" type="string" defaultvalue="">
+              <description>The project's editor path in the subdomain.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setType" returntype="boolean" static="true">
+          <description>Sets the project's type.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project's id.</description>
+            </parameter>
+            <parameter name="$type" type="integer" defaultvalue="">
+              <description>The project's new type id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateStatus" returntype="boolean" static="true">
+          <description>Update a project's status.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$status" type="integer" defaultvalue="">
+              <description>The project's new status id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRepository" returntype="string" static="true">
+          <description>Get the project's repository by project id.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project's repository folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

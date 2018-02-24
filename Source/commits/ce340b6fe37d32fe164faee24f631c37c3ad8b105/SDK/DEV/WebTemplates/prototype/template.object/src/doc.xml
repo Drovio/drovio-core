@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\prototype">
+  <class name="template" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1442253630</datecreated>
+      <daterevised>1442253630</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Template Prototype</title>
+      <description>This is a prototype of a website template. It defines the structure of the template and interacts with the files.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index file name.</description>
+      </const>
+      <const type="string" name="PAGES_FOLDER">
+        <description>The pages folder name</description>
+      </const>
+      <const type="string" name="THEMES_FOLDER">
+        <description>The themes folder name</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMParser" name="parser">
+          <description>The xml parser for the template indexing.</description>
+        </prop>
+        <prop type="string" name="templateFolderPath">
+          <description>The template folder path where it resides.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new template prototype instance.</description>
+          <parameters>
+            <parameter name="$templateFolderPath" type="string" defaultvalue="">
+              <description>The template root folder.</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>Whether the path is root relative or absolute.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPages" returntype="array">
+          <description>Get all template pages.</description>
+          <parameters/>
+          <returndescription>An array of all page names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getThemes" returntype="array">
+          <description>Get all template themes.</description>
+          <parameters/>
+          <returndescription>An array of all template theme names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectIndex" returntype="boolean">
+          <description>Add an new object to the template index map.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group (pages or themes etc.)</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type (element tag name).</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.
+The name should not already exist.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is an object with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createStructure" returntype="void">
+          <description>Create the entire template structure.
+This will run only once as long as there is no index file.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createMapFile" returntype="boolean">
+          <description>Create the map index file.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getIndexObjects" returntype="array">
+          <description>Get all index objects for the given group and type.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group (pages or themes etc.)</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type (element tag name).</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all objects by their names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

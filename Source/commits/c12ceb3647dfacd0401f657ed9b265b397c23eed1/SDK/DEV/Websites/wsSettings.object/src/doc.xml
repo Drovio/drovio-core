@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\">
+  <class name="wsSettings" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1410548790</datecreated>
+      <daterevised>1413033716</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Website Settigs / Info manager class</title>
+      <description>Manages the content of the setting.xml file</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="website" name="website">
+          <description>The website object.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The website vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The contructor method</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setMetaKeywords" returntype="boolean">
+          <description>Defines the meta keywords object / tag for the website.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The meta keywords value</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setMetaDescription" returntype="boolean">
+          <description>Defines the meta description object / tag for the website.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The meta description value</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Sets the value of a property given by name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The property name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The property new value.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The property scope, as defined in the settingsManager class.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the file's item id for the vcs.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

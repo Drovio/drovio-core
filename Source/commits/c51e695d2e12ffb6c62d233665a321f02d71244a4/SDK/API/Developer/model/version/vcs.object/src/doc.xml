@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="vcs" abstract="true" namespace="\model\version">
+    <info>
+      <version/>
+      <datecreated>1372845567</datecreated>
+      <daterevised>1372845567</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract Version Control System Class</title>
+      <description>Handles all the version control system's information about an object or a directory.</description>
+      <deprecated>Use \API\Developer\versionControl\ instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="PATH">
+        <description>The version control inner folder</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="name">
+          <description>The object's name</description>
+        </prop>
+        <prop type="string" name="fileType">
+          <description>The object's file type</description>
+        </prop>
+        <prop type="vcsTrunk" name="vcsTrunk">
+          <description>The vcsTrunk manager object</description>
+        </prop>
+        <prop type="vcsBranch" name="vcsBranch">
+          <description>The vcsBranch manager object</description>
+        </prop>
+        <prop type="vcsHistory" name="vcsHistory">
+          <description>The vcshistory manager object</description>
+        </prop>
+        <prop type="vcsProduction" name="vcsProduction">
+          <description>The vcsProduction manager object</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="repository">
+          <description>The repository folder</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="VCS_get_repository" returntype="string">
+          <description>Return the object's repository path</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_create_object" returntype="void">
+          <description>Create a new object</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch where the object will be created</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="VCS_initialize" returntype="void">
+          <description>Initialize Version Control System</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository path</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object's filetype</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_create_structure" returntype="void">
+          <description>Create the inner repository directory structure</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_remove" returntype="void">
+          <description>Delete an object inside the repository</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_removeRepository" returntype="void">
+          <description>Remove a repository</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The repository path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

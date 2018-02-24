@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1758928587"><title>Get username count</title><description>By selecting existing usernames, we check if the username given is unique.</description><access>1</access><attributes><attr id="username"></attr></attributes></query>

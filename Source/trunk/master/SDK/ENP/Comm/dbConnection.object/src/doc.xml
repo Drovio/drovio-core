@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ENP" package="Comm" namespace="\">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1437726297</datecreated>
+      <daterevised>1444391160</daterevised>
+      <extends>
+        <object>\SYS\Comm\db\adbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Drovio Enterprise Database Connection Handler</title>
+      <description>Connects to Drovio enterprise database and executes all the core sql queries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a database instance.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

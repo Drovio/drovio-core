@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\">
+  <class name="modulesProject" abstract="">
+    <info>
+      <version>0.3</version>
+      <build>10</build>
+      <datecreated>1418893487</datecreated>
+      <daterevised>1424269506</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Modules Project</title>
+      <description>It is the modules project class.
+Manages module publishing and analysis.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="PROJECT_ID">
+        <description>The modules project id.</description>
+      </const>
+      <const type="integer" name="PROJECT_TYPE">
+        <description>The modules project type id.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object for the project.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize Modules Project</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Publish the modules project.
+Publish all modules (views and queries) to latest from the given branch.
+Generate sitemap.
+Publish all resources (media and files)</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The module project release version.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source's branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="publishSource" returntype="boolean">
+          <description>Publish all modules (views and queries) to latest from the given branch.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The module project release version.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

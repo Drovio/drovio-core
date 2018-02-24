@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\geoloc">
+  <class name="locale" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366714860</datecreated>
+      <daterevised>1383131792</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Locale Manager</title>
+      <description>Handles all about languages and locales</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="defaultLocale" static="true">
+          <description>The default system locale.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="_default" returntype="string" static="true">
+          <description>Get the default system's locale</description>
+          <parameters/>
+          <deprecated>Use getDefault() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getDefault" returntype="string" static="true">
+          <description>Gets the system's default locale.</description>
+          <parameters/>
+          <returndescription>Returns the default locale.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the current's locale info.</description>
+          <parameters/>
+          <returndescription>An array that contains all the info about the locale, the country and the languace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="active" returntype="array" static="true">
+          <description>Gets all active locale.</description>
+          <parameters/>
+          <returndescription>An array of all active locale</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="available" returntype="array" static="true">
+          <description>Gets all available locale.</description>
+          <parameters/>
+          <returndescription>An array of all available locale.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean" static="true">
+          <description>Set the system's current locale for the user.</description>
+          <parameters>
+            <parameter name="$locale_mixed" type="string" defaultvalue="">
+              <description>The locale mixed as [region]:[locale].</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get" returntype="string" static="true">
+          <description>Get the current system's active locale</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="add" returntype="mixed" static="true">
+          <description>Add a new locale as inactive.</description>
+          <parameters>
+            <parameter name="$language" type="integer" defaultvalue="">
+              <description>The language id</description>
+            </parameter>
+            <parameter name="$country" type="integer" defaultvalue="">
+              <description>The country id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="activate" returntype="mixed" static="true">
+          <description>Activate a locale and set available for users.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to activate.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="deactivate" returntype="void" static="true">
+          <description>Deactivate a locale and remove from user's selection</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to deactivate</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

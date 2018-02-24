@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="accountSettings" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1382014426</datecreated>
+      <daterevised>1382014426</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account Settings Manager</title>
+      <description>Manages the settings of the current account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="SettingsManager" name="settingsManager" static="true">
+          <description>The resource settingsManager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the settings manager.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSettingsValue" returntype="string">
+          <description>Gets the value of an account property.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The settings name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The settings value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setSettingsValue" returntype="void">
+          <description>Sets the account's settings value by name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The settings name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The settings value.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

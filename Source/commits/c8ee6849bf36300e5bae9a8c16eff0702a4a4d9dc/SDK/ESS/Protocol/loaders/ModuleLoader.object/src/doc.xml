@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\loaders">
+  <class name="ModuleLoader" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362649380</datecreated>
+      <daterevised>1389352199</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Loader</title>
+      <description>Loads and executes the module with the given id and action (in case of auxiliary)</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="string" static="true">
+          <description>Loads and executes a given module</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The module execution output.</returndescription>
+          <throws/>
+        </method>
+        <method name="checkKey" returntype="mixed" static="true">
+          <description>Checks the module execution with a condition, providing the key and its prefix.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The key value (usually the project id, or the company id or anything else).</description>
+            </parameter>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The key prefix.
+It varies from service to service.
+It will be provided by an engine.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True is user can execute, the error report output otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getKey" returntype="string" static="true">
+          <description>Gets the key value.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The service prefix for the key.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The key value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The hash key value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="checkAuth" returntype="mixed" static="true">
+          <description>Checks if the user can execute given the access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The access status.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True if user can execute, HTMLPageReport content otherwise.</returndescription>
+          <throws/>
+        </method>
+        <method name="getContent" returntype="mixed" static="true">
+          <description>Executes the content of the module. This is the spot where the server decides
+whether to load from repository or from production. In case of published server, always from production.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to execute.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module to execute</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The module execution content.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="uiMainToolbar">
+	<div class="uiToolbarNav">
+		<div class="loadingBar"/>
+		<div id="domainNav" class="tlbNav leftNav"/>
+		<div id="pageNav" class="tlbNav leftNav"/>
+		<div id="myNav" class="tlbNav rightNav"/>
+	</div>	
+</div>
+</model>

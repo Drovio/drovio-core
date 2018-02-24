@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="dirMapping" abstract="" namespace="\resources">
+    <info>
+      <version/>
+      <datecreated>1380877397</datecreated>
+      <daterevised>1380877397</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>This class is generally deprecated.</deprecated>
+    </info>
+    <constants>
+      <const type="" name="PATH">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get_map" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_mapList" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_folders" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parent" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_files" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parent" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="load_mapFile" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

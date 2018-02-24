@@ -1,0 +1,43 @@
+/*____________________ forms.validator ____________________*/
+.fnppContainer { display:block; position:absolute; z-index:50; }
+.fnppContainer.noShadow { -webkit-box-shadow:none; }
+.fnppContainer ul { list-style: disc; }
+.fnppContainer ul .fnppBullet { list-style-image:url(/Library/Media/images/icons/16x16/fnppBullet.svg); }
+.fnppContainer ul .fnppGreenBullet { list-style-image:url(/Library/Media/images/icons/16x16/fnppGreenBullet.svg); }
+.fnppContainer ul .fnppGreenText { color:#009941; }
+.fnppContainer ul .fnppRedBullet { list-style-image:url(/Library/Media/images/icons/16x16/fnppRedBullet.svg); }
+.fnppContainer ul .fnppRedText { color:#730202; }
+.fnppContainer ul .fnppLineThroughBullet { list-style-image:url(/Library/Media/images/icons/16x16/fnppLineThroughBullet.svg); }
+.fnppContainer ul .fnppLineThroughText { color:rgba(115, 02, 02, 0.3); }
+.fnppContainer ul li span { vertical-align:-1px; }
+.fnppContainer > .uiSysNtf .dtaBody .dtaIcon { display:none; background-image:none; }
+.extra {
+	font-weight:bold;
+}
+.inputInfoIcon {
+	width:24px;
+	height:21px;
+	margin-left:5px;
+	margin-right:10px;
+	display:inline-block;
+	vertical-align:top;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.inputInfoIcon.valid { background-image:url(/Library/Media/images/icons/19x19/success_ico.svg); }
+.inputInfoIcon.invalid { background-image:url(/Library/Media/images/icons/19x19/error_ico.svg); }
+.inputInfoIcon.warning { background-image:url(/Library/Media/images/icons/19x19/warning_ico.svg); }
+.inputInfoIcon.info { background-image:url(/Library/Media/images/icons/19x19/info_ico.svg); }
+.inputInfoIcon.loader { background-image:url(/Library/Media/images/icons/19x19/loader.svg) !important; }
+/* __________ Form Password Meter __________ */
+.passMeter {
+	height:5px;
+	width:102px;
+	background-color:transparent;
+	float:right;
+}
+.passMeter .passMeterBar {
+	height:5px;
+	width:0px;
+}
+

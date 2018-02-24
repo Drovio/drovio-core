@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Content" namespace="\">
+  <class name="MIMEContent" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1419325976</datecreated>
+      <daterevised>1433843062</daterevised>
+      <extends>
+        <object>\ESS\Protocol\reports\MIMEServerReport</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Multipurpose Internet Mail Extensions (MIME) Content Builder</title>
+      <description>Builds a MIME server report and it can be used to download a server file.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="fileName">
+          <description>The filename to download.</description>
+        </prop>
+        <prop type="string" name="fileType">
+          <description>The type of the file. See HTTPResponse.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" returntype="MIMEContent">
+          <description>Prepares the file to be downloaded.</description>
+          <parameters>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The full path of the file to be downloaded.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the file.
+See HTTPResponse constants for a list of file types.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The MIMEContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setFileContents" returntype="MIMEContent">
+          <description>Prepares the file contents to be downloaded.</description>
+          <parameters>
+            <parameter name="$contents" type="mixed" defaultvalue="">
+              <description>The contents to be downloaded.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the contents given.
+See HTTPResponse constants for a list of file types.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The MIMEContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="void">
+          <description>Creates a stream report for downloading the file.</description>
+          <parameters>
+            <parameter name="$suggestedFileName" type="string" defaultvalue="">
+              <description>The suggested file name for downloading the server file.
+Leave empty and it will be the file original name.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$ignore_user_abort" type="boolean" defaultvalue="">
+              <description>Indicator for aborting the running script upon user cancelation.</description>
+            </parameter>
+            <parameter name="$removeFile" type="boolean" defaultvalue="">
+              <description>Set to true to delete the file after downloading.
+If is false by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

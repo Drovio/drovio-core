@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="JSONServerReport" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362741840</datecreated>
+      <daterevised>1406662431</daterevised>
+      <extends>
+        <object>\ESS\Protocol\reports\JSONServerReport</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>JSON Server Report</title>
+      <description>Creates an asynchronous server report in JSON format according to user request.</description>
+      <deprecated>Use \ESS\Protocol\reports\JSONServerReport instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

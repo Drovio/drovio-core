@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\DEV\Version\vcs"></use><use path="\\sdkLibrary"></use><use path="\\sdkPackage"></use><use path="\DEV\Prototype\sourceMap"></use><use path="\API\Platform\importer"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\DEV\Tools\parsers\cssParser"></use><use path="\ESS\Protocol\client\BootLoader"></use><use path="\DEV\Tools\parsers\jsParser"></use><use path="\DEV\Projects\project"></use></dependencies>

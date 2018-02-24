@@ -1,0 +1,29 @@
+/*____________________ UI.Html.HTMLPage ____________________*/
+body {
+	font-family: "Verdana", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size:11px;
+	margin:0px;
+}
+a, a.visited, a:hover {
+	text-decoration:none;
+	outline:none;
+	color: #353535;
+}
+a img {
+	border: none;
+	outline: none;	
+}
+#pageReport {
+	padding: 10px;
+	padding-bottom:0px;
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	z-index: 5;
+	width: 80%;
+}
+#pageReport:empty {
+	display: none;
+	padding:0px;
+}
+#pageContainer { height:100%; }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Layout" namespace="\">
+  <class name="pageLayout" abstract="">
+    <info>
+      <version/>
+      <datecreated>1404460244</datecreated>
+      <daterevised>1404466374</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Page layout manager</title>
+      <description>This is a page layout class object.
+It is responsible for storing a page layout for every category.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FOLDER_EXT">
+        <description>The layout folder extension.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="name">
+          <description>The layout name.</description>
+        </prop>
+        <prop type="string" name="path">
+          <description>The layout full path.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="categoryPath">
+          <description>The layout's category root folder.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the layout.</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The layout category to load the content from.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout name (if any).
+For new layouts, leave this empty.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new layout with the given name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllLayouts" returntype="array">
+          <description>Get all layouts from the given category.</description>
+          <parameters/>
+          <returndescription>An array of layout names in the given category.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStructure" returntype="string">
+          <description>Gets the layout structure html code.</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicates whether it will be returned an xml formatted string or a plain, non whitespace string.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The layout's structure html code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSS" returntype="string">
+          <description>Gets the layout's css code.</description>
+          <parameters/>
+          <returndescription>The layout's css.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSS" returntype="boolean">
+          <description>Updates the layout's css with the given css code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateStructure" returntype="boolean">
+          <description>Save the layout's structure in file</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The layout's new structure code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Removes the given layout from the category completely.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

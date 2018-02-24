@@ -1,0 +1,17 @@
+<h1>Platform importer</h1>
+<p>This class is responsible for importing classes and files in memory during execution. It is connected with the entire SDK and provides access to import all objects, open and not.</p>
+<h2>Examples of use</h2>
+<p>This is how to use importer to import classes in objects.</p>
+<div class="code">
+	<pre>// We do not have to use anything, the class is always available
+
+// Import account class
+importer::import($library = "API", $package = "Profile", $class = "account");
+
+// We usually use the class and use an alias
+use \API\Profile\account;	// (as account)
+
+
+// Do something with the class
+$accountInfo = account::info();</pre>
+</div>

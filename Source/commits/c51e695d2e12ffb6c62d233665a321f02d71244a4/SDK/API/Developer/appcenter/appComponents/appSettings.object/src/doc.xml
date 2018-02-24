@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter\appComponents">
+  <class name="appSettings" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383132997</datecreated>
+      <daterevised>1383467316</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Settings</title>
+      <description>Application Settings Manager</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The settings file type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The application vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the object and calls the parent constructor.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The application vcs manager object.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Sets the value of a property given by name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The property name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The property new value.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The property scope, as defined in the settingsManager class.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getXML" returntype="string">
+          <description>Gets the settings file content.</description>
+          <parameters/>
+          <returndescription>The settings xml file content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the file's item id for the vcs.</description>
+          <parameters/>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

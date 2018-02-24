@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="page" abstract="">
+    <info>
+      <version/>
+      <datecreated>1395651044</datecreated>
+      <daterevised>1404839128</daterevised>
+      <extends>
+        <object>\SYS\Resources\pages\page</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>System Page Manager</title>
+      <description>Manages all platform pages.</description>
+      <deprecated>Use \SYS\Resources\pages\page instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,25 @@
+<h1>Page notifications</h1>
+<p>This class provides a mechanism for displaying page notifications on the bottom left side of the page. It can include an action and a custom callback.</p>
+<p>For now it supports only javascript interface and this is how it is supposed to be used. If there is a notification with the same id, it will return false.</p>
+<div class="code">
+	<pre>// Show a notification
+Function:	show()
+Description:	Show a notification on the page
+Usage:		pageNotification.show(sender, ntf_id, title, actionTitle, actionCallback, disposeCallback);
+Example:
+
+// Add an action callback function
+// This function will be called then the action button is clicked
+var actionCallback = function() {
+	console.log("action callback called");
+}
+
+// Add a dispose callback function
+// This function will be called then the close button is clicked
+var disposeCallback = function() {
+	console.log("dispose callback called");
+}
+
+// Show notification
+pageNotification.show(jq(document), "notification-unique-id", "Notification title", "More Info", actionCallback, disposeCallback);</pre>
+</div>

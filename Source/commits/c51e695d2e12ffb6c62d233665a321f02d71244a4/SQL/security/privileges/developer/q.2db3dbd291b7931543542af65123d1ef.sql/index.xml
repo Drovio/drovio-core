@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="642465987"><title>Check Developer Master Groups</title><description>Check if a group is master for the developer user</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

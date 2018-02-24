@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="31857889724926"><title>Get boss team private applications</title><description>Get all applications that are privately shared with a given team.</description><access></access><attributes><attr id="tid"></attr><attr id="start"></attr><attr id="count"></attr></attributes></query>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\pages">
+  <class name="sPage" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1437125918</datecreated>
+      <daterevised>1437129461</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Simple Website Page</title>
+      <description>This handles simple website pages that are not smart page views.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PAGE_TYPE">
+        <description>The page type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="website" name="website">
+          <description>The website object</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The page name</description>
+        </prop>
+        <prop type="string" name="folder">
+          <description>The page folder. Empty for root pages.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor. Initializes the object's variables.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The page folder.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.
+For creating new page, leave this empty.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new simple website page.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Get the page's contents.</description>
+          <parameters/>
+          <returndescription>The page's contents.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the page's contents.</description>
+          <parameters>
+            <parameter name="$contents" type="string" defaultvalue="">
+              <description>The page's contents.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the page from the website.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the vcs item's id.</description>
+          <parameters/>
+          <returndescription>The item's hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPagePath" returntype="string">
+          <description>Get the page path.</description>
+          <parameters/>
+          <returndescription>The page path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

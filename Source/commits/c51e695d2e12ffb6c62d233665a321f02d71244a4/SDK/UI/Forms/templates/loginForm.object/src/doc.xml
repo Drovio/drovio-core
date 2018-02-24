@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\templates">
+  <class name="loginForm" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1370855810</datecreated>
+      <daterevised>1382098018</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Login Form</title>
+      <description>Create a system login form.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="loginForm">
+          <description>Creates the login form.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id that this form posts to.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module.</description>
+            </parameter>
+            <parameter name="$usernameValue" type="string" defaultvalue="">
+              <description>The username (if its predefined).</description>
+            </parameter>
+            <parameter name="$rememberMe" type="boolean" defaultvalue="">
+              <description>Indicator whether the form will have a checkbox to remember the user.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the loginForm object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

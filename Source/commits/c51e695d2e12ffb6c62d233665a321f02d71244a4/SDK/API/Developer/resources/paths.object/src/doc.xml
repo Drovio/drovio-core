@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\resources">
+  <class name="paths" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1381138366</datecreated>
+      <daterevised>1383993754</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback developer paths.</title>
+      <description>Keeps all the developer paths.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devPath" static="true">
+          <description>The system developer's directory path.</description>
+        </prop>
+        <prop type="string" name="publishPath" static="true">
+          <description>The system developer's resources directory path.</description>
+        </prop>
+        <prop type="string" name="systemData" static="true">
+          <description>The system's dynamic folder data.</description>
+        </prop>
+        <prop type="string" name="profileData" static="true">
+          <description>The account's and company's folder data.</description>
+        </prop>
+        <prop type="string" name="rsrcPath" static="true">
+          <description>The resource folder name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getDevPath" returntype="string" static="true">
+          <description>Gets the system developer's directory path.</description>
+          <parameters/>
+          <returndescription>The directory path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPublishedPath" returntype="string" static="true">
+          <description>Get the published library folder path.</description>
+          <parameters/>
+          <returndescription>The published library path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDevRsrcPath" returntype="string" static="true">
+          <description>Gets the system developer's resources directory path.</description>
+          <parameters/>
+          <returndescription>The directory path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSysDynDataPath" returntype="string" static="true">
+          <description>Gets the system's dynamic data folder path.</description>
+          <parameters/>
+          <returndescription>The dynamic data folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSysDynRsrcPath" returntype="string" static="true">
+          <description>Gets the system's dynamic resources folder path.</description>
+          <parameters/>
+          <returndescription>The dynamic resources folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Platform importer</h1>
+<p>This class is responsible for importing classes and files in memory during execution. It is connected with the entire SDK and provides access to import all objects, open and not.</p>
+<h2>Examples of use</h2>
+<p>This is how to use importer to import classes in objects.</p>
+<div class="code">
+	<pre>// We do not have to use anything, the class is always available
+
+// Import account class
+importer::import($library = "API", $package = "Profile", $class = "account");
+
+// We usually use the class and use an alias
+use \API\Profile\account;	// (as account)
+
+
+// Do something with the class
+$accountInfo = account::info();</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

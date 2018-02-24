@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1212820538"><title>Join user to userGroup</title><description>Join a user primary account to a given userGroup</description><access>1</access><attributes><attr id="user_id"></attr><attr id="groupName"></attr><attr id="company_id"></attr></attributes></query>

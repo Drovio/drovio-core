@@ -1,0 +1,155 @@
+/*____________________ layout.layoutContainer ____________________*/
+.uiLayoutContainer { overflow:auto }
+/*____________________ Borders ____________________*/
+.brds { border:1px solid rgba(166, 166, 166, 1) }
+.brdm { border:1px solid rgba(166, 166, 166, 0.75) }
+.brdl { border:1px solid rgba(166, 166, 166, 0.5) }
+.brdts { border-top:1px solid rgba(166, 166, 166, 1) }
+.brdtm { border-top:1px solid rgba(166, 166, 166, 0.75) }
+.brdtl { border-top:1px solid rgba(166, 166, 166, 0.5) }
+.brdrs { border-right:1px solid rgba(166, 166, 166, 1) }
+.brdrm { border-right:1px solid rgba(166, 166, 166, 0.75) }
+.brdrl { border-right:1px solid rgba(166, 166, 166, 0.5) }
+.brdbs { border-bottom:1px solid rgba(166, 166, 166, 1) }
+.brdbm { border-bottom:1px solid rgba(166, 166, 166, 0.75) }
+.brdbl { border-bottom:1px solid rgba(166, 166, 166, 0.5) }
+.brdls { border-left:1px solid rgba(166, 166, 166, 1) }
+.brdlm { border-left:1px solid rgba(166, 166, 166, 0.75) }
+.brdll { border-left:1px solid rgba(166, 166, 166, 0.5) }
+.brdhs {
+	border-left:1px solid rgba(166, 166, 166, 1);
+	border-right:1px solid rgba(166, 166, 166, 1)
+}
+.brdhm {
+	border-left:1px solid rgba(166, 166, 166, 0.75);
+	border-right:1px solid rgba(166, 166, 166, 0.75)
+}
+.brdhl {
+	border-left:1px solid rgba(166, 166, 166, 0.5);
+	border-right:1px solid rgba(166, 166, 166, 0.5)
+}
+.brdvs {
+	border-top:1px solid rgba(166, 166, 166, 1);
+	border-bottom:1px solid rgba(166, 166, 166, 1);
+}
+.brdvm {
+	border-top:1px solid rgba(166, 166, 166, 0.75);
+	border-bottom:1px solid rgba(166, 166, 166, 0.75);
+}
+.brdvl {
+	border-top:1px solid rgba(166, 166, 166, 0.5);
+	border-bottom:1px solid rgba(166, 166, 166, 0.5)
+}
+/*____________________ Box Sizing ____________________*/
+.bxsb { box-sizing:border-box }
+.bxsc { box-sizing:content-box }
+/*____________________ Padding ____________________*/
+.pds { padding:5px }
+.pdm { padding:10px }
+.pdl { padding:20px }
+.pdts { padding-top:5px }
+.pdtm { padding-top:10px }
+.pdtl { padding-top:20px }
+.pdrs { padding-right:5px }
+.pdrm { padding-right:10px }
+.pdrl { padding-right:20px }
+.pdbs { padding-bottom:5px }
+.pdbm { padding-bottom:10px }
+.pdbl { padding-bottom:20px }
+.pdls { padding-left:5px }
+.pdlm { padding-left:10px }
+.pdll { padding-left:20px }
+.pdhs {
+	padding-left:5px;
+	padding-right:5px
+}
+.pdhm {
+	padding-left:10px;
+	padding-right:10px
+}
+.pdhl {
+	padding-left:20px;
+	padding-right:20px
+}
+.pdvs {
+	padding-top:5px;
+	padding-bottom:5px
+}
+.pdvm {
+	padding-top:10px;
+	padding-bottom:10px
+}
+.pdvl {
+	padding-top:20px;
+	padding-bottom:20px
+}
+/*____________________ Margin ____________________*/
+.mrgs { margin:5px }
+.mrgm { margin:10px }
+.mrgl { margin:20px }
+.mrgts { margin-top:5px }
+.mrgtm { margin-top:10px }
+.mrgtl { margin-top:20px }
+.mrgrs { margin-right:5px }
+.mrgrm { margin-right:10px }
+.mrgrl { margin-right:20px }
+.mrgbs { margin-bottom:5px }
+.mrgbm { margin-bottom:10px }
+.mrgbl { margin-bottom:20px }
+.mrgls { margin-left:5px }
+.mrglm { margin-left:10px }
+.mrgll { margin-left:20px }
+.mrghs {
+	margin-left:5px;
+	margin-right:5px
+}
+.mrghm {
+	margin-left:10px;
+	margin-right:10px
+}
+.mrghl {
+	margin-left:20px;
+	margin-right:20px
+}
+.mrgvs {
+	margin-top:5px;
+	margin-bottom:5px
+}
+.mrgvm {
+	margin-top:10px;
+	margin-bottom:10px
+}
+.mrgvl {
+	margin-top:20px;
+	margin-bottom:20px
+}
+/*____________________ Font Sizing ____________________*/
+.fss { font-size:9px }
+.fsm { font-size:11px }
+.fsl { font-size:13px }
+.fsxl { font-size:16px }
+.fsxxl { font-size:18px }
+/*____________________ Font Weight ____________________*/
+.fwn { font-weight:normal }
+.fwb { font-weight:bold }
+/*____________________ Font Color ____________________*/
+.fcb { color:#333 }
+.fcg { color:gray }
+/*____________________ Text Align ____________________*/
+.txtAleft { text-align:left; }
+.txtAcenter { text-align:center; }
+.txtAright { text-align:right; }
+.txtAjustify { text-align:justify; }
+/*____________________ Positioning ____________________*/
+.pos-absolute { position: absolute !important; }
+.pos-fixed { position:fixed !important; }
+.pos-clear { clear:both !important; }
+.f-left { float:left; }
+.f-right { float:right; }
+.clr-left { clear:left; }
+.clr-right { clear:right; }
+.clr-both { clear:both; }
+/*____________________ Visibility ____________________*/
+.vis-collapsed { visibility:collapse; }
+.vis-hidden { visibility:hidden; }
+.noDisplay { display:none !important; }

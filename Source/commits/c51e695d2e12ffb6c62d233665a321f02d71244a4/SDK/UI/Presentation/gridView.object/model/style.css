@@ -1,0 +1,44 @@
+/*____________________ ui.presentation.gridView ____________________*/
+.gridView {
+	overflow:auto;
+	width:100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.gridView > .gridViewList, .innerCellView {
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+.innerCellView {
+	overflow:auto;
+	clear:both;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.gridCell {
+	float:left;
+	padding:5px;
+	width:100px;
+	height:100px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	
+	border-right:1px solid rgba(166, 166, 166, 0.5);
+	border-bottom:1px solid rgba(166, 166, 166, 0.5);
+}
+.gridCell:last-child {
+	border-right:none;
+}
+.outerCellView:last-child .gridCell {
+	border-bottom:none;
+}
+.cell {
+	padding:2px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="uiToolbar orientH dockT">
+	<div class="tool"/>
+	<div class="separator"/>
+	<div class="tool"/>
+</div>
+</model>

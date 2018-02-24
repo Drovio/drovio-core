@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Interactive" namespace="\forms">
+  <class name="formAutoComplete" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362993540</datecreated>
+      <daterevised>1438011214</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Form Auto Complete</title>
+      <description>Auto completes other inputs based on specific element input values.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="engage" returntype="void" static="true">
+          <description>Makes an element master for auto completing other elements according to input value.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The master element.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The script path from which it will get the data.</description>
+            </parameter>
+            <parameter name="$fill" type="array" defaultvalue="">
+              <description>The set of input elements which will be filled with the new values.</description>
+            </parameter>
+            <parameter name="$hide" type="array" defaultvalue="">
+              <description>The set of input elements which will be hidden</description>
+            </parameter>
+            <parameter name="$populate" type="array" defaultvalue="">
+              <description>The set of input elements which will be populated with new values (select etc)</description>
+            </parameter>
+            <parameter name="$mode" type="string" defaultvalue="">
+              <description>Sets the behavior of the autocomplete elements in case any element changes its value.
+Accepted values:
+- "strict" : Autocomplete breaks on value change
+- "lenient" : Autocomplete preserves on value change</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="engageModule" returntype="void" static="true">
+          <description>Engage the auto suggest engine to a module.
+
+NOTE: This doesn't work when on secure mode!</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element where the controller will be attached.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module view name to load.
+Leave empty for the module default view.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes to pass to the module view.
+It is empty array by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="engageApp" returntype="void" static="true">
+          <description>Engage the auto suggest engine to the current application.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element where the controller will be attached.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application view name to load.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes to pass to the application view.
+It is empty array by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

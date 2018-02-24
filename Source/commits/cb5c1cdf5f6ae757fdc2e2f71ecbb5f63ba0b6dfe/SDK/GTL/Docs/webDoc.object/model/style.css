@@ -1,0 +1,88 @@
+.wDoc {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	overflow: auto;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	color: #5E6570;
+	font-size: 1.1em;
+}
+
+.wDoc h1, .wDoc h2, .wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	color: #555;
+	font-size: initial;
+}
+
+.wDoc h2, .wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	text-indent: 3px;
+	font-weight: normal;
+}
+
+.wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	text-indent: 6px;
+}
+
+.wDoc h1 {
+	font-size: 1.6em;
+	margin: 0.67em 0;
+	font-weight: 600;
+}
+
+.wDoc h2 {
+	font-size: 1.3em;
+	margin: 0.83em 0;
+	font-weight: 600;
+}
+
+.wDoc h3 {
+	font-size: 1.1em;
+	margin: 1em 0;
+	font-weight: 600;
+}
+
+.wDoc h4 {
+	margin: 1.33em 0;
+}
+
+.wDoc h5 {
+	margin: 1.67em 0;
+}
+
+.wDoc .body {
+	overflow: auto;
+}
+
+.wDoc .code {
+	background: #f5f5f5;
+	padding: 10px 15px;
+	overflow: auto;
+	font-size: 1.1em;
+}
+
+.wDoc .code pre {
+	white-space: pre-wrap;
+}
+
+.wDoc p {
+	font-size: 1.1em;
+	line-height: 25px;
+	margin-bottom: 25px;
+	color: #7C858E;
+}
+
+.wDoc a, .wDoc a.visited {
+	color: #ff5252;
+	text-decoration: underline;
+}
+.wDoc .footer {
+	border-top: 1px solid #CCC;
+	overflow: auto;
+	margin-top: 5px;
+}
+
+.wDoc .footer .updated {
+	float: right;
+	color: #777;
+	font-size: 0.9em;
+	font-style: italic;
+}

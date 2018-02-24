@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Projects" namespace="\">
+  <class name="project" abstract="">
+    <info>
+      <version>9.0</version>
+      <build>1</build>
+      <datecreated>1392717877</datecreated>
+      <daterevised>1425480063</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Project</title>
+      <description>Manages developer projects, creating, updating and getting the proper information.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="id">
+          <description>The project id.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The project unique name.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="array" name="projects" static="true">
+          <description>All the projects that the given account is member of.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the project by id or by name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id.
+Leave empty for new project or name initialization.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The project name.
+Leave empty for new project or id initialization.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new developer project.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project title.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The project type.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>If success, return the project id created. FALSE otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjectAccounts" returntype="array" static="true">
+          <description>Get all accounts connected to a project.
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>An array of account id, title and person's first and last name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountProjects" returntype="array" static="true">
+          <description>Get all projects that the current account is member of.</description>
+          <parameters/>
+          <returndescription>An array of all project information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="mixed" static="true">
+          <description>Gets the project information with the given id or name.
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>An array of information if project found, NULL otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getID" returntype="integer">
+          <description>Gets the project id.</description>
+          <parameters/>
+          <returndescription>The project id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean" static="true">
+          <description>Updates a project's basic information.
+
+You must be a member of the project.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project's new title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project's new description.</description>
+            </parameter>
+            <parameter name="$public" type="boolean" defaultvalue="">
+              <description>Whether the project is public or not.
+
+When public, some features will be available as read-only for public/guest users.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setName" returntype="boolean" static="true">
+          <description>Sets the unique project name.
+
+You must be a member of the project.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The project's unique name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRootFolder" returntype="string">
+          <description>Gets the project's roof repository folder
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>The project's root folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRepository" returntype="string" static="true">
+          <description>Get the project's repository folder.
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>The project's repository folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getResourcesFolder" returntype="void">
+          <description>Get the project's resources folder.
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>The project's resources folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Publish common project assets.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version of the project to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publishResources" returntype="boolean">
+          <description>Publishes the resources of the current project to the given folder.
+You can provide a specific inner folder for partial coverage.
+It cleans the publish folder before copying.
+
+You must be a member of the project.</description>
+          <parameters>
+            <parameter name="$publishFolder" type="string" defaultvalue="">
+              <description>The published resource folder.</description>
+            </parameter>
+            <parameter name="$innerFolder" type="string" defaultvalue="">
+              <description>The inner folder of the resources to be published.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPublishedPath" returntype="string" static="true">
+          <description>Get the project's publish folder.
+
+You must be a member of the project.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project's publish folder.</returndescription>
+          <throws/>
+          <deprecated>Use projectLibrary::getPublishedPath() instead.</deprecated>
+        </method>
+        <method name="getReleases" returntype="array">
+          <description>Get all project releases.
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>An array of all releases in descending order according to the release creation date. Each array object contains an array with the available information of every release.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="release" returntype="mixed">
+          <description>Create a project release.
+
+You must be a member of the project or the project must be public.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project release version.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project release title.
+The project title is usually used but changes can be made.</description>
+            </parameter>
+            <parameter name="$changelog" type="string" defaultvalue="">
+              <description>The project release changelog.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The release token on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unrelease" returntype="boolean">
+          <description>Remove a project release from the database.
+The project release must be in status 1, under review. If the release goes to published or rejected status, it cannot be removed.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project release version to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validates whether the logged in account has access to this project.</description>
+          <parameters/>
+          <returndescription>True is account has access, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="array" static="true">
+          <description>Remove a project from the repository.
+The project must have been already deleted from the database.
+
+You must be a member of the project.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadInfo" returntype="void">
+          <description>Load project info from database if project id is not set.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

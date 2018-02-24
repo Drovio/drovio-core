@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Platform" namespace="\">
+  <class name="engine" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363518960</datecreated>
+      <daterevised>1397033851</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform Engine</title>
+      <description>Class responsible for starting and pausing the platform engine.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="start" returntype="void" static="true">
+          <description>Starts debugger, session and user preferences.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="restart" returntype="void" static="true">
+          <description>Restarts the engine. Shutdown and then start again.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="shutdown" returntype="void" static="true">
+          <description>Sets in suspension (with the user's log out or switch account) the system platform.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

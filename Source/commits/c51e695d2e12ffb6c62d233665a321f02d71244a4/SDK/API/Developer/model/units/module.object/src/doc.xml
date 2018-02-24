@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="module" abstract="true" namespace="\model\units">
+    <info>
+      <version/>
+      <datecreated>March 20, 2013, 10:26 (EET)</datecreated>
+      <daterevised>March 20, 2013, 10:26 (EET)</daterevised>
+      <extends>\API\Developer\model\version\vcs</extends>
+      <implements/>
+      <title>Redback Module Structure</title>
+      <description>Handles the basic form of coding in the system.</description>
+      <deprecated>Use \API\Developer\components\moduleObject instead.</deprecated>
+    </info>
+    <constants>
+      <const name="PATH" type="string">
+        <description>The system's exported root path for modules</description>
+      </const>
+      <const name="FILE_TYPE" type="string" class="undefined">
+        <description>The extension file type for vcs.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop name="id" type="integer">
+          <description>The module id</description>
+        </prop>
+        <prop name="title" type="string">
+          <description>The module's title</description>
+        </prop>
+        <prop name="description" type="string">
+          <description>The module's description</description>
+        </prop>
+        <prop name="group_id" type="integer">
+          <description>The module's group</description>
+        </prop>
+        <prop name="vcsDirectory" type="string">
+          <description>The directory path of the module (including group trail)</description>
+        </prop>
+        <prop name="directory" type="string">
+          <description>The exported directory from DOCUMENT_ROOT</description>
+        </prop>
+        <prop name="api_imports" type="array">
+          <description>The list of API Objects imported</description>
+        </prop>
+        <prop name="sdk_imports" type="array">
+          <description>The list of SDK (UI) Objects imported</description>
+        </prop>
+        <prop name="shell_imports" type="array">
+          <description>The list of Shell Objects imported</description>
+        </prop>
+        <prop name="inner" type="array">
+          <description>The list of modules being used by this module</description>
+        </prop>
+        <prop name="source_code" type="string">
+          <description>The module's source code</description>
+        </prop>
+        <prop name="dbc" type="interDbConnection">
+          <description>The database connection manager</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" abstract="true" returntype="mixed">
+          <description>Abstract function for initializing the module or auxiliary</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.
+Initializes the interDbConnection.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_id" returntype="integer">
+          <description>Returns the module's id</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_title" returntype="string">
+          <description>Returns the module's title.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_description" returntype="string">
+          <description>Returns the module's description</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_apiImports" returntype="array">
+          <description>Returns the API objects that this module uses.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_sdkImports" returntype="array">
+          <description>Returns the SDK (UI) objects that this module uses.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_shellImports" returntype="array">
+          <description>Returns the Shell objects that this module uses.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_inner" returntype="array">
+          <description>Returns the modules that this module uses or dependes on.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="set_title" returntype="void">
+          <description>Set the module's title</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The title</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="set_description" returntype="void">
+          <description>Set the module's description</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="set_apiImports" returntype="void">
+          <description>Set the API objects</description>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The API objects</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="set_sdkImports" returntype="void">
+          <description>Set the SDK (UI) objects</description>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The SDK objects</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="set_shellImports" returntype="void">
+          <description>Set the Shell objects</description>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The Shell objects</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="set_inner" returntype="void">
+          <description>Set the inner modules</description>
+          <parameters>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>The inner modules</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads the content of the module and initializes this object</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="void">
+          <description>Commit to HEAD branch</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The commit's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="checkout" returntype="void">
+          <description>Exports the module source code to latest and makes it available for other users.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_sourceCode" returntype="string">
+          <description>Returns the module's source code</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch of the vcs. If empty, take the default branch.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_content" returntype="boolean">
+          <description>Includes and executes the module's source code.</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch from where to execute the code.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="create" abstract="true" returntype="void">
+          <description>Creates a module</description>
+          <parameters>
+            <parameter name="$parent_id" type="integer" defaultvalue="">
+              <description>This is the parent's id.
+For modules, it's the group id.
+For auxiliaries, it's the module id</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The title of the module.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The description of the module</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" abstract="true" returntype="void">
+          <description>Deletes a module</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="update_indexInfo" abstract="true" returntype="void">
+          <description>Update the module's index information</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="initialize_info" returntype="void">
+          <description>Initialize module information</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="load_indexInfo" returntype="void">
+          <description>Loads the module's index information</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the module's contents</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The module's title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The module's description</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The module's source code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch where to perform the update</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="update_sourceCode" returntype="boolean">
+          <description>Update and save the source code of the module</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch where to perform the update</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="_build_imports" returntype="array">
+          <description>Build the source code imports and returns the array</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_indexInfo" returntype="DOMElement">
+          <description>Returns the index info base element</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser to search for the index</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="build_importIndex" returntype="DOMElement">
+          <description>Build the import wrapper</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser to build the element</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name_imports" type="array" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="build_innerIndex" returntype="DOMElement">
+          <description>Builds the inner module's index</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The builder parser</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="build_privateCode" returntype="string">
+          <description>Builds the private section of the module. The headers.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="_get_defaultSourceCode" returntype="string">
+          <description>Get the default source code for an empty module</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="load_databaseInfo" returntype="void">
+          <description>Load Information from database</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="_get_imports" returntype="array">
+          <description>Creates an array of given imports and builds the structure.</description>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The array of imports.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="_load_imports" returntype="array">
+          <description>Loads the imports by name</description>
+          <parameters>
+            <parameter name="$info_parser" type="DOMParser" defaultvalue="">
+              <description>The parser to parse the file</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The base of this object in the index file</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the imports</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_innerContent" returntype="string">
+          <description>Gets and executes (by inclusion) the module's source code</description>
+          <parameters>
+            <parameter name="$trunk" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be executed from the repository or from the latest.</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch from where the module will be executed (if trunk)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

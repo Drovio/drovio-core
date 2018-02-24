@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components">
+  <class name="moduleObject" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363348020</datecreated>
+      <daterevised>1389773439</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Object Instance</title>
+      <description>Manages a module's objects like itself, its auxiliaries and the resources, javascript and css.</description>
+      <deprecated>Use units\modules\module instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="moduleID" class="undefined">
+          <description>The module's id</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void" class="undefined">
+          <description>Constructor method.
+Initializes the module's variables.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createModule" returntype="module">
+          <description>Creates a module and returns an instance of it.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The module's group id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The module's title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The module's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createAuxiliary" returntype="auxiliary">
+          <description>Creates a module auxiliary and returns an instance of it.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The auxiliary's title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The auxiliary's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getModule" returntype="module">
+          <description>Gets an instance of a module or module auxiliary.</description>
+          <parameters>
+            <parameter name="$auxTitle" type="string" defaultvalue="">
+              <description>The auxiliary name. Empty by default.</description>
+            </parameter>
+            <parameter name="$auxSeed" type="string" defaultvalue="">
+              <description>The auxiliary seed. Empty be default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

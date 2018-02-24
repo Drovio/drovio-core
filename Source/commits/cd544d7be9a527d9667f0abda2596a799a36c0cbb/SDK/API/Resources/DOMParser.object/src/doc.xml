@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\">
+  <class name="DOMParser" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362732120</datecreated>
+      <daterevised>1406532982</daterevised>
+      <extends>
+        <object>\ESS\Prototype\DOMPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>DOMParse</title>
+      <description>Class for parsing xml files</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="TYPE_HTML">
+        <description>Describes the annotation of a document (HTML)</description>
+      </const>
+      <const type="string" name="TYPE_XML">
+        <description>Describes the annotation of a document (XML)</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="DOMDocument" name="document">
+          <description>The document of the file being parsed</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="filePath">
+          <description>The filepath used to load the document.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of a DOMParser</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="DOMElement">
+          <description>Creates and returns a DOMElement with the specified tagName and the specified attributes</description>
+          <parameters>
+            <parameter name="$tag" type="string" defaultvalue="">
+              <description>The element's tag</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The content of the element. It can be a string or a DOMElement.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element's id</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The element's class.
+Mostly for html elements</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The DOMElement created.</returndescription>
+          <throws/>
+        </method>
+        <method name="evaluate" returntype="mixed">
+          <description>Evaluate an XPath Query</description>
+          <parameters>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The XPath query to be evaluated</description>
+            </parameter>
+            <parameter name="$context" type="DOMElement" defaultvalue="">
+              <description>The base to act as root for the query</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The NodeList or false.</returndescription>
+          <throws/>
+        </method>
+        <method name="query" returntype="mixed">
+          <description>Evaluate an XPath Query</description>
+          <parameters>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The XPath query to be evaluated</description>
+            </parameter>
+            <parameter name="$context" type="DOMElement" defaultvalue="">
+              <description>The base to act as root for the query</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns a DOMNodeList containing all nodes matching the given XPath expression. An empty DOMNodeList, if XPath expression dont match anything.
+
+Returns FALSE If the expression is malformed or the context is invalid.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="find" returntype="mixed" static="true">
+          <description>Find an element by id</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the element</description>
+            </parameter>
+            <parameter name="$nodeName" type="string" defaultvalue="">
+              <description>The nodename of the element. If not given, it searches all elements (*).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns the node or NULL if the node doesn't exist.</returndescription>
+          <throws/>
+        </method>
+        <method name="comment" returntype="DOMElement">
+          <description>Creates an xml comment tag</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment content</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The comment element.</returndescription>
+          <throws/>
+        </method>
+        <method name="import" returntype="DOMElement">
+          <description>Imports a node to this document.</description>
+          <parameters>
+            <parameter name="$node" type="DOMElement" defaultvalue="">
+              <description>The node to import</description>
+            </parameter>
+            <parameter name="$deep" type="boolean" defaultvalue="">
+              <description>Defines whether all the children of this node will be imported</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The imported node.</returndescription>
+          <throws/>
+        </method>
+        <method name="getHTML" returntype="string">
+          <description>Returns the HTML form of the document</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicates whether to format the output.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The document in html.</returndescription>
+          <throws/>
+        </method>
+        <method name="getXML" returntype="string">
+          <description>Returns the XML form of the document.</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicates whether to format the output.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The document in xml.</returndescription>
+          <throws/>
+        </method>
+        <method name="load" returntype="DOMDocument">
+          <description>Loads an existing xml document.
+This class has an access control functionality and can only be called from within the Red SDK.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The document path</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>Indicates whether the path must be normalized in order to be root relative.</description>
+            </parameter>
+            <parameter name="$preserve" type="boolean" defaultvalue="">
+              <description>Indicates whether the parser will preserve whitespaces during load</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The document loaded.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+        </method>
+        <method name="loadContent" returntype="void">
+          <description>Load source as HTML or XML</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source code</description>
+            </parameter>
+            <parameter name="$contentType" type="string" defaultvalue="">
+              <description>The type of the content given</description>
+            </parameter>
+            <parameter name="$preserve" type="boolean" defaultvalue="">
+              <description>Indicates whether the parser will preserve whitespaces during load.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="save" returntype="boolean">
+          <description>Saves the file in the given filepath.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The filepath</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The filename</description>
+            </parameter>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicator whether the parser will save formated xml or unformatted.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the file loaded before by the load() function.</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicator whether the parser will save formated xml or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

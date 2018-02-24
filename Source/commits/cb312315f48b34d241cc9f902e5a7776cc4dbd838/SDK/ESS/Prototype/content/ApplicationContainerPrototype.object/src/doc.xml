@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\content">
+  <class name="ApplicationContainerPrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1410162321</datecreated>
+      <daterevised>1410162321</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Container</title>
+      <description>Builds an application container element.
+This will be filled asynchronously on content.modified with the module assigned.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="appID">
+          <description>The application id.</description>
+        </prop>
+        <prop type="string" name="viewName">
+          <description>The application's view name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Defines the application id and the view name.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application's view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="ApplicationContainerPrototype">
+          <description>Builds the application container with the given parameters.</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of parameters to be sent to the server by GET method.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Defines whether this container will be invoked to be filled up at startup (on the next content.modified trigger)</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id of the container DOMElement.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>Set the page loading indicator.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The ApplicationContainerPrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

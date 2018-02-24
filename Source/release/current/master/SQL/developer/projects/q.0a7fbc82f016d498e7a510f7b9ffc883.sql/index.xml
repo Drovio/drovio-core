@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="20440751952483"><title>Remove project release</title><description>Remove a project release entry</description><access></access><attributes><attr id="pid"></attr><attr id="version"></attr></attributes></query>

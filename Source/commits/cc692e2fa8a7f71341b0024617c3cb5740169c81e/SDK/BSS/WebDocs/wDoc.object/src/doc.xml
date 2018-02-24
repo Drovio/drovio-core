@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="WebDocs" namespace="\">
+  <class name="wDoc" abstract="">
+    <info>
+      <version>4.0</version>
+      <build>1</build>
+      <datecreated>1409930642</datecreated>
+      <daterevised>1426252793</daterevised>
+      <extends>
+        <object>\GTL\Docs\webDoc</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web Docs Document</title>
+      <description>Manages a Redback web document.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="boolean" name="publicDoc">
+          <description>Whether the document will be loaded from the public folder of the team.</description>
+        </prop>
+        <prop type="integer" name="teamID">
+          <description>The team id (for public folders).</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the document.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The document directory folder.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The document name.
+Leave empty for new documents.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$public" type="boolean" defaultvalue="">
+              <description>Set this to TRUE in order to load a public document from the library's Public folder.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>Only for public folders, use this attribute to specify the team to get the document from.
+
+NOTE: This doesn't work when in secure mode, including applications.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new document in the library.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The document name.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The initial document context.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document context.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the document entry from the library and delete the document.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Get the document body.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale of the document context.
+If empty, it will be the current locale of the user.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The document body context.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRootDirectory" returntype="boolean">
+          <description>Create a new document in the library.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

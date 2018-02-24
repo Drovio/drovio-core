@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Prototype" namespace="\">
+  <class name="sqlObject" abstract="true" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396267710</datecreated>
+      <daterevised>1396267710</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract SQL query object.</title>
+      <description>Manages a smart sql object.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="id">
+          <description>The object id.</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>The query object title.</description>
+        </prop>
+        <prop type="string" name="description">
+          <description>The query object description.</description>
+        </prop>
+        <prop type="array" name="attributes">
+          <description>The query object attributes.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the object's properties</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The existing's object id.
+Leave empty for new objects.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjectFullPath" returntype="string" abstract="true">
+          <description>Abstract function for getting the object's full path from the inherited class.</description>
+          <parameters/>
+          <returndescription>The object's full path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new sql query object.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The query title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The query description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the query object.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The query title.</description>
+            </parameter>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The SQL plain query.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The query description.</description>
+            </parameter>
+            <parameter name="$attributes" type="array" defaultvalue="">
+              <description>An array of attributes for the programmer to use the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="string">
+          <description>Gets the executable query code.</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array of attributes for the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The query sql code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getName" returntype="string" static="true">
+          <description>Gets the query's filename.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The query's filename.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getID" returntype="string">
+          <description>Gets the query id.</description>
+          <parameters/>
+          <returndescription>The query id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTitle" returntype="string">
+          <description>Gets the query title.</description>
+          <parameters/>
+          <returndescription>The query title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDescription" returntype="string">
+          <description>Gets the query description.</description>
+          <parameters/>
+          <returndescription>The query description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAttributes" returntype="array">
+          <description>Gets the query attributes.</description>
+          <parameters/>
+          <returndescription>The query attributes array</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPlainQuery" returntype="void">
+          <description>Gets the plain query without the attributes resolving values.</description>
+          <parameters/>
+          <returndescription>The original sql query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getItemID" returntype="string">
+          <description>Gets the item unique id.</description>
+          <parameters/>
+          <returndescription>The object's unique id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateIndexInfo" returntype="boolean">
+          <description>Updates the query's index information.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadIndexInfo" returntype="void">
+          <description>Loads all the query's information from the index.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

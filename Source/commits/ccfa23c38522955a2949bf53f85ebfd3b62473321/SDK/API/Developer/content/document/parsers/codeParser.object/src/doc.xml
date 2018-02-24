@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\content\document\parsers">
+  <class name="codeParser" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1385812328</datecreated>
+      <daterevised>1385812328</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Generic code parser.</title>
+      <description>Generic functions on coding, clearing and others.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="clear" returntype="string" static="true">
+          <description>Clears a given code from unwanted entities and characters.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code to be cleared.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cleared code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="Reporter" abstract="" namespace="\server">
+    <info>
+      <version/>
+      <datecreated>1362640740</datecreated>
+      <daterevised>1380615979</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback Quick Reporter</title>
+      <description>Reports in a quick and easy way notifications and other messages to the user.</description>
+      <deprecated>This class is generally deprecated.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="DOMElement" static="true">
+          <description>Builds a report message</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the notification.
+Accepted values: All the available notification types.</description>
+            </parameter>
+            <parameter name="$ref" type="string" defaultvalue="">
+              <description>The reference scope of the message</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The message id</description>
+            </parameter>
+            <parameter name="$context" type="DOMElement | string" defaultvalue="">
+              <description>Any extra message the user must read</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="error" returntype="DOMElement" static="true">
+          <description>Returns an error notification with a system specific code for debugging reasons</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The debugger's code</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="statusReport" returntype="DOMElement" static="true">
+          <description>Returns a specific notification (error or success) as a popup according to given flag.</description>
+          <parameters>
+            <parameter name="$status" type="boolean" defaultvalue="">
+              <description>Indicates whether the notification will be error (false) or success (true)</description>
+            </parameter>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The message id for the notification</description>
+            </parameter>
+            <parameter name="$popup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

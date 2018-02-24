@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\UI\Navigation\navigationBar"></use><use path="\UI\Presentation\togglers\accordion"></use><use path="\API\Resources\DOMParser"></use><use path="\API\Platform\importer"></use><use path="\UI\Html\DOM"></use><use path="\DEV\Resources\paths"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\ESS\Prototype\UIObjectPrototype"></use><use path="\UI\Forms\Form"></use></dependencies>

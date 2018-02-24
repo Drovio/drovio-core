@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="extSrcObject" abstract="" namespace="\ebuilder\extComponents">
+    <info>
+      <version/>
+      <datecreated>1372693449</datecreated>
+      <daterevised>1376304717</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="devPath">
+          <description/>
+        </prop>
+        <prop type="" name="codeSection">
+          <description/>
+        </prop>
+        <prop type="" name="imports">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$repositoryRoot" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$srcRepository" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceCode" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceDoc" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceDoc" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$man" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$description" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createIndex" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapFilepath" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="load" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$repositoryRoot" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$srcRepository" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildHeader" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$wrapped" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$importsArray" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

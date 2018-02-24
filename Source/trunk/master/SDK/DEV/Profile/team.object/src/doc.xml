@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profile" namespace="\">
+  <class name="team" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1435922427</datecreated>
+      <daterevised>1435922427</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer team profile</title>
+      <description>Manages developer plans.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="FREE_PLAN">
+        <description>The free plan id.</description>
+      </const>
+      <const type="integer" name="BASIC_PLAN">
+        <description>The basic plan id.</description>
+      </const>
+      <const type="integer" name="PREMIUM_PLAN">
+        <description>The premium plan id.</description>
+      </const>
+      <const type="integer" name="ENTERPRISE_PLAN">
+        <description>The enterprise plan id.</description>
+      </const>
+      <const type="integer" name="MONTH_TYPE">
+        <description>The month type plan.</description>
+      </const>
+      <const type="integer" name="YEAR_TYPE">
+        <description>The year type plan.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getCurrentPlan" returntype="integer" static="true">
+          <description>Get current plan for the given team.</description>
+          <parameters>
+            <parameter name="$live" type="boolean" defaultvalue="">
+              <description>Whether to get the plan live form database or use cache.
+It is FALSE by default.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to get the plan for.
+If empty get the current developer team.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The plan id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setCurrentPlan" returntype="boolean" static="true">
+          <description>Set current plan for the given team.</description>
+          <parameters>
+            <parameter name="$planID" type="integer" defaultvalue="">
+              <description>The plan id.
+See class constants.</description>
+            </parameter>
+            <parameter name="$type" type="integer" defaultvalue="">
+              <description>The plan type
+See class constants.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to set the plan for.
+If empty get the current developer team.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPlanName" returntype="string" static="true">
+          <description>Get the plan short name for the given id.</description>
+          <parameters>
+            <parameter name="$planID" type="integer" defaultvalue="">
+              <description>The plan id to get the name for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The plan name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

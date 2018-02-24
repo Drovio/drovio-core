@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\">
+  <class name="templatePage" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1442523614</datecreated>
+      <daterevised>1442529284</daterevised>
+      <extends>
+        <object>\DEV\WebTemplates\prototype\templatePagePrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Template project page manager.</title>
+      <description>Manages pages for a template project.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="templateProject" name="template">
+          <description>The template project object.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The page name.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create an instance of the page manager.</description>
+          <parameters>
+            <parameter name="$templateID" type="integer" defaultvalue="">
+              <description>The template id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new template page.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateHTML" returntype="boolean">
+          <description>Update the page's html.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The page's html content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSS" returntype="boolean">
+          <description>Update the page's css.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The page's css content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the template's page.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the vcs item's id.</description>
+          <parameters/>
+          <returndescription>The item's hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

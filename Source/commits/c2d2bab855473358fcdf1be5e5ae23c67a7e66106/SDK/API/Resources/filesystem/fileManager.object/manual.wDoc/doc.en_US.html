@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>System file manager</h1>
+<p>You can access any file in the system using this file manager.</p>
+<p>Functions of this class are accessible only through the SDK. Modules and other views cannot have access and create/remove/edit files.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \API\Resources\filesystem\fileManager;
+
+// Create a file
+fileManager::create($file = "/day1/log.txt", $contents = "This is a new log line", $recursive = TRUE);
+
+
+// Append a file
+// Get current contents
+$fileContents = fileManager::get($file = "/day1/log.txt");
+
+// Add more
+$fileContents .= "\n";
+$fileContents .= "This is a second log line";
+
+// Write them to the file
+fileManager::put($file = "/day1/log.txt", $fileContents);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

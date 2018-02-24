@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="sideMenu">
+	<div class="sideMenuHeader">Menu Header</div>
+	<ul>
+		<li class="sideMenuItem">
+			<span class="sideMenuItemContext">MenuItem1</span>
+		</li>
+		<li class="sideMenuItem">
+			<span class="sideMenuItemContext">MenuItem2</span>
+		</li>
+	</ul>
+</div>
+</model>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="34026273008937"><title>Create invitation</title><description></description><access></access><attributes><attr id="email"></attr><attr id="context"></attr><attr id="type"></attr><attr id="group_id"></attr><attr id="token"></attr><attr id="time"></attr></attributes></query>

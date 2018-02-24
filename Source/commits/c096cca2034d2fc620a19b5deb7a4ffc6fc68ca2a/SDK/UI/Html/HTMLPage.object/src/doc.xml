@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTMLPage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363511880</datecreated>
+      <daterevised>1402466725</daterevised>
+      <extends>\ESS\Templates\HTMLPageTemplate</extends>
+      <implements/>
+      <throws/>
+      <title>System HTML Page</title>
+      <description>Builds the spine of an HTML page and sets the events to fill the blanks (modules).</description>
+      <deprecated>Use \UI\Core\RCPage instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

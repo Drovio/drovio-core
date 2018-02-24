@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="clogger" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1432299787</datecreated>
+      <daterevised>1432299787</daterevised>
+      <extends>
+        <object>\DEV\Profiler\logger</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Core logger</title>
+      <description>Logs messages for the core project.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected">
+        <method name="getLogFolder" returntype="string">
+          <description>Get the core project's log folder</description>
+          <parameters/>
+          <returndescription>The project's log folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

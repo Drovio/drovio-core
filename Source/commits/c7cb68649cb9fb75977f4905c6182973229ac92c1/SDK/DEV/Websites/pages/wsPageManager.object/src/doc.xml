@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\pages">
+  <class name="wsPageManager" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1411731499</datecreated>
+      <daterevised>1411981764</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Page Manager</title>
+      <description>This is the class that is responsible for managing the folders and pages of a website.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The website's index file name for pages.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="website" name="website">
+          <description>The website object</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+        <prop type="DOMParser" name="dom_parser">
+          <description>The index's DOMParser object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Creates the library index (if not any) and initializing the library.</description>
+          <parameters>
+            <parameter name="$websiteID" type="integer" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolders" returntype="array">
+          <description>Get an array of all the folders under the given path.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>Whether to return a single compact array with folders separated by "/" or a nested array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all the folders under the given path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFolder" returntype="boolean">
+          <description>Create a new folder in the website navigation.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The name of the folder to create.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeFolder" returntype="boolean">
+          <description>Remove a folder from the website.
+The folder must be empty of pages and other folders.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The folder name to be removed.
+Separate each subfolder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createPage" returntype="boolean">
+          <description>Create a page in the given folder.
+It updates the library index and creates a new page object.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removePage" returntype="boolean">
+          <description>Remove a page from the website.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder of the page.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>The page name to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderPages" returntype="array">
+          <description>Get all pages in a given folder.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all pages.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="updateIndexFile" returntype="void">
+          <description>Updates the pages index file in the vcs.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="void">
+          <description>Initializes the DOMParser object and loads the library index file.
+If the index file doesn't exist, it creates it.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

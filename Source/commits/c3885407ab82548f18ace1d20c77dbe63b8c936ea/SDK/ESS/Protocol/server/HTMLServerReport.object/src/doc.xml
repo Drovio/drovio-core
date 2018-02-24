@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="HTMLServerReport" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362741780</datecreated>
+      <daterevised>1406662434</daterevised>
+      <extends>
+        <object>\ESS\Protocol\reports\HTMLServerReport</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML Server Report</title>
+      <description>Creates an asynchronous server report in HTML format according to user request.</description>
+      <deprecated>Use \ESS\Protocol\reports\HTMLServerReport instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

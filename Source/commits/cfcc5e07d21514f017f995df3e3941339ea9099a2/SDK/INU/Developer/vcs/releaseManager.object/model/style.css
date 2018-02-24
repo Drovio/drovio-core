@@ -1,0 +1,75 @@
+.uiVCSReleaseControl {
+	border: 1px solid rgba(166, 166, 166, 1);
+	width: 600px;
+	background-color: #FFF;
+	overflow: auto;
+}
+.uiVCSReleaseControl .header {
+	border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+	color: rgb(100, 100, 100);
+	margin-bottom: 15px;
+}
+.uiVCSReleaseControl h3.vcsHeader {
+	color: rgb(166, 166, 166);
+	margin: 5px 10px;
+}
+.uiVCSReleaseControl .header h2 {
+	margin: 5px 10px;
+}
+.uiVCSReleaseControl .body {
+	min-height: 20px;
+	padding: 3px;
+}
+.uiVCSReleaseControl .relHeader {
+	color: rgba(166, 166, 166, 1);
+	font-weight: bold;
+}
+.uiVCSReleaseControl .bV {
+	padding: 5px 0px;
+}
+.uiVCSReleaseControl .bV .bVTitle {
+	width: 200px;
+	display: inline-block;
+	text-align: right;
+}
+.uiVCSReleaseControl .bV .rV {
+	color: rgba(166, 166, 166, 1);
+	padding-left: 5px;
+}
+.uiVCSReleaseControl .uiReleaseTitleText {
+	border: 1px solid rgba(166, 166, 166, 1);
+	margin-top: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+}
+.uiVCSReleaseControl .uiReleaseDescText {
+	border: 1px solid rgba(166, 166, 166, 1);
+	margin-top: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	height: 60px;
+	max-height: 100px;
+	resize: vertical;
+}
+.uiVCSReleaseControl #releaseBtn {
+	float: right;
+}
+
+.uiVCSReleaseControl .footer {
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+	background-color: rgba(166, 166, 166, 0.1);
+	padding: 5px;
+	color: rgba(166, 166, 166, 0.5);
+	clear: both;
+}
+.uiVCSReleaseControl .footer .closeBtn {
+	float: right;
+	cursor: pointer;
+	color: rgba(166, 166, 166, 1);
+}

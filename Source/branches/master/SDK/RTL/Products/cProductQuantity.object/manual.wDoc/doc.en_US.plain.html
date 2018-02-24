@@ -1,0 +1,42 @@
+<h1>Retail product quantity manager</h1>
+<p>Product quantity/stock manager is a bit more complicated that the other product information. Products are stored in company branches. The retail SDK allows the company to create storage units where a product can be stored. For example, a product can have 10 items that a ready for sale and 3 items that are customer returns due to failures. Or maybe there are products that should go back to the supplier, those products should appear in the stock but they are not ready for sale.</p>
+<p>We should use this class for read-only and avoid altering information in the database. Product quantities are affected by logistics, invoices and product movement.</p>
+<h2>Reading product quantity</h2>
+<p>As we mentioned before, we can see the product in different storage units. So, we can ready the database accordingly:</p>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProduct;
+use \RTL\Products\cProductQuantity;
+
+// Get product id
+$productID = engine::getVar("id");
+
+// Create a product quantity instance
+$qManager = new cProductQuantity($productID, $branchID);
+
+
+// Get product stock
+// The following line of code will return the total quantity of the product 
+$stock = $qManager-&gt;get($includeStorage = FALSE, $storageID = NULL);
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [branch_id] =&gt; "1_1"
+            [branchName] =&gt; "General Warehouse"
+            [branchAddress] =&gt; "Egnatia road"
+            [quantity] =&gt; "10"
+        )
+    [1] =&gt; Array
+        (
+            [branch_id] =&gt; "1_2"
+            [branchName] =&gt; "Side Warehouse"
+            [branchAddress] =&gt; "Nikis road"
+            [quantity] =&gt; "7"
+        )
+)</pre>
+</div>
+<h2>Getting storage units</h2>
+<p>Branches and storage units can be managed from the company profile manager. See the company profile API and use the classes to access branch information.</p>

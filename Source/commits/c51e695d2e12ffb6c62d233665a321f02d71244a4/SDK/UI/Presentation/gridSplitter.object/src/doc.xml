@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="gridSplitter" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1366633440</datecreated>
+      <daterevised>1368096005</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>Grid Splitter</title>
+      <description>Creates a two-column area with resizable sidebar.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="SIDE_LEFT">
+        <description>Horizontal splitter with left sidebar.</description>
+      </const>
+      <const type="string" name="SIDE_RIGHT">
+        <description>Horizontal splitter with right sidebar.</description>
+      </const>
+      <const type="string" name="SIDE_TOP">
+        <description>Vertical splitter with top sidebar.</description>
+      </const>
+      <const type="string" name="SIDE_BOTTOM">
+        <description>Vertical splitter with bottom sidebar.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="DOMElement" name="mainContent">
+          <description>The mainContent container.</description>
+        </prop>
+        <prop type="DOMElement" name="sideContent">
+          <description>The sidebar container.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="gridSplitter">
+          <description>Builds the entire element.</description>
+          <parameters>
+            <parameter name="$orientation" type="string" defaultvalue="">
+              <description>Defines the orientation of the splitter.
+"horizontal" or "vertical".</description>
+            </parameter>
+            <parameter name="$layout" type="string" defaultvalue="">
+              <description>Defines the position of the sidebar according to the layout. The possible values are the gridSplitter's contants.</description>
+            </parameter>
+            <parameter name="$closed" type="boolean" defaultvalue="">
+              <description>Defines whether the sidebar will be closed on startup.</description>
+            </parameter>
+            <parameter name="$sideTitle" type="string" defaultvalue="">
+              <description>Title of the Expander. Used as tooltip to identify what's in the collapsed side area of the gridSplitter.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="appendToMain" returntype="gridSplitter">
+          <description>Appends a given DOMElement to the mainContent container.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="appendToSide" returntype="gridSplitter">
+          <description>Appends a given DOMElement to the sidebar container.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

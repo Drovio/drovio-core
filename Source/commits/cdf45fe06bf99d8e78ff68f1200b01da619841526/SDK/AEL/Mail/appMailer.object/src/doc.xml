@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Mail" namespace="\">
+  <class name="appMailer" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>6</build>
+      <datecreated>1443135835</datecreated>
+      <daterevised>1445178729</daterevised>
+      <extends>
+        <object>\API\Comm\mail\mailgun</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application mailer</title>
+      <description>Manages to send mails as application user or team user, according to mailer mode.
+
+- For application use, the 'from' field will be:
+user@application_name.apps.drov.io
+- For team use, the 'from' field will be:
+user@team_name.drov.io</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="APP_MODE">
+        <description>The mailer application mode identifier.</description>
+      </const>
+      <const type="string" name="TEAM_MODE">
+        <description>The mailer team mode identifier.</description>
+      </const>
+      <const type="string" name="MODE_APP">
+        <description>@deprecated The mailer application mode identifier.</description>
+      </const>
+      <const type="string" name="MODE_TEAM">
+        <description>@deprecated The mailer team mode identifier.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create an application mailer instance.</description>
+          <parameters>
+            <parameter name="$mode" type="string" defaultvalue="">
+              <description>The mail mode.
+It is in application mode by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setFrom" returntype="appMailer">
+          <description>Sets the from parameter for the application.
+It isn't necessary to be called explicitly. It will be called just before sending the mail.</description>
+          <parameters/>
+          <returndescription>The appMailer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAttachment" returntype="appMailer">
+          <description>Add a file attachment.</description>
+          <parameters>
+            <parameter name="$filePath" type="string" defaultvalue="">
+              <description>The team file path.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>Use the application shared folder or the team's private application folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The appMailer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="send" returntype="mixed">
+          <description>Send the email using the defined settings.</description>
+          <parameters>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail subject.</description>
+            </parameter>
+            <parameter name="$textContent" type="string" defaultvalue="">
+              <description>The mail text content.
+Leave empty to skip.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$htmlContent" type="string" defaultvalue="">
+              <description>The mail html content.
+Leave empty to skip.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mailgun api response.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setFromApplication" returntype="appMailer">
+          <description>Set the mail from value to be from application.</description>
+          <parameters>
+            <parameter name="$fromTitle" type="string" defaultvalue="">
+              <description>The from field title.</description>
+            </parameter>
+            <parameter name="$fromName" type="string" defaultvalue="">
+              <description>The from field name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The appMailer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setFromTeam" returntype="appMailer">
+          <description>Set the mail from value to be from team.</description>
+          <parameters>
+            <parameter name="$fromTitle" type="string" defaultvalue="">
+              <description>The from field title.</description>
+            </parameter>
+            <parameter name="$fromName" type="string" defaultvalue="">
+              <description>The from field name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The appMailer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

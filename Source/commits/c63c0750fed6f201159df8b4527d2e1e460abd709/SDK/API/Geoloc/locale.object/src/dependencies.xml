@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\SYS\Comm\db\dbConnection"></use><use path="\API\Model\sql\dbQuery"></use><use path="\API\Platform\importer"></use><use path="\ESS\Environment\cookies"></use><use path="\ESS\Environment\session"></use><use path="\API\Geoloc\region"></use></dependencies>

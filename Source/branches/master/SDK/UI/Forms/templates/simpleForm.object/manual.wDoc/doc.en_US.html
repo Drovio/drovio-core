@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Simple Form Template</h1>
+<p>Using the Form builder/factory, we have created a simple form template where a developer can easily create a complete form in just a few lines of code having all the features and the behavior a form should have.</p>
+<p>This template includes pairing labels with inputs, make required fields more visible, inserting notes for extended description and ready action controls.</p>
+<p>Lets use the simple form template to nice form:</p>
+<div class="code">
+	<pre>// Create a form, build and append items and inputs
+	
+// Use the form object
+use \UI\Forms\templates\simpleForm; // extends Form
+	
+// Create a form object
+$form = new simpleForm();
+
+// This is a UIObject (extends formItem), so we build
+// We use the chain pattern to get the DOMElement immediately
+// It supports multipart forms with a single parameter
+// We also set to have default buttons, execute and reset
+$threadForm = $form-&gt;build($action = "/forum/createThread.php", $defaultButtons = TRUE, $async = TRUE, $fileUpload = FALSE)-&gt;get();
+
+// Append form to form container
+DOM::append($formContainer, $profileForm);
+
+// Add a hidden input of the forum id
+$input = $form-&gt;getInput($type = "hidden", $name = "fid", $value = $forumID, $class = "", $autofocus = FALSE, $required = FALSE);
+$form-&gt;append($input);
+
+// Thread name
+// Build a form row with label and input
+$input = $form-&gt;getInput($type = "text", $name = "name", $value = "", $class = "", $autofocus = FALSE, $required = TRUE);
+$frow = $form-&gt;buildRow("Thread name", $input, $required = TRUE, $notes = "");
+$form-&gt;append($frow);
+
+// Thready body
+// Build a form row with label and textarea
+$input = $form-&gt;getTextarea($name = "body", $value = "", $class = "");
+$frow = $form-&gt;buildRow("Thread body", $input, $required = FALSE, $notes = "");
+$form-&gt;append($frow);</pre>
+</div>
+<p>On the above example we see the logic behind the creation of a simple form. We can extend those features and add any input or form item on the form any way we want.</p>
+<h3>Javascript interface + examples</h3>
+<p>Simple Form template also provides a javascript interface where a developer can create an entire form with its inputs on the client side dynamically.</p>
+<div class="code">
+	<pre>// Build a row like before
+Function:	buildRow()
+Description:	Build a form row including a label and an input
+Usage:		simpleForm.buildRow(form, title, input, required, notes);
+Example:
+	// Get the form
+	var jqForm = jq("form.userForm");
+	
+	// We can build a row, customize it and then add it to the form
+	// Create form input
+	var input = Form.getInput(jqForm, "text", "lastname", "", "", true, true);
+	
+	// Build the form row
+	var frow = simpleForm.buildRow(jqForm, "Last Name", input, true, "");
+	
+	// Append the row to the form
+	jqForm.append(frow);
+
+
+
+Function:	insertRow()
+Description:	Insert a ready row to the form
+Usage:		simpleForm.insertRow(form, title, input, required, notes);
+Example:
+	// Get the form
+	var jqForm = jq("form.userForm");
+	
+	// Create form input
+	var input = Form.getInput(jqForm, "text", "firstname", "", "", true, true);
+	
+	// Create and insert the form row
+	simpleForm.insertRow(jqForm, "First Name", input, true, "");
+
+
+
+Function:	getRow()
+Description:	Get a row element
+Usage:		simpleForm.getRow();
+
+Function:	getSimpleLabel()
+Description:	Get a label customized for this template
+Usage:		simpleForm.getSimpleLabel(form, title, forInputID);
+
+Function:	getTextarea()
+Description:	Get a form textarea
+Usage:		Form.getTextarea(form, name, value, areaClass, autofocus);
+
+Function:	getNotes()
+Description:	Get form row notes to describe the input
+Usage:		simpleForm.getNotes(notes);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 10:43</p></div>
+</div></body></html>

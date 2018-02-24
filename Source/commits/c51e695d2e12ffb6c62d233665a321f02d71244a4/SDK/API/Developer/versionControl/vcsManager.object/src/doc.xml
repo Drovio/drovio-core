@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\versionControl">
+  <class name="vcsManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363253640</datecreated>
+      <daterevised>1384418693</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Version Control System Manager</title>
+      <description>Manages all the versioning of an object.</description>
+      <deprecated>Use misc\vcs instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="REPOSITORY_PATH" class="undefined">
+        <description>The root directory for repositories</description>
+      </const>
+      <const type="string" name="PATH">
+        <description>The inner repository directory</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="directory">
+          <description>The object's full directory.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The object's name.</description>
+        </prop>
+        <prop type="string" name="fileType">
+          <description>The object's filetype.</description>
+        </prop>
+        <prop type="string" name="repository" class="undefined">
+          <description>The repository root directory.</description>
+        </prop>
+        <prop type="vcsTrunk" name="vcsTrunk">
+          <description>The trunk manager.</description>
+        </prop>
+        <prop type="vcsBranch" name="vcsBranch">
+          <description>The branch manager.</description>
+        </prop>
+        <prop type="vcsHistory" name="vcsHistory">
+          <description>The history manager.</description>
+        </prop>
+        <prop type="string" name="innerFilePath">
+          <description>The object's inner path.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected">
+        <method name="VCS_initialize" returntype="void">
+          <description>Initializes the version control manager and the trunk, branch and history managers.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository root directory</description>
+            </parameter>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The object's directory in the repository</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object's filetype</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The object's inner path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_createStructure" returntype="void">
+          <description>Create all the version control structure, including trunk, branches and history.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_createObject" returntype="string">
+          <description>Creates the object as index in the repository and returns the object's path to inherited class in order to proceed with the creation of files or folders.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_removeObject" returntype="void">
+          <description>Removes the object entirely from the repository.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setWorkingBranch" returntype="void">
+          <description>Sets the working branch for the current user/programmer for the current object.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The object's unique id.</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch to be set as working branch.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getWorkingBranch" returntype="string">
+          <description>Gets the current object's working branch.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The object's unique id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_createRepository" returntype="boolean" static="true" class="undefined">
+          <description>Creates a new repository directory.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository root folder.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The object's folder path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="VCS_removeRepository" returntype="boolean" static="true">
+          <description>Removes an existing repository.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The repository root folder.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The object's folder path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

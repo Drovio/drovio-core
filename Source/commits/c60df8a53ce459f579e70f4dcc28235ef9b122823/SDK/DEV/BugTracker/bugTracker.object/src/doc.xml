@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="BugTracker" namespace="\">
+  <class name="bugTracker" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1404149092</datecreated>
+      <daterevised>1404149092</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Bug Tracker</title>
+      <description>Class to report and review bugs</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The Constructor Method</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

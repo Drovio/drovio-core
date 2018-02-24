@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\">
+  <class name="devTabber" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1410178872</datecreated>
+      <daterevised>1429188984</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Developer's Dynamic Tab Control</title>
+      <description>It creates a virtual 'WIDE - Web Integrated Development Environment'.
+It is a tab-oriented container for handling multiple data objects asynchronously.
+You can load editable tabs with any content you like. It can handle saving data with Redback's codeEditor.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="tabControl" name="tabber">
+          <description>The tabControl manager object.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="devTabber">
+          <description>Builds the developer's dynamic tab control</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The tabber's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The devTabber object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTabber" returntype="tabControl">
+          <description>Ge the tabControl manager object.</description>
+          <parameters/>
+          <returndescription>The tabControl manager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContent" returntype="DOMElement" static="true">
+          <description>Builds a specific tab page for this 'environment'.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the tab page.</description>
+            </parameter>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The page header.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The contents of the tab page.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A tab page ready for this control.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNotificationResult" returntype="string" static="true">
+          <description>Returns a report ready for notification.</description>
+          <parameters>
+            <parameter name="$notification" type="DOMElement" defaultvalue="">
+              <description>The notification element.</description>
+            </parameter>
+            <parameter name="$updateStatus" type="boolean" defaultvalue="">
+              <description>Whether wide updates document status.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The control's id to handle this notification.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report string as the prototype reporting protocol define.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportContent" returntype="string">
+          <description>Returns an HTMLServerReport containing a tab page content.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The page id.</description>
+            </parameter>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The tab header.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content of the tab.</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The control's id to get this content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report string as the prototype reporting protocol define.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

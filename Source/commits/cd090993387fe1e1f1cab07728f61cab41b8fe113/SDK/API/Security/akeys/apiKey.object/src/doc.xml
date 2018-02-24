@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\akeys">
+  <class name="apiKey" abstract="">
+    <info>
+      <version>1.1</version>
+      <build>3</build>
+      <datecreated>1444506808</datecreated>
+      <daterevised>1447515630</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>API key manager</title>
+      <description>Manages all api keys for the platform.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new API key.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The key type id.
+Use apiKeyType to get all the key types.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id for the key.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id for the key.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id for the key.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The created key on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get key information.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key to get info for.</description>
+            </parameter>
+            <parameter name="$includePreviousKey" type="boolean" defaultvalue="">
+              <description>If set to true, it will check if the key is a previous key and match that too.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The key information including the user group id and name that corresponds to (if any).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a given key.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="regenerateKey" returntype="mixed" static="true">
+          <description>Regenerate a key.
+This process will keep the old key for 24 hours.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key to regenerate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new generaged key on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountKeys" returntype="array" static="true">
+          <description>Get all API keys that are connected to the given account.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the keys for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all API keys and their information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamKeys" returntype="array" static="true">
+          <description>Get all API keys connected to a given team for a given account.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to get the keys for.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the keys for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all API keys and their information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjectAccountKeys" returntype="array" static="true">
+          <description>Get all API keys between a given project and an account.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all API keys and their information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjectTeamKeys" returntype="array" static="true">
+          <description>Get all API keys between a given project and a team (public keys, no user group).</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all API keys and their information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateKey" returntype="boolean" static="true">
+          <description>Validate whether a given key with the given parameters exist.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateProjectKey" returntype="boolean" static="true">
+          <description>Validate a given api key with the given project id.
+This function is for the platform API where keys must be matched with the running application.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The api key.
+This key can be of any type including public keys.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to validate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateFullKey" returntype="boolean" static="true">
+          <description>Validate whether a given key of a specific type with the given parameters exists.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key.</description>
+            </parameter>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The API key type id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateType" returntype="boolean" static="true">
+          <description>Validate whether there is any key of the given type and the given parameters.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The API key type id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateGroup" returntype="boolean" static="true">
+          <description>Validate whether the given account id is part of the given group id on the given team or project with an existing key.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id to validate.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateGroupName" returntype="boolean" static="true">
+          <description>Validate whether the given account id is part of the given group name on the given team or project with an existing key.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name to validate the account for.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="generateKey" returntype="string" static="true">
+          <description>Generate a key.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The key prefix.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The key value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The generated key.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

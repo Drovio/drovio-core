@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="tabControl preview">
+	<div class="tabs">
+		<ul>
+			<li class="tabMenuItem">
+				<span class="tabMenuItemText">Simple Tab Item</span>
+				<div class="closeButton"/>
+			</li>
+			<li class="tabMenuItem selected">
+				<span class="tabMenuItemText">Selected Tab Item</span>
+				<div class="closeButton"/>
+			</li>
+			<li class="tabMenuItem editable">
+				<span class="tabMenuItemText">Editable Tab Item</span>
+				<div class="closeButton"/>
+			</li>
+		</ul>
+	</div>
+	<div class="pages">
+		<p>Here is the pages' content</p>
+	</div>
+</div>
+</model>

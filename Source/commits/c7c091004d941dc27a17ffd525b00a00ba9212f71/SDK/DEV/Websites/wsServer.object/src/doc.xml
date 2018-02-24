@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\">
+  <class name="wsServer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1412359743</datecreated>
+      <daterevised>1412359743</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Server</title>
+      <description>A class to manage website's server.xml file. That file keeps all the required information for the various the user has configure to use with the website project</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The class contructor method</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

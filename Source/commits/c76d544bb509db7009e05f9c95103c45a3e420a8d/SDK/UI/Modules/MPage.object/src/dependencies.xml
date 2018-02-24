@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\UI\Core\components\toolbar\toolbarItem"></use><use path="\API\Platform\importer"></use><use path="\UI\Html\DOM"></use><use path="\UI\Core\components\RTRibbon"></use><use path="\UI\Html\HTML"></use><use path="\UI\Core\components\RNavToolbar"></use><use path="\UI\Core\RCPage"></use><use path="\UI\Modules\MContent"></use></dependencies>

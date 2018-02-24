@@ -1,0 +1,28 @@
+/*____________________ ui.presentation.accordion ____________________*/
+.accordion {
+}
+
+.accordion .slices {
+	margin:0px;
+	padding:0px;
+}
+.accordion .slice {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	background-color:#FFF;
+	border:1px solid rgba(166, 166, 166, 0.7);
+	border-bottom: none;
+}
+.accordion .slice:last-child {
+	border-bottom:1px solid rgba(166, 166, 166, 0.7);
+}
+.accordion .sliceHeader {
+	background-color:rgba(166, 166, 166, 0.3);
+	padding:4px 8px;
+	cursor:pointer;
+}
+.accordion .sliceHeader.selected {
+	border-bottom:1px solid rgba(166, 166, 166, 0.4);
+}
+

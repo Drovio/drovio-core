@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Projects" namespace="\">
+  <class name="projectLibrary" abstract="">
+    <info>
+      <version>5.0</version>
+      <build>1</build>
+      <datecreated>1409061300</datecreated>
+      <daterevised>1432375651</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Project Library Manager</title>
+      <description>Manages the applications in the generic library (paths, tokens etc.)</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPublishedPath" returntype="string" static="true">
+          <description>Get the project's publish library folder path.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The published folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjectReleaseInfo" returntype="array" static="true">
+          <description>Get project release info for a given version.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all project release information including project information (title, description) and owner team name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLastProjectVersion" returntype="string" static="true">
+          <description>Get the project's last published version by the time created.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project version string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjectIconUrl" returntype="mixed" static="true">
+          <description>Get the project's icon url according to the given version.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$projectVersion" type="string" defaultvalue="">
+              <description>The project version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the icon url or NULL if the project doesn't have an icon.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

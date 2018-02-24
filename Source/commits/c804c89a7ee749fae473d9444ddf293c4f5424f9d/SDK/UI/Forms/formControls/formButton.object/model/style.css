@@ -1,0 +1,36 @@
+.uiFormButton {
+	background: linear-gradient(#FEFEFE, #f0f0f0);
+	border: 1px solid #58585B;
+	border-color: #cdced0 #c5c6c8 #b6b7b9;
+	color: #545454;
+	padding: 3px 10px;
+	line-height: 16px;
+	cursor: pointer;
+	margin: 2px;
+	width: auto;
+	text-transform: capitalize;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.uiFormButton.positive {
+	background: linear-gradient(#BBE2B1, #B1DAA1);
+	border: 1px solid #43B549;
+	color:#545454;
+}
+.uiFormButton.positive:hover {
+	border: 1px solid #43B549;
+}
+.uiFormButton:hover {
+	background-color:#EEE;
+	border:1px solid rgba(100, 100, 100, 0.5);
+}
+.uiFormButton.disabled, .uiFormButton.positive.disabled {
+	background: linear-gradient(#DADADA, #D1D2D3);
+	border-color: #cdced0 #c5c6c8 #b6b7b9;
+	cursor:default;
+	color:#848484;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}

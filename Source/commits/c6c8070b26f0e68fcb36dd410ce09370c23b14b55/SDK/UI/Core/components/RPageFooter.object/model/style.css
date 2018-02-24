@@ -1,0 +1,39 @@
+.uiMainFooter {
+	overflow: auto;
+	max-width: 1200px;
+	margin: auto;
+	padding: 8px 8px 30px;
+	color: #555459;
+	box-sizing: border-box;
+}
+
+.uiMainFooter .lContainer {
+	float: left;
+}
+
+.uiMainFooter .rContainer {
+	float: right;
+}
+
+.uiMainFooter .lContainer .logo {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.uiMainFooter a {
+	font-weight: normal;
+	display: inline-block;
+}
+
+.uiMainFooter a:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+	.uiMainFooter .lContainer,
+	.uiMainFooter .rContainer {
+		float: none;
+		text-align: center;
+		margin: 8px 0px;
+	}
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\apps">
+  <class name="application" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1417790297</datecreated>
+      <daterevised>1421142773</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Model Manager</title>
+      <description>Provides na interface for some basic functionality for applications.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getTeamApplicationPath" returntype="mixed" static="true">
+          <description>Get the application service path inside the team folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountApplicationPath" returntype="mixed" static="true">
+          <description>Get the application service path inside the account folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getServiceName" returntype="string" static="true">
+          <description>Get the application folder name as a service.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application service folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

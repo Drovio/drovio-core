@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\\accountSession"></use><use path="\DRVC\Comm\dbConnection"></use><use path="\API\Model\sql\dbQuery"></use><use path="\API\Platform\importer"></use><use path="\DRVC\Profile\account"></use><use path="\API\Geoloc\geoIP"></use><use path="\API\Platform\engine"></use></dependencies>

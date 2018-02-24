@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\">
+  <class name="tabControl" abstract="">
+    <info>
+      <version>1.1</version>
+      <build>3</build>
+      <datecreated>1366976866</datecreated>
+      <daterevised>1431529548</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Tab Control</title>
+      <description>This is a tab control ui object.
+It positions tabs on the top of the control.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="strint" name="id">
+          <description>The control's id.</description>
+        </prop>
+        <prop type="MenuPrototype" name="menu">
+          <description>The menu prototype used to build the tab menu.</description>
+        </prop>
+        <prop type="DOMElement" name="pages">
+          <description>The tab's pages container.</description>
+        </prop>
+        <prop type="boolean" name="editable">
+          <description>Defines whether the user can close (remove) tabs.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes object variables.</description>
+          <parameters>
+            <parameter name="$editable" type="boolean" defaultvalue="">
+              <description>Defines whether the user can close (remove) a tab.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="tabControl">
+          <description>Builds the tab control.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The control's id.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Defines whether the tab menu will have 100% width (and the tabs will stretch).
+It is FALSE by default.</description>
+            </parameter>
+            <parameter name="$withBorder" type="boolean" defaultvalue="">
+              <description>Defines whether the tab control will have visual border.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The tabControl object.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertTab" returntype="tabControl">
+          <description>Inserts a new tab.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the tab.</description>
+            </parameter>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>The header of the menu tab.
+It can be a string or a DOMElement.</description>
+            </parameter>
+            <parameter name="$page" type="DOMElement" defaultvalue="">
+              <description>The page content.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Defines whether the tab menu item will be trigger focus upon insert.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The tabControl object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getTabberContainer" returntype="array">
+          <description>Gets the needed items to insert to the tabber through javascript.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the tab.</description>
+            </parameter>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>The header of the menu tab.
+It can be a string or a DOMElement.</description>
+            </parameter>
+            <parameter name="$page" type="DOMElement" defaultvalue="">
+              <description>The page content.</description>
+            </parameter>
+            <parameter name="$navID" type="string" defaultvalue="">
+              <description>The navigation id for the menu navigation.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Defines whether the tab menu item will be trigger focus upon insert.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns an array of the needed items for the tabber. It contains:
+['menuItem']: the menu item to go into the menu bar
+['tabPage']: the page to insert into the page pool.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getTabberPage" returntype="DOMElement">
+          <description>Builds and returns the page body of a tab.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The tab's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The page's content.</description>
+            </parameter>
+            <parameter name="$navID" type="string" defaultvalue="">
+              <description>The navigation id for the menu navigation.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Defines whether this page will be visible or not.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The page element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getTabberMenuItem" returntype="DOMElement">
+          <description>Creates and returns a tab menu item.</description>
+          <parameters>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>The header of the menu tab.
+String or DOMElement (span).</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Defines whether the tab menu item will be trigger focus upon insert.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The menu item element.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

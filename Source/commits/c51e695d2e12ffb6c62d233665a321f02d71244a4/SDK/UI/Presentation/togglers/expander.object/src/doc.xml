@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="expander" abstract="" namespace="\togglers">
+    <info>
+      <version/>
+      <datecreated>1371039566</datecreated>
+      <daterevised>1371039590</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Expander</title>
+      <description>Builds an Expander object. It consists of a miniature, an expansion, and the toggling switch. 
+By clicking the switch, the miniature and the expansion swap "displays".</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="miniature">
+          <description>The miniature holder of the expander.</description>
+        </prop>
+        <prop type="DOMElement" name="expansion">
+          <description>The expansion holder of the expander.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="DOMElement">
+          <description>Builds the expander's structure and returns the object for further manipulation.</description>
+          <parameters>
+            <parameter name="$miniature" type="DOMElement" defaultvalue="">
+              <description>An element to be appended in the miniature part of the expander.</description>
+            </parameter>
+            <parameter name="$expansion" type="DOMElement" defaultvalue="">
+              <description>An element to be appended in the expansion part of the expander.</description>
+            </parameter>
+            <parameter name="$expanded" type="boolean" defaultvalue="">
+              <description>The initial state of the expander. Default is minified.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The expander object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="appendToMiniature" returntype="DOMElement">
+          <description>Appends an element to the miniature section</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The expander</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="appendToExpansion" returntype="DOMElement">
+          <description>Appends an element to the expansion section</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The expander</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

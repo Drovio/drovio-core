@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\frames">
+  <class name="dialogFrame" abstract="">
+    <info>
+      <version>4.1</version>
+      <build>2</build>
+      <datecreated>1368619397</datecreated>
+      <daterevised>1432202511</daterevised>
+      <extends>
+        <object>\UI\Presentation\frames\windowFrame</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Window Dialog Frame</title>
+      <description>Creates a dialog frame popup to display content to the user and perform an action.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="TYPE_OK_CANCEL">
+        <description>OK/Cancel dialog buttons.</description>
+      </const>
+      <const type="string" name="TYPE_YES_NO">
+        <description>Yes/No dialog buttons.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="formFactory" name="formFactory">
+          <description>A formFactory object for building the form input objects.</description>
+        </prop>
+        <prop type="DOMElement" name="formContent">
+          <description>The form container that contains the form inputs.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="dialogFrame">
+          <description>Builds the frame along with the form action.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The dialog's title.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The form action to post the dialog to.
+Leave empty in order to engage with module or application protocol.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$background" type="boolean" defaultvalue="">
+              <description>Defines whether the dialog popup will have a background.
+It is TRUE by default, as a dialog.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The dialog buttons type.
+Use class constants to define an OK/Cancel or Yes/No type.
+Default type is OK/Cancel.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The dialogFrame object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getFormFactory" returntype="formFactory">
+          <description>Get the frame's form factory object.</description>
+          <parameters/>
+          <returndescription>The form factory object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFormID" returntype="string">
+          <description>Get the dialog's form id.</description>
+          <parameters/>
+          <returndescription>The form id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="engageModule" returntype="dialogFrame">
+          <description>Engage this frame to post to a given module view.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to post to.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name to post to.
+If empty, gets the default module view.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The dialogFrame object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="engageApp" returntype="void">
+          <description>Engage this dialog frame to post to a given view of the current application.</description>
+          <parameters>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The app's view name to post to.
+If empty, gets the default app view.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The dialogFrame object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="append" returntype="dialogFrame">
+          <description>Appends a given element to the dialogFrame form container.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The dialogFrame object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getFrame" returntype="string">
+          <description>Returns the server report containing the frame popup.</description>
+          <parameters>
+            <parameter name="$requiredFormNotes" type="boolean" defaultvalue="">
+              <description>If set to true and there are required input fields, a note for required fields will be inserted in the form.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The server's frame report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildControls" returntype="void">
+          <description>Builds the dialog controls.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The dialog buttons type.
+Use class constants to define an OK/Cancel or Yes/No type.
+Default type is OK/Cancel.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

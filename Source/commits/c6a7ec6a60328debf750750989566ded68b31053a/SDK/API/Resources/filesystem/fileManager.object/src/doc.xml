@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\filesystem">
+  <class name="fileManager" abstract="">
+    <info>
+      <version>1.2</version>
+      <build>1</build>
+      <datecreated>1365062640</datecreated>
+      <daterevised>1418209334</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>File Manager</title>
+      <description>System's file manager.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Creates a new text file.
+This function has access control, and it can be executed only from the SDK.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The file path.</description>
+            </parameter>
+            <parameter name="$contents" type="string" defaultvalue="">
+              <description>The text file contents.</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>Indicates whether the file will create the path's folders if don't exist.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a file.
+This function has access control, and it can be executed only from the SDK.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The file path</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="get" returntype="string" static="true">
+          <description>Returns the contents of a given file.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The file path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The file contents or NULL if the file does not exist.</returndescription>
+          <throws/>
+        </method>
+        <method name="put" returntype="boolean" static="true">
+          <description>Puts contents to the given file.
+This function has access control, and it can be executed only from the SDK.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The file path.</description>
+            </parameter>
+            <parameter name="$contents" type="string" defaultvalue="">
+              <description>The contents to be written.</description>
+            </parameter>
+            <parameter name="$flags" type="integer" defaultvalue="">
+              <description>The value of flags can be any combination of the file_put_contents flags, joined with the binary OR (|) operator.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="copy" returntype="boolean" static="true">
+          <description>Copies a file.
+This function has access control, and it can be executed only from the SDK.</description>
+          <parameters>
+            <parameter name="$from_file" type="string" defaultvalue="">
+              <description>The source file path.</description>
+            </parameter>
+            <parameter name="$to_file" type="string" defaultvalue="">
+              <description>The destination file path.</description>
+            </parameter>
+            <parameter name="$preventOverwrite" type="boolean" defaultvalue="">
+              <description>If set to TRUE the destination file will not be overwritten.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="move" returntype="boolean" static="true">
+          <description>Moves a file.
+This function has access control, and it can be executed only from the SDK.</description>
+          <parameters>
+            <parameter name="$from_file" type="string" defaultvalue="">
+              <description>The source file path.</description>
+            </parameter>
+            <parameter name="$to_file" type="string" defaultvalue="">
+              <description>The destination file path.</description>
+            </parameter>
+            <parameter name="$preventOverwrite" type="boolean" defaultvalue="">
+              <description>If set to TRUE the destination file will not be overwritten.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSize" returntype="mixed" static="true">
+          <description>Returns the size of a file, or FALSE in case of an error.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The path to the file.</description>
+            </parameter>
+            <parameter name="$formated" type="boolean" defaultvalue="">
+              <description>If set to TRUE, then the size will be formatted.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The file size, formated [not in bytes] or not [in bytes], or FALSE in case of an error.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateName" returntype="boolean" static="true">
+          <description>Check if the given name contains one of the following characters and thus it is not valid
+Char list: \ / ? % * : | " &amp;lt; &amp;gt;</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The file name to check</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE if the name is valid FALSE if it is invalid</returndescription>
+          <throws/>
+          <deprecated>Use \API\Resources\filesystem\directory::validate() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="formatBytes" returntype="integer" static="true">
+          <description>Takes and formats a size in bytes.</description>
+          <parameters>
+            <parameter name="$bytes" type="integer" defaultvalue="">
+              <description>The size in bytes</description>
+            </parameter>
+            <parameter name="$precision" type="integer" defaultvalue="">
+              <description>The precision of the rounded sizes in digits.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The size formated in the highest value possible.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

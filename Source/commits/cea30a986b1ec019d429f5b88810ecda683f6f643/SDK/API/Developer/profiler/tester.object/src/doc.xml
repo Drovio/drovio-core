@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="tester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1364471100</datecreated>
+      <daterevised>1387537681</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Tester Profile</title>
+      <description>Manages all the testing configuration.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="void" static="true">
+          <description>Activate the tester mode.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="deactivate" returntype="void" static="true">
+          <description>Deactivate the tester mode.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Get the tester mode status.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="activatePackage" returntype="boolean" static="true">
+          <description>Activate the tester mode for a given package.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="deactivatePackage" returntype="boolean" static="true">
+          <description>Deactivate the tester mode for a given package.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="packageStatus" returntype="boolean" static="true">
+          <description>Get the tester mode status for a given package.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackages" returntype="array" static="true">
+          <description>Get all the active packages for the tester mode.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setPackages" returntype="boolean" static="true">
+          <description>Set all the active packages for the tester mode.</description>
+          <parameters>
+            <parameter name="$packages" type="array" defaultvalue="">
+              <description>The list of packages to be set.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTrunk" returntype="string" static="true">
+          <description>Gets the user's trunk folder file. This is used for file editing testing.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use \API\Profile\tester::getTrunk() instead.</deprecated>
+        </method>
+        <method name="activateModules" returntype="void" static="true">
+          <description>Activate the tester mode for modules.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivateModules" returntype="void" static="true">
+          <description>Deactivate the tester mode for modules.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ModulesStatus" returntype="boolean" static="true">
+          <description>Gets the module tester status.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activateSQL" returntype="void" static="true">
+          <description>Activate the tester mode for SQL.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivateSQL" returntype="void" static="true">
+          <description>Deactivate the tester mode for SQL.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SQLStatus" returntype="void" static="true">
+          <description>Gets the SQL tester status.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activateAjax" returntype="void" static="true">
+          <description>Activate the tester mode for ajax.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivateAjax" returntype="void" static="true">
+          <description>Deactivate the tester mode for ajax.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AjaxStatus" returntype="boolean" static="true">
+          <description>Gets the ajax tester status.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

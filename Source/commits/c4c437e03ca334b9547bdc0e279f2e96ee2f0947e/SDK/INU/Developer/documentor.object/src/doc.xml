@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="documentor" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1366977207</datecreated>
+      <daterevised>1372405395</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Documentor</title>
+      <description>Handles the documentation process of the classes.</description>
+      <deprecated>Use \INU\Developer\documentation\classDocumentor instead</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

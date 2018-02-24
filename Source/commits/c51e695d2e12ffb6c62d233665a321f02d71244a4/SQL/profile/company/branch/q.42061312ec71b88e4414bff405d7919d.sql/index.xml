@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1959769076"><title>Create Branch</title><description>Create a company branch</description><access>1</access><attributes><attr id="cid"></attr><attr id="name"></attr><attr id="description"></attr></attributes></query>

@@ -1,0 +1,26 @@
+<h1>Generic UI navigation bar</h1>
+<p>This navigation bar extends the toolbar behavior and builds a horizontal toolbar (on the top or on the bottom)</p>
+<div class="code">
+	<pre>// Create a toolbar and insert it into a container
+	
+// Use the class
+use \UI\Navigation\navigationBar;
+
+// Create the container
+$container = DOM::create("div", "", "", "sidebar_container");
+DOM::append($body, $container);
+
+// Create the navbar
+$navb = new navigationBar();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+// We set the parent as element to perform the proper changes to the css
+$navBar = $navb->build($dock = navigationBar::TOP, $container, $id = "", $class = "")->get();
+DOM::append($container, $navBar);
+
+
+// After we insert the navigation bar, we can append tools
+$tool = DOM::create("div", "", "", "nav_tool delete");
+$navb->insertTool($tool);</pre>
+</div>

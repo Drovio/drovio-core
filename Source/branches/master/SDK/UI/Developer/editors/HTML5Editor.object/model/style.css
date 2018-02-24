@@ -1,0 +1,26 @@
+.html5Editor {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.html5Editor .htmlPreviewContainer, .html5Editor .htmlCodePanel, .html5Editor .previewPanel {
+	height: 100%;
+	outline: none;
+	overflow: auto;
+}
+
+.html5Editor .htmlTool {
+	display: block;
+	height: 100%;
+	background: url('%{media}/UI/htmlEditor/toolSprite.svg') no-repeat center;
+	background-size: cover;
+	background-position: 0px 0px;
+	opacity: 0.7;
+}
+
+.html5Editor .htmlTool:hover {
+	opacity: 1;
+}

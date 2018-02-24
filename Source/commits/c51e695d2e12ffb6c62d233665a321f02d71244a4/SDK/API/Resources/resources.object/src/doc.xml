@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="resources" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>April 23, 2013, 14:03 (EEST)</datecreated>
+      <daterevised>April 23, 2013, 14:04 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Resource Manager/Helper</title>
+      <description>Handles some basic file resources of the system. It includes the resource paths.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PATH">
+        <description>The resources' path</description>
+      </const>
+      <const type="string" name="DEV_PATH">
+        <description>The developer's resources path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="baseDirectory">
+          <description>The base directory for indexing files</description>
+        </prop>
+        <prop type="string" name="contentTypes">
+          <description>The content file types supported</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$domain" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$contents" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="save" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$contents" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="create_group" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="remove_group" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="get_path" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_groupPath" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_baseDirectory" returntype="void">
+          <description/>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_contentType" returntype="void">
+          <description/>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

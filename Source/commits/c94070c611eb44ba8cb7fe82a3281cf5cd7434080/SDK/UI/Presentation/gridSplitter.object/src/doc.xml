@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\">
+  <class name="gridSplitter" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>6</build>
+      <datecreated>1366633440</datecreated>
+      <daterevised>1444912845</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Grid Splitter</title>
+      <description>Creates a two-column area with resizable sidebar.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="SIDE_LEFT">
+        <description>Horizontal splitter with left sidebar.</description>
+      </const>
+      <const type="string" name="SIDE_RIGHT">
+        <description>Horizontal splitter with right sidebar.</description>
+      </const>
+      <const type="string" name="SIDE_TOP">
+        <description>Vertical splitter with top sidebar.</description>
+      </const>
+      <const type="string" name="SIDE_BOTTOM">
+        <description>Vertical splitter with bottom sidebar.</description>
+      </const>
+      <const type="string" name="ORIENT_HOZ">
+        <description>Horizontal splitter orientation</description>
+      </const>
+      <const type="string" name="ORIENT_VER">
+        <description>Vertical splitter orientation</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="DOMElement" name="mainContent">
+          <description>The mainContent content container.</description>
+        </prop>
+        <prop type="DOMElement" name="sideContent">
+          <description>The sidebar content container.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="sideDimension">
+          <description>The dimension of the "side space" of the grid splitter</description>
+        </prop>
+        <prop type="string" name="orientation">
+          <description>Grid splitter orientantion</description>
+        </prop>
+        <prop type="DOMElement" name="side">
+          <description>The "side space" container.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="gridSplitter">
+          <description>Builds the entire element.</description>
+          <parameters>
+            <parameter name="$orientation" type="string" defaultvalue="">
+              <description>Defines the orientation of the splitter.
+"horizontal" or "vertical".</description>
+            </parameter>
+            <parameter name="$layout" type="string" defaultvalue="">
+              <description>Defines the position of the sidebar according to the layout. The possible values are the gridSplitter's contants.</description>
+            </parameter>
+            <parameter name="$closed" type="boolean" defaultvalue="">
+              <description>Defines whether the sidebar will be closed on startup.</description>
+            </parameter>
+            <parameter name="$sideTitle" type="string" defaultvalue="">
+              <description>Title of the Expander. Used as tooltip to identify what's in the collapsed side area of the gridSplitter.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The gridSplitter object.</returndescription>
+          <throws/>
+        </method>
+        <method name="setSideDimension" returntype="void">
+          <description>Set the dimension of the "side space" according to the input</description>
+          <parameters>
+            <parameter name="$dimension" type="string" defaultvalue="">
+              <description>The dimension of the "side space" in css like format (eg 54px or 20%)</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="appendToMain" returntype="gridSplitter">
+          <description>Appends a given DOMElement to the mainContent container.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The gridSplitter object.</returndescription>
+          <throws/>
+        </method>
+        <method name="appendToSide" returntype="gridSplitter">
+          <description>Appends a given DOMElement to the sidebar container.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The gridSplitter object.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

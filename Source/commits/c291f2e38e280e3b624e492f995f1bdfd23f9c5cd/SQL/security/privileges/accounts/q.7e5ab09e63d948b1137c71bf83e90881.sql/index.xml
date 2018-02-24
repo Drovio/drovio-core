@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="2085666253"><title>Get account userGroups</title><description>Gets all the userGroups that the given account is member of.</description><access></access><attributes><attr id="id"></attr></attributes></query>

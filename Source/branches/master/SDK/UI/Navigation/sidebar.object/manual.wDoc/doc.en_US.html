@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Generic UI sidebar</h1>
+<p>This sidebar extends the toolbar behavior and builds a vertical toolbar (on a side, left or right)</p>
+<div class="code">
+	<pre>// Create a toolbar and insert it into a container
+	
+// Use the class
+use \UI\Navigation\sidebar;
+
+// Create the container
+$container = DOM::create("div", "", "", "sidebar_container");
+DOM::append($body, $container);
+
+// Create the sidebar
+$sideb = new sidebar();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+// We set the parent as element to perform the proper changes to the css
+$sideNav = $sideb-&gt;build($dock = sidebar::LEFT, $container, $id = "", $class = "")-&gt;get();
+DOM::append($container, $sideNav);
+
+
+// After we insert the sidebar, we can append tools
+$tool = DOM::create("div", "", "", "side_tool save");
+$sideb-&gt;insertTool($tool);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 17:02</p></div>
+</div></body></html>

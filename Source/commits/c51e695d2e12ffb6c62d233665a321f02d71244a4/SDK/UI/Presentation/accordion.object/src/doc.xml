@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="accordion" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1371033307</datecreated>
+      <daterevised>1371033307</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Presentation\togglers\accordion instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="" name="slices">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="" name="id">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize</description>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_container" returntype="void">
+          <description>Creates the accordion and returns the DOMElement</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_slice" returntype="void">
+          <description>Adds a slice to the body of the accordion</description>
+          <parameters>
+            <parameter name="$ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$header" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="_get_slice" returntype="void">
+          <description>Creates a slice</description>
+          <parameters>
+            <parameter name="$ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$header" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_get_sliceHeader" returntype="void">
+          <description>Creates the header of the slice</description>
+          <parameters>
+            <parameter name="$ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$header" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_get_sliceContent" returntype="void">
+          <description>Creates the content of the slice</description>
+          <parameters>
+            <parameter name="$ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

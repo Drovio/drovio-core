@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="personAccount" abstract="" namespace="\person">
+    <info>
+      <version/>
+      <datecreated>1366362780</datecreated>
+      <daterevised>1375266297</daterevised>
+      <extends>\API\Profile\AccountManager</extends>
+      <implements/>
+      <throws/>
+      <title>Person Account Manager</title>
+      <description>Manages all the person's account settings.</description>
+      <deprecated>Use \API\Profile\AccountManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the account folder settings.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

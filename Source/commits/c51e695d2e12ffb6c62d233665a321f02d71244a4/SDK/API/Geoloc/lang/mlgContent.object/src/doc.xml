@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="mlgContent" namespace="">
+    <info>
+      <version/>
+      <datecreated/>
+      <daterevised/>
+      <extends>
+        <object>\API\Geoloc\lang\literalManager</object>
+      </extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \API\Resources\literals\literal and \API\Resources\literals\moduleLiteral instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get_literal" static="true" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$wrapped" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Resources\literals\literal::get() instead.</deprecated>
+        </method>
+        <method name="get_moduleLiteral" static="true" returntype="void">
+          <description>_____ Get the value of a given Literal_id from the given type of Literals (Dynamic) (and the given locale - if not set, get current) _____//</description>
+          <parameters>
+            <parameter name="$moduleID" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$wrapped" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Resources\literals\moduleLiteral::get() instead.</deprecated>
+        </method>
+        <method name="get_moduleLiterals" static="true" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$moduleID" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Resources\literals\moduleLiteral::get() instead.</deprecated>
+        </method>
+        <method name="set_moduleLiterals" static="true" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$module_id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$reset" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Resources\literals\moduleLiteral::set() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="_wrap" returntype="void">
+          <description>Retrives the message from the defined directory</description>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content_value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Resources\literals\literal::wrap() instead.</deprecated>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

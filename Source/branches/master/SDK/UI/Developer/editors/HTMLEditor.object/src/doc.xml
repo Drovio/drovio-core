@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="HTMLEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1437046436</datecreated>
+      <daterevised>1437046436</daterevised>
+      <extends>
+        <object>\UI\Developer\editors\HTML5Editor</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML Editor</title>
+      <description/>
+      <deprecated>USe \UI\Developer\editors\HTML5Editor instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,29 @@
+<h1>Platform iFrame Object</h1>
+<p>HTMLFrame allowed the creation of an iFrame and load content internally. You can use this class from PHP and from JS.</p>
+<h3>PHP Examples</h3>
+<div class="code">
+	<pre>// HTMLFrame creator
+	
+// Use class
+use \UI\Content\HTMLFrame;
+
+// Create a frame
+$frame = new HTMLFrame();
+
+// This is a UIObject, so we build
+// We use the chain pattern to get the DOMElement immediately
+$frameElement = $frame->build($src = "/path/to/frame/content.php", $name = "frame_name", $id = "frame_id", $class = "frame_class", $sandbox = array())->get();
+
+// Append frame to a container
+DOM::append($container, $frameElement);</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>HTMLFrame also provides a javascript interface where a developer can create frames on the client side dynamically.</p>
+<div class="code">
+	<pre>// Create a frame in a single line
+// HTMLFrame.create(src, name, id, frameClass, sandbox);
+var frame = HTMLFrame.create("/path/to/frame/content.php", "frame_name", "frame_id", "frame_class", null);
+
+// Append to frame container
+jq(".frameContainer").append(frame);</pre>
+</div>

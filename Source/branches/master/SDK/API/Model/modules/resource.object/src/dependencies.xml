@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\DEV\Modules\modulesProject"></use><use path="\API\Platform\importer"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\DEV\Modules\test\mrsrcTester"></use><use path="\DEV\Resources\paths"></use><use path="\ESS\Environment\url"></use><use path="\DEV\Projects\projectLibrary"></use></dependencies>

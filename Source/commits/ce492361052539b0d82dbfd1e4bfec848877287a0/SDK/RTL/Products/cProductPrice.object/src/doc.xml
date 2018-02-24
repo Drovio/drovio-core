@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProductPrice" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1418655249</datecreated>
+      <daterevised>1418655249</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company Product Price Manager</title>
+      <description>Sets, gets and removes product prices.
+To be used only by product managers.
+Changing product prices will have immediate effect everywhere.
+
+All prices are saved without any taxes or VATs.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="companyProductID">
+          <description>The company relative product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company product.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The company product id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPrices" returntype="array">
+          <description>Get all product prices for the active company.</description>
+          <parameters/>
+          <returndescription>An array of all prices, including the tax rate and the price type title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setPrice" returntype="boolean">
+          <description>Set a price for the current product.</description>
+          <parameters>
+            <parameter name="$priceType" type="integer" defaultvalue="">
+              <description>The price type as it fetched from the getPriceTypes() function.</description>
+            </parameter>
+            <parameter name="$price" type="float" defaultvalue="">
+              <description>The product price.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removePrice" returntype="boolean">
+          <description>Remove a price from the current product.</description>
+          <parameters>
+            <parameter name="$priceType" type="integer" defaultvalue="">
+              <description>The price type to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTaxRate" returntype="boolean">
+          <description>Set the tax rate id for the current product.</description>
+          <parameters>
+            <parameter name="$taxRate" type="integer" defaultvalue="">
+              <description>The tax rate id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPriceTypes" returntype="array" static="true">
+          <description>Get all company price types, including global types.</description>
+          <parameters/>
+          <returndescription>An array of all price types.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Identity" namespace="\">
+  <class name="SocialLoginManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447418978</datecreated>
+      <daterevised>1447418978</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Social Login Manager</title>
+      <description>Handles all social login for an application using the identity API.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="facebookLogin" returntype="boolean" static="true">
+          <description>Login via facebook login.
+It creates an account session.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The facebook authorization code to get the access token.</description>
+            </parameter>
+            <parameter name="$clientID" type="string" defaultvalue="">
+              <description>The facebook client id.</description>
+            </parameter>
+            <parameter name="$clientSecret" type="string" defaultvalue="">
+              <description>The facebook client secret.</description>
+            </parameter>
+            <parameter name="$redirectURI" type="string" defaultvalue="">
+              <description>The facebook redirect_uri parameter.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

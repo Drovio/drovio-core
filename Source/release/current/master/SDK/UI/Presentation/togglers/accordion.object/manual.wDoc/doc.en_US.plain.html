@@ -1,0 +1,28 @@
+<h1>Accordion</h1>
+<p>An accordion is a set of togglers build together side-by-side. The accordion has a functionality of closing all other togglers when a specific toggler opens.</p>
+<div class="code">
+	<pre>// Create an accordion and add togglers
+	
+// Use the class
+use \UI\Presentation\togglers\accordion;
+
+// Create an accordion object
+$accordion = new accordion();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$accObject = $accordion->build($id = "accrd_id")->get();
+
+// Append to body
+DOM::append($body, $accObject);
+
+
+// We can insert slices at will, the accordion uses inner togglers
+$title = "User Information";
+$userInfo = DOM::create("div", "", "", "userInfoContainer");
+$accordion->addSlice($id = "user_info", $title, $userInfo, $selected = FALSE);
+
+$title = "Security Settings";
+$securitySettings = DOM::create("div", "", "", "securitySettings");
+$accordion->addSlice($id = "security_settings", $title, $securitySettings, $selected = FALSE);</pre>
+</div>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1962970958"><title>Get managed accounts</title><description>Get all managed accounts of a given account</description><access></access><attributes><attr id="parent"></attr></attributes></query>

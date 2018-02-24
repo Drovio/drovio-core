@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\test">
+  <class name="appTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396858737</datecreated>
+      <daterevised>1396858737</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Tester</title>
+      <description>Manages the application tester environment.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

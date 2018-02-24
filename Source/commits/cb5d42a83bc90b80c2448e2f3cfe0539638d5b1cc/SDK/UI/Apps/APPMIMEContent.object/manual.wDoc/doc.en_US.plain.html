@@ -1,0 +1,19 @@
+<h1>Application MIME Async Content Builder</h1>
+<p>This class extends the MIMEContent interface to enable connection to application files. It allows to download application files in account or in team mode.</p>
+<div class="code">
+	<pre>// Building a custom MIME content
+	
+// Use the class
+use \UI\Apps\APPMIMEContent;
+
+// Create the object
+$mimeContent = new APPMIMEContent();
+
+
+// Set the application relative file to be downloaded
+$mimeContent-&gt;set("/reports/daily_report.txt", $type = APPMIMEContent::CONTENT_APP_STREAM, $mode =&nbsp;APPMIMEContent::TEAM_MODE);
+
+
+// Get the report immediately to download the file
+return $mimeContent-&gt;getReport($suggestedFileName = "", $ignore_user_abort = FALSE, $removeFile = FALSE);</pre>
+</div>

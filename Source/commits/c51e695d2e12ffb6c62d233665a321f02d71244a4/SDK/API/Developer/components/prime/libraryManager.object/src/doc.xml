@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime">
+  <class name="libraryManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1368880423</datecreated>
+      <daterevised>1385538417</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Library Manager</title>
+      <description>Handles all operations with developer's library.</description>
+      <deprecated>Use \API\Developer\components\prime\indexing\libraryIndex instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="repositoryRoot">
+          <description>The root repository path.</description>
+        </prop>
+        <prop type="string" name="repository">
+          <description>The inner repository path.</description>
+        </prop>
+        <prop type="string" name="releaseFolder">
+          <description>The release folder path for the library.</description>
+        </prop>
+        <prop type="string" name="domain">
+          <description>The library's domain.</description>
+        </prop>
+        <prop type="string" name="libName">
+          <description>The library name (for editing).</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method. Initialies the library name (for editing).</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new library.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getList" returntype="array" static="true">
+          <description>Returns a list of all libraries in the given domain.</description>
+          <parameters/>
+          <deprecated>Use \API\Developer\components\prime\indexing\libraryIndex::getList() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getLibraryObjects" returntype="array">
+          <description>Returns a list of all objects in the developer's library.</description>
+          <parameters/>
+          <deprecated>Use \API\Developer\components\prime\indexing\libraryIndex::getLibraryObjects() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReleaseLibraryObjects" returntype="array">
+          <description>Returns a list of all released objects in the library.</description>
+          <parameters/>
+          <deprecated>Use \API\Developer\components\prime\indexing\libraryIndex::getReleaseLibraryObjects() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackageList" returntype="array">
+          <description>Returns a list of all the packages in the given library.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name. If not given, gets for all libraries.</description>
+            </parameter>
+            <parameter name="$fullNames" type="boolean" defaultvalue="">
+              <description>Indicates full names or nested arrays.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Developer\components\prime\indexing\libraryIndex::getPackageList() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="setRepository" returntype="void">
+          <description>Sets the repository folders for this library.</description>
+          <parameters>
+            <parameter name="$root" type="string" defaultvalue="">
+              <description>The repository root folder.</description>
+            </parameter>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The inner repository folder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setReleaseFolder" returntype="void">
+          <description>Sets the release folder for this library.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The release folder path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setDomain" returntype="void">
+          <description>Sets the domain of the library.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The library domain.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

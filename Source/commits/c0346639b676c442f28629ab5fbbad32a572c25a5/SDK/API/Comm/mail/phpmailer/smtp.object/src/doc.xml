@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\mail\phpmailer">
+  <class name="SMTP" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1404734643</datecreated>
+      <daterevised>1415616317</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>PHP RFC821 SMTP client</title>
+      <description>Implements all the RFC 821 SMTP commands except TURN which will always return a not implemented error.
+SMTP also provides some utility methods for sending mail to an SMTP server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public">
+        <prop type="integer" name="SMTP_PORT">
+          <description>SMTP server port</description>
+        </prop>
+        <prop type="string" name="CRLF">
+          <description>SMTP reply line ending (don't change)</description>
+        </prop>
+        <prop type="boolean" name="do_verp">
+          <description>Sets VERP use on/off (default is off)</description>
+        </prop>
+        <prop type="integer" name="Timeout">
+          <description>Sets the SMTP timeout value for reads, in seconds</description>
+        </prop>
+        <prop type="integer" name="Timelimit">
+          <description>Sets the SMTP timelimit value for reads, in seconds</description>
+        </prop>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="resource" name="smtp_conn">
+          <description>The socket to the server</description>
+        </prop>
+        <prop type="string" name="error">
+          <description>Error message, if any, for the last call</description>
+        </prop>
+        <prop type="string" name="helo_rply">
+          <description>The reply the server sent to us for HELO</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the class so that the data is in a known state.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Connect" returntype="void">
+          <description>Connect to the server specified on the port specified.
+If the port is not specified use the default SMTP_PORT.
+If tval is specified then a connection will try and be established with the server for that number of seconds.
+If tval is not specified the default is 30 seconds to try on the connection.</description>
+          <parameters>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The host of the server.</description>
+            </parameter>
+            <parameter name="$port" type="integer" defaultvalue="">
+              <description>The server port to use.</description>
+            </parameter>
+            <parameter name="$tval" type="integer" defaultvalue="">
+              <description>Timeout seconds to give up trying.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="StartTLS" returntype="boolean">
+          <description>Initiate a TLS communication with the server.
+
+SMTP CODE 220 Ready to start TLS
+SMTP CODE 501 Syntax error (no parameters allowed)
+SMTP CODE 454 TLS not available due to temporary reason</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Authenticate" returntype="boolean">
+          <description>Performs SMTP authentication.
+Must be run after running the Hello() method.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+            <parameter name="$authtype" type="string" defaultvalue="">
+              <description>The authentication type. Can be:
+'PLAIN',
+'LOGIN',
+'NTLM'.
+It is 'LOGIN' by default.</description>
+            </parameter>
+            <parameter name="$realm" type="string" defaultvalue="">
+              <description>For NTLM type.</description>
+            </parameter>
+            <parameter name="$workstation" type="string" defaultvalue="">
+              <description>For NTLM type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if successfully authenticated, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Connected" returntype="boolean">
+          <description>Checks if class is connected to a server.</description>
+          <parameters/>
+          <returndescription>True if connected to a server, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Close" returntype="void">
+          <description>Closes the socket and cleans up the state of the class.
+It is not considered good to use this function without first trying to use QUIT.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Data" returntype="boolean">
+          <description>Issues a data command and sends the msg_data to the server finializing the mail transaction.
+$msg_data is the message that is to be send with the headers.
+Each header needs to be on a single line followed by a &amp;lt;CRLF&amp;gt; with the message headers and the message body being seperated by and additional &amp;lt;CRLF&amp;gt;.
+
+Implements rfc 821: DATA &amp;lt;CRLF&amp;gt;
+
+SMTP CODE INTERMEDIATE: 354
+   [data]
+   &amp;lt;CRLF&amp;gt;.&amp;lt;CRLF&amp;gt;
+   SMTP CODE SUCCESS: 250
+   SMTP CODE FAILURE: 552,554,451,452
+SMTP CODE FAILURE: 451,554
+SMTP CODE ERROR  : 500,501,503,421</description>
+          <parameters>
+            <parameter name="$msg_data" type="string" defaultvalue="">
+              <description>The message content to set as data.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Hello" returntype="boolean">
+          <description>Sends the HELO command to the smtp server.
+This makes sure that we and the server are in the same known state.
+
+Implements from rfc 821: HELO &amp;lt;SP&amp;gt; &amp;lt;domain&amp;gt; &amp;lt;CRLF&amp;gt;
+
+SMTP CODE SUCCESS: 250
+SMTP CODE ERROR  : 500, 501, 504, 421</description>
+          <parameters>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The server host.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Mail" returntype="boolean">
+          <description>Starts a mail transaction from the email address specified in $from.
+Returns true if successful or false otherwise.
+If True the mail transaction is started and then one or more Recipient commands may be called followed by a Data command.
+
+Implements rfc 821: MAIL &amp;lt;SP&amp;gt; FROM:&amp;lt;reverse-path&amp;gt; &amp;lt;CRLF&amp;gt;
+
+SMTP CODE SUCCESS: 250
+SMTP CODE SUCCESS: 552,451,452
+SMTP CODE SUCCESS: 500,501,421</description>
+          <parameters>
+            <parameter name="$from" type="string" defaultvalue="">
+              <description>The from mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Quit" returntype="boolean">
+          <description>Sends the quit command to the server and then closes the socket if there is no error or the $close_on_error argument is true.
+
+Implements from rfc 821: QUIT &amp;lt;CRLF&amp;gt;
+
+SMTP CODE SUCCESS: 221
+SMTP CODE ERROR  : 500</description>
+          <parameters>
+            <parameter name="$close_on_error" type="boolean" defaultvalue="">
+              <description>Indicates whether to close the connection if an error occurred.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Recipient" returntype="boolean">
+          <description>Sends the command RCPT to the SMTP server with the TO: argument of $to.
+Returns true if the recipient was accepted false if it was rejected.
+
+Implements from rfc 821: RCPT &amp;lt;SP&amp;gt; TO:&amp;lt;forward-path&amp;gt; &amp;lt;CRLF&amp;gt;
+
+SMTP CODE SUCCESS: 250,251
+SMTP CODE FAILURE: 550,551,552,553,450,451,452
+SMTP CODE ERROR  : 500,501,503,421</description>
+          <parameters>
+            <parameter name="$to" type="string" defaultvalue="">
+              <description>The recipient mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Reset" returntype="boolean">
+          <description>Sends the RSET command to abort and transaction that is currently in progress. Returns true if successful false otherwise.
+
+Implements rfc 821: RSET &amp;lt;CRLF&amp;gt;
+
+SMTP CODE SUCCESS: 250
+SMTP CODE ERROR  : 500,501,504,421</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SendAndMail" returntype="boolean">
+          <description>Starts a mail transaction from the email address specified in $from.
+Returns true if successful or false otherwise.
+If True the mail transaction is started and then one or more Recipient commands may be called followed by a Data command.
+This command will send the message to the users terminal if they are logged in and send them an email.
+
+Implements rfc 821: SAML &amp;lt;SP&amp;gt; FROM:&amp;lt;reverse-path&amp;gt; &amp;lt;CRLF&amp;gt;
+
+SMTP CODE SUCCESS: 250
+SMTP CODE SUCCESS: 552,451,452
+SMTP CODE SUCCESS: 500,501,502,421</description>
+          <parameters>
+            <parameter name="$from" type="string" defaultvalue="">
+              <description>The from mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getError" returntype="array">
+          <description>Get the current error.</description>
+          <parameters/>
+          <returndescription>The error array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="SendHello" returntype="boolean">
+          <description>Sends a HELO/EHLO command.</description>
+          <parameters>
+            <parameter name="$hello" type="string" defaultvalue="">
+              <description>The hello word.</description>
+            </parameter>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The server host address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_lines" returntype="void">
+          <description>Read in as many lines as possible either before eof or socket timeout occurs on the operation.
+With SMTP we can tell if we have more lines to read if the 4th character is '-' symbol. If it is a space then we don't need to read anything else.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

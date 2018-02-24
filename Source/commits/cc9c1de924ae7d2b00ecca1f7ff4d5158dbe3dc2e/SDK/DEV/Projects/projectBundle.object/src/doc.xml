@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Projects" namespace="\">
+  <class name="projectBundle" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1425043356</datecreated>
+      <daterevised>1425053631</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Project Bundle Manager</title>
+      <description>Manages project bundles for the market.
+For now only the BOSS market will support bundles.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="id">
+          <description>The bundle id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="array" name="projects" static="true">
+          <description>All the bundle projects, for cache.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the bundle.</description>
+          <parameters>
+            <parameter name="$bundleID" type="integer" defaultvalue="">
+              <description>The bundle id.
+Leave empty for new bundles.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new bundle with projects.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The bundle title.</description>
+            </parameter>
+            <parameter name="$projects" type="array" defaultvalue="">
+              <description>An array of all project ids to add to the bundle.
+This list cannot be altered later.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get bundle information.</description>
+          <parameters/>
+          <returndescription>An array of all bundle information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update bundle information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The bundle new title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The bundle description.</description>
+            </parameter>
+            <parameter name="$tags" type="string" defaultvalue="">
+              <description>The bundle tags, separated with commas.</description>
+            </parameter>
+            <parameter name="$price" type="float" defaultvalue="">
+              <description>The bundle price.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setOnlineStatus" returntype="boolean">
+          <description>Set the online status of the bundle for the market.</description>
+          <parameters>
+            <parameter name="$status" type="boolean" defaultvalue="">
+              <description>The online status.
+TRUE for online, FALSE for offline.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjects" returntype="array">
+          <description>Get all bundle projects.</description>
+          <parameters/>
+          <returndescription>An array of all project information that are part of this bundle.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove this bundle from the database.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

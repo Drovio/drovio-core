@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1513206737"><title>Revoke Privileges</title><description>Restricts development access for a module group from a user</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

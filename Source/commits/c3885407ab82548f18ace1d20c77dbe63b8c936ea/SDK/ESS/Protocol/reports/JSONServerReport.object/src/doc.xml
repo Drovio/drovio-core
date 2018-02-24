@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\reports">
+  <class name="JSONServerReport" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1406662821</datecreated>
+      <daterevised>1406662821</daterevised>
+      <extends>
+        <object>\ESS\Protocol\reports\ServerReport</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>JSON Server Report</title>
+      <description>Creates an asynchronous server report in JSON format according to user request.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true">
+          <description>Get the json server report.</description>
+          <parameters/>
+          <returndescription>The server report in json format.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addContent" returntype="void" static="true">
+          <description>Adds a content report to the report stack.</description>
+          <parameters>
+            <parameter name="$content" type="array" defaultvalue="">
+              <description>The body of the report content.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAction" returntype="void" static="true">
+          <description>Adds an action report to the report stack.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.
+This may vary according to the handler.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getReport" returntype="string" static="true">
+          <description>Builds the entire report with the head and the body and returns the json string generated.</description>
+          <parameters/>
+          <returndescription>The json report generated.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportContent" returntype="array" static="true">
+          <description>Creates a report content as an array inside the report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The report type.</description>
+            </parameter>
+            <parameter name="$context" type="array" defaultvalue="">
+              <description>The report context.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActionContext" returntype="array" static="true">
+          <description>Builds a JSON action report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.
+This may vary according to the handler.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The action array context.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

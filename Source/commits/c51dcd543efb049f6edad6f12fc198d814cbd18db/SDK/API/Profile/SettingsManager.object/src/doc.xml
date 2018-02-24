@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="SettingsManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366363680</datecreated>
+      <daterevised>1413977072</daterevised>
+      <extends>
+        <object>\API\Profile\AccountManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Abstract Account Settings Manager</title>
+      <description>Manages all the settings of an account.</description>
+      <deprecated>Use \API\Profile\accountSettings instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAccountFolder" returntype="string" static="true">
+          <description>Gets the account settings folder path.</description>
+          <parameters/>
+          <returndescription>The account settings folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCompanyFolder" returntype="string" static="true">
+          <description>Returns the company settings folder path.</description>
+          <parameters/>
+          <returndescription>The company settings folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

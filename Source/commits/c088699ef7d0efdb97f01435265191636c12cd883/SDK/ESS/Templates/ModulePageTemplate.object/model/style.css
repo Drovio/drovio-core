@@ -1,0 +1,8 @@
+.uiPageContent {
+	height:100%;
+	overflow:auto;
+}
+#pageMisc {
+	display: none;
+}
+

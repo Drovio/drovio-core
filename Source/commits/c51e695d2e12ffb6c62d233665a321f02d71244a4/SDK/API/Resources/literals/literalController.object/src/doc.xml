@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="literalController" abstract="" namespace="\literals">
+    <info>
+      <version/>
+      <datecreated>1366714800</datecreated>
+      <daterevised>1379349390</daterevised>
+      <extends>\API\Resources\literals\literalManager</extends>
+      <implements/>
+      <throws/>
+      <title>Literal Controller</title>
+      <description>A controller class. Chooses where to get the literals from.
+If a user is translator, use the translator engine.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Get all literals of a given scope.
+If the user is translator, get the translator's values.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to get the literals from. If NULL, get the current system locale.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="wrap" returntype="DOMElement" static="true">
+          <description>Wrap a literal to span.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value</description>
+            </parameter>
+            <parameter name="$translationLock" type="boolean" defaultvalue="">
+              <description>Defines manually whether a literal is going to be wrapped for translation or not.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

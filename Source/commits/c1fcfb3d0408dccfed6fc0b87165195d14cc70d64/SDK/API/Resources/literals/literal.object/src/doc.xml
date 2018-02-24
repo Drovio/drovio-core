@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\literals">
+  <class name="literal" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366714800</datecreated>
+      <daterevised>1395648252</daterevised>
+      <extends>\API\Resources\literals\literalController</extends>
+      <implements/>
+      <throws/>
+      <title>Literal Handler</title>
+      <description>Handles all translated and non-translated literals.</description>
+      <deprecated>Use \API\Literals\literal instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="translatedLiterals" static="true">
+          <description>Stores the translated literals in the language requested</description>
+        </prop>
+        <prop type="array" name="nonTranslatedLiterals" static="true">
+          <description>Stores the non translated literals in the language requested</description>
+        </prop>
+        <prop type="array" name="literals" static="true">
+          <description>Stores all the literals</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="dictionary" returntype="mixed" static="true">
+          <description>Returns a literal from the dictionary scope.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description>Whether the literal will be wrapped inside a span.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of literals or the literal value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed" static="true">
+          <description>Get a system's literal.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$attributes" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description>Whether the literal will be wrapped inside a span.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to get the literals from. If NULL, get the current system locale.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="add" returntype="boolean" static="true">
+          <description>Add a new system literal to the default locale.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's description</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Defines whether the literal is static and is translated along with all other static literals in the beginning of a new locale.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update" returntype="boolean" static="true">
+          <description>Update a system's literal to the default locale</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's new value</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's new description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a system's literal</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components">
+  <class name="moduleManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1364472840</datecreated>
+      <daterevised>1396425778</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>General Module Manager</title>
+      <description>Manages all modules including export, release and other options.</description>
+      <deprecated>Use \DEV\Modules\moduleManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setTesterStatus" returntype="boolean" static="true">
+          <description>Set the tester mode status for the given module id.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$status" type="boolean" defaultvalue="">
+              <description>The tester mode status.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTesterStatus" returntype="void" static="true">
+          <description>Get the tester mode status for the given module id.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="checkoutModules" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <deprecated>Use exportModules() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="deploy" returntype="void" static="true">
+          <description>Deploys all modules (views and queries) to latest from the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to deploy.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exportModules" returntype="void" static="true">
+          <description>Exports all modules to latest.</description>
+          <parameters/>
+          <deprecated>Use deploy() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="normalizeImports" returntype="array" static="true">
+          <description>Normalizes all the module imports into a single array with strings (the full import as item).</description>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The module imports (Lib -&amp;gt; Pkg/Obj).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

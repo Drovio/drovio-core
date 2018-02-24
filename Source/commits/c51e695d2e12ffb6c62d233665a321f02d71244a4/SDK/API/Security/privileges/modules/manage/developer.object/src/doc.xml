@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="developer" abstract="" namespace="\privileges\modules\manage">
+    <info>
+      <version/>
+      <datecreated>1375267516</datecreated>
+      <daterevised>1375267516</daterevised>
+      <extends>\API\Profile\user</extends>
+      <implements/>
+      <throws/>
+      <title>User's developer extension</title>
+      <description>Manages and checks all the developer's privileges.</description>
+      <deprecated>Use \API\Profile\developer instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get_moduleStatus" returntype="boolean" static="true">
+          <description>Checks if logged in user is a developer of a module</description>
+          <parameters>
+            <parameter name="$module_id" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Profile\developer::moduleInWorkspace() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_groupStatus" returntype="boolean" static="true">
+          <description>Checks if a user has privileges on a group</description>
+          <parameters>
+            <parameter name="$group_id" type="integer" defaultvalue="">
+              <description>The moduleGroup's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Profile\developer::moduleGroupInWorkspace() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_masterGroupStatus" returntype="boolean" static="true">
+          <description>Checks if a user has privileges on a group as master (for creating subgroups)</description>
+          <parameters>
+            <parameter name="$group_id" type="integer" defaultvalue="">
+              <description>The moduleGroup's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Profile\developer::masterGroup() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

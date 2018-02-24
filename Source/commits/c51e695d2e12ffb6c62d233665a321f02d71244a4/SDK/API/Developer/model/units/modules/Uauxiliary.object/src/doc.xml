@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="Uauxiliary" abstract="" namespace="\model\units\modules">
+    <info>
+      <version/>
+      <datecreated>March 20, 2013, 10:27 (EET)</datecreated>
+      <daterevised>March 20, 2013, 10:27 (EET)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Auxiliary manager</title>
+      <description>The system's auxiliary handler.</description>
+      <deprecated>Use \API\Developer\components\modules\ instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop name="seed" type="integer">
+          <description>The auxiliary seed</description>
+        </prop>
+        <prop name="auxTitle" type="string">
+          <description>The auxiliary title</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" returntype="void">
+          <description>Initialize the object</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$seed" type="integer" defaultvalue="">
+              <description>The auxiliary seed</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="set_title" returntype="void">
+          <description>Sets the auxiliary's title</description>
+          <parameters>
+            <parameter name="$aux_title" type="string" defaultvalue="">
+              <description>The title</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_title" returntype="string">
+          <description>Get the auxiliary's title</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_parentTitle" returntype="string">
+          <description>Get the module's title</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the auxiliary's content.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The auxiliary's title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The auxiliary's description</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The auxiliary's source code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch where the update will be performed</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new auxiliary module</description>
+          <parameters>
+            <parameter name="$parent_id" type="integer" defaultvalue="">
+              <description>The parent module's id</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The auxiliary's title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The auxiliary's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Delete the auxiliary's contents</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_seed" returntype="integer">
+          <description>Returns the auxiliary's seed</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="initialize_info" returntype="void">
+          <description>Initializes the auxiliary's index information</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="update_indexInfo" returntype="void">
+          <description>Update the auxiliary's index information</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="_get_fileName" returntype="string">
+          <description>Get the filename of the auxiliary</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

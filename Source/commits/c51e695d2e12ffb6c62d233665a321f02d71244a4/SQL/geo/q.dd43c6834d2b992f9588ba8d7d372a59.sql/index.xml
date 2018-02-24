@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1213332615"><title>Get town info</title><description>Get town by id</description><access>1</access><attributes><attr id="tid"></attr></attributes></query>

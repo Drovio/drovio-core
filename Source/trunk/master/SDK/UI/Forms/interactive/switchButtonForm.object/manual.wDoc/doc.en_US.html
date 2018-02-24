@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Stand-alonee Switch Button Form</h1>
+<p>Switch button is a simple Drovio control that provides functionality to turn on and off switches. It is interactive because instead of being part of a form, it is a form by itself which enables it to be independant and work separately from any form.</p>
+<p>Build a switch button and append to a container:</p>
+<div class="code">
+	<pre>// Use the class
+use \UI\Forms\interactive\switchButtonForm;
+
+// It is a UIObject, so we have to initialize and build
+$sbf = new switchButtonForm();
+$switchButtonForm = $sbf-&gt;build($action = "/file/to/post.php", $active = FALSE, $name = "switch_name", $value = "switch_value")-&gt;get();
+DOM::append($container, $switchButtonForm);
+
+
+// We can also engage an application view
+$sbf = new switchButtonForm();
+$switchButtonForm = $sbf-&gt;build($action = "", $active = FALSE, $name = "switch_name")-&gt;engageApp($viewName = "testView")-&gt;get();
+DOM::append($container, $switchButtonForm);</pre>
+</div>
+<p>The above code will create a switch button form. Engaging with the button will cause the form to submit.</p>
+<p>The switch button has 3 states, off, on and loading when it is waiting for server response after click/submit. The response should be an action to set the switch button status to on or off. Sample response:</p>
+<div class="code">
+	<pre>// Use the class
+use \UI\Forms\interactive\switchButtonForm;
+
+// Return a report status only for the switch button, set status to TRUE (on)
+// Because of the bubbling events, the event will be connected with the submitted form
+return switchButtonForm::getReport($status = TRUE);
+
+
+// We can use normal reports and add the switch button
+// report action along with the rest of the report
+$pageContent = new HTMLContent();
+
+...
+
+// Add the switch button report action
+switchButtonForm::addStatusReportAction($status = TRUE);
+
+// Add other reports
+$pageContent-&gt;addReportContent($content);
+
+// Return the report
+return $pageContent-&gt;getReport();</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 12 November, 2016 [en_US]</p></div>
+</div></body></html>

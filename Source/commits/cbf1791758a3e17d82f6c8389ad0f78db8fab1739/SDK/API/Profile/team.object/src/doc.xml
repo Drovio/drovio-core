@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="team" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>5</build>
+      <datecreated>1406886412</datecreated>
+      <daterevised>1409746953</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Team Manager Class</title>
+      <description>Manages the active team and the account's all teams.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="teamData" static="true">
+          <description>All the team data.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Gets the team info.</description>
+          <parameters/>
+          <returndescription>An array of the team data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validates if the current account is member of the current team.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to validate the account.
+If empty, get the current team id.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="logout" returntype="void" static="true">
+          <description>Logout the account from the team.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="switchTeam" returntype="boolean" static="true">
+          <description>Switch from one team to another.
+The account must be valid and member of the given team id.</description>
+          <parameters>
+            <parameter name="$teamID" type="string" defaultvalue="">
+              <description>The team id to switch to.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's current password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultTeam" returntype="array" static="true">
+          <description>Get the default team for the given account.</description>
+          <parameters/>
+          <returndescription>The default team information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDefaultTeam" returntype="boolean" static="true">
+          <description>Set the default team for the given account.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to set as default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountTeams" returntype="array" static="true">
+          <description>Get all teams of the current account.</description>
+          <parameters/>
+          <returndescription>An array of all teams.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamID" returntype="integer" static="true">
+          <description>Get the current team id.</description>
+          <parameters/>
+          <returndescription>The current team id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamName" returntype="string" static="true">
+          <description>Get the current team name.</description>
+          <parameters/>
+          <returndescription>The current team name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamFolder" returntype="mixed" static="true">
+          <description>Gets the team's profile folder. The folder is created if doesn't exist.</description>
+          <parameters/>
+          <returndescription>The team folder path. If there is no active team, it returns FALSE.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServicesFolder" returntype="string" static="true">
+          <description>Get the team's service root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The team service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getInfo" returntype="array" static="true">
+          <description>Gets the given team's information.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team data to get info for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of team data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamValue" returntype="string" static="true">
+          <description>Gets a team value from the session. If the session is not set yet, updates from the database.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The value name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The team value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderID" returntype="string" static="true">
+          <description>Gets the unique folder id for the requested use.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The prefix of the folder.</description>
+            </parameter>
+            <parameter name="$folderID" type="string" defaultvalue="">
+              <description>The id to be hashed.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The extension of the folder (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

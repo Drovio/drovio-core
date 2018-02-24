@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="classObject" abstract="" namespace="\components\prime">
+    <info>
+      <version/>
+      <datecreated>1368790255</datecreated>
+      <daterevised>1379681416</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>Prime Class Object</title>
+      <description>Handles the basics of a class object handler including the capability of documentation.</description>
+      <deprecated>Use \API\Developer\components\prime\classObject2 instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="libName">
+          <description>The object's library name.</description>
+        </prop>
+        <prop type="string" name="packageName">
+          <description>The object's package name.</description>
+        </prop>
+        <prop type="string" name="nsName">
+          <description>The object's namespace (separated by "::").</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>The object's title.</description>
+        </prop>
+        <prop type="string" name="repositoryRoot">
+          <description>The root repository folder for the vcs.</description>
+        </prop>
+        <prop type="string" name="repository">
+          <description>The inner repository folder for the vcs.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method. Initializes the object's properties.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The object's library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The object's package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The object's namespace (separated by "_" or "::"). Optional, in case of no namespace.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name. Optinal, in case of creating a new object.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="classObject">
+          <description>Create a new classObject and initialize repository.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title. If empty, the name is used.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="commit" returntype="boolean">
+          <description>Commits this object to repository.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The commit description.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setTitle" returntype="void">
+          <description>Sets the object's title.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The new title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTitle" returntype="string">
+          <description>Gets the object's title.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getLibrary" returntype="string">
+          <description>Gets the object's library name.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackage" returntype="string">
+          <description>Gets the object's package name.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNamespace" returntype="string">
+          <description>Gets the object's namespace name as declared on the top of the class.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="newConstruct" returntype="void">
+          <description>Its the new constructor for the classObject2.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The object repository.</description>
+            </parameter>
+            <parameter name="$includeRelease" type="boolean" defaultvalue="">
+              <description>Whether it will include the release files in the repository.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateFullObject" returntype="void">
+          <description>Updates the object to the new repository.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getWorkingBranch" returntype="string">
+          <description>Gets the working branch of this object for the current user.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setRepository" returntype="void">
+          <description>Sets the repository parameters for the object's vcs.</description>
+          <parameters>
+            <parameter name="$root" type="string" defaultvalue="">
+              <description>The repository root folder.</description>
+            </parameter>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The inner repository folder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="init" returntype="void">
+          <description>Initialize the object's vcs.</description>
+          <parameters>
+            <parameter name="$repositoryRoot" type="string" defaultvalue="">
+              <description>The repository root folder.</description>
+            </parameter>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The inner repository folder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="boolean">
+          <description>Export object's source code to given export path.</description>
+          <parameters>
+            <parameter name="$exportPath" type="string" defaultvalue="">
+              <description>The export path.
+It must include the systemRoot. The object's map folder directory follows (library\package\namespace\object).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createStructure" returntype="classObject">
+          <description>Creates the structure of the object by creating the necessary folders</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildIndexBase" returntype="DOMElement">
+          <description>Builds the object's index base.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser to create the base.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadInfo" returntype="void">
+          <description>Load all the index info</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTrunkPath" returntype="string">
+          <description>Gets the object's path to the trunk.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getHeadPath" returntype="string">
+          <description>Get the object's path to the head branch.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

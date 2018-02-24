@@ -1,0 +1,45 @@
+<h1>HTML Async Content Builder</h1>
+<p>HTMLContent allows developers to build a customized HTML content and return it to the client using Drovio server report mechanism. HTMLContent is a "sibling" of JSONContent which means that it follows the same logic and the HTML generated is encapsulated in JSON.</p>
+<p>An HTMLContent object can be built into any HTML element which can include pretty much everything. It provides a number of tools to the developer to build faster content and interaction listeners with less dependencies, acting as a facade.</p>
+<p>The only exception is that the HTML content cannot include script tags to prevent code injection into html. This is forbidden by the report protocol mechanism. </p>
+<div class="code">
+	<pre>// Building a custom HTML content
+	
+// Use the class
+use \UI\Content\HTMLContent;
+
+// Create the object
+$htmlContent = new HTMLContent();
+
+// This is a UIObject, so we build
+// The HTMLContent class is widely used for web views that also have an html file for static content
+// Using the last parameter as TRUE, we can load the static HTML into the container element
+$htmlContent->build($id = "container_id", $class = "container_class", $loadHTML = TRUE);
+
+
+// We can create DOMElements using DOM or HTML and append them in the content
+$div = DOM::create("div", "", "", "mainContainer");
+$htmlContent->append($div);
+
+
+// In case of static html, we can search using HTML and alter the content
+$ctitle = HTML::select(".container_class .ctitle")->item(0);
+HTML::innerHTML($ctitle, "This is the new title.");
+
+
+// We can also use the entire UI library to create objects and append them in the container
+$tabber = new tabControl();
+$testTabber = $tabber->build()->get();
+DOM::append($div, $testTabber);
+
+
+// We can also use the HTMLContent as facade
+$wl = $htmlContent->getWeblink($href = "https://redback.io", $content = "Redback Home", $target = "_self", $class = "");
+DOM::append($div, $wl);
+
+
+// After we have created the content, we send the report to the client
+// We can define the holder where the content is going to be appended
+// We can choose to replace all the inner html of the destination
+return $htmlContent->getReport($holder = ".testContainer", $method = HTMLContent::REPLACE_METHOD);</pre>
+</div>

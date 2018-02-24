@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="DOMPrototype" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1362650760</datecreated>
+      <daterevised>1415017500</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract Document Object Model Prototype Class</title>
+      <description>It is used for every DOM operation on the server's side.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="attr" returntype="mixed" static="true">
+          <description>Adds or gets an attribute from a DOMElement.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to insert/get the attribute.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the attribute.</description>
+            </parameter>
+            <parameter name="$val" type="mixed" defaultvalue="">
+              <description>If the value is NULL or FALSE, the value is considered negative and the attribute will be removed.
+If the value is empty (null is not included), the attribute will be removed.
+Otherwise, the attribute will be set with the new value and the new value will be returned.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns FALSE if there is an error (see the log).
+Returns the attribute value otherwise.</returndescription>
+          <throws/>
+        </method>
+        <method name="attrs" returntype="mixed" static="true">
+          <description>Adds or gets a series of attributes (in the form of an array) into a DOMElement</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to insert the attributes</description>
+            </parameter>
+            <parameter name="$val" type="array" defaultvalue="">
+              <description>The array of attributes.
+The key is the name of the attribute.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The element attributes by name and value or void.</returndescription>
+          <throws/>
+        </method>
+        <method name="appendAttr" returntype="boolean" static="true">
+          <description>Appends the value of an attribute of a DOMElement</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to append the attribute of.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the attribute</description>
+            </parameter>
+            <parameter name="$val" type="string" defaultvalue="">
+              <description>The value of the attribute</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="data" returntype="boolean" static="true">
+          <description>Inserts a data-[name] attribute as an array into the DOMElement</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to insert the attribute.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The data name of the attribute (data-[name])</description>
+            </parameter>
+            <parameter name="$val" type="array" defaultvalue="">
+              <description>The set of values as key=&gt;value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="append" returntype="void" static="true">
+          <description>Appends a DOMElement to a parent DOMElement or to the DOMDocument</description>
+          <parameters>
+            <parameter name="$parent" type="DOMElement" defaultvalue="">
+              <description>The parent that will receive the DOMElement.
+If no child is given, this parent will be appended to DOMDocument.</description>
+            </parameter>
+            <parameter name="$child" type="DOMElement" defaultvalue="">
+              <description>The element to append to the parent.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="prepend" returntype="boolean" static="true">
+          <description>Prepends (appends first in the list) a DOMElement to a parent DOMElement</description>
+          <parameters>
+            <parameter name="$parent" type="DOMElement" defaultvalue="">
+              <description>The parent element</description>
+            </parameter>
+            <parameter name="$child" type="DOMElement" defaultvalue="">
+              <description>The child element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="appendBefore" returntype="boolean" static="true">
+          <description>Appends a DOMElement to a parent DOMElement, before the given child.</description>
+          <parameters>
+            <parameter name="$parent" type="DOMElement" defaultvalue="">
+              <description>The parent element.</description>
+            </parameter>
+            <parameter name="$before" type="DOMElement" defaultvalue="">
+              <description>The reference element before which the child will be appended.</description>
+            </parameter>
+            <parameter name="$child" type="DOMElement" defaultvalue="">
+              <description>The element that will be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="replace" returntype="boolean" static="true">
+          <description>Replaces or removes the old DOMElement with the new DOMElement</description>
+          <parameters>
+            <parameter name="$old" type="DOMElement" defaultvalue="">
+              <description>The element to be replaced.</description>
+            </parameter>
+            <parameter name="$new" type="DOMElement" defaultvalue="">
+              <description>The element to replace the old. If NULL, the old element will be removed.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="nodeValue" returntype="string" static="true">
+          <description>Sets or gets the nodeValue of the given DOMElement.
+Returns the old value or the DOMElement if value is set.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to get its value.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The value to be set. If empty, the element's value will be returned.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The node value (old or new).</returndescription>
+          <throws/>
+        </method>
+        <method name="innerHTML" returntype="mixed" static="true">
+          <description>Get or Set inner HTML.
+Returns the inner html of the element if no content is given.
+Sets the innerHTML of an element elsewhere.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The reference element.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The html value to be set. If empty, it returns the innerHTML of the element.</description>
+            </parameter>
+            <parameter name="$faultTolerant" type="boolen" defaultvalue="">
+              <description>Indicates whenever innerHTML will try to fix (well format html) the inserted string value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns the innerHTML of the element if $value is NULL
+Otherwise sets the innerHTML of an element returning false in case of error.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

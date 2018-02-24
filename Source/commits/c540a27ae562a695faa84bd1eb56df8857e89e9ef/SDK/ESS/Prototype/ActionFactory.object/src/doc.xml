@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="ActionFactory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1363090980</datecreated>
+      <daterevised>1408432458</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback's Action Factory</title>
+      <description>This is a class for attaching all kind of actions and listeners to elements to be handled in the client side and communicate with the server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setModuleAction" returntype="void" static="true">
+          <description>Creates a module action listener to the given item.
+This listener invokes a module GET action to the specified module and view.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler item to invoke the action.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If it left empty, it gets the default module's view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder container for the content that will be loaded.
+For more information, see \ESS\Protocol\ModuleProtocol.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setPopupAction" returntype="void" static="true">
+          <description>Attaches the popup action.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler item to invoke the action.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If it left empty, it gets the default module's view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Merged with setModuleAction. The popup is invoked by the content loaded.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReportRedirect" returntype="string" static="true">
+          <description>Creates a specific action report to invoke a page redirect to the client.</description>
+          <parameters>
+            <parameter name="$location" type="string" defaultvalue="">
+              <description>The destination url to redirect.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The subdomain of the location.
+If left empty, the full url will be considered the first parameter, otherwise the url will be resolved to this subdomain.</description>
+            </parameter>
+            <parameter name="$formSubmit" type="boolean" defaultvalue="">
+              <description>Indicates whether the report will contain a submit action for forms and allow to unload the form.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportReload" returntype="string" static="true">
+          <description>Creates a specific action report to invoke a page reload to the client.</description>
+          <parameters>
+            <parameter name="$formSubmit" type="boolean" defaultvalue="">
+              <description>Indicates whether the report will contain a submit action for forms and allow to unload the form.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

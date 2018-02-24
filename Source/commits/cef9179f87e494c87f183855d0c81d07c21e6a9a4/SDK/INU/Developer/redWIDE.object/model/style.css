@@ -1,0 +1,69 @@
+.wide {
+	height:100%;
+	position: relative;
+}
+.wide > .dropPool {
+	display:none !important;
+}
+.wide .wideContainer {
+	height: 100%;
+}
+.wide > .result {
+	display: none;
+}
+.wide form[role="editor"] { height: 100%; }
+.wide form[role="editor"] .editorAreaFormContent {
+	height: 100%;
+}
+.wide .editorContainer {
+	height: 100%;
+	padding-left: 29px;
+}
+.wide .sideToolArea {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 28px;
+	height: 100%;
+	background-color: rgba(166, 166, 166, 0.25);
+	z-index: 1;
+	border-right: 1px solid rgb(166, 166, 166);
+}
+.wide .sideToolArea > .toolSeparator {
+	width: 70%;
+	height: 1px;
+	background-color: rgba(166, 166, 166, 0.3);
+	margin: 0 auto;
+}
+.wide .sideToolArea > .toolGroup {
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.wide .sideToolArea .sideTool {
+	margin: 6px;
+}
+.wide .sideTool {
+	width: 16px;
+	height: 16px;
+	opacity: 0.7;
+	cursor: pointer;
+	background-image:url('%resources%/DEV/editorActionSprite.svg');
+	background-repeat:no-repeat;
+}
+.wide .sideToolArea .sideTool:hover { opacity:1; }
+.wide .sideToolArea .sideTool.active { opacity:1 !important; }
+
+.wide .sideTool.save { background-position:0px 0px; }
+.wide .sideTool.saveAll { background-position:0px -16px; }
+.wide .sideTool.headers { background-position:0px -32px; }
+.wide .sideTool.commit { background-position:0px -48px; }
+.wide .sideTool.delete { background-position:0px -80px; }
+.wide .sideTool.mlgMan { background-position:0px -64px; }
+.wide .sideTool.fontInc { background-position:0px +16px; }
+.wide .sideTool.fontDef { background-position:0px +16px; }
+.wide .sideTool.fontDec { background-position:0px +16px; }
+
+.wide button.sideTool {
+	border : none;
+	background-color: transparent;
+}

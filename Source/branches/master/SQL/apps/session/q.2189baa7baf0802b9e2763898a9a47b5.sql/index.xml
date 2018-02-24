@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="16373581261513"><title>Delete All User's App Session Version Info</title><description>Delete the all the database entries from application session table holding information regarding a user</description><access></access><attributes><attr id="uid"></attr></attributes></query>

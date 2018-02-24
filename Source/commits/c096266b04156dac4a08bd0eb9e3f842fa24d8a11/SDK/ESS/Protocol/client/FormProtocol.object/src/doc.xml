@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client">
+  <class name="FormProtocol" abstract="">
+    <info>
+      <version>0.3</version>
+      <build>1</build>
+      <datecreated>1362649080</datecreated>
+      <daterevised>1409897757</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Form Submit and reset Protocol</title>
+      <description>This protocol is used for every form in Redback.
+Defines how the forms will interact with the server and the modules.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="register" returntype="void" static="true">
+          <description>Register a form for hidden-value-validation.</description>
+          <parameters>
+            <parameter name="$formID" type="string" defaultvalue="">
+              <description>The form id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unregister" returntype="void" static="true">
+          <description>Unregister a form from hidden-value-validation.</description>
+          <parameters>
+            <parameter name="$formID" type="string" defaultvalue="">
+              <description>The form id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="registerVal" returntype="void" static="true">
+          <description>Register a hidden value.</description>
+          <parameters>
+            <parameter name="$formID" type="string" defaultvalue="">
+              <description>The form id from the parent form of the input.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The hidden input name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The hidden input value.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="mixed" static="true">
+          <description>Validates the posted data with the data stored.</description>
+          <parameters>
+            <parameter name="$formID" type="string" defaultvalue="">
+              <description>The form id.</description>
+            </parameter>
+            <parameter name="$post" type="array" defaultvalue="">
+              <description>The posted data.</description>
+            </parameter>
+            <parameter name="$clear" type="boolean" defaultvalue="">
+              <description>Whether to clear the form session registration or not.
+The default value is false.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if data match, false if there are mismatches.
+In case of no data stored or if the session expires,
+it will return NULL to indicate absence of stored data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="engage" returntype="void" static="true">
+          <description>Attach Module Protocol to form</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form element</description>
+            </parameter>
+            <parameter name="$moduleID" type="int" defaultvalue="">
+              <description>The module to be called upon form POST</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name of the given moduleID.</description>
+            </parameter>
+          </parameters>
+          <deprecated>This method is generally deprecated. Use formFactory::engageModule() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setAsync" returntype="void" static="true">
+          <description>Sets the form to post async.</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form element.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setPreventUnload" returntype="void" static="true">
+          <description>Sets the form to keep track if there are any changes and prevent the page from unload before posting.</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form to prevent the unload event.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSubmitAction" returntype="void" static="true">
+          <description>Adds a submit action to the server report.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addResetAction" returntype="void" static="true">
+          <description>Adds a reset action to the server report</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

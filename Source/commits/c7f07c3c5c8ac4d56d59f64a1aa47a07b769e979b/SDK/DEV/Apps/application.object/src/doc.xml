@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\">
+  <class name="application" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1396731710</datecreated>
+      <daterevised>1410715296</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Application</title>
+      <description>This class is responsible for the development of an application.
+Extends the project class.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index file name.</description>
+      </const>
+      <const type="string" name="SOURCE_INDEX">
+        <description>The source index file name</description>
+      </const>
+      <const type="string" name="SOURCE_FOLDER">
+        <description>The application source folder path.</description>
+      </const>
+      <const type="string" name="STYLES_FOLDER">
+        <description>The application styles folder path.</description>
+      </const>
+      <const type="string" name="SCRIPTS_FOLDER">
+        <description>The application scripts folder path.</description>
+      </const>
+      <const type="string" name="VIEWS_FOLDER">
+        <description>The application views folder path.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The source vcs object manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application project id.</description>
+            </parameter>
+            <parameter name="$appName" type="string" defaultvalue="">
+              <description>The application unique name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getVCS" returntype="vcs">
+          <description>Gets the vcs manager object.</description>
+          <parameters/>
+          <returndescription>The vcs manager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectIndex" returntype="boolean">
+          <description>Adds an object's index to the application index file.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if object already exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeObjectIndex" returntype="boolean">
+          <description>Remove an object from the application's index file.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStyles" returntype="array">
+          <description>Gets all application styles.</description>
+          <parameters/>
+          <returndescription>An array of styles by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getScripts" returntype="array">
+          <description>Gets all application scripts.</description>
+          <parameters/>
+          <returndescription>An array of scripts by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getViews" returntype="array">
+          <description>Gets all application views.</description>
+          <parameters/>
+          <returndescription>An array of views by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Get the vcs item id.</description>
+          <parameters>
+            <parameter name="$suffix" type="string" defaultvalue="">
+              <description>The id suffix.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="void">
+          <description>Publish the current application to the given version.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to publish the application.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source's branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createAppStructure" returntype="void">
+          <description>Creates the application structure.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createAppIndex" returntype="void">
+          <description>Creates the application index file.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createSourceMap" returntype="void">
+          <description>Creates the application source map index file.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getIndexObjects" returntype="array">
+          <description>Get objects from the application index.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object tag name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all object names by group.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

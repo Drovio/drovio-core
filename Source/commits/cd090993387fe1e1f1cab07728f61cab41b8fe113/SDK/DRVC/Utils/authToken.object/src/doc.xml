@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Utils" namespace="\">
+  <class name="authToken" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447529349</datecreated>
+      <daterevised>1447529349</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Drovio Authentication Tokens</title>
+      <description>Create and verify authentication tokens.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="generate" returntype="string" static="true">
+          <description>Generate an authentication token.</description>
+          <parameters>
+            <parameter name="$payload" type="array" defaultvalue="">
+              <description>The payload in the form of array.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The key to sign the token.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The token generated.
+False if the payload is not valid (not array or empty).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPayload" returntype="mixed" static="true">
+          <description>Get the payload from the token.</description>
+          <parameters>
+            <parameter name="$token" type="string" defaultvalue="">
+              <description>The authentication token.</description>
+            </parameter>
+            <parameter name="$jsonDecode" type="boolean" defaultvalue="">
+              <description>Whether to decode the payload from json to array.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array or json string according to second parameter.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="verify" returntype="boolean" static="true">
+          <description>Verify the given token with the given signature key.</description>
+          <parameters>
+            <parameter name="$token" type="string" defaultvalue="">
+              <description>The authentication token.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The signature secret key.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

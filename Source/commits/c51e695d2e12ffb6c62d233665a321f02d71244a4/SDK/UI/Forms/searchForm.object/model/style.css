@@ -1,0 +1,47 @@
+/*________________________________________ ui.forms.templates.searchForm ________________________________________*/
+form.search .form_body {
+	text-align:center;
+}
+form.search .search_container
+{
+	text-align:center;
+	display:inline-block;
+	margin:0 auto;
+	outline:none;
+	border:1px solid rgba(192,4,3,0.3);
+	-webkit-border-radius:3px;
+	background-color:#FFF;
+}
+
+form.search .search_container.small { font-size:11px !important; }
+form.search input[type=text] {
+	outline:none;
+	border:0;
+	float:left;
+}
+form.search .search_container.big input[type=text]
+{
+	width:500px;
+	font-size:14px !important;
+	padding:5px !important;
+	margin: 0 5px;
+	line-height:24px;
+}
+form.search button[type=submit]
+{
+	float:right;
+	border:none;
+	cursor:pointer;
+	background-color:transparent;
+	margin:5px !important;
+	vertical-align:middle;
+	padding:0px;
+	border:none;
+	-webkit-box-shadow:none;
+}
+form.search .search_container.big button[type=submit] {
+	background-image:url(/Library/Media/images/icons/24x24/search_ico.svg);
+	width:24px;
+	height:24px;
+}
+

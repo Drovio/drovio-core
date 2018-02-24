@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Environment" namespace="\">
+  <class name="session" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1445273024</datecreated>
+      <daterevised>1445273024</daterevised>
+      <extends>
+        <object>\ESS\Environment\session</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Session Manager</title>
+      <description>Manages session storage on behalf of the application.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

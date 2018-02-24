@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\sdk">
+  <class name="sdkLibrary" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363860300</datecreated>
+      <daterevised>1389624718</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>SDK Library Manager</title>
+      <description>Handles all operations with sdk libraries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="classMap" name="classMap">
+          <description>The classMap object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method. Initializes class variables.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new library.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getList" returntype="array">
+          <description>Gets a list of all libraries.</description>
+          <parameters/>
+          <returndescription>A list of all libraries in the SDK.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="array">
+          <description>Get all packages in the given library</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all packages.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

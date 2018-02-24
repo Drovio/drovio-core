@@ -1,0 +1,751 @@
+<?php
+//#section#[header]
+// Namespace
+namespace DEV\Prototype;
+
+// Use Important Headers
+use \API\Platform\importer;
+use \Exception;
+
+// Check Platform Existance
+if (!defined('_RB_PLATFORM_'))
+	throw new Exception("Platform is not defined!");
+//#section_end#
+//#section#[class]
+/**
+ * @library	DEV
+ * @package	Prototype
+ * 
+ * @copyright	Copyright (C) 2015 DrovIO. All rights reserved.
+ */
+
+importer::import("API", "Resources", "DOMParser");
+importer::import("API", "Resources", "filesystem/fileManager");
+importer::import("API", "Resources", "filesystem/folderManager");
+importer::import("DEV", "Tools", "parsers/phpParser");
+importer::import("DEV", "Tools", "parsers/cssParser");
+importer::import("DEV", "Tools", "parsers/scssParser");
+importer::import("DEV", "Tools", "coders/phpCoder");
+importer::import("DEV", "Documentation", "classDocumentor");
+
+use \API\Resources\DOMParser;
+use \API\Resources\filesystem\fileManager;
+use \API\Resources\filesystem\folderManager;
+use \DEV\Tools\parsers\phpParser;
+use \DEV\Tools\parsers\cssParser;
+use \DEV\Tools\parsers\scssParser;
+use \DEV\Tools\coders\phpCoder;
+use \DEV\Documentation\classDocumentor;
+
+/**
+ * Abstract Class Object Class
+ * 
+ * Manages a class smart object, including css (xml model + css code), javascript, documentation and manual.
+ * 
+ * @version	0.2-3
+ * @created	March 31, 2014, 13:48 (EEST)
+ * @updated	September 3, 2015, 12:52 (EEST)
+ */
+abstract class classObject
+{
+	/**
+	 * The item extension.
+	 * 
+	 * @type	string
+	 */
+	const FILE_TYPE = "object";
+	/**
+	 * The source folder name.
+	 * 
+	 * @type	string
+	 */
+	const SOURCE_FOLDER = "src/";
+	
+	/**
+	 * The model folder name.
+	 * 
+	 * @type	string
+	 */
+	const MODEL_FOLDER = "model/";
+	
+	/**
+	 * The library name.
+	 * 
+	 * @type	string
+	 */
+	protected $library = "";
+	/**
+	 * The package name.
+	 * 
+	 * @type	string
+	 */
+	protected $package = "";
+	/**
+	 * The namespace name.
+	 * 
+	 * @type	string
+	 */
+	protected $namespace = "";
+	/**
+	 * The object's name.
+	 * 
+	 * @type	string
+	 */
+	protected $name = NULL;
+	
+	/**
+	 * Initializes the class object.
+	 * 
+	 * @param	string	$library
+	 * 		The object's library.
+	 * 
+	 * @param	string	$package
+	 * 		The object's packge.
+	 * 
+	 * @param	string	$namespace
+	 * 		The object's namespace.
+	 * 
+	 * @param	string	$name
+	 * 		The object's name.
+	 * 		Leave empty for new objects and then call create().
+	 * 
+	 * @return	void
+	 */
+	public function __construct($library, $package, $namespace = "", $name = NULL)
+	{
+		// Init variables
+		$this->library = $library;
+		$this->package = $package;
+		$this->namespace = $namespace;
+		$this->name = $name;
+	}
+	
+	/**
+	 * Abstract function for getting the object's full path from the inherited class.
+	 * 
+	 * @return	string
+	 * 		The object's full path.
+	 */
+	abstract protected function getObjectFullPath();
+	
+	/**
+	 * Create a new class object.
+	 * 
+	 * @param	string	$name
+	 * 		The object's name.
+	 * 
+	 * @return	boolean
+	 * 		True on success, false on failure.
+	 */
+	public function create($name)
+	{
+		$this->name = $name;
+		$objectFolder = $this->getObjectFullPath();
+		
+		// If the item doesn't exist, proceed
+		if ($objectFolder && !is_dir($objectFolder))
+		{
+			// Create folders
+			folderManager::create($objectFolder);
+			folderManager::create($objectFolder, self::SOURCE_FOLDER);
+			folderManager::create($objectFolder, self::MODEL_FOLDER);
+			
+			// Update Source Code
+			$this->updateSourceCode();
+			
+			return TRUE;
+		}
+		
+		return FALSE;
+	}
+	
+	/**
+	 * Updates the source code of this object.
+	 * 
+	 * @param	string	$header
+	 * 		The header code of the object.
+	 * 
+	 * @param	string	$code
+	 * 		The code of the object's class.
+	 * 
+	 * @return	mixed
+	 * 		Returns TRUE on success or FALSE on failure.
+	 * 		Returns a string telling whether there is a syntax error in the php file.
+	 */
+	public function updateSourceCode($header = "", $code = "")
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+
+		// Create default code (if empty)
+		if ($code == "")
+			$code = phpParser::getClassCode($this->name);
+		
+		// Clear Code
+		$code = phpParser::clear($code);
+		
+		// Form Header
+		$headerCode = "";
+		$headerCode .= phpParser::comment("Namespace")."\n";
+		$headerCode .= "namespace ".$this->getNamespace(TRUE).";\n\n";
+		$headerCode .= $header;
+		
+		// Build full source code
+		$finalCode = $this->buildSourceCode($headerCode, $code);
+		
+		// Create temp file to check syntax
+		$tempFile = $itemFolder.self::SOURCE_FOLDER."/class.php.temp";
+		fileManager::create($tempFile, $finalCode, TRUE);
+		$syntaxCheck = phpParser::syntax($tempFile);
+		fileManager::remove($tempFile);
+		
+		// Update dependencies and metrics
+		$this->updateDependencies($finalCode);
+		$this->updateMetrics($finalCode);
+		
+		// Create file
+		$file_status = (fileManager::create($itemFolder.self::SOURCE_FOLDER."/class.php", $finalCode) !== FALSE);
+		
+		// If there was a syntax error, show the error
+		if ($syntaxCheck !== TRUE)
+			return $syntaxCheck;
+		
+		return $file_status;
+	}
+	
+	/**
+	 * Builds the source code in sections for easy parsing.
+	 * 
+	 * @param	string	$header
+	 * 		The header code.
+	 * 
+	 * @param	string	$classCode
+	 * 		The class code.
+	 * 
+	 * @return	string
+	 * 		The full source code in php format (including php tags).
+	 */
+	public function buildSourceCode($header, $classCode)
+	{
+		// Build Sections
+		$headerCodeSection = phpCoder::section($header, "header");
+		$classCodeSection = phpCoder::section($classCode, "class");
+		
+		// Merge all pieces
+		$completeCode = trim($headerCodeSection.$classCodeSection);
+			
+		// Complete php code
+		return phpParser::wrap($completeCode);
+	}
+	
+	/**
+	 * Gets the object's source code.
+	 * 
+	 * @param	boolean	$full
+	 * 		If true, returns the entire php code without unwrap and un-section it.
+	 * 		Otherwise, it returns only the class section.
+	 * 
+	 * @return	string
+	 * 		Returns the class code section of the object's source code.
+	 */
+	public function getSourceCode($full = FALSE)
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+
+		// Get Code
+		$code = "";
+		if (file_exists($itemFolder.self::SOURCE_FOLDER."/class.php"))
+			$code = fileManager::get($itemFolder.self::SOURCE_FOLDER."/class.php");
+		
+		if (!$full)
+		{
+			// Unwrap php code
+			$code = phpParser::unwrap($code);
+			$sections = phpCoder::sections($code);
+			return $sections['class'];
+		}
+		else
+			return $code;
+	}
+	
+	/**
+	 * Get all dependencies from the object given the dependencies' file.
+	 * 
+	 * @param	string	$depFile
+	 * 		The dependencies' xml file.
+	 * 		You can load the trunk's file or the release's file.
+	 * 
+	 * @return	array
+	 * 		An array of all dependencies including the use 'path' and use 'alias'.
+	 */
+	public function getDependencies($depFile)
+	{
+		// Load file
+		$parser = new DOMParser();
+		try
+		{
+			$parser->load($depFile, FALSE);
+		}
+		catch (Exception $ex)
+		{
+			return array();
+		}
+		
+		// Get dependencies
+		$dependencies = array();
+		$uses = $parser->evaluate("//use");
+		foreach ($uses as $use)
+		{
+			$useInfo = array();
+			$useInfo['path'] = $parser->attr($use, "path");
+			$useInfo['alias'] = $parser->attr($use, "alias");
+			
+			$dependencies[] = $useInfo;
+		}
+		
+		// Return array of uses
+		return $dependencies;
+	}
+	
+	/**
+	 * Update source code dependencies.
+	 * 
+	 * @param	string	$code
+	 * 		The source code to parse the dependencies from.
+	 * 
+	 * @return	boolean
+	 * 		True on success, false on failure.
+	 */
+	private function updateDependencies($code)
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Get uses
+		$uses = phpParser::getUses($code);
+		
+		// Create xml file for uses
+		$parser = new DOMParser();
+		$root = $parser->create("dependencies");
+		$parser->append($root);
+		
+		foreach ($uses as $use)
+		{
+			$dep_entry = $parser->create("use");
+			$parser->append($root, $dep_entry);
+			
+			// Set name and alias
+			$parser->attr($dep_entry, "path", $use['path']);
+			$parser->attr($dep_entry, "alias", $use['alias']);
+		}
+		
+		// Save file
+		return $parser->save($itemFolder.self::SOURCE_FOLDER."/dependencies.xml");
+	}
+	
+	/**
+	 * Get all source code's metrics data for the given object.
+	 * 
+	 * @param	string	$metFile
+	 * 		The metrics' xml file.
+	 * 		You can load the trunk's file or the release's file.
+	 * 
+	 * @return	array
+	 * 		An array of all metrics data. Including:
+	 * 		LOC
+	 * 		CLOC
+	 * 		SLOC-P
+	 * 		NOF
+	 * 		LOC-PF.
+	 * 		For more information on explanation, see the DEV\Tools\phpParser.
+	 */
+	public static function getMetrics($metFile)
+	{
+		// Load file
+		$parser = new DOMParser();
+		try
+		{
+			$parser->load($metFile, FALSE);
+		}
+		catch (Exception $ex)
+		{
+			return array();
+		}
+		
+		// Get metrics
+		$metrics = array();
+		$metrics['LOC'] = $parser->evaluate("//metrics/loc")->item(0)->nodeValue;
+		$metrics['CLOC'] = $parser->evaluate("//metrics/cloc")->item(0)->nodeValue;
+		$metrics['SLOC-P'] = $parser->evaluate("//metrics/slocp")->item(0)->nodeValue;
+		$metrics['NOF'] = $parser->evaluate("//metrics/nof")->item(0)->nodeValue;
+		$metrics['LOC-PF'] = $parser->evaluate("//metrics/locpf")->item(0)->nodeValue;
+		
+		// Return metrics data
+		return $metrics;
+	}
+	
+	/**
+	 * Update the source code's metrics data.
+	 * 
+	 * @param	string	$code
+	 * 		The source code to parse the metrics from.
+	 * 
+	 * @return	boolean
+	 * 		True on success, false on failure.
+	 */
+	private function updateMetrics($code)
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Get metrics
+		$metrics = phpParser::getMetrics($code);
+		
+		// Create xml file for uses
+		$parser = new DOMParser();
+		$root = $parser->create("metrics");
+		$parser->append($root);
+		
+		$m = $parser->create("loc", "".$metrics['LOC']);
+		$parser->append($root, $m);
+		$m = $parser->create("cloc", "".$metrics['CLOC']);
+		$parser->append($root, $m);
+		$m = $parser->create("slocp", "".$metrics['SLOC-P']);
+		$parser->append($root, $m);
+		$m = $parser->create("nof", "".$metrics['NOF']);
+		$parser->append($root, $m);
+		$m = $parser->create("locpf", "".$metrics['LOC-PF']);
+		$parser->append($root, $m);
+		
+		// Save file
+		return $parser->save($itemFolder.self::SOURCE_FOLDER."/metrics.xml");
+	}
+	
+	/**
+	 * Includes the object's source code file from the working branch's trunk.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function includeSourceCode()
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+
+		// Import
+		return importer::incl($itemFolder.self::SOURCE_FOLDER."/class.php", FALSE, TRUE);
+	}
+	
+	/**
+	 * Updates the documentation of the object's source code.
+	 * 
+	 * @param	string	$content
+	 * 		The documentation content in string format.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function updateSourceDoc($content = "")
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+		
+		$filepath = $itemFolder.self::SOURCE_FOLDER."/doc.xml";
+		$classDocumentor = new classDocumentor();
+		try
+		{
+			$classDocumentor->loadFile($filepath, FALSE);
+		}
+		catch (Exception $ex)
+		{
+			$classDocumentor->create($this->library, $this->package, $this->namespace);
+		}
+		
+		// Temporary For updating manual files
+		$classDocumentor->structUpdate($this->library, $this->package, $this->namespace);
+		$classDocumentor->update($this->name, $content);
+		
+		$manual = $classDocumentor->getDoc();
+		$parser = new DOMParser();		
+		$parser->loadContent($manual, "XML");
+		return $parser->save($filepath, '', TRUE);
+	}
+	
+	/**
+	 * Gets the object's documentation.
+	 * 
+	 * @return	string
+	 * 		The object's documentation in XML format.
+	 */
+	public function getSourceDoc()
+	{
+		// Get Item trunk folder
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Parse File
+		$parser = new DOMParser();
+		$filepath = $itemFolder.self::SOURCE_FOLDER."/doc.xml";
+		try
+		{
+			$parser->load($filepath, FALSE);
+		}
+		catch (Exception $ex)
+		{
+			$classDocumentor = new classDocumentor();
+			$classDocumentor->create($this->library, $this->package, $this->namespace);
+			
+			$manual = $classDocumentor->getDoc();				
+			$parser->loadContent($manual, "XML");
+			$parser->save($filepath, "", TRUE);
+		}
+		
+		return $parser->getXML();
+	}
+	
+	/**
+	 * Gets the object's javascript code.
+	 * 
+	 * @return	string
+	 * 		The object's javascript code.
+	 */
+	public function getJSCode()
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Get Class File contents
+		$code = "";
+		if (file_exists($itemFolder."script.js"))
+			$code = fileManager::get($itemFolder."script.js");
+		
+		return $code;
+	}
+	
+	/**
+	 * Updates the object's javascript code
+	 * 
+	 * @param	string	$code
+	 * 		The new javascript code.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function updateJSCode($code = "")
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// If code is empty, create an empty Javascript file
+		if ($code == "")
+			$code = phpParser::comment("Write Your Javascript Code Here", $multi = TRUE);
+		
+		// Clear Code
+		$code = phpParser::clear($code);
+		
+		// Save javascript file
+		return fileManager::create($itemFolder."/script.js", $code);
+	}
+	
+	/**
+	 * Loads the object's javascript code into the output buffer.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function loadJSCode()
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Import
+		return importer::incl($itemFolder."script.js", FALSE, FALSE);
+	}
+	
+	/**
+	 * Gets the object's css code.
+	 * 
+	 * @param	boolean	$normalCss
+	 * 		If true, return the parsed css code, else it returns the initial scss.
+	 * 		It is FALSE by default.
+	 * 
+	 * @return	string
+	 * 		The object's css code.
+	 */
+	public function getCSSCode($normalCss = FALSE)
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Get scss
+		$scss = fileManager::get($itemFolder.self::MODEL_FOLDER."/style.scss");
+		if (empty($scss) || $normalCss)
+		{
+			// If the scss is empty or the user requested the css specificly
+			return fileManager::get($itemFolder.self::MODEL_FOLDER."/style.css");
+		}
+		
+		// Return scss
+		return $scss;
+	}
+	
+	/**
+	 * Updates the object's css code.
+	 * 
+	 * @param	string	$code
+	 * 		The new css code.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function updateCSSCode($code = "")
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// If code is empty, create an empty CSS file
+		if (empty($code))
+			$code = phpParser::comment("Write Your CSS Style Rules Here", $multi = TRUE);
+		
+		// Update scss and css
+		$scss = cssParser::clear($code);
+		$status1 = fileManager::create($itemFolder.self::MODEL_FOLDER."/style.scss", $scss);
+		
+		// Compile scss to css
+		$css = scssParser::toCSS($scss);
+		$status2 = fileManager::create($itemFolder.self::MODEL_FOLDER."/style.css", $css);
+		
+		// Return update status
+		return $status1 && $status2;
+	}
+	
+	/**
+	 * Loads the object's css code into the output buffer.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function loadCSSCode()
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Import
+		importer::incl($itemFolder.self::MODEL_FOLDER."/style.css", FALSE, FALSE);
+	}
+	
+	/**
+	 * Gets the object's css model.
+	 * 
+	 * @return	string
+	 * 		The object's css model.
+	 */
+	public function getCSSModel()
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		
+		// Parse File
+		$parser = new DOMParser();
+		try
+		{
+			$parser->load($itemFolder.self::MODEL_FOLDER."/model.xml", FALSE, TRUE);
+			$root = $parser->evaluate("//model")->item(0);
+		}
+		catch (Exception $ex)
+		{
+			return "";
+		}
+		
+		return $parser->innerHTML($root);
+	}
+	
+	/**
+	 * Updates the object's css model.
+	 * 
+	 * @param	string	$model
+	 * 		The new css model in xml format.
+	 * 
+	 * @return	boolean
+	 * 		TRUE on success, FALSE on failure.
+	 */
+	public function updateCSSModel($model = "")
+	{
+		// Get Object Folder Path
+		$itemFolder = $this->getObjectFullPath();
+		$parser = new DOMParser();
+		
+		// Clear Code
+		$model = phpParser::clear($model);
+		try
+		{
+			$parser->load($itemFolder.self::MODEL_FOLDER."/model.xml", FALSE);
+			$root = $parser->evaluate("//model")->item(0);
+			if (is_null($root))
+				throw new Exception("Model root doesn't exist.");
+		}
+		catch (Exception $ex)
+		{
+			$root = $parser->create("model");
+			$parser->append($root);
+			$parser->save($itemFolder.self::MODEL_FOLDER."/", "model.xml", TRUE);
+		}
+		
+		// Update file
+		$parser->innerHTML($root, $model);
+		return $parser->update(TRUE);
+	}
+	
+	/**
+	 * Gets the item's library.
+	 * 
+	 * @return	string
+	 * 		The library name.
+	 */
+	public function getLibrary()
+	{
+		return $this->library;
+	}
+	
+	/**
+	 * Gets the item's package.
+	 * 
+	 * @return	string
+	 * 		The package name.
+	 */
+	public function getPackage()
+	{
+		return $this->package;
+	}
+	
+	/**
+	 * Gets the item's namespace.
+	 * 
+	 * @param	boolean	$full
+	 * 		If TRUE, includes the library and the package in the return value.
+	 * 
+	 * @return	string
+	 * 		The object's namespace.
+	 */
+	public function getNamespace($full = FALSE)
+	{
+		$namespace = str_replace("::", "\\", $this->namespace);
+		$namespace = str_replace("/", "\\", $this->namespace);
+		$namespace = (empty($namespace) ? "" : "\\".$namespace);
+		$namespace = ($full ? $this->library."\\".$this->package : "").$namespace;
+		return $namespace;
+	}
+	
+	/**
+	 * Gets the item's full name (including the extension).
+	 * 
+	 * @return	string
+	 * 		The item's fullname.
+	 */
+	protected function getItemFullname()
+	{
+		return $this->name.".".self::FILE_TYPE;
+	}
+}
+//#section_end#
+?>

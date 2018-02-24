@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\SYS\Comm\db\dbConnection"></use><use path="\DEV\Projects\project"></use><use path="\API\Model\sql\dbQuery"></use><use path="\API\Resources\DOMParser"></use><use path="\API\Platform\importer"></use><use path="\API\Resources\filesystem\folderManager"></use><use path="\API\Resources\filesystem\directory"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\API\Resources\archive\zipManager"></use><use path="\API\Profile\account"></use></dependencies>

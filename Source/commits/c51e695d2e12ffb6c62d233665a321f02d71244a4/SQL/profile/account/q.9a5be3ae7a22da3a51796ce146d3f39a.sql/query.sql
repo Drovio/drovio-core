@@ -1,0 +1,1 @@
+SELECT COUNT(PLM_account.id) FROM PLM_account;

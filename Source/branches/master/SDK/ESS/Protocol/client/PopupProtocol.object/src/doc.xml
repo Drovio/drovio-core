@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client">
+  <class name="PopupProtocol" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362732720</datecreated>
+      <daterevised>1415273587</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Popup Protocol</title>
+      <description>This is the protocol responsible for showing content in a popup form.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="addAction" returntype="void" static="true">
+          <description>Adds the popup action listener to the given DOMElement.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The element that will call the popup.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$auxName" type="string" defaultvalue="">
+              <description>The auxiliary name of the module (if specified).</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes to be passed to the module with the GET method.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

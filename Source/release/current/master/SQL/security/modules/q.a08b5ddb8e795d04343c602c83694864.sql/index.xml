@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="16283295428182"><title>Get Module Key Access Status</title><description></description><access></access><attributes><attr id="module_id"></attr><attr id="account_id"></attr><attr id="group_ids"></attr></attributes></query>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\units\modules">
+  <class name="moduleGroup" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1385458271</datecreated>
+      <daterevised>1385807193</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Group Manager</title>
+      <description>Manages module groups</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="groupTrails" static="true">
+          <description>All the group trails for each group. Expands incrementally on each different request.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getTrail" returntype="string" static="true">
+          <description>Gets the group trail for a given group id.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+            <parameter name="$delimiter" type="string" defaultvalue="">
+              <description>The delimiter for the path. By default it is the directory delimiter "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The group path from the root.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean" static="true">
+          <description>Creates a new module group.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The group description (name).</description>
+            </parameter>
+            <parameter name="$parent_id" type="integer" defaultvalue="">
+              <description>The parent group id. Leave empty for root groups.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Deletes an existing module group.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id to be deleted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the group directory name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The group directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

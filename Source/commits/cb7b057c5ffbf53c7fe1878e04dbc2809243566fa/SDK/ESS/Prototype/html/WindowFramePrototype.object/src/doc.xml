@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="WindowFramePrototype" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1368103882</datecreated>
+      <daterevised>1438075136</daterevised>
+      <extends>
+        <object>\UI\Prototype\WindowFramePrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Window Frame Prototype</title>
+      <description>It's the window frame prototype for building frames (windows, dialogs etc.).</description>
+      <deprecated>Use \UI\Prototype\WindowFramePrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

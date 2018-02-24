@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\http">
+  <class name="HTTPRequest" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1415195531</datecreated>
+      <daterevised>1418208336</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>HTTP Request Manager</title>
+      <description>Manages all the information that the HTTP request transfers from the client to the server.
+
+It is designer to provide data independent of the kind of the request (stateless or stateful).</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="request" static="true">
+          <description>An array containing all the request variables (name and value).</description>
+        </prop>
+        <prop type="array" name="cookies" static="true">
+          <description>An array containing all the client cookies (name and value), for web access only.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Initializes the request with all the data.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="requestMethod" returntype="string" static="true">
+          <description>Get the request method string.</description>
+          <parameters/>
+          <returndescription>The request method string in uppercase.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getVar" returntype="mixed" static="true">
+          <description>Get a variable from the request.
+It can include cookies for web content.
+
+It works independently and can get a variable from the url or from a cookie without the user knowing.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable name.</description>
+            </parameter>
+            <parameter name="$cookieName" type="string" defaultvalue="">
+              <description>The cookie name.
+If this is set, the function will search for the cookie variable if not found in the request variables.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The variable value or NULL if the variable doesn't exist in the requested scope.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

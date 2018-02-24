@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Finances" namespace="\">
+  <class name="prices" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1417518282</datecreated>
+      <daterevised>1417518282</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Retail Price Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPriceTypes" returntype="array" static="true">
+          <description>Get all company price types, including global types.</description>
+          <parameters/>
+          <returndescription>An array of all price types.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

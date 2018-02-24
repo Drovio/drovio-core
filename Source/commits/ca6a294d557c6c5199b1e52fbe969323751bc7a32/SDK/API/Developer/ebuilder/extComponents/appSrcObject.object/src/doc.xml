@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\ebuilder\extComponents">
+  <class namespace="" abstract="" name="appSrcObject">
+    <info>
+      <version/>
+      <datecreated>1381337064</datecreated>
+      <daterevised>1389727472</daterevised>
+      <extends>\API\Developer\ebuilder\extComponents\extSrcObject</extends>
+      <implements/>
+      <throws/>
+      <title>appSrcObjec</title>
+      <description/>
+      <deprecated>Not In Use</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected">
+        <method returntype="void" name="buildIndexBase">
+          <description/>
+          <parameters>
+            <parameter defaultvalue="" type="" name="$builder">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method returntype="void" name="buildImportsIndex">
+          <description/>
+          <parameters>
+            <parameter defaultvalue="" type="" name="$builder">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method returntype="void" name="buildImports">
+          <description/>
+          <parameters>
+            <parameter defaultvalue="" type="" name="$importsArray">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method returntype="void" name="loadImports">
+          <description/>
+          <parameters>
+            <parameter defaultvalue="" type="" name="$parser">
+              <description/>
+            </parameter>
+            <parameter defaultvalue="" type="" name="$base">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method returntype="void" name="updateIndexInfo">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

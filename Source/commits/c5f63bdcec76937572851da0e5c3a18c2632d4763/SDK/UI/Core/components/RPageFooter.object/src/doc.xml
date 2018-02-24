@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\components">
+  <class name="RPageFooter" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1402467776</datecreated>
+      <daterevised>1420812627</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback's Page Footer</title>
+      <description>It's a singleton pattern implementation for Redback Core page footer.
+Builds the basic global footer for all pages across all domains in redback.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="RPageFooter" name="instance" static="true">
+          <description>The singleton's instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="RPageFooter" static="true">
+          <description>Gets the instance of the RPageFooter.</description>
+          <parameters/>
+          <returndescription>The RPageFooter unique instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="RPageFooter">
+          <description>Builds the navigation footer.</description>
+          <parameters/>
+          <returndescription>The page footer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Constructor function for RPageFooter Instance.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getBull" returntype="DOMElement">
+          <description>Creates a span with &amp;amp;bull; as value.</description>
+          <parameters/>
+          <returndescription>The bull span.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

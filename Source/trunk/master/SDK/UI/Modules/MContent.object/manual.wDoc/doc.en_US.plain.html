@@ -1,0 +1,71 @@
+<h1>Module HTML Async Content Builder</h1>
+<p>MContent is the HTMLContent for module developers. It provides access to all module mechanisms and interacts with module resources and components.</p>
+<p>Through this class, the module can deliver UI content or even action events. It also can create containers where another module views will be loaded sync or async.</p>
+<div class="code">
+	<pre>// Building a custom Module content
+	
+// Use the class
+use \UI\Content\MContent;
+
+// Create the object and give the module id to recognize literals and other stuff
+$pageContent = new MContent($moduleID);
+
+// Get the action factory to create async actions
+$actionFactory = $pageContent->getActionFactory();
+
+// This is a UIObject, so we build, just like HTMLContent
+$pageContent->build($id = "container_id", $class = "container_class", $loadHTML = TRUE);</pre>
+</div>
+<p>We can create DOMElements using DOM or HTML and append them in the content. In case of static html, we can also search using HTML and alter the content.</p>
+<div class="code">
+	<pre>// Create DOMElements using DOM or HTML and append them in the content
+$div = DOM::create("div", "", "", "mainContainer");
+$htmlContent->append($div);
+
+// Search and alter the content
+$ctitle = HTML::select(".container_class .ctitle")->item(0);
+HTML::innerHTML($ctitle, "This is the new title.");
+
+// We can also use the entire UI library to create objects and append them in the container
+$tabber = new tabControl();
+$testTabber = $tabber->build()->get();
+DOM::append($div, $testTabber);</pre>
+</div>
+<p>Finally we can create an async action to another module view (GET request) or even get module containers (are reloadable and can load async) and append them to content.</p>
+<div class="code">
+	<pre>// Create an async action to another module view (GET request)
+$button = HTML::select(".newSomething")->item(0);
+$actionFactory->setModuleAction($button, $moduleID, "someDialog");
+
+
+// Or load a module synchronously
+$mView = $pageContent->loadView($moduleID, "secondView");
+$pageContent->append($mView);
+
+
+// Or create a module container receiver to load asynchronously
+// The difference between this and the previous is that the container is reloadable through Javascript (mContainer.trigger("reload"))
+$mContainer = $pageContent->getModuleContainer($moduleID, $viewName = "thirdView", $attr = array(), $startup = TRUE, $containerID = "", $loading = FALSE, $preload = FALSE);
+$pageContent->append($mContainer);</pre>
+</div>
+<p>Having created all the content, its time we returned the report to the loader.</p>
+<div class="code">
+	<pre>// After we have created the content, we send the report to the client
+// We can define the holder where the content is going to be appended
+// We can choose to replace all the inner html of the destination
+return $htmlContent->getReport($holder = ".testContainer", $method = HTMLContent::REPLACE_METHOD);</pre>
+</div>
+<h2>Dynamic content in static html</h2>
+<p>MContent contains mechanisms that allow the developer to insert dynamic content inside the static html. Using data attributes, the content can include literals and resolve urls.</p>
+<h3>Dynamic Literals</h3>
+<p>We can set an element to load a module literal as child using the data-literal attribute as follows:</p>
+<div class="code">
+	<pre>data-literal='{"name":"lbl_title"}'</pre>
+</div>
+<h3>Dynamic Urls</h3>
+<p>We can set a weblink to dynamically assign an href attribute inside Redback:</p>
+<div class="code">
+	<pre>data-href='{"domain":"developer","page":"/docs/index.php"}'
+	
+The above will resolve into: https://developer.redback.io/docs/index.php</pre>
+</div>

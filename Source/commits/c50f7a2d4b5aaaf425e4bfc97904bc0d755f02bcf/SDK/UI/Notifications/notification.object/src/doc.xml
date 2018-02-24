@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Notifications" namespace="\">
+  <class name="notification" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362999900</datecreated>
+      <daterevised>1400919275</daterevised>
+      <extends>\UI\Notifications\message</extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Presentation\notification instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

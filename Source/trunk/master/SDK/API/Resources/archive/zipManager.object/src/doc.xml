@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\archive">
+  <class name="zipManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1365708900</datecreated>
+      <daterevised>1421516627</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Zip Manager</title>
+      <description>System's zip archive manager</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="LOCATION">
+        <description>Used in zipManager::read() to get resource's location inside the zip file</description>
+      </const>
+      <const type="integer" name="RESOURCE">
+        <description>Used in zipManager::read() to get resource from a zip file</description>
+      </const>
+      <const type="integer" name="CONTENTS">
+        <description>Used in zipManager::read() to get resource's contents from the zip file</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="exists" returntype="boolean" static="true">
+          <description>Checks if a file exists and is a zip archive</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if file exists and is a zip archive, false otherwise</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a zip archive that contains the desired files/folders.</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the new archive</description>
+            </parameter>
+            <parameter name="$contents" type="array" defaultvalue="">
+              <description>An array that holds the paths of the files/folders to include in the zip:
+['dirs'] for directories
+['files'] for files</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>If set to TRUE, all necessary parent folders of the archive will be created as well.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>If set to TRUE, hidden files and folders will be included in the zip.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="extract" returntype="boolean" static="true">
+          <description>Extracts the contents of a zip archive to the specified location.</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The location where the extracted files will be placed into.</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>If set to TRUE, all necessary parent folders of the destination folder will be created as well.</description>
+            </parameter>
+            <parameter name="$entries" type="mixed" defaultvalue="">
+              <description>A (list of) file(s) / index(es) inside the zip that represents the file(s) to be extracted. If left empty, the whole archive is extracted.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="getDetails" returntype="array" static="true">
+          <description>Returns the details of a zip archive in an array.</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$entry" type="mixed" defaultvalue="">
+              <description>Get specific details for an entry by giving its name or index in the archive</description>
+            </parameter>
+            <parameter name="$byName" type="boolean" defaultvalue="">
+              <description>Request result array keys to be the entries indicies, or names (if set to TRUE)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The details of a zip archive:
+['archive'] for general details
+['entries'] for specific entry details
+
+The general details include the following (keys):
+	length		-&amp;gt; Number of entries in the archive
+	status		-&amp;gt; The status of the archive in readable form
+	_status		-&amp;gt; The archive status code
+	_systemStatus	-&amp;gt; The system's status code
+	file		-&amp;gt; Name of the archive file
+	comment		-&amp;gt; Archive's comment
+
+The entry details include the following (keys):
+	name		-&amp;gt; Entry's name in the archive
+	index		-&amp;gt; Entry's index in the archive
+	crc		-&amp;gt; Entry's crc code
+	size		-&amp;gt; Entry's uncompressed size in bytes
+	lastModified	-&amp;gt; Last modification time of the file that represents the entry
+	compressedSize	-&amp;gt; Entry's compressed size in bytes
+	compressionMethod	-&amp;gt; The amount (code) of compression in the archive</returndescription>
+          <throws/>
+        </method>
+        <method name="append" returntype="boolean" static="true">
+          <description>Appends files/folders in the archive</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$files" type="array" defaultvalue="">
+              <description>An array that holds the paths of the files/folders to append in the zip:
+['dirs'] for directories
+['files'] for files</description>
+            </parameter>
+            <parameter name="$innerDirectory" type="string" defaultvalue="">
+              <description>A directory inside the archive where the appended files will be placed. If empty, all files will be appended in the archive's root</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>If set to TRUE, hidden files and folders will be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="createInnerDirectory" returntype="boolean" static="true">
+          <description>Creates an empty dir in an archive</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive</description>
+            </parameter>
+            <parameter name="$innerDirectoryName" type="string" defaultvalue="">
+              <description>Name of the new folder</description>
+            </parameter>
+            <parameter name="$innerParentDirectory" type="string" defaultvalue="">
+              <description>Path inside the archive</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createInnerFile" returntype="boolean" static="true">
+          <description>Appends "on the fly" the $fileContents in the specified archive</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive</description>
+            </parameter>
+            <parameter name="$fileContents" type="string" defaultvalue="">
+              <description>Contents for the file in the archive</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>Name of the file in the archive</description>
+            </parameter>
+            <parameter name="$innerDirectory" type="string" defaultvalue="">
+              <description>Inner archive directory where the file will be placed</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Removes files/folders from the archive</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$contents" type="mixed" defaultvalue="">
+              <description>A (list of) file(s) / index(es) inside the zip that represents the file(s) to be removed.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="rename" returntype="boolean" static="true">
+          <description>Renames the contents of the archive</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$contents" type="mixed" defaultvalue="">
+              <description>A (list of) file(s) / index(es) inside the zip that represents the file(s) to be renamed.</description>
+            </parameter>
+            <parameter name="$newNames" type="mixed" defaultvalue="">
+              <description>A (list of) new name(s) for the renamed entries.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="copy" returntype="boolean" static="true">
+          <description>Relocates contents inside the archive (NOT YET IMPLEMENTED)</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$origins" type="mixed" defaultvalue="">
+              <description>A (list of) file(s) / index(es) inside the zip that represents the file(s) to be relocated.</description>
+            </parameter>
+            <parameter name="$destinations" type="mixed" defaultvalue="">
+              <description>A (list of) destination(s) for the relocated entries.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="read" returntype="mixed" static="true">
+          <description>Reads a source from the archive.</description>
+          <parameters>
+            <parameter name="$archive" type="string" defaultvalue="">
+              <description>The path of the archive.</description>
+            </parameter>
+            <parameter name="$identifier" type="mixed" defaultvalue="">
+              <description>A file / index inside the zip that represent the file to be read.</description>
+            </parameter>
+            <parameter name="$typeOfResponse" type="integer" defaultvalue="">
+              <description>The type of the returned value. Use zipManager::LOCATION for the location of the resource, zipManager::CONTENTS for the contents of the resource, and zipManager::RESOURCE for the resource itself.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns either the location of the resource, the contents of the resource, or the resource itself.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="readFile" returntype="string" static="true">
+          <description>Reads the contents of an entry</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$identifier" type="string" defaultvalue="">
+              <description>The name of an entry inside the archive</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The contents of a file inside the archive.</returndescription>
+          <throws/>
+        </method>
+        <method name="acquireDetails" returntype="array" static="true">
+          <description>Acquires the details of an archive and some or all of the entries of the archive</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$entry" type="mixed" defaultvalue="">
+              <description>A name or index of an entry to acquire details for. If empty the details of the whole archive are acquired.</description>
+            </parameter>
+            <parameter name="$byName" type="boolean" defaultvalue="">
+              <description>Request result array keys to be the entries indicies, or names (if set to TRUE)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>An array holding the details:
+archive -&amp;gt; 
+	length : number of entries in the archive,
+	status : status of the archive,
+	_status : status code of the archive,
+	_systemStatus : status system code of the archive,
+	file : name of the archive,
+	comment : comment of the archive
+
+entries -&amp;gt; index -&amp;gt;
+	crc : entry's crc code,
+	lastModified : entry's last date of modification,
+	compressedSize : entry's compressed size,
+	compressionMethod : entry's compression method</returndescription>
+          <throws/>
+        </method>
+        <method name="identify" returntype="string" static="true">
+          <description>Returns the name of an entry</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$index" type="integer" defaultvalue="">
+              <description>The index of the entry</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Name of an entry inside an archive</returndescription>
+          <throws/>
+        </method>
+        <method name="locate" returntype="integer" static="true">
+          <description>Returns the index of an entry</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the entry</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Index of an entry inside an archive</returndescription>
+          <throws/>
+        </method>
+        <method name="comment" returntype="mixed" static="true">
+          <description>Sets / Gets comments inside the archive</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$comment" type="string" defaultvalue="">
+              <description>The comment to set in the archive. If empty, the already set comment is acquired, instead</description>
+            </parameter>
+            <parameter name="$identifier" type="mixed" defaultvalue="">
+              <description>The name or index of an entry to get or set a comment for</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Either the comment of an entry or the status of the commenting process</returndescription>
+          <throws/>
+        </method>
+        <method name="zipFiles" returntype="boolean" static="true">
+          <description>Packs the specified files in a zip archive</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$contents" type="array" defaultvalue="">
+              <description>An array that holds the paths of the files/folders to include in the zip:
+['dirs'] for directories
+['files'] for files</description>
+            </parameter>
+            <parameter name="$localname" type="string" defaultvalue="">
+              <description>This is used to adjust the inner path of a file in the zip when packing folder's contents recursively.</description>
+            </parameter>
+            <parameter name="$innerDirectory" type="string" defaultvalue="">
+              <description>The directory where the files will be added in the zip.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>If set to TRUE, hidden files and folders will be included.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="removeFiles" returntype="boolean" static="true">
+          <description>Removes files from an archive</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$contents" type="array" defaultvalue="">
+              <description>List of contents to be removed, in the form of name or index</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="renameFiles" returntype="boolean" static="true">
+          <description>Renames files in an archive</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$contents" type="array" defaultvalue="">
+              <description>A list of contents to be renamed, in the form of names or indexes</description>
+            </parameter>
+            <parameter name="$newNames" type="array" defaultvalue="">
+              <description>A list of new names for the contents</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+        <method name="copyFiles" returntype="boolean" static="true">
+          <description>Relocates files in an archive. (NOT IMPLEMENTED YET)</description>
+          <parameters>
+            <parameter name="$zip" type="ZipArchive" defaultvalue="">
+              <description>A ZipArchive object that handles a zip file</description>
+            </parameter>
+            <parameter name="$origins" type="array" defaultvalue="">
+              <description>A list of origin files in the archive to be relocated.</description>
+            </parameter>
+            <parameter name="$destinations" type="array" defaultvalue="">
+              <description>A list of destinations in the archive.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

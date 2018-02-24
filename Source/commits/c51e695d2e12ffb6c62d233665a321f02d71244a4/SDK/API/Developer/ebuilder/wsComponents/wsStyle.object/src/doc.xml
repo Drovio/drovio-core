@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="wsStyle" abstract="" namespace="\ebuilder\wsComponents">
+    <info>
+      <version/>
+      <datecreated>1372840950</datecreated>
+      <daterevised>1372841032</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Style</title>
+      <description>Responsible for the style of a website</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The object's file type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devPath">
+          <description>The object's developer path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the style object.</description>
+          <parameters>
+            <parameter name="$devPath" type="string" defaultvalue="">
+              <description>The website inner path for the object.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new style object.</description>
+          <parameters>
+            <parameter name="$styleName" type="string" defaultvalue="">
+              <description>The style's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the style source code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceCode" returntype="string">
+          <description>Returns the style's source code</description>
+          <parameters/>
+          <returndescription>The returned source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="boolean">
+          <description>Commits the object to the version control.</description>
+          <parameters>
+            <parameter name="$description" type="status" defaultvalue="">
+              <description>The commit description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\modules">
+  <class name="AbstractModule" abstract="true" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363346040</datecreated>
+      <daterevised>1389773475</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>Abstract Module Manager</title>
+      <description>Manages the base information common for modules and auxiliaries.</description>
+      <deprecated>Use units\modules\module instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="REPOSITORY">
+        <description>The repository root directory.</description>
+      </const>
+      <const type="string" name="EXPORT_PATH">
+        <description>The exported path in the system's root.</description>
+      </const>
+      <const type="string" name="REPOSITORY_PATH">
+        <description>The inner repository directory.</description>
+      </const>
+      <const type="string" name="FILE_TYPE" class="undefined">
+        <description>The module's file type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="id">
+          <description>The module's id</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>The module's title</description>
+        </prop>
+        <prop type="string" name="description">
+          <description>The module's description</description>
+        </prop>
+        <prop type="integer" name="groupID">
+          <description>The parent's module group id.</description>
+        </prop>
+        <prop type="string" name="repositoryDir">
+          <description>The repository's directory where the vcs will be initialized.</description>
+        </prop>
+        <prop type="string" name="exportDir">
+          <description>The directory where source files are exported.</description>
+        </prop>
+        <prop type="array" name="imports">
+          <description>Keeps all the package imports of the module.</description>
+        </prop>
+        <prop type="array" name="innerModules">
+          <description>Keeps all the inner modules used by this module.</description>
+        </prop>
+        <prop type="string" name="sourceCode">
+          <description>The module's source code.</description>
+        </prop>
+        <prop type="boolean" name="initialized" class="undefined">
+          <description>Whether the module has been initialized.</description>
+        </prop>
+        <prop type="interDbConnection" name="dbc">
+          <description>The database connection manager.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="" name="withCSS" class="undefined">
+          <description/>
+        </prop>
+        <prop type="" name="withJS" class="undefined">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" returntype="mixed" abstract="true">
+          <description>Initializes the object.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean" abstract="true">
+          <description>Creates a new object.</description>
+          <parameters>
+            <parameter name="$parentID" type="string" defaultvalue="">
+              <description>The parent's id (module or moduleGroup)</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="boolean" abstract="true">
+          <description>Deletes the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTitle" returntype="string" class="undefined">
+          <description>Get the module's title.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getDescription" returntype="string" class="undefined">
+          <description>Gets the module's description.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getImports" returntype="array" class="undefined">
+          <description>Get the module's packages import.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getInnerModules" returntype="array" class="undefined">
+          <description>Get the module's inner modules.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setImports" returntype="void">
+          <description>Sets the import objects array.</description>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The imported packages.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setTitle" returntype="void">
+          <description>Sets the object's title.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setInnerModules" returntype="void">
+          <description>Sets the inner modules used by this object.</description>
+          <parameters>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>The inner modules.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getSourceCode" returntype="string">
+          <description>Gets the source code of the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCSSCode" returntype="string" class="undefined">
+          <description>Gets the css code of the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateCSSCode" returntype="boolean" class="undefined">
+          <description>Update the css code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getJSCode" returntype="string" class="undefined">
+          <description>Gets the javascript code of the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateJSCode" returntype="boolean" class="undefined">
+          <description>Update the javascript code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads all the information available for the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="commitCheckout" returntype="void">
+          <description>Performs the commit and checkout action to version control.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The commit description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="commit" returntype="void">
+          <description>Performs the commit action to version control.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The commit description.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="checkout" returntype="void">
+          <description>Performs the checkout action to version control.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="void">
+          <description>Exports the module to latest along with its css and javascript resources.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="run" returntype="void">
+          <description>Executes the object's source code script (from the trunk).</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="hasCSS" returntype="boolean" class="undefined">
+          <description>Returns indicator whether this module has CSS code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="hasJS" returntype="boolean" class="undefined">
+          <description>Returns indicator whether this module has javascript code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getAuxiliaries" returntype="array">
+          <description>Get all auxiliaries of the module.</description>
+          <parameters/>
+          <returndescription>An array of auxiliaryes [id] =&amp;gt; [title].</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getFileName" returntype="string" abstract="true">
+          <description>Gets the hashed filename of the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="initializeInfo" returntype="void">
+          <description>Initializes the object's variables.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildIndexBase" returntype="DOMElement">
+          <description>Builds the object's index base element.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser used to build the element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildImportsIndex" returntype="DOMElement">
+          <description>Builds the object's import index element.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser used to build the element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildInnerModulesIndex" returntype="DOMElement">
+          <description>Builds the object's inner modules index element.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser used to build the element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildHeader" returntype="string">
+          <description>Builds the source's header code.</description>
+          <parameters>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description>Whether the code generated will be wrapped in section or not.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getDefaultSourceCode" returntype="string">
+          <description>Gets the default module's source code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getIndexBase" returntype="DOMElement">
+          <description>Builds the outer index base element.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser used to build the element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadInfo" returntype="void">
+          <description>Loads the object's info (imports and inner modules)</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadDatabaseInfo" returntype="void">
+          <description>Load the object's info from the database.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateIndexInfo" returntype="void">
+          <description>Updates the index base information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new object's title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The new object's description.</description>
+            </parameter>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The object's import packages.</description>
+            </parameter>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>The object's inner modules.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateSourceCode" returntype="boolean">
+          <description>Updates the object's source code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new source code. If empty, the default code will be set.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getWorkingBranch" returntype="string">
+          <description>Gets the current working branch for the version control.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="buildImports" returntype="string">
+          <description>Builds the import section of the source code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadImports" returntype="void">
+          <description>Loads the import objects from the index file.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file.</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The object's index base element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadInnerModules" returntype="void">
+          <description>Loads the inner modules from the index file.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file.</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The object's index base element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateIndexBase" returntype="void" class="undefined">
+          <description>Updates the index base element in the trunk.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Security" namespace="\">
+  <class name="publicKey" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>5</build>
+      <datecreated>1444829273</datecreated>
+      <daterevised>1447789482</daterevised>
+      <extends>
+        <object>\AEL\Security\appKey</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Public Key Handler</title>
+      <description>This class provides an interface for editing the application public keys.
+Public keys allow developer teams to provide authentication on the client side using javascript to communicate with the api.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="APP_PUBLIC_KEY">
+        <description>The application public key type id.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new public key between the team and the application.</description>
+          <parameters/>
+          <returndescription>The key created on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamID" returntype="integer" static="true">
+          <description>Get the team id that is connected to the given api key.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The api key.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The team id or null if the key is invalid.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validate if the given key is public and connected to the given team (for the current running application).</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The key to validate.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to validate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="regenerateKey" returntype="mixed" static="true">
+          <description>Regenerate the given api key.
+This function will keep the current key valid for 24 hours.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The key to regenerate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new key on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove the api key from the application (and the database).</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The api key to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,180 @@
+.loginDialog {
+	position: relative;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 25px;
+	text-align: center;
+	min-width: 250px;
+	max-width: 450px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: auto;
+}
+.loginDialog {
+	.header {
+		& {
+			overflow: auto;
+		}
+		.logo {
+			width: 60px;
+			height: 60px;
+			margin: 10px;
+			float: left;
+			background: url('%{cdn}/media/logos/dlogo.png') no-repeat center;
+			background-size: cover;
+		}
+		.ltitle {
+			line-height: 60px;
+			font-weight: normal;
+			font-size: 24px;
+			color: #555459;
+			margin: 10px 0px;
+			padding: 0px 10px;
+		}
+		&.dialog .ltitle {
+			float: left;
+		}
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 24px;
+			height: 24px;
+			background: url('%{media}/global/closeX.svg') no-repeat center;
+			background-position: 0px -24px;
+			background-size: cover;
+			cursor: pointer;
+		}
+	}
+	.main {
+		clear: both;
+		overflow: auto;
+	}
+	.main {
+		.formContainer {
+			padding: 5px;
+		}
+		.lpinp {
+			width: 100%;
+			padding: 10px 12px;
+			margin: 8px 0px;
+			font-size: 14px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			border-radius: 3px;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-color: #777;
+			color: #777;
+			outline-color: #CCC;
+		}
+		button[type='submit'] {
+			padding: 8px 10px;
+			width: 150px;
+			margin: 0px auto;
+			margin-top: 15px;
+			font-size: 13px;
+			border-color: rgba(0, 0, 0, 0.1);
+			background: #ff5252;
+			background-image: -webkit-linear-gradient(top, #ff6161 0%, #ff4343 100%);
+			background-image: -o-linear-gradient(top, #ff6161 0%, #ff4343 100%);
+			background-image: linear-gradient(to bottom, #ff6161 0%, #ff4343 100%);
+			background-repeat: repeat-x;
+			color: #FFF;
+			transition: background .2s ease-in-out;
+			-webkit-transition: background .2s ease-in-out;
+			-moz-transition: background .2s ease-in-out;
+		}
+		button[type='submit']:hover {
+			border-color: rgba(0, 0, 0, 0.1);
+			background: #ff4343;
+			background-image: -webkit-linear-gradient(top, #ff5252 0%, #ff2e2e 100%);
+			background-image: -o-linear-gradient(top, #ff5252 0%, #ff2e2e 100%);
+			background-image: linear-gradient(to bottom, #ff5252 0%, #ff2e2e 100%);
+			background-repeat: repeat-x;
+			color: white;
+			outline: none;
+			transition: background .2s ease-in-out;
+			-webkit-transition: background .2s ease-in-out;
+			-moz-transition: background .2s ease-in-out;
+		}
+		.rcont {
+			margin-top: 10px;
+			overflow: auto;
+		}
+		.rocnt {
+			width: 50%;
+			float: left;
+			padding: 5px 10px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		.rocnt .ricnt {
+			background: linear-gradient(#FEFEFE, #f0f0f0);
+			border: 1px solid #CCC;
+			border-color: #cdced0 #c5c6c8 #b6b7b9;
+			border-radius: 3px;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+		}
+		.rocnt .ricnt label {
+			display: block;
+			padding: 10px 5px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		.rocnt.selected .ricnt {
+			background: linear-gradient(rgb(45, 171, 220), rgb(14, 149, 211));
+			border: 1px solid rgb(10, 104, 146);
+			color: #FFF;
+		}
+		.rocnt .ricnt input[type='radio'] {
+			display: none;
+		}
+		.rnotes {
+			color: rgb(10, 104, 146);
+			font-size: 10px;
+			text-align: center;
+			padding-top: 5px;
+			clear: both;
+		}
+		.rnotes .nt {
+			display: none;
+		}
+		.rnotes .nt.selected {
+			display: inline-block;
+		}
+	}
+	.footer {
+		& {
+			border-top: 1px solid #CCC;
+			margin-top: 10px;
+			color: #777;
+			font-weight: normal;
+			padding-top: 10px;
+		}
+		h4 {
+			text-align: left;
+			display: inline-block;
+			padding: 0px 5px;
+			margin: 5px 0px;
+		}
+		.register a {
+			color: #555459;
+			font-weight: bold;
+		}
+		.register:hover a {
+			text-decoration: underline;
+		}
+		.forgot a {
+			color: #777;
+		}
+		.forgot:hover a {
+			text-decoration: underline;
+		}
+	}
+}

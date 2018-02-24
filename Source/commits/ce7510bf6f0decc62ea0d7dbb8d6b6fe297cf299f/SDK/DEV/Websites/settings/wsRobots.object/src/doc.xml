@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\settings">
+  <class name="wsRobots" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1420198003</datecreated>
+      <daterevised>1420198003</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Robots file editor</title>
+      <description>Manages the website's robots txt file.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="website" name="website">
+          <description>The website object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the robots editor.</description>
+          <parameters>
+            <parameter name="$websiteID" type="integer" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Set the robots text file content.</description>
+          <parameters>
+            <parameter name="$robots" type="string" defaultvalue="">
+              <description>The robots text file</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Get the website robots context.</description>
+          <parameters/>
+          <returndescription>The robots text file content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

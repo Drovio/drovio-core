@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="gridView" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1367492638</datecreated>
+      <daterevised>1367495509</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>Grid View</title>
+      <description>Builds a table-like, box-like grid for visual presentation of elements.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="columns">
+          <description>The number of columns in the grid.</description>
+        </prop>
+        <prop type="integer" name="rows">
+          <description>The number of rows in the grid.</description>
+        </prop>
+        <prop type="DOMElement" name="gridList">
+          <description>The gridList element.</description>
+        </prop>
+        <prop type="array" name="cells">
+          <description>Two-dimension array of cells for appending content at any time.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The object's id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes this object.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The object's id. If none given, random is generated.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="gridView">
+          <description>Builds the body of the entire gridView.</description>
+          <parameters>
+            <parameter name="$rows" type="integer" defaultvalue="">
+              <description>The number of rows in the grid.</description>
+            </parameter>
+            <parameter name="$columns" type="integer" defaultvalue="">
+              <description>The number of columns in the grid.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="append" returntype="gridView">
+          <description>Appends content to a grid cell.</description>
+          <parameters>
+            <parameter name="$row" type="integer" defaultvalue="">
+              <description>The row of the cell.</description>
+            </parameter>
+            <parameter name="$column" type="integer" defaultvalue="">
+              <description>The column of the cell.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content of the cell.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Creates the dataGridList container</description>
+          <parameters>
+            <parameter name="$width" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$height" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use build()-&amp;gt;get() instead.</deprecated>
+        </method>
+        <method name="set_content" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$row" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$column" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use append() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="createStructure" returntype="void">
+          <description>Creates the structure of the cells.</description>
+          <parameters>
+            <parameter name="$columns" type="integer" defaultvalue="">
+              <description>The number of columns.</description>
+            </parameter>
+            <parameter name="$rows" type="string" defaultvalue="">
+              <description>The number of rows.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

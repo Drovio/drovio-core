@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\environment">
+  <class name="State" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1406649669</datecreated>
+      <daterevised>1406649669</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Browser State Manager</title>
+      <description>Manages all the browser's state changes (Javascript) and keeps a history of what is happening.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

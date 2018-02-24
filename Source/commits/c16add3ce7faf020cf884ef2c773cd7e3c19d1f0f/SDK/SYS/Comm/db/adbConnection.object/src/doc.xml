@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Comm" namespace="\db">
+  <class name="adbConnection" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1444391267</datecreated>
+      <daterevised>1444391267</daterevised>
+      <extends>
+        <object>\API\Comm\database\dbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Abstract system database connection handler</title>
+      <description>Connects to MySQL database and executes platform's dbQueries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="settings" static="true">
+          <description>The database server settings.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="execute" returntype="mixed">
+          <description>Executes a platform sql query (dbQuery) to the redback database.</description>
+          <parameters>
+            <parameter name="$dbQuery" type="dbQuery" defaultvalue="">
+              <description>The query to be executed.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A number of attributes to be passed as arguments to the query.
+It is an associative array.
+The array is empty by default.</description>
+            </parameter>
+            <parameter name="$commit" type="boolean" defaultvalue="">
+              <description>Whether to commit the transaction  after the last query or not.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>For successful SELECT, SHOW, DESCRIBE or EXPLAIN queries mysqli_query() will return a mysqli_result object.
+For other successful queries mysqli_query() will return TRUE.
+Returns FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getServerSettings" returntype="array">
+          <description>Get the server connection credentials.</description>
+          <parameters>
+            <parameter name="$settingsName" type="string" defaultvalue="">
+              <description>The settings file name to get from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The server credentials.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

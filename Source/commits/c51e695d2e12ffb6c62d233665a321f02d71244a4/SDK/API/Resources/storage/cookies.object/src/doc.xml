@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\storage">
+  <class name="cookies" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1374479397</datecreated>
+      <daterevised>1382514602</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Cookie's Manager</title>
+      <description>Manages all cookie interaction for the system</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

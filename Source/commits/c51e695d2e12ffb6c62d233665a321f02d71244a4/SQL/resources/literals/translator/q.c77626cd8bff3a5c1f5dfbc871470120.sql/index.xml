@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="759034943"><title>Get Translator Votes</title><description>Returns the votes which the translator has provided for some translations</description><access>1</access><attributes><attr id="translator_id"></attr></attributes></query>

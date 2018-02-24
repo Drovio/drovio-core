@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\sdk">
+  <class name="sdkObject" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396358972</datecreated>
+      <daterevised>1396737742</daterevised>
+      <extends>\DEV\Prototype\classObject</extends>
+      <implements/>
+      <throws/>
+      <title>Core SDK Object Manager</title>
+      <description>Handles all the information for SDK Objects.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="sourceMap" name="sourceMap">
+          <description>The sourceMap object.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method. Initializes the vcs information for the object and constructs the classObject.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The object's namespace (separated by "::" or "_").</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new Core SDK Object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title.</description>
+            </parameter>
+            <parameter name="$phpFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a php source code file.</description>
+            </parameter>
+            <parameter name="$jsFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a javascript file</description>
+            </parameter>
+            <parameter name="$cssFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a css file</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceCode" returntype="mixed">
+          <description>Updates the source code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new source code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE on success or FALSE on failure.
+Returns a string telling whether there is a syntax error in the php file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceDoc" returntype="boolean">
+          <description>Updates the source documentation of the object.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The documentation in xml format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateJSCode" returntype="boolean">
+          <description>Updates the javascript code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new javascript code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSSCode" returntype="boolean">
+          <description>Updates the css code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSSModel" returntype="boolean">
+          <description>Updates the css model of the object.</description>
+          <parameters>
+            <parameter name="$model" type="string" defaultvalue="">
+              <description>The new css model in html format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadSourceCode" returntype="void">
+          <description>Runs (includes) the trunk's source code file and returns the include result.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateItem" returntype="void">
+          <description>Update the item in the working index of the vcs.</description>
+          <parameters>
+            <parameter name="$forceCommit" type="boolean" defaultvalue="">
+              <description>Tells whether the object will be included in the next commit.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getManual" returntype="void">
+          <description>Return a path to the objects's manual file. Creates the file if it does not exist.</description>
+          <parameters/>
+          <returndescription>The path to the manual file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getObjectFullPath" returntype="string">
+          <description>Implementation of the abstract function from the parent class.
+Returns the full path of the object inside the repository.</description>
+          <parameters/>
+          <returndescription>The object's full path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Gets the id of the current vcs item.</description>
+          <parameters/>
+          <returndescription>The item's id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="buildHeader" returntype="string">
+          <description>Build the source's header and returns it.</description>
+          <parameters/>
+          <returndescription>The object's header code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="initFiles" returntype="void">
+          <description>Init all object's files.</description>
+          <parameters>
+            <parameter name="$phpFile" type="boolean" defaultvalue="">
+              <description>Indicator whether to build php source code file.</description>
+            </parameter>
+            <parameter name="$jsFile" type="boolean" defaultvalue="">
+              <description>Indicator whether to build javascript file.</description>
+            </parameter>
+            <parameter name="$cssFile" type="boolean" defaultvalue="">
+              <description>Indicator whether to build css file.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemPath" returntype="string">
+          <description>Gets the item's path (with library, package, namespace etc) for the vcs.</description>
+          <parameters/>
+          <returndescription>The item's path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createVcsItem" returntype="void">
+          <description>Only for migration.
+It creates the item in the vcs (in case there is in the map) and it is used only for the old objects not transferred in the new repository.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMapFile" returntype="void">
+          <description>Updates the source map index file in the vcs.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

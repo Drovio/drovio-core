@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\company">
+  <class name="companyInventory" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1415006029</datecreated>
+      <daterevised>1418654244</daterevised>
+      <extends>
+        <object>\RTL\Products\globalInventory</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company Product inventory manager</title>
+      <description>Manages company product hierarchy.
+It also can fetch products of a given hierarchy or with a specific title.</description>
+      <deprecated>Use \RTL\Products\cProductHierarchy instead. See functions separately for deprecation.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getHierarchy" returntype="array" static="true">
+          <description>Get the company product hierarchy in an array.
+It includes all the company's hierarchy records.</description>
+          <parameters>
+            <parameter name="$active" type="boolean" defaultvalue="">
+              <description>If active, the function will return only the company hierarchies that have company products.
+Otherwise, it will return all company hierarchies only.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product hierarchies</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductHierarchy::get() instead.</deprecated>
+        </method>
+        <method name="getHierarchyProducts" returntype="array" static="true">
+          <description>Get all company products inside a given hierarchy id.</description>
+          <parameters>
+            <parameter name="$hierarchyID" type="integer" defaultvalue="">
+              <description>The hierarchy id to get the products for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductManager::getProductsByHierarchy() instead.</deprecated>
+        </method>
+        <method name="getProducts" returntype="array" static="true">
+          <description>Get all company products that match the given title.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The title match.
+It is an SQL-like match query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductManager::getProductsByTitle() instead.</deprecated>
+        </method>
+        <method name="addHierarchy" returntype="boolean" static="true">
+          <description>Add a new company hierarchy record.</description>
+          <parameters>
+            <parameter name="$parentHierarchy_id" type="integer" defaultvalue="">
+              <description>The parent hierarchy id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The hierarchy title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The hierarchy description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \RTL\Products\cProductHierarchy::add() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

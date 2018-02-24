@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\modules">
+  <class name="mMail" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1433361624</datecreated>
+      <daterevised>1443196639</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Modules mailer mechanism</title>
+      <description>Sends specific mails to users for specific reasons.
+These mails come from the platform.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MAIL_TYPE_TO">
+        <description>Add 'to' recipients for the mail.</description>
+      </const>
+      <const type="string" name="MAIL_TYPE_CC">
+        <description>Add 'cc' recipients for the mail.</description>
+      </const>
+      <const type="string" name="MAIL_TYPE_BCC">
+        <description>Add 'bcc' recipients for the mail.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="send" returntype="mixed" static="true">
+          <description>Send an email to a specific user.</description>
+          <parameters>
+            <parameter name="$mailPath" type="string" defaultvalue="">
+              <description>The path of the mail message inside the module resources.</description>
+            </parameter>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail subject.</description>
+            </parameter>
+            <parameter name="$recipients" type="mixed" defaultvalue="">
+              <description>For one recipient, use the email address directly.
+For many recipients, use an array as:
+mail =&amp;gt; name.</description>
+            </parameter>
+            <parameter name="$attributes" type="array" defaultvalue="">
+              <description>An array of attributes to personalize the email.
+This can include names and other user information.</description>
+            </parameter>
+            <parameter name="$mailType" type="string" defaultvalue="">
+              <description>The mail recipient type.
+You can choose to send mail 'to', 'cc' or 'bcc'.
+Use class constants.
+Default value is MAIL_TYPE_TO.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false or NULL on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="sendMail" returntype="boolean" static="true">
+          <description>It actually sends the mail.</description>
+          <parameters>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail subject.</description>
+            </parameter>
+            <parameter name="$recipients" type="mixed" defaultvalue="">
+              <description>For one recipient, use the email address directly.
+For many recipients, use an array as:
+mail =&amp;gt; name.</description>
+            </parameter>
+            <parameter name="$messageHTML" type="string" defaultvalue="">
+              <description>The message in html format.</description>
+            </parameter>
+            <parameter name="$mailType" type="string" defaultvalue="">
+              <description>The mail recipient type.
+You can choose to send mail 'to', 'cc' or 'bcc'.
+Use class constants.
+Default value is MAIL_TYPE_TO.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false or NULL on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

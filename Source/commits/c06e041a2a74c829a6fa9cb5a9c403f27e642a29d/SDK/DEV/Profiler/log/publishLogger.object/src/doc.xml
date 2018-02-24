@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\log">
+  <class name="publishLogger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392031766</datecreated>
+      <daterevised>1392031766</daterevised>
+      <extends>\DEV\Profiler\log\activityLogger</extends>
+      <implements/>
+      <throws/>
+      <title>System Publisher Logger</title>
+      <description>Manages all logs for Redback deploy and publish.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PUBLISH">
+        <description>The publisher indicator.</description>
+      </const>
+      <const type="string" name="DEPLOY">
+        <description>The deploy indicator.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="logType">
+          <description>The logger type.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Logger constructor function.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The logger type.
+Redback deploy or publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getLogFile" returntype="string">
+          <description>Gets the log file.</description>
+          <parameters/>
+          <returndescription>The log inner file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

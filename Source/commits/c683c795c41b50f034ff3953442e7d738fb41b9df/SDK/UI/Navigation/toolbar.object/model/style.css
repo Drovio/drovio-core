@@ -1,0 +1,75 @@
+.uiToolbar {
+	position: absolute;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+}
+.uiToolbar.orientH {
+	height: 29px;
+	width: 100%;
+}
+.uiToolbar.orientV {
+	width: 29px;
+	height: 100%;
+}
+.uiToolbar.dockT {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	border-bottom:1px solid rgba(166, 166, 166, 0.7);
+	background: -webkit-linear-gradient(top, #999, #ccc);
+	background: -o-linear-gradient(bottom, #999, #ccc);
+	background: -moz-linear-gradient(bottom, #999, #ccc);
+	background: linear-gradient(to bottom, #999, #ccc);
+}
+.uiToolbar.dockB {
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border-top:1px solid rgba(166, 166, 166, 0.7);
+	background: -webkit-linear-gradient(bottom, #999, #ccc);
+	background: -o-linear-gradient(top, #999, #ccc);
+	background: -moz-linear-gradient(top, #999, #ccc);
+	background: linear-gradient(to top, #999, #ccc);
+}
+.uiToolbar.dockL {
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	border-right:1px solid rgba(166, 166, 166, 0.7);
+	background: -webkit-linear-gradient(left, #999, #ccc);
+	background: -o-linear-gradient(right, #999, #ccc);
+	background: -moz-linear-gradient(right, #999, #ccc);
+	background: linear-gradient(to right, #999, #ccc);
+}
+.uiToolbar.dockR {
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	border-left: 1px solid rgba(166, 166, 166, 0.7);
+	background: -webkit-linear-gradient(right, #999, #ccc);
+	background: -o-linear-gradient(left, #999, #ccc);
+	background: -moz-linear-gradient(left, #999, #ccc);
+	background: linear-gradient(to left, #999, #ccc);
+}
+.toolbarContainer {
+	position: relative;
+	min-height: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.toolbarContainer.dockL {
+	padding-left: 29px !important;
+}
+.toolbarContainer.dockR {
+	padding-right: 29px !important;
+}
+.toolbarContainer.dockT {
+	padding-top: 29px !important;
+}
+.toolbarContainer.dockB {
+	padding-bottom: 29px !important;
+}

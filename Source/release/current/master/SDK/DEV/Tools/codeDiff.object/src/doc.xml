@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\">
+  <class name="codeDiff" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1406541463</datecreated>
+      <daterevised>1406541933</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Code/Text Difference Detector</title>
+      <description>Given two strings (text) finds and annotates the differences between.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="char" name="MODE_WORD">
+        <description>Split mode is by word.</description>
+      </const>
+      <const type="char" name="MODE_CHAR">
+        <description>Split mode is by character.</description>
+      </const>
+      <const type="char" name="MODE_LINE">
+        <description>Split mode is by line.</description>
+      </const>
+      <const type="char" name="CH_ADD">
+        <description>Type of change is addition.</description>
+      </const>
+      <const type="char" name="CH_DEL">
+        <description>Type of change is deletion.</description>
+      </const>
+      <const type="char" name="CH_NON">
+        <description>Not a change.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="error">
+          <description>Holds possible errors during a functions execution.</description>
+        </prop>
+        <prop type="string" name="originalText">
+          <description>The original text.</description>
+        </prop>
+        <prop type="string" name="alteredText">
+          <description>The altered text.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initalazes the object giving the two strings to be compared.</description>
+          <parameters>
+            <parameter name="$originalText" type="string" defaultvalue="">
+              <description>The original text</description>
+            </parameter>
+            <parameter name="$alteredText" type="string" defaultvalue="">
+              <description>The altered text</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="diff" returntype="mixed">
+          <description>Finds the differences between two strings</description>
+          <parameters>
+            <parameter name="$mode" type="string" defaultvalue="">
+              <description>The type by which the comparison will be made.
+Use MODE_ constants to set this values.
+The default is MODE_CHAR</description>
+            </parameter>
+            <parameter name="$generatePatch" type="boolean" defaultvalue="">
+              <description>Flag which indicates if a patch (array) will also be constructed for each change.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The array of the changes between the two strings or FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="patch" returntype="string">
+          <description>Applies the patch previously created, using diff function, on the original text.</description>
+          <parameters>
+            <parameter name="$difference" type="array" defaultvalue="">
+              <description>An array of arrays (a list of changes), each one containing information about a change.
+The nested arrays must contain the 'patch' property.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The patched text.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="splitString" returntype="array">
+          <description>Splits a string by word or line according to separator indicator and end (line) indicator.</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The string to be splitted.</description>
+            </parameter>
+            <parameter name="$separators" type="string" defaultvalue="">
+              <description>The separators indicators.</description>
+            </parameter>
+            <parameter name="$end" type="string" defaultvalue="">
+              <description>The end line indicators</description>
+            </parameter>
+            <parameter name="$positions" type="array" defaultvalue="">
+              <description>(By reference) The positions table which hold the positions that the string was splitted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The splitted values.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

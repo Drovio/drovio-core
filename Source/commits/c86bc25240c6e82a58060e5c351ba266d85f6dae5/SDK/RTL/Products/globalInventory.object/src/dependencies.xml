@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\RTL\Comm\dbConnection"></use><use path="\API\Model\sql\dbQuery"></use><use path="\API\Platform\importer"></use><use path="\RTL\Products\global\globalHierarchy"></use><use path="\API\Security\privileges"></use></dependencies>

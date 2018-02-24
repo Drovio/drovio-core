@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\units\sql">
+  <class name="dbQuery" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1375974296</datecreated>
+      <daterevised>1387559887</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>The database Query.</title>
+      <description>Represents a redback's database query.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The query id.</description>
+        </prop>
+        <prop type="string" name="domain">
+          <description>The query domain.</description>
+        </prop>
+        <prop type="integer" name="access_level">
+          <description>The query access level.</description>
+        </prop>
+        <prop type="string" name="directory">
+          <description>The query library directory.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor function. Initializes the query variables.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The query domain.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="string">
+          <description>Returns the executable query from the library.</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array of the query attributes.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The executable query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_query" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$attr" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use getQuery() instead.</deprecated>
+        </method>
+        <method name="getLevel" returntype="integer">
+          <description>Gets the access level of the query.</description>
+          <parameters/>
+          <returndescription>The access level.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="load" returntype="void">
+          <description>Loads the query and its info from the library.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string">
+          <description>Returns the filename of the query to be stored to the exported library.</description>
+          <parameters/>
+          <returndescription>The query php filename.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

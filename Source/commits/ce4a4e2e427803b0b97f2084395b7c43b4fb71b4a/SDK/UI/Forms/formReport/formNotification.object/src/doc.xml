@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\formReport">
+  <class name="formNotification" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1363002300</datecreated>
+      <daterevised>1432065519</daterevised>
+      <extends>
+        <object>\UI\Presentation\notification</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Form Notification</title>
+      <description>Builds a specific form notification to be used for form reporting.
+This class reports directly to forms with pre-defined attributes.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="addReportContent" returntype="void">
+          <description>Adds a report data content to the server report.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The DOMElement report content.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder of the content.
+This holder will be used to append or replace (according to the third parameter) the content.
+This holder will be used to append or replace (according to the third parameter) the content.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The HTMLServerReport replace or append method.
+Use class constants.
+The default method is the append method.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportAction" returntype="void">
+          <description>Adds a report action content to the server report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value (if any).
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Returns the form's HTMLServerReport notification.</description>
+          <parameters>
+            <parameter name="$fullReset" type="boolean" defaultvalue="">
+              <description>Specify whether the form will have a full reset after the notification arrives or just the passwords.
+It is TRUE by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The form report holder.
+If NULL, get the form's report holder.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The server report content.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

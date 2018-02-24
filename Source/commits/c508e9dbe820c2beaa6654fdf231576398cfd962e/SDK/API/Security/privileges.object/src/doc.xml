@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\">
+  <class name="privileges" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1372765220</datecreated>
+      <daterevised>1389351031</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Privileges Manager</title>
+      <description>Manages all the privileges the account has according to user groups and module access privileges.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="moduleAccess" static="true">
+          <description>All module access during this script execution. Expands incrementally.</description>
+        </prop>
+        <prop type="array" name="userGroups" static="true">
+          <description>All account's user groups.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="moduleAccess" returntype="string" static="true">
+          <description>Gets the access of the given module for the logged in user (or guest).
+Given a condition key, it can check the group participation under condition.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The condition key value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The access status.
+"user", "no", "uc", "off".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="canProceed" returntype="boolean" static="true">
+          <description>Returns whether the module can proceed with execution according to given access.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if can proceed, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="accountToGroup" returntype="boolean" static="true">
+          <description>Checks whether the current account exists in a given groupName.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if exists, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAccountToGroup" returntype="void" static="true">
+          <description>Adds an account to a given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="leaveAccountFromGroup" returntype="void" static="true">
+          <description>Removes an account from a given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_userToGroup" returntype="boolean" static="true">
+          <description>Checks if the logged in user is a member of the given group.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+            <parameter name="$company_id" type="integer" defaultvalue="">
+              <description>The company id.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use accountToGroup() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="add_userToGroup" returntype="boolean" static="true">
+          <description>Add a user to a group.</description>
+          <parameters>
+            <parameter name="$user_id" type="string" defaultvalue="">
+              <description>The user's id</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group's name</description>
+            </parameter>
+            <parameter name="$company_id" type="integer" defaultvalue="">
+              <description>The company's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="add_accountToGroup" returntype="boolean" static="true">
+          <description>Add a user's account to a group</description>
+          <parameters>
+            <parameter name="$account_id" type="integer" defaultvalue="">
+              <description>The user's account id</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group's name</description>
+            </parameter>
+            <parameter name="$company_id" type="integer" defaultvalue="">
+              <description>The company's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use addAccountToGroup() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="leave_userFromGroup" returntype="boolean" static="true">
+          <description>Leave a user's primary account from given userGroup</description>
+          <parameters>
+            <parameter name="$user_id" type="string" defaultvalue="">
+              <description>The user's id</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group's name</description>
+            </parameter>
+            <parameter name="$company_id" type="integer" defaultvalue="">
+              <description>The company's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="leave_accountFromGroup" returntype="boolean" static="true">
+          <description>Remove an account from the given group</description>
+          <parameters>
+            <parameter name="$account_id" type="integer" defaultvalue="">
+              <description>The user's account id</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group's name</description>
+            </parameter>
+            <parameter name="$company_id" type="integer" defaultvalue="">
+              <description>The company's id</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use leaveAccountFromGroup() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDBModuleAccess" returntype="string" static="true">
+          <description>Gets the access from the database.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The condition key value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The access status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="testerStatus" returntype="string" static="true">
+          <description>Fixes the access status if the user is tester of the given module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The old access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new access status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

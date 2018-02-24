@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ENP" package="Relations" namespace="\">
+  <class name="ePersonMail" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1440075015</datecreated>
+      <daterevised>1441110081</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Person mail address manager</title>
+      <description>Manages all person's mail addresses</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="personID">
+          <description>The current person id.</description>
+        </prop>
+        <prop type="integer" name="mailAddressID">
+          <description>The current mail address id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="boolean" name="valid">
+          <description>Whether the person is valid with the current company.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create an instance of the person mail address manager.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id to manage mail addresses for.</description>
+            </parameter>
+            <parameter name="$mailAddressID" type="integer" defaultvalue="">
+              <description>The address id.
+Leave empty for new addresses.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new person mail address.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The mail address type id.
+Use getMailTypes() to get all types.</description>
+            </parameter>
+            <parameter name="$mailAddress" type="string" defaultvalue="">
+              <description>The mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the mail info.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The mail address type id.
+Use getMailTypes() to get all types.</description>
+            </parameter>
+            <parameter name="$mailAddress" type="string" defaultvalue="">
+              <description>The new mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the current mail address.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMailTypes" returntype="array" static="true">
+          <description>Get all mail address types.</description>
+          <parameters/>
+          <returndescription>An array of types by id and name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllMail" returntype="void">
+          <description>Get all person mail addresses.</description>
+          <parameters/>
+          <returndescription>An array of all person mail addresses.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the given person is member of the current team.</description>
+          <parameters/>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

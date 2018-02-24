@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProductStock" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1441116513</datecreated>
+      <daterevised>1441183198</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company Product Stock Manager</title>
+      <description>Manages product stock in branches and in storages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The retail database connection manager.</description>
+        </prop>
+        <prop type="string" name="productID">
+          <description>The product id.</description>
+        </prop>
+        <prop type="string" name="branchID">
+          <description>The branch id.</description>
+        </prop>
+        <prop type="boolean" name="valid">
+          <description>Whether the product is valid with the current company.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company product.</description>
+          <parameters>
+            <parameter name="$productID" type="string" defaultvalue="">
+              <description>The product id.</description>
+            </parameter>
+            <parameter name="$branchID" type="string" defaultvalue="">
+              <description>The company branch id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Set the stock for a product in the given storage unit.</description>
+          <parameters>
+            <parameter name="$stock" type="float" defaultvalue="">
+              <description>The product stock.</description>
+            </parameter>
+            <parameter name="$storageID" type="integer" defaultvalue="">
+              <description>The storage id.
+It is optional and it is 1 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="array">
+          <description>Get the stock for the product in the current branch.</description>
+          <parameters>
+            <parameter name="$includeStorage" type="boolean" defaultvalue="">
+              <description>If include storage, the array returned will have records for each storage in each branch.
+It is FALSE by default.</description>
+            </parameter>
+            <parameter name="$storageID" type="integer" defaultvalue="">
+              <description>It the includeStorage is set to TRUE, this will define the storage id to get quantity for, explicitly.
+Leave NULL for all storage units.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of product stock per branch or per storage, depending on the parameters.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setMUnit" returntype="boolean">
+          <description>Set the unit of measurement for the current product.</description>
+          <parameters>
+            <parameter name="$mUnit" type="integer" defaultvalue="">
+              <description>The unit of measurement id reference.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use cProduct::setMUnit() instead.</deprecated>
+        </method>
+        <method name="getMeasurementUnits" returntype="array" static="true">
+          <description>Get all units of measurement that the sdk supports.</description>
+          <parameters/>
+          <returndescription>An array of all units by id and title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the given product is of the current company.</description>
+          <parameters/>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="Dashboard" namespace="\">
+  <class name="dashboard" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1428050112</datecreated>
+      <daterevised>1428050112</daterevised>
+      <extends>
+        <object>\BSS\Dashboard\appDecorator</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use \BSS\Dashboard\appDecorator instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

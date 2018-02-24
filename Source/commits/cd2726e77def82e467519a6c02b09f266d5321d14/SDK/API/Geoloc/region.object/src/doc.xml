@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Geoloc" namespace="\">
+  <class name="region" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395647808</datecreated>
+      <daterevised>1396092394</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Region Manager</title>
+      <description>Gets all the information about the user's region.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="defaultRegion" static="true">
+          <description>The default system region.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true">
+          <description>Get the user's current region</description>
+          <parameters/>
+          <returndescription>It is the countryCode_ISO2A field, so the ISO2A country code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefault" returntype="string" static="true">
+          <description>Gets the default region by locale.</description>
+          <parameters/>
+          <returndescription>It is the countryCode_ISO2A field, so the ISO2A country code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array" static="true">
+          <description>Get region information.</description>
+          <parameters>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use \API\Geoloc\locale::info() instead.</deprecated>
+        </method>
+        <method name="get_countryId" returntype="string" static="true">
+          <description>Get user's current country id.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use \API\Geoloc\locale::info() and get the country id from there instead.</deprecated>
+        </method>
+        <method name="get_country" returntype="string" static="true">
+          <description>Get user's current country name.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use \API\Geoloc\locale::info() and get the country name from there instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

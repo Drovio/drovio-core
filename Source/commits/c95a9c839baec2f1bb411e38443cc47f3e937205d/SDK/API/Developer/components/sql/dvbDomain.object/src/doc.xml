@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\sql">
+  <class name="dvbDomain" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1372852311</datecreated>
+      <daterevised>1386753813</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer's Query Domain Manager</title>
+      <description>Manages all query domains.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="EXPORT_PATH">
+        <description>The inner export folder.</description>
+      </const>
+      <const type="string" name="INNER_PATH">
+        <description>The inner repository folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new domain.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The domain name.</description>
+            </parameter>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent domain separated by ".".
+Leave empty for root domain.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addQuery" returntype="boolean" static="true">
+          <description>Add an sql query index entry to the given domain.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The query domain separated by ".".</description>
+            </parameter>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The query title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQueries" returntype="array" static="true">
+          <description>Gets the sql queries of the domain.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The domain separated by ".".</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of queries by key.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\templates">
+  <class name="simpleForm" abstract="">
+    <info>
+      <version>3.1</version>
+      <build>1</build>
+      <datecreated>1366273260</datecreated>
+      <daterevised>1427804792</daterevised>
+      <extends>
+        <object>\UI\Forms\Form</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Simple Form Template builder</title>
+      <description>Builds an html form with a specific layout, if the user wants to.
+It has access to the FormFactory (it extends it) and can build every form control.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="formControls">
+          <description>The form's control button container.</description>
+        </prop>
+        <prop type="boolean" name="requiredNotes">
+          <description>Whether the form has required visual input fields.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="simpleForm">
+          <description>Builds the form.</description>
+          <parameters>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The form action string.
+For Modules and Applications leave this empty and engage form with formFactory.</description>
+            </parameter>
+            <parameter name="$defaultButtons" type="boolean" defaultvalue="">
+              <description>Options whether the form will have the default control buttons (execute and reset buttons).
+It is TRUE by default.</description>
+            </parameter>
+            <parameter name="$async" type="boolean" defaultvalue="">
+              <description>Sets the form to post async.
+It is TRUE by default.</description>
+            </parameter>
+            <parameter name="$fileUpload" type="boolean" defaultvalue="">
+              <description>This marks the form ready for file upload. It adds the enctype attribute where no characters are encoded.
+This value is required when you are using forms that have a file upload control.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The simpleForm object.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertRow" returntype="simpleForm">
+          <description>Builds and inserts a form row including a label and an input.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be a DOMElement or a string (which will be nested into a span).</description>
+            </parameter>
+            <parameter name="$input" type="DOMElement" defaultvalue="">
+              <description>The input to be inserted to the form row.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Defines whether the input given is required.</description>
+            </parameter>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>Notes for the user to insert valid input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The simpleForm object.</returndescription>
+          <throws/>
+        </method>
+        <method name="buildRow" returntype="DOMElement">
+          <description>Builds a form row including a label and an input.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be a DOMElement or a string (which will be nested into a span).</description>
+            </parameter>
+            <parameter name="$input" type="DOMElement" defaultvalue="">
+              <description>The input to be inserted to the form row.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Defines whether the input given is required.</description>
+            </parameter>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>Notes for the user to insert valid input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The row DOMElement.</returndescription>
+          <throws/>
+        </method>
+        <method name="get" returntype="DOMElement">
+          <description>Get the form object.</description>
+          <parameters>
+            <parameter name="$requiredNotes" type="boolean" defaultvalue="">
+              <description>If set to true and there are required input fields, a note will be inserted after the form body and before the controls saying what the red asterisk means.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The form DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRow" returntype="DOMElement">
+          <description>Creates and returns a form row.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The row DOMElement.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSimpleLabel" returntype="DOMElement">
+          <description>Builds a simple form label.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be a string or a DOMElement.</description>
+            </parameter>
+            <parameter name="$for" type="string" defaultvalue="">
+              <description>The id of the input that this label is pointing to.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The simple label, as the template builds it.</returndescription>
+          <throws/>
+        </method>
+        <method name="appendControl" returntype="simpleForm">
+          <description>Append a form control (button) to the form's control button container.</description>
+          <parameters>
+            <parameter name="$control" type="DOMElement" defaultvalue="">
+              <description>The form control (button) to append.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The simpleForm object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildLabel" returntype="DOMElement">
+          <description>Builds and returns a simple form label.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be string or DOMElement (span).</description>
+            </parameter>
+            <parameter name="$for" type="string" defaultvalue="">
+              <description>The input's id where this label is pointing to.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Creates a required span indicator for the input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The label DOMElement.</returndescription>
+          <throws/>
+        </method>
+        <method name="buildControls" returntype="void">
+          <description>Builds and appends the form default controls (submit and reset buttons).</description>
+          <parameters>
+            <parameter name="$defaultButtons" type="boolean" defaultvalue="">
+              <description>Options whether the form will have the default control buttons (execute and reset buttons).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNotes" returntype="DOMElement">
+          <description>Builds and returns a note container with context.</description>
+          <parameters>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>The user's notes for this specific input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The notes DOMElement to be inserted in the form row.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

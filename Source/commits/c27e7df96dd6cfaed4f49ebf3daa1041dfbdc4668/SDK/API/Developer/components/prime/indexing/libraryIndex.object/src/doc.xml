@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime\indexing">
+  <class name="libraryIndex" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1374577559</datecreated>
+      <daterevised>1389287997</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Library index manager.</title>
+      <description>Manages all library indexing.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index filename.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="createMapIndex" returntype="boolean" static="true">
+          <description>Creates the library map index.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The library domain.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createLibraryIndex" returntype="boolean" static="true">
+          <description>Creates a library index file.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The index folder path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createReleaseIndex" returntype="boolean" static="true">
+          <description>Creates a library release index.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The folder path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getList" returntype="array" static="true">
+          <description>Gets all libraries from the index.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of library names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibraryObjects" returntype="array" static="true">
+          <description>Gets all objects in a given library.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of objects with the object values [title, name, import (namespace)].</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleaseLibraryObjects" returntype="array">
+          <description>Gets all release objects in a given library.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of objects with the full name (including namespace).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="array" static="true">
+          <description>Gets all developer packages in a given library.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$fullNames" type="boolean" defaultvalue="">
+              <description>Indicates whether the package names will include the library name or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of package names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleasePackageList" returntype="array" static="true">
+          <description>Gets all released packages in a given library.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$fullNames" type="boolean" defaultvalue="">
+              <description>Indicates whether the package names will include the library name or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of package names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

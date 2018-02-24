@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebEngine" namespace="\sdk">
+  <class name="webObjectManual" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1432913728</datecreated>
+      <daterevised>1432913728</daterevised>
+      <extends>
+        <object>\GTL\Docs\webDoc</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web SDK Object Manual Document</title>
+      <description>Manages a Web Core SDK object's manual document in the object's smart folder.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="objectFolder">
+          <description>The object's root folder.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the manual document.</description>
+          <parameters>
+            <parameter name="$objectFolder" type="string" defaultvalue="">
+              <description>The object's root folder for the root directory function.</description>
+            </parameter>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The manual document's directory.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The document's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRootDirectory" returntype="string">
+          <description>Get the object's root directory as given by the sdkObject in the constructor.</description>
+          <parameters/>
+          <returndescription>Returns the root directory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

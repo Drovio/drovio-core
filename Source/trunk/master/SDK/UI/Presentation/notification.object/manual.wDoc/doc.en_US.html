@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>System Notification Object</h1>
+<p>Notifications is one of the most important components in the system. We can see them pretty much everywhere there is interaction. On every form, error or success a notification of some kind will appear.</p>
+<p>Developers are allowed to create a notification in four different types: success, error, warning and info. And they can customize the content as much as they want in order to have the desired outcome.</p>
+<div class="code">
+	<pre>// Create a simple success notification
+	
+// Use the class
+use \UI\Presentation\notification;	
+	
+// Create the notification object
+$ntf = new notification();
+
+// This is a UIObject, so we build
+// There is the chain pattern, so we get the DOMElement immediately
+$notification = $ntf-&gt;build($type = notification::SUCCESS, $header = TRUE, $timeout = FALSE, $disposable = FALSE)-&gt;get();
+
+// Append the notification to the container
+DOM::append($container, $notification);</pre>
+</div>
+<h2>Custom notification messages</h2>
+<p>You can append custom messages in the notification by calling the <b>append()</b> or the <b>appendCustomMessage()</b> function. The later function will create a small message which is considered just a note for the notification itself. Example:</p>
+<div class="code">
+	<pre>// Create an error notification with an error message
+	
+// Use the classes needed
+use \UI\Presentation\notification;
+	
+// Create the notification object
+$ntf = new notification();
+
+// This is a UIObject, so we build
+// There is the chain pattern, so we get the DOMElement immediately
+$notification = $ntf-&gt;build($type = notification::ERROR, $header = TRUE, $timeout = FALSE, $disposable = TRUE)-&gt;get();
+
+
+// Append a custom header and a message
+$header = HTML::h2("Something went wrong");
+$notification-&gt;append($header);
+
+$message = HTML::p("An error occurred while trying to execute this function.");
+$notification-&gt;append($message);
+
+// The custom message for extra information
+$notification-&gt;appendCustomMessage("Notification Name: getCustomNotificationMessage()");
+
+// Append the notification to the container
+DOM::append($container, $notification);</pre>
+</div>
+<h2>System notification messages</h2>
+<p>Using the <b>getMessage()</b> function you can get pre-defined notification messages from the system. This is the list of all messages supported at the moment: (messages can change from time to time, these are the descriptions and not the actual messages)</p>
+<style>
+	table.notificationMessages {
+		width: 100%;
+	}
+	table.notificationMessages tr:first-child {
+		border-bottom: 1px solid #CCC;
+	}
+	table.notificationMessages tr th {
+		text-align: left;
+		font-weight: bold;
+		padding: 3px 7px;
+	}
+	table.notificationMessages td {
+		padding: 3px 7px;
+	}
+</style>
+<table class="notificationMessages">
+	<tbody>
+		<tr>
+			<th>Type</th>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>notification::WARNING</td>
+			<td>wrn.content_uc</td>
+			<td>A specific page/content is currently under construction.</td>
+		</tr>
+		<tr>
+			<td>notification::WARNING</td>
+			<td>wrn.function_uc</td>
+			<td>A specific service is currently under construction.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.access_denied</td>
+			<td>Insufficient access rights.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.authenticate</td>
+			<td>Account authentication error.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.invalidate</td>
+			<td>The posting form has been invalidated.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.invalid_access</td>
+			<td>Invalid access of our services.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.invalid_data</td>
+			<td>Invalid information during form post.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.save_error</td>
+			<td>An error occurred while trying to save content.</td>
+		</tr>
+		<tr>
+			<td>notification::ERROR</td>
+			<td>err.sys_error</td>
+			<td>An system error occurred.</td>
+		</tr>
+		<tr>
+			<td>notification::SUCCESS</td>
+			<td>success.save_success</td>
+			<td>The content saved successfully.</td>
+		</tr>
+		<tr>
+			<td>notification::DEBUG</td>
+			<td>dbg.content_not_found</td>
+			<td>The content requested cannot be found (file or something).</td>
+		</tr>
+		<tr>
+			<td>notification::DEBUG</td>
+			<td>dbg.exception</td>
+			<td>An exception was thrown.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="footer"><p class="updated">Document updated 18 October, 2015 [en_US]</p></div>
+</div></body></html>

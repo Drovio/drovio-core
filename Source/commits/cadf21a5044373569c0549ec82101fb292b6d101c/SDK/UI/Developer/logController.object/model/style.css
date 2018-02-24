@@ -1,0 +1,93 @@
+#logViewer {
+	position: relative;
+	overflow: auto;
+	border: 1px solid rgba(166, 166, 166, 0.3);
+}
+#logViewer > .controls {
+	overflow: auto;
+	border-bottom: 1px solid rgba(166, 166, 166, 0.4);
+	background-color: rgba(166, 166, 166, 0.1);
+	height: 12.5%;
+	box-sizing: border-box;
+}
+#logViewer > .controls .filterBox {
+	float: left;
+	padding: 3px;
+	margin: 0px 5px;
+}
+#logViewer > .controls .clear {
+	float: right;
+	padding: 7px;
+	cursor: pointer;
+	line-height: 15px;
+}
+#logViewer > #logData {
+	overflow: auto;
+	padding: 3px;
+	height: 87.5%;
+	box-sizing: border-box;
+}
+.logItem {
+	border: 1px solid rgba(166, 166, 166, 0.3);
+	margin: 3px 0px;
+}
+.logItem .logHeader {
+	padding: 3px;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.logItem .logHeader .exp {
+	float: right;
+}
+.logItem.open .logHeader .exp.minus, .logItem .logHeader .exp.minus {
+	display: block;
+}
+.logItem.open .logHeader .exp.plus, .logItem .logHeader .exp.minus {
+	display: none;
+}
+.logItem .logDetails {
+	display: none;
+	white-space: pre;
+}
+.logItem.open .logDetails {
+	display: block;
+}
+.logItem .logDetails .logDesc, .logItem .logDetails .logTrace {
+	overflow: auto;
+}
+.logItem.emergency .logHeader {
+	background-color: #C00403;
+	font-weight: bold;
+	color: #FFF;
+}
+.logItem.critical .logHeader {
+	background-color: #FFE8D9;
+	font-weight: bold;
+}
+.logItem.alert .logHeader {
+	background-color: #FFE8D9;
+	font-weight: bold;
+}
+.logItem.error .logHeader {
+	background-color: #F6DAD9;
+}
+.logItem.warning .logHeader {
+	background-color: #FFE8D9;
+}
+.logItem.notice .logHeader {
+	background-color: #D9E8F6;
+}
+.logItem.info .logHeader {
+	background-color: #D9E8F6;
+}
+.logItem.debug .logHeader {
+	background-color: #ECF5E4;
+}
+
+.logItem .traceitem > span{
+	display: block;
+}
+.loggerPool {
+	display: none;
+}

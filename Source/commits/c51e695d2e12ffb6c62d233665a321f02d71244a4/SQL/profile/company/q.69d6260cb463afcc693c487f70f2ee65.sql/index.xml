@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1458585340"><title>Create Company</title><description>Create company</description><access>1</access><attributes><attr id="ssn"></attr><attr id="name"></attr><attr id="description"></attr></attributes></query>

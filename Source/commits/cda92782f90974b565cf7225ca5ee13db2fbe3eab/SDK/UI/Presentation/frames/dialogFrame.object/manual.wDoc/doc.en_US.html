@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Window Dialog Frame</h1>
+<p>A dialog frame is an extended frame that includes an embedded form. A dialog frame shows a popup dialog to the user in order to make an action. The frame includes a form (simpleForm) where the developer can insert any type of input. Even simpleForm elements can be inserted.</p>
+<div class="code">
+	<pre>// Create and show a simple dialog frame to the user
+	
+// Use the class
+use \UI\Presentation\frames\dialogFrame; // Extends the windowFrame
+
+// Create a frame
+$frame = new dialogFrame($id = "");
+
+// This is a UIObject, so we build
+$frame-&gt;build($title = "Dialog Frame", $action = "/user/info/update.php", $background = TRUE, $type = self::TYPE_OK_CANCEL);
+
+// The dialog includes a form factory (simpleForm template) which we can get and create more inputs
+// We can append form elements in the form or in the frame directly, either way all the elements will be inside the form
+$form = $frame-&gt;getFormFactory();
+
+
+// Add a hidden input of the user id
+$input = $form-&gt;getInput($type = "hidden", $name = "uid", $value = $userID, $class = "", $autofocus = FALSE, $required = FALSE);
+$form-&gt;append($input);
+
+// User name
+// Build a form row with label and input
+$input = $form-&gt;getInput($type = "text", $name = "username", $value = "", $class = "", $autofocus = FALSE, $required = TRUE);
+$frow = $form-&gt;buildRow("Username", $input, $required = TRUE, $notes = "");
+$form-&gt;append($frow);
+
+// After we finish building, we return the frame report
+// This will return a persistent popup
+return $frame-&gt;getFrame($requiredFormNotes = TRUE);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 13:01</p></div>
+</div></body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Form Notification Object</h1>
+<p>When we use async forms, there is the need to create specific notifications with the ability to be returned in form report directly. For this reason we created form specific notifications that are equipped with report handlers. They extend the normal system notifications. Examples:</p>
+<div class="code">
+	<pre>// Create a form successful notification in response of a form post
+	
+// Use the class
+use \UI\Forms\formReport\formNotification;
+	
+// Create the notification object
+$ntf = new formNotification();
+
+// This is a UIObject, so we build
+// We do not have to get the DOMElement in this case, just build
+$ntf-&gt;build($type = notification::SUCCESS, $header = TRUE, $timeout = FALSE, $disposable = TRUE);
+
+// Get the report directly to the client
+// We can reset the form (if the notification is error) or not
+return $ntf-&gt;getReport($fullReset = TRUE, $holder = NULL);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 10:06</p></div>
+</div></body></html>

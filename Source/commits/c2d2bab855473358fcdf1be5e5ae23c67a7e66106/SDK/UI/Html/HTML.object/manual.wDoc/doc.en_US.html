@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>HTML handler, easier DOM</h1>
+<p>The DOM interface allows the user to interact with any DOMDocument, any xml form. The DOM extends the DOMPrototype which is used also for parsing xml files.</p>
+<p>We have created an HTML-specific interface that allows the developers to interact with the HTML with specific functions like the Javascript does. The HTML interface provides functions for better searching and faster checking. Let us see some examples:</p>
+<div class="code">
+	<pre>// HTML is easier, like Javascript
+	
+// Create a new div element #div_id.div_class
+$div = HTML::div($content = "", $id = "div_id", $class = "div_class");
+HTML::append($div);
+
+// Create a h1 title and append it to the previous div
+$title = HTML::h1($content = "This is the title.", $id = "", $class = "title");
+HTML::append($div, $title);
+
+// We can set the content of the element to be another element for speed
+$sub_content = HTML::span($content = "This is the subtitle.", $id = "", $class = "subtitle_content");
+$subtitle = HTML::h2($sub_content, $id = "", $class = "subtitle");
+HTML::append($div, $subtitle);</pre>
+</div>
+<h3>Search with HTML (css selectors)</h3>
+<p>The HTML interface allows developers to search for elements better and writing less code, more expressive code without messing with XPath. It also provides functions for class-handling.</p>
+<div class="code">
+	<pre>// Search with HTML is as easy as it could be
+	
+// HTML allows to search using css selectors, like jQuery
+$subtitle_content = HTML::select("h2.subtitle .subtitle_content")-&gt;item(0);
+
+// We can also use html-specific functions for specific checks
+HTML::addClass($subtitle_content, "test");
+
+// Check if the element has a class
+$status = HTML::hasClass($subtitle_content, "test"; // $status is TRUE
+if ($status)
+{
+	// Remove the class
+	HTML::removeClass($subtitle_content, "test");
+}</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

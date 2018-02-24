@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="expander" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1366968833</datecreated>
+      <daterevised>1371033354</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Expander</title>
+      <description>Builds an Expander object. It consists of a head and a body part. The body's view can be toggled by clicking on the head</description>
+      <deprecated>Use \UI\Presentation\togglers\expander instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="head">
+          <description>The head part of the expander</description>
+        </prop>
+        <prop type="DOMElement" name="body">
+          <description>The body part of the expander</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the expander object</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="expander">
+          <description>Builds the expander's structure and returns the object for further manipulation.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="appendToHead" returntype="expander">
+          <description>Appends content to the head of the expander and returns the object for further manipulation</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The content to be appended to the expander's head.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="appendToBody" returntype="expander">
+          <description>Appends content to the body of the expander and returns the object for further manipulation</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The content to be appended to the expander's body.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append_to_head" returntype="void">
+          <description>Appends content to the head of the expander</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The content to be appended to the expander's head.</description>
+            </parameter>
+          </parameters>
+          <deprecated>use expander::appendToHead instead</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append_to_body" returntype="void">
+          <description>Appends content to the body of the expander</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The content to be appended to the expander's body.</description>
+            </parameter>
+          </parameters>
+          <deprecated>use expander::appendToBody instead</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

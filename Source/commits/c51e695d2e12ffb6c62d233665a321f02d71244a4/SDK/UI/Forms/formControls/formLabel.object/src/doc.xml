@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="formLabel" abstract="" namespace="\formControls">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 15:26 (EET)</datecreated>
+      <daterevised>April 18, 2013, 16:00 (EEST)</daterevised>
+      <extends>\UI\Forms\formControls\formItem</extends>
+      <implements/>
+      <title>Form Label</title>
+      <description>Builds a universal form label</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="formLabel">
+          <description>Builds the form label</description>
+          <parameters>
+            <parameter name="$context" type="DOMElement" defaultvalue="">
+              <description>The label's context</description>
+            </parameter>
+            <parameter name="$for" type="string" defaultvalue="">
+              <description>The element's id that the label is pointing to</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="fileTreeView" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1368012710</datecreated>
+      <daterevised>1379330897</daterevised>
+      <extends>\UI\Navigation\treeView</extends>
+      <implements/>
+      <throws/>
+      <title>File treeView.</title>
+      <description>Specific treeView with a refresh button for viewing file-like content.</description>
+      <deprecated>Functionality no longer used. Modules can have such functionality now.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="fileTreeView">
+          <description>Builds the treeView along with all other tools.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the treeView.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class of the treeView</description>
+            </parameter>
+            <parameter name="$sorting" type="boolean" defaultvalue="">
+              <description>Defines whether the fileTreeView will be sortable.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_view" returntype="void">
+          <description>Creates the root list</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$sorting" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use build()-&amp;gt;get() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

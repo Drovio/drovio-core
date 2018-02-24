@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="redWIDE" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1366972718</datecreated>
+      <daterevised>1379766319</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Web Integrated Development Environment</title>
+      <description>A tab-oriented object for handling multiple data objects.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="tabControl" name="WIDETabber">
+          <description>The tabControl object of the environment</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="redWIDE">
+          <description>Builds a redWIDE object</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The wide's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>redWIDE object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getTabber" returntype="tabControl">
+          <description>Returns the associated WIDETabber of the WIDE</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>tabControl object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getContent" returntype="DOMElement" static="true">
+          <description>Get a tab page content for the WIDETabber</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the tab page</description>
+            </parameter>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The header of the tab page</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The contents of the tab page</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns a tab page ready for wide.</returndescription>
+          <throws/>
+        </method>
+        <method name="getNotificationResult" returntype="string" static="true">
+          <description>Returns a report ready for wide notification.</description>
+          <parameters>
+            <parameter name="$notification" type="DOMElement" defaultvalue="">
+              <description>The notification element.</description>
+            </parameter>
+            <parameter name="$updateStatus" type="boolean" defaultvalue="">
+              <description>Whether wide updates document status.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The wide's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The HTMLServerReport string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportContent" returntype="string">
+          <description>Returns an HTMLServerReport containg the WIDE tab page content.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The page id.</description>
+            </parameter>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The tab header.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content of the tab.</description>
+            </parameter>
+            <parameter name="$wideID" type="string" defaultvalue="">
+              <description>The wide's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The HTMLServerReport string.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

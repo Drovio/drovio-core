@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\apps">
+  <class name="application" abstract="">
+    <info>
+      <version>9.0</version>
+      <build>1</build>
+      <datecreated>1417790297</datecreated>
+      <daterevised>1449773948</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Model Manager</title>
+      <description>Provides na interface for some basic functionality for applications.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getApplicationManifests" returntype="array" static="true">
+          <description>Get all application manifest permissions from the application library path.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all manifests' information by id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppSettings" returntype="settingsManager" static="true">
+          <description>Get application settings manager according to runtime.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version for production.
+Leave empty to get last application version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The settings manager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppLibraryStyles" returntype="array" static="true">
+          <description>Get all application styles from the library.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version for production.
+Leave empty to get last application version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array with all application library styles.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppLibraryScripts" returntype="array" static="true">
+          <description>Get all application scripts from the library.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version for production.
+Leave empty to get last application version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array with all application library scripts.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppViews" returntype="array" static="true">
+          <description>Get application views list according to runtime.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version for production.
+Leave empty to get last application version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array containing the application views in full path (including folders).
+NULL if there was an error.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationPath" returntype="string" static="true">
+          <description>Gets the application's library path to the given version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application library path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationInfo" returntype="array" static="true">
+          <description>Get application information for a given version regarding the release version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.
+If empty, get the last published and approved version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all application information including release title, project description, icon url and more.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationIconUrl" returntype="mixed" static="true">
+          <description>Get the application's icon url according to the given version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the icon url or NULL if the application doesn't have an icon.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationLibraryCSS" returntype="string" static="true">
+          <description>Get the application library css code.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$cssFileName" type="string" defaultvalue="">
+              <description>The css file name from the application library.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version, for production mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The css content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationLibraryJS" returntype="string" static="true">
+          <description>Get the application library js code.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$jsFileName" type="string" defaultvalue="">
+              <description>The js file name from the application library.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version, for production mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The js content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamApplicationFolder" returntype="mixed" static="true">
+          <description>Get the application service path inside the team folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountApplicationFolder" returntype="mixed" static="true">
+          <description>Get the application service path inside the account folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppFolderName" returntype="string" static="true">
+          <description>Get the application folder name as a service.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application service folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamApplicationPath" returntype="mixed" static="true">
+          <description>Get the application service path inside the team folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated>Use getTeamApplicationFolder() instead.</deprecated>
+        </method>
+        <method name="getAccountApplicationPath" returntype="mixed" static="true">
+          <description>Get the application service path inside the account folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated>Use getAccountApplicationFolder() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getAppLibraryObjects" returntype="array" static="true">
+          <description>Get all library objects with the given name (tag name).</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version for production.
+Leave empty to get last application version.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object (tag) name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all application library objects.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolders" returntype="array" static="true">
+          <description>Get an array of all the folders under the given path.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The index parser object.</description>
+            </parameter>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all the folders under the given path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderViews" returntype="array" static="true">
+          <description>Get all views in a given folder.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The index parser object.</description>
+            </parameter>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all views.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

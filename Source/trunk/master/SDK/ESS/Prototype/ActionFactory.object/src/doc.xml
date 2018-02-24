@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="ActionFactory" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1363090980</datecreated>
+      <daterevised>1416560751</daterevised>
+      <extends>
+        <object>\ESS\Prototype\ModuleActionFactory</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback's Action Factory</title>
+      <description>This is a class for attaching all kind of actions and listeners to elements to be handled in the client side and communicate with the server.</description>
+      <deprecated>Use \ESS\Prototype\ModuleActionFactory instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

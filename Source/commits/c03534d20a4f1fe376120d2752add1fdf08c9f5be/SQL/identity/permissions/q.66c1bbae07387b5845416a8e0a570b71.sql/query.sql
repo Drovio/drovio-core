@@ -1,0 +1,2 @@
+SELECT *
+FROM ID_PM_group;

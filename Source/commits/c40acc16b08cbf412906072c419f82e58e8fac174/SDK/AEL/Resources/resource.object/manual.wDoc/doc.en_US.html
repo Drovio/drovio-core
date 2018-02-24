@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Application resource reader</h1>
+<p>This class allows the application to read files from the resources folder. It can detect when in production environment and when in development environemnt and reads the files accordingly.</p>
+<p>This class is for reading only files.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Resources\resource;
+
+// Read a file
+$fileContents = resource::get("/templates/email_template.html");
+
+// Send email
+$mailer = new mailer();
+...</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

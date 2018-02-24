@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\prototype">
+  <class name="templatePagePrototype" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1442505793</datecreated>
+      <daterevised>1442509029</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web Templage Page Prototype</title>
+      <description>Manages the page prototype object given the page path (inside a template, managed by the template).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The page file type extension.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="templatePrototype" name="template">
+          <description>The template prototype object.</description>
+        </prop>
+        <prop type="string" name="pageFolderPath">
+          <description>The page folder path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a template page prototype instance.</description>
+          <parameters>
+            <parameter name="$indexFilePath" type="string" defaultvalue="">
+              <description>The template's index file path.</description>
+            </parameter>
+            <parameter name="$pageFolderPath" type="string" defaultvalue="">
+              <description>The page folder path.
+Leave it empty for new pages.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new template page.</description>
+          <parameters>
+            <parameter name="$pageFolderPath" type="string" defaultvalue="">
+              <description>The page folder path, as given from the template manager.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.
+This is needed for indexing.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is a page with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateHTML" returntype="boolean">
+          <description>Update page's html.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The page's html content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTML" returntype="string">
+          <description>Get the page html content.</description>
+          <parameters/>
+          <returndescription>The page html content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSS" returntype="boolean">
+          <description>Update page's css.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The page's css content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSS" returntype="string">
+          <description>Get page's css content.</description>
+          <parameters>
+            <parameter name="$normalCss" type="boolean" defaultvalue="">
+              <description>Get normal css or scss content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page css.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the page from the template.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name for indexing.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageFolder" returntype="string" static="true">
+          <description>Get the name of the page smart object folder.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page folder name</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createStructure" returntype="void">
+          <description>Create the page structure with the necessary files.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

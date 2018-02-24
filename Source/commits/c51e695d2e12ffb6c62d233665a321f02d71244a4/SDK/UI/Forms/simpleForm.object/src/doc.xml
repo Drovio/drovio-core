@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="simpleForm" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>April 18, 2013, 11:38 (EEST)</datecreated>
+      <daterevised>April 18, 2013, 11:38 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Simple Form</title>
+      <description>Builds a simple system form.</description>
+      <deprecated>Use \UI\Forms\templates\simpleForm instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="" name="id">
+          <description/>
+        </prop>
+        <prop type="" name="form">
+          <description/>
+        </prop>
+        <prop type="" name="form_body">
+          <description/>
+        </prop>
+        <prop type="" name="form_controls">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" name="get_reportHolder" returntype="void">
+          <description>Form Report container (for POST actions)</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="create_form" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$action" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$role" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$controls" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_header" returntype="void">
+          <description>Inserts a header into the form</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_header" returntype="void">
+          <description>Creates the header for the form</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_actionButton" returntype="void">
+          <description>Creates a form action button</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_form_input" returntype="void">
+          <description>Creates a full input control (label (if any) and input)</description>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$autofocus" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_rsrc_option" returntype="void">
+          <description>Creates a full resource (radio | checkbox) control group</description>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_rsrc_select" returntype="void">
+          <description>Creates a full resource (select) control (label (if any) and resource)</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$multi" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$autofocus" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insertDirections" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$group" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$directions" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_label" returntype="void">
+          <description>____________________ Auxiliary Items</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_form_item" returntype="void">
+          <description>Creates a form item (input | button | text_area | etc.)</description>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$autofocus" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_to_body" returntype="void">
+          <description>____________________ General</description>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_form_id" returntype="void">
+          <description>Get form id</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_group" returntype="void">
+          <description>Get form group</description>
+          <parameters>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="transform_to_resource" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

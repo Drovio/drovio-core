@@ -1,0 +1,29 @@
+<h1>Tree View</h1>
+<p>treeView is a simple navigation component that helps developers create navigation controllers in order to guid the user to select items from a group. A tree view is a list that can have internal lists per item in any depth.</p>
+<p>Tree view list items can be of 3 types, simple items that create an action (load content or navigate), container items that have only children and cause no action and items that are both containers and trigger actions.</p>
+<div class="code">
+	<pre>// Create a treeView and add some items
+	
+// Use the class
+use \UI\Navigation\treeView;
+
+// Create the treeView
+$tv = new treeView();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$treeView = $tv->build($id = "", $class = "")->get();
+
+// Append to body
+DOM::append($body, $treeView);
+
+
+// Insert an expandable item
+$tv->insertExpandableTreeItem($id = "exp1", $content = "Expandable Item", $parentId = "", $open = FALSE);
+
+// Insert a simple item into the previous one
+$tv->insertTreeItem($id = "exp1_ch1", $content = "Exp Child Item", $parentId = "exp1");
+
+// Finally insert a semi-expandable tree item
+$tv->insertSemiExpandableTreeItem($id = "sexp1", $content = "Semi Expandable Item", $parentId = "", $open = FALSE);</pre>
+</div>

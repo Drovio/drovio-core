@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="WViewEditor" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1430552899</datecreated>
+      <daterevised>1431932579</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web View Editor</title>
+      <description>It creates a complete editor for web views as Redback sees it.
+It includes an HTMLEditor for the web view content and a CSSEditor for the content's looks.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="cssName">
+          <description>Name of the css editing area.</description>
+        </prop>
+        <prop type="string" name="htmlName">
+          <description>Name of the html editing area</description>
+        </prop>
+        <prop type="string" name="html">
+          <description>The html content.</description>
+        </prop>
+        <prop type="string" name="css">
+          <description>The css content.</description>
+        </prop>
+        <prop type="Form" name="form">
+          <description>The Form builder object for building all the form items.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$cssName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$htmlName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssProperties" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUserAgentCss" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$browser" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$structure" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$css" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$sideClosed" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPreviewContainer" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStructureContainer" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssContainer" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$measurement" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tabs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tiles" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssCoder" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$measurement" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tabs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tiles" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTilePage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tile" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$measurement" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSelectProperty" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$values" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$firstEmpty" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$cssName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$browserSupport" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$placeholder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInputProperty" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$browserSupport" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssInfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

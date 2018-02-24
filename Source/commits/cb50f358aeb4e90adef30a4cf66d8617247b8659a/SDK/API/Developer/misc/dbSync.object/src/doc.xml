@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\misc">
+  <class name="dbSync" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1390399803</datecreated>
+      <daterevised>1390469730</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Database Synchronization Class</title>
+      <description>Synchronizes redback's developer and publish databases.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="checkSchemas" returntype="boolean" static="true">
+          <description>Checks the two stored schemas for differencies.
+For now, it checks only the table columns without the keys.</description>
+          <parameters/>
+          <returndescription>Returns an array of "upload" and "delete" fields for the published server.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadSchemas" returntype="void" static="true">
+          <description>Loads and parses the schemas of the two databases.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="uploadSystemData" returntype="boolean" static="true">
+          <description>Uploads all system data to the published server.</description>
+          <parameters/>
+          <returndescription>True on success, the error string containing the tables not updated on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="downloadUserData" returntype="boolean" static="true">
+          <description>Downloads all user data from the published server.</description>
+          <parameters/>
+          <returndescription>True on success, the error string containing the tables not updated on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="diff" returntype="array" static="true">
+          <description>Returns the array difference between two specific arrays containing table information.</description>
+          <parameters>
+            <parameter name="$schema1" type="array" defaultvalue="">
+              <description>The first db schema.</description>
+            </parameter>
+            <parameter name="$schema2" type="array" defaultvalue="">
+              <description>The second db schema.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all diferrencies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadXMLSchema" returntype="array" static="true">
+          <description>Loads the db schema from the xml file.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The schema file name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The db schema.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="generateXMLSchema" returntype="void" static="true">
+          <description>Generates the xml file schema given the table data.</description>
+          <parameters>
+            <parameter name="$schema" type="array" defaultvalue="">
+              <description>An array containing all the tables and their columns.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The schema filename.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createQuery" returntype="string">
+          <description>Creates the insert query for all data.</description>
+          <parameters>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>Defines the insert method. "ignore" or "update".</description>
+            </parameter>
+            <parameter name="$tableName" type="string" defaultvalue="">
+              <description>The table name.</description>
+            </parameter>
+            <parameter name="$tableData" type="array" defaultvalue="">
+              <description>All the table data fetched by the database.</description>
+            </parameter>
+            <parameter name="$columns" type="array" defaultvalue="">
+              <description>All the table's columns.</description>
+            </parameter>
+            <parameter name="$types" type="array" defaultvalue="">
+              <description>All the types for each column of the table.</description>
+            </parameter>
+            <parameter name="$defaults" type="array" defaultvalue="">
+              <description>All the defaults for each column of the table.</description>
+            </parameter>
+            <parameter name="$nulls" type="array" defaultvalue="">
+              <description>All the null indicators for each column of the table.</description>
+            </parameter>
+            <parameter name="$pkeys" type="array" defaultvalue="">
+              <description>All the primary keys for the table.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The insert query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="stringable" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

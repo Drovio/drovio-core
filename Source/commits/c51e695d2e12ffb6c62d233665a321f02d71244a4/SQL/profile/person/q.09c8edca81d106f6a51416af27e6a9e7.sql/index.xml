@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1921568048"><title>Get Personal Info</title><description>Get Person information by user</description><access>1</access><attributes><attr id="pid"></attr></attributes></query>

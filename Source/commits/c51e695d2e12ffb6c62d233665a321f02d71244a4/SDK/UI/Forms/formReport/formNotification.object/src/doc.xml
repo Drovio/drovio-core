@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="formNotification" abstract="" namespace="\formReport">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 13:45 (EET)</datecreated>
+      <daterevised>April 22, 2013, 12:28 (EEST)</daterevised>
+      <extends>\UI\Presentation\notification</extends>
+      <implements/>
+      <title>Form Notification</title>
+      <description>Builds a form notification</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getReport" returntype="string">
+          <description>Returns the form's HTMLServerReport notification.</description>
+          <parameters>
+            <parameter name="$reset" type="boolean" defaultvalue="">
+              <description>Specify whether the form will be reset after the notification arrives.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

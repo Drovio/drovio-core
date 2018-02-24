@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ajaxCode" abstract="" namespace="\model\units\ajax">
+    <info>
+      <version/>
+      <datecreated>1372845408</datecreated>
+      <daterevised>1372845408</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use \API\Developer\components\ajax\ajaxPage instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="" name="ajaxMappingFile">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$this" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$this" type="" defaultvalue=""/>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="_get_fileName" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_build_privateCode" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

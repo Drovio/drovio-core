@@ -1,0 +1,43 @@
+<h1>Platform Tab Control</h1>
+<p>A tab control is a control that can visualize content in multiple tabs, just like your browser. We have created this control as a functional control which can facilitate things making an environment as friendly and easy to use as possible. However, the a similar behavior can be implemented in custom controls to make a tab-like content more attractive.</p>
+<p>We build tabControls from the server side exclusively. We can use the Javascript to add tabs dynamically into editable tabControls.</p>
+<h3>PHP Example</h3>
+<div class="code">
+	<pre>// Create a tab control, add tabs and append to body
+	
+// Use the class
+use \UI\Presentation\tabControl;
+
+// Create a tab control
+$tabber = new tabControl($editable = FALSE);
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$tabControl = $tabber->build($id = "", $full = FALSE, $withBorder = TRUE)->get();
+
+// Append to body
+DOM::append($body, $tabControl);
+
+
+// Insert some tabs
+$settingsPage = DOM::create("div", "", "", "tabPage settings");
+$tabber->insertTab($id = "settings", $header = "Settings", $tabPage, $selected = TRUE);
+
+$notificationsPage = DOM::create("div", "", "", "tabPage notifications");
+$tabber->insertTab($id = "notifications", $header = "Notifications", $notificationsPage, $selected = FALSE);</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>Tab control also provides a javascript interface where a developer can simply add extra tabs in editable tab controls.</p>
+<div class="code">
+	<pre>// Add a tab to an editable tabControl
+Function:	addTab()
+Description:	Add a new tab to an editable tab control
+Usage:		tabControl.addTab(jqTabber, tab_id, tab_title, tab_context);
+Example:
+// Get the tabber
+var jqTabber = jq(".settingsTabber");
+
+// Add tab
+var tabPage = DOM.create("div", "", "", "settingsPage");
+tabControl.addTab(jqTabber, "security", "Security", tabPage);</pre>
+</div>

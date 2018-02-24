@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\test">
+  <class name="moduleTester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1392025074</datecreated>
+      <daterevised>1410940913</daterevised>
+      <extends>
+        <object>\DEV\Modules\test\moduleTester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Module Tester Manager</title>
+      <description>Manages module tester mode.</description>
+      <deprecated>Use \DEV\Modules\test\moduleTester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

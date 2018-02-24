@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="JSONServerReport" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362741840</datecreated>
+      <daterevised>1387274303</daterevised>
+      <extends>\ESS\Protocol\server\ServerReport</extends>
+      <implements/>
+      <throws/>
+      <title>JSON Server Report</title>
+      <description>Creates an asynchronous server report in JSON format according to user request.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true" class="undefined">
+          <description>Returns the server report</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addContent" returntype="ServerReport" static="true" class="undefined">
+          <description>Adds a content report to the report stack</description>
+          <parameters>
+            <parameter name="$content" type="array" defaultvalue="">
+              <description>The body of the report content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addAction" returntype="ServerReport" static="true" class="undefined">
+          <description>Adds an action report to the report stack</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.
+This may vary according to the handler.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getReport" returntype="string" static="true">
+          <description>Builds the entire report with the head and the body and returns the json string generated.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReportContent" returntype="array" static="true">
+          <description>Creates a report content as an array inside the report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The report type.</description>
+            </parameter>
+            <parameter name="$context" type="array" defaultvalue="">
+              <description>The report context.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getActionContext" returntype="void" static="true">
+          <description>Builds a JSON action report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.
+This may vary according to the handler.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

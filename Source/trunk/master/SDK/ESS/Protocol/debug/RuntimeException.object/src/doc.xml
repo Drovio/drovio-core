@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\debug">
+  <class name="RuntimeException" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1381847198</datecreated>
+      <daterevised>1421748821</daterevised>
+      <extends>
+        <object/>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Runtime Exception</title>
+      <description>Creates a runtime exception and provides the user all the available information (according to debugger level) for reporting the error.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="errCode">
+          <description>The exception's error code.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method. Constructs the exception.</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The exception message.</description>
+            </parameter>
+            <parameter name="$errCode" type="string" defaultvalue="">
+              <description>The exception error code.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string" static="true">
+          <description>Gets the exception page report.</description>
+          <parameters>
+            <parameter name="$ex" type="Exception" defaultvalue="">
+              <description>The exception thrown.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The exception page report html.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

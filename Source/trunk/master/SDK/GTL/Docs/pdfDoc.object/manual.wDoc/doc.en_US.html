@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>PDF document handler with php</h1>
+<p>This class provides the right tools for creating a pdf document using php commands. This tool uses the tFPDF class which is an extension of the FPDF class.</p>
+<p>For a complete manual of the commants, see the <a target="_blank" href="http://www.fpdf.org/">FPDF Manual</a></p>
+<p><b>NOTE:</b> This class supports by default the DejaVu font family which supports most of the UTF-8 fonts. No other fonts are currently supporter.</p>
+<h2>Simple example</h2>
+<p>The examples are similar to the FPDF tutorials, however we present a small functionality here:</p>
+<div class="code">
+	<pre>// Use the class
+use \GTL\Docs\pdfDoc;
+
+// Create an instance
+$pdf = new pdfDoc($orientation = 'P', $unit = 'mm', $size = 'A4');
+
+// Add a new page
+$pdf-&gt;AddPage();
+
+// Write a new line
+$pdf-&gt;Cell(40,10,'Hello World!');
+
+// Get the pdf
+$pdfContents = $pdf-&gt;Output();
+
+// Save the pdf somewhere using a fileManager
+...</pre>
+</div>
+<h2>Inserting images</h2>
+<p>Since the platform does not give direct access to files, this class has an interface which can put images into the pdf giving the image contents and providing the image type.</p>
+<div class="code">
+	<pre>// Use the class
+use \GTL\Docs\pdfDoc;
+
+// Create an instance
+$pdf = new pdfDoc($orientation = 'P', $unit = 'mm', $size = 'A4');
+
+// Add a new page
+$pdf-&gt;AddPage();
+
+// Add an image from contents
+// You have to specify the image type in the 6th parameter to be read
+$imageContents = ...
+$pdf-&gt;ImageFromContents($imageContents, $x = 10, $y = 10, $w = NULL, $h = NULL, $type = "png");
+
+// Get the pdf and save with a filemanager
+$pdfContents = $pdf-&gt;Output();
+...</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 01 October, 2015 [en_US]</p></div>
+</div></body></html>

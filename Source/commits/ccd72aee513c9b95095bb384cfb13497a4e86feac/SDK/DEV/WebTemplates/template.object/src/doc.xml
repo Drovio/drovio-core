@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\">
+  <class name="template" abstract="">
+    <info>
+      <version/>
+      <datecreated>1404754448</datecreated>
+      <daterevised>1404754448</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web Template Project</title>
+      <description>Object class to manage web template projects</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The contructor methos</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

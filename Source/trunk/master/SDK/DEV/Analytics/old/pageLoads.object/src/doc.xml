@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Analytics" namespace="\old">
+  <class name="pageLoads" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1424115460</datecreated>
+      <daterevised>1424199365</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>This class is not in use anymore and it will be deleted</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

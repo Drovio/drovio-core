@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1170818130"><title>Unregister package</title><description>Delete a package registration</description><access>1</access><attributes><attr id="person_id"></attr><attr id="package_id"></attr></attributes></query>

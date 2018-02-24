@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\">
+  <class name="resource" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>6</build>
+      <datecreated>1430759012</datecreated>
+      <daterevised>1445418112</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application resource reader</title>
+      <description>This class is used for the application to have access to its resources.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="mixed" static="true">
+          <description>Get an application resource.
+This function will decide whether to load the resource from the project or from the published path.</description>
+          <parameters>
+            <parameter name="$resourcePath" type="string" defaultvalue="">
+              <description>The resource subpath from the resource root folder down.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getApplicationPath" returntype="string" static="true">
+          <description>Gets the application's library path to the latest version, according to current running domain.</description>
+          <parameters/>
+          <returndescription>The application library path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

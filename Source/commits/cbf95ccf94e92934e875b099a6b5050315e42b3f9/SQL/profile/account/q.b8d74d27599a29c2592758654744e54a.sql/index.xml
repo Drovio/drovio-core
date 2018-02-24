@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="24129740479924"><title>Register new person</title><description></description><access></access><attributes><attr id="firstname"></attr><attr id="lastname"></attr><attr id="email"></attr><attr id="accountTitle"></attr><attr id="password"></attr></attributes></query>

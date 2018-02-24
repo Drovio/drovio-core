@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="194197421"><title>Get Translator Status</title><description>Get whether the translator exists and is active</description><access>1</access><attributes><attr id="user_id"></attr></attributes></query>

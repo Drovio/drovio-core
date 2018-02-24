@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="PopupPrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1362650700</datecreated>
+      <daterevised>1405611962</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Popup Prototype</title>
+      <description>This is the prototype for building any kind of popup.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="TP_OBEDIENT">
+        <description>Obedient type popup value.</description>
+      </const>
+      <const type="string" name="TP_PERSISTENT">
+        <description>Persistent type popup value.</description>
+      </const>
+      <const type="string" name="TP_TOGGLE">
+        <description>Toggle type popup value.</description>
+      </const>
+      <const type="string" name="OR_HORIZONTAL">
+        <description>The horizontal orientation value.</description>
+      </const>
+      <const type="string" name="OR_VERTIVAL">
+        <description>The vertical orientation value.</description>
+      </const>
+      <const type="string" name="OR_BOTH">
+        <description>The both vertical and horizontal orientation value.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="binding">
+          <description>"on", "one"</description>
+        </prop>
+        <prop type="string" name="type">
+          <description>"obedient", "persistent", "toggle"</description>
+        </prop>
+        <prop type="boolean" name="timeout">
+          <description>Defines whether the popup will be dismissed after 3 seconds.</description>
+        </prop>
+        <prop type="boolean" name="background">
+          <description>Defines whether the popup will be in a white background.</description>
+        </prop>
+        <prop type="boolean" name="fade">
+          <description>Defines whether the popup will have fade transition for in and out.</description>
+        </prop>
+        <prop type="string" name="position">
+          <description>Defines the position of the popup relative to the window|parent|sender.</description>
+        </prop>
+        <prop type="integer" name="distanceOffset">
+          <description>In case of positioning relative to the sender, the offset of the popup in distance from the sender in pixels.</description>
+        </prop>
+        <prop type="integer" name="alignOffset">
+          <description>In case of positioning relative to the sender, the offset of the popup in alignment from the sender in pixels.</description>
+        </prop>
+        <prop type="string" name="invertDock">
+          <description>Defines the docking of the popup.</description>
+        </prop>
+        <prop type="string" name="popupId">
+          <description>Popup id</description>
+        </prop>
+        <prop type="string" name="parent">
+          <description>Parent's id</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="PopupPrototype">
+          <description>Builds the popup according to settings given.
+The settings must be defined before the build function.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content of the popup</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="binding" returntype="mixed">
+          <description>Gets or defines the binding property</description>
+          <parameters>
+            <parameter name="$binding" type="string" defaultvalue="">
+              <description>The binding value.
+Can be either "on" or "one", like jQuery listeners.
+"On" listens all the time.
+"One" listens only the first time.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The binding property, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="parent" returntype="mixed">
+          <description>Gets or defines the popup's parent id.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The parent's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The popup's parent id, or the PopupPrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="type" returntype="mixed">
+          <description>Gets or defines the type property.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type value.
+You can use TP_OBEDIENT or TP_PERSISTENT.</description>
+            </parameter>
+            <parameter name="$toggle" type="boolean" defaultvalue="">
+              <description>Toggle functionality for popup.
+This defines that the popup will be showed and hide by the same listener.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The type property, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="timeout" returntype="mixed">
+          <description>Gets or defines the timeout property.</description>
+          <parameters>
+            <parameter name="$timeout" type="boolean" defaultvalue="">
+              <description>True to set timeout, false otherwise.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The timeout property, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="background" returntype="mixed">
+          <description>Gets or defines the background property.</description>
+          <parameters>
+            <parameter name="$background" type="boolean" defaultvalue="">
+              <description>True to set background overlay, false otherwise.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The background property, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="fade" returntype="mixed">
+          <description>Gets or defines the fade property</description>
+          <parameters>
+            <parameter name="$fade" type="boolean" defaultvalue="">
+              <description>True to set fade animation in and out, false otherwise.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The fade property, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="position" returntype="mixed">
+          <description>Gets or defines the position property.
+If both $position and $alignment are set, those are used accordingly to position the popup relatively with the sender.</description>
+          <parameters>
+            <parameter name="$position" type="string" defaultvalue="">
+              <description>Position can be:
+[top | bottom | left | right].
+
+If only $position is set as a string, that is used to position the popup in relation with the window. Here position can be:
+[top | bottom | left | right | center | user].
+or a number between 1 and 9 [inclusive] that maps the numeric keyboard numbers to places on the screen.
+
+Finally, if only the position is set as an array, this is used to position the popup in relation with the window ['fixed'] or the parent ['absolute']. That array can have the following keys:
+[top | bottom | left | right | position]</description>
+            </parameter>
+            <parameter name="$alignment" type="string" defaultvalue="">
+              <description>Alignment can be:
+[top | bottom | left | right | center (wherever this makes sense)].</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The position value, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="distanceOffset" returntype="mixed">
+          <description>Gets or defines the distance offset property</description>
+          <parameters>
+            <parameter name="$offset" type="integer" defaultvalue="">
+              <description>The distance offset value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The distance from sender, or the PopupPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="alignOffset" returntype="mixed">
+          <description>Gets or defines the alignment offset property</description>
+          <parameters>
+            <parameter name="$offset" type="integer" defaultvalue="">
+              <description>The align offset value</description>
+            </parameter>
+          </parameters>
+          <returndescription>The alignment with sender, or the PopupPrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="invertDock" returntype="mixed">
+          <description>Gets or defines the invertDock property.</description>
+          <parameters>
+            <parameter name="$orientation" type="string" defaultvalue="">
+              <description>The orientation to invert docking.
+Default is "none".
+Available invertions are OR_HORIZONTAL, OR_VERTICAL and OR_BOTH.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The inverDock property, or the PopupPrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

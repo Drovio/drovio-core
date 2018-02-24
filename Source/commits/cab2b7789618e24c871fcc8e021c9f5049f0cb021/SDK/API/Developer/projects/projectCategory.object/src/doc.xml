@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\projects">
+  <class name="projectCategory" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387790194</datecreated>
+      <daterevised>1387790194</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Project Category</title>
+      <description>Manages developer project categories, creating, updating and getting the proper information.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new project category.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The project category name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new category id if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed" static="true">
+          <description>Get all categories.</description>
+          <parameters>
+            <parameter name="$array" type="boolean" defaultvalue="">
+              <description>Defines the return object type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all categories or a mysqli resource object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="mixed" static="true">
+          <description>Gets the project category information.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The category id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of information if category exists, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createType" returntype="mixed" static="true">
+          <description>Create a new project type in the given category.</description>
+          <parameters>
+            <parameter name="$category" type="integer" defaultvalue="">
+              <description>The category id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The project type name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The type id if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTypes" returntype="array" static="true">
+          <description>Get all project types in a given project category.</description>
+          <parameters>
+            <parameter name="$category" type="integer" defaultvalue="">
+              <description>The project category id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all project types.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

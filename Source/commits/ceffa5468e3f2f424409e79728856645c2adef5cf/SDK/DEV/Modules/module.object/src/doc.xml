@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\">
+  <class name="module" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>11</build>
+      <datecreated>1396424515</datecreated>
+      <daterevised>1428396505</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module object</title>
+      <description>System's Module Manager.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The module id.</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>The module title.</description>
+        </prop>
+        <prop type="string" name="description">
+          <description>The module description.</description>
+        </prop>
+        <prop type="integer" name="groupID">
+          <description>The module group id.</description>
+        </prop>
+        <prop type="string" name="modulePath">
+          <description>The module repository path.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the module object.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id.
+If given, load the module information.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean">
+          <description>Updates the basic information for the module.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new module title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The new module description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new module.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The module title.</description>
+            </parameter>
+            <parameter name="$parentID" type="integer" defaultvalue="">
+              <description>The parent module group id.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The module description, if any.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createView" returntype="boolean">
+          <description>Create a new module view.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view's name.
+If empty, get the module's title (to be avoided twice).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getView" returntype="mixed">
+          <description>Gets a module view by name or by id.
+In case of two views with the same name, the first is selected.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view's name.</description>
+            </parameter>
+            <parameter name="$viewID" type="string" defaultvalue="">
+              <description>The view id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mView object or NULL if the view doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="runView" returntype="mixed">
+          <description>Runs the view from the trunk.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view name. If empty, take the module's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view result.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateViewName" returntype="boolean">
+          <description>Update a view's name by id.</description>
+          <parameters>
+            <parameter name="$viewID" type="string" defaultvalue="">
+              <description>The view id to update.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The new view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeView" returntype="mixed">
+          <description>Removes a given view from the module.</description>
+          <parameters>
+            <parameter name="$viewID" type="string" defaultvalue="">
+              <description>The view id to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success and false on failure.
+If there is an error, it will be returned as string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getViews" returntype="array">
+          <description>Get all module's views.</description>
+          <parameters/>
+          <returndescription>An array of id =&amp;gt; view name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createQuery" returntype="boolean">
+          <description>Creates a new sql query.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The query name.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The query description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="mixed">
+          <description>Gets the module query by name or by id.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The query name.</description>
+            </parameter>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mQuery object or NULL if query doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateQueryName" returntype="boolean">
+          <description>Updates a query name.</description>
+          <parameters>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id to update.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The query name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeQuery" returntype="mixed">
+          <description>Removes a given query from the module.</description>
+          <parameters>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success and false on failure.
+If there is an error, it will be returned as string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQueries" returntype="array">
+          <description>Get all module queries in an array.</description>
+          <parameters/>
+          <returndescription>An array of id and query name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the module from the database and from the system.
+It must be empty of views and queries.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTitle" returntype="string">
+          <description>Get the module title.</description>
+          <parameters/>
+          <returndescription>The module title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDescription" returntype="string">
+          <description>Get the module description.</description>
+          <parameters/>
+          <returndescription>The module description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasCSS" returntype="boolean">
+          <description>Gets whether this module has css code.</description>
+          <parameters/>
+          <returndescription>True or False.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadCSS" returntype="string">
+          <description>Loads all the module view's css.</description>
+          <parameters/>
+          <returndescription>The total css code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasJS" returntype="boolean">
+          <description>Gets whether this module has js code.</description>
+          <parameters/>
+          <returndescription>True or False.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadJS" returntype="string">
+          <description>Loads all the module view's jss.</description>
+          <parameters/>
+          <returndescription>The total js code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the module directory name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadModuleInfo" returntype="void">
+          <description>Loads all module info from the database.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createStructure" returntype="void">
+          <description>Creates the module structure, including indexes and folders.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfoItem" returntype="string">
+          <description>Gets the information file path.</description>
+          <parameters>
+            <parameter name="$update" type="boolean" defaultvalue="">
+              <description>Indicates whether the item should be updated for the vcs.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfoItemID" returntype="string">
+          <description>Gets the information file vcs item it.</description>
+          <parameters/>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSeed" returntype="string">
+          <description>Gets a random unique seed.</description>
+          <parameters/>
+          <returndescription>A unique random seed.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjectID" returntype="string">
+          <description>Gets an internal object id.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The id prefix.</description>
+            </parameter>
+            <parameter name="$seed" type="string" defaultvalue="">
+              <description>The unique seed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An object id based on the given seed.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

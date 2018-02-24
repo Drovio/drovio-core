@@ -1,0 +1,72 @@
+.uiCommitManager {
+	& {
+		width: 1000px;
+		background-color: #FFF;
+		overflow: auto;
+	}
+	.commitSection {
+		min-height: 20px;
+		padding: 3px;
+	}
+	h3.hd {
+		color: #5E6570;
+		font-weight: bold;
+		margin: 5px;
+	}
+	h3.hd.center {
+		text-align: center;
+		margin: 50px 0px;
+	}
+	#commitItems,
+	#fCommitItems {
+		max-height: 200px;
+	}
+	.uiCommitSummText {
+		border: 1px solid #999;
+		margin-top: 5px;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
+	}
+	.uiCommitDescText {
+		border: 1px solid #999;
+		margin-top: 5px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
+		height: 60px;
+		max-height: 100px;
+		resize: vertical;
+	}
+	#commitBtn {
+		width: 50%;
+		margin: 5px 25%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background: #5E6570;
+		border: 1px solid #5E6570;
+		color: #FFF;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		cursor: pointer;
+		padding: 5px 10px;
+		line-height: 18px;
+		text-align: center;
+		font-size: 12px;
+		transition: all .2s ease-in-out;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+	}
+	#commitBtn:hover {
+		background: #3CB0F7;
+		border: 1px solid #3CB0F7;
+		color: #FFF;
+		transition: all .2s ease-in-out;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+	}
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="teamSettings" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1427808514</datecreated>
+      <daterevised>1427808514</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Team Settings Manager</title>
+      <description>Manages the settings of a team.
+It can be used only for the current team when in secure mode.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="SettingsManager" name="settingsManager" static="true">
+          <description>The resource settingsManager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the settings manager.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to get initialize the settings for.
+
+NOTICE: This doesn't work when in secure mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Sets the value for a team settings property.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The settings name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The settings value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

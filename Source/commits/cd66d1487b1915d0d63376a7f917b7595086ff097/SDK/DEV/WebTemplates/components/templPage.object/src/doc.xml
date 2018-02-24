@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\components">
+  <class name="templPage" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1404760131</datecreated>
+      <daterevised>1405968028</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web Template Page</title>
+      <description>Object class to manage web template page</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>Object file extension</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="template" name="templ">
+          <description>The parent template object</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The page name</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The constructor class</description>
+          <parameters>
+            <parameter name="$templID" type="string" defaultvalue="">
+              <description>The id of the parent template, the one that the page belongs to</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the page</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new template page.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The items' name</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTML" returntype="string">
+          <description>Gets the view's html content</description>
+          <parameters/>
+          <returndescription>The html content</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateHTML" returntype="boolean">
+          <description>pdates the items' html content.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The html content</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSS" returntype="string">
+          <description>Updates the view's css code.</description>
+          <parameters/>
+          <returndescription>The style css.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSS" returntype="booleam">
+          <description>Updates the items' css code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createStructure" returntype="void">
+          <description>Creates the objects' inner file structure.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Working with application folders</h1>
+<p>This class provides a simple interface for creating and removing folders. The main use is to remove unneeded folders.</p>
+<p>All the paths given are application root folder relative, according to parameters given in constructor.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Resources\filesystem\folderManager;
+
+// Create a folder in team mode
+$fm = new folderManager($mode = folderManager::TEAM_MODE, $shared = FALSE);
+$fm-&gt;create($path = "/logs/", $name = "day1", $recursive = TRUE);
+
+
+// Remove a folder
+$fm-&gt;remove($path = "/logs/", $name = "day1", $recursive = TRUE);
+
+
+// You can also clean a folder from its contents
+$fm-&gt;clean($path = "/logs/", $name = "day1", $includeHidden = TRUE);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

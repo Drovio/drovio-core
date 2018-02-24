@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="116211432"><title>Check Developer Module Group</title><description>Check if a group is in the workspace of a developer user</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

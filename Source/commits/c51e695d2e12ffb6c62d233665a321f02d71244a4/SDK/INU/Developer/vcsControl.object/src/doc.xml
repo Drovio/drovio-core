@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\">
+  <class name="vcsControl" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1381834486</datecreated>
+      <daterevised>1385057360</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>UI Version Control Manager</title>
+      <description>Manages the commit items of a vcs repository.</description>
+      <deprecated>Use \INU\Developer\vcs\commitManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

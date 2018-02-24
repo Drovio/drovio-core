@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="glogger" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1432299899</datecreated>
+      <daterevised>1432299899</daterevised>
+      <extends>
+        <object>\DEV\Profiler\clogger</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Global logger</title>
+      <description>Decides whether the code runs for core or for an application and logs accordingly.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="void">
+          <description>Logs or inserts a log message to the pool.</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The log short message.</description>
+            </parameter>
+            <parameter name="$priority" type="string" defaultvalue="">
+              <description>Priority indicator as defined by logger constants</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log long description. It supports arrays and numbers. It is written with print_r().</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

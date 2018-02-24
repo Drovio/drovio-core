@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="accountSession" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1446162312</datecreated>
+      <daterevised>1447267487</daterevised>
+      <extends>
+        <object>\API\Login\accountSession</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Account session manager for drovio users.</title>
+      <description>It extends the drovio identity account session to manage sessions for the drovio platform.</description>
+      <deprecated>Use \API\Login\accountSession instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

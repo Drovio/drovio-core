@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\geoloc">
+  <class name="datetimer" abstract="">
+    <info>
+      <version/>
+      <datecreated>1379497094</datecreated>
+      <daterevised>1404895197</daterevised>
+      <extends>
+        <object>\API\Geoloc\datetimer</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Date time manager</title>
+      <description>Manages the stored date the time and handles how they will be displayed (in the proper timezone) to the user.</description>
+      <deprecated>Use \API\Geoloc\datetimer instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

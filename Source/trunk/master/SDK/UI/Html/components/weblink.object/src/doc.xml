@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\components">
+  <class name="weblink" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>2</build>
+      <datecreated>1402470004</datecreated>
+      <daterevised>1432194840</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Hyperlink Builder</title>
+      <description>Builds in one line a weblink with all the attributes.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="weblink">
+          <description>Builds the weblink DOMElement</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href attribute value.</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target value.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The content of the hyperlink.
+It can be text or a DOMElement.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The weblink class attribute.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The weblink object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

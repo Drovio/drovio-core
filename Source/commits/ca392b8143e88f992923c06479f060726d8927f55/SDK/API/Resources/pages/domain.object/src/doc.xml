@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="domain" abstract="">
+    <info>
+      <version/>
+      <datecreated>1395652078</datecreated>
+      <daterevised>1404838394</daterevised>
+      <extends>
+        <object>\SYS\Resources\pages\domain</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Sub-Domain Manager</title>
+      <description>Manages all the subdomains of the site.</description>
+      <deprecated>Use \SYS\Resources\pages\domain instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

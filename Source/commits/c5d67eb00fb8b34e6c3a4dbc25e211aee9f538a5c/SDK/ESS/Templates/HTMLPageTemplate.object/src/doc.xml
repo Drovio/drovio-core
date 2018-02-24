@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Templates" namespace="\">
+  <class name="HTMLPageTemplate" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362650880</datecreated>
+      <daterevised>1395656231</daterevised>
+      <extends>\ESS\Prototype\html\HTMLPagePrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Redback HTML Page Template</title>
+      <description>This is the base template for all redback pages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="HTMLPageTemplate">
+          <description>Builds the base template with all the necessary head tags. It doesn't include building anything about user interface.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The page title head meta.</description>
+            </parameter>
+            <parameter name="$lang" type="string" defaultvalue="">
+              <description>The current page language.</description>
+            </parameter>
+            <parameter name="$meta" type="boolean" defaultvalue="">
+              <description>Indicates whether to include meta (description and keywords) in the page.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>This object</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setHead" returntype="void">
+          <description>Inserts all the meta tags, scripts and styles to head.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addNoScript" returntype="void">
+          <description>Inserts the noscript tag.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setScripts" returntype="void">
+          <description>Inserts the default and global scripts. In the future, here will be determined the safe-mode state.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setStyles" returntype="void">
+          <description>Inserts the default and global styles. In the future, here will be determined the basic styles for the safe-mode.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

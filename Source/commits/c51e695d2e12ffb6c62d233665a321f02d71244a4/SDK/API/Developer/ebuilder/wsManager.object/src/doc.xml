@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="wsManager" abstract="" namespace="\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1372756074</datecreated>
+      <daterevised>1372756074</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Manager</title>
+      <description>Manager for the user's websites folders.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devRootFolder">
+          <description>The developer's websites root folder.</description>
+        </prop>
+        <prop type="boolean" name="valid">
+          <description>Indicates whether the user is a developer and can use this class.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the Developer's website service.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDevWebsiteFolder" returntype="string">
+          <description>Gets the website's folder inside the user's folder.</description>
+          <parameters>
+            <parameter name="$websiteId" type="string" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Path to the requested website.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description>Performs the user's check for validation.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

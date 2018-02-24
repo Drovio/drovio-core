@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Content" namespace="\">
+  <class name="pgVisitsMetrics" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1393846383</datecreated>
+      <daterevised>1393846383</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>use API\Content\analytics\collectors\pageLoads and API\Content\analytics\analysts\pageLoadsAnalyzer</deprecated>
+    </info>
+    <constants>
+      <const type="" name="VISITS_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="FILTER_FULL">
+        <description/>
+      </const>
+      <const type="" name="FILTER_EMPTY">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$rbData" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getData" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$date" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$filter" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createFile" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

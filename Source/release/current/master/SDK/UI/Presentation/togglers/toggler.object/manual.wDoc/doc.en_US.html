@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Toggler</h1>
+<p>A toggler serves as a flexible ui object what includes information hidden from the user to save space. It has a header which if clicked shows or hides the hidden information.</p>
+<div class="code">
+	<pre>// Create a toggler
+	
+// Use the class
+use \UI\Presentation\togglers\toggler;
+
+// Create a toggler object
+$toggler = new toggler();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$title = "User Information";
+$togBody = DOM::create("div", "", "", "userInfoContainer");
+$togItem = $toggler-&gt;build($id = "tog_id",$title, $togBody, $open = FALSE)-&gt;get();
+
+// Append to body
+DOM::append($body, $togItem);
+
+
+// We can append anything in the toggler body
+$header = DOM::create("h2", "User Information in details");
+DOM::append($togBody, $header);
+
+$description = DOM::create("p", "User description in details", "", "user_desc");
+DOM::append($togBody, $description);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 13:19</p></div>
+</div></body></html>

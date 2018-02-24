@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="ServiceManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366365000</datecreated>
+      <daterevised>1406887458</daterevised>
+      <extends>
+        <object>\API\Profile\AccountManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Abstract Service Manager</title>
+      <description>Manages all account's service operations.</description>
+      <deprecated>Use \API\Profile\account instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAccountFolder" returntype="string" static="true">
+          <description>Returns the account's service root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCompanyFolder" returntype="string" static="true">
+          <description>Returns the copmany's service root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The company service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

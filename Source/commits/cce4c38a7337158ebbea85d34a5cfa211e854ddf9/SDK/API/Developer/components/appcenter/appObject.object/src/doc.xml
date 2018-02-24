@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\appcenter">
+  <class name="appObject" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1379588423</datecreated>
+      <daterevised>1383477723</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>AppCenter SDK Object</title>
+      <description>Manages all SDK Objects of Application center.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MODEL_FOLDER">
+        <description>The model folder path.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes Object.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The object's namespace (if any).</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new application object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name (unique for the namespace).</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE on success, FALSE on failure or if an object with the same name already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceCode" returntype="string">
+          <description>Gets the object's source code.</description>
+          <parameters/>
+          <returndescription>The class section of the source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceCode" returntype="mixed">
+          <description>Updates the source code of this object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The class code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE on success or FALSE on failure. It returns a string telling whether there is a syntax error in the php file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadSourceCode" returntype="boolean">
+          <description>Loads the object's source code from the trunk.</description>
+          <parameters/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="string">
+          <description>Gets the object's documentation manual.</description>
+          <parameters/>
+          <returndescription>The documentation xml.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHeader" returntype="string">
+          <description>Builds the header of the class code.</description>
+          <parameters/>
+          <returndescription>The header of the class code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReleasePackageEntry" returntype="boolean">
+          <description>Adds an index entry to release package.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

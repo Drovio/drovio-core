@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Security" namespace="\">
+  <class name="appKey" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1445017660</datecreated>
+      <daterevised>1448153892</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application API keys manager.</title>
+      <description>This class provides an interface to read application team keys.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Get API key information.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The api key to get information for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>All key information including type, time created etc.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamKeys" returntype="array" static="true">
+          <description>Get all api keys that are between the current application and the current team.</description>
+          <parameters/>
+          <returndescription>An array of all keys.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateOrigin" returntype="boolean" static="true">
+          <description>Validate whether the given key is valid for the given origin.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The key to validate.</description>
+            </parameter>
+            <parameter name="$origin" type="string" defaultvalue="">
+              <description>The origin to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

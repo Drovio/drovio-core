@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProduct" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1418651322</datecreated>
+      <daterevised>1418819729</daterevised>
+      <extends>
+        <object>\RTL\Products\globl\globalProduct</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company Product Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="companyProductID">
+          <description>The company relative product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company product.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The company product id.
+Leave empty for new product.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new company product.</description>
+          <parameters>
+            <parameter name="$productHierarchy" type="integer" defaultvalue="">
+              <description>The product hierarchy id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The product title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The product description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="arra">
+          <description>Get all information about this product.</description>
+          <parameters>
+            <parameter name="$includeGlobal" type="boolean" defaultvalue="">
+              <description>If set to TRUE the the product has a global product reference, the array will include global product information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update product information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The product title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The product description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="boolean">
+          <description>Activate the company product to be publicly visible.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean">
+          <description>Deactivate the company product to be publicly invisible.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTaxRate" returntype="boolean">
+          <description>Set the product's tax rate value.</description>
+          <parameters>
+            <parameter name="$taxRate" type="integer" defaultvalue="">
+              <description>The tax rate id as you get it from the financial API.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Platform" namespace="\">
+  <class name="classLoader" abstract="">
+    <info>
+      <version/>
+      <datecreated>1389290921</datecreated>
+      <daterevised>1404721185</daterevised>
+      <extends>
+        <object/>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Engine Class Loader</title>
+      <description>Manager for importing all classes from the Core SDK and the application's source.</description>
+      <deprecated>Use \API\Platform\importer instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

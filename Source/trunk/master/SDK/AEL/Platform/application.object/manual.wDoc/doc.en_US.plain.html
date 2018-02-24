@@ -1,0 +1,13 @@
+<h1>Application platform manager</h1>
+<p>Every application when is being executed has access to the platform application manager. This class allows developers mostly to import classes form the application source.</p>
+<h3>PHP Example</h3>
+<div class="code">
+	<pre>// In application source object
+	
+// Import other application classes
+application::import($package = "Main", $class = "test/testObject");
+
+// Use the object
+use \APP\Main\test\testObject;</pre>
+</div>
+<p>This is the master class from which APPContent gets access like loading views and managing loading depth of views.</p>

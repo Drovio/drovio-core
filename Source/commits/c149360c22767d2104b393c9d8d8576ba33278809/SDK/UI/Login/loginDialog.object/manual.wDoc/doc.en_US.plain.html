@@ -1,0 +1,46 @@
+<h1>Redback Login Dialog</h1>
+<p>Developers can show a login dialog to their application (or page) to guest users in order to login. The login dialog allows the user to login and refresh the page or redirect to the account profile page.</p>
+<h2>How to use the dialog</h2>
+<p>The dialog can be showed in two forms, embedded as a DOMElement inside a custom container or as a login popup dialog.</p>
+<h3>Embedded login dialog</h3>
+<p>The embedded login dialog allows the developer to customize the view layout in any way, but it has to calculate the size of the dialog in order not to loose information and cause a mess.</p>
+<div class="code">
+	<pre>// The first example is the embedded dialog
+// Use login dialog
+use \UI\Login\loginDialog;
+
+// So we have the container where we want to insert the dialog
+$loginContainer = HTML::select(".loginContainer")->item(0);
+
+// Create the dialog
+$lg = new loginDialog();
+
+// The dialog follows the UIObjectPrototype, so we build
+// We can set a predefined username and a return url if needed
+// We set the login type to be from application in order to refresh the page afterwards
+$lg->build($username = "", $logintype = loginDialog::LGN_TYPE_APP, $return_url = "");
+
+// Since we want to embed the dialog,
+// we get the DOMElement and we append it in the container
+$dialog = $lg->get();
+HTML::append($loginContainer, $dialog);</pre>
+</div>
+<h3>Popup login dialog</h3>
+<p>The popup login dialog allows the developer to create a global popup with the login dialog on top of everything. This approach could be better when you have limited space or you do not care about the looks. It is the simplest way.</p>
+<div class="code">
+	<pre>// The second example is the popup dialog
+// Use login dialog
+use \UI\Login\loginDialog;
+
+// Create the dialog
+$lg = new loginDialog();
+
+// The dialog follows the UIObjectPrototype, so we build
+// We can set a predefined username and a return url if needed
+// We set the login type to be from application in order to refresh the page afterwards
+$lg->build($username = "", $logintype = loginDialog::LGN_TYPE_APP, $return_url = "");
+
+// This is supposed to be a view that will return the dialog,
+// so we return the report
+return $lg->getReport();</pre>
+</div>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="documentationViewer">
+  <div class="basicInfoContainer" id="DocBasicInfo">
+    <div class="classDeclContainer">
+      <div class="className">DOMParser</div>
+      <div class="section">
+        <div class="classTitle">DOMParse</div>
+        <p class="classDescription">Class for parsing xml files</p>
+        <div class="classDeclaration"><span class="modifier">extends : </span><span class="classExtends">\ESS\Prototype\DOMPrototype</span></div>
+      </div>
+    </div>
+    <div class="classInfo">
+      <div>0.0 (V)</div>
+      <div>March 8, 2013, 10:42 (EET) (C)</div>
+      <div>September 11, 2013, 14:55 (EEST) (R)</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="header"><span>Description</span></div>
+    <div class="body"><span>No Content</span></div>
+  </div>
+  <div class="section">
+    <div class="header"><span>Synopsis</span></div>
+    <div class="body">
+      <div class="body">
+        <div class="constantsContainer">
+          <div class="subHeader">Constants</div>
+          <div class="sectionBody"/>
+        </div>
+        <div class="propertiesContainer">
+          <div class="subHeader">Properties</div>
+          <div class="sectionBody">
+            <div class="property">
+              <div class="propertyDeclaration decline"><span class="pScope modifier">protected</span><span class="pType modifier">DOMDocument</span><span class="pName token">document</span></div>
+              <pre class="pDesc">The document of the file being parsed</pre>
+            </div>            
+          </div>
+        </div>
+        <div class="methodsContainer">
+          <div class="subHeader">Methods</div>
+          <div class="methodsBody">
+            <div class="method"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="header"><span>ChangeLog</span></div>
+    <div class="body"><span>No Content</span></div>
+  </div>
+  <div class="section">
+    <div class="header"><span>Examples</span></div>
+    <div class="body"><span>No Content</span></div>
+  </div>
+</div>
+</model>

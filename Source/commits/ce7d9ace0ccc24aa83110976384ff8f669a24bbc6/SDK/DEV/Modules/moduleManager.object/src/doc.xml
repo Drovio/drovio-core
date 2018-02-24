@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\">
+  <class name="moduleManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1396425754</datecreated>
+      <daterevised>1407960244</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>General Module Manager</title>
+      <description>Manages all modules including publish and some analysis.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="publish" returntype="void" static="true">
+          <description>Publish all modules (views and queries) to latest from the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to deploy.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="638584576"><title>Grant Master Access</title><description>Gives master access to a developer for a module group</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

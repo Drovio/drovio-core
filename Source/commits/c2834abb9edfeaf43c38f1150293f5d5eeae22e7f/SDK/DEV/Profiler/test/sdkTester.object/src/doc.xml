@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\test">
+  <class name="sdkTester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1392025500</datecreated>
+      <daterevised>1410940519</daterevised>
+      <extends>
+        <object>\DEV\Core\test\sdkTester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>SDK Package Tester Manager</title>
+      <description>Manages sdk packages tester mode.</description>
+      <deprecated>Use \DEV\Core\test\sdkTester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

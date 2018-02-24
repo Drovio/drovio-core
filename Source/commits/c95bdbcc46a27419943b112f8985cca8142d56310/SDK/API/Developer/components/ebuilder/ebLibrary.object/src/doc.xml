@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\ebuilder">
+  <class name="ebLibrary" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1369729616</datecreated>
+      <daterevised>1396599868</daterevised>
+      <extends>\API\Developer\components\prime\libraryManager</extends>
+      <implements/>
+      <throws/>
+      <title>Ebuilder Library Manager</title>
+      <description>Handles all operations with ebuilder libraries.</description>
+      <deprecated>Use \DEV\WebEngine\sdk\webLibrary instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="classMap">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the ebLibrary.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getList" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="pack" returntype="boolean">
+          <description>Packs a library in a new or existing archive</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>Name of the library to pack</description>
+            </parameter>
+            <parameter name="$archivePath" type="string" defaultvalue="">
+              <description>Directory of the new or existing archive</description>
+            </parameter>
+            <parameter name="$archiveName" type="string" defaultvalue="">
+              <description>Name of the archive. If empty, a new archive will be created in $directory</description>
+            </parameter>
+            <parameter name="$innerArchiveDirectory" type="string" defaultvalue="">
+              <description>Inner directory inside the archive, where the library will be packed. Only has meaning if $archive is supplied</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

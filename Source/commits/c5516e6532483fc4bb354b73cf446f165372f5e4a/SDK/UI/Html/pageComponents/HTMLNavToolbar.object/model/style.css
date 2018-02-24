@@ -1,0 +1,182 @@
+.uiMainToolbar {
+	position:relative;
+	padding-top: 38px;
+}
+.uiToolbarNav {
+	display:block;
+	margin:auto;
+	height: 38px;
+	position:fixed;
+	top:0px;
+	z-index:100;
+	min-width:1000px;
+	width:100%;
+	padding:0px 5px;
+	background: #e3e3e3;
+	border-bottom: 1px solid #c5c5c5;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background: linear-gradient(#f9f9f9, #e9e9e9);
+	background: -webkit-linear-gradient(#f9f9f9, #e9e9e9);
+	background: -moz-linear-gradient(#f9f9f9, #e9e9e9);
+}
+#domainNav, #myNav {
+	font-weight: bold;
+}
+#domainNav, #pageNav, #myNav {
+	overflow: hidden;
+	display: inline-block;
+}
+
+#myNav > * {
+	float:none;
+	display:inline-block;
+	vertical-align:top;
+}
+
+#pageNav:empty {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+#myNav > #userTools {
+	overflow: auto;
+	display: inline-block;
+	vertical-align:top;
+}
+.home .navIco {
+	background-image:url(/Library/Media/images/global/userNav.svg);
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+}
+.userStarter .navIco {
+	background-image:url(/Library/Media/images/global/userNav.svg);
+	background-position:-30px 0px;
+}
+.userMessages .navIco {
+	background-image:url(/Library/Media/images/global/userNav.svg);
+	background-position:-90px 0px;
+}
+.userDeveloper .navIco { background-image:url(/Library/Media/images/global/developer_ico.svg); }
+/* My Icons */
+.settings .navIco {
+	background-image:url(/Library/Media/images/domains/myNav.svg);
+	background-position:0px 0px;
+}
+.packages .navIco {
+	background-image:url(/Library/Media/images/domains/myNav.svg);
+	background-position:-30px 0px;
+}
+.services .navIco {
+	background-image:url(/Library/Media/images/domains/myNav.svg);
+	background-position:-60px 0px;
+}
+.relations .navIco {
+	background-image:url(/Library/Media/images/domains/myNav.svg);
+	background-position:-90px 0px;
+}
+/* Admin Icons */
+.resources .navIco {
+	background-image:url(/Library/Media/images/domains/adminNavSprite.svg);
+	background-position:0px 0px;
+}
+.pages .navIco, .vcs .navIco {
+	background-image:url(/Library/Media/images/domains/adminNavSprite.svg);
+	background-position:-30px 0px;
+}
+.developer .navIco {
+	background-image:url(/Library/Media/images/domains/adminNavSprite.svg);
+	background-position:-60px 0px;
+}
+.tester .navIco {
+	background-image:url(/Library/Media/images/domains/adminNavSprite.svg);
+	background-position:-90px 0px;
+}
+.security .navIco {
+	background-image:url(/Library/Media/images/domains/adminNavSprite.svg);
+	background-position:-120px 0px;
+}
+.publisher .navIco {
+	background-image:url(/Library/Media/images/domains/adminNavSprite.svg);
+	background-position:-150px 0px;
+}
+.add_new .navIco { background-image:url(/Library/Media/images/pages/developer/add_nav.svg); }
+.regionSelector .navIco {
+	width:28px !important;
+	padding:7px 1px;
+	height:24px !important;
+}
+img.region {
+	height:24px;
+	vertical-align:bottom;
+	opacity:0.9;
+}
+.tlbNav {
+	overflow:visible;
+	height:38px;
+}
+.leftNav .tlbNavItem > .navMenuHeader > .navIco { float:left; }
+.leftNav .tlbNavItem > .navMenuHeader > .title {
+	padding-right:5px;
+}
+.rightNav {
+	position:absolute;
+	right: 5px;
+	top:0;
+}
+.rightNav .tlbNavItem > .navMenuHeader > .title {
+	padding:0px;
+	padding-left:5px;
+}
+.uiMainToolbar .loadingBar {
+	background-color: rgba(192, 4, 3, 1);
+	position: absolute;
+	bottom: -1px;
+	height: 2px;
+	z-index: 101;
+}
+html.loading .loadingBar {
+	animation: loading 2s infinite;
+	-webkit-animation: loading 2s infinite;
+	-moz-animation: loading 2s infinite;
+}
+@keyframes loading {  0% {
+ left: 0px;
+ width:0px;
+}
+ 50% {
+ left: 0px;
+ width:100%;
+}
+ 100% {
+ right: 0px;
+ width:0%;
+}
+}
+@-moz-keyframes loading {  0% {
+ left: 0px;
+ width:0px;
+}
+ 50% {
+ left: 0px;
+ width:100%;
+}
+ 100% {
+ right: 0px;
+ width:0%;
+}
+}
+@-webkit-keyframes loading {  0% {
+ left: 0px;
+ width:0px;
+}
+ 50% {
+ left: 0px;
+ width:100%;
+}
+ 100% {
+ right: 0px;
+ width:0%;
+}
+}

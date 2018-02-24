@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="pageFolder" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395651523</datecreated>
+      <daterevised>1395651523</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Folder Manager</title>
+      <description>The system's folder manager.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new folder</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the folder.</description>
+            </parameter>
+            <parameter name="$parent_id" type="integer" defaultvalue="">
+              <description>The parent folder id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete a folder (it must be empty)</description>
+          <parameters>
+            <parameter name="$folderID" type="integer" defaultvalue="">
+              <description>The folder's id to be deleted</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get a folder's info</description>
+          <parameters>
+            <parameter name="$folderID" type="integer" defaultvalue="">
+              <description>The folder id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all folder info.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="trail" returntype="string" static="true">
+          <description>Get a folder's full path trail</description>
+          <parameters>
+            <parameter name="$folderID" type="integer" defaultvalue="">
+              <description>The folder id.</description>
+            </parameter>
+            <parameter name="$delimiter" type="string" defaultvalue="">
+              <description>The delimiter to separate the path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder's full trail path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

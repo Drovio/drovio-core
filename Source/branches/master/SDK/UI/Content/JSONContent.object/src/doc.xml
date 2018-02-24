@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Content" namespace="\">
+  <class name="JSONContent" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1406714128</datecreated>
+      <daterevised>1448481473</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>JSON Content Object</title>
+      <description>Creates a json content object for async communication.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setResponseCode" returntype="void">
+          <description>Set the header response status code.</description>
+          <parameters>
+            <parameter name="$code" type="integer" defaultvalue="">
+              <description>A valid response status code.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addHeader" returntype="void">
+          <description>Adds a header to the report.</description>
+          <parameters>
+            <parameter name="$header" type="array" defaultvalue="">
+              <description>A header array context.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The header key value.
+If set, the content will be available at the given key, otherwise it will inserted in the array with a numeric key (next array key).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportContent" returntype="void">
+          <description>Adds a report data content to the server report.</description>
+          <parameters>
+            <parameter name="$content" type="array" defaultvalue="">
+              <description>The report content data in array form.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The content key value.
+If set, the content will be available at the given key, otherwise it will inserted in the array with a numeric key (next array key).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportAction" returntype="void">
+          <description>Adds a report action content to the server report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value (if any, empty by default).</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The action key value.
+If set, the content will be available at the given key, otherwise it will inserted in the array with a numeric key (next array key).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Returns the JSON Report for this data content.</description>
+          <parameters>
+            <parameter name="$content" type="array" defaultvalue="">
+              <description>The report content data in array form.</description>
+            </parameter>
+            <parameter name="$allowOrigin" type="string" defaultvalue="">
+              <description>The allow origin header value for the ServerReport response headers.
+If empty, calculate the inner allow origin of the framework (more secure).
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$withCredentials" type="boolean" defaultvalue="">
+              <description>The allow credentials header value for the ServerReport response headers.
+It is TRUE by default.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The content key value.
+If set, the content will be available at the given key, otherwise it will inserted in the array with a numeric key (next array key).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The JSON report string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Platform" namespace="\DOM">
+  <class name="DOM" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395662439</datecreated>
+      <daterevised>1395662439</daterevised>
+      <extends>\UI\Html\DOM</extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use \UI\Html\DOM Instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

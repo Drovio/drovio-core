@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Geoloc" namespace="\">
+  <class name="locale" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1395647401</datecreated>
+      <daterevised>1428997926</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Locale Manager</title>
+      <description>Handles all about languages and locales</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="defaultLocale" static="true">
+          <description>The default system locale.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getDefault" returntype="string" static="true">
+          <description>Gets the system's default locale.</description>
+          <parameters/>
+          <returndescription>The default locale.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the locale's info.
+If attribute is left empty, gets the current locale's info.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The requested locale.
+If left empty, get the current locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of information about the current locale, the country and the language of this locale.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean" static="true">
+          <description>Set the system's current locale for the user.</description>
+          <parameters>
+            <parameter name="$locale_mixed" type="string" defaultvalue="">
+              <description>The locale mixed as [region]:[locale].</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string" static="true">
+          <description>Get the current active locale.</description>
+          <parameters/>
+          <returndescription>The locale string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

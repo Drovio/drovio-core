@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="account" abstract="">
+    <info>
+      <version>8.0</version>
+      <build>2</build>
+      <datecreated>1373017114</datecreated>
+      <daterevised>1444843513</daterevised>
+      <extends>
+        <object>\DRVC\Profile\account</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Manages the active account.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="ID_TEAM_NAME">
+        <description>The system team name for the identity database.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="resetPassword" returntype="boolean" static="true">
+          <description>Update the account's password given the reset id token.</description>
+          <parameters>
+            <parameter name="$resetID" type="string" defaultvalue="">
+              <description>The reset id.</description>
+            </parameter>
+            <parameter name="$newPassword" type="string" defaultvalue="">
+              <description>The new account password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountFolder" returntype="mixed" static="true">
+          <description>Gets the account's folder. The folder is created if doesn't exist.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the folder for.
+
+NOTICE: This doesn't work when in secure mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account folder path.
+If there is no active account, it returns FALSE.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServicesFolder" returntype="void" static="true">
+          <description>Get a service's folder inside the account root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+            <parameter name="$systemAppData" type="boolean" defaultvalue="">
+              <description>This indicates the service folder as System App and will be placed in a special folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the account info.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the information for.
+Leave empty for the current account.
+It is empty by default.
+If it's not the current account, only public information will be returned.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of the account information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateProfileImage" returntype="boolean" static="true">
+          <description>Update the account profile image.</description>
+          <parameters>
+            <parameter name="$image" type="data" defaultvalue="">
+              <description>The image data.
+The image should be in png format.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.
+If empty or in secure mode this will be the current account.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getAccountFolderPath" returntype="string" static="true">
+          <description>Get the account folder path for any account.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account to get the folder path for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder url path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderID" returntype="string" static="true">
+          <description>Gets the unique folder id for the requested use.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The prefix of the folder.</description>
+            </parameter>
+            <parameter name="$folderID" type="string" defaultvalue="">
+              <description>The id to be hashed.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The extension of the folder (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

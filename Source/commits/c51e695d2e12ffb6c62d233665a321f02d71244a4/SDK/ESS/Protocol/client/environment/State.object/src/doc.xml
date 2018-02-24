@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="State" namespace="\client\environment">
+    <info>
+      <version/>
+      <datecreated>March 7, 2013, 9:40 (UTC)</datecreated>
+      <daterevised>March 7, 2013, 9:40 (UTC)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Browser State Manager</title>
+      <description>Manages all the browser's state changes (Javascript) and keeps a history of what is happening.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

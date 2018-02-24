@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\test">
+  <class name="sdkTester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1410940475</datecreated>
+      <daterevised>1420140986</daterevised>
+      <extends>
+        <object>\DEV\Profiler\tester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>SDK Package Tester Manager</title>
+      <description>Manages sdk packages tester mode.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the sdk tester mode for the given sdk package.</description>
+          <parameters>
+            <parameter name="$packages" type="array" defaultvalue="">
+              <description>An array of all packages with the mixed package name or empty ("all") for all packages.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the sdk tester mode for the given sdk package.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Gets the tester status for a given sdk package.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The mixed package name to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if package is on tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="libPackageStatus" returntype="boolean" static="true">
+          <description>Gets the tester status for a given sdk package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if package is on tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPackages" returntype="array" static="true">
+          <description>Get all packages on tester mode.</description>
+          <parameters/>
+          <returndescription>An array of all active mixed package names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

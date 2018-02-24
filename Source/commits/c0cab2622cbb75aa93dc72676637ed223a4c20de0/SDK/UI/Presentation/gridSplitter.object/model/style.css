@@ -1,0 +1,188 @@
+/*____________________ presentation.gridSplitter ____________________*/
+/* Is this good?! */
+.preventSelection * {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.preventSelection.horizontal * {
+	cursor:col-resize;
+}
+.preventSelection.vertical * {
+	cursor:row-resize;
+}
+
+/* Container */
+.sliderContainer {
+	width:100%;
+	height:100%;
+	/*height:500px;*/
+	overflow:auto;
+	position:relative;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+/* Main */
+.sliderContainer > .sliderMain {
+	/*top:0;
+	left:0;*/
+	padding: 0;
+	margin: 0;
+	/*position:absolute;*/
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position:relative;
+	float:left;
+	overflow:hidden;
+}
+.sliderContainer.horizontal > .sliderMain {
+	height:100%;
+	min-width:35%;
+	width: 70%;
+}
+.sliderContainer.vertical > .sliderMain {
+	width:100%;
+	height: 70%;
+	min-height: 35%;
+}
+
+/* Side */
+.sliderContainer > .sliderSide {
+	position:absolute;
+	overflow:hidden;
+	background-color:rgba(166, 166, 166, 0.3);
+	/* temp */
+	/* display:none; */
+	min-width:0px;
+	background-clip:content-box;
+	box-sizing:border-box;
+}
+.sliderContainer > .sliderSide.leftSnap {
+	padding-left:2px;
+}
+.sliderContainer > .sliderSide.rightSnap {
+	padding-right:2px;
+}
+.sliderContainer > .sliderSide.topSnap {
+	padding-top:2px;
+}
+.sliderContainer > .sliderSide.bottomSnap {
+	padding-bottom:2px;
+}
+.sliderContainer.horizontal > .sliderSide {
+	height:100%;
+	top:0;
+	right:0;	
+	min-width:15%;
+	width:30%;
+}
+.sliderContainer.vertical > .sliderSide {
+	width:100%;
+	bottom:0;
+	left:0;	
+	min-height:15%;
+	height:30%;
+}
+
+/* Inverted Layout */
+.sliderContainer.horizontal.invertedLayout > .sliderMain {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.sliderContainer.vertical.invertedLayout > .sliderMain {
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.sliderContainer.horizontal.invertedLayout > .sliderSide {
+	position:relative;
+}
+.sliderContainer.vertical.invertedLayout > .sliderSide {
+	position:relative;
+}
+
+/* Expander */
+.sliderContainer > .sliderMain .sideExpander {
+	padding: 5px;
+	border: 1px solid rgb(166, 166, 166);
+	background: rgb(230, 230, 230);
+	cursor: pointer;
+}
+.sliderContainer > .sliderMain .sideExpander:hover {
+	background: rgb(220, 220, 220);
+}
+
+.expandersWrapper:not(:hover) > .sideExpander:not(:only-child):after {
+	content: "+";
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	border: inherit;
+	background: rgb(230, 230, 230);
+	font-size: 11px;
+	border-radius: 50%;
+	width: 13px;
+	text-align: center;
+	line-height: 12px;
+}
+
+/* Bar */
+.vSlider {
+	background-color: rgb(166, 166, 166);
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width:1px;
+	border-left: 1px solid rgb(166, 166, 166);
+	border-right: 1px solid rgb(166, 166, 166);
+}
+.leftSnap > .vSlider {
+	left:0;
+}
+.rightSnap > .vSlider {
+	right:0;
+}
+.vSlider:hover {
+	cursor:col-resize;
+}
+
+.hSlider {
+	background-color: rgb(166, 166, 166);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid rgb(166, 166, 166);
+	border-bottom: 1px solid rgb(166, 166, 166);
+}
+.topSnap > .hSlider {
+	top:0;
+}
+.bottomSnap > .hSlider {
+	bottom:0;
+}
+.hSlider:hover {
+	cursor:row-resize;
+}
+
+/* Contents */
+.sliderContainer > .sliderMain > .sliderMainContent {
+	/*overflow:auto;*/
+	width: 100%;
+	height: 100%;
+	position:relative;
+	box-sizing: border-box;
+}
+.sliderContainer > .sliderSide > .sliderSideContent {
+	/*overflow:auto;*/
+	width: 100%;
+	height: 100%;
+	position:relative;
+	box-sizing: border-box;
+}

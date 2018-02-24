@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\">
+  <class name="pdfDoc" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1443386527</datecreated>
+      <daterevised>1443386527</daterevised>
+      <extends>
+        <object>\GTL\Docs\pdf\tFPDF</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>PDF Document Editor</title>
+      <description>Creates pdf files using the tFPDF library.
+For more information see:
+- http://www.fpdf.org/
+- http://www.fpdf.org/en/script/script92.php</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="B">
+          <description>The bold tag identifier.</description>
+        </prop>
+        <prop type="integer" name="I">
+          <description>The italic tag identifier.</description>
+        </prop>
+        <prop type="integer" name="U">
+          <description>The underline tag identifier.</description>
+        </prop>
+        <prop type="string" name="HREF">
+          <description>The href tag identifier.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new pdf document instance.</description>
+          <parameters>
+            <parameter name="$orientation" type="string" defaultvalue="">
+              <description>The pdf orientation.
+Select 'p', 'protrait' or 'l', 'landscape'.
+It is on portrait mode by default.</description>
+            </parameter>
+            <parameter name="$unit" type="string" defaultvalue="">
+              <description>The page units.
+It is 'mm' by default.</description>
+            </parameter>
+            <parameter name="$size" type="string" defaultvalue="">
+              <description>The page size.
+It is A4 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_loadfont" returntype="array">
+          <description>Load a json file from the font repository.
+You can extend this function to use application resources.</description>
+          <parameters>
+            <parameter name="$fontName" type="string" defaultvalue="">
+              <description>The font name to load.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The font array as defined from FPDF.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Output" returntype="mixed">
+          <description>Get the pdf contents.</description>
+          <parameters/>
+          <returndescription>The pdf file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="WriteLine" returntype="void">
+          <description>Write a line on the pdf file.</description>
+          <parameters>
+            <parameter name="$text" type="string" defaultvalue="">
+              <description>The text to write.</description>
+            </parameter>
+            <parameter name="$posX" type="float" defaultvalue="">
+              <description>The x position for the upper right corner.</description>
+            </parameter>
+            <parameter name="$posY" type="float" defaultvalue="">
+              <description>The y position for the upper right corner.</description>
+            </parameter>
+            <parameter name="$lnH" type="float" defaultvalue="">
+              <description>The line height.</description>
+            </parameter>
+            <parameter name="$fontSize" type="float" defaultvalue="">
+              <description>The font size.
+It is 11 by default.</description>
+            </parameter>
+            <parameter name="$fontColorHex" type="string" defaultvalue="">
+              <description>The font color in hex mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="WriteHTML" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$html" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetStyle" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$enable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="PutLink" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$URL" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$txt" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$r" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$g" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$b" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="OpenTag" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$attr" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="CloseTag" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

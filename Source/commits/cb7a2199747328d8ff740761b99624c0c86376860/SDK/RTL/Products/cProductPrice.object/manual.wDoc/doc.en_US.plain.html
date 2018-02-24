@@ -1,0 +1,69 @@
+<h1>Retail product price manager</h1>
+<p>Every product can have many different prices like retail, wholesale or any company custom price but only one price per type. Price values are used only for reference and they can change any time without affecting other tables. Prices are using the company currency as set from the company financial information.</p>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProduct;
+use \RTL\Products\cProductPrice;
+
+// Get product id
+$productID = engine::getVar("id");
+
+// Create an empty instance
+$priceManager = new cProductCodeManager($productID);
+
+// Set a new product price
+$priceManager-&gt;set($priceType = 1, $price = "19.95");
+
+
+// To update a product price, we will call the same function as above
+// This will see that there is a code of the same type and it will update
+$priceManager-&gt;set($priceType = 1, $price = "15.95");
+
+
+// Remove a price from the database
+// This action cannot be undone
+$priceManager-&gt;remove($priceType = 2);</pre>
+</div>
+<h2>Getting all product prices</h2>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProduct;
+use \RTL\Products\cProductPrice;
+
+// Get product id
+$productID = engine::getVar("id");
+
+// Create an empty instance
+$priceManager = new cProductCodeManager($productID);
+$prices = $priceManager-&gt;getAllPrices();
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [product_id] =&gt; "1_1"
+            [type_id] =&gt; "1"
+            [price] =&gt; "15.95"
+            [time_updated] =&gt; 
+        )
+)</pre>
+</div>
+<h2>Select a price type</h2>
+<p>When creating or updating a product price, we need to provide a price type. This class can provide us with a list of all price types that the SDK supports:</p>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProductPrice;
+
+// Get all price types
+$types = new cProductPrice::getPriceTypes();
+
+// The above should return something like this:
+// It is: key =&gt; title
+Array
+(
+    [0] =&gt; "Retail"
+    [1] =&gt; "Wholesale"
+    [2] =&gt; "Buyer"
+)</pre>
+</div>

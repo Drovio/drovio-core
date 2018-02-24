@@ -1,0 +1,9 @@
+input.input-validation-error
+{
+    background: #FEF1EC;
+    border: 1px solid #CD0A0A;
+}
+
+.inputGroup > input {
+	vertical-align:middle
+}

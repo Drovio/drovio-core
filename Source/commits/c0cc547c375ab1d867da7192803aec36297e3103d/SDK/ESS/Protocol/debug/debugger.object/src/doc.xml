@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\debug">
+  <class name="debugger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387181501</datecreated>
+      <daterevised>1387181501</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Debugger class.</title>
+      <description>Contains only the prime javascript code.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

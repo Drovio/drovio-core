@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="toggler" abstract="" namespace="\togglers">
+    <info>
+      <version/>
+      <datecreated>1371035466</datecreated>
+      <daterevised>1379329872</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Content Toggler</title>
+      <description>Displays a header with a toggle button. On click, the body shows up.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="headerContent">
+          <description>The header content container.</description>
+        </prop>
+        <prop type="DOMElement" name="togBody">
+          <description>The body content container.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="toggler">
+          <description>Builds the togglder object.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element's id.</description>
+            </parameter>
+            <parameter name="$header" type="DOMElement" defaultvalue="">
+              <description>The header content.</description>
+            </parameter>
+            <parameter name="$body" type="DOMElement" defaultvalue="">
+              <description>The body content.</description>
+            </parameter>
+            <parameter name="$open" type="boolean" defaultvalue="">
+              <description>Defines whether the toggler is open.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the toggler object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setHead" returntype="toggler">
+          <description>Sets the toggler's head content. It replaces the old one.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The head content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the toggler object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="appendToBody" returntype="toggler">
+          <description>Appends content to the toggler's body.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the toggler object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

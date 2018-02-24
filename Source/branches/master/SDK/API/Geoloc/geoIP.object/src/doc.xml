@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Geoloc" namespace="\">
+  <class name="geoIP" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1445255140</datecreated>
+      <daterevised>1445255140</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Geolocation</title>
+      <description>This class uses GeoIP php extension to get information about country codes and timezones based on the ip address.
+This version is not working for detailed timezones where there might be more in a country.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getTimezoneByIP" returntype="string" static="true">
+          <description>Get the corresponding timezone according to ip address.</description>
+          <parameters>
+            <parameter name="$ipAddress" type="string" defaultvalue="">
+              <description>The ip address.
+Leave empty to get the current remote address.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The ip timezone.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCountryCode2ByIP" returntype="string" static="true">
+          <description>Get the country ISO2A code by ip.</description>
+          <parameters>
+            <parameter name="$ipAddress" type="string" defaultvalue="">
+              <description>The ip address.
+Leave empty to get the current remote address.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The country code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCountryCode3ByIP" returntype="string" static="true">
+          <description>Get the country ISO3A code by ip.</description>
+          <parameters>
+            <parameter name="$ipAddress" type="string" defaultvalue="">
+              <description>The ip address.
+Leave empty to get the current remote address.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The country code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="tester" abstract="" namespace="\privileges\modules\manage">
+    <info>
+      <version/>
+      <datecreated>1375268023</datecreated>
+      <daterevised>1375268023</daterevised>
+      <extends>\API\Profile\user</extends>
+      <implements/>
+      <throws/>
+      <title>User's tester extension</title>
+      <description>Manages all the tester's privileges.</description>
+      <deprecated>Use \API\Profile\tester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get_moduleStatus" returntype="boolean" static="true">
+          <description>Checks if a user is a tester of a module</description>
+          <parameters>
+            <parameter name="$module_id" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

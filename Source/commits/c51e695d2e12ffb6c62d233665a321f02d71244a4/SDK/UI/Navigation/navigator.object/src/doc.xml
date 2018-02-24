@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="navigator" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1367833639</datecreated>
+      <daterevised>1367833639</daterevised>
+      <extends/>
+      <implements/>
+      <title>Navigator</title>
+      <description/>
+      <deprecated>Use \ESS\Protocol\client\NavigatorProtocol instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" name="web" returntype="void">
+          <description>Adds weblink navigation</description>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$href" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$target" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="staticNav" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_targetcontainer" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_navgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_display" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="selector" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$group" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="add_web_navigation" returntype="void">
+          <description>Adds weblink navigation</description>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$href" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$target" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="add_static_navigation" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_targetcontainer" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_navgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_display" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="add_static_nav_group_selector" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$group" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

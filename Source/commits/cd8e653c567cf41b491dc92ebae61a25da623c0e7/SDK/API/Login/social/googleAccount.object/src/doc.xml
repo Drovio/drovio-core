@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Login" namespace="\social">
+  <class name="googleAccount" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1447271084</datecreated>
+      <daterevised>1447325105</daterevised>
+      <extends>
+        <object>\DRVC\Social\googleAccount</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Google Login manager for Drovio platform</title>
+      <description>Manages google login for the drovio platform.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="googleAccount" name="instance" static="true">
+          <description>The google account instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="googleAccount" static="true">
+          <description>Get a google account instance.</description>
+          <parameters/>
+          <returndescription>The googleAccount instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean">
+          <description>Login via google login.
+It creates an account session and set the proper cookies.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The google authorization code to get the access token.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new googleAccount instance.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

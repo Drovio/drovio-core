@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Profile" namespace="\">
+  <class name="branch" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1417611700</datecreated>
+      <daterevised>1417611700</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company Branch Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new company branch.
+
+Only company administrators can execute.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The branch title.</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The branch address.
+It could include a full address with postal code, city and country.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

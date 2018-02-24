@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>System Cookies manager</h1>
+<p>Manage website cookies through php and javascript. This class allows the developers to create and remove cookies accross the platform.</p>
+<h2 id="php_interface">PHP Interface</h2>
+<p>Creating cookies on the backend is simple, writting only one line of code:</p>
+<div class="code">
+	<pre>// Use the class
+use \ESS\Environment\cookies;
+
+// Create a new cookie for one day (expiration is in seconds)
+// The cookie will be available on the next call
+cookies::set($name = "cookie_name", $value = "cookie_value", $expiration = 60 * 60 * 24, $httpOnly = FALSE, $secure = FALSE);
+
+// Get a cookie value
+$cookieValue = cookes::get($name = "cookie2_name");
+
+// To remove a cookie, just set a negative expiration value
+// This will cause the browser to delete the cookie
+cookies::set($name = "cookie_name", $value = "cookie_value", $expiration = -1, $httpOnly = FALSE, $secure = FALSE);
+
+// Or call remove
+cookies::remove($name = "cookie_name");</pre>
+</div>
+<h2 id="javascript_interface">Javascript interface</h2>
+<p>We can also handle cookies through javascript. Javascript provides simple methods to handle cookies but we created a simple interface which we can use to read a d write platform cookies.</p>
+<div class="code">
+	<pre>// Javascript interface
+	
+// Read a cookie
+Function:	get()
+Description:	Get a cookie value
+Usage:		cookies.get(c_name);
+
+// Set a cookie
+Function:	set()
+Description:	Set a cookie value. Provide expiration in days.
+Usage:		cookies.set(c_name, value, exdays, path);
+Example:	cookies.set("cookie_name", "cookie_value", 1, "/");
+
+// Example to remove a cookie:
+cookies.set("cookie_name", 1, -1, "/");</pre>
+</div>
+<p class="note"><b>NOTE</b>: Keep in mind the cookies restrictions based on the httpOnly and secure parameters.</p>
+</div>
+<div class="footer"><p class="updated">Document updated 10 November, 2015 [en_US]</p></div>
+</div></body></html>

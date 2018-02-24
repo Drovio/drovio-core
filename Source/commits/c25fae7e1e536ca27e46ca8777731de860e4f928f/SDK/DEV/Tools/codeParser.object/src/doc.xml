@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\">
+  <class name="codeParser" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>2</build>
+      <datecreated>1395664877</datecreated>
+      <daterevised>1417195378</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Generic code parser.</title>
+      <description>Generic functions on coding, clearing and others.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="clear" returntype="string" static="true">
+          <description>Clears a given code from unwanted entities and characters.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code to be cleared.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cleared code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="decode" returntype="string" static="true">
+          <description>Decodes a given html context.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code to be decoded properly.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The decoded code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeComments" returntype="string" static="true">
+          <description>Removes line and multiline slash comments from code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code from which the comments are to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new code without the comments.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

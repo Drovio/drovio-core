@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\">
+  <class name="codeEditor" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1396437323</datecreated>
+      <daterevised>1421919413</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Code Editor</title>
+      <description>This is a simple code editor tool.
+It can be used for editing php, sql, javascript, css and other formats of code.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PHP">
+        <description>php code editor type.</description>
+      </const>
+      <const type="string" name="XML">
+        <description>xml code editor type.</description>
+      </const>
+      <const type="string" name="CSS">
+        <description>css code editor type.</description>
+      </const>
+      <const type="string" name="JS">
+        <description>js code editor type.</description>
+      </const>
+      <const type="string" name="SQL">
+        <description>sql code editor type.</description>
+      </const>
+      <const type="string" name="NO_PARSER">
+        <description>no specific code editor type.</description>
+      </const>
+      <const type="string" name="CODE_WORKERS_DIR">
+        <description>Directory where the code web workers reside</description>
+      </const>
+      <const type="string" name="CODE_RESOURCES">
+        <description>Directory for the code editor resources</description>
+      </const>
+      <const type="string" name="CODE_PARSERS">
+        <description>Index for the code editor parsers inside its resources</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="codeEditor">
+          <description>Builds a code editor container.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the editor.
+See class constants.
+Default value is for php.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The editor initial code.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the editor.
+This is the name of the textarea that will be used in the form for posting.
+Default is 'wideContent'.</description>
+            </parameter>
+            <parameter name="$editable" type="boolean" defaultvalue="">
+              <description>Sets the code editor as editable.
+Set to FALSE for preview mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The codeEditor object</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getParsersInfo" returntype="string" static="true">
+          <description>Acquires the available codeEditor's parsers and returns them as an xml document string.</description>
+          <parameters>
+            <parameter name="$parser" type="string" defaultvalue="">
+              <description>Type of the parser.
+Can be "php", "xml", "css", "js", "sql".
+If empty, all available parsers will be returned.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>Specific parser's info. 
+Can be "regulars" or "tokens".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The available parsers in xml format</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWorker" returntype="string" static="true">
+          <description>Acquires a codeEditor's worker and returns its contents.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the worker</description>
+            </parameter>
+          </parameters>
+          <returndescription>The available workers in xml format.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getTypedCodeMap" returntype="DOMElement">
+          <description>Returns the typed code map element.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the code editor.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The typed Code map element with the proper groups.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

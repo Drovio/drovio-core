@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\">
+  <class name="documentationViewer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366030500</datecreated>
+      <daterevised>1400225248</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Class Documentation Viewer</title>
+      <description>Class for viewing the documentation of the system's SDK classes.</description>
+      <deprecated>The class will be no longer used. Moved to modules.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="treeView" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1367855384</datecreated>
+      <daterevised>1379518962</daterevised>
+      <extends>\ESS\Prototype\html\MenuPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Tree View Control</title>
+      <description>Presents a navigation menu or data source in a tree view output.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="boolean" name="sorting">
+          <description>Defines whether the view will be sorted.</description>
+        </prop>
+        <prop type="array" name="subLists">
+          <description>The array of sublists as an associative array by item id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="menu_prototype" name="mp">
+          <description>DEPRECATED. The tree views menu prototype.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.
+Initializes object's variables and properties.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="treeView">
+          <description>Builds the object's model.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the view.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class of the view.</description>
+            </parameter>
+            <parameter name="$sorting" type="boolean" defaultvalue="">
+              <description>Defines whether the treeView will be sortable.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The treeView itself.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertExpandableTreeItem" returntype="DOMElement">
+          <description>Inserts an expandable tree Item inside a given parent (by id).
+Expandable is the tree item that expands / collapses its list by clicking on it.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content.</description>
+            </parameter>
+            <parameter name="$parentId" type="string" defaultvalue="">
+              <description>The parent item's id. If empty, the item will be inserted to the root.</description>
+            </parameter>
+            <parameter name="$open" type="boolean" defaultvalue="">
+              <description>If set to TRUE the tree item will be initially open.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The inserted item.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertSemiExpandableTreeItem" returntype="DOMElement">
+          <description>Inserts a semi-expandable tree Item inside a given parent (by id).
+Semi-expandable is the tree item that expands / collapses only when clicking its pointer</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content.</description>
+            </parameter>
+            <parameter name="$parentId" type="string" defaultvalue="">
+              <description>The parent item's id. If empty, the item will be inserted to the root.</description>
+            </parameter>
+            <parameter name="$open" type="boolean" defaultvalue="">
+              <description>If set to TRUE the tree item will be initially open.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The inserted item.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertTreeItem" returntype="DOMElement">
+          <description>Inserts a normal tree Item inside a given parent (by id).</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content.</description>
+            </parameter>
+            <parameter name="$parentId" type="string" defaultvalue="">
+              <description>The parent item's id. If empty, the item will be inserted to the root.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The inserted item.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertItem" returntype="DOMElement">
+          <description>Inserts a normal tree Item inside a given parent (by id).</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content.</description>
+            </parameter>
+            <parameter name="$parentId" type="string" defaultvalue="">
+              <description>The parent item's id. If empty, the item will be inserted to the root.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use $this-&amp;gt;insertTreeItem() instead.</deprecated>
+          <returndescription>The inserted item.</returndescription>
+          <throws/>
+        </method>
+        <method name="append" returntype="void">
+          <description>Appends a given listItem to the root or to a given parent.</description>
+          <parameters>
+            <parameter name="$listItem" type="DOMElement" defaultvalue="">
+              <description>The listItem to be appended.</description>
+            </parameter>
+            <parameter name="$parentId" type="string" defaultvalue="">
+              <description>The parent item's id. If empty, the item will be inserted to the root.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="insert_expandableTreeItem" returntype="DOMElement">
+          <description>Inserts an expandable tree Item inside a given parent.
+Expandable is the tree item that expands / collapses its list by clicking on it.</description>
+          <parameters>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The parent container</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use $this-&amp;gt;insertExpandableTreeItem() instead.</deprecated>
+          <returndescription>The inserted item.</returndescription>
+          <throws/>
+        </method>
+        <method name="insert_semiExpandableTreeItem" returntype="DOMElement">
+          <description>Inserts a semi-expandable tree Item inside a given parent (by id).
+Semi-expandable is the tree item that expands / collapses only when clicking its pointer</description>
+          <parameters>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The parent container</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use $this-&amp;gt;insertSemiExpandableTreeItem() instead.</deprecated>
+          <returndescription>The inserted item.</returndescription>
+          <throws/>
+        </method>
+        <method name="insert_treeItem" returntype="DOMElement">
+          <description>Inserts a tree Item that cannot be expanded inside a container or container's list</description>
+          <parameters>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The parent container</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The item's content</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use $this-&amp;gt;insertTreeItem() instead.</deprecated>
+          <returndescription>The inserted item</returndescription>
+          <throws/>
+        </method>
+        <method name="add_sortValue" returntype="void">
+          <description>Assigns a sorting value to a tree item</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The tree item</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The value to be assign for sorting</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use $this-&amp;gt;assignSortValue() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="assignSortValue" returntype="void">
+          <description>Assigns a sorting value to a tree item</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The tree item</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The value to be assign for sorting</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTreeItemContent" returntype="DOMElement">
+          <description>Returns the contents of the tree item</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>A tree item.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The contents node of the item</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_view" returntype="void">
+          <description>Creates the root list</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$sorting" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use build()-&amp;gt;get() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="buildTreeItem" returntype="DOMelement">
+          <description>Builds the treeItem according to attributes given.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content.</description>
+            </parameter>
+            <parameter name="$hasSubList" type="boolean" defaultvalue="">
+              <description>Defines whether this item will have a sublist.</description>
+            </parameter>
+            <parameter name="$expandable" type="string" defaultvalue="">
+              <description>Defines whether this item will be expandable, semi-expandable or none.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The created tree item</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="_get_treeItem" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hasSubList" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$expandable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use $this-&amp;gt;buildTreeItem() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

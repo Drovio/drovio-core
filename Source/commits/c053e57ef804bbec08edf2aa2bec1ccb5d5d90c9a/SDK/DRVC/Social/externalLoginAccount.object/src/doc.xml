@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Social" namespace="\">
+  <class name="externalLoginAccount" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447270161</datecreated>
+      <daterevised>1447270161</daterevised>
+      <extends>
+        <object>\DRVC\Profile\account</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Abstract External (Social) Login Account Manager</title>
+      <description>Manages external login using social networks and creates the proper sessions needed.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RQ_TYPE_POST">
+        <description>Post type request.</description>
+      </const>
+      <const type="string" name="RQ_TYPE_GET">
+        <description>Get type request.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected">
+        <method name="createSession" returntype="boolean">
+          <description>Create a new login session.</description>
+          <parameters>
+            <parameter name="$accountInfo" type="array" defaultvalue="">
+              <description>The account information given by the inherited class (social login, facebook login etc.).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="urlRequest" returntype="mixed">
+          <description>Make a cURL request to the given url.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url to make the request to.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The request type.
+It is post by default.</description>
+            </parameter>
+            <parameter name="$parameters" type="array" defaultvalue="">
+              <description>An associative array for request parameters.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cURL response.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

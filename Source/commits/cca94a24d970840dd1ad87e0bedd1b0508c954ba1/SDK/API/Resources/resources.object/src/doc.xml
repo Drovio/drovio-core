@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\">
+  <class name="resources" abstract="">
+    <info>
+      <version/>
+      <datecreated>1366714980</datecreated>
+      <daterevised>1404813188</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Resource Manager/Helper</title>
+      <description>Handles some basic file resources of the system. It includes the resource paths.</description>
+      <deprecated>This class is deprecated and no longer used. Use \DEV\Resources\paths instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="PATH">
+        <description>The resources' path</description>
+      </const>
+      <const type="string" name="DEV_PATH">
+        <description>The developer's resources path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

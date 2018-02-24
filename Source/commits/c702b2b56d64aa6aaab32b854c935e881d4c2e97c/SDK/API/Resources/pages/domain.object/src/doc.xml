@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="domain" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395652078</datecreated>
+      <daterevised>1395652078</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Sub-Domain Manager</title>
+      <description>Manages all the subdomains of the site.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Creates a new subdomain.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the subdomain</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The subdomain inner system path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete a subdomain (it must be empty of folders and pages)</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The subdomain name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get domain's info.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The domain name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all domain information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

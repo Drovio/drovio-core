@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\DEV\Apps\application"></use><use path="\DEV\Version\vcs"></use><use path="\DEV\Prototype\sourceMap"></use><use path="\API\Platform\importer"></use><use path="\DEV\Tools\coders\phpCoder"></use><use path="\DEV\Resources\paths"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\DEV\Tools\parsers\phpParser"></use><use path="\DEV\Prototype\classObject"></use><use path="\DEV\Apps\source\srcPackage"></use></dependencies>

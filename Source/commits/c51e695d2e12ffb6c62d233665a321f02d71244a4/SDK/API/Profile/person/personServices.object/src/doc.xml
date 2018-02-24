@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="personServices" abstract="" namespace="\person">
+    <info>
+      <version/>
+      <datecreated>1370250879</datecreated>
+      <daterevised>1375266520</daterevised>
+      <extends>\API\Profile\ServiceManager</extends>
+      <implements/>
+      <throws/>
+      <title>Person's Service Manager</title>
+      <description>Handles person's services.</description>
+      <deprecated>Use \API\Profile\ServiceManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the service manager according to given service name.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

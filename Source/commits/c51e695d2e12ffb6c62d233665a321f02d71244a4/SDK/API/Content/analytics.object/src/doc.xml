@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Content" namespace="\">
+  <class namespace="" abstract="" name="analytics">
+    <info>
+      <version/>
+      <datecreated>1382688700</datecreated>
+      <daterevised>1383128472</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>module call analytics</title>
+      <description>Capture and log data associated with a module call</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const name="ANALYTICS_FOLDER" type="string">
+        <description>The path of log file</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" returntype="void" name="log">
+          <description>Log a single data entry into log file</description>
+          <parameters>
+            <parameter defaultvalue="" type="array" name="$rbData">
+              <description>path : The path from were the call made
+moduleID : The requested module Id
+action : The requested action (aux module)
+access : The access code returned from access control</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method static="true" returntype="void" name="createFile">
+          <description>Creates the log file for the day.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method static="true" returntype="string" name="getFileName">
+          <description>Gets the log filename for the day.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

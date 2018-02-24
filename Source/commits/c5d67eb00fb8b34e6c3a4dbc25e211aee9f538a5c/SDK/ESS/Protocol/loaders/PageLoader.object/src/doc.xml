@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="PageLoader" namespace="\loaders">
+    <info>
+      <version/>
+      <datecreated>March 7, 2013, 9:42 (UTC)</datecreated>
+      <daterevised>March 7, 2013, 9:42 (UTC)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Page Loader</title>
+      <description>Loads a system's page according to page settings and parameters. It attaches the module receptor.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" static="true" returntype="void">
+          <description>Loads a page with the defined module</description>
+          <parameters>
+            <parameter name="$pageID" type="int" defaultvalue="">
+              <description>The page's id from the database.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

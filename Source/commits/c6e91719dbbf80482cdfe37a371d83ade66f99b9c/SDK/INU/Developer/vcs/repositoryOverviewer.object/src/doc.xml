@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\vcs">
+  <class name="repositoryOverviewer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1385370985</datecreated>
+      <daterevised>1392200841</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use DEV\Version\repository\repositoryOverviewer instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="id">
+          <description/>
+        </prop>
+        <prop type="" name="vcs">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$repository" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$includeRelease" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$projectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$repository" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$includeRelease" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getOverviewSection" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$projectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCommitSection" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBranchSection" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleaseSection" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNavigationGroup" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$groupSelector" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

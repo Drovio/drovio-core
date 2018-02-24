@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime">
+  <class name="packageObject" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1368794195</datecreated>
+      <daterevised>1385538506</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>Prime Package Object Handler</title>
+      <description>Handles all operations with library packages.</description>
+      <deprecated>Use \API\Developer\components\prime\indexing\pacakgeIndex instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index filename.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="repositoryRoot">
+          <description>The root repository.</description>
+        </prop>
+        <prop type="string" name="repository">
+          <description>The inner repository folder for the vcs.</description>
+        </prop>
+        <prop type="string" name="releaseFolder">
+          <description>The package release folder.</description>
+        </prop>
+        <prop type="string" name="domain">
+          <description>The package domain.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean">
+          <description>Creates a new package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name of the package.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createNS" returntype="boolean">
+          <description>Create a new namespace inside a given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library of the pagkage.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package of the namespace.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::"), if any.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNSList" returntype="array" static="true">
+          <description>Get all the namespaces of a given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::"), if any.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Developer\components\prime\indexing\packageIndex::getNSList() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackageObjects" returntype="array" static="true">
+          <description>Get all objects of a package in the given library (by namespace).</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::"), if any.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Developer\components\prime\indexing\packageIndex::getPackageObjects() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNSObjects" returntype="array" static="true">
+          <description>Get all direct children objects of a package in the given library (by namespace).</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::"), if any.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Developer\components\prime\indexing\packageIndex::getNSObjects() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReleasePackageObjects" returntype="array" static="true">
+          <description>Get all released objects of a given package.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Developer\components\prime\indexing\packageIndex::getReleasePackageObjects() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addObjectReleaseEntry" returntype="boolean" static="true">
+          <description>Create a new release entry for a given object.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace name.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Developer\components\prime\indexing\packageIndex::addObjectReleaseEntry() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="setRepository" returntype="void">
+          <description>Sets the repository variables for this object.</description>
+          <parameters>
+            <parameter name="$root" type="string" defaultvalue="">
+              <description>The root repository folder.</description>
+            </parameter>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The inner repository folder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setReleaseFolder" returntype="void">
+          <description>Sets the release folder.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The release folder path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setDomain" returntype="void">
+          <description>Sets the package's domain.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The domain of the package.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReleaseObjectPath" returntype="string" static="true">
+          <description>Get the release path of an object.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The object's package.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

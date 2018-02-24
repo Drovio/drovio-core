@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\coders">
+  <class name="phpCoder" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395665157</datecreated>
+      <daterevised>1395665157</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>PHP Coder Helper</title>
+      <description>Helps with the php code handling within the system.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="systemCommands" static="true">
+          <description>All system commands.</description>
+        </prop>
+        <prop type="array" name="filesystemCommands" static="true">
+          <description>All filesystem commands.</description>
+        </prop>
+        <prop type="array" name="directoryCommands" static="true">
+          <description>All directory commands.</description>
+        </prop>
+        <prop type="array" name="requireCommands" static="true">
+          <description>All require commands.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="section" returntype="string" static="true">
+          <description>Wraps a php code section to a delimited section</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The php code content.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The section title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new code wrapped in a section.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="sections" returntype="array" static="true">
+          <description>Get all sections of a php code content in an array [section_name] = section_content</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all sections by name and code context.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="safe" returntype="string" static="true">
+          <description>Clears the php code from dangerous commands for the system. (For App Engine and for Modules)</description>
+          <parameters>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription>The code with commented all the dangerous commands.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

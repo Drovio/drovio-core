@@ -1,0 +1,24 @@
+<h1>Object state manager via local storage</h1>
+<p>This is a class with javascript interface which enables saving some state information to sessionStorage or localStorage.</p>
+<div class="code">
+	<pre>// Javascript interface
+	
+// Set a state variable
+Function:	setState()
+Description:	Set a state variable
+Usage:		new UIStateObject().setState(state, session);
+
+// Example to set a state about an object:
+var objectState = new UIStateObject("state_object");
+objectState.setState("state_value", false);
+
+
+// Get a state variable
+Function:	getState()
+Description:	Get a state variable
+Usage:		new UIStateObject().getState(state, session);
+
+// Example to get a state about an object:
+var objectState = new UIStateObject("state_object");
+objectState.getState(false);</pre>
+</div>

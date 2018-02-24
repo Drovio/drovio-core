@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="debugger" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1392021833</datecreated>
+      <daterevised>1425306978</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Debugger</title>
+      <description>Reports and handles all system errors</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Initializes debugger and if debugger mode is on, it activates the error reporting.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getErrorMessage" returntype="string" static="true">
+          <description>Load a debugger code error message from resources.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The error code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The error code description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="void" static="true">
+          <description>Activate debugger mode.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="void" static="true">
+          <description>Deactivate debugger mode.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Get debugger status.</description>
+          <parameters/>
+          <returndescription>True if debugger is activated, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

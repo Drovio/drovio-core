@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="accordion" abstract="" namespace="\togglers">
+    <info>
+      <version/>
+      <datecreated>1371039374</datecreated>
+      <daterevised>1371039374</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Accordion Object</title>
+      <description>Builds an accordion object. It consists of multiple togglers, only one of which stays open.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="accordion">
+          <description>Builds the accordion object.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The object's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The accordion object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSlice" returntype="accordion">
+          <description>Adds a slice to the accordion.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The slice's id.</description>
+            </parameter>
+            <parameter name="$head" type="DOMElement" defaultvalue="">
+              <description>The head of the slice.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The content of the slice.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Indicates whether this slice will be the selected (open).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The accordion object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

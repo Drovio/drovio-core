@@ -1,0 +1,61 @@
+.uiCommitManager {
+	border: 1px solid #999;
+	width: 1000px;
+	background-color: #FFF;
+	overflow: auto;
+}
+.uiCommitManager .commitSection {
+	min-height: 20px;
+	padding: 3px;
+}
+.uiCommitManager h3.hd {
+	font-size: 12px;
+	font-weight: normal;
+	color: #555;
+	padding: 0px 10px;
+}
+.uiCommitManager h3.hd.center {
+	text-align: center;
+}
+.uiCommitManager #commitItems, .uiCommitManager #fCommitItems {
+	max-height: 200px;
+}
+.uiCommitManager .uiCommitSummText {
+	border: 1px solid #999;
+	margin-top: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+}
+.uiCommitManager .uiCommitDescText {
+	border: 1px solid #999;
+	margin-top: 5px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	height: 60px;
+	max-height: 100px;
+	resize: vertical;
+}
+.uiCommitManager #commitBtn {
+	float: right;
+}
+
+.uiCommitManager .footer {
+	width: 100%;
+	line-height: 16px;
+	padding: 2px 0px;
+	height: 21px;
+	text-align: center;
+	background: linear-gradient(#f2f2f2, #e2e2e2);
+	background: -webkit-linear-gradient(#f2f2f2, #e2e2e2);
+	background: -moz-linear-gradient(#f2f2f2, #e2e2e2);
+	border-top: 1px solid #e2e2e2;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: auto;
+	color: #555;
+}

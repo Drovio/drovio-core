@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="dvbQuery" abstract="" namespace="\model\units\sql">
+    <info>
+      <version/>
+      <datecreated>1371627462</datecreated>
+      <daterevised>1372857006</daterevised>
+      <extends>\API\Developer\model\version\vcs</extends>
+      <implements/>
+      <throws/>
+      <title>Developer's Database Query</title>
+      <description>Handles the system's database queries.</description>
+      <deprecated>Use \API\Developer\components\sql\dvbQuery instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The query's file type</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public">
+        <prop type="boolean" name="isTransaction">
+          <description>Indicates whether the query is a query transaction.</description>
+        </prop>
+        <prop type="integer" name="access_level">
+          <description>The query's access level (0...5)</description>
+        </prop>
+      </scope>
+      <scope type="protected">
+        <prop type="integer" name="id">
+          <description>The query's id</description>
+        </prop>
+        <prop type="string" name="prdDirectory">
+          <description>The production directory (latest)</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>The query's title</description>
+        </prop>
+        <prop type="string" name="description">
+          <description>The query's description</description>
+        </prop>
+        <prop type="array" name="attributes">
+          <description>The query's attributes</description>
+        </prop>
+        <prop type="string" name="plain_query">
+          <description>The query as the developer writes it.</description>
+        </prop>
+        <prop type="string" name="domain">
+          <description>The query's domain as a full name (separated by ".")</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="hashFunction">
+          <description>The hash function being used to transform the query's file name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes the object's properties.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The query's full domain</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a query in the sql library</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The query's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete a query from the sql library</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the query's contents</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch where the update will be performed</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="boolean">
+          <description>Exports the query to latest</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Load the query's information and content</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_name" returntype="string">
+          <description>Returns the query's filename</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set_title" returntype="void">
+          <description>Set the query's title</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The title value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set_description" returntype="void">
+          <description>Set the query's description</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The description value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set_accessLevel" returntype="void">
+          <description>Set the query's access level</description>
+          <parameters>
+            <parameter name="$value" type="integer" defaultvalue="">
+              <description>The access level</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set_isTransaction" returntype="void">
+          <description>Set the query's transaction indicator</description>
+          <parameters>
+            <parameter name="$value" type="boolean" defaultvalue="">
+              <description>The transaction indicator value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set_attributes" returntype="void">
+          <description>Set the query's attributes</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>The query's attributes</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="set_query" returntype="void">
+          <description>Set the query's code</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The query's code</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_id" returntype="string">
+          <description>Get the query's id</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_title" returntype="string">
+          <description>Get the query's title</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_description" returntype="string">
+          <description>Get the query's description</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_accessLevel" returntype="integer">
+          <description>Get the query's access level</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_isTransaction" returntype="boolean">
+          <description>Get the query's transaction indicator</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_attributes" returntype="array">
+          <description>Get the query's attributes</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_query" returntype="string">
+          <description>Get the query's code</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="get_indexInfo" returntype="DOMElement">
+          <description>Get the query's index base</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser that is used to parse the file</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="load_indexInfo" returntype="void">
+          <description>Loads all the index info of the query</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="buildExecutable" returntype="string" class="undefined">
+          <description>Builds the executable query from plain</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

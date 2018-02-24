@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="sdkTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387553699</datecreated>
+      <daterevised>1392025544</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>SDK Query Tester Manager</title>
+      <description>Manages sdk class tester mode.</description>
+      <deprecated>Use DEV\Profiler\test\sdkTester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

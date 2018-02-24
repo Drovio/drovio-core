@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Relations" namespace="\">
+  <class name="customer" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1441095713</datecreated>
+      <daterevised>1443028478</daterevised>
+      <extends>
+        <object>\ENP\Relations\ePerson</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company customer manaager.</title>
+      <description>Manages company customer information.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new customer instance.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person/customer id.
+Leave empty for creating new customer.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new customer.
+Since the class extends ePerson, a new ePerson will be created and a connection will be made.</description>
+          <parameters>
+            <parameter name="$firstname" type="string" defaultvalue="">
+              <description>The person's first name.</description>
+            </parameter>
+            <parameter name="$lastname" type="string" defaultvalue="">
+              <description>The person's last name.</description>
+            </parameter>
+            <parameter name="$middlename" type="string" defaultvalue="">
+              <description>The person's middle name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addCustomer" returntype="boolean">
+          <description>Add an existing person as customer.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update customer info.</description>
+          <parameters>
+            <parameter name="$firstname" type="string" defaultvalue="">
+              <description>The customer's first name.</description>
+            </parameter>
+            <parameter name="$lastname" type="string" defaultvalue="">
+              <description>The customer's last name.</description>
+            </parameter>
+            <parameter name="$middlename" type="string" defaultvalue="">
+              <description>The customer's middle name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get all information for the current customer.</description>
+          <parameters/>
+          <returndescription>The customer's stored information.
+It will merge customer information with the connected person information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the customer from the customer list.
+The customer must not have any invoices or other connections to the retail database.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBalance" returntype="float">
+          <description>Get customer balance.</description>
+          <parameters/>
+          <returndescription>The balance value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateBalance" returntype="boolean">
+          <description>Update the customer's balance.</description>
+          <parameters>
+            <parameter name="$balance" type="float" defaultvalue="">
+              <description>The new customer balance.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCustomerInfo" returntype="array">
+          <description>Get customer info.
+This is used for internal purposes like getting specific information.</description>
+          <parameters/>
+          <returndescription>An array of all customer information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCustomers" returntype="array" static="true">
+          <description>Get all company customers.</description>
+          <parameters/>
+          <returndescription>An array of all customer info.
+It includes a 'person' field with all the person information</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

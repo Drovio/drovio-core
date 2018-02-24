@@ -1,0 +1,416 @@
+.registerDialog {
+	position: relative;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 15px;
+	text-align: center;
+	width: 1000px;
+	margin: 0 auto;
+	overflow: auto;
+}
+.registerDialog .header {
+	overflow: auto;
+}
+
+.registerDialog .header .lside {
+	width: 50%;
+	float: left;
+}
+
+.registerDialog .header .logo {
+	width: 75px;
+	height: 75px;
+	margin: 10px;
+	float: left;
+	background: url('%{cdn}/media/logos/x100/logo_100.png') no-repeat center;
+	background-size: cover;
+}
+
+.registerDialog .header .text {
+	font-size: 20px;
+	margin: 10px 0px;
+	line-height: 75px;
+	text-align: left;
+}
+
+.registerDialog .header .small {
+	line-height: 75px;
+	font-weight: normal;
+	font-size: 24px;
+	float: left;
+	color: #C00403;
+	margin: 10px 0px;
+	padding: 0px 10px;
+}
+
+.registerDialog .header .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background: url('%{media}/global/closeX.svg') no-repeat center;
+	background-position: 0px -24px;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.registerDialog .main {
+	clear: both;
+	overflow: auto;
+}
+
+.registerDialog .main .side {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 10px;
+}
+
+.registerDialog .main .side.leftSide {
+	border-right: 1px solid #CCC;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.registerDialog .main .side.leftSide .title {
+	font-size: 20px;
+	color: #555;
+	font-weight: normal;
+}
+
+.registerDialog .main .side.leftSide .sub {
+	font-size: 14px;
+	color: #777;
+	font-weight: normal;
+}
+
+.registerDialog .main .services {
+	width: 360px;
+	overflow: auto;
+	margin: 30px auto;
+}
+
+.registerDialog .main .logo {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 10px 20px;
+}
+
+.registerDialog .main .logo.global {
+	background: url('%{cdn}/media/logos/x100/logo_100.png') no-repeat center;
+	background-size: cover;
+}
+
+.registerDialog .main .logo.biz {
+	background: url('%{cdn}/media/logos/x100/boss_logo_100.png') no-repeat center;
+	background-size: cover;
+}
+
+.registerDialog .main .logo.web {
+	background: url('%{cdn}/media/logos/x100/web_logo_100.png') no-repeat center;
+	background-size: cover;
+}
+
+.registerDialog .main .logo.apps {
+	background: url('%{cdn}/media/logos/x100/app_logo_100.png') no-repeat center;
+	background-size: cover;
+}
+
+.registerDialog .footer {
+	border-top: 1px solid #CCC;
+	margin-top: 10px;
+	text-align: center;
+	color: #555;
+	font-weight: normal;
+}
+
+.registerDialog .footer .menu {
+	color: #C00403;
+}
+
+.registerDialog .footer .menu a {
+	color: #555;
+}
+
+.registerDialog .footer .menu a:hover {
+	text-decoration: underline;
+}
+
+.registerDialog .uiRegInput {
+	padding: 5px 8px;
+	font-size: 14px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-color: #777;
+	color: #555;
+	outline: none;
+}
+
+.registerDialog .uiRegInput.small {
+	width: 235px;
+}
+
+.registerDialog .uiRegInput.small.f {
+	margin-right: 10px;
+}
+
+.registerDialog .reg.formRow {
+	margin: 5px 0px;
+}
+
+.registerDialog .lgl a {
+	color: rgb(192, 4, 3);
+}
+
+.registerDialog #regSubmit {
+	padding: 8px 10px;
+	width: 150px;
+	margin: 10px auto;
+	font-size: 16px;
+}
+
+.registerDialog .lpinp {
+	width: 100%;
+	font-size: 12px;
+	padding: 5px;
+	margin: 5px 0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-color: #777;
+	color: #555;
+	outline: none;
+}
+
+.registerDialog button[type='submit'] {
+	display: block;
+	margin: 5px auto;
+	width: 50%;
+}
+
+/*
+.loginDialog .header {
+	overflow: auto;
+}
+
+/*
+.loginDialog .header .lside {
+	width: 50%;
+	float: left;
+}
+
+/*
+.loginDialog .header .logo {
+	width: 75px;
+	height: 75px;
+	margin: 10px;
+	float: left;
+	background: url('%{cdn}/media/logos/x100/logo_100.png') no-repeat center;
+	background-size: cover;
+}
+
+/*
+.loginDialog .header .text {
+	font-size: 20px;
+	margin: 10px 0px;
+	line-height: 75px;
+	text-align: left;
+}
+
+/*
+.loginDialog .header .small {
+	line-height: 75px;
+	font-weight: normal;
+	font-size: 24px;
+	float: left;
+	color: #C00403;
+	margin: 10px 0px;
+	padding: 0px 10px;
+}
+
+/*
+.loginDialog .header .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background: url('%{media}/global/closeX.svg') no-repeat center;
+	background-position: 0px -24px;
+	background-size: cover;
+	cursor: pointer;
+}
+
+/*
+.loginDialog .main {
+	clear: both;
+	overflow: auto;
+}
+
+/*
+.loginDialog .main .side {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 10px;
+}
+
+/*
+.loginDialog .main .side.leftSide {
+	border-right: 1px solid #CCC;
+	text-align: center;
+}
+
+/*
+.loginDialog .main .side.leftSide .title {
+	font-size: 18px;
+	color: #777;
+	font-weight: normal;
+	margin: 8px 0px;
+}
+
+/*
+.loginDialog .main .side.leftSide .sub {
+	font-size: 13px;
+	color: #777;
+	font-weight: normal;
+	margin: 5px 0px;
+}
+
+/*
+.loginDialog .main .lpinp {
+	width: 100%;
+	padding: 5px 8px;
+	margin: 5px 0px;
+	font-size: 14px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-color: #777;
+	color: #777;
+	outline: none;
+}
+
+/*
+.loginDialog .main button[type='submit'] {
+	padding: 8px 10px;
+	width: 150px;
+	margin: 10px auto;
+	font-size: 16px;
+}
+
+/*
+.loginDialog .main .rcont {
+	margin-top: 10px;
+}
+
+/*
+.loginDialog .main .rocnt {
+	width: 50%;
+	float: left;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*
+.loginDialog .main .rocnt .ricnt {
+	background: linear-gradient(#FEFEFE, #f0f0f0);
+	border: 1px solid #CCC;
+	border-color: #cdced0 #c5c6c8 #b6b7b9;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+/*
+.loginDialog .main .rocnt .ricnt label {
+	display: block;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*
+.loginDialog .main .rocnt.selected .ricnt {
+	background: linear-gradient(rgb(45, 171, 220), rgb(14, 149, 211));
+	border: 1px solid rgb(10, 104, 146);
+	color: #FFF;
+}
+
+/*
+.loginDialog .main .rocnt .ricnt input[type='radio'] {
+	display: none;
+}
+
+/*
+.loginDialog .main .rnotes {
+	color: rgb(10, 104, 146);
+	font-size: 10px;
+	text-align: center;
+	padding-top: 5px;
+	clear: both;
+}
+
+/*
+.loginDialog .main .rnotes .nt {
+	display: none;
+}
+
+/*
+.loginDialog .main .rnotes .nt.selected {
+	display: inline-block;
+}
+
+/*
+.loginDialog .loginDialog .footer {
+	border-top: 1px solid #CCC;
+	margin-top: 10px;
+	color: #777;
+	font-weight: normal;
+}
+
+/*
+.loginDialog .loginDialog .footer h4 {
+	text-align: left;
+	display: inline-block;
+	padding: 0px 5px;
+	margin: 5px 0px;
+}
+
+/*
+.loginDialog .loginDialog .footer .register a {
+	color: #C00403;
+}
+
+/*
+.loginDialog .loginDialog .footer .register:hover a {
+	text-decoration: underline;
+}
+
+/*
+.loginDialog .loginDialog .footer .forgot a {
+	color: #777;
+}
+
+/*
+.loginDialog .loginDialog .footer .forgot:hover a {
+	text-decoration: underline;
+}
+
+*/

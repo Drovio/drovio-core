@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="toolbarItem" abstract="" namespace="\toolbarComponents">
+    <info>
+      <version/>
+      <datecreated>1370681165</datecreated>
+      <daterevised>1370681165</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Toolbar Item</title>
+      <description>Creates a navigation toolbar item.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="toolbarItem">
+          <description>Builds the toolbarItem with its content.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The toolbarItem's content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns null if no content is given. ToolbarItem otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

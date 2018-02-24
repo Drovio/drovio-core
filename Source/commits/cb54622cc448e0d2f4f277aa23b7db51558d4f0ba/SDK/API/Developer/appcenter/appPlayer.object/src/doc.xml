@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter">
+  <class name="appPlayer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383407469</datecreated>
+      <daterevised>1396817154</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Player</title>
+      <description>Runs the application for the first time.</description>
+      <deprecated>Use \DEV\Apps\appPlayer instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="applicationData" static="true">
+          <description>The application data.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Initializes the application importer.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationData" returntype="array" static="true">
+          <description>Gets the application data by application id.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application data in array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isTester" returntype="boolean" static="true">
+          <description>Checks if the user running this application is tester.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if user is author, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="testerStatus" returntype="boolean" static="true">
+          <description>Checks if the application is in tester mode for running in appCenter.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if tester mode is enabled and user is tester, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activateTester" returntype="void" static="true">
+          <description>Activates the appCenter tester mode.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivateTester" returntype="void" static="true">
+          <description>Deactivates the appCenter tester mode.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getView" returntype="string" static="true">
+          <description>Gets the content of the requested view of the running application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="play" returntype="mixed" static="true">
+          <description>Runs the requested view php code for the running application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php code return value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAppSettings" returntype="settingsManager" static="true">
+          <description>Gets the settings manager for the application.
+Decides whether to load the settings from the developer folder or the published folder.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The appSettings or settingsManager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationRunPath" returntype="string" static="true">
+          <description>Gets the application's publish folder path to the startup view.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getViewPath" returntype="string" static="true">
+          <description>Gets the application's developer folder path to the view.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.
+If empty, the player loads the startup view from the application settings.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

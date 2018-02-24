@@ -1,0 +1,42 @@
+.wFrame {
+	border: 1px solid rgba(166, 166, 166, 1);
+	background-color: #EEE;
+	position: relative;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+	min-width: 470px;
+}
+.wFrame > .frameHeader {
+	height: 25px;
+	line-height: 25px;
+	padding-left: 5px;
+}
+.frameHeader > .frameTitle {
+	float: left;
+}
+.wFrame .frameHeader .frameControls > .closeBtn {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	background-image: url('%resources%/icons/16x16/glppCloseButton.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.wFrame > .frameBody {
+	position: relative;
+	background-color: #FFF;
+	border: 1px solid rgba(166, 166, 166, 0.5);
+	min-width: 450px;
+	min-height: 50px;
+	margin: 5px;
+	margin-top: 0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}

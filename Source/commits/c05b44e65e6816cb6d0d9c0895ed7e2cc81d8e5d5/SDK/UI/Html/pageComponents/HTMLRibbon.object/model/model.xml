@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="uiTlbRibbon">
+	<div class="ribbon">
+		<div class="colGroup">
+			<div class="collection"/>
+		</div>
+		<div class="tools">
+			<div class="pin"/>
+		</div>
+	</div>
+</div>
+</model>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="HTMLContent" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1365154860</datecreated>
+      <daterevised>1372327079</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Content Object</title>
+      <description>Creates an html content object for the modules.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="HTMLContent" class="undefined">
+          <description>Build the outer html content container.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element's id.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The element's class.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildElement" returntype="HTMLContent">
+          <description>Build the HTMLContent element with an element that the user built.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The user's element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append" returntype="mixed">
+          <description>Appends an element to the HTMLContent root element.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns NULL if the element given is empty. Returns the HTMLContent object otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActionFactory" returntype="ActionFactory">
+          <description>Creates a new Action Factory.</description>
+          <parameters/>
+          <returndescription>Returns an instance of the Action Factory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleContainer" returntype="DOMElement" static="true">
+          <description>Builds a module container and returns the DOMElement.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module ID.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module (if any).</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module with GET method during loading.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the module to load at startup (next content.modified).</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id of the module container as a DOM Object.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The outer container.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string" class="undefined">
+          <description>Returns the HTML Report for this html content.</description>
+          <parameters>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder to get the content.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The report method. For more information, see HTMLServerReport.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

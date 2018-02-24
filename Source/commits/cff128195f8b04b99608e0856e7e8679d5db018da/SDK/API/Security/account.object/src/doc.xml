@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\">
+  <class name="account" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1375263564</datecreated>
+      <daterevised>1399448306</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Manages the active account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="boolean" name="loggedIn" static="true">
+          <description>Indicates whether the account is logged in for this run.</description>
+        </prop>
+        <prop type="array" name="accountData" static="true">
+          <description>All the account data.</description>
+        </prop>
+        <prop type="string" name="salt" static="true">
+          <description>The session salt.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="authenticate" returntype="boolean" static="true">
+          <description>Authenticates an account with the given username and password.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The person's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+            <parameter name="$accountID" type="string" defaultvalue="">
+              <description>The account id to authenticate. If empty, get the current account id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean" static="true">
+          <description>Authenticates an account and sets it as logged in.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The person's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user in the database or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validates if the user is logged in.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteActiveSession" returntype="void" static="true">
+          <description>Deletes the current active session.</description>
+          <parameters>
+            <parameter name="$sessionID" type="string" defaultvalue="">
+              <description>The current account session id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="logout" returntype="void" static="true">
+          <description>Logout the user.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="switchAccount" returntype="boolean" static="true">
+          <description>Switch from one account to another.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account to switch to.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE on success and FALSE if the current account is locked and cannot switch.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the account info.</description>
+          <parameters/>
+          <returndescription>Returns an array of the account data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountID" returntype="string" static="true">
+          <description>Gets the account id of the logged in person.</description>
+          <parameters/>
+          <returndescription>The account id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSessionID" returntype="string" static="true">
+          <description>Gets the account session id.</description>
+          <parameters/>
+          <returndescription>The account session id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPersonID" returntype="string" static="true">
+          <description>Gets the person id of the logged in person.</description>
+          <parameters/>
+          <returndescription>The person id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUsername" returntype="string" static="true">
+          <description>Gets the user's username.</description>
+          <parameters/>
+          <returndescription>Returns the user's username.</returndescription>
+          <throws/>
+          <deprecated>Use person::getUsername() instead.</deprecated>
+        </method>
+        <method name="getFirstname" returntype="string" static="true">
+          <description>Get the user's firstname.</description>
+          <parameters/>
+          <returndescription>Returns the user's firstname.</returndescription>
+          <throws/>
+          <deprecated>Use person::getFirstname() instead.</deprecated>
+        </method>
+        <method name="getLastname" returntype="string" static="true">
+          <description>Get the user's firstname.</description>
+          <parameters/>
+          <returndescription>Returns the user's firstname.</returndescription>
+          <throws/>
+          <deprecated>Use person::getLastname() instead.</deprecated>
+        </method>
+        <method name="getCompany" returntype="string" static="true">
+          <description>Get the account's company.</description>
+          <parameters/>
+          <returndescription>Returns the account's company.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isLocked" returntype="boolean" static="true">
+          <description>Checks whether this account is locked.</description>
+          <parameters/>
+          <returndescription>True if locked, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isAdmin" returntype="boolean" static="true">
+          <description>Checks whether the account is admin.</description>
+          <parameters/>
+          <returndescription>True if admin, false otherwise (shared).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountTitle" returntype="string" static="true">
+          <description>Gets the account title for the logged in account.</description>
+          <parameters/>
+          <returndescription>The account title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createSession" returntype="void" static="true">
+          <description>Creates a new account session.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The logged in generated salt.</description>
+            </parameter>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id (if any).</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user in the database or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSaltedMix" returntype="string" static="true">
+          <description>Returns the salted mix of account, person and salt.</description>
+          <parameters>
+            <parameter name="$sessionID" type="string" defaultvalue="">
+              <description>The account session id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The account salt.</description>
+            </parameter>
+            <parameter name="$personID" type="string" defaultvalue="">
+              <description>The person id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The salted mix to store to cookies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSalt" returntype="string" static="true">
+          <description>Gets the stored salt for the current account session.</description>
+          <parameters/>
+          <returndescription>The stored salt.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array" static="true">
+          <description>Gets the current account's information.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of account data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSessionData" returntype="void" static="true">
+          <description>Updates the account's data to the session.</description>
+          <parameters>
+            <parameter name="$accountData" type="mixed" defaultvalue="">
+              <description>The account data. If not given, it is loaded from the database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountValue" returntype="string" static="true">
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The value name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

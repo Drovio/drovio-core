@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Version" namespace="\">
+  <class name="releaseManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392200342</datecreated>
+      <daterevised>1403767186</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Version Control Release Manager</title>
+      <description>This is a dialog for creating releases in project repositories.
+You can choose branch and the version to release to.</description>
+      <deprecated>Use \DEV\Version\tools\releaseManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\">
+  <class name="appLiteral" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1389291715</datecreated>
+      <daterevised>1389291715</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Literal</title>
+      <description>Application Literal Getter</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="literals" static="true">
+          <description>The application literals.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="mixed" static="true">
+          <description>Get one or all literals from the application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$literalName" type="string" defaultvalue="">
+              <description>The literal name.
+If empty, all literals will be returned.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The desired locale.
+If empty, get the default application locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of literal values or the literal value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadLiterals" returntype="void" static="true">
+          <description>Load the literals from the application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The desired locale.
+If empty, get the default application locale.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

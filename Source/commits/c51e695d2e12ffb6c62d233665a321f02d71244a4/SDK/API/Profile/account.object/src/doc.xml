@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="account" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1373017114</datecreated>
+      <daterevised>1382013549</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Manages the active account.</description>
+      <deprecated>Use accountSettings instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

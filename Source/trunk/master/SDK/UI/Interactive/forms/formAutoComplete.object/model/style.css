@@ -1,0 +1,14 @@
+/*____________________ UI.Interactive.forms.formAutoComplete ____________________*/
+.inputInfoIcon {
+	width:24px;
+	height:21px;
+	margin-left:5px;
+	margin-right:10px;
+	display:inline-block;
+	vertical-align:top;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.inputInfoIcon.loader {
+	background-image:url('%resources%/icons/19x19/loader.svg') !important;
+}

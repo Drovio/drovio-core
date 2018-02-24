@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\">
+  <class name="manifest" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1424176564</datecreated>
+      <daterevised>1424176564</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform SDK Manifest Manager</title>
+      <description>Manages all manifests that are going to be used by the application developers.
+Foreach manifest, a list of packages are assigned. The application will have access to those packages through the manifest rules.
+The application user will be notified of the manifest use as "Application Requests Access".</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMParser" name="xmlParser">
+          <description>The DOMParser object that edits the manifest file.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the class and load the manifest file.
+The file will be created from scratch, if accidentally erased.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getManifests" returntype="array">
+          <description>Get all manifests by id.</description>
+          <parameters/>
+          <returndescription>An array of all manifests by id.
+Each manifest includes info (name and enabled status) and a list of all sdk packages grouped by library.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create new manifest entry.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The manifest name.
+It must be unique.</description>
+            </parameter>
+            <parameter name="$packages" type="array" defaultvalue="">
+              <description>An array of all packages grouped by library.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setEnabled" returntype="boolean">
+          <description>Set the enable status of the manifest.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The manifest name to update.</description>
+            </parameter>
+            <parameter name="$enabled" type="boolean" defaultvalue="">
+              <description>The manifest enabled status.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the manifest information and packages.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The manifest name to update.</description>
+            </parameter>
+            <parameter name="$packages" type="array" defaultvalue="">
+              <description>An array of all packages grouped by library.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$newName" type="string" defaultvalue="">
+              <description>The new name of the manifest (if you wish to change it).
+Leave empty for no changes.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the manifest from the list.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The manifest name to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebEngine" namespace="\">
+  <class name="webManager" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>4</build>
+      <datecreated>1414696879</datecreated>
+      <daterevised>1415354577</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web SDK Manager Class</title>
+      <description>Class is responsible for publishing / releasing the Web SDK and building the appropriate Packages Bundles for uploading the Web Core to a remote server</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="publish" returntype="void" static="true">
+          <description>Publishes all the SDK Libraries.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Working with xml files</h1>
+<p>This class provides a simple interface for manipulating xml files.</p>
+<p>All the paths given are application root folder relative, according to parameters given in constructor.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Resources\DOMParser;
+
+// Initialize xml parser in team mode
+$xmlParser = new DOMParser($mode = DOMParser::ACCOUNT_MODE, $shared = FALSE);
+
+// Create a new file with a root
+$root = $xmlParser-&gt;create("root_element");
+$xmlParser-&gt;append($root);
+$xmlParser-&gt;save($path = "/users/", $fileName = "list.xml", $format = FALSE);
+
+
+// Create a new element and append it to root
+$user1 = $xmlParser-&gt;create("user", "", "uid1");
+$xmlParser-&gt;append($root, $user1);
+
+// Update the file
+$xmlParser-&gt;update();</pre>
+</div>
+<h2>Loading existing files and reading through the data</h2>
+<div class="code">
+	<pre>// Loading existing files
+	
+// Initialize xml parser in team mode
+$xmlParser = new DOMParser($mode = DOMParser::ACCOUNT_MODE, $shared = FALSE);
+
+// Load the file we created
+try
+{
+	$xmlParser-&gt;load($path = "/users/list.xml", $preserve = FALSE);
+}
+catch (Exception $ex)
+{
+	// File does not exist, we have to create it
+}
+
+// Get all the users as a NodeList using XPath
+$users = $xmlParser-&gt;evaluate("//user");
+foreach ($users as $userElement)
+	echo $xmlParser-&gt;attr($userElement, "id");
+	
+// Remove user with id 2
+$user2 = $xmlParser-&gt;evaluate("//user[@id='uid2']")-&gt;item(0);
+$xmlParser-&gt;replace($user2, NULL);
+
+// Update the file
+$xmlParser-&gt;update();</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

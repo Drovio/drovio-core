@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Social" namespace="\">
+  <class name="googleAccount" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>4</build>
+      <datecreated>1447271009</datecreated>
+      <daterevised>1447355697</daterevised>
+      <extends>
+        <object>\DRVC\Social\externalLoginAccount</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Google Account login</title>
+      <description>Manages google login for the identity account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="googleAccount" name="instance" static="true">
+          <description>The google account instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="googleAccount" static="true">
+          <description>Get a google account instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The googleAccount instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean">
+          <description>Login via google login.
+It creates an account session.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The google authorization code to get the access token.</description>
+            </parameter>
+            <parameter name="$clientID" type="integer" defaultvalue="">
+              <description>The google client id.</description>
+            </parameter>
+            <parameter name="$clientSecret" type="string" defaultvalue="">
+              <description>The google client secret.</description>
+            </parameter>
+            <parameter name="$redirectURI" type="string" defaultvalue="">
+              <description>The google redirect_uri parameter.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

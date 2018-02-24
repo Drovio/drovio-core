@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="tooltip" abstract="" namespace="\popups">
+    <info>
+      <version/>
+      <datecreated>1379327044</datecreated>
+      <daterevised>1379327092</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Tooltip class</title>
+      <description>Adds a tooltip functionality to the element.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" returntype="void" static="true">
+          <description>Sets the tooltip attribute for the current element.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to set the tooltip.</description>
+            </parameter>
+            <parameter name="$tooltip" type="string" defaultvalue="">
+              <description>The tooltip content.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

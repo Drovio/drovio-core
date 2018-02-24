@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\misc">
+  <class name="platformStatus" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1391162124</datecreated>
+      <daterevised>1391165778</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform status generator</title>
+      <description>Sets and gets the platform status data.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="STATUS_FILE">
+        <description>The status resource index file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the platform status parser.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateProject" returntype="boolean">
+          <description>Updates a project's version.</description>
+          <parameters>
+            <parameter name="$projectName" type="string" defaultvalue="">
+              <description>The project name.</description>
+            </parameter>
+            <parameter name="$projectVersion" type="string" defaultvalue="">
+              <description>The project current version</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjects" returntype="array">
+          <description>Get all project versions by name.</description>
+          <parameters/>
+          <returndescription>An array of project versions by project name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDate" returntype="boolean">
+          <description>Sets an operation date.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The operation name.</description>
+            </parameter>
+            <parameter name="$date" type="integer" defaultvalue="">
+              <description>The operation timestamp (unix timestamp).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDate" returntype="integer">
+          <description>Gets an operation date time by name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The operation name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The operation timestamp.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStatus" returntype="boolean">
+          <description>Sets a specific platform status given a name.</description>
+          <parameters>
+            <parameter name="$statusValue" type="string" defaultvalue="">
+              <description>The status value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStatus" returntype="string">
+          <description>Gets a platform status value by name.</description>
+          <parameters/>
+          <returndescription>The status value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createFile" returntype="boolean">
+          <description>Creates the status file.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

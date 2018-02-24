@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Resources" namespace="\settings">
+  <class name="genericSettings" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1423823460</datecreated>
+      <daterevised>1423823460</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>System Generic Settings</title>
+      <description>Manages all system generic settings.
+Includes:
+- page settings</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the settings manager.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Content" namespace="\resources">
+  <class name="documentParser" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1380877359</datecreated>
+      <daterevised>1382712548</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>This class is deprecated until further notice. Use API\Resources\documentParser instead</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

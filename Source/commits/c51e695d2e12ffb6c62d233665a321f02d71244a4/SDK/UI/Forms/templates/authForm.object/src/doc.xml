@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="authForm" abstract="" namespace="\templates">
+    <info>
+      <version/>
+      <datecreated>1370856797</datecreated>
+      <daterevised>1376593155</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>User Authentication Form</title>
+      <description>Builds a user's authentication form.</description>
+      <deprecated>This class is no longer used and its deprecated.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="authForm">
+          <description>Builds the user's authentication form with the proper data.</description>
+          <parameters>
+            <parameter name="$self" type="boolean" defaultvalue="">
+              <description>Indicates whether the access is onauth (user authenticates self).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The authForm object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

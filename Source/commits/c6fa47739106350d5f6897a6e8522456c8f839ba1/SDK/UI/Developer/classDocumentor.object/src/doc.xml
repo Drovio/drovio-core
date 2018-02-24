@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\">
+  <class name="classDocumentor" abstract="">
+    <info>
+      <version/>
+      <datecreated>1404472385</datecreated>
+      <daterevised>1404554817</daterevised>
+      <extends>
+        <object/>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Class Documentor</title>
+      <description>Handles the documentation process of the classes. Used to display the documentor tool and as a bridge between user and documentor classes</description>
+      <deprecated>Use \DEV\Documentation\classDocEditor instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

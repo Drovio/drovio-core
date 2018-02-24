@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\components">
+  <class name="RTRibbon" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>3</build>
+      <datecreated>1402468613</datecreated>
+      <daterevised>1434794991</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback's toolbar ribbon object.</title>
+      <description>It's a singleton pattern implementation for Redback Core Toolbar Ribbon.
+Builds the system's ribbon for extra content, navigation and other tricks.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="RTRibbon" name="instance" static="true">
+          <description>The singleton's instance.</description>
+        </prop>
+        <prop type="DOMElement" name="colGroup">
+          <description>The collection group for the ribbon panel groups.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="RTRibbon" static="true">
+          <description>Gets the instance of the RTRibbon.</description>
+          <parameters/>
+          <returndescription>The RTRibbon unique instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="RTRibbon">
+          <description>Builds the ribbon object.</description>
+          <parameters/>
+          <returndescription>The ribbon object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCollectionGroup" returntype="DOMelement">
+          <description>Get the current collection group.</description>
+          <parameters/>
+          <returndescription>The current collection group.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addCollection" returntype="DOMElement">
+          <description>Adds a collection into the collection group.</description>
+          <parameters>
+            <parameter name="$collectionID" type="string" defaultvalue="">
+              <description>The collection element id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The collection's title.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load when collection is open.
+This is optional when we want to load a module view inside the collection.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Set the collection to load during startup.
+False by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A list of attributes by name to be passed to the collection module.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The collection element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createCollection" returntype="DOMElement" static="true">
+          <description>Creates and ribbon a collection.</description>
+          <parameters>
+            <parameter name="$collectionID" type="string" defaultvalue="">
+              <description>The collection element id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The collection's title.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load when collection is open.
+This is optional when we want to load a module view inside the collection.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Set the collection to load during startup.
+False by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A list of attributes by name to be passed to the collection module.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The collection element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertCollection" returntype="DOMElement">
+          <description>Inserts a collection into the collection group.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the collection.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load at open.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the collection to load during startup.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The collection element.</returndescription>
+          <throws/>
+          <deprecated>Use addCollection() instead.</deprecated>
+        </method>
+        <method name="getCollection" returntype="DOMEelement" static="true">
+          <description>Creates and ribbon a collection</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the collection.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load at open.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the collection to load during startup.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The collection element.</returndescription>
+          <throws/>
+          <deprecated>Use createCollection() instead.</deprecated>
+        </method>
+        <method name="insertItem" returntype="void" static="true">
+          <description>Appends a given item to a given collection.</description>
+          <parameters>
+            <parameter name="$collection" type="DOMElement" defaultvalue="">
+              <description>The receptor collection</description>
+            </parameter>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The appended item</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addNavigation" returntype="void" static="true">
+          <description>Inserts action to specific toolbar navigation item.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item that will receive the action.</description>
+            </parameter>
+            <parameter name="$refId" type="string" defaultvalue="">
+              <description>The collection reference id.</description>
+            </parameter>
+            <parameter name="$ribbonType" type="string" defaultvalue="">
+              <description>The ribbon appearance type.
+Accepted values:
+- "float", this will show the ribbon as popup.
+- "inline", this will show the ribbon as ribbon.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The popup type. See PopupPrototype for more information.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Constructor function for RTRibbon Instance.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter\appComponents">
+  <class name="appScript" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1370349615</datecreated>
+      <daterevised>1396765944</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>Application Script</title>
+      <description>The application script manager class.</description>
+      <deprecated>USe \DEV\Apps\components\appScript instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The object's file type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+        <prop type="string" name="devPath">
+          <description>The object's developer path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the script object.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The application's vcs object.</description>
+            </parameter>
+            <parameter name="$devPath" type="string" defaultvalue="">
+              <description>The application inner path for the object.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new object.</description>
+          <parameters>
+            <parameter name="$scriptName" type="string" defaultvalue="">
+              <description>The script's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the script source code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Gets the script's source code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The script code.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the script item's id.</description>
+          <parameters/>
+          <returndescription>The item hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

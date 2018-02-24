@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\prototype">
+  <class name="templateThemePrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1442509015</datecreated>
+      <daterevised>1442530447</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web Template Theme Prototype</title>
+      <description>Manages the theme prototype object given the theme path (inside a template, managed by the template).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index file name.</description>
+      </const>
+      <const type="string" name="FILE_TYPE">
+        <description>The theme folder type extension.</description>
+      </const>
+      <const type="string" name="JS_FOLDER">
+        <description>The javascripts' folder name.</description>
+      </const>
+      <const type="string" name="CSS_FOLDER">
+        <description>The styles' folder name.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="templatePrototype" name="template">
+          <description>The template prototype object.</description>
+        </prop>
+        <prop type="string" name="indexFilePath">
+          <description>The theme folder path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a template theme prototype instance.</description>
+          <parameters>
+            <parameter name="$indexFilePath" type="string" defaultvalue="">
+              <description>The template's index file path.</description>
+            </parameter>
+            <parameter name="$themeIndexFilePath" type="string" defaultvalue="">
+              <description>The theme's index file path.
+Leave it empty for new themes.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new template theme.</description>
+          <parameters>
+            <parameter name="$indexFilePath" type="string" defaultvalue="">
+              <description>The theme's index file path.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The theme name.
+This is needed for indexing.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is a theme with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllJS" returntype="array">
+          <description>Get all theme javascripts.</description>
+          <parameters/>
+          <returndescription>An array of all javascript names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addJS" returntype="boolean">
+          <description>Add a javascript file to the index.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The javascript file name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is a javascript file with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeJS" returntype="boolean">
+          <description>Remove a javascript object from the index file.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The javascript name to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllCSS" returntype="array">
+          <description>Get all theme styles.</description>
+          <parameters/>
+          <returndescription>An array of all style names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addCSS" returntype="boolean">
+          <description>Add a css file to the index.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The css file name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is a css file with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeCSS" returntype="boolean">
+          <description>Remove a style object from the index file.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The style name to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectIndex" returntype="boolean">
+          <description>Add an object entry to the main template index.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The name of the group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type (the tag name).</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is another object of the same type with the same name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeObjectIndex" returntype="boolean">
+          <description>Remove an object entry from the template index.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type (the tag name).</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the entire theme from the template.
+It must be empty of scripts and styles.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The theme name for index updates.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getThemeFolder" returntype="string" static="true">
+          <description>Get the name of the theme smart object folder.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The theme name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The theme folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getIndexObjects" returntype="array">
+          <description>Get all index object entries.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all objects by name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createStructure" returntype="void">
+          <description>Create the page structure with the necessary files.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\account">
+  <class name="DOMParser" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1417791359</datecreated>
+      <daterevised>1421221732</daterevised>
+      <extends>
+        <object>\AEL\Resources\DOMParser</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>DOMParser for Applications</title>
+      <description>Class for parsing xml files in the account's application folder.
+
+NOTE: For each call it checks if there is an active application. If not, returns false every time.
+All paths are relative to the application root folder or the application shared folder root.
+The shared folder is one for all applications, so be careful of what you are storing there.</description>
+      <deprecated>Use \AEL\Resources\DOMParser instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of a DOMParser</description>
+          <parameters>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, the DOMParser will have access to the shared application data folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

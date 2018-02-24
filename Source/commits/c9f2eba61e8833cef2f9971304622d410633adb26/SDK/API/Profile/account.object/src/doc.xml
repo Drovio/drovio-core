@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="account" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1373017114</datecreated>
+      <daterevised>1406887526</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Manages the active account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAccountFolder" returntype="mixed" static="true">
+          <description>Gets the account's folder. The folder is created if doesn't exist.</description>
+          <parameters/>
+          <returndescription>The account folder path.
+If there is no active account, it returns FALSE.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServicesFolder" returntype="void" static="true">
+          <description>Get the account's service root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getFolderID" returntype="string" static="true">
+          <description>Gets the unique folder id for the requested use.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The prefix of the folder.</description>
+            </parameter>
+            <parameter name="$folderID" type="string" defaultvalue="">
+              <description>The id to be hashed.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The extension of the folder (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

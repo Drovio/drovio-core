@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1985532233"><title>Get country info</title><description>Get country by id</description><access>1</access><attributes><attr id="cid"></attr></attributes></query>

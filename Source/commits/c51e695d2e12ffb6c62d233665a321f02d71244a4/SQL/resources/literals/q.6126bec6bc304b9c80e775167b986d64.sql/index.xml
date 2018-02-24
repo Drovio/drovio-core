@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="431155169"><title>Create Literal</title><description>Create a new Literal</description><access>1</access><attributes><attr id="name"></attr><attr id="desc"></attr><attr id="scope"></attr><attr id="static"></attr><attr id="locale"></attr><attr id="value"></attr></attributes></query>

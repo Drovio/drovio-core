@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="configSettings" abstract="" namespace="\settings">
+    <info>
+      <version/>
+      <datecreated>April 23, 2013, 14:01 (EEST)</datecreated>
+      <daterevised>April 23, 2013, 14:01 (EEST)</daterevised>
+      <extends>\API\Content\settings</extends>
+      <implements/>
+      <title>Configuration Settings Handler</title>
+      <description>Manages all system's configuration settings</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PATH">
+        <description>Configuration Path</description>
+      </const>
+      <const type="string" name="SETTINGS_PATH">
+        <description>System's settings file path</description>
+      </const>
+      <const type="string" name="DOMAIN_FOLDER">
+        <description>The domain's folder settings root path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="load_settings" returntype="array">
+          <description>Loads the settings file and returns all the values stored.</description>
+          <parameters>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The settings' scope</description>
+            </parameter>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The settings' filename</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="load_domainSettings" returntype="void">
+          <description>Load domain settings file</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The domain</description>
+            </parameter>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The domain settings' filename</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

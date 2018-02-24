@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\test">
+  <class name="ajaxTester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1410940134</datecreated>
+      <daterevised>1418824571</daterevised>
+      <extends>
+        <object>\DEV\Profiler\tester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Ajax File Tester Manager</title>
+      <description>Manages ajax file tester mode.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the ajax tester mode.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the ajax tester mode.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Gets the ajax tester status.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="resolve" returntype="string" static="true">
+          <description>Resolve a given url if ajax tester mode is  activated.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url to resolve.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resolved url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

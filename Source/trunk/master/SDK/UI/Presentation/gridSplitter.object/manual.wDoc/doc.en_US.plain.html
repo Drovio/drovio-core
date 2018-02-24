@@ -1,0 +1,28 @@
+<h1>Platform Grid Splitter</h1>
+<p>A grid splitter allows the developer to split a container horizontally or vertically into two panes that can be resized dynamically. The one pain acts as a main pane and the other as a side pane which can be hide by double-clicking on the separator.</p>
+<p>The object can be customized and add any DOMElement in both panes. Examples:</p>
+<div class="code">
+	<pre>// Create a grid splitter as main container
+	
+// Use the class
+use \UI\Presentation\gridSplitter;
+
+// Create the splitter
+$splitter = new gridSplitter();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$mainContainer_splitter = $splitter->build($orientation = gridSplitter::ORIENT_HOZ, $layout = gridSplitter::SIDE_RIGHT, $closed = FALSE, $sideTitle = "Side Title")->get();
+
+// Append to body
+DOM::append($body, $mainContainer_splitter);
+
+
+// Add an outer container in the main pain
+$mainContainer = DOM::create("div", "", "", "mainContainer");
+$splitter->appendToMain($mainContainer);
+
+// Add a sidebar container on the side
+$sidebar = DOM::create("div", "", "", "sidebar");
+$splitter->appendToSide($sidebar);</pre>
+</div>

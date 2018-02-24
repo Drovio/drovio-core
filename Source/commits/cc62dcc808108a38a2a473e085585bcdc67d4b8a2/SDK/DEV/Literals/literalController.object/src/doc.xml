@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Literals" namespace="\">
+  <class name="literalController" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1405929984</datecreated>
+      <daterevised>1415197825</daterevised>
+      <extends>
+        <object>\DEV\Literals\literalManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Project Literal Controller</title>
+      <description>This is a controller class. Chooses where to get the literals from.
+If the account is in the translator group and the translations are active, use the translator engine.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Get all literals of a given project's scope.
+If the account is in the translator group and the translator is active, get the translator's values.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to get the literals from.
+If NULL, get the current system locale.
+NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all literals as defined in the literalManager or in the translator class.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="wrap" returntype="DOMElement" static="true">
+          <description>Wrap a literal to span.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value</description>
+            </parameter>
+            <parameter name="$translationLock" type="boolean" defaultvalue="">
+              <description>Defines manually whether a literal is going to be wrapped for translation or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The literal span.
+With translation attributes in case of translator.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

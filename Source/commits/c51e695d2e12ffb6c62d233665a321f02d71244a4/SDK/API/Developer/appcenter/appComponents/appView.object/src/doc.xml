@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter\appComponents">
+  <class name="appView" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1371639854</datecreated>
+      <daterevised>1383474215</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application View</title>
+      <description>Represents an application view object manager.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The view object type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="appID">
+          <description/>
+        </prop>
+        <prop type="string" name="name">
+          <description>The view name.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The application's vcs manager object.</description>
+        </prop>
+        <prop type="string" name="devPath">
+          <description>The developer's application path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor. Initializes the object's variables.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The application's vcs object manager.</description>
+            </parameter>
+            <parameter name="$devPath" type="string" defaultvalue="">
+              <description>The application path.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view name. It can be empty in case of new.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new application view.</description>
+          <parameters>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPHPCode" returntype="string">
+          <description>Get the view's php code.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>If true, returns the entire php code as is form the file.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updatePHPCode" returntype="boolean">
+          <description>Updates the view's php code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The php code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSS" returntype="string">
+          <description>Gets the view's style code.</description>
+          <parameters/>
+          <returndescription>The style code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSS" returntype="boolean">
+          <description>Updates the view's css code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getJS" returntype="string">
+          <description>Gets the view's javascript code.</description>
+          <parameters/>
+          <returndescription>The view's javascript code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateJS" returntype="boolean">
+          <description>Updates the view's javascript code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The view's javascript code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTML" returntype="string">
+          <description>Gets the view's html content.</description>
+          <parameters/>
+          <returndescription>The html content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateHTML" returntype="boolean">
+          <description>Updates the view's html content.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The html content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHeader" returntype="string">
+          <description>Builds the php code header.</description>
+          <parameters/>
+          <returndescription>The php code header.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildSourceCode" returntype="string">
+          <description>Builds the source code with the given header and body.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The header code.</description>
+            </parameter>
+            <parameter name="$viewCode" type="string" defaultvalue="">
+              <description>The body code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The final source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Gets the item's hash id.</description>
+          <parameters/>
+          <returndescription>The item's hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createViewStructure" returntype="void">
+          <description>Creates the view inner file structure.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

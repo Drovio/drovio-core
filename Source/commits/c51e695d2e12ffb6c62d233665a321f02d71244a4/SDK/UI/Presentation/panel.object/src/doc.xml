@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="panel" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>April 5, 2013, 10:00 (EEST)</datecreated>
+      <daterevised>April 5, 2013, 10:00 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Ribbon Panel</title>
+      <description/>
+      <deprecated>Use \UI\Html\pageComponents\ribbonComponents\ribbonPanel instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop name="panel" type="">
+          <description/>
+        </prop>
+        <prop name="group" type="">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>_____ Constructor</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_panel" returntype="void">
+          <description>Builds a ribbon panel</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="insert_group" returntype="void">
+          <description>Inesrts a group into the panel</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="insert_item" returntype="void">
+          <description>Creates and inserts a panel item into a container (panel | group)</description>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$img" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$selected" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

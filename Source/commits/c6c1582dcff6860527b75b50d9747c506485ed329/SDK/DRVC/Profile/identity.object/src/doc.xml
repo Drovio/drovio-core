@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Profile" namespace="\">
+  <class name="identity" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1444493051</datecreated>
+      <daterevised>1448199266</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Identity manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="DB_PREFIX">
+        <description>The identity database name prefix.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setup" returntype="boolean">
+          <description>Setup an identity database for the given team name.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name to setup the database for.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The password for the demo account.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setupPermissions" returntype="boolean">
+          <description>Setup the permissions extension for the identity database.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

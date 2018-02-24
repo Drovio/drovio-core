@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\templates">
+  <class name="simpleForm" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366273260</datecreated>
+      <daterevised>1382607616</daterevised>
+      <extends>\UI\Forms\formControls\formFactory</extends>
+      <implements/>
+      <throws/>
+      <title>Simple Form</title>
+      <description>Simple form builder.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="simpleForm">
+          <description>Builds the form.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module.</description>
+            </parameter>
+            <parameter name="$controls" type="boolean" defaultvalue="">
+              <description>Options whether the form will have built in specific controls (submit and reset buttons).</description>
+            </parameter>
+            <parameter name="$async" type="boolean" defaultvalue="">
+              <description>Sets the form to post async.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The simpleForm object.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertRow" returntype="simpleForm">
+          <description>Builds and inserts a form row including a label and an input.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be a DOMElement or a string (which will be nested into a span).</description>
+            </parameter>
+            <parameter name="$input" type="DOMElement" defaultvalue="">
+              <description>The input to be inserted to the form row.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Defines whether the input given is required.</description>
+            </parameter>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>Notes for the user to insert valid input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildRow" returntype="DOMElement">
+          <description>Builds a form row including a label and an input.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be a DOMElement or a string (which will be nested into a span).</description>
+            </parameter>
+            <parameter name="$input" type="DOMElement" defaultvalue="">
+              <description>The input to be inserted to the form row.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Defines whether the input given is required.</description>
+            </parameter>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>Notes for the user to insert valid input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getRow" returntype="DOMElement">
+          <description>Creates and returns a form row.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getSimpleLabel" returntype="DOMElement">
+          <description>Builds a simple form label.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be a string or a DOMElement.</description>
+            </parameter>
+            <parameter name="$for" type="string" defaultvalue="">
+              <description>The id of the input that this label is pointing to.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildLabel" returntype="DOMElement">
+          <description>Builds and returns a simple form label.</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The label's title. It can be string or DOMElement (span).</description>
+            </parameter>
+            <parameter name="$for" type="string" defaultvalue="">
+              <description>The input's id where this label is pointing to.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Creates a required span indicator for the input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildControls" returntype="void">
+          <description>Builds and appends the form default controls (submit and reset buttons).</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNotes" returntype="DOMElement">
+          <description>Builds and returns a note container with context.</description>
+          <parameters>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>The user's notes.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

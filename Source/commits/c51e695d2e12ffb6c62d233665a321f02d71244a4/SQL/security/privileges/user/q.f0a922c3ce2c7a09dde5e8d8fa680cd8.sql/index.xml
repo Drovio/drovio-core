@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1499800882"><title>Get User participation in Groups</title><description>Returns the groups of which the user is a member</description><access>1</access><attributes><attr id="user_id"></attr></attributes></query>

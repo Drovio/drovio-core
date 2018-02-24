@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="errorLogger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1390826651</datecreated>
+      <daterevised>1390826651</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Error Logger</title>
+      <description>Logs all errors and exceptions of the system.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="LOG_FOLDER">
+        <description>The inner log folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="logException" returntype="void" static="true">
+          <description>Logs a given exception in the system.</description>
+          <parameters>
+            <parameter name="$exception" type="Exception" defaultvalue="">
+              <description>The exception thrown.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="log" returntype="void" static="true">
+          <description>Creates a new entry log.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log description.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLogs" returntype="array" static="true">
+          <description>Get all logs in the given date.</description>
+          <parameters>
+            <parameter name="$date" type="mixed" defaultvalue="">
+              <description>The date or time from which we want the logs.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of logs by time and description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createFile" returntype="void" static="true">
+          <description>Creates the rror log file of the day.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string" static="true">
+          <description>Get the error's log file name.</description>
+          <parameters>
+            <parameter name="$time" type="integer" defaultvalue="">
+              <description>The timestamp to get the date.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The log file name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

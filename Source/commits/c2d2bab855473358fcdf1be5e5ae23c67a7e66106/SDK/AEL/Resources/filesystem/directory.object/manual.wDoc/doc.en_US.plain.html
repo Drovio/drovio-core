@@ -1,0 +1,30 @@
+<h1>Directory manager</h1>
+<p>Directory interface that provides the user functions to directory manipulation.</p>
+<p>All the paths given are application root folder relative, according to parameters given in constructor.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Resources\filesystem\directory;
+
+// Create a directory instance in team mode
+$dm = new directory($mode = directory::TEAM_MODE, $shared = FALSE);
+
+
+// Get all contents of a directory
+$contents = $dm-&gt;getContentList($directory = "/", $includeHidden = FALSE, $includeDotFolders = FALSE);
+
+// The above call will create two arrays in the $contents like the following:
+// $contents['dirs'] = array("test", "test1", "test2");
+// $contents['files'] = array("log_file.txt");
+
+
+// Get details about a directory/file, like getContentList() with more details
+$details = $dm-&gt;getContentDetails($directory = "/", $includeHidden = FALSE);
+
+// The above will return an array of all the details:
+// $details['files']['log_file.txt']['name'] = "test";
+// $details['files']['log_file.txt']['extension'] = "txt";
+// $details['files']['log_file.txt']['lastModified'] = "12240047979";
+// $details['files']['log_file.txt']['size'] = "34406";
+// $details['files']['log_file.txt']['type'] = "file";</pre>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="wFrame">
+	<div class="frameHeader">
+		<span class="frameTitle">Frame Header</span>
+		<span class="closeBtn"/>
+	</div>
+	<div class="frameBody"/>
+</div>
+</model>

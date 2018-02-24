@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Docs" namespace="\">
+  <class name="pdfCreator" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1443121647</datecreated>
+      <daterevised>1443386085</daterevised>
+      <extends>
+        <object>\GTL\Docs\pdf\tFPDF</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>PDF Creator</title>
+      <description>Creates pdf files.</description>
+      <deprecated>Use \GTL\Docs\pdfDoc instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="_loadfont" returntype="array">
+          <description>Load a json file from the font repository.
+You can extend this function to use application resources.</description>
+          <parameters>
+            <parameter name="$fontName" type="string" defaultvalue="">
+              <description>The font name to load.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The font array as defined from FPDF.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Output" returntype="mixed">
+          <description>Get the pdf contents.</description>
+          <parameters/>
+          <returndescription>The pdf file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

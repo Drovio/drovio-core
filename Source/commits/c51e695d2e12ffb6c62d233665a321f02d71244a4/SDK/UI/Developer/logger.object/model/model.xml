@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model><div class="logItem emergency">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem critical">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem alert">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem error">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem warning">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem notice">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem info">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div>
+<div class="logItem debug">
+  <div class="logHeader"><span>[TIME] - </span><span>Log Message...</span></div>
+</div></model>

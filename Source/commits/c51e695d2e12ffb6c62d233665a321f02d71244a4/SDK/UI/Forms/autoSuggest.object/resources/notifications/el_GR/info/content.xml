@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Notifications>
+	<!-- POPUP NOTIFICATION -->
+	<message id="info.popup" tag="suggestions full list">
+		<h2>Αυτόματη Συμπλήρωση</h2>
+		<span>Παρακαλώ επιλέξτε ένα από τα παρακάτω:</span>
+	</message>
+	<message id="info.autosuggest.footer" tag="suggestions full list">
+		<div class="moreTitle">
+			<span>Εμφάνιση αποτελεσμάτων για </span>
+			<span class="query"></span>
+		</div>
+		<div class="moreSubtitle">
+			<span>Εμφανίζονται τα πρώτα </span>
+			<span class="topResultsNum"></span>
+			<span>αποτελέσματα</span>
+		</div>
+		<div class="moreSubtitle">
+			<span>Σύνολο: </span>
+			<span class="totalResultsNum"></span>
+		</div>
+	</message>
+</Notifications>

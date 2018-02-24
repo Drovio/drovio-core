@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Version" namespace="\tools">
+  <class name="commitManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1403766673</datecreated>
+      <daterevised>1418915576</daterevised>
+      <extends>
+        <object>\UI\Presentation\frames\windowFrame</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Version Control Commit Manager</title>
+      <description>This is a dialog for committing items in project repositories.
+Displays all the working items of the current author, including the force-to-commit items in a separate list.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The object id.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs control object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the control.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The control's ui id.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to load for commits.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getVcs" returntype="vcs">
+          <description>Gets the vcs object.</description>
+          <parameters/>
+          <returndescription>The vcs object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="commitManager">
+          <description>Builds the commit Manager ui object.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The dialog's title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The commitManager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description>Inits the control.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads the information from the session.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildCommitSection" returntype="void">
+          <description>Builds the commit section.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildFooter" returntype="void">
+          <description>Builds the control's footer.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

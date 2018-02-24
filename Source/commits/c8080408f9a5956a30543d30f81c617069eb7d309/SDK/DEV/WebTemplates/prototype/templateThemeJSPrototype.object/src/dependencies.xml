@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\\templateThemePrototype"></use><use path="\API\Platform\importer"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\DEV\Tools\codeParser"></use><use path="\DEV\WebTemplates\prototype\templatePrototype"></use></dependencies>

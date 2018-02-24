@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1974812004"><title>Leave account from userGroup</title><description>Leave an account of a user from a given userGroup</description><access>1</access><attributes><attr id="groupName"></attr><attr id="company"></attr><attr id="account_id"></attr><attr id="company_id"></attr></attributes></query>

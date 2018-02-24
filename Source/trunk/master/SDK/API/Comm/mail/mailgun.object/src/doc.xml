@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\mail">
+  <class name="mailgun" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1443135839</datecreated>
+      <daterevised>1449596775</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Mailgun client</title>
+      <description>This class connects to mailgun SMTP API and sends emails.
+For more information see https://mailgun.com.
+This version supports the minimum functionality including:
+- set from address and recipients
+- set tags
+- add attachments
+- send text and html messages.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RCP_TO">
+        <description>The to recipient identifier.</description>
+      </const>
+      <const type="string" name="RCP_CC">
+        <description>The cc recipient identifier.</description>
+      </const>
+      <const type="string" name="RCP_BCC">
+        <description>The bcc recipient identifier.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="tags">
+          <description>Email tags.</description>
+        </prop>
+        <prop type="array" name="from">
+          <description>The from address array.</description>
+        </prop>
+        <prop type="string" name="replyTo">
+          <description>The reply-to address.</description>
+        </prop>
+        <prop type="array" name="recipients">
+          <description>Mail recipients.</description>
+        </prop>
+        <prop type="array" name="attachments">
+          <description>The email attachment list.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="domain">
+          <description>The mailgun domain.</description>
+        </prop>
+        <prop type="string" name="apikey">
+          <description>The mailgun api key (api:key).</description>
+        </prop>
+        <prop type="string" name="version">
+          <description>The mailgun api version.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a mailgun client instance.</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The user domain for the mailgun.</description>
+            </parameter>
+            <parameter name="$apikey" type="string" defaultvalue="">
+              <description>The api key in the format api:key.</description>
+            </parameter>
+            <parameter name="$version" type="integer" defaultvalue="">
+              <description>The api version.
+Default value is 3.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setFrom" returntype="mailgun">
+          <description>Set the from address parameter.</description>
+          <parameters>
+            <parameter name="$from" type="mixed" defaultvalue="">
+              <description>The from address can by just the email address or an array in the following format:
+['name@example.com'] = "Name Example".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mailgun object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setReplyTo" returntype="mailgun">
+          <description>Set the reply-to address for the message.</description>
+          <parameters>
+            <parameter name="$replyTo" type="string" defaultvalue="">
+              <description>The reply-to mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mailgun object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addRecipient" returntype="mailgun">
+          <description>Add a mail recipient.
+The previous recipient will be replaced.</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The recipient address.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The recipient type.
+See class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mailgun object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTags" returntype="mailgun">
+          <description>Set email tags, using mailgun parameters.</description>
+          <parameters>
+            <parameter name="$tags" type="array" defaultvalue="">
+              <description>An array of o:tag for the email.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mailgun object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAttachment" returntype="mailgun">
+          <description>Add a file attachment to the email.</description>
+          <parameters>
+            <parameter name="$filePath" type="string" defaultvalue="">
+              <description>The full file path for the attachment.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mailgun object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="send" returntype="mixed">
+          <description>Send the email using mailgun api.</description>
+          <parameters>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail subject.</description>
+            </parameter>
+            <parameter name="$textContent" type="string" defaultvalue="">
+              <description>The mail text content.
+Leave empty to skip.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$htmlContent" type="string" defaultvalue="">
+              <description>The mail html content.
+Leave empty to skip.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The api response.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="curl" returntype="mixed">
+          <description>Make the cURL request to mailgun api.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url value.</description>
+            </parameter>
+            <parameter name="$parameters" type="array" defaultvalue="">
+              <description>The post parameters.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cURL response.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

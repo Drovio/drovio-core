@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="31951388647708"><title>Update customer info</title><description></description><access></access><attributes><attr id="firstname"></attr><attr id="lastname"></attr><attr id="middlename"></attr><attr id="occupation"></attr><attr id="pid"></attr><attr id="cid"></attr></attributes></query>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Form Notification Object</h1>
+<p>When we use async forms, there is the need to create specific notifications with the ability to be returned in form report directly. For this reason we created form specific notifications that are equipped with report handlers. They extend the normal system notifications.</p>
+<p>Examples:</p>
+<div class="code">
+	<pre>// Create a form successful notification in response of a form post
+	
+// Use the class
+use \UI\Forms\formReport\formNotification;
+	
+// Create the notification object
+$ntf = new formNotification();
+
+// This is a UIObject, so we build
+// We do not have to get the DOMElement in this case, just build
+$ntf-&gt;build($type = notification::SUCCESS, $header = TRUE, $timeout = FALSE, $disposable = TRUE);
+
+// Get the report directly to the client
+// We can reset the form (reset input fields to initial state, if the notification is success) or not
+return $ntf-&gt;getReport($fullReset = TRUE, $holder = NULL);</pre>
+</div>
+<h2>Actions and extra content</h2>
+<p>This form notification object is a way of responding to the client with information. For this reason this object has access to add extra content asynchronous and set actions (trigger events):</p>
+<div class="code">
+	<pre>// Create a form successful notification in response of a form post with an extra content and an action
+	
+// Use the class
+use \UI\Forms\formReport\formNotification;
+	
+// Create the notification object and build
+$ntf = new formNotification();
+$ntf-&gt;build($type = notification::SUCCESS, $header = TRUE, $timeout = FALSE, $disposable = TRUE);
+
+
+// Before getting the report, let's add an extra paragraph somewhere
+$p = DOM::create("p", "This is an extra paragraph");
+$ntf-&gt;addReportContent($p, $holder = ".paragraph-holder", $method = "append");
+
+
+// Also add an action to refresh something
+$ntf-&gt;addReportAction($name = "users.list.refresh");
+
+
+// Get the report directly to the client
+// We can reset the form (reset input fields to initial state, if the notification is success) or not
+return $ntf-&gt;getReport($fullReset = TRUE, $holder = NULL);</pre>
+</div>
+<p>You can see more information about notifications at the <a href="http://developers.drov.io/sdk/SDK/UI/Presentation/notification" target="_blank">notifications manual</a>.</p>
+</div>
+<div class="footer"><p class="updated">Document updated 20 October, 2015 [en_US]</p></div>
+</div></body></html>

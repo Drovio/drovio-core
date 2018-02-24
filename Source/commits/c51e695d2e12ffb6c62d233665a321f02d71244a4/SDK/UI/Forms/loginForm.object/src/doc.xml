@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="loginForm" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>April 18, 2013, 12:10 (EEST)</datecreated>
+      <daterevised>April 18, 2013, 12:10 (EEST)</daterevised>
+      <extends>\UI\Forms\simpleForm</extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Forms\templates\loginForm instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create_form" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$action" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$keepLoggedIn" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

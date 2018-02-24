@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<div class="toc"><div class="toggleButton hide">hide</div>
+<div class="toggleButton show">show</div>
+<div class="ctitle">Contents</div>
+<div class="toc-list"></div>
+</div>
+<h1>Application cookies</h1>
+<p>Every application has absolute access to the browser of the user and can interact with any way possible. It can also store cookies using this interface.</p>
+<p>Cookies are specific storage units that are stored in the browser. This class has access to the cookies that are sent through requests to the server, therefore when a cookie is created, it will be available from the next request.</p>
+<h3 id="php_example">PHP Example</h3>
+<div class="code">
+	<pre>// Store cookies and read them later
+	
+// Use the class
+use \AEL\Environment\cookies;
+
+// Create a cookie
+// This will create an application specific cookie
+cookies::set($name = "user_id", $value = "1", $expiration = 0, $httpOnly = FALSE, $secure = FALSE);
+
+// On another request we can read the cookie
+$userID = cookies::get($name = "user_id");
+
+// Or even delete it
+cookies::remove($name = "user_id");</pre>
+</div>
+<h3 id="javascript_interface_+_examples">Javascript interface + examples</h3>
+<p>There is also an easy way to read and write cookies from javascript side of the application, using a ready interface. Using javascript cookies are instantly available using this interface.</p>
+<div class="code">
+	<pre>// Read a cookie
+Function:	get()
+Description:	Read a cookie value
+Usage:		appcookies.get(c_name);
+
+// Set a cookie
+Function:	set()
+Description:	Set a cookie value
+Usage:		appcookies.set(c_name, value, exdays, path);
+Example:	appcookies.set("user_id", 1, 0, "/");
+
+// Example to remove a cookie:
+appcookies.set("user_id", 1, -1, "/");</pre>
+</div>
+<p class="note"><b>NOTE</b>: Keep in mind the cookies' restrictions based on the httpOnly and secure parameters.</p>
+</div>
+<div class="footer"><p class="updated">Document updated 09 November, 2015 [en_US]</p></div>
+</div></body></html>

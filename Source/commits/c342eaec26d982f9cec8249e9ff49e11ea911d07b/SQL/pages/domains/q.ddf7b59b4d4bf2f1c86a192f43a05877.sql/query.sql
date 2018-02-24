@@ -1,0 +1,2 @@
+SELECT *
+FROM PG_domain

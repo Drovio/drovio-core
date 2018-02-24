@@ -1,0 +1,111 @@
+/*____________________ ui.presentation.expander ____________________*/
+.expander:not(.static) {
+	width:100%;
+	position:relative;
+	box-sizing: border-box;
+}
+
+.expander:not(.static) > .expanderHead {
+	width:100%;
+	min-height:30px;
+	display:block;
+	border:1px solid black;
+	background-color: rgb(166, 166, 166);
+	transition: height 400ms;
+	-webkit-transition: height 400ms;
+	-moz-transition: height 400ms;
+	-o-transition: height 400ms;
+	cursor: pointer;
+	position:relative;
+	box-sizing: border-box;
+}
+.expander:not(.static) > .expanderHead > span {
+	font-size:10px;
+	line-height:30px;
+	padding-left:10px;
+}
+.expander > .expanderHead > .expanderCounter {
+	position:absolute;
+	right:10px;
+}
+.expander:not(.static) > .expanderHead:not(:first-child) {
+	border-top:0;
+}
+.expander:not(.static) > .expanderBodyWrapper {
+	width:100%;
+	height:0px;
+	transition: height 400ms;
+	-webkit-transition: height 400ms;
+	-moz-transition: height 400ms;
+	-o-transition: height 400ms;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	overflow:hidden;
+	position:relative;
+	box-sizing: border-box;
+}
+
+/*____________________ ui.presentation.expander (staticExpander) ____________________*/
+.expander.static > .expanderHead {
+	cursor:pointer;
+	width:100%;
+	height:40px;
+	background-color:#F5F5F5;
+	border:1px solid black;
+	box-sizing:border-box;
+	-webkit-transition:/*width 400ms, height 400ms, background-color 400ms, */-webkit-transform 200ms 100ms;
+	-webkit-transform:scale(1, 1);
+	-webkit-transform-origin:0 0;
+	left:0;
+	z-index:1;
+}
+.expander.static:not(.expanded) > .expanderHead:hover {
+	-webkit-transform-origin: 0% 100%;
+	/*-webkit-transform: skew(5deg);*/
+}
+.expander.static > .expanderHead > span {
+	font-size:15px;
+	line-height:40px;
+	padding-left:10px;
+}
+.expander.static > .expanderBodyWrapper {
+	width:100%;
+	height:0;
+	background-color:white;
+	box-sizing:border-box;
+	overflow:auto;
+	opacity:0;
+	-webkit-transition:opacity 400ms;
+}
+.expander.static {
+	
+}
+.expander.static.expanded { 
+    	height:100%;
+	min-height:40px;
+	box-sizing:border-box;
+}
+.expander.static.expanded > .expanderHead {
+	position:absolute;
+	top: -100px;
+/*	right:0;*/
+/*	width:48px;*/
+/*	height:5px;*/
+	-webkit-transition:/*width 150ms, height 150ms, top 800ms 100ms*/-webkit-transform 200ms 100ms;
+	-webkit-transform:scale(0, 0);
+	-webkit-transform-origin:0 0;
+/*	background-color: black;*/
+/*	border-radius:5px;*/
+/*	cursor:alias;*/
+	box-sizing:border-box;
+/*	z-index: 10000;*/
+}
+.expander.static.expanded > .expanderHead * {
+    	display:none;
+}
+.expander.static.expanded > .expanderBodyWrapper {
+    	position:relative;
+    	height:auto;
+    	opacity:1;
+	box-sizing:border-box;
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Platform" namespace="\">
+  <class name="engine" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>5</build>
+      <datecreated>1363518960</datecreated>
+      <daterevised>1450374739</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform Engine</title>
+      <description>Class responsible for starting and pausing the platform engine.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="start" returntype="void" static="true">
+          <description>Starts debugger, session and user preferences.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="restart" returntype="void" static="true">
+          <description>Restarts the engine. Shutdown and then start again.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="shutdown" returntype="void" static="true">
+          <description>This function is called last when a php script quits.
+It also checks for errors that may have occurred and logs them.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getVar" returntype="mixed" static="true">
+          <description>Get a variable from the request.
+It uses the HTTPRequest to get the variable.
+
+This is based on the user request and supports GET, POST and COOKIES. It works independent and the user doesn't know (doesn't have to know) where the variable comes from.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable name to get.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The variable value or NULL if the variable doesn't exist in the requested scope.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRequestData" returntype="mixed" static="true">
+          <description>Get data from the HTTPRequest.
+It supports url encoded data and json payload.</description>
+          <parameters>
+            <parameter name="$jsonDecode" type="boolean" defaultvalue="">
+              <description>If the input is provided through php://input and it's json, set true to decode to array.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The request data as string or array according to input.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isPost" returntype="boolean" static="true">
+          <description>Checks if it is a POST request.
+It serves not to check implicit with the HTTPRequest.</description>
+          <parameters>
+            <parameter name="$includePUT" type="boolean" defaultvalue="">
+              <description>Set to include check for PUT request method.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if it is a POST (or a PUT, depending on the first parameter) request, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isPut" returntype="boolean" static="true">
+          <description>Checks if it is a PUT request.
+It serves not to check implicit with the HTTPRequest.</description>
+          <parameters/>
+          <returndescription>True if it is a PUT request, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isDelete" returntype="boolean" static="true">
+          <description>Checks if it is a DELETE request.
+It serves not to check implicit with the HTTPRequest.</description>
+          <parameters/>
+          <returndescription>True if it is a DELETE request, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

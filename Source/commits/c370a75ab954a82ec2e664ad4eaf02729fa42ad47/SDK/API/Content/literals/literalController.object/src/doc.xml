@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Content" namespace="\literals">
+  <class name="literalController" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396435781</datecreated>
+      <daterevised>1396435781</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Class is no longer used and it is deprecated.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

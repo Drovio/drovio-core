@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\API\Platform\importer"></use><use path="\API\Literals\literal"></use><use path="\UI\Html\DOM"></use><use path="\ESS\Environment\url"></use><use path="\API\Geoloc\locale"></use><use path="\ESS\Environment\cookies"></use><use path="\ESS\Prototype\html\HTMLPagePrototype"></use></dependencies>

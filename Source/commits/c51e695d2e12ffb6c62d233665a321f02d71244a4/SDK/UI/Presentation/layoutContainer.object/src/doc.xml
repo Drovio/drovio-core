@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="layoutContainer" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1379330727</datecreated>
+      <daterevised>1379330727</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Layout Container Formatted</title>
+      <description/>
+      <deprecated>This class is deprecated. CSS is available at modules now.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="container" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="border" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="boxSizing" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="padding" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="margin" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fontSize" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fontWeight" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$weight" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="fontColor" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$color" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="textAlign" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$align" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="position" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$pos" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="floatPosition" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$float" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="clear" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$clear" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="visibility" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$visibility" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="noDisplay" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_container" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_border" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_boxSizing" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_padding" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_margin" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_fontSize" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_fontWeight" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$weight" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_fontColor" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$color" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_textAlign" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$align" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_position" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$pos" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_float" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$float" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_visibility" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$visibility" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add_noDisplay" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

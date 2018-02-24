@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Comm" namespace="\">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>4.0</version>
+      <build>1</build>
+      <datecreated>1444233797</datecreated>
+      <daterevised>1444391996</daterevised>
+      <extends>
+        <object>\SYS\Comm\db\adbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Drovio Identity Database Connection handler</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new database connection instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name to connect to identity to.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setup" returntype="boolean">
+          <description>Setup an identity database for the given team name.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name to setup the database for.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The password for the demo account.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

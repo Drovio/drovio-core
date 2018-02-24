@@ -1,0 +1,42 @@
+.wFrame {
+	border: 1px solid rgba(166, 166, 166, 1);
+	background-color: #FFF;
+	position: relative;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+	min-width: 470px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.wFrame .frameHeader {
+	background-color: #EFEFEF;
+	border-bottom: 1px solid #CCC;
+	text-align: left;
+	padding: 10px;
+	position:relative;
+	text-transform: capitalize;
+	overflow: auto;
+	line-height: 16px;
+	font-weight: bold;
+}
+.wFrame .frameHeader .closeBtn {
+	float: right;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	background: url('%resources%/UI/closeX.svg') no-repeat;
+	background-size: cover;
+	background-position: 0px -16px;
+	cursor: pointer;
+}
+.wFrame > .frameBody {
+	position: relative;
+	min-width: 450px;
+	min-height: 50px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}

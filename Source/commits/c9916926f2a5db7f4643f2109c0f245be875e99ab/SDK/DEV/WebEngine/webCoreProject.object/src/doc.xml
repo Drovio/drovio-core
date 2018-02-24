@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebEngine" namespace="\">
+  <class name="webCoreProject" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>3</build>
+      <datecreated>1418895399</datecreated>
+      <daterevised>1432807885</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web Core Project</title>
+      <description>It is the web core project class.
+Manages web core publishing and packaging for distribution.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="PROJECT_ID">
+        <description>The web core project id.</description>
+      </const>
+      <const type="integer" name="PROJECT_TYPE">
+        <description>The web core project type id.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object for the project.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the web core project.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Publish the entire web core project.
+
+Publish web sdk.
+Create distribution packages.
+Publish all resources.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to publish the core to.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDistroPath" returntype="string" static="true">
+          <description>Get the core distribution path in the system for the given version.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to get the package path for.
+If empty, get the last version.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>Indicates whether the path is system root relative or absolute.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The full package path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createPackages" returntype="boolean">
+          <description>Create all distribution packages for the web core.</description>
+          <parameters>
+            <parameter name="$releaseVersion" type="string" defaultvalue="">
+              <description>The release version of the packages.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source branch name to get the files from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

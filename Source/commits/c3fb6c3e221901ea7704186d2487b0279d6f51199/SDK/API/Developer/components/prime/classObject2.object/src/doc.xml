@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime">
+  <class name="classObject2" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1379502941</datecreated>
+      <daterevised>1384851870</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Prime Class Object</title>
+      <description>Manages a class object at any project with version control.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The item extension.</description>
+      </const>
+      <const type="string" name="SOURCE_FOLDER">
+        <description>The source folder name.</description>
+      </const>
+      <const type="string" name="MODEL_FOLDER">
+        <description>The model folder name.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="library">
+          <description>The library name.</description>
+        </prop>
+        <prop type="string" name="package">
+          <description>The package name.</description>
+        </prop>
+        <prop type="string" name="namespace">
+          <description>The namespace name.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The object's name.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The VCS controller.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the class object.</description>
+          <parameters>
+            <parameter name="$repository" type="string" defaultvalue="">
+              <description>The vcs repository.</description>
+            </parameter>
+            <parameter name="$includeRelease" type="boolean" defaultvalue="">
+              <description>Sets whether this repository will include project release/head objects.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's packge.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The object's namespace.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Create a new class object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+            <parameter name="$includeLibraryPath" type="boolean" defaultvalue="">
+              <description>Defines whether the path of the object will include the library.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner path of the object (in case of complicated projects).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceCode" returntype="mixed">
+          <description>Updates the source code of this object.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The header code of the object.</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The class code of the object.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE on success or FALSE on failure. It returns a string telling whether there is a syntax error in the php file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildSourceCode" returntype="string">
+          <description>Builds the source code in sections for easy parsing.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The header code.</description>
+            </parameter>
+            <parameter name="$classCode" type="string" defaultvalue="">
+              <description>The class code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The full source code in php format (including php tags).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceCode" returntype="string">
+          <description>Gets the object's source code.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>If true, returns the entire php code without unwrap and un-section it.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the class code section of the object's source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="includeSourceCode" returntype="boolean">
+          <description>Includes the object's trunk source code file.</description>
+          <parameters/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSourceDoc" returntype="boolean">
+          <description>Updates the documentation of the object's source code.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The documentation content in string format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceDoc" returntype="string">
+          <description>Gets the object's documentation.</description>
+          <parameters/>
+          <returndescription>The object's documentation in XML format.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getJSCode" returntype="string">
+          <description>Gets the object's javascript code.</description>
+          <parameters/>
+          <returndescription>The object's javascript code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateJSCode" returntype="boolean">
+          <description>Updates the object's javascript code</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new javascript code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadJSCode" returntype="boolean">
+          <description>Loads the object's javascript code.</description>
+          <parameters/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSSCode" returntype="string">
+          <description>Gets the object's css code.</description>
+          <parameters/>
+          <returndescription>The object's css code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSSCode" returntype="boolean">
+          <description>Updates the object's css code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadCSSCode" returntype="boolean">
+          <description>Loads the object's css code.</description>
+          <parameters/>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSSModel" returntype="string">
+          <description>Gets the object's css model.</description>
+          <parameters/>
+          <returndescription>The object's css model.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSSModel" returntype="boolean">
+          <description>Updates the object's css model.</description>
+          <parameters>
+            <parameter name="$model" type="string" defaultvalue="">
+              <description>The new css model in xml format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>TRUE on success, FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateItem" returntype="void">
+          <description>Update the item in the working index.</description>
+          <parameters>
+            <parameter name="$forceCommit" type="boolean" defaultvalue="">
+              <description>Tells whether the object will be included in the next commit.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibrary" returntype="string">
+          <description>Gets the item's library.</description>
+          <parameters/>
+          <returndescription>The library name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackage" returntype="string">
+          <description>Gets the item's package.</description>
+          <parameters/>
+          <returndescription>The package name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNamespace" returntype="string">
+          <description>Gets the item's namespace.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>If TRUE, includes the library and the package in the return value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The namespace name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getVCSTrunkPath" returntype="string">
+          <description>Gets the path to the vcs trunk.</description>
+          <parameters/>
+          <returndescription>The trunk path of the working branch.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getVCSHeadPath" returntype="string">
+          <description>Gets the path to the vcs branch.</description>
+          <parameters/>
+          <returndescription>The branch path of the head branch.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="boolean">
+          <description>Exports the object to the given</description>
+          <parameters>
+            <parameter name="$exportPath" type="string" defaultvalue="">
+              <description>The export path for the source code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFullNamespace" returntype="string">
+          <description>Returns the full namespace of the item for code usage.</description>
+          <parameters/>
+          <returndescription>The full namespace of the item.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the id of the current item.</description>
+          <parameters/>
+          <returndescription>The item's id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemPath" returntype="string">
+          <description>Gets the item's path (with library, package, namespace etc).</description>
+          <parameters>
+            <parameter name="$includeLibraryPath" type="boolean" defaultvalue="">
+              <description>Defines whether the path will include the item's library.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemFullname" returntype="string">
+          <description>Gets the item's full name (including the extension).</description>
+          <parameters/>
+          <returndescription>The item's fullname.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

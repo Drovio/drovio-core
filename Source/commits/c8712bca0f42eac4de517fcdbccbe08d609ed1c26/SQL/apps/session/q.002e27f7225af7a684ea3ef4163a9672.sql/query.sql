@@ -1,0 +1,2 @@
+INSERT INTO AC_app_session (uid, application_id, version, account_id, time_created, time_updated) VALUES ('{uid}', {application_id}, '{version}', {account_id}, {time_created}, {time_updated})
+	ON DUPLICATE KEY UPDATE version = '{version}', time_updated = {time_updated};

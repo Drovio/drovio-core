@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="HTMLPagePrototype" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362650640</datecreated>
+      <daterevised>1387449610</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Page Prototype/Builder</title>
+      <description>Helps building HTML Pages in HTML5 format</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="DOMElement" name="HTML">
+          <description>The html tag object</description>
+        </prop>
+        <prop type="DOMElement" name="HTMLHead">
+          <description>The head tag object</description>
+        </prop>
+        <prop type="DOMElement" name="HTMLBody">
+          <description>The body tag object</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="Array" name="bottomScripts">
+          <description>Keeps the scripts to be inserted in the bottom of the page before exporting,</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="void">
+          <description>Builds the spine of the page</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The title tag of the page. It is a required field for the document to be valid</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The description meta value</description>
+            </parameter>
+            <parameter name="$keywords" type="string" defaultvalue="">
+              <description>The keywords meta value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Returns the entire HTML page in HTML5 format</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTML" returntype="DOMElement">
+          <description>Returns the html tag object</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHead" returntype="DOMElement">
+          <description>Returns the head tag object</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBody" returntype="DOMElement">
+          <description>Returns the body tag object</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="appendToHead" returntype="void">
+          <description>Append element to head</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="appendToBody" returntype="void">
+          <description>Append element to body</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addMeta" returntype="DOMElement">
+          <description>Add a meta description to head</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The meta name attribute</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The meta content attribute</description>
+            </parameter>
+            <parameter name="$httpEquiv" type="string" defaultvalue="">
+              <description>The meta http-equiv attribute</description>
+            </parameter>
+            <parameter name="$charset" type="string" defaultvalue="">
+              <description>The meta charset attribute</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addStyle" returntype="DOMElement">
+          <description>Inserts a css line</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href attribute of the link</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addScript" returntype="DOMElement">
+          <description>Inserts a script line</description>
+          <parameters>
+            <parameter name="$src" type="string" defaultvalue="">
+              <description>The URL source file of the script</description>
+            </parameter>
+            <parameter name="$bottom" type="boolean" defaultvalue="">
+              <description>Indicator whether the script tag will be placed at the bottom of the page.
+The default value is FALSE.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addIcon" returntype="void">
+          <description>Inserts a page icon</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The icon URL</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setTitle" returntype="void">
+          <description>Sets the page title.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new page title.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getLink" returntype="DOMElement">
+          <description>Creates and returns a link tag object</description>
+          <parameters>
+            <parameter name="$rel" type="string" defaultvalue="">
+              <description>The rel attribute of the link</description>
+            </parameter>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href URL of the link</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildMeta" returntype="void">
+          <description>Builds all the meta tags along with the document title tag</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The title of the document</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The description meta</description>
+            </parameter>
+            <parameter name="$keywords" type="string" defaultvalue="">
+              <description>The keywords meta</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addToBottomScripts" returntype="void">
+          <description>Insert the given script tag to stack, in order to be inserted at the bottom of the page right before delivering the page</description>
+          <parameters>
+            <parameter name="$script" type="DOMElement" defaultvalue="">
+              <description>The script tag element</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="flushBottomScripts" returntype="void">
+          <description>Appends all scripts to the body</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

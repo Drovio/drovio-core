@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="heading" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1369310366</datecreated>
+      <daterevised>1369310366</daterevised>
+      <extends/>
+      <implements/>
+      <title>Heading Element</title>
+      <description/>
+      <deprecated>This class is no longer used.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" name="get" returntype="void">
+          <description>Creates the header for the form</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

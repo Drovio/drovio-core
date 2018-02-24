@@ -1,0 +1,29 @@
+<h1>Weblink builder</h1>
+<p>One of the most common html component is a weblink. Because it is harder to build it with php (adding all those attributes), we have created a component to build a weblink in 2 lines. This class can be easily adopted by other classes to make those 2 lines 1 (in a page with 10 links, we save a lot).
+<h3>PHP Examples</h3>
+<div class="code">
+	<pre>// Create a weblink
+	
+// Use class
+use \UI\Html\components\weblink
+
+// Create a weblink item
+$wl = new weblink();
+
+// This is a UIObject, so we build
+// We use the chain pattern to get the DOMElement immediately
+$wlink = $wl->build($href = "https://redback.io", $target = "_self", $content = "Redback Home", $class = "nav_link")->get();
+
+// Append link to anything
+DOM::append($anything, $wlink);</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>Weblink also provides a javascript interface where a developer can create weblinks on the client side dynamically and faster.</p>
+<div class="code">
+	<pre>// Create a welink in a single line
+// weblink.get(href, target, content, linkClass);
+var wl = weblink.get("https://developer.redback.io", "_self", "Redback Developers", "");
+
+// Append to navigation menu
+jq("div.navMenu").append(wl);</pre>
+</div>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="toolbarSeparator" abstract="" namespace="\toolbarComponents">
+    <info>
+      <version/>
+      <datecreated>1372860134</datecreated>
+      <daterevised>1372860134</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Toolbar Separator</title>
+      <description>Creates toolar separator.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="toolbarSeparator">
+          <description>Builds the separator.</description>
+          <parameters/>
+          <returndescription>The toolbarSeparator object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

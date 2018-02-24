@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\DOMAttr"></use><use path="\DOMDocument"></use><use path="\API\Platform\importer"></use><use path="\DEV\Profiler\logger"></use><use path="\DOMXPath"></use></dependencies>

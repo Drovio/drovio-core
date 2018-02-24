@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ENP" package="Relations" namespace="\">
+  <class name="ePersonAddress" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1440069887</datecreated>
+      <daterevised>1440951873</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Person address manager</title>
+      <description>Manages all person's addresses.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="personID">
+          <description>The current person id.</description>
+        </prop>
+        <prop type="integer" name="addressID">
+          <description>The current address id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="boolean" name="valid">
+          <description>Whether the person is valid with the current company.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create an instance of the person address manager.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id to manage addresses for.</description>
+            </parameter>
+            <parameter name="$addressID" type="integer" defaultvalue="">
+              <description>The address id.
+Leave empty for new addresses.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new person address.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The address type id.
+Use getAddressTypes() to get all types.</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The road address (including road number).</description>
+            </parameter>
+            <parameter name="$postal_code" type="string" defaultvalue="">
+              <description>The address' postal code.</description>
+            </parameter>
+            <parameter name="$city" type="string" defaultvalue="">
+              <description>The city name.</description>
+            </parameter>
+            <parameter name="$countryID" type="integer" defaultvalue="">
+              <description>The country id of the address.
+See Geoloc API for more information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the address' information.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The address type id.
+Use getAddressTypes() to get all types.</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The road address (including road number).</description>
+            </parameter>
+            <parameter name="$postal_code" type="string" defaultvalue="">
+              <description>The address' postal code.</description>
+            </parameter>
+            <parameter name="$city" type="string" defaultvalue="">
+              <description>The city name.</description>
+            </parameter>
+            <parameter name="$countryID" type="integer" defaultvalue="">
+              <description>The country id of the address.
+See Geoloc API for more information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the current address.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get all information for the current address.</description>
+          <parameters/>
+          <returndescription>All address information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAddressTypes" returntype="array" static="true">
+          <description>Get all address types.</description>
+          <parameters/>
+          <returndescription>An array of types by id and name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllAddresses" returntype="array">
+          <description>Get all person addresses.</description>
+          <parameters/>
+          <returndescription>An array of all person addresses.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the given person is member of the current team.</description>
+          <parameters/>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="WViewEditor" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1430552899</datecreated>
+      <daterevised>1437044721</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web View Editor</title>
+      <description>It creates a complete editor for web views as Redback sees it.
+It includes an HTMLEditor for the web view content and a CSSEditor for the content's looks.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="cssName">
+          <description>Name of the css editing area.</description>
+        </prop>
+        <prop type="string" name="htmlName">
+          <description>Name of the html editing area</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructs and initializes a cssEditor.</description>
+          <parameters>
+            <parameter name="$cssName" type="string" defaultvalue="">
+              <description>Name of the css editing area.</description>
+            </parameter>
+            <parameter name="$htmlName" type="string" defaultvalue="">
+              <description>Name of the html editing area.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssProperties" returntype="string" static="true">
+          <description>Acquire CSS properties info as an XML document string.</description>
+          <parameters/>
+          <returndescription>The xml document string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUserAgentCss" returntype="string" static="true">
+          <description>Get the given's user agent default css.</description>
+          <parameters>
+            <parameter name="$browser" type="string" defaultvalue="">
+              <description>Name of the browser. Can be "w3c", "webkit", "firefox", "iexplorer", "opera".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The entire css collection of the default css rules.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="WViewEditor">
+          <description>Builds the CSSEditor object.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The HTML code to load on initalize.</description>
+            </parameter>
+            <parameter name="$css" type="string" defaultvalue="">
+              <description>The css code to load on initialize.</description>
+            </parameter>
+            <parameter name="$sideClosed" type="boolean" defaultvalue="">
+              <description>Set the css code side as closed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The WViewEditor object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

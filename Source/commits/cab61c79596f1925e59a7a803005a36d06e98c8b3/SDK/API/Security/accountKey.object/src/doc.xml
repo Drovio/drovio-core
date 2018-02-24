@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\">
+  <class name="accountKey" abstract="">
+    <info>
+      <version>9.0</version>
+      <build>1</build>
+      <datecreated>1407842840</datecreated>
+      <daterevised>1422266106</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account's key manager</title>
+      <description>Manages all the keys for an account.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="TEAM_KEY_TYPE">
+        <description>The team key type value.</description>
+      </const>
+      <const type="integer" name="PROJECT_KEY_TYPE">
+        <description>The project key type value.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create an account access key for the given account.</description>
+          <parameters>
+            <parameter name="$userGroup_id" type="integer" defaultvalue="">
+              <description>The user group id for the access key.</description>
+            </parameter>
+            <parameter name="$type" type="integer" defaultvalue="">
+              <description>The key type according to the database key types.</description>
+            </parameter>
+            <parameter name="$context" type="integer" defaultvalue="">
+              <description>The key context.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to create the key for.
+If empty, get the current account.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The generated key on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove an existing account key.</description>
+          <parameters>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The key to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="array" static="true">
+          <description>Get all account access keys for the current account.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the keys for.
+If empty, get the current account.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all account access keys.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validate a given key in the given project or team.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key to validate.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The key context.
+It is either the team id or the project id, depending on the request.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The key context type.
+Use class constants for this.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the given API key is valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateAccount" returntype="boolean" static="true">
+          <description>Validate an account with the given key in the given project or team.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key to validate.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The key context.
+It is either the team id or the project id, depending on the request.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The key context type.
+Use class constants for this.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the account has the given API key, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateGroup" returntype="boolean" static="true">
+          <description>Validate an account that is part of a group in the given project or team.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name that the account should be part of.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The key context.
+It is either the team id or the project id, depending on the request.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The key context type.
+Use class constants for this.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the account has an API key for the specified combination, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateGroupID" returntype="boolean" static="true">
+          <description>Validate an account that is part of a group in the given project or team.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id that the account should be part of.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The key context.
+It is either the team id or the project id, depending on the request.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The key context type.
+Use class constants for this.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the account has an API key for the specified combination, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContext" returntype="integer" static="true">
+          <description>Get the key context given a key type.</description>
+          <parameters>
+            <parameter name="$keyType" type="integer" defaultvalue="">
+              <description>The key type to get the context from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The context of the check.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContextDescription" returntype="string" static="true">
+          <description>Get a key context description (the name of the team or the title of the project) for a given key type and context id.</description>
+          <parameters>
+            <parameter name="$keyType" type="integer" defaultvalue="">
+              <description>The key type to get the context from.</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The key context (team or project id).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The context description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="key" returntype="string" static="true">
+          <description>Generate an account key.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The key prefix.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The key main context/value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The generated key.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

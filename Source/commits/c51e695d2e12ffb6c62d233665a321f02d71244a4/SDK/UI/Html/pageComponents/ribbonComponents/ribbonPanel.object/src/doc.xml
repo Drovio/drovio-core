@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ribbonPanel" abstract="" namespace="\pageComponents\ribbonComponents">
+    <info>
+      <version/>
+      <datecreated>April 5, 2013, 10:07 (EEST)</datecreated>
+      <daterevised>April 5, 2013, 10:25 (EEST)</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>Ribbon Panel</title>
+      <description>Builds a ribbon panel holder</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop name="panelContainer" type="DOMElement" class="undefined">
+          <description>The panel container. Different if grouped.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="ribbonPanel">
+          <description>Builds the panel</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The panel id</description>
+            </parameter>
+            <parameter name="$grouped" type="boolean" defaultvalue="">
+              <description>Indicates whether this panel will container one or two items.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insertPanelItem" returntype="DOMElement">
+          <description>Create and insert a panel item.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The panel item type.
+See ribbonPanelItem.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The panel title.
+See ribbonPanelItem.</description>
+            </parameter>
+            <parameter name="$imgURL" type="string" defaultvalue="">
+              <description>The panel ico URL.
+See ribbonPanelItem.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>The panel selected property.
+See ribbonPanelItem.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

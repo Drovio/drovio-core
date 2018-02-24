@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="user" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1363426200</datecreated>
+      <daterevised>1375266058</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>User</title>
+      <description>Handles all user validation with the system</description>
+      <deprecated>Use \API\Security\account instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="login" returntype="boolean" static="true">
+          <description>Login user to system</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The user's username</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The user's password (unhashed)</description>
+            </parameter>
+            <parameter name="$rememberDuration" type="integer" defaultvalue="">
+              <description>Number of milliseconds to set the cookies (if 0, session duration)</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Security\account::authenticate() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="authenticate" returntype="mixed" static="true">
+          <description>Authenticate user and return user data</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The user's username</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The user's password</description>
+            </parameter>
+          </parameters>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="profile" returntype="mixed" static="true">
+          <description>Initialize user's data and return the user's profile or NULL if no user is logged in.</description>
+          <parameters/>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="logout" returntype="void" static="true">
+          <description>Logout logged in user</description>
+          <parameters/>
+          <deprecated>Use \API\Security\account::logou() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="setCookies" returntype="void" static="true" class="undefined">
+          <description>Set session variables for logged in user</description>
+          <parameters>
+            <parameter name="$profile" type="array" defaultvalue="">
+              <description>The user's profile from the user::profile() function.</description>
+            </parameter>
+            <parameter name="$rememberDuration" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setSession" returntype="void" static="true" class="undefined">
+          <description>Clear all user relevant session variables.</description>
+          <parameters>
+            <parameter name="$profile" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="clearCookies" returntype="void" static="true" class="undefined">
+          <description>Clear user's cookies.</description>
+          <parameters/>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="clearSession" returntype="void" static="true" class="undefined">
+          <description>Clear user's session variables.</description>
+          <parameters/>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

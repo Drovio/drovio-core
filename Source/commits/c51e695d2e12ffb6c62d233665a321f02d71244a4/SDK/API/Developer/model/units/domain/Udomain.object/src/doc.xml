@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="Udomain" namespace="">
+    <info>
+      <version/>
+      <datecreated/>
+      <daterevised/>
+      <extends>
+        <object>\API\Model\units\domain\Sdomain</object>
+      </extends>
+      <implements/>
+      <title>Domain Manager</title>
+      <description>The developer's part for manipulating the system's subdomains</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" static="true" returntype="boolean">
+          <description>Creates a new subdomain.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the subdomain</description>
+            </parameter>
+            <parameter name="$theme" type="string" defaultvalue="">
+              <description>The theme style</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The path where this subdomain will be placed. If empty, it gets the default path created by the name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" static="true" returntype="boolean">
+          <description>Delete a subdomain (it must be empty of folders and pages)</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the subdomain to delete</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

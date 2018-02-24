@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\">
+  <class name="templateThemeJS" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1442530739</datecreated>
+      <daterevised>1442530739</daterevised>
+      <extends>
+        <object>\DEV\WebTemplates\prototype\templateThemeJSPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Template theme javascript object.</title>
+      <description>Manages a theme's javascript file.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="templateProject" name="template">
+          <description>The template project object.</description>
+        </prop>
+        <prop type="templateTheme" name="templateTheme">
+          <description>The template theme object.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The javascript file name.</description>
+        </prop>
+        <prop type="string" name="themeName">
+          <description>The theme name.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create an instance of the template theme javascript file.</description>
+          <parameters>
+            <parameter name="$templateID" type="integer" defaultvalue="">
+              <description>The template id.</description>
+            </parameter>
+            <parameter name="$themeName" type="string" defaultvalue="">
+              <description>The theme name.</description>
+            </parameter>
+            <parameter name="$jsName" type="string" defaultvalue="">
+              <description>The javascript file name.
+Leave empty for new files.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new javascript file.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The javascript file name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there is a javascript with the same name in the theme.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the file contents.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The javascript contents.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the javascript file from the theme.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the vcs item's id.</description>
+          <parameters/>
+          <returndescription>The item's hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

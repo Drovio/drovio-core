@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\">
+  <class name="codeEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366971798</datecreated>
+      <daterevised>1421913919</daterevised>
+      <extends>
+        <object>\UI\Developer\codeEditor</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Code Editor</title>
+      <description>Object for code editing purposes.</description>
+      <deprecated>Use \UI\Developer\codeEditor instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

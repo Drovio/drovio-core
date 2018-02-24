@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="repository" abstract="" namespace="\model\version">
+    <info>
+      <version/>
+      <datecreated>1372845557</datecreated>
+      <daterevised>1372845595</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Repository Manager</title>
+      <description>Handles all the repositories</description>
+      <deprecated>Functionality no longer used.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="PATH">
+        <description>The system's repository folder</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a repository</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The repository's path</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a repository (it must be empty of objects)</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The repository's path</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

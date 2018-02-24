@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Finances" namespace="\">
+  <class name="taxes" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1416497638</datecreated>
+      <daterevised>1443043213</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Retail Tax Manager</title>
+      <description>Manages the tax rates and has access to generic tax information.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getTaxRates" returntype="array" static="true">
+          <description>Get all tax rates for a given country, by id.
+
+You can get all countries from the API\Geoloc package.</description>
+          <parameters>
+            <parameter name="$countryID" type="integer" defaultvalue="">
+              <description>The country id to get the tax rates for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array with all tax rates.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

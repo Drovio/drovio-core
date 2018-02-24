@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="Dashboard" namespace="\">
+  <class name="appLibrary" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1414572376</datecreated>
+      <daterevised>1417619423</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>BOSS' Application Library Manager</title>
+      <description>Manages the applications in the BOSS' library for a given team (or the current team).</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="buyApplication" returntype="boolean" static="true">
+          <description>Buy an application for a team.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to buy.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id or empty to get the current team.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamAppVersion" returntype="string" static="true">
+          <description>Get the team's current application version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application version string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateTeamAppVersion" returntype="boolean" static="true">
+          <description>Updates the team's application version for the current account to the next declared version (if any).
+
+Returning true doesn't mean that there was an update.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTeamAppVersion" returntype="boolean" static="true">
+          <description>Set the next version of a project for a team.
+The project must be in the team's library.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The app's version selected by the team.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id or empty to get the current team.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getAccountAppVersion" returntype="void" static="true">
+          <description>Get the application version for the current account for the current team from the account's folder.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The app's version.
+NULL if project version is not set.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAccountAppVersion" returntype="void" static="true">
+          <description>Set the project version for the current account for the current team from the account's folder.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project/application version string.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

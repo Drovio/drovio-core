@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Geoloc" namespace="\">
+  <class name="region" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1395647808</datecreated>
+      <daterevised>1440063975</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Region Manager</title>
+      <description>Gets all the information about the user's region.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="defaultRegion" static="true">
+          <description>The default system region.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true">
+          <description>Get the user's current region</description>
+          <parameters/>
+          <returndescription>It is the countryCode_ISO2A field, so the ISO2A country code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean" static="true">
+          <description>Set the system's current region value for the user.</description>
+          <parameters>
+            <parameter name="$region" type="string" defaultvalue="">
+              <description>The region value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use \API\Geoloc\locale::info() instead.</deprecated>
+        </method>
+        <method name="getDefault" returntype="string" static="true">
+          <description>Gets the default region by locale.</description>
+          <parameters/>
+          <returndescription>It is the countryCode_ISO2A field, so the ISO2A country code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllCountries" returntype="array" static="true">
+          <description>Get all countries.</description>
+          <parameters/>
+          <returndescription>An array of all countries by id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCountryInfo" returntype="array" static="true">
+          <description>Get country info.</description>
+          <parameters>
+            <parameter name="$countryID" type="integer" defaultvalue="">
+              <description>The country id to get information for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all country info.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

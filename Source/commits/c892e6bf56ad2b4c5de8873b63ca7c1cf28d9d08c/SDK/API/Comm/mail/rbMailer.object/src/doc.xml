@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\mail">
+  <class name="rbMailer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366713840</datecreated>
+      <daterevised>1410782094</daterevised>
+      <extends>
+        <object>\SYS\Comm\mail\mailer</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>RB Mailer</title>
+      <description>Configure all mail proccedures from redback.gr mail server for predifined account such as support, info, admin
+</description>
+      <deprecated>Use \SYS\Comm\mail\mailer instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

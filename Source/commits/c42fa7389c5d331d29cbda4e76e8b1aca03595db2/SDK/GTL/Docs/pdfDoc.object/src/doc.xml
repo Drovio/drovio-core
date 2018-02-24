@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\">
+  <class name="pdfDoc" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1443386527</datecreated>
+      <daterevised>1443533111</daterevised>
+      <extends>
+        <object>\GTL\Docs\pdf\tFPDF</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>PDF Document Editor</title>
+      <description>Creates pdf files using the tFPDF library.
+For more information see:
+- http://www.fpdf.org/
+- http://www.fpdf.org/en/script/script92.php</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="B">
+          <description>The bold tag identifier.</description>
+        </prop>
+        <prop type="integer" name="I">
+          <description>The italic tag identifier.</description>
+        </prop>
+        <prop type="integer" name="U">
+          <description>The underline tag identifier.</description>
+        </prop>
+        <prop type="string" name="HREF">
+          <description>The href tag identifier.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new pdf document instance.</description>
+          <parameters>
+            <parameter name="$orientation" type="string" defaultvalue="">
+              <description>The pdf orientation.
+Select 'p', 'protrait' or 'l', 'landscape'.
+It is on portrait mode by default.</description>
+            </parameter>
+            <parameter name="$unit" type="string" defaultvalue="">
+              <description>The page units.
+It is 'mm' by default.</description>
+            </parameter>
+            <parameter name="$size" type="string" defaultvalue="">
+              <description>The page size.
+It is A4 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_loadfont" returntype="array">
+          <description>Load a json file from the font repository.
+You can extend this function to use application resources.</description>
+          <parameters>
+            <parameter name="$fontName" type="string" defaultvalue="">
+              <description>The font name to load.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The font array as defined from FPDF.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Output" returntype="mixed">
+          <description>Get the pdf contents.</description>
+          <parameters/>
+          <returndescription>The pdf file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ImageFromContents" returntype="void">
+          <description>Puts an image to the pdf given the image contents.</description>
+          <parameters>
+            <parameter name="$fileContents" type="mixed" defaultvalue="">
+              <description>The image contents.</description>
+            </parameter>
+            <parameter name="$x" type="float" defaultvalue="">
+              <description>The x position.</description>
+            </parameter>
+            <parameter name="$y" type="float" defaultvalue="">
+              <description>The y position.</description>
+            </parameter>
+            <parameter name="$w" type="float" defaultvalue="">
+              <description>The image width.</description>
+            </parameter>
+            <parameter name="$h" type="float" defaultvalue="">
+              <description>The image height.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>Image format.
+Possible values are (case insensitive): JPG, JPEG, PNG and GIF.
+If not specified, the type is inferred from the file extension.</description>
+            </parameter>
+            <parameter name="$link" type="string" defaultvalue="">
+              <description>URL or identifier returned by AddLink().</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

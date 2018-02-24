@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Environment" namespace="\">
+  <class name="url" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>3</build>
+      <datecreated>1414063214</datecreated>
+      <daterevised>1418824563</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>URL Helper and Resolver</title>
+      <description>This class is a helper class for handling urls.
+It is used for resolving urls for resources and redirections.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true">
+          <description>Creates and returns a url with parameters in url encoding.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The base url.</description>
+            </parameter>
+            <parameter name="$params" type="array" defaultvalue="">
+              <description>An array of parameters as key =&amp;gt; value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A well formed url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDomain" returntype="string" static="true">
+          <description>Get current domain.</description>
+          <parameters/>
+          <returndescription>The host domain.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDomain" returntype="string" static="true">
+          <description>Gets the current navigation subdomain.</description>
+          <parameters/>
+          <returndescription>Returns the active navigation subdomain.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="resolve" returntype="string" static="true">
+          <description>Resolves a given URL given a subdomain and a page url in the framework.</description>
+          <parameters>
+            <parameter name="$sub" type="string" defaultvalue="">
+              <description>The subdomain name.
+It must be a valid name.</description>
+            </parameter>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The page url.
+By default it's the root url ("/").</description>
+            </parameter>
+            <parameter name="$protocol" type="string" defaultvalue="">
+              <description>The protocol to resolve the url to.
+Leave empty to decide based on the server request protocol.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resolved url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="resource" returntype="string" static="true">
+          <description>Resolves a resource's URL for reference to the resource's domain.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The resource's URL to be resolved.</description>
+            </parameter>
+            <parameter name="$protocol" type="string" defaultvalue="">
+              <description>The protocol to resolve the url to.
+The default protocol is "http".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resolved resource url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="checkSubdomain" returntype="void" static="true">
+          <description>Checks if the user is in the desired subdomain with the right way.
+The user is redirected in the right subdomain with the right url.
+
+It doesn't work in secure mode.</description>
+          <parameters>
+            <parameter name="$sub" type="string" defaultvalue="">
+              <description>The subdomain to check for.</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>The inner subdomain path to check for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if subdomain is ok, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="redirect" returntype="string" static="true">
+          <description>Resolves the given url and returns a redirect url after check that the url is valid.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url to redirect.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The redirected url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the info of the url in an array.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url to get the information from.
+If the url is empty, get the current request url.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The url domain.
+This is given to distinguish the subdomains on the front.
+For Redback framework the default value is 'redback'.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The url info as follows:
+['url'] = The full url page.
+['protocol'] = The server protocol.
+['sub'] = The navigation subdomain.
+['domain'] = The host domain.
+['params'] = An array of all url parameters by name and value.
+['referer'] = The referer value, if exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

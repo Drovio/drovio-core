@@ -1,0 +1,68 @@
+.treeView ul {
+	list-style-type: none;
+	padding:0px;
+	margin:0px;
+}
+.treeView .treeItem { 
+	line-height: 20px; 
+	text-indent: 5px;
+}
+.treeView .treeItem a {
+	display: block;
+}
+.treeView .treeItem.highlight > .treeItemContent {
+	background-color: #d3d3d3;
+	background: linear-gradient(left, #e4e4e4, #d3d3d3);
+	background: -webkit-linear-gradient(left, #e4e4e4, #d3d3d3);
+	background: -moz-linear-gradient(left, #e4e4e4, #d3d3d3);
+	background: -ms-linear-gradient(left, #e4e4e4, #d3d3d3);
+	background: -o-linear-gradient(left, #e4e4e4, #d3d3d3);
+}
+.treeView .treeItem > .treeItemContent {
+	cursor:pointer;
+	display:block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow:hidden;
+	height:19px;
+	line-height:19px;
+	position:relative;
+}
+.treeView .treeItem > .treeViewList > .treeItem, .treeView .subTreeView .treeItem { margin-left:18px; }
+.treeView .treeItem:not([expandable]) { margin-left: 16px; }
+.treeItem > ul > .treeItem:not([expandable]), .subTreeView > ul > .treeItem:not([expandable]) { margin-left: 34px !important; }
+.treeView .treeItem[expandable='expandable'] { cursor:default; }
+.treeView .treeItem > ul, .treeView .subTreeView { display:none; }
+.treeView .treeItem.open > ul, .treeView .treeItem.open > .subTreeView { display:block; }
+.treeView .treeItem > .treePointer {
+	background-image: url('%resources%/icons/custom/list_arrow.svg');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	transform-origin:50% 70%;
+	transition: transform 100ms;
+	-moz-transition: -moz-transform 100ms;
+	-moz-transform-origin:50% 70%;
+	-webkit-transition: -webkit-transform 100ms;
+	-webkit-transform-origin:50% 70% 0;
+	-o-transition: -o-transform 100ms;
+	-o-transform-origin:50% 70%;
+	float: left;
+	cursor:default;
+}
+.treeView .treeItem.open > .treePointer {
+	transform:rotate(90deg);
+	transition: transform 100ms;
+	-moz-transform:rotate(90deg);
+	-moz-transition: -moz-transform 100ms;
+	-webkit-transform:rotate(90deg);
+	-webkit-transition: -webkit-transform 100ms;
+	-o-transform:rotate(90deg);
+	-o-transition: -o-transform 100ms;
+}
+.treeItem > .treeView { padding-left:10px; }
+.treeView .treeItem[expandable=expandable] > .treeItemContent:hover { text-decoration:underline; }
+.treeView .treeItem:not([expandable=expandable]) > .treeItemContent:hover { background-color:rgba(166, 166, 166, 0.3); }

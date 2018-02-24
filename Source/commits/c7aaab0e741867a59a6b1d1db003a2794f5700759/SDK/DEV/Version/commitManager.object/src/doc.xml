@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Version" namespace="\">
+  <class name="commitManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392200088</datecreated>
+      <daterevised>1403766730</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Version Control Commit Manager</title>
+      <description>This is a dialog for committing items in project repositories.
+Displays all the working items of the current author, including the force-to-commit items in a separate list.</description>
+      <deprecated>Use \DEV\Version\tools\commitManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

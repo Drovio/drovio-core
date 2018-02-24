@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\">
+  <class name="account" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1375263564</datecreated>
+      <daterevised>1420013686</daterevised>
+      <extends>
+        <object>\API\Profile\account</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Manages the active account.</description>
+      <deprecated>Use \API\Profile\account instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

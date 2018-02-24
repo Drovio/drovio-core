@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\mail">
+  <class name="mailer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366713900</datecreated>
+      <daterevised>1407501051</daterevised>
+      <extends>
+        <object/>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Php mailer</title>
+      <description>This is a more simple class for mailing functions.
+It supports sending mail from any pop3 and smtp mail server.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CLASS_NAME">
+        <description>The mail's signature.</description>
+      </const>
+      <const type="string" name="CLASS_VERSION">
+        <description>The mail's version.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="boolean" name="optionSetDefined">
+          <description>Flag variable, declares if an optionset is defined</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="options" returntype="void">
+          <description>Sets all mail options as defined in the phpmailer.
+Must be set before sending the mail (obviously).</description>
+          <parameters>
+            <parameter name="$optionSetArray" type="array" defaultvalue="">
+              <description>Array of mail options.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="send" returntype="boolean">
+          <description>Send the mail.</description>
+          <parameters>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail's subject.</description>
+            </parameter>
+            <parameter name="$from" type="array" defaultvalue="">
+              <description>An array to set the from argument. Format:
+$from['mail@example.com'] = 'Example Author'</description>
+            </parameter>
+            <parameter name="$to" type="string" defaultvalue="">
+              <description>The receivers mail address.</description>
+            </parameter>
+            <parameter name="$auto" type="boolean" defaultvalue="">
+              <description>If TRUE, also set Reply-To and Sender.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="subject" returntype="string">
+          <description>Sets mail subject.</description>
+          <parameters>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail's subject.
+It must not be empty.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The mail's subject.</returndescription>
+          <throws/>
+        </method>
+        <method name="setPriority" returntype="void">
+          <description>Set message priority</description>
+          <parameters>
+            <parameter name="$priority" type="integer" defaultvalue="">
+              <description>Message priority from 1 to 5.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addMultipleRecipients" returntype="void">
+          <description>Add multiple recipients.</description>
+          <parameters>
+            <parameter name="$kind" type="string" defaultvalue="">
+              <description>The type of recipients to add.
+Accepted values to | rto | cc | bcc.</description>
+            </parameter>
+            <parameter name="$addressesArray" type="array" defaultvalue="">
+              <description>Array of arrays (address, name) or array of strings (address).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setAltBody" returntype="void">
+          <description>Alternative Message for non-html mail clients</description>
+          <parameters>
+            <parameter name="$altBody" type="string" defaultvalue="">
+              <description>Non html, plain text body</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="initialize" returntype="void">
+          <description>Initalizes mail options for mailer class</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getValue" returntype="mixed">
+          <description>Return the new value, if set.</description>
+          <parameters>
+            <parameter name="$currValue" type="mixed" defaultvalue="">
+              <description>The current or the value without error.</description>
+            </parameter>
+            <parameter name="$newValue" type="mixed" defaultvalue="">
+              <description>The new or the value that must be checked.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>If the new value is set, return the new value, otherwise return the current value.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

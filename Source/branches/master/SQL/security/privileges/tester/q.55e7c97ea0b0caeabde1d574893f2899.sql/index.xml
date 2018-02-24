@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1289382855"><title>Revoke Tester Access</title><description>Restricts testing access for a module group from a user</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

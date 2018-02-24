@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTML" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387462494</datecreated>
+      <daterevised>1392470432</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>HTML Handler</title>
+      <description>HTML extends DOM handler for html specific functions.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="addClass" returntype="boolean" static="true">
+          <description>Adds a class to the given DOMElement.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to add the class.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the class already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeClass" returntype="boolean" static="true">
+          <description>Removes a class from a given DOMElement.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to add the class.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the class already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="select" returntype="mixed" static="true">
+          <description>Selects nodes in the html document that match a given css selector.</description>
+          <parameters>
+            <parameter name="$css" type="string" defaultvalue="">
+              <description>The css selector to search for in the html document.
+It does not support pseudo-* for the moment and only supports simple equality attribute-wise.
+Can hold multiple selectors separated with comma.</description>
+            </parameter>
+            <parameter name="$context" type="mixed" defaultvalue="">
+              <description>Can either be a DOMElement as the context of the search, or a css selector. If the selector results in multiple DOMNodes, then the first is selected as the context.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the node list that matches the given css selector, or FALSE on malformed input.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

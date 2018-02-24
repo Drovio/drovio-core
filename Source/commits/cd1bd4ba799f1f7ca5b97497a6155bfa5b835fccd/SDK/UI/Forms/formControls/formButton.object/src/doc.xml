@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\formControls">
+  <class name="formButton" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1363008000</datecreated>
+      <daterevised>1410253575</daterevised>
+      <extends>
+        <object>\UI\Forms\formControls\formItem</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Universal Form Button</title>
+      <description>Builds a universal form button for all forms.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="buttonTypes">
+          <description>All the accepted button types.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="formButton">
+          <description>Builds the form button</description>
+          <parameters>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The button title.
+It can be either a string or a span DOMElement.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The button's type.
+Accepted values:
+- "button"
+- "reset"
+- "submit"</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The button's id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The button's name (it is used only when forms post normal).</description>
+            </parameter>
+            <parameter name="$positive" type="boolean" defaultvalue="">
+              <description>Indicates a positive submit button.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The formButton object.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="checkType" returntype="boolean">
+          <description>Checks the buttons type</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The button's type.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True if the given type is an accepted button type.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

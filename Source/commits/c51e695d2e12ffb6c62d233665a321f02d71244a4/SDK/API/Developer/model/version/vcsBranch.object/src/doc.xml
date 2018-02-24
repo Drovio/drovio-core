@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="vcsBranch" abstract="" namespace="\model\version">
+    <info>
+      <version/>
+      <datecreated>1372845598</datecreated>
+      <daterevised>1372845598</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Version Control Branch Manager</title>
+      <description>Manages all functions that involve branches</description>
+      <deprecated>Use \API\Developer\versionControl\ instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="DIR">
+        <description>The inner folder for branches</description>
+      </const>
+      <const type="string" name="INDEX">
+        <description>The branch indexing file</description>
+      </const>
+      <const type="string" name="masterBranch">
+        <description>The master branch name</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="reserved">
+          <description>The reserved branch names</description>
+        </prop>
+        <prop type="string" name="directory">
+          <description>The repository directory</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The name of the branch</description>
+        </prop>
+        <prop type="string" name="type">
+          <description>The type of the file</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes branch's properties</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The repository directory</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object's filetype</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="initialize" returntype="void">
+          <description>Initialize branch folder and branch information</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_indexBase" returntype="DOMElement">
+          <description>Gets the branch base from the index</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_base" returntype="DOMElement">
+          <description>Get the branch item base</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch to get the base</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_head" returntype="string">
+          <description>Returns the HEAD branch</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_branches" returntype="array">
+          <description>Get all repository branches</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Create a new branch</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The name of the branch</description>
+            </parameter>
+            <parameter name="$head" type="boolean" defaultvalue="">
+              <description>Indicator whether to set this branch as head</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="void">
+          <description>Deletes a branch</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete_item" returntype="void">
+          <description>Delete the entire item</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="commit" returntype="void">
+          <description>Commits the HEAD file from trunk to branch</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The commit description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="checkout" returntype="void">
+          <description>Checkout a branch (sets the HEAD)</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch name to checkout</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

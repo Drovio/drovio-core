@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="pageFolder" abstract="">
+    <info>
+      <version/>
+      <datecreated>1395651523</datecreated>
+      <daterevised>1404892304</daterevised>
+      <extends>
+        <object>\SYS\Resources\pages\pageFolder</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Folder Manager</title>
+      <description>The system's folder manager.</description>
+      <deprecated>Use \SYS\Resources\pages\pageFolder instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

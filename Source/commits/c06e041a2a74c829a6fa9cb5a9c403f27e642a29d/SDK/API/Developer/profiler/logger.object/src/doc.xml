@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="logger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366714140</datecreated>
+      <daterevised>1392022416</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Logger</title>
+      <description>Logs all messages for any priority and category.</description>
+      <deprecated>Use \DEV\Profiler\logger instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

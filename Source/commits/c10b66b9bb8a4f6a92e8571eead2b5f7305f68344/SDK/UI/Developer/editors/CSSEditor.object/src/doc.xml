@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="CSSEditor" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1410181191</datecreated>
+      <daterevised>1430553781</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>CSS Editor control</title>
+      <description>This is a simple html editor with a preview and a css code part.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="cssName">
+          <description>Name of the css editing area</description>
+        </prop>
+        <prop type="string" name="htmlName">
+          <description>Name of the html editing area</description>
+        </prop>
+        <prop type="string" name="html">
+          <description>The html content.</description>
+        </prop>
+        <prop type="string" name="css">
+          <description>The css content.</description>
+        </prop>
+        <prop type="formFactory" name="formFactory">
+          <description>The formFactory object for building all the form items.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.
+Constructs and initializes a cssEditor.</description>
+          <parameters>
+            <parameter name="$cssName" type="string" defaultvalue="">
+              <description>Name of the css editing area.</description>
+            </parameter>
+            <parameter name="$htmlName" type="string" defaultvalue="">
+              <description>Name of the html editing area.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssProperties" returntype="string" static="true">
+          <description>Acquire CSS properties info as an XML document string.</description>
+          <parameters/>
+          <returndescription>The xml document string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUserAgentCss" returntype="string" static="true">
+          <description>Get the given's user agent default css.</description>
+          <parameters>
+            <parameter name="$browser" type="string" defaultvalue="">
+              <description>Name of the browser. Can be "w3c", "webkit", "firefox", "iexplorer", "opera".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The entire css collection of the default css rules.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="CSSEditor">
+          <description>Builds the CSSEditor object.</description>
+          <parameters>
+            <parameter name="$structure" type="string" defaultvalue="">
+              <description>Structure of the html model on which the css will be projected.</description>
+            </parameter>
+            <parameter name="$css" type="string" defaultvalue="">
+              <description>CSS code to load on initialize.</description>
+            </parameter>
+            <parameter name="$sideClosed" type="boolean" defaultvalue="">
+              <description>Set the css code side as closed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The CSSEditor object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPreviewContainer" returntype="DOMElement">
+          <description>Create the preview container.</description>
+          <parameters/>
+          <returndescription>The preview container element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStructureContainer" returntype="DOMElement">
+          <description>Get the structure viewer container.</description>
+          <parameters/>
+          <returndescription>The structure viewer element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssContainer" returntype="DOMElement">
+          <description>Get the css viewer/editor container.</description>
+          <parameters>
+            <parameter name="$measurement" type="string" defaultvalue="">
+              <description>Info relative to css measurement units.</description>
+            </parameter>
+            <parameter name="$tabs" type="array" defaultvalue="">
+              <description>The editor's tabs.</description>
+            </parameter>
+            <parameter name="$tiles" type="array" defaultvalue="">
+              <description>All the editor's tiles.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The css viewer/editor element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssCoder" returntype="DOMElement">
+          <description>Get the css coder editor.</description>
+          <parameters>
+            <parameter name="$measurement" type="string" defaultvalue="">
+              <description>Info relative to css measurement units.</description>
+            </parameter>
+            <parameter name="$tabs" type="array" defaultvalue="">
+              <description>The editor's tabs.</description>
+            </parameter>
+            <parameter name="$tiles" type="array" defaultvalue="">
+              <description>All the editor's tiles.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The css editor element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTilePage" returntype="DOMelement">
+          <description>Creates and returns a page tile for the cssEditor.
+It represents a grouping of css properties.</description>
+          <parameters>
+            <parameter name="$tile" type="array" defaultvalue="">
+              <description>Info for a specific grouping.</description>
+            </parameter>
+            <parameter name="$measurement" type="array" defaultvalue="">
+              <description>Info relative to css measurement units.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A tile page element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSelectProperty" returntype="DOMElement">
+          <description>Creates, initializes, and returns a select DOM element.</description>
+          <parameters>
+            <parameter name="$values" type="array" defaultvalue="">
+              <description>CSS property's available values</description>
+            </parameter>
+            <parameter name="$firstEmpty" type="boolean" defaultvalue="">
+              <description>If set to TRUE first value should be empty</description>
+            </parameter>
+            <parameter name="$cssName" type="string" defaultvalue="">
+              <description>Name of the css property</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>Type of the property. This can be "input", "select", "length", "time", "angle", "mixed".</description>
+            </parameter>
+            <parameter name="$browserSupport" type="string" defaultvalue="">
+              <description>A JSON string that holds a css property's browser support.</description>
+            </parameter>
+            <parameter name="$placeholder" type="string" defaultvalue="">
+              <description>Placeholder of the css property value</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>Title of the css property value</description>
+            </parameter>
+          </parameters>
+          <returndescription>The select DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInputProperty" returntype="DOMelement">
+          <description>Creates, initializes, and returns an input DOM element.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>CSS property's value</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>Type of the property. This can be "input", "select", "length", "time", "angle", "mixed".</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Name of the CSS property.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>Title of the CSS property</description>
+            </parameter>
+            <parameter name="$browserSupport" type="string" defaultvalue="">
+              <description>A JSON string that holds a css property's browser support.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The input DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCssInfo" returntype="array">
+          <description>Get css info for every property known.</description>
+          <parameters/>
+          <returndescription>An array of all css information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Comm" namespace="\">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1418202337</datecreated>
+      <daterevised>1437726088</daterevised>
+      <extends>
+        <object>\ENP\Comm\dbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Retail Database Connection handler</title>
+      <description>Connects to Redback's retail database and executes all the red sql queries.</description>
+      <deprecated>Use \ENP\Comm\dbConnection instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

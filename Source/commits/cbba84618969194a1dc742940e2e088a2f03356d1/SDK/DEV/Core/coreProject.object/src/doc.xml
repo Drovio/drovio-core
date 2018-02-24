@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\">
+  <class name="coreProject" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>2</build>
+      <datecreated>1418894428</datecreated>
+      <daterevised>1420628076</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Core Project</title>
+      <description>It is the core project class.
+Manages core publishing.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="PROJECT_ID">
+        <description>The core project id.</description>
+      </const>
+      <const type="integer" name="PROJECT_TYPE">
+        <description>The core project type id.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize Core Project</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Publish the core project.
+
+Publish the sql library.
+Publish the sdk library.
+Publish all ajax files.
+Export layouts.
+Publish all resources (media and files).</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The core project release version.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source's branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

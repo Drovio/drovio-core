@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime\indexing">
+  <class name="libraryIndex2" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1389604703</datecreated>
+      <daterevised>1389606966</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Library map index manager.</title>
+      <description>Creates and gets map index information for object libraries.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MAP_FILE">
+        <description>The default map file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="createLibrary" returntype="boolean" static="true">
+          <description>Create a new library in the map.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The vcs object with the repository loaded.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner repository folder path for the map file.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The map filename. The default name is the MAP_FILE constant.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createPackage" returntype="boolean" static="true">
+          <description>Create a new package in the map.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The vcs object with the repository loaded.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner repository folder path for the map file.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The map filename. The default name is the MAP_FILE constant.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createNamespace" returntype="boolean" static="true">
+          <description>Create a new namespace in the map.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The vcs object with the repository loaded.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner repository folder path for the map file.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace name (separated by "::", if any).</description>
+            </parameter>
+            <parameter name="$fileName" type="" defaultvalue="">
+              <description>The map filename. The default name is the MAP_FILE constant.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createObject" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$vcs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$innerPath" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$fileName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMapFilePath" returntype="string" static="true">
+          <description>Gets the map index file path from the repository.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The vcs object with the repository loaded.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner repository folder path for the map file.</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The map filename. The default name is the MAP_FILE constant.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The map index file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibraryList" returntype="array" static="true">
+          <description>Gets all libraries in the map.</description>
+          <parameters>
+            <parameter name="$mapFilePath" type="string" defaultvalue="">
+              <description>The map file path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of library names by key and value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="array" static="true">
+          <description>Get all packages from the map file.</description>
+          <parameters>
+            <parameter name="$mapFilePath" type="string" defaultvalue="">
+              <description>The map index file path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of package names by key and value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$mapFilePath" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjectList" returntype="array" static="true">
+          <description>Get all objects in a library.</description>
+          <parameters>
+            <parameter name="$mapFilePath" type="string" defaultvalue="">
+              <description>The map index file path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription>An array of objects.
+It contains an array for each object with the values: title, name, package, namespace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createMapFile" returntype="boolean" static="true">
+          <description>Creates the map index file.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The vcs object with the repository loaded.</description>
+            </parameter>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner repository folder path for the map file.</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The map filename. The default name is the MAP_FILE constant.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string" static="true">
+          <description>Gets the vcs repository item id.</description>
+          <parameters>
+            <parameter name="$seed" type="string" defaultvalue="">
+              <description>The seed for the hash value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

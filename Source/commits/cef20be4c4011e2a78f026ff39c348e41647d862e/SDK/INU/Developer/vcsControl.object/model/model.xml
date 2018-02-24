@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="uiVCSControl">&#13;
+	<div class="body">&#13;
+		<div class="formBody">&#13;
+			<input id="i_commitForm_summary" class="uiFormInput uiCommitSummText" name="summary" type="text" autofocus="autofocus" placeholder="Type here your commit summary..."/><textarea name="description" class="uiCommitDescText" placeholder="Type here your commit description..."/><button id="commitBtn" class="uiFormButton positive" type="submit">&#13;
+				<span>commit</span>&#13;
+			</button>&#13;
+		</div>&#13;
+	</div>&#13;
+	<div class="footer">&#13;
+		<span class="sign">Version Control v2.1 | Ioannis Papikas</span>&#13;
+		<span class="closeBtn">Close</span>&#13;
+	</div>&#13;
+</div>
+</model>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\prime\indexing">
+  <class name="classIndex" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1374575889</datecreated>
+      <daterevised>1396352666</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>PHP Object Class Index</title>
+      <description>Manages object indexing.</description>
+      <deprecated>Use \DEV\Prototype\sourceMap instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="createIndex" returntype="boolean" static="true">
+          <description>Creates object index entry to given map file.</description>
+          <parameters>
+            <parameter name="$mapFilepath" type="string" defaultvalue="">
+              <description>The map file path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\">
+  <class name="formFactory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1366272360</datecreated>
+      <daterevised>1409832202</daterevised>
+      <extends>
+        <object>\ESS\Prototype\html\FormPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Form Item Factory</title>
+      <description>Builds a form and provides a "factory" for building all the necessary form items.
+It implements the FormProtocol.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="DOMElement">
+          <description>Creates a form and returns the element.
+If the moduleID is not given, it creates a simple form with action attribute.
+Otherwise it creates a module async form.</description>
+          <parameters>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The form action url string.</description>
+            </parameter>
+            <parameter name="$async" type="boolean" defaultvalue="">
+              <description>Sets the async attribute for simple forms.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The form element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getPostedFormID" returntype="string" static="true">
+          <description>Gets the form ID from the form that performed the post action.</description>
+          <parameters/>
+          <returndescription>The form id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validate a form with the FormProtocol to see if no hidden value is modified.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubmitContent" returntype="string" static="true">
+          <description>Get HTML Server Report content by the form protocol.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The report content.</description>
+            </parameter>
+            <parameter name="$reset" type="boolean" defaultvalue="">
+              <description>Indicator whether to reset the submitted form.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The server report output.</returndescription>
+          <throws/>
+        </method>
+        <method name="getInput" returntype="DOMElement">
+          <description>Builds and returns an input item.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The input's type. This must abide by the rules of the possible input types.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The input's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The input's default value.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the input.</description>
+            </parameter>
+            <parameter name="$autofocus" type="boolean" defaultvalue="">
+              <description>Inserts the autofocus attribute to the input.</description>
+            </parameter>
+            <parameter name="$required" type="boolean" defaultvalue="">
+              <description>Indicates this input as required.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The input element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getLabel" returntype="DOMElement">
+          <description>Builds and returns a form label.</description>
+          <parameters>
+            <parameter name="$text" type="string" defaultvalue="">
+              <description>The label's text.</description>
+            </parameter>
+            <parameter name="$for" type="string" defaultvalue="">
+              <description>The input's id where this label is pointing to.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the label.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The label element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getButton" returntype="DOMElement">
+          <description>Builds and returns a button (as an input).</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The button's title.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The button's name.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class of the button.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The button element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSubmitButton" returntype="DOMElement">
+          <description>Builds and returns a specific submit button.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The button's title.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The button's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The button element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getResetButton" returntype="DOMElement">
+          <description>Builds and returns a specific reset button.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The button's title.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The button's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The button element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getTextarea" returntype="DOMElement">
+          <description>Builds and returns a form textarea.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The textarea's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The textarea's default value.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the textarea.</description>
+            </parameter>
+            <parameter name="$autofocus" type="boolean" defaultvalue="">
+              <description>Inserts the autofocus attribute to the input.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The textarea element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getFieldset" returntype="DOMElement">
+          <description>Builds and returns an HTML5 fieldset.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The fieldset's legend title.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The fieldset's name.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the fieldset.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The fieldset element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSelect" returntype="DOMElement">
+          <description>Builds and returns an option select input.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The select's name.</description>
+            </parameter>
+            <parameter name="$multiple" type="boolean" defaultvalue="">
+              <description>Option for multiple selection.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the select item.</description>
+            </parameter>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>An array of option elements as select contents.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The select element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getResourceSelect" returntype="DOMElement">
+          <description>Builds and returns a select input with a given resource.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The select's name.</description>
+            </parameter>
+            <parameter name="$multiple" type="boolean" defaultvalue="">
+              <description>Option for multiple selection.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The extra class for the select item.</description>
+            </parameter>
+            <parameter name="$resource" type="array" defaultvalue="">
+              <description>The select's resource as an associative array with key the value of the option and value the title.</description>
+            </parameter>
+            <parameter name="$selectedValue" type="string" defaultvalue="">
+              <description>The selected value of the given resource.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The select element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getOption" returntype="DOMElement">
+          <description>Builds and returns a select option item.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The option's title.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The option's value.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Specifies a selected option in the select item.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The option element id.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The option element class.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The option element.</returndescription>
+          <throws/>
+        </method>
+        <method name="getOptionGroup" returntype="DOMElement">
+          <description>Builds and returns a select option group.</description>
+          <parameters>
+            <parameter name="$label" type="string" defaultvalue="">
+              <description>The group's lavel.</description>
+            </parameter>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>An array of option elements for the group.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The option group element.</returndescription>
+          <throws/>
+        </method>
+        <method name="engageModule" returntype="formFactory">
+          <description>Engage this form to post to a given module view.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to post to.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name to post to.
+If empty, gets the default module view.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The formFactory object.</returndescription>
+          <throws/>
+        </method>
+        <method name="engageApp" returntype="formFactory">
+          <description>Engage this form to post to a given application view.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id to post to.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The app's view name to post to.
+If empty, gets the default app view.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The formFactory object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getInputID" returntype="string">
+          <description>Create a system specific form input id.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The input's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Profile" namespace="\">
+  <class name="managedAccount" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1444303316</datecreated>
+      <daterevised>1447167024</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Managed Account Handler</title>
+      <description>This class is responsible for managed accounts (not admin).</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="teamName" static="true">
+          <description>The team name for the identity database.</description>
+        </prop>
+        <prop type="account" name="account">
+          <description>The account instance.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The identity database connection.</description>
+        </prop>
+        <prop type="array" name="instances" static="true">
+          <description>An array of instances for each team identity (in case of multiple instances).</description>
+        </prop>
+        <prop type="string" name="staticTeamName" static="true">
+          <description>Static team name for compatibility.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="managedAccount" static="true">
+          <description>Get an identity managed account instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The managed account instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="void" static="true">
+          <description>Initialze the environment for the identity database.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getManagedAccounts" returntype="array" static="true">
+          <description>Get all managed accounts.</description>
+          <parameters/>
+          <returndescription>An array of all managed account information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new managed account for the current logged in account.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The account title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The account description.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account password.</description>
+            </parameter>
+            <parameter name="$locked" type="boolean" defaultvalue="">
+              <description>Whether the account is locked or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account id on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get all managed account information.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get information for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all account information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove the given account from the identity database.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean" static="true">
+          <description>Update account info.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to update.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The account title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The account description.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account username.</description>
+            </parameter>
+            <parameter name="$locked" type="boolean" defaultvalue="">
+              <description>Whether the account is locked or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure (usually conflict in username).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updatePassword" returntype="boolean" static="true">
+          <description>Update account password.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The new account password.</description>
+            </parameter>
+            <parameter name="$currentPassword" type="string" defaultvalue="">
+              <description>The admin (current) account password to authenticate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new managed account instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

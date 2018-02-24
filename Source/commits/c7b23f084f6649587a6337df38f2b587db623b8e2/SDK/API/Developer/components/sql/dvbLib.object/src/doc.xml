@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\sql">
+  <class name="dvbLib" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1372847258</datecreated>
+      <daterevised>1396339169</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer's Database Library Manager</title>
+      <description>Manages global functions for database domains.</description>
+      <deprecated>Use \DEV\Core\sql\sqlDomain instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="MAP_PATH">
+        <description>The path for the sql map file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getDomainList" returntype="array" static="true">
+          <description>Gets the list of all domains</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Defines whether the returned array will be an array of full names or a nested array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns a list of domains. If full, the array is a list of fullnames. Otherwise, it is a nested array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMapFilepath" returntype="string" static="true">
+          <description>Get the sql map file path.</description>
+          <parameters/>
+          <returndescription>The map index file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMapFilepath" returntype="string" static="true">
+          <description>Updates the vcs item of the map file.</description>
+          <parameters/>
+          <returndescription>The trunk path to the</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deploy" returntype="void" static="true">
+          <description>Deploy all sql library packages.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch to deploy.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="void" static="true">
+          <description>Export entire query library.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use deploy() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getMapfileItemID" returntype="string" static="true">
+          <description>Get the map index file id.</description>
+          <parameters/>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDomains" returntype="array">
+          <description>Get the subdomains of a domain as a nested array. It is a recursive function.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the map file.</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The base domain element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Nested array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDomainsString" returntype="array">
+          <description>Get the subdomains of a domain as a fullname array.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the map file.</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The base domain element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

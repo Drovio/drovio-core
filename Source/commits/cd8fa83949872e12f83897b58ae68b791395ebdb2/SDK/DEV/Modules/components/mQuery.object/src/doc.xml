@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\components">
+  <class name="mQuery" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396428476</datecreated>
+      <daterevised>1396428476</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Query Manager</title>
+      <description>Manages the module's sql queries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

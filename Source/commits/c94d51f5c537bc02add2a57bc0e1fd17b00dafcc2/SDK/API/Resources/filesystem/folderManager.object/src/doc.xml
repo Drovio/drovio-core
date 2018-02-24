@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\filesystem">
+  <class name="folderManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1365062640</datecreated>
+      <daterevised>1415348810</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Folder Manager</title>
+      <description>System's folder manager</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RM_PERMS" class="undefined">
+        <description>Mass Removal Permissions Index.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new folder</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The folder parent path</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder's name</description>
+            </parameter>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The linux file mode</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>Allows the creation of nested directories specified in the pathname.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Removes a directory</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The folder's parent path</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder's name</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>Remove all inner contents of the folder recursively.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="clean" returntype="boolean" static="true">
+          <description>Empties a directory</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The folder's parent path, or the folder's path, if the name is omitted.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder's name</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Whether to include hidden files and folders.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="copy" returntype="boolean" static="true">
+          <description>Copy a folder (recursively)</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source folder path.</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The destination folder path.</description>
+            </parameter>
+            <parameter name="$contents_only" type="boolean" defaultvalue="">
+              <description>Defines whether only the contents of the folder will be copied or the folder selected also.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="move" returntype="boolean" static="true">
+          <description>Move a folder (recursively).</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source folder path.</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The destination folder path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="copy_folder" returntype="boolean" static="true">
+          <description>Copy folder (recursively)</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source folder path</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The destination folder path</description>
+            </parameter>
+            <parameter name="$contents_only" type="boolean" defaultvalue="">
+              <description>Defines whether only the contents of the folder will be copied or the folder selected also.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use copy() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="move_folder" returntype="boolean" static="true" class="undefined">
+          <description>Move folder (recursively)</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source folder path</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The destination folder path</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use move() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="remove_full" returntype="boolean" static="true">
+          <description>Remove a directory with its contents</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory path</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use folderManager::remove() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_contentList" returntype="array" static="true">
+          <description>Returns all the contents of a folder in an array.
+['dirs'] for directories
+['files'] for files</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use \API\Resources\filesystem\directory::getContentList() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="checkPermissions" returntype="boolean" static="true">
+          <description>Checks for write permissions in the given directory.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The folder path to check for permissions.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if permissions exist, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

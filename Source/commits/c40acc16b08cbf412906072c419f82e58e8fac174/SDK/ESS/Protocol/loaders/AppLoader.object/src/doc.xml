@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\loaders">
+  <class name="AppLoader" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1409838286</datecreated>
+      <daterevised>1442091391</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Loader</title>
+      <description>Responsible for loading safely application views.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="string" static="true">
+          <description>Loads and executes a given application view.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application view name.
+If empty, get the default/startup application view name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application view execution output.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

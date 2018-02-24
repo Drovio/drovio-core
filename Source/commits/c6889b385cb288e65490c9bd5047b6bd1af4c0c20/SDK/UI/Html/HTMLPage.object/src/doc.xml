@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTMLPage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363511880</datecreated>
+      <daterevised>1387785672</daterevised>
+      <extends>\ESS\Templates\HTMLPageTemplate</extends>
+      <implements/>
+      <throws/>
+      <title>System HTML Page</title>
+      <description>Builds the spine of an HTML page and sets the events to fill the blanks (modules).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="HOLDER">
+        <description>The page holder.</description>
+      </const>
+      <const type="string" name="REPORT">
+        <description>The page report holder.</description>
+      </const>
+      <const type="string" name="HELPER">
+        <description>The page helper holder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="int" name="moduleID">
+          <description>The module that the page will load.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters>
+            <parameter name="$moduleID" type="int" defaultvalue="">
+              <description>The module that the page will load</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="HTMLPage" static="true">
+          <description>Builds the spine of the page</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The domain where the page will be built</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be loaded asynchronously or statically</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="populateBody" returntype="void" static="true">
+          <description>Builds the body container</description>
+          <parameters>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The domain where the page will be built</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be loaded asynchronously or statically</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPageTitle" returntype="string">
+          <description>Gets the page title according to access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageNotification" returntype="DOMElement">
+          <description>Creates a page notification for each access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The notification element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStaticResources" returntype="void">
+          <description>Sets the page's resources when the page is static.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id from which the resources will be loaded.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\globl">
+  <class name="globalProductInfo" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1418988686</datecreated>
+      <daterevised>1418988686</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Global product info manager</title>
+      <description>Manages global product info values.
+
+NOTE: You must be retail product manager to manage data through this class.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="productID">
+          <description>The global product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+        <prop type="array" name="productInfo" static="true">
+          <description>Array of all product info at a given time.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the info manager.</description>
+          <parameters>
+            <parameter name="$productID" type="integer" defaultvalue="">
+              <description>The global product id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean">
+          <description>Add a new product info.
+This functions creates a new product info, with no value.
+
+NOTE: To add a new info you must be retail product manager.</description>
+          <parameters>
+            <parameter name="$categoryID" type="integer" defaultvalue="">
+              <description>The info category id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The info title.</description>
+            </parameter>
+            <parameter name="$is_bool" type="boolean" defaultvalue="">
+              <description>This defines whether the info should be handled as boolean or not.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Set product info value for the current product.
+
+NOTE: To set a global info value you must be retail product manager.</description>
+          <parameters>
+            <parameter name="$infoID" type="integer" defaultvalue="">
+              <description>The product info id.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The product info value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed">
+          <description>Get product info value.</description>
+          <parameters>
+            <parameter name="$infoID" type="integer" defaultvalue="">
+              <description>The info id to get the value for.
+You can leave empty to get all information about the current product.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all information or the requested info value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array">
+          <description>Get all global product info by category.</description>
+          <parameters>
+            <parameter name="$categoryID" type="integer" defaultvalue="">
+              <description>The category to get info for.
+Leave empty to get all information.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

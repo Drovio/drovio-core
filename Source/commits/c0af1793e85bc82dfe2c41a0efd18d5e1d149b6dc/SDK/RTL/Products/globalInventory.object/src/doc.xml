@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="globalInventory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1415005941</datecreated>
+      <daterevised>1415005941</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Global Product inventory manager</title>
+      <description>Manages global product hierarchy.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getHierarchy" returntype="array" static="true">
+          <description>Get the global product hierarchy in an array.</description>
+          <parameters/>
+          <returndescription>An array of all product hierarchies</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addHierarchy" returntype="boolean" static="true">
+          <description>Add a new global product hierarchy.
+
+NOTE: You must be member of the Retail Product Manager user group in order to add a global hierarchy.</description>
+          <parameters>
+            <parameter name="$parentHierarchy_id" type="integer" defaultvalue="">
+              <description>The parent hierarchy id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The hierarchy title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The hierarchy description.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

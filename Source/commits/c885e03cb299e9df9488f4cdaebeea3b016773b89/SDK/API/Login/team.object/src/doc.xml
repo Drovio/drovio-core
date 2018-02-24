@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Login" namespace="\">
+  <class name="team" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1450033106</datecreated>
+      <daterevised>1450079126</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Drovio Login Team Interface</title>
+      <description>Manages the team login for the drovio platform using the drovio identity.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="ID_TEAM_NAME">
+        <description>The system team name for the identity database.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="boolean" name="loggedIn" static="true">
+          <description>Indicates whether the team is logged in for this run.</description>
+        </prop>
+        <prop type="integer" name="teamID" static="true">
+          <description>The current team id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Get team information.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.
+Leave empty for current team id.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of the team information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean" static="true">
+          <description>Update team information.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The team name.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The team description.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.
+If empty or in secure mode this will be the current team.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validates if the current account is member of the current team.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to validate the account.
+If empty, get the current team id.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="logout" returntype="void" static="true">
+          <description>Logout the account from the team.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="switchTeam" returntype="boolean" static="true">
+          <description>Switch from one team to another.
+The account must be valid and member of the given team id.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to switch to.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's current password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultTeam" returntype="array" static="true">
+          <description>Get the default team for the given account.</description>
+          <parameters/>
+          <returndescription>The default team information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDefaultTeam" returntype="boolean" static="true">
+          <description>Set the default team for the given account.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to set as default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountTeams" returntype="array" static="true">
+          <description>Get all teams of the current account.</description>
+          <parameters>
+            <parameter name="$detailed" type="boolean" defaultvalue="">
+              <description>Get full team details.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all teams.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamMembers" returntype="array" static="true">
+          <description>Get all team member accounts.</description>
+          <parameters/>
+          <returndescription>An array of all public account information for each member.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamID" returntype="integer" static="true">
+          <description>Get the current team id.</description>
+          <parameters/>
+          <returndescription>The current team id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getIdentityTeamName" returntype="string" static="true">
+          <description>Get the current identity team name.
+It will check based on the request url.
+The format is [identity_team_name].id.[domain_team_name].drov.io</description>
+          <parameters/>
+          <returndescription>The active identity team name.
+NULL if there is no active team.
+If NULL, drovio should be the active team name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDomainTeamName" returntype="string" static="true">
+          <description>Get the team name from the request url.
+The format is [identity_team_name].id.[domain_team_name].drov.io</description>
+          <parameters/>
+          <returndescription>The current active team name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamInstance" returntype="team" static="true">
+          <description>Get the identity team instance for the drovio identity.</description>
+          <parameters/>
+          <returndescription>The identity team instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getEngineTeamID" returntype="mixed" static="true">
+          <description>Get the team id from engine variables.
+Check first if there is an api key and then the current cookie ('tm', for dev).</description>
+          <parameters/>
+          <returndescription>The team id or NULL if no active team.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

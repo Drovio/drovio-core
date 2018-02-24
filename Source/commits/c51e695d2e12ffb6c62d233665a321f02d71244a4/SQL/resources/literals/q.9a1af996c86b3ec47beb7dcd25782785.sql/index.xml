@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1684473069"><title>Delete Literal</title><description>Delete a literal from the database (it also deletes values and possible translations).</description><access>1</access><attributes><attr id="scope"></attr><attr id="name"></attr></attributes></query>

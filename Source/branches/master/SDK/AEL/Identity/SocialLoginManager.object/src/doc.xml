@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Identity" namespace="\">
+  <class abstract="" name="SocialLoginManager">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1447418978</datecreated>
+      <daterevised>1448122002</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Social Login Manager</title>
+      <description>Handles all social login for an application using the identity API.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" returntype="boolean" name="facebookLogin">
+          <description>Login via facebook login.
+It creates an account session.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$code">
+              <description>The facebook authorization code to get the access token.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$clientID">
+              <description>The facebook client id.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$clientSecret">
+              <description>The facebook client secret.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$redirectURI">
+              <description>The facebook redirect_uri parameter.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method static="true" returntype="boolean" name="googleLogin">
+          <description>Login via google login.
+It creates an account session.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$code">
+              <description>The google authorisation code to get the access token.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$clientID">
+              <description>The google client id.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$clientSecret">
+              <description>The google client secret.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$redirectURI">
+              <description>The google redirect_uri parameter.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,28 @@
+<h1>Platform Generic Form Input</h1>
+<p>Form builder/factory allows the creation of inputs with all the appropriate attributes in single-line calls. formInput is an internal object that is being used by the form builder in order to have less, more flexible and smarter code.</p>
+<p>The formInput extends the formItem which minimizes the code even more, allowing the platform to be faster and more efficient. Example:</p>
+<div class="code">
+	<pre>// Single-line creator of a form input
+	
+// Create a form input
+$fi = new formInput();
+
+// This is a UIObject (extends formItem), so we build
+// We use the chain pattern to get the DOMElement immediately
+// The type must be a valid input type, otherwise it will return NULL object
+$input = $fi->build($type = "text", $name = "name", $id = "", $value = "", $required = FALSE)->get();
+
+// Append input to form inner container
+DOM::append($formContainer, $input);</pre>
+</div>
+<p>As seen above, we can create input items given the type and the name. Of course, in a form we can use more than inputs (select, textarea etc.) and this is why there is the formItem object.</p>
+<h3>Javascript interface + examples</h3>
+<p>formInput also provides a javascript interface where a developer can create form inputs on the client side dynamically. We do not recommend altering hidden values because the platform has a validation engine which validates the inputs created in the server side.</p>
+<div class="code">
+	<pre>// Create a form input in a single line
+// formInput.create(type, name, id, value, required);
+var fi = formInput.create("text", "username", "input_id", "john", "input_class");
+
+// Append to form
+jq("form.userform").append(fi);</pre>
+</div>

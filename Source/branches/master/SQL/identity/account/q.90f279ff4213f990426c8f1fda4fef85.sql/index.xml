@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="18841240149912"><title>Update account reset id</title><description>Sets a new value in the reset field of account.</description><access></access><attributes><attr id="new_reset"></attr><attr id="aid"></attr></attributes></query>

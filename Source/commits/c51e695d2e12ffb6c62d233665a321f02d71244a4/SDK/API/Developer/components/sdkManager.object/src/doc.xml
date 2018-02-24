@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="sdkManager" abstract="" namespace="\components">
+    <info>
+      <version/>
+      <datecreated>March 21, 2013, 11:55 (EET)</datecreated>
+      <daterevised>March 28, 2013, 15:27 (EET)</daterevised>
+      <extends/>
+      <implements/>
+      <title>SDK General Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const name="RELEASE_PATH" type="string">
+        <description>The release path</description>
+      </const>
+      <const name="REPOSITORY_PATH" type="string">
+        <description>The repositories path</description>
+      </const>
+      <const name="MAP_PATH" type="string">
+        <description>The developer's mapping path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="exportLibrary" static="true" returntype="void" class="undefined">
+          <description>Export an entire library to latest.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

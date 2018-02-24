@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Profile" namespace="\">
+  <class name="team" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>2</build>
+      <datecreated>1450030039</datecreated>
+      <daterevised>1450353109</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Identity Team Manager Class</title>
+      <description>Manages teams for the identity API.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="teamInfo">
+          <description>Cache for getting team info.</description>
+        </prop>
+        <prop type="string" name="teamName">
+          <description>The team to access the identity database.</description>
+        </prop>
+        <prop type="dbConnection" name="dbc">
+          <description>The identity database connection.</description>
+        </prop>
+        <prop type="account" name="account">
+          <description>The current account instance.</description>
+        </prop>
+        <prop type="array" name="instances" static="true">
+          <description>An array of instances for each team identity (in case of multiple instances).</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="team" static="true">
+          <description>Get a team account instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+            <parameter name="$authToken" type="string" defaultvalue="">
+              <description>The current authentication for the account instance.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The team instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAccountAuthToken" returntype="void">
+          <description>Set the authentication token for the account instance.</description>
+          <parameters>
+            <parameter name="$authToken" type="string" defaultvalue="">
+              <description>The current authentication for the account instance.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get information about the given team id.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of the team information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean">
+          <description>Update team information.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to update information for.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The team name.
+It cannot be empty.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>A team description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new team and set the current account as owner.</description>
+          <parameters>
+            <parameter name="$uname" type="string" defaultvalue="">
+              <description>The team unique name.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The team normal name.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The team description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean">
+          <description>Validates if the current account is member of the given team.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to validate the account.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if is member, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultTeam" returntype="array">
+          <description>Get the default team for the current account.</description>
+          <parameters/>
+          <returndescription>The default team information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDefaultTeam" returntype="boolean">
+          <description>Set the default team for the given account.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to set as default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addTeamAccount" returntype="boolean">
+          <description>Add an account to a team.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to accept the account.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to add to the team.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeTeamAccount" returntype="boolean">
+          <description>Remove an account from a team.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to remove the account from.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to remove from the team.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountTeams" returntype="array">
+          <description>Get all teams of the current account.</description>
+          <parameters/>
+          <returndescription>An array of all teams' information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamAccounts" returntype="array">
+          <description>Get all team member accounts.</description>
+          <parameters>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id to get accounts for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all account information for each member.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new team instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+            <parameter name="$authToken" type="string" defaultvalue="">
+              <description>The current authentication for the account instance.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

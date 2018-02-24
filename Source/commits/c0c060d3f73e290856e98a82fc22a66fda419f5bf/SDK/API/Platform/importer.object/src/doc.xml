@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Platform" namespace="\">
+  <class name="importer" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1364379060</datecreated>
+      <daterevised>1408898282</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Importer</title>
+      <description>This class is the main handler for importing all classes from the Red SDK.
+It also provides functionality for the general include and require php functions along with the proper exception handling.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="vcsPath" static="true">
+          <description>The core's repository path.</description>
+        </prop>
+        <prop type="string" name="innerClassPath" static="true">
+          <description>The object's inner class path.</description>
+        </prop>
+        <prop type="array" name="log" static="true">
+          <description>Log messages</description>
+        </prop>
+        <prop type="array" name="loaded" static="true" class="undefined">
+          <description>Loaded classes</description>
+        </prop>
+        <prop type="array" name="openPackages" static="true">
+          <description>The Red SDK open package list.</description>
+        </prop>
+        <prop type="boolean" name="secure" static="true">
+          <description>If TRUE, the importer loads only classes from the open package list.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="secure" returntype="boolean" static="true">
+          <description>Set the security status for the importer.
+Enabling this option, the importer can import everything from the Red SDK.
+Otherwise it can import only objects from the Red SDK open package list for Application Development.</description>
+          <parameters>
+            <parameter name="$status" type="boolean" defaultvalue="">
+              <description>The secure option status. FALSE by default.
+
+NOTE: To Application Developers, if this option is set to TRUE once, it cannot be changed back.
+It set as TRUE for all Applications.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The option status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="import" returntype="void" static="true">
+          <description>Import an SDK Object from the Red SDK library.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package name.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The full name of the class (including namespaces separated by "::")</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getOpenPackageList" returntype="array" static="true">
+          <description>Gets the list of open packages of the Red SDK that are available for Application Development.</description>
+          <parameters/>
+          <returndescription>An array of all packages by library.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="incl" returntype="mixed" static="true">
+          <description>Include a file from a given path.
+It only works in non-secure mode.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The filepath to include.</description>
+            </parameter>
+            <parameter name="$root" type="boolean" defaultvalue="">
+              <description>Indicator that defines whether the path will be normalized to system's root.</description>
+            </parameter>
+            <parameter name="$once" type="boolean" defaultvalue="">
+              <description>Option to use the include_once or include function.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The file's return result data.</returndescription>
+          <throws/>
+        </method>
+        <method name="req" returntype="boolean" static="true">
+          <description>Require a file from a given path.
+It only works in non-secure mode.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The filepath to require.</description>
+            </parameter>
+            <parameter name="$root" type="boolean" defaultvalue="">
+              <description>Indicator that defines whether the path will be normalized to system's root.</description>
+            </parameter>
+            <parameter name="$once" type="boolean" defaultvalue="">
+              <description>Option to use the require_once or require function.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The file's return result data.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="load" returntype="void" static="true">
+          <description>Loads the SDK object.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The full name of the class (including namespaces separated by "::")</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean">
+          <description>Validates if the given package is secure to be loaded when the importer is in secure mode.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True is package is allowed, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="checkLoaded" returntype="boolean" static="true" class="undefined">
+          <description>Checks if a class has already been loaded.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package name.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The object's full name (including namespace).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True if loaded, false otherwise.</returndescription>
+          <throws/>
+        </method>
+        <method name="setLoaded" returntype="void" static="true" class="undefined">
+          <description>Sets a object as loaded.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The object's library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package name.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The object's full name (including namespace).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTesterStatus" returntype="boolean" static="true">
+          <description>Returns whether the user has set the given package for testing.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if package is in tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="packageStatus" returntype="boolean" static="true">
+          <description>Returns whether the user has set the given package for testing.
+The given package is in more compact format.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The compact package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if package is in tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTesterPackages" returntype="array" static="true">
+          <description>Get all tester packages.</description>
+          <parameters/>
+          <returndescription>An array of all packages in tester mode in compact format.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="testerStatus" returntype="boolean" static="true">
+          <description>Returns the global tester's status.</description>
+          <parameters/>
+          <returndescription>True if tester mode is on, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCookie" returntype="mixed" static="true">
+          <description>Get the value of a cookie with the given name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The cookie's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cookie value or NULL if the cookie doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="log" returntype="void" static="true">
+          <description>Logs messages temporarily and then flush to logger</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The message log</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="flushLog" returntype="void" static="true" class="undefined">
+          <description>Flushes the logs to the logger</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

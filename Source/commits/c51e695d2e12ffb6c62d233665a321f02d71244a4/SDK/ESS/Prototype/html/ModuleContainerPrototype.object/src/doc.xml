@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ModuleContainerPrototype" abstract="" namespace="\html">
+    <info>
+      <version/>
+      <datecreated>1362650760</datecreated>
+      <daterevised>1380615863</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Module Container</title>
+      <description>Builds a module container and the server fills it with the content of the module defined.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The module id</description>
+        </prop>
+        <prop type="string" name="action">
+          <description>The name of the auxiliary of the module</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Defines the id (and action) of the module.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The module id</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module (if any)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="ModuleContainerPrototype">
+          <description>Builds the container</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of parameters to be sent to the server by GET method.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Defines whether this container will be filled up at startup (on the next content.modified trigger)</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id of the module container as a DOM Object.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

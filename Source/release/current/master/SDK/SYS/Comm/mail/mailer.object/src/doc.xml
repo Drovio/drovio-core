@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Comm" namespace="\mail">
+  <class name="mailer" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1404727608</datecreated>
+      <daterevised>1443196477</daterevised>
+      <extends>
+        <object>\API\Comm\mail\mailgun</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Drovio system mailer</title>
+      <description>This class is the main handler for sending mail messages from the drov.io mail server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new mailer instance.</description>
+          <parameters>
+            <parameter name="$fromName" type="string" defaultvalue="">
+              <description>The from field name.</description>
+            </parameter>
+            <parameter name="$fromAddress" type="string" defaultvalue="">
+              <description>The from address.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

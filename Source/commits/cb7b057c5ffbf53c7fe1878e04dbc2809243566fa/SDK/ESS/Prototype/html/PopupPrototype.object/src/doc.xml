@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="PopupPrototype" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1362650700</datecreated>
+      <daterevised>1438075783</daterevised>
+      <extends>
+        <object>\UI\Prototype\PopupPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Popup Prototype</title>
+      <description>This is the prototype for building any kind of popup.</description>
+      <deprecated>Use \UI\Prototype\PopupPrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

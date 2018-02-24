@@ -1,0 +1,39 @@
+.panelItem {
+	padding: 5px;
+	border-bottom: 1px solid #CCC;
+	background-color: #FFF;
+	display: block;
+	cursor: pointer;
+	overflow: auto;
+	min-width: 200px;
+	line-height: 16px;
+	color: #545454;
+}
+
+.panelItem:last-child {
+	border-bottom: none;
+}
+
+.panelItem:hover {
+	background-color: #545454;
+	color: #FFF;
+}
+
+.panelItem .itemImg {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+	vertical-align:middle;
+}
+
+.panelItem .itemImg img {
+	height: inherit;
+	width: inherit;
+}
+
+.panelItem .itemTitle {
+	overflow: auto;
+	vertical-align: middle;
+	display: block;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="formAutoSuggest" namespace="\forms">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 11:26 (EET)</datecreated>
+      <daterevised>March 11, 2013, 11:26 (EET)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Form Auto Suggest</title>
+      <description>Displays automatic suggestions for a given input.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="engage" static="true" returntype="void">
+          <description>Adds a autosuggest controller to the given element.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element where the controller will be attached.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The suggestion's path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

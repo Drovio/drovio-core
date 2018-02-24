@@ -1,0 +1,211 @@
+.uiNotification {
+	width: auto;
+	overflow: hidden;
+	color: #545454;
+	background-color: #FFF;
+	border: 1px solid rgba(166, 166, 166, 1);
+}
+
+.uiNotification .uiNtfHead {
+	font-weight: bold;
+	text-align: left;
+	padding: 6px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	position:relative;
+	text-transform: capitalize;
+}
+.uiNtfHead .uiNtfAction {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	display: none;
+	background-image: url('%resources%/icons/16x16/glppCloseButton.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.uiNotification:hover .uiNtfAction {
+	cursor: pointer;
+	display: block;
+	opacity: 1 !important;
+}
+.uiNotification .uiNtfBody {
+	overflow: auto;
+	padding: 10px 5px;
+}
+.uiNotification .uiNtfBody .uiNtfIcon {
+	display: block;
+	float: left;
+	width: 19px;
+	height: 19px;
+	margin-right: 8px;
+	background-image: url('%resources%/icons/19x19/notifications.svg');
+}
+.uiNotification .uiNtfBody h2 {
+	font-size: 12px;
+	margin-bottom: 15px;
+	margin-top: 2px;
+}
+.uiNotification .uiNtfBody p {
+	margin: 0px;
+	padding: 0px 5px;
+	text-indent:10px;
+}
+.uiNotification .uiNtfBody .notes {
+	margin-top: 10px;
+	font-size: 9px
+}
+.uiNotification .uiNtfFooter {
+	font-size: 9px;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.uiNotification .uiNtfHead, .uiNotification a { outline: none; }
+.uiNotification .uiNtfFooter .customMessage {
+	font-weight: bold;
+	font-size: 10px;
+	padding: 5px;
+	margin-top: 10px;
+}
+.uiNotification .uiNtfFooter {
+	padding: 3px;
+}
+
+
+
+/* Default Style */
+.uiNotification.default {
+	border-color: rgba(166, 166, 166, 1);
+}
+.uiNotification.default .uiNtfHead {
+	background-color: rgba(166, 166, 166, 0.40);
+	border-bottom: 1px solid rgba(166, 166, 166, 0.3);
+}
+.uiNotification.default .uiNtfHead, .uiNotification.default a {
+	color: rgba(80, 80, 80, 1);
+}
+.uiNotification.default .uiNtfBody {
+	background-color: #FFF;
+}
+.uiNotification.default .uiNtfBody .uiNtfIcon {
+	background-position: 100px 0px;
+}
+.uiNotification.default .uiNtfBody h2 {
+	color: rgba(80, 80, 80, 1);
+}
+.uiNotification.default .uiNtfBody .customMessage {
+	color: rgba(80, 80, 80, 1);
+}
+.uiNotification.default .uiNtfFooter {
+	border-top: 1px solid rgba(166, 166, 166, 0.3);
+}
+
+/* Info Style */
+.uiNotification.info {
+	border-color: rgba(0,98,194,1);
+}
+.uiNotification.info .uiNtfHead {
+	background-color: rgba(0,98,194,0.30);
+	border-bottom: 1px solid rgba(0,0,255,0.30);
+}
+.uiNotification.info .uiNtfHead, .uiNotification.info a {
+	color: rgba(0,98,194,1);
+}
+.uiNotification.info .uiNtfBody {
+	background-color: #D9E8F6;
+}
+.uiNotification.info .uiNtfBody .uiNtfIcon {
+	background-position: 0px 0px;
+}
+.uiNotification.info .uiNtfBody h2 {
+	color: rgba(0,98,194,1);
+}
+.uiNotification.info .uiNtfBody .customMessage {
+	color: rgba(0,98,194,1);
+}
+.uiNotification.info .uiNtfFooter {
+	border-top: 1px solid rgba(0,0,255,0.30);
+}
+
+/* Success Style */
+.uiNotification.success {
+	border-color: rgba(85,142,54,1);
+}
+.uiNotification.success .uiNtfHead {
+	background-color: rgba(130,189,75,0.30);
+	border-bottom: 1px solid rgba(130,189,75,0.35);
+}
+.uiNotification.success .uiNtfHead, .uiNotification.success a {
+	color: rgba(85,142,54,1);
+}
+.uiNotification.success .uiNtfBody {
+	background-color: #ECF5E4;
+}
+.uiNotification.success .uiNtfBody .uiNtfIcon {
+	background-position: -19px 0px;
+}
+.uiNotification.success .uiNtfBody h2 {
+	color: rgba(85,142,54,1);
+}
+.uiNotification.success .uiNtfBody .customMessage {
+	color: rgba(85,142,54,1);
+}
+.uiNotification.success .uiNtfFooter {
+	border-top: 1px solid rgba(130,189,75,0.3);
+}
+
+/* Warning Style */
+.uiNotification.warning {
+	border-color: rgba(255, 100, 0, 1);
+}
+.uiNotification.warning .uiNtfHead {
+	background-color: rgba(255,100,0,0.30);
+	border-bottom: 1px solid rgba(255,100,0,0.35);
+}
+.uiNotification.warning .uiNtfHead, .uiNotification.warning a {
+	color: rgba(255,100,0,1);
+}
+.uiNotification.warning .uiNtfBody {
+	background-color: #FFE8D9;
+}
+.uiNotification.warning .uiNtfBody .uiNtfIcon {
+	background-position: -38px 0px;
+}
+.uiNotification.warning .uiNtfBody h2 {
+	color: rgba(255,100,0,1);
+}
+.uiNotification.warning .uiNtfBody .customMessage {
+	color: rgba(255,100,0,1);
+}
+.uiNotification.warning .uiNtfFooter {
+	border-top: 1px solid rgba(255,100,0,0.30);
+}
+
+/* Error Style */
+.uiNotification.error {
+	border-color: rgba(192,4,3,1);
+}
+.uiNotification.error .uiNtfHead {
+	background-color: rgba(192,4,3,0.30);
+	border-bottom: 1px solid rgba(192,4,3,0.35);
+}
+.uiNotification.error .uiNtfHead, .uiNotification.error a {
+	color: rgba(192,4,3,1);
+}
+.uiNotification.error .uiNtfBody {
+	background-color: #F6DAD9;
+}
+.uiNotification.error .uiNtfBody .uiNtfIcon {
+	background-position: -57px 0px;
+}
+.uiNotification.error .uiNtfBody h2 {
+	color: rgba(192,4,3,1);
+}
+.uiNotification.error .uiNtfBody .customMessage {
+	color: rgba(192,4,3,1);
+}
+.uiNotification.error .uiNtfFooter {
+	border-top: 1px solid rgba(192,4,3,0.3);
+}

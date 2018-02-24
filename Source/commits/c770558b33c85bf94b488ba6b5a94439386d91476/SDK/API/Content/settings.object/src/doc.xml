@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Content" namespace="\">
+  <class name="settings" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392795128</datecreated>
+      <daterevised>1392795128</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Class not used. To be deleted.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

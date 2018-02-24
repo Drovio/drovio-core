@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\test">
+  <class name="jqTester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1442148261</datecreated>
+      <daterevised>1442148261</daterevised>
+      <extends>
+        <object>\DEV\Profiler\tester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>jQUery Tester Manager</title>
+      <description>Manages jQuery version tester mode.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the jQuery tester mode in the given version (filename).</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The jQuery filename inside the cdn library: CDN/js/jquery/</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the jQuery tester mode.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Get the status for the jQuery tester.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

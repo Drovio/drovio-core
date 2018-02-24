@@ -1,0 +1,151 @@
+.registerDialog {
+	& {
+		position: relative;
+		background: rgba(255, 255, 255, 0.9);
+		padding: 25px;
+		text-align: center;
+		min-width: 300px;
+		max-width: 530px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		overflow: auto;
+	}
+	.header {
+		overflow: auto;
+	}
+	.header {
+		.logo {
+			width: 60px;
+			height: 60px;
+			margin: 10px;
+			float: left;
+			background: url('%{cdn}/media/logos/dlogo.png') no-repeat center;
+			background-size: cover;
+		}
+		.ltitle {
+			line-height: 60px;
+			font-weight: normal;
+			font-size: 24px;
+			color: #555459;
+			margin: 10px 0px;
+			padding: 0px 10px;
+		}
+		&.dialog .ltitle {
+			float: left;
+		}
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 24px;
+			height: 24px;
+			background: url('%{media}/global/closeX.svg') no-repeat center;
+			background-position: 0px -24px;
+			background-size: cover;
+			cursor: pointer;
+		}
+	}
+	.main {
+		& {
+			clear: both;
+			overflow: auto;
+		}
+		
+		.uiRegInput {
+			width: 100%;
+			padding: 10px 12px;
+			margin: 5px 0px;
+			font-size: 14px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			border-radius: 3px;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-color: #777;
+			color: #777;
+			outline-color: #CCC;
+		}
+		.uiRegInput.small {
+			width: 48%;
+			float: left;
+		}
+		.uiRegInput.small.f {
+			float: right;
+		}
+		.lgl a {
+			color: rgb(192, 4, 3);
+		}
+		.lpinp {
+			width: 100%;
+			font-size: 12px;
+			padding: 5px;
+			margin: 5px 0px;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			border-color: #777;
+			color: #555;
+			outline: none;
+		}
+		button[type='submit'] {
+			padding: 8px 10px;
+			width: 150px;
+			margin: 0px auto;
+			margin-top: 15px;
+			font-size: 13px;
+			border-color: rgba(0, 0, 0, 0.1);
+			background: #ff5252;
+			background-image: -webkit-linear-gradient(top, #ff6161 0%, #ff4343 100%);
+			background-image: -o-linear-gradient(top, #ff6161 0%, #ff4343 100%);
+			background-image: linear-gradient(to bottom, #ff6161 0%, #ff4343 100%);
+			background-repeat: repeat-x;
+			color: #FFF;
+			transition: background .2s ease-in-out;
+			-webkit-transition: background .2s ease-in-out;
+			-moz-transition: background .2s ease-in-out;
+		}
+		button[type='submit']:hover {
+			border-color: rgba(0, 0, 0, 0.1);
+			background: #ff4343;
+			background-image: -webkit-linear-gradient(top, #ff5252 0%, #ff2e2e 100%);
+			background-image: -o-linear-gradient(top, #ff5252 0%, #ff2e2e 100%);
+			background-image: linear-gradient(to bottom, #ff5252 0%, #ff2e2e 100%);
+			background-repeat: repeat-x;
+			color: white;
+			outline: none;
+			transition: background .2s ease-in-out;
+			-webkit-transition: background .2s ease-in-out;
+			-moz-transition: background .2s ease-in-out;
+		}
+	}
+	.footer {
+		& {
+			border-top: 1px solid #CCC;
+			margin-top: 10px;
+			color: #777;
+			font-weight: normal;
+			padding-top: 10px;
+		}
+		h4 {
+			display: inline-block;
+			padding: 0px 5px;
+			margin: 5px 0px;
+		}
+		.terms a {
+			color: #555459;
+			font-weight: bold;
+		}
+		.terms:hover a {
+			text-decoration: underline;
+		}
+		.menu a {
+			color: #777;
+		}
+		.menu:hover a {
+			text-decoration: underline;
+		}
+	}
+}

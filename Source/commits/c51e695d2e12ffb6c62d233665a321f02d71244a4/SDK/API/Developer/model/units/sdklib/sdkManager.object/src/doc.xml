@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="sdkManager" abstract="" namespace="\model\units\sdklib">
+    <info>
+      <version/>
+      <datecreated>1372845474</datecreated>
+      <daterevised>1372845474</daterevised>
+      <extends>\API\Developer\model\version\vcs</extends>
+      <implements/>
+      <throws/>
+      <title>SDK Library Manager</title>
+      <description>Handles all the SDK libraries, packages and objects.</description>
+      <deprecated>Use \API\Developer\components\sdkManager instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="REPOSITORY_PATH">
+        <description>The repository path for the SDK</description>
+      </const>
+      <const type="string" name="PATH">
+        <description>The production path for the SDK</description>
+      </const>
+      <const type="" name="INDEX_FILE">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create_library" returntype="boolean" static="true">
+          <description>Create an SDK Library</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createLibraryIndex" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create_package" returntype="boolean">
+          <description>Create a library package</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createPackageIndex" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addPackageEntry" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create_namespace" returntype="boolean">
+          <description>Create a package namespace</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (multiple namespaces separated by "::")</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addObjectEntry" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$libName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$namespace" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

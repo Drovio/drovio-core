@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\md">
+  <class name="Markdown" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1448043460</datecreated>
+      <daterevised>1448043460</daterevised>
+      <extends/>
+      <implements>\GTL\Docs\md\MarkdownInterface</implements>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="MARKDOWNLIB_VERSION">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public">
+        <prop type="" name="empty_element_suffix">
+          <description/>
+        </prop>
+        <prop type="" name="tab_width">
+          <description/>
+        </prop>
+        <prop type="" name="no_markup">
+          <description/>
+        </prop>
+        <prop type="" name="no_entities">
+          <description/>
+        </prop>
+        <prop type="" name="predef_urls">
+          <description/>
+        </prop>
+        <prop type="" name="predef_titles">
+          <description/>
+        </prop>
+        <prop type="" name="url_filter_func">
+          <description/>
+        </prop>
+        <prop type="" name="header_id_func">
+          <description/>
+        </prop>
+        <prop type="" name="enhanced_ordered_list">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="protected">
+        <prop type="" name="nested_brackets_depth">
+          <description/>
+        </prop>
+        <prop type="" name="nested_brackets_re">
+          <description/>
+        </prop>
+        <prop type="" name="nested_url_parenthesis_depth">
+          <description/>
+        </prop>
+        <prop type="" name="nested_url_parenthesis_re">
+          <description/>
+        </prop>
+        <prop type="" name="escape_chars">
+          <description/>
+        </prop>
+        <prop type="" name="escape_chars_re">
+          <description/>
+        </prop>
+        <prop type="" name="urls">
+          <description/>
+        </prop>
+        <prop type="" name="titles">
+          <description/>
+        </prop>
+        <prop type="" name="html_hashes">
+          <description/>
+        </prop>
+        <prop type="" name="in_anchor">
+          <description/>
+        </prop>
+        <prop type="" name="document_gamut">
+          <description/>
+        </prop>
+        <prop type="" name="block_gamut">
+          <description/>
+        </prop>
+        <prop type="" name="span_gamut">
+          <description/>
+        </prop>
+        <prop type="" name="list_level">
+          <description/>
+        </prop>
+        <prop type="" name="em_relist">
+          <description/>
+        </prop>
+        <prop type="" name="utf8_strlen">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="defaultTransform" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="transform" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="setup" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="teardown" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="stripLinkDefinitions" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_stripLinkDefinitions_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hashHTMLBlocks" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_hashHTMLBlocks_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hashPart" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$boundary" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hashBlock" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="runBlockGamut" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="runBasicBlockGamut" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doHorizontalRules" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="runSpanGamut" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doHardBreaks" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doHardBreaks_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doAnchors" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doAnchors_reference_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doAnchors_inline_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doImages" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doImages_reference_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doImages_inline_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doHeaders" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doHeaders_callback_setext" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doHeaders_callback_atx" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_generateIdFromHeaderValue" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$headerValue" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doLists" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doLists_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="processListItems" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$list_str" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$marker_any_re" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_processListItems_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doCodeBlocks" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doCodeBlocks_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="makeCodeSpan" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doItalicsAndBold" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doBlockQuotes" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doBlockQuotes_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doBlockQuotes_callback2" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="formParagraphs" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="encodeAttribute" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="encodeURLAttribute" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$url" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="encodeAmpsAndAngles" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doAutoLinks" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doAutoLinks_url_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_doAutoLinks_email_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="encodeEntityObfuscatedAttribute" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$tail" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$head_length" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="parseSpan" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$str" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="handleSpanToken" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$token" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$str" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="outdent" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="detab" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_detab_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_initDetab" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unhash" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$text" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_unhash_callback" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$matches" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

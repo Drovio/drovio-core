@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="UIStateObject" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 11:40 (EET)</datecreated>
+      <daterevised>March 11, 2013, 11:40 (EET)</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>UI State Object</title>
+      <description>Saves and gets the state of a ui object during execution and after page reload.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setState" static="true" returntype="void">
+          <description>Sets the state of the object.</description>
+          <parameters>
+            <parameter name="$state" type="string" defaultvalue="">
+              <description>The state value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="getState" static="true" returntype="mixed">
+          <description>Gets the state of the object</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

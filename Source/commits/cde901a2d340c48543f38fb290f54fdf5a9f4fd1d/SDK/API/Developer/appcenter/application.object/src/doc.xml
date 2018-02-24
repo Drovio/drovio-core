@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter">
+  <class name="application" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1370265576</datecreated>
+      <daterevised>1396716851</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <throws/>
+      <title>Redback Application</title>
+      <description>This class is responsible for the development of an application.
+It works as a provider for access to application components.</description>
+      <deprecated>Use \DEV\Apps\application instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index file name.</description>
+      </const>
+      <const type="string" name="SOURCE_FOLDER">
+        <description>The source folder name.</description>
+      </const>
+      <const type="string" name="STYLES_FOLDER">
+        <description>The styles folder name.</description>
+      </const>
+      <const type="string" name="SCRIPTS_FOLDER">
+        <description>The scripts folder name.</description>
+      </const>
+      <const type="string" name="VIEWS_FOLDER">
+        <description>The views folder name.</description>
+      </const>
+      <const type="string" name="MEDIA_FOLDER">
+        <description>The resources folder name.</description>
+      </const>
+      <const type="string" name="CONFIG_FOLDER">
+        <description>The configuration folder name.</description>
+      </const>
+      <const type="string" name="CONTENT_FOLDER">
+        <description>The content folder name.</description>
+      </const>
+      <const type="string" name="SCOPE_PRIVATE">
+        <description>The private scope name.</description>
+      </const>
+      <const type="stirng" name="SCOPE_PUBLIC">
+        <description>The public scope name.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="appID">
+          <description>The application name.</description>
+        </prop>
+        <prop type="array" name="appData">
+          <description>The application data.</description>
+        </prop>
+        <prop type="string" name="devPath">
+          <description>The application's developer path.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.
+Leave empty for new applications.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getVCS" returntype="vcs">
+          <description>Gets the vcs manager object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The vcs manager object.</returndescription>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new application.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The application name</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The application scope.</description>
+            </parameter>
+            <parameter name="$fullName" type="string" defaultvalue="">
+              <description>The full application name.</description>
+            </parameter>
+            <parameter name="$tags" type="string" defaultvalue="">
+              <description>The application tags.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The application description.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Creates a releases and publishes the application.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The release version.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The release description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getView" returntype="appView">
+          <description>Gets an application view.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The appView object with the view loaded.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSrcPackage" returntype="appSrcPackage">
+          <description>Gets the application's source package object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>A appSrcPackage object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSrcObject" returntype="appSrcObject">
+          <description>Gets the application's source object for development.</description>
+          <parameters>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The object's package.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The object's namespace.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The appSrcObject object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getScript" returntype="appScript">
+          <description>Gets a script object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The script name. Leave empty for new scripts.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The appScript object loaded with the script name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStyle" returntype="appStyle">
+          <description>Gets a style object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The style name. Leave empty for new style.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The appStyle object loaded with the style name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSettings" returntype="appSettings">
+          <description>Gets the application settings manager.</description>
+          <parameters/>
+          <returndescription>The application settings manager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLiterals" returntype="appLiterals">
+          <description>Gets the application literal manager.</description>
+          <parameters/>
+          <returndescription>The application literal manager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMediaManager" returntype="fileExplorer">
+          <description>Returns a fileExplorer properly set to show the application's media folder.</description>
+          <parameters/>
+          <returndescription>The fileExplorer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectIndex" returntype="void" static="true">
+          <description>Adds an object's index to the application index file.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The index file path.</description>
+            </parameter>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStyles" returntype="array">
+          <description>Gets all application styles.</description>
+          <parameters/>
+          <returndescription>An array of styles by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getScripts" returntype="array">
+          <description>Gets all application scripts.</description>
+          <parameters/>
+          <returndescription>An array of scripts by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getViews" returntype="array">
+          <description>Gest all application views.</description>
+          <parameters/>
+          <returndescription>An array of views by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description>Initializes the application with all the names and the paths.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createAppStructure" returntype="void">
+          <description>Creates the application structure.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createAppIndex" returntype="void">
+          <description>Creates the application indexes.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getIndexObjects" returntype="array">
+          <description>Gets the application object from the index defined by parameters.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of objects by value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

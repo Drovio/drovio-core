@@ -1,0 +1,221 @@
+.documentationViewer {
+	position:relative;
+	height:100%;
+	box-sizing:border-box; 
+	-moz-box-sizing:border-box;
+}
+.documentationViewer #documentHead{
+	position:relative; 
+	margin-right:10px; 
+	margin-left:10px;
+	padding-top:10px;
+}
+
+.documentationViewer #documentBody{
+	position: absolute;
+	top: 110px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+	padding-left: 5px;
+	-webkit-transition: box-shadow 0.2s;
+}
+
+#documentBody.deprecated{
+	top: 170px;
+}
+
+.documentationViewer  .dock {
+	box-shadow: inset 0 10px 20px rgba(166, 166, 166, 0.35);
+	-webkit-transition: box-shadow 0.2s;
+}
+
+/* Headers */ 
+.documentationViewer .className {
+	margin: 13px 0px 0px 0px;
+	font-size: 30px;
+	color: black;
+}
+.documentationViewer .classTitle {
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+}
+.documentationViewer .section > .header{
+	font-weight: bold;
+	padding: 3px;
+	margin-bottom: 6px;
+	border-bottom: 1px solid rgba(166, 166, 166, 0.5);
+	color: rgb(100, 100, 100);
+	font-size: 16px;
+}
+.documentationViewer .section > .body .subHeader{
+	color: #646464;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 6px;
+	padding: 3px;
+}
+/* Containers */
+.documentationViewer .section {
+	padding: 5px;
+	margin: 5px 0px;	
+	clear: both;
+}
+
+.documentationViewer .classDeclContainer .classThrows {
+}
+
+.documentationViewer .section > .body{
+	margin-left: 5px;	
+}
+.documentationViewer .infoWrapper{
+	position:relative;	
+	height: 100px;
+}
+.documentationViewer .classDeclContainer {
+	  left: 0;
+    position: absolute;
+    top: 0;
+right: 250px;
+}
+
+.documentationViewer .classDeclContainer .section{
+	margin-left:10px;
+	padding:0px;  
+}
+
+.documentationViewer .classDeclContainer .section p{
+	margin-top: 2px;
+}
+
+.documentationViewer .classDeclContainer .section span:not(:first-child){
+	padding-left:5px;
+}
+
+.documentationViewer .classDeclContainer .classThrows {
+	padding-left:10px;
+}
+
+.documentationViewer .classDeclaration {
+	
+}
+.documentationViewer .constantsContainer .body, .documentationViewer .propertiesContainer .body, .documentationViewer .methodsContainer .body{
+	margin-left: 5px;
+}
+
+.documentationViewer .classDeclaration h2.modifier {
+	float: left;
+	padding-right: 15px;
+	clear: left;
+}
+.documentationViewer .classInfo {
+	/*float: right;*/
+	position:absolute; 
+top:10px; 
+right:0;
+	padding: 5px;
+	border: 1px solid rgba(166, 166, 166, 0.8);
+	text-align: right;
+	margin-bottom: 10px;
+}
+.documentationViewer .classTitle {
+	clear: both;
+}
+.documentationViewer .modifier {
+	display: inline-block;
+	font-weight: bold;
+	color: green;
+}
+.documentationViewer .decline {
+	padding: 0px 3px 0px 3px;
+}
+.documentationViewer .decline .token {
+	font-weight: bold;
+	color: blue;
+	display: inline-block;
+}
+.documentationViewer .classExtended .decline {
+	padding: 3px;
+	background-color: rgba(166, 166, 166, 0.3);
+	/*border-bottom: 1px solid rgba(166, 166, 166, 0.5);*/
+}
+.documentationViewer .property, .documentationViewer .method {
+	margin-bottom: 5px;
+	/*border: 1px solid rgba(166, 166, 166, 0.5);*/
+}
+.documentationViewer .method .parameters {
+	margin: 5px;
+	padding: 3px;
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+}
+.documentationViewer .method .methodBody{
+	margin-left: 20px;
+}
+.documentationViewer .parameter .paramName.token {
+	font-style: italic;
+}
+.documentationViewer .classSynopsis .synopsisSection, .documentationViewer .classExtended .extendedSection {
+	padding: 5px 0px;
+}
+.documentationViewer .classSynopsis > .synopsisSection > .sectionBody, .documentationViewer .classExtended .extendedSection > .sectionBody {
+	text-indent: 5px;
+}
+.documentationViewer .sectionHeader {
+	font-weight: bold;
+	padding: 3px;
+	margin-bottom: 6px;
+	border-bottom: 1px solid rgba(166, 166, 166, 0.5);
+	color: rgb(100, 100, 100);
+	font-size: 12px;
+}
+.documentationViewer .property .pDesc, .documentationViewer .constant .cDesc {
+	margin: 1em;
+	font-family: inherit;
+}
+.documentationViewer .propertiesContainer .pDesc, .documentationViewer .constantsContainer .cDesc {
+	margin: 1em;
+	font-family: inherit;
+}
+.documentationViewer .method  .mDesc {
+	font-family: inherit;
+	font-style: italic;
+	margin: 0px 0px 0px 35px;
+}
+
+.documentationViewer .method  .methReternDesc,  .documentationViewer .method  .methThrows{
+	padding-left:10px;
+}
+
+.documentationViewer .deprecationMessage {
+	border: 1px solid rgba(255, 100, 0, 1);
+	background-color: #FFE8D9;
+	clear: both;
+}
+.documentationViewer .deprecationMessage .deprSign {
+	font-weight: bold;
+	margin: 0px;
+	margin-top: 3px;
+}
+
+
+.documentationViewer .method .mDepr {
+	color: red;
+}
+
+.documentationViewer .documentationError{
+	margin: 10px;
+	border: 1px solid rgba(255, 100, 0, 1);
+	background-color: #FFE8D9;
+	clear: both;
+	text-indent: 5px;
+}
+.documentationViewer .documentationError.errorSign {
+	font-weight: bold;
+	margin: 0px;
+	margin-top: 3px;
+}
+
+.documentationViewer .decline span {    padding: 0px 2px 0px 2px;}

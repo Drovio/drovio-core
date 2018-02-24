@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\content\document\parsers">
+  <class name="phpParser" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362649560</datecreated>
+      <daterevised>1383496468</daterevised>
+      <extends/>
+      <implements>\API\Developer\content\document\iParser</implements>
+      <throws/>
+      <title>PHP Parser</title>
+      <description>Php parser helper for handling the language features.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="start_delimiters" static="true">
+          <description>Php code start delimiters.</description>
+        </prop>
+        <prop type="array" name="end_delimiters" static="true">
+          <description>Php code end delimiters.</description>
+        </prop>
+        <prop type="string" name="comment_prefix" static="true">
+          <description>One line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_start" static="true">
+          <description>Multi line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_end" static="true">
+          <description>Multi line comment endfix.</description>
+        </prop>
+        <prop type="string" name="variable_prefix" static="true">
+          <description>Php code variable prefix.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="array" name="systemCommands" static="true">
+          <description>All system commands.</description>
+        </prop>
+        <prop type="array" name="filesystemCommands" static="true">
+          <description>All filesystem commands.</description>
+        </prop>
+        <prop type="array" name="directoryCommands" static="true">
+          <description>All directory commands.</description>
+        </prop>
+        <prop type="array" name="requireCommands" static="true">
+          <description>All require commands.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="wrap" returntype="string" static="true">
+          <description>Wraps code to php delimiters.
+Returns the wrapped code.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The code to be wrapped.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The wrapped code.</returndescription>
+          <throws/>
+        </method>
+        <method name="unwrap" returntype="string" static="true">
+          <description>Unwraps code from any tags and delimiters of php.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The code to be unwrapped.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The unwrapped code.</returndescription>
+          <throws/>
+        </method>
+        <method name="comment" returntype="string" static="true">
+          <description>Creates and returns a php comment.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment's content.</description>
+            </parameter>
+            <parameter name="$multi" type="boolean" defaultvalue="">
+              <description>If true, create a multiline comment.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The comment created.</returndescription>
+          <throws/>
+        </method>
+        <method name="documentationComment" returntype="string" static="true">
+          <description>Creates and returns a specific comment for documentation usage.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment's content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The documentation comment created.</returndescription>
+          <throws/>
+        </method>
+        <method name="variable" returntype="string" static="true">
+          <description>Creates and returns a php-like variable name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The variable string.</returndescription>
+          <throws/>
+        </method>
+        <method name="getClassCode" returntype="string" static="true">
+          <description>Creates and returns an empty php class with the constructor function.</description>
+          <parameters>
+            <parameter name="$className" type="string" defaultvalue="">
+              <description>The class' name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The class code.</returndescription>
+          <throws/>
+        </method>
+        <method name="syntax" returntype="mixed" static="true">
+          <description>Checks the syntax structure of a php file. Returns TRUE if syntax is ok, the error otherwise.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The php file path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True if there is no error, otherwise it returns the error.</returndescription>
+          <throws/>
+        </method>
+        <method name="clear" returntype="string" static="true">
+          <description>Clears the code from invalid characters.
+It also uses the html_entity_decode().</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code to be cleared.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cleared php code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="safe" returntype="string" static="true">
+          <description>Clears the php code from dangerous commands for the system.
+This is used for the php code in the application center.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The code with commented all the dangerous commands.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_comment" returntype="string" static="true">
+          <description>Creates a php comment</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment content</description>
+            </parameter>
+            <parameter name="$multi" type="string" defaultvalue="">
+              <description>Indicator whether the comment will be multiline</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use comment() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_documentationComment" returntype="string" static="true">
+          <description>Creates a specific comment for documentation usage.</description>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use documentationComment() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_variable" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use variable() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_classCode" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$className" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated>Use getClassCode() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="check_syntax" returntype="void" static="true">
+          <description>Check php syntax on a given file</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The file path</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use syntax() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="clearCode" returntype="string" static="true">
+          <description>Clears the code from html entities and from other non-printable characters that cause parsing problems.
+Returns the cleared code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use clear() instead.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

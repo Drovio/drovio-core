@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebEngine" namespace="\resources">
+  <class name="resourceLoader" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1419871348</datecreated>
+      <daterevised>1432893126</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Webengine resource manager</title>
+      <description>Manages resource names for the web engine core.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RSRC_CSS">
+        <description>The css resource type.</description>
+      </const>
+      <const type="string" name="RSRC_JS">
+        <description>The js resource type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getResourceID" returntype="string" static="true">
+          <description>Get a resource id given a library and a package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource id string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string" static="true">
+          <description>Returns the hashed file name of the resource package.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The file prefix.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The resource type.
+See class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource file name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

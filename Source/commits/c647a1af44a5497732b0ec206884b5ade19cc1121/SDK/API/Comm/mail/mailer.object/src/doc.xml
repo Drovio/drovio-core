@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="mailer" abstract="" namespace="\mail">
+    <info>
+      <version/>
+      <datecreated>April 23, 2013, 13:45 (EEST)</datecreated>
+      <daterevised>April 23, 2013, 13:45 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>mailer</title>
+      <description>Manages all mail actions from redback subsystems</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CLASS_NAME">
+        <description>Redback Mail visual to public class name</description>
+      </const>
+      <const type="string" name="CLASS_VERSION">
+        <description>Mailer class visual to public version</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="bool" name="optionSetDefined">
+          <description>Flaf variable, declares if an optionset is defined</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="options" returntype="void">
+          <description>Configures mail class given an array of options</description>
+          <parameters>
+            <parameter name="$optionSetArray" type="array" defaultvalue="">
+              <description>Array of mail options</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="Send" returntype="void">
+          <description>Send mail that previously configured and set</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="setSubject" returntype="void">
+          <description>Sets mail subject</description>
+          <parameters>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>Mail subject</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="AddAddress" returntype="void">
+          <description>Add a recipient address</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The recipients address</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The recipients name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="AddCC" returntype="void">
+          <description>Add a CC recipient</description>
+          <parameters>
+            <parameter name="$address" type="" defaultvalue="">
+              <description>The recipients address</description>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description>The recipients name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="AddBCC" returntype="void">
+          <description>Add a BCC recipient</description>
+          <parameters>
+            <parameter name="$address" type="" defaultvalue="">
+              <description>The recipients address</description>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description>The recipients name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="AddReplyTo" returntype="void">
+          <description>Add reply to address</description>
+          <parameters>
+            <parameter name="$address" type="" defaultvalue="">
+              <description>The recipients address</description>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description>The recipients name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="setPriority" returntype="void">
+          <description>Set message priority</description>
+          <parameters>
+            <parameter name="$priority" type="int" defaultvalue="">
+              <description>Message prioty from 1 to 5</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="addMultipleRecipients" returntype="void">
+          <description>Add multiple recipoients</description>
+          <parameters>
+            <parameter name="$kind" type="string" defaultvalue="">
+              <description>Accepted values to|rto|cc|bcc
+The kind of recipients to add</description>
+            </parameter>
+            <parameter name="$addressesArray" type="array" defaultvalue="">
+              <description>Array of arrays(address, name) or array of strings (address)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="setAltBody" returntype="void">
+          <description>Alternative Message for non-html mail clients</description>
+          <parameters>
+            <parameter name="$altBody" type="string" defaultvalue="">
+              <description>non html, plain text body</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="MsgHTML" returntype="void">
+          <description>Set html body</description>
+          <parameters>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>An html formated mstring</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="intialize" returntype="void">
+          <description>Initalizes mail options for mailer class</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getValue" returntype="mixed">
+          <description>Given the new and the current value of a var, returns new value if exists and set or current value else</description>
+          <parameters>
+            <parameter name="$currValue" type="mixed" defaultvalue="">
+              <description>The current or the value without error</description>
+            </parameter>
+            <parameter name="$newValue" type="mixed" defaultvalue="">
+              <description>The new or the value that must be checked</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="validate_address" returntype="void">
+          <description>__Optional Validators</description>
+          <parameters>
+            <parameter name="$address" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="validate_name" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="validate_subject" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$subject" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="validate_htmlBody" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$htmlBody" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="validate_altBody" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$altBody" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

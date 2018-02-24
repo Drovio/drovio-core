@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebExtensions" namespace="\">
+  <class name="extManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1400831843</datecreated>
+      <daterevised>1400831843</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPublishedFolder" returntype="string" static="true">
+          <description>Gets the extension's publish folder.</description>
+          <parameters>
+            <parameter name="$extID" type="integer" defaultvalue="">
+              <description>The extension id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The extension publish folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="void" static="true">
+          <description>Publish the given extension.
+It publishes the extension to the review folder.</description>
+          <parameters>
+            <parameter name="$extID" type="integer" defaultvalue="">
+              <description>The extension id.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

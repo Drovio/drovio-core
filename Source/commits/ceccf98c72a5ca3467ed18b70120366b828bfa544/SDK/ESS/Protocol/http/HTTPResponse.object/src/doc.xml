@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\http">
+  <class name="HTTPResponse" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1415194235</datecreated>
+      <daterevised>1415194235</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>HTTP Response Handler</title>
+      <description>Manages and adapts the http response according to redback rules.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CONTENT_TEXT_HTML">
+        <description>The text/html content-type</description>
+      </const>
+      <const type="string" name="CONTENT_TEXT_XML">
+        <description>The text/xml content-type</description>
+      </const>
+      <const type="string" name="CONTENT_TEXT_PLAIN">
+        <description>The text/plain content-type</description>
+      </const>
+      <const type="string" name="CONTENT_TEXT_JS">
+        <description>The text/javascript content-type</description>
+      </const>
+      <const type="string" name="CONTENT_TEXT_CSS">
+        <description>The text/css content-type</description>
+      </const>
+      <const type="string" name="CONTENT_APP_PDF">
+        <description>The application/pdf content-type</description>
+      </const>
+      <const type="string" name="CONTENT_APP_ZIP">
+        <description>The application/zip content-type</description>
+      </const>
+      <const type="string" name="CONTENT_APP_STREAM">
+        <description>The application/octet-stream content-type</description>
+      </const>
+      <const type="string" name="CONTENT_APP_JSON">
+        <description>The application/json content-type</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="statusCodes" static="true">
+          <description>All the response status codes with their description.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" returntype="void" static="true">
+          <description>Initializes the response headers with the redback ones.</description>
+          <parameters>
+            <parameter name="$contenttype" type="string" defaultvalue="">
+              <description>The page content type.
+Choose from the pre-defined class constants.
+It is CONTENT_TEXT_HTML by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStatusCode" returntype="string" static="true">
+          <description>Returns the status code description of the given code.</description>
+          <parameters>
+            <parameter name="$code" type="integer" defaultvalue="">
+              <description>The response status code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The status code description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAllowOrigin" returntype="void" static="true">
+          <description>Defines the 'Access-Control-Allow-Origin' header.</description>
+          <parameters>
+            <parameter name="$allow" type="string" defaultvalue="">
+              <description>The value of the header.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAllowCredentials" returntype="void" static="true">
+          <description>Defines the 'Access-Control-Allow-Credentials' header.
+The default server value is "*".</description>
+          <parameters>
+            <parameter name="$allow" type="boolean" defaultvalue="">
+              <description>The value of the header.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setContentType" returntype="void" static="true">
+          <description>Defines the 'Content-type' header.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The content-type.
+It can accept all the constants of this class.
+It is CONTENT_TEXT_HTML by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setLocation" returntype="void" static="true">
+          <description>Defines the 'Location' header.
+It can be used for redirection.</description>
+          <parameters>
+            <parameter name="$location" type="string" defaultvalue="">
+              <description>The new location url.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setIdentity" returntype="void" static="true">
+          <description>Sets some headers for the Redback response identity.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

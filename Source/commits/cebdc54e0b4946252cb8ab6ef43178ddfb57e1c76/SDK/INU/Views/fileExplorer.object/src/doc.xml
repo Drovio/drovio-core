@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Views" namespace="\">
+  <class name="fileExplorer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1366981333</datecreated>
+      <daterevised>1405649803</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>File Explorer</title>
+      <description>Use this in order to provide an environment to explore files / folders in a directory.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The fileExplorer element's id</description>
+        </prop>
+        <prop type="string" name="rootPath">
+          <description>Path of the folder to display as root, starting from within the WWW folder</description>
+        </prop>
+        <prop type="string" name="rootFriendlyName">
+          <description>The friendly name for the root folder.</description>
+        </prop>
+        <prop type="bollean" name="showHidden">
+          <description>If set to true the fileExplorer manipulates hidden files as well. (Set allways to true at the moment)</description>
+        </prop>
+        <prop type="boolean" name="readOnly">
+          <description>If set to true the fileExplorer will operate in read only mode; no creation nor deletion is allowed.</description>
+        </prop>
+        <prop type="array" name="fileTypes" static="true">
+          <description>Mapping of file types and extensions.</description>
+        </prop>
+        <prop type="array" name="iconifyTypes" static="true">
+          <description>Extensions of files that can become icons</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Creates and initializes a fileExplorer.</description>
+          <parameters>
+            <parameter name="$rootPath" type="string" defaultvalue="">
+              <description>Path of the folder to display as root. Relative to system root</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>FileExplorer's id.</description>
+            </parameter>
+            <parameter name="$friendlyRootName" type="string" defaultvalue="">
+              <description>The friendly name for the root folder.</description>
+            </parameter>
+            <parameter name="$showHidden" type="boolean" defaultvalue="">
+              <description>If set to true the fileExplorer will handle hidden files as well. (Currently set to always true)</description>
+            </parameter>
+            <parameter name="$readOnly" type="boolean" defaultvalue="">
+              <description>If set to true the fileExplorer operates in read only mode</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="fileExplorer">
+          <description>Builds and returns the fileExplorer object. (Use fileExplorer::get to acquire the object's wrapper)</description>
+          <parameters>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>If a subpath is supplied during build, the fileExplorer will be initialized at that path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The fileExplorer object</returndescription>
+          <throws/>
+        </method>
+        <method name="getDirectoryContents" returntype="DOMElement">
+          <description>Creates and returns the file viewing area</description>
+          <parameters>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>The path of the directory contents to display, relative to the fileExplorer's rootPath.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The file Viewing Area</returndescription>
+          <throws/>
+        </method>
+        <method name="getSessionPath" returntype="string" static="true">
+          <description>Acquires a rootPath from session, associated to a rootIdentifier.</description>
+          <parameters>
+            <parameter name="$rootIdentifier" type="string" defaultvalue="">
+              <description>Unique identifier for each fileExplorer.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The associated root path</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isReadOnly" returntype="boolean" static="true">
+          <description>Returns if the fileExplorer with the given id operated in read only mode</description>
+          <parameters>
+            <parameter name="$rootIdentifier" type="string" defaultvalue="">
+              <description>The id of the fileExplorer. Must be unique!</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns true if the fileExplorer runs in read only mode.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFolder" returntype="boolean">
+          <description>Creates a folder.</description>
+          <parameters>
+            <parameter name="$folderName" type="string" defaultvalue="">
+              <description>The name of the folder</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>The subpath of the folder to create, relative to the fileExplorer's rootPath</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The status of creation</returndescription>
+          <throws/>
+        </method>
+        <method name="getFileSize" returntype="string">
+          <description>Aqcuires the size of a file.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Name of the file</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>Subpath to the file, relative to the fileExplorers rootPath</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The file size, viewed in the closest unit possible (KB, MB, ...)</returndescription>
+          <throws/>
+        </method>
+        <method name="renameFile" returntype="boolean">
+          <description>Renames a file or folder.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>Path to the directory of the file / folder.</description>
+            </parameter>
+            <parameter name="$oldName" type="string" defaultvalue="">
+              <description>Name of the file / folder to be renamed.</description>
+            </parameter>
+            <parameter name="$newName" type="string" defaultvalue="">
+              <description>New name of the file / folder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The status of rename</returndescription>
+          <throws/>
+        </method>
+        <method name="drop" returntype="array">
+          <description>Deletes files / folders (folders need to be empty). Returns an array with the statuses.</description>
+          <parameters>
+            <parameter name="$fileNames" type="array" defaultvalue="">
+              <description>Holds the names of the files / folders</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>Holds the subPath of the files / folders, relative to the fileExplorer's rootPath</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>An array with the statuses of the files</returndescription>
+          <throws/>
+        </method>
+        <method name="moveFiles" returntype="array">
+          <description>Moves files to a new location under the root path. Returns an array with the statuses.</description>
+          <parameters>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>Path from the root folder till the source containing folder</description>
+            </parameter>
+            <parameter name="$fileNames" type="array" defaultvalue="">
+              <description>Holds the paths of the files / folders in the source folder</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>Destination folder under the root path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>An array with the statuses of the files</returndescription>
+          <throws/>
+        </method>
+        <method name="copyFiles" returntype="array">
+          <description>Copies files to a new location under the root path. Returns an array with the statuses.</description>
+          <parameters>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>Path from the root folder till the source containing folder</description>
+            </parameter>
+            <parameter name="$fileNames" type="array" defaultvalue="">
+              <description>Holds the paths of the files / folders in the source folder</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>Destination folder under the root path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>An array with the statuses of the files</returndescription>
+          <throws/>
+        </method>
+        <method name="createTempCopy" returntype="DOMElement">
+          <description>Builds and returns a folder tree view according to the root path.</description>
+          <parameters>
+            <parameter name="$files" type="mixed" defaultvalue="">
+              <description>Path to the file or array with paths to files to copy/pack in temp area</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folderView</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="previewFile" returntype="DOMElement">
+          <description>Get a DOM representation of a file's contents.</description>
+          <parameters>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>Name of the file</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>File's path, relative to the fileExplorer's rootPath.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The DOM element that represents the contents of a file</returndescription>
+          <throws/>
+        </method>
+        <method name="getInvalidRoot" returntype="DOMElement" static="true">
+          <description>To be called in case of undefined rootPath (usually undefined in session)</description>
+          <parameters/>
+          <returndescription>Returns DOMElement holding proper message</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="iconifyFile" returntype="DOMElement">
+          <description>Prepares an icon for a file</description>
+          <parameters>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>Name of the file</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>SubPath to the file, relative to the fileExplorer's root path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The dom element that holds the icon</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStateTile" returntype="DOMElement">
+          <description>Get a tile that presents a state</description>
+          <parameters>
+            <parameter name="$msg" type="string" defaultvalue="">
+              <description>The message that is presented in the tile.</description>
+            </parameter>
+            <parameter name="$state" type="string" defaultvalue="">
+              <description>The state that the tile represents (empty, invalid, ...)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The state tile</returndescription>
+          <throws/>
+        </method>
+        <method name="getFileType" returntype="mixed">
+          <description>Identifies a file's type</description>
+          <parameters>
+            <parameter name="$filename" type="string" defaultvalue="">
+              <description>The name of the file</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>The subpath relative to the fileExplorer's root</description>
+            </parameter>
+            <parameter name="$extensionOnly" type="boolean" defaultvalue="">
+              <description>If set to TRUE, the extension of the file will be returned</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the file type or NULL if not recognized.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isIconified" returntype="boolean">
+          <description>Check if the given extension belongs to a file type that can be iconified.</description>
+          <parameters>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>A given file extension.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE if the file with the given extension can be iconified.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="setPath" returntype="void">
+          <description>Set file explorer's root path</description>
+          <parameters>
+            <parameter name="$rootPath" type="string" defaultvalue="">
+              <description>Path to directory that will become the fileExplorer's root</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPath" returntype="string">
+          <description>Get file explorer's root path.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The rootPath</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getDOMRepresentation" returntype="mixed">
+          <description>Get a DOM representation of a file's contents. Returns DOMElement on success, NULL if the file is missing, FALSE if the file type is not supported.</description>
+          <parameters>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>Name of the file.</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>Path where the file exists, relative to the fileExplorer's rootPath</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>Returns a DOM elements representing a file's contents on success, NULL if the file is missing, or FALSE if the file type is not supported.</returndescription>
+          <throws/>
+        </method>
+        <method name="getBase64Representation" returntype="array">
+          <description>Encodes a file's contents in base64 format and returns an array with the appropriate mime-type and source string.</description>
+          <parameters>
+            <parameter name="$contents" type="string" defaultvalue="">
+              <description>The contents of the file.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>An array with the appropriate mime-type and source string.</returndescription>
+          <throws/>
+        </method>
+        <method name="getToolArea" returntype="DOMElement">
+          <description>Build and get tools area (upload, add, delete, etc..)</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The tools area</returndescription>
+          <throws/>
+        </method>
+        <method name="getPathArea" returntype="DOMElement">
+          <description>Build and get path area.</description>
+          <parameters>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>If a subPath is supplied the path area will be initialized at that path</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The path area</returndescription>
+          <throws/>
+        </method>
+        <method name="getMessageArea" returntype="DOMelement">
+          <description>Creates and returns a message area for the file explorer with some of its messages. Something like a message pool.</description>
+          <parameters/>
+          <returndescription>The message area</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPreferencesArea" returntype="DOMElement">
+          <description>Returns the preferences area wrapper.</description>
+          <parameters/>
+          <returndescription>The DOMElement that holds the fileExplorer preferences</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUploadArea" returntype="DOMElement">
+          <description>Creates the uploading area</description>
+          <parameters/>
+          <returndescription>The DOMElement representing the uploading area.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNotificationsArea" returntype="DOMElement">
+          <description>Returns the notifications that the fileExplorer may need.</description>
+          <parameters/>
+          <returndescription>The DOMElement that holds the fileExplorer notifications.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

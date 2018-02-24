@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\misc">
+  <class name="platformStatus" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1391162124</datecreated>
+      <daterevised>1392113541</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform status generator</title>
+      <description>Sets and gets the platform status data.</description>
+      <deprecated>Use DEV\Profiler\status instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

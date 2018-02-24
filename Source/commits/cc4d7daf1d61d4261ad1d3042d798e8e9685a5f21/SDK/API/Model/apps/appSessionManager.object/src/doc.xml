@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\apps">
+  <class name="appSessionManager" abstract="">
+    <info>
+      <version>1.2</version>
+      <build>1</build>
+      <datecreated>1425324018</datecreated>
+      <daterevised>1426098992</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Session Manager</title>
+      <description>Manages the application session, in both client side by set / get the respective cookies and in server side by handling the session entries stored in database.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public">
+        <prop type="string" name="appSessId" static="true">
+          <description>The application session unique id</description>
+        </prop>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructs the object and sets the respective appSession Cookie.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setVersion" returntype="void">
+          <description>Creates or updates the database entry corresponding the created uid.</description>
+          <parameters>
+            <parameter name="$appID" type="string" defaultvalue="">
+              <description>The application id</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getVersion" returntype="void">
+          <description>Gets the version (from the database) matching the given application id</description>
+          <parameters>
+            <parameter name="$appID" type="string" defaultvalue="">
+              <description>The application id</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application version.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="info" returntype="array">
+          <description>Loads and return the information stored in the database for the particular appSession cookie.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeDbEntry" returntype="bolean">
+          <description>Removes the database application session entry for the given application</description>
+          <parameters>
+            <parameter name="$uid" type="string" defaultvalue="">
+              <description>The application session unique id</description>
+            </parameter>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on Success, False elsewher</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

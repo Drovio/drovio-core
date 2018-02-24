@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="extPage" abstract="" namespace="\ebuilder\extComponents">
+    <info>
+      <version/>
+      <datecreated>1373467656</datecreated>
+      <daterevised>1373540007</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Extension Page</title>
+      <description>This class represents / manages an extension page object.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The (filetype) extension of object</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devPath">
+          <description>The repository path</description>
+        </prop>
+        <prop type="array" name="imports">
+          <description>The ebLibrary packages / namespace name that this object imports</description>
+        </prop>
+        <prop type="array" name="dimensions">
+          <description>The absent dimension of object</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$devPath" type="string" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getImports" returntype="array">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDimensions" returntype="array">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setImports" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDimensions" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$width" type="integer" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$height" type="integer" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="mixed">
+          <description/>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription>Bool : False
+Int : File size</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadInfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSourceCode" returntype="mixed">
+          <description/>
+          <parameters/>
+          <returndescription>string
+bool false</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolen">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="buildIndexBase" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildImportsIndex" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildDimensionIndex" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultSourceCode" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="updateIndexInfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadImports" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadDimensions" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildHeader" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$importsArray" type="array" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildImports" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$importsArray" type="array" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

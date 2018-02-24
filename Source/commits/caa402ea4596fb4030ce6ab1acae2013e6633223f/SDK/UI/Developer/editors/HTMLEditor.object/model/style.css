@@ -1,0 +1,283 @@
+.htmlEditor {
+	width:100%;
+	height:100%;
+	position:relative;
+	/*display:none;*/
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+	border:1px solid rgb(166, 166, 166);
+}
+
+.htmlEditor > .htmlToolbars {
+	width:100%;
+	height:54px;
+	position:relative;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+	border-bottom:1px solid rgb(166, 166, 166);
+	padding:3px;
+}
+
+.htmlEditor > .htmlToolbars > * {
+	display:inline-block;
+	height:100%;
+	position:relative;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+	background-color: rgba(230, 230, 250, 0.5);
+	margin:0 2px;
+}
+
+.htmlEditor > .htmlToolbars .htmlTool {
+	display:inline-block;
+	height:42px;
+	line-height:42px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	cursor:pointer;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+	margin: 3px;
+	padding: 0 4px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	background-color:white;
+	position: relative;
+	min-width: 38px;
+	text-align: center;
+}
+
+.htmlEditor > .htmlToolbars .htmlTool:hover {
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+	/*border: 1px solid transparent;*/
+}
+
+.htmlEditor > .htmlToolbars .htmlTool:after {
+	content: "";
+	position: absolute;
+	font-size: 8px;
+	color: #c00403;
+	top: -15px;
+	right: 2px;
+}
+.htmlEditor > .htmlToolbars .htmlTool[data-editable]:after {
+	content: "editable";
+}
+.htmlEditor > .htmlToolbars .htmlTool[data-global]:after {
+	content: "global";
+}
+
+.htmlEditor > .htmlWrapper {
+	position:absolute;
+	top:54px;
+	bottom:30px;
+	left:0;
+	right:0;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+}
+
+.htmlEditor > .htmlWrapper > .codeSection {
+	width:100%;
+	height:100%;
+	position:relative;
+	display:none;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+}
+
+.htmlEditor > .htmlWrapper > .htmlSection {
+	width:100%;
+	height:100%;
+	position:relative;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+	padding-bottom:10px;
+	margin:0;
+	overflow:auto;
+	background-color:white;
+}
+
+.htmlEditor > .htmlWrapper > .htmlSection * {
+	box-shadow:inset 0px 0px 1px #000;
+	padding:4px;
+	padding-bottom:1px;
+	min-width:100%;
+	width:100%;
+	min-height:40px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	position:relative;
+	display:block;
+	background-color:white;
+	margin-bottom:4px;
+}
+
+.htmlEditor > .htmlWrapper > .htmlSection .__highlight {
+	background:rgba(166, 166, 166, 0.3);
+}
+.htmlEditor > .htmlWrapper > .htmlSection .__select {
+	background:rgba(166, 166, 166, 0.6);
+}
+
+.htmlEditor > .htmlWrapper > .htmlSection > :first-child {
+	margin-top:4px;
+}
+
+.htmlEditor > .htmlWrapper > .htmlSection.dragover, .htmlEditor > .htmlWrapper > .htmlSection *.dragover {
+	background-color:lightblue;
+}
+
+.htmlEditor > .htmlFooter {
+	height:30px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+	border-top: 1px solid rgb(166, 166, 166);
+	padding:3px;
+}
+
+.htmlEditor > .htmlFooter > .htmlPath {
+	width:100%;
+	height:100%;
+	position:relative;
+	background-color:lavender;
+	box-sizing:border-box;
+	-mox-box-sizing:border-box;
+}
+
+.htmlEditor > .htmlFooter > .htmlPath > .pathElement {
+	display:inline-block;
+	padding:0 5px;
+	margin-right: 3px;
+	cursor:default;
+	border:1px solid rgb(166, 166, 166);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	height:23px;
+	line-height:21px;
+}
+
+.htmlEditor > .stylingOptionsWrapper {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.6);
+	position: absolute;
+	z-index: 10;
+	display:none;
+	top:0;
+	left:0;
+}
+
+.htmlEditor > .stylingOptionsWrapper > .stylingOptions {
+	position: relative;
+	width: 80%;
+	min-width: 400px;
+	min-height: 300px;
+	max-height: 500px;
+	height: 60%;
+	ovrflow-y:auto;
+	top: 20%;
+	left: 10%;
+	border: 1px solid rgb(166, 166, 166);
+	background: #fff;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.htmlEditor > .stylingOptionsWrapper > .stylingOptions > .elementCatalogue {
+	width: 30%;
+	position: absolute;
+	height: 100%;
+	background: rgba(166, 166, 166, 0.1);
+	padding: 5px;
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-right: 1px solid rgb(166, 166, 166);
+	overflow:auto;
+}
+
+.htmlEditor > .stylingOptionsWrapper > .stylingOptions > .elementOptions {
+	width: 70%;
+	position: absolute;
+	height: 100%;
+	padding: 5px;
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	right:0;
+	display:none;
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry {
+	border-bottom: 1px solid rgb(166, 166, 166);
+	padding: 3px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 12px;
+	line-height: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry:last-child {
+	border:none;
+}
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry:hover {
+	background:rgba(166, 166, 166, 0.2);
+	cursor:pointer;
+}
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry.selected {
+	background:rgba(166, 166, 166, 0.4);
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry > .entryTag {
+	color: darkmagenta;
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry > .entryType {
+	color: #c00403;
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry > .entryId {
+	color: #0000B8;
+}
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry > .entryId:not(:empty):before {
+	content: "#";
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry > .entryClass {
+	color: chocolate;
+}
+.htmlEditor > .stylingOptionsWrapper .elementCatalogue > .catalogEntry > .entryClass:not(:empty):before {
+	content: ".";
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementOptions > .idOption, .htmlEditor > .stylingOptionsWrapper .elementOptions > .classOption {
+	width: 50%;
+	position: relative;
+	padding: 3px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 12px;
+	display:inline-block;
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementOptions > .idOption > label, .htmlEditor > .stylingOptionsWrapper .elementOptions > .classOption > label {
+	width: 100%;
+	display: block;
+	padding: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.htmlEditor > .stylingOptionsWrapper .elementOptions > .idOption > input, .htmlEditor > .stylingOptionsWrapper .elementOptions > .classOption > input {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}

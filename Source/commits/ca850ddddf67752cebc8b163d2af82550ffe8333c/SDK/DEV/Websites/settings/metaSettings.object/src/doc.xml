@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\settings">
+  <class name="metaSettings" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1420194516</datecreated>
+      <daterevised>1420329035</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Website Meta Settings</title>
+      <description>Manages meta website settings like keywords, description and open graph (meta_settings.xml).</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the website meta settings..</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

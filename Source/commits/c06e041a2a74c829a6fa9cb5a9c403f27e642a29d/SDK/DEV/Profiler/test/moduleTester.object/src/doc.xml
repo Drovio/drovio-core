@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\test">
+  <class name="moduleTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392025074</datecreated>
+      <daterevised>1392025074</daterevised>
+      <extends>\DEV\Profiler\tester</extends>
+      <implements/>
+      <throws/>
+      <title>Module Tester Manager</title>
+      <description>Manages module tester mode.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the tester mode for the given modules.</description>
+          <parameters>
+            <parameter name="$modules" type="mixed" defaultvalue="">
+              <description>An array of modules or empty for all modules.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the tester mode for the given module.</description>
+          <parameters/>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>The tester status for a given module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to activate. Leave empty for default value that includes all modules.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module is on tester mode, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getModules" returntype="array" static="true">
+          <description>Get all active modules.</description>
+          <parameters/>
+          <returndescription>An array of active modules.
+This array may be empty meaning that no module is active or all modules are active for tester mode.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

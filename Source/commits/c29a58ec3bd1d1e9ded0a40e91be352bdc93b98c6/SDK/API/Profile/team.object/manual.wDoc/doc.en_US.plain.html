@@ -1,0 +1,39 @@
+<h1>Team profile manager</h1>
+<p>This class provides access to the team profile information. It works only for the current active team.</p>
+<p>This class is part of the Profile API allowing the developer to read and edit the team information. It also provides access to team public information.</p>
+<h2>Validating current team</h2>
+<p>A simple use of this interface is when we want to check if there is a logged in team for the system and act accordingly:</p>
+<div class="code">
+	<pre>// Use the class
+use \API\Profile\team;
+
+// Check if there is a valid team active, and whether the current account is member of this team
+if (team::validate())
+{
+	// Get team id
+	$teamID = team::getTeamID();
+}
+else
+{
+	// Do something else
+}</pre>
+</div>
+<h2>Getting team information</h2>
+<p>There are many times when we want to display team information to the user for listings or just display the team information:</p>
+<div class="code">
+	<pre>// Use the class
+use \API\Profile\team;
+
+// Get team name and display
+$teamName = account::getTeamName();
+
+// Get team profile image
+$teamInfo = team::info();
+if (isset($teamInfo['profile_image_url']))
+{
+	// Create an image div
+	$img = DOM::create("img");
+	DOM::attr($img, "src", $teamInfo['profile_image_url']);
+	DOM::append($ico, $img);
+}</pre>
+</div>

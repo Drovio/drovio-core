@@ -1,0 +1,34 @@
+.wDoc {
+	overflow: auto;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	font-familly: 'lucida grande',tahoma,verdana,arial,sans-serif;
+	color: #555;
+	font-size: 12px;
+}
+.wDoc h1, .wDoc h2, .wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	color: #444;
+	font-size: initial;
+}
+.wDoc h2, .wDoc h3, .wDoc h4, .wDoc h5, .wDoc h6 {
+	font-weight: normal;
+}
+.wDoc h1 {
+	font-size: 20px;
+}
+.wDoc h2 {
+	font-size: 18px;
+}
+.wDoc h3 {
+	font-size: 16px;
+}
+.wDoc pre {
+	white-space: pre-wrap;
+}
+.wDoc p {
+	font-size: 12px;
+	line-height: 18px;
+	text-indent: 10px;
+	padding: 0px 15px;
+}

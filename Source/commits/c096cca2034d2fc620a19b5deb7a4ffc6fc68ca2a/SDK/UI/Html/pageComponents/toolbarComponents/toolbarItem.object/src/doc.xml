@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents\toolbarComponents">
+  <class name="toolbarItem" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365665940</datecreated>
+      <daterevised>1402469160</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Toolbar Menu Item</title>
+      <description>Builds a toolbar menu item</description>
+      <deprecated>Use \UI\Core\components\toolbar\toolbarItem instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

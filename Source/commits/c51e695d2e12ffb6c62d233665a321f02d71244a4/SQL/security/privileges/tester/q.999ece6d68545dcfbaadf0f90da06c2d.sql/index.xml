@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1164522233"><title>Check Tester Module</title><description>Check if a module can be tested by a tester user</description><access>1</access><attributes><attr id="mid"></attr><attr id="aid"></attr></attributes></query>

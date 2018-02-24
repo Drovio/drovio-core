@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\sdk">
+  <class name="sdkLibrary" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396346027</datecreated>
+      <daterevised>1401175553</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Core SDK Library Manager</title>
+      <description>Handles all operations with core SDK libraries.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RELEASE_PATH">
+        <description>The SDK release path.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="sourceMap" name="sourceMap">
+          <description>The sourceMap object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean">
+          <description>Creates a new SDK library.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Delete a library from the core SDK.
+The library must be empty.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getList" returntype="array">
+          <description>Gets a list of all libraries.</description>
+          <parameters/>
+          <returndescription>An array of all libraries in the SDK.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="array">
+          <description>Get all packages in the given library</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all packages in the library</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="void" static="true">
+          <description>Publishes all the SDK Libraries.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMapfileID" returntype="string" static="true">
+          <description>Get the map file item id for the vcs.</description>
+          <parameters/>
+          <returndescription>The hash item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadSourceMap" returntype="object">
+          <description>Initializes the source map object for getting the source information from the source index.</description>
+          <parameters/>
+          <returndescription>The sourceMap object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMapFile" returntype="void">
+          <description>Updates the source map index file in the vcs.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

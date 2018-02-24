@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\mail\phpmailer">
+  <class name="PHPMailer" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>3</build>
+      <datecreated>1404802387</datecreated>
+      <daterevised>1441275515</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>PHP email creation and transport class</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="STOP_MESSAGE">
+        <description>message only, continue processing</description>
+      </const>
+      <const type="string" name="STOP_CONTINUE">
+        <description>message?, likely ok to continue processing</description>
+      </const>
+      <const type="string" name="STOP_CRITICAL">
+        <description>message, plus full stop, critical error reached</description>
+      </const>
+      <const type="string" name="CRLF">
+        <description>SMTP RFC specified EOL</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public">
+        <prop type="integer" name="Priority">
+          <description>Email priority (1 = High, 3 = Normal, 5 = low).</description>
+        </prop>
+        <prop type="string" name="CharSet">
+          <description>Sets the CharSet of the message.</description>
+        </prop>
+        <prop type="string" name="ContentType">
+          <description>Sets the Content-type of the message.</description>
+        </prop>
+        <prop type="string" name="Encoding">
+          <description>Sets the Encoding of the message. Options for this are "8bit", "7bit", "binary", "base64", and "quoted-printable".</description>
+        </prop>
+        <prop type="string" name="ErrorInfo">
+          <description>Holds the most recent mailer error message.</description>
+        </prop>
+        <prop type="string" name="From">
+          <description>Sets the From email address for the message.</description>
+        </prop>
+        <prop type="string" name="FromName">
+          <description>Sets the From name of the message.</description>
+        </prop>
+        <prop type="string" name="Sender">
+          <description>Sets the Sender email (Return-Path) of the message.  If not empty, will be sent via -f to sendmail or as 'MAIL FROM' in smtp mode.</description>
+        </prop>
+        <prop type="string" name="ReturnPath">
+          <description>Sets the Return-Path of the message.  If empty, it will be set to either From or Sender.</description>
+        </prop>
+        <prop type="string" name="Subject">
+          <description>Sets the Subject of the message.</description>
+        </prop>
+        <prop type="string" name="Body">
+          <description>Sets the Body of the message.  This can be either an HTML or text body. If HTML then run IsHTML(true).</description>
+        </prop>
+        <prop type="string" name="AltBody">
+          <description>Sets the text-only body of the message.  This automatically sets the email to multipart/alternative.  This body can be read by mail clients that do not have HTML email capability such as mutt. Clients that can read HTML will view the normal Body.</description>
+        </prop>
+        <prop type="integer" name="WordWrap">
+          <description>Sets word wrapping on the body of the message to a given number of characters.</description>
+        </prop>
+        <prop type="string" name="Mailer">
+          <description>Method to send mail: ("mail", "sendmail", or "smtp").</description>
+        </prop>
+        <prop type="string" name="Sendmail">
+          <description>Sets the path of the sendmail program.</description>
+        </prop>
+        <prop type="boolean" name="UseSendmailOptions">
+          <description>Determine if mail() uses a fully sendmail compatible MTA that supports sendmail's "-oi -f" options</description>
+        </prop>
+        <prop type="string" name="PluginDir">
+          <description>Path to PHPMailer plugins.  Useful if the SMTP class is in a different directory than the PHP include path.</description>
+        </prop>
+        <prop type="string" name="ConfirmReadingTo">
+          <description>Sets the email address that a reading confirmation will be sent.</description>
+        </prop>
+        <prop type="string" name="Hostname">
+          <description>Sets the hostname to use in Message-Id and Received headers and as default HELO string. If empty, the value returned  by SERVER_NAME is used or 'localhost.localdomain'.</description>
+        </prop>
+        <prop type="string" name="MessageID">
+          <description>Sets the message ID to be used in the Message-Id header. If empty, a unique id will be generated.</description>
+        </prop>
+        <prop type="string" name="MessageDate">
+          <description>Sets the message Date to be used in the Date header. If empty, the current date will be added.</description>
+        </prop>
+        <prop type="string" name="Host">
+          <description>Sets the SMTP hosts. All hosts must be separated by a semicolon.  You can also specify a different port for each host by using this format: [hostname:port] (e.g. "smtp1.example.com:25;smtp2.example.com"). Hosts will be tried in order.</description>
+        </prop>
+        <prop type="integer" name="Port">
+          <description>Sets the default SMTP server port.</description>
+        </prop>
+        <prop type="string" name="Helo">
+          <description>Sets the SMTP HELO of the message (Default is $Hostname).</description>
+        </prop>
+        <prop type="string" name="SMTPSecure">
+          <description>Sets connection prefix. Options are "", "ssl" or "tls"</description>
+        </prop>
+        <prop type="boolean" name="SMTPAuth">
+          <description>Sets SMTP authentication. Utilizes the Username and Password variables.</description>
+        </prop>
+        <prop type="string" name="Username">
+          <description>Sets SMTP username.</description>
+        </prop>
+        <prop type="string" name="Password">
+          <description>Sets SMTP password.</description>
+        </prop>
+        <prop type="string" name="AuthType">
+          <description>Sets SMTP auth type. Options are LOGIN | PLAIN | NTLM  (default LOGIN)</description>
+        </prop>
+        <prop type="string" name="Realm">
+          <description>Sets SMTP realm.</description>
+        </prop>
+        <prop type="string" name="Workstation">
+          <description>Sets SMTP workstation.</description>
+        </prop>
+        <prop type="integer" name="Timeout">
+          <description>Sets the SMTP server timeout in seconds. This function will not work with the win32 version.</description>
+        </prop>
+        <prop type="boolean" name="SMTPKeepAlive">
+          <description>Prevents the SMTP connection from being closed after each mail sending.  If this is set to true then to close the connection requires an explicit call to SmtpClose().</description>
+        </prop>
+        <prop type="boolean" name="SingleTo">
+          <description>Provides the ability to have the TO field process individual emails, instead of sending to entire TO addresses</description>
+        </prop>
+        <prop type="boolean" name="SingleToArray">
+          <description>If SingleTo is true, this provides the array to hold the email addresses</description>
+        </prop>
+        <prop type="string" name="LE">
+          <description>Provides the ability to change the generic line ending. NOTE: The default remains '\n'. We force CRLF where we KNOW it must be used via self::CRLF</description>
+        </prop>
+        <prop type="string" name="DKIM_selector">
+          <description>Used with DKIM Signing required parameter if DKIM is enabled domain selector example domainkey</description>
+        </prop>
+        <prop type="string" name="DKIM_identity">
+          <description>Used with DKIM Signing. Required if DKIM is enabled, in format of email address 'you@yourdomain.com' typically used as the source of the email.</description>
+        </prop>
+        <prop type="string" name="DKIM_passphrase">
+          <description>Used with DKIM Signing. Optional parameter if your private key requires a passphrase.</description>
+        </prop>
+        <prop type="string" name="DKIM_domain">
+          <description>Used with DKIM Singing. Required if DKIM is enabled, in format of email address 'domain.com'.</description>
+        </prop>
+        <prop type="string" name="DKIM_private">
+          <description>Used with DKIM Signing. Required if DKIM is enabled, path to private key file.</description>
+        </prop>
+        <prop type="string" name="action_function" static="true">
+          <description>Callback Action function name. The function that handles the result of the send email action. It is called out by Send() for each email sent.</description>
+        </prop>
+        <prop type="string" name="XMailer">
+          <description>What to use in the X-Mailer header. NULL for default, whitespace for None, or actual string to use</description>
+        </prop>
+      </scope>
+      <scope type="protected">
+        <prop type="string" name="MIMEBody">
+          <description>Stores the complete compiled MIME message body.</description>
+        </prop>
+        <prop type="string" name="MIMEHeader">
+          <description>Stores the complete compiled MIME message headers.</description>
+        </prop>
+        <prop type="string" name="mailHeader">
+          <description>Stores the extra header list which CreateHeader() doesn't fold in</description>
+        </prop>
+        <prop type="smtp" name="smtp">
+          <description>An instance of the SMTP sender class</description>
+        </prop>
+        <prop type="array" name="to">
+          <description>An array of 'to' addresses</description>
+        </prop>
+        <prop type="array" name="cc">
+          <description>An array of 'cc' addresses</description>
+        </prop>
+        <prop type="array" name="bcc">
+          <description>An array of 'bcc' addresses</description>
+        </prop>
+        <prop type="array" name="ReplyTo">
+          <description>An array of reply-to name and address</description>
+        </prop>
+        <prop type="array" name="all_recipients">
+          <description>An array of all kinds of addresses: to, cc, bcc, replyto</description>
+        </prop>
+        <prop type="array" name="attachment">
+          <description>An array of attachments</description>
+        </prop>
+        <prop type="array" name="CustomHeader">
+          <description>An array of custom headers</description>
+        </prop>
+        <prop type="string" name="message_type">
+          <description>The message's MIME type</description>
+        </prop>
+        <prop type="array" name="boundary">
+          <description>An array of MIME boundary strings</description>
+        </prop>
+        <prop type="array" name="language">
+          <description>An array of available languages</description>
+        </prop>
+        <prop type="integer" name="error_count">
+          <description>The number of errors encountered</description>
+        </prop>
+        <prop type="string" name="sign_cert_file">
+          <description>The filename of a DKIM certificate file</description>
+        </prop>
+        <prop type="string" name="sign_key_file">
+          <description>The filename of a DKIM key file</description>
+        </prop>
+        <prop type="string" name="sign_key_pass">
+          <description>The password of a DKIM key</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="IsHTML" returntype="void">
+          <description>Sets message type to HTML.</description>
+          <parameters>
+            <parameter name="$ishtml" type="boolean" defaultvalue="">
+              <description>If true, sets the message type to HTML.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="IsSMTP" returntype="void">
+          <description>Sets Mailer to send message using SMTP.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="IsMail" returntype="void">
+          <description>Sets Mailer to send message using PHP mail() function.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="IsSendmail" returntype="void">
+          <description>Sets Mailer to send message using the $Sendmail program.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="IsQmail" returntype="void">
+          <description>Sets Mailer to send message using the qmail MTA.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddAddress" returntype="boolean">
+          <description>Adds a "To" address.</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The mail address to add.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>A friendly name for the address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if address already used.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="AddCC" returntype="boolean">
+          <description>Adds a "Cc" address.
+Note: this function works with the SMTP mailer on win32, not with the "mail" mailer.</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The mail address to add.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>A friendly name for the address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if address already used.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="AddBCC" returntype="boolean">
+          <description>Adds a "Bcc" address.
+Note: this function works with the SMTP mailer on win32, not with the "mail" mailer.</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The mail address to add.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>A friendly name for the address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if address already used.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="AddReplyTo" returntype="boolean">
+          <description>Adds a "Reply-to" address.</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The mail address to add.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>A friendly name for the address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if address already used.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="SetFrom" returntype="boolean">
+          <description>Set the From and FromName properties</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The mail address to add.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>A friendly name for the address.</description>
+            </parameter>
+            <parameter name="$auto" type="boolean" defaultvalue="">
+              <description>Also set Reply-To and Sender.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if address already used.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="ValidateAddress" returntype="boolean" static="true">
+          <description>Check that a string looks roughly like an email address should.
+Static so it can be used without instantiation, public so people can overload
+Conforms to RFC5322: Uses *correct* regex on which FILTER_VALIDATE_EMAIL is based; So why not use FILTER_VALIDATE_EMAIL? Because it was broken to not allow a@b type valid addresses :(</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The email address to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if address is valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Send" returntype="boolean">
+          <description>Creates message and assigns Mailer. If the message is not sent successfully then it returns false.
+Use the ErrorInfo variable to view description of the error.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="PreSend" returntype="boolean">
+          <description>Prep mail by constructing all message entities</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="PostSend" returntype="boolean">
+          <description>Actual Email transport function
+Send the email via the selected mechanism</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="SmtpConnect" returntype="boolean">
+          <description>Initiates a connection to an SMTP server.</description>
+          <parameters/>
+          <returndescription>True on success, false if the operation failed.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="SmtpClose" returntype="void">
+          <description>Closes the active SMTP session if one exists.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddrAppend" returntype="string">
+          <description>Creates recipient headers.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The address type.</description>
+            </parameter>
+            <parameter name="$addr" type="string" defaultvalue="">
+              <description>The email address.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The recipient's header string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddrFormat" returntype="string">
+          <description>Formats an address correctly.</description>
+          <parameters>
+            <parameter name="$addr" type="string" defaultvalue="">
+              <description>The address to format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The formatted address.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="WrapText" returntype="string">
+          <description>Wraps message for use with mailers that do not automatically perform wrapping and for quoted-printable.</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The message to wrap.</description>
+            </parameter>
+            <parameter name="$length" type="integer" defaultvalue="">
+              <description>The line length to wrap to.</description>
+            </parameter>
+            <parameter name="$qp_mode" type="boolean" defaultvalue="">
+              <description>Whether to run in Quoted-Printable mode</description>
+            </parameter>
+          </parameters>
+          <returndescription>The wrapped text.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="UTF8CharBoundary" returntype="integer">
+          <description>Finds last character boundary prior to maxLength in a utf-8 quoted (printable) encoded string.</description>
+          <parameters>
+            <parameter name="$encodedText" type="string" defaultvalue="">
+              <description>utf-8 QP text</description>
+            </parameter>
+            <parameter name="$maxLength" type="integer" defaultvalue="">
+              <description>Find last character boundary prior to this length.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The max length.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetWordWrap" returntype="void">
+          <description>Set the body wrapping.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="CreateHeader" returntype="void">
+          <description>Assembles message header.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="GetMailMIME" returntype="string">
+          <description>Returns the message MIME.</description>
+          <parameters/>
+          <returndescription>The message's MIME type.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="GetSentMIMEMessage" returntype="string">
+          <description>Gets the MIME message (headers and body).
+Only really valid post PreSend().</description>
+          <parameters/>
+          <returndescription>The MIME message.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="CreateBody" returntype="string">
+          <description>Assembles the message body.</description>
+          <parameters/>
+          <returndescription>The assembled message body or an empty string on failure.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="HeaderLine" returntype="string">
+          <description>Returns a formatted header line.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The header name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The header value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The header line.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="TextLine" returntype="string">
+          <description>Returns a formatted mail line.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The text value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The text line.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddAttachment" returntype="boolean">
+          <description>Adds an attachment from a path on the filesystem.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>Path to the attachment.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Overrides the attachment name.</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>The file encoding.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>File extension (MIME) type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if the file could not be found or accessed.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="GetAttachments" returntype="array">
+          <description>Gets the current array of attachments.</description>
+          <parameters/>
+          <returndescription>An array including all the attachments.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EncodeString" returntype="string">
+          <description>Encodes string to requested format.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>The text to encode</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>The encoding to use; one of 'base64', '7bit', '8bit', 'binary', 'quoted-printable'</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded string or an empty string on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EncodeHeader" returntype="string">
+          <description>Encode a header string to best (shortest) of Q, B, quoted or none.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>The string to encode.</description>
+            </parameter>
+            <parameter name="$position" type="string" defaultvalue="">
+              <description>Where the header is going to be used, see the RFC for what that means.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded header.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="HasMultiBytes" returntype="boolean">
+          <description>Checks if a string contains multibyte characters.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>multi-byte text to wrap encode</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if has multi bytes, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Base64EncodeWrapMB" returntype="string">
+          <description>Correctly encodes and wraps long multibyte strings for mail headers without breaking lines within a character.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>multi-byte text to wrap encode</description>
+            </parameter>
+            <parameter name="$lf" type="string" defaultvalue="">
+              <description>string to use as linefeed/end-of-line</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EncodeQPphp" returntype="string">
+          <description>Encode string to quoted-printable.
+Only uses standard PHP, slow, but will always work</description>
+          <parameters>
+            <parameter name="$input" type="string" defaultvalue="">
+              <description>The string to encode.</description>
+            </parameter>
+            <parameter name="$line_max" type="integer" defaultvalue="">
+              <description>Number of chars allowed on a line before wrapping</description>
+            </parameter>
+            <parameter name="$space_conv" type="boolean" defaultvalue="">
+              <description>Dummy param for compatibility with existing EncodeQP function.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EncodeQP" returntype="string">
+          <description>Encode string to RFC2045 (6.7) quoted-printable format.
+Uses a PHP5 stream filter to do the encoding about 64x faster than the old version.
+Also results in same content as you started with after decoding.</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The string to encode.</description>
+            </parameter>
+            <parameter name="$line_max" type="string" defaultvalue="">
+              <description>Number of chars allowed on a line before wrapping</description>
+            </parameter>
+            <parameter name="$space_conv" type="boolean" defaultvalue="">
+              <description>Dummy param for compatibility with existing EncodeQP function.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EncodeQ" returntype="string">
+          <description>Encode string to q encoding.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>the text to encode</description>
+            </parameter>
+            <parameter name="$position" type="string" defaultvalue="">
+              <description>Where the text is going to be used, see the RFC for what that means.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddStringAttachment" returntype="void">
+          <description>Adds a string or binary attachment (non-filesystem) to the list.
+This method can be used to attach ascii or binary data, such as a BLOB record from a database.</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>String attachment data.</description>
+            </parameter>
+            <parameter name="$filename" type="string" defaultvalue="">
+              <description>Name of the attachment.</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>File encoding (see $Encoding).</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>File extension (MIME) type.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddEmbeddedImage" returntype="boolean">
+          <description>Adds an embedded attachment.  This can include images, sounds, and just about any other document.
+Make sure to set the $type to an image type.
+For JPEG images use "image/jpeg" and for GIF images use "image/gif".</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>Path to the attachment.</description>
+            </parameter>
+            <parameter name="$cid" type="string" defaultvalue="">
+              <description>Content ID of the attachment.  Use this to identify the Id for accessing the image in an HTML form.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Overrides the attachment name.</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>File encoding (see $Encoding).</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>File extension (MIME) type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddStringEmbeddedImage" returntype="boolean">
+          <description>Adds an embedded stringified attachment.
+This can include images, sounds, and just about any other document.
+Make sure to set the $type to an image type. 
+For JPEG images use "image/jpeg" and for GIF images use "image/gif".</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The attachment.</description>
+            </parameter>
+            <parameter name="$cid" type="string" defaultvalue="">
+              <description>Content ID of the attachment.  Use this to identify the Id for accessing the image in an HTML form.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Overrides the attachment name.</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>File encoding (see $Encoding).</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>File extension (MIME) type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="InlineImageExists" returntype="boolean">
+          <description>Checks if an inline attachment is present</description>
+          <parameters/>
+          <returndescription>Returns true if an inline attachment is present, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AttachmentExists" returntype="boolean">
+          <description>Checks if an attachment (non-inline) is present</description>
+          <parameters/>
+          <returndescription>Returns true if an attachment (non-inline) is present, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AlternativeExists" returntype="boolean">
+          <description>Does this message have an alternative body set?</description>
+          <parameters/>
+          <returndescription>True if this message have an alternative body set, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearAddresses" returntype="void">
+          <description>Clears all recipients assigned in the TO array.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearCCs" returntype="void">
+          <description>Clears all recipients assigned in the CC array.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearBCCs" returntype="void">
+          <description>Clears all recipients assigned in the BCC array.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearReplyTos" returntype="void">
+          <description>Clears all recipients assigned in the ReplyTo array.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearAllRecipients" returntype="void">
+          <description>Clears all recipients assigned in the TO, CC and BCC array.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearAttachments" returntype="void">
+          <description>Clears all previously set filesystem, string, and binary attachments.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ClearCustomHeaders" returntype="void">
+          <description>Clears all custom headers.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="RFCDate" returntype="string" static="true">
+          <description>Gets the proper RFC 822 formatted date.</description>
+          <parameters/>
+          <returndescription>Returns the proper RFC 822 formatted date.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="IsError" returntype="boolean">
+          <description>Checks for errors</description>
+          <parameters/>
+          <returndescription>Returns true if an error occurred, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="FixEOL" returntype="string">
+          <description>Changes every end of line from CRLF, CR or LF to $this-&amp;gt;LE.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>String to FixEOL</description>
+            </parameter>
+          </parameters>
+          <returndescription>The fixed string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddCustomHeader" returntype="void">
+          <description>Adds a custom header. $name value can be overloaded to contain both header name and value (name:value)</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>custom header name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>header value</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="MsgHTML" returntype="string">
+          <description>Evaluates the message and returns modifications for inline images and backgrounds</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>Text to be HTML modified</description>
+            </parameter>
+            <parameter name="$basedir" type="string" defaultvalue="">
+              <description>baseline directory for path</description>
+            </parameter>
+          </parameters>
+          <returndescription>The html message.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_mime_types" returntype="string" static="true">
+          <description>Gets the MIME type according to the given extension string.</description>
+          <parameters>
+            <parameter name="$ext" type="string" defaultvalue="">
+              <description>The file extension.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The mime type according to the given extension.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Set (or reset) Class Objects (variables)</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The variable value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SecureHeader" returntype="string">
+          <description>Strips newlines to prevent header injection.</description>
+          <parameters>
+            <parameter name="$str" type="string" defaultvalue="">
+              <description>The header to strip.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The stripped header.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Sign" returntype="void">
+          <description>Set the private key file and password to sign the message.</description>
+          <parameters>
+            <parameter name="$cert_filename" type="string" defaultvalue="">
+              <description>The certificate file name.</description>
+            </parameter>
+            <parameter name="$key_filename" type="string" defaultvalue="">
+              <description>The key file name.</description>
+            </parameter>
+            <parameter name="$key_pass" type="string" defaultvalue="">
+              <description>Password for private key.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="DKIM_QP" returntype="string">
+          <description>Set the private key file and password to sign the message.</description>
+          <parameters>
+            <parameter name="$txt" type="string" defaultvalue="">
+              <description>The message to sign.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The signed message.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="DKIM_Sign" returntype="string">
+          <description>Generate DKIM signature</description>
+          <parameters>
+            <parameter name="$s" type="string" defaultvalue="">
+              <description>The sign's header.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The DKIM signature.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="DKIM_HeaderC" returntype="string">
+          <description>Generate DKIM Canonicalization Header</description>
+          <parameters>
+            <parameter name="$s" type="string" defaultvalue="">
+              <description>The header to parse.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The DKIM canonical header.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="DKIM_BodyC" returntype="string">
+          <description>Generate DKIM Canonicalization Body</description>
+          <parameters>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>The body string.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The canonical body.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="DKIM_Add" returntype="string">
+          <description>Create the DKIM header, body, as new header</description>
+          <parameters>
+            <parameter name="$headers_line" type="string" defaultvalue="">
+              <description>The header lines.</description>
+            </parameter>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The subject.</description>
+            </parameter>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>The body context.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The DKIM contect.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="AddAnAddress" returntype="boolean">
+          <description>Adds an address to one of the recipient arrays.
+Addresses that have been added already return false, but do not throw exceptions</description>
+          <parameters>
+            <parameter name="$kind" type="string" defaultvalue="">
+              <description>One of 'to', 'cc', 'bcc', 'ReplyTo'</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The email address to send to.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The address friendly name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if address already used or invalid in some way.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="SendmailSend" returntype="boolean">
+          <description>Sends mail using the $Sendmail program.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The message headers</description>
+            </parameter>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>The message body</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="MailSend" returntype="boolean">
+          <description>Sends mail using the PHP mail() function.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The message headers</description>
+            </parameter>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>The message body</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="SmtpSend" returntype="boolean">
+          <description>Sends mail via SMTP using PhpSMTP.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The message headers</description>
+            </parameter>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>The message body</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if there is a bad MAIL FROM, RCPT, or DATA input.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="GetBoundary" returntype="string">
+          <description>Gets the start of a message boundary.</description>
+          <parameters>
+            <parameter name="$boundary" type="string" defaultvalue="">
+              <description>The boundary value.</description>
+            </parameter>
+            <parameter name="$charSet" type="string" defaultvalue="">
+              <description>The character set.</description>
+            </parameter>
+            <parameter name="$contentType" type="string" defaultvalue="">
+              <description>The content type.</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>The encoding value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the start of a message boundary.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EndBoundary" returntype="string">
+          <description>Gets the end of a message boundary.</description>
+          <parameters>
+            <parameter name="$boundary" type="string" defaultvalue="">
+              <description>The boundary message.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the end of a message boundary.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetMessageType" returntype="void">
+          <description>Sets the message type.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AttachAll" returntype="string">
+          <description>Attaches all fs, string, and binary attachments to the message.</description>
+          <parameters>
+            <parameter name="$disposition_type" type="string" defaultvalue="">
+              <description>The attachment disposition type.</description>
+            </parameter>
+            <parameter name="$boundary" type="string" defaultvalue="">
+              <description>The boundary value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The attachment string on success, an empty string otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="EncodeFile" returntype="string">
+          <description>Encodes attachment in requested format.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The full path to the file.</description>
+            </parameter>
+            <parameter name="$encoding" type="string" defaultvalue="">
+              <description>The encoding to use; one of 'base64', '7bit', '8bit', 'binary', 'quoted-printable'</description>
+            </parameter>
+          </parameters>
+          <returndescription>The encoded file or an empty string on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetError" returntype="void">
+          <description>Adds the error message to the error container.</description>
+          <parameters>
+            <parameter name="$msg" type="string" defaultvalue="">
+              <description>The error message.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ServerHostname" returntype="string">
+          <description>Gets the server hostname.</description>
+          <parameters/>
+          <returndescription>Returns the server hostname or 'localhost.localdomain' if unknown.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="doCallback" returntype="void">
+          <description>Perform the callback function.</description>
+          <parameters>
+            <parameter name="$isSent" type="boolean" defaultvalue="">
+              <description>Whether the mail is sent.</description>
+            </parameter>
+            <parameter name="$to" type="string" defaultvalue="">
+              <description>The to recipient.</description>
+            </parameter>
+            <parameter name="$cc" type="string" defaultvalue="">
+              <description>The css recipient.</description>
+            </parameter>
+            <parameter name="$bcc" type="string" defaultvalue="">
+              <description>The bcc recipient.</description>
+            </parameter>
+            <parameter name="$subject" type="string" defaultvalue="">
+              <description>The mail subject.</description>
+            </parameter>
+            <parameter name="$body" type="string" defaultvalue="">
+              <description>The mail body.</description>
+            </parameter>
+            <parameter name="$from" type="string" defaultvalue="">
+              <description>The from mail address.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="mail_passthru" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$to" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$subject" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$body" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$header" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$params" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

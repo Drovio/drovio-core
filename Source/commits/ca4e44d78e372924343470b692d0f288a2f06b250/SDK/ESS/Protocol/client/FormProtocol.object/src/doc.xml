@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client">
+  <class name="FormProtocol" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362649080</datecreated>
+      <daterevised>1385366600</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Form Submit and reset Protocol</title>
+      <description>This protocol is used for every form in Redback.
+Defines how the forms will interact with the server and the modules.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="engage" returntype="void" static="true">
+          <description>Attach Module Protocol to form</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form element</description>
+            </parameter>
+            <parameter name="$moduleID" type="int" defaultvalue="">
+              <description>The module to be called upon form POST</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The auxiliary name of the given moduleID</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setAsync" returntype="void" static="true">
+          <description>Sets the form to post async.</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form element.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setPreventUnload" returntype="void" static="true">
+          <description>Sets the form to keep track if there are any changes and prevent the page from unload before posting.</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form to prevent the unload event.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSubmitAction" returntype="void" static="true">
+          <description>Adds a submit action to the server report.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addResetAction" returntype="void" static="true">
+          <description>Adds a reset action to the server report</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

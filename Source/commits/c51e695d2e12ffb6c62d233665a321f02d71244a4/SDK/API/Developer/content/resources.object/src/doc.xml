@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="resources" abstract="" namespace="\content">
+    <info>
+      <version/>
+      <datecreated>1366714020</datecreated>
+      <daterevised>1381143063</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Resource Manager</title>
+      <description>Developer's Resource Manager</description>
+      <deprecated>This class is no longer used.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="PATH">
+        <description>The Developer's Resource Root</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="69221698"><title>Create Domain</title><description>Create a system domain</description><access>1</access><attributes><attr id="name"></attr><attr id="path"></attr></attributes></query>

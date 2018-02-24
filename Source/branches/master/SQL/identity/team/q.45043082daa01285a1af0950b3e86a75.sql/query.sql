@@ -1,0 +1,2 @@
+SELECT *
+FROM ID_team

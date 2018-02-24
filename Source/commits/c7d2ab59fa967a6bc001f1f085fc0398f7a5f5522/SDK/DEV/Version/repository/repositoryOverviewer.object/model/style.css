@@ -1,0 +1,75 @@
+.repositoryOverviewer .headBar {
+	border-bottom: 1px solid rgba(166, 166, 166, 0.5);
+	padding: 5px 20px;
+	padding-left: 75px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: #999;
+	background: rgba(166, 166, 166, 0.15) url(/Library/Media/images/logos/RB_favicon.svg) no-repeat;
+	background-size: 40px 40px;
+	background-position: 20px 8px;
+}
+.repositoryOverviewer .headBar h2 .beta {
+	color: rgb(192, 4, 3);
+	font-size: 11px;
+	font-weight: normal;
+	margin-left: 10px;
+}
+.repositoryOverviewer .devProfile {
+	float: right;
+}
+.repositoryOverviewer .devProfile h4 {
+	line-height: 21px;
+}
+
+.repositoryOverviewer .detailsContainer {
+	width: 1000px;
+	margin: 0 auto;
+}
+.repositoryOverviewer .detailsContainer h3 {
+	color: rgb(192, 4, 3);
+}
+.repositoryOverviewer .detailsContainer .vcsVersion {
+	float: right;
+	color: rgba(166, 166, 166, 1);
+}
+.repositoryOverviewer .detailsContainer .navBar {
+	border: 1px solid rgba(166, 166, 166, 0.5);
+	border-radius: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: auto;
+}
+.repositoryOverviewer .detailsContainer .navBar .navTitle {
+	width: 25%;
+	float: left;
+	display: inline-block;
+	text-align: center;
+	padding: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	cursor: pointer;
+	color: #999;
+	border-bottom: 3px solid rgba(192, 4, 3, 0);
+}
+.repositoryOverviewer .detailsContainer .navBar .navTitle.selected, .repositoryOverviewer .detailsContainer .navBar .navTitle:hover {
+	color: rgb(192, 4, 3);
+	background-color: rgba(166, 166, 166, 0.1);
+	border-bottom: 3px solid rgba(192, 4, 3, 1);
+}
+.repositoryOverviewer .vcsOvExplorer {
+	height: 500px;
+}
+.repositoryOverviewer .vcsSectionContent {
+	padding: 5px;
+}
+.repositoryOverviewer .releaseContainer {
+	border-bottom: 1px solid rgba(166, 166, 166, 1);
+}
+.repositoryOverviewer .commitInfo .cDesc {
+	white-space: pre-wrap;
+	padding: 0px 20px;
+}

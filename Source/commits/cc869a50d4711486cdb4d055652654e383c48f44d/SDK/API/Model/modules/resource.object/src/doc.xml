@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\modules">
+  <class name="resource" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1432712111</datecreated>
+      <daterevised>1432712111</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Modules resource reader.</title>
+      <description>This class is used to allow modules to access resources either from the project either from the production.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="mixed" static="true">
+          <description>Get a modules resource.
+This function will decide whether to load the resource from the project or from the published path.</description>
+          <parameters>
+            <parameter name="$resourcePath" type="string" defaultvalue="">
+              <description>The resource subpath from the resource root folder down.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

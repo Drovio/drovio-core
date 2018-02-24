@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProductHierarchy" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1418653759</datecreated>
+      <daterevised>1418819719</daterevised>
+      <extends>
+        <object>\RTL\Products\globl\globalHierarchy</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company product hierarchy manager</title>
+      <description>Manages company product hierarchy.
+Gets specific company hierarchy (active or not) and adds company specific hierarchy.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Get the company product hierarchy in an array.</description>
+          <parameters>
+            <parameter name="$active" type="boolean" defaultvalue="">
+              <description>If active, the function will return only the company hierarchies that have company products.
+Otherwise, it will return all company hierarchies only.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product hierarchies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean" static="true">
+          <description>Add a new company hierarchy record.</description>
+          <parameters>
+            <parameter name="$parentHierarchy_id" type="integer" defaultvalue="">
+              <description>The parent hierarchy id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The hierarchy title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The hierarchy description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

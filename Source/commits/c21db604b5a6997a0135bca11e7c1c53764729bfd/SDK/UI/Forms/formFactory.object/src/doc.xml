@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\">
+  <class name="formFactory" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1366272360</datecreated>
+      <daterevised>1415976645</daterevised>
+      <extends>
+        <object>\UI\Forms\Form</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Form Item Factory</title>
+      <description>Builds a form and provides a "factory" for building all the necessary form items.
+It implements the FormProtocol.</description>
+      <deprecated>Use \UI\Forms\Form instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

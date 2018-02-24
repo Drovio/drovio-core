@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="resources" namespace="">
+    <info>
+      <version/>
+      <datecreated/>
+      <daterevised/>
+      <extends>
+        <object>\API\Resources\resources</object>
+      </extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \API\Resources\resources instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\units\modules\moduleComponents">
+  <class name="mQuery" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1385828426</datecreated>
+      <daterevised>1396428500</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Query Manager</title>
+      <description>Manages the module's sql queries.</description>
+      <deprecated>Use \DEV\Modules\components\mQuery instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The query id.</description>
+        </prop>
+        <prop type="string" name="queriesRoot">
+          <description>The module's queries directory root.</description>
+        </prop>
+        <prop type="string" name="queryDirectory">
+          <description>The query directory.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The module vcs object.</description>
+        </prop>
+        <prop type="string" name="itemID">
+          <description>The module's itemID.</description>
+        </prop>
+        <prop type="array" name="attributes">
+          <description>The query attributes.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the module query.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The module's vcs manager object.</description>
+            </parameter>
+            <parameter name="$itemID" type="string" defaultvalue="">
+              <description>The module's itemid.</description>
+            </parameter>
+            <parameter name="$queriesRoot" type="string" defaultvalue="">
+              <description>The module's queries root.</description>
+            </parameter>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Creates a new sql query with the given query id.</description>
+          <parameters>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="void">
+          <description>Updates the query's sql and the attributes.</description>
+          <parameters>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The sql query.
+Use attributes in the form of {attr}.</description>
+            </parameter>
+            <parameter name="$attrs" type="array" defaultvalue="">
+              <description>The existing attributes' description.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="string">
+          <description>Gets the query for execution, replacing the attributes with the given values.</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>The array of attributes, given the key as the attribute name and the value as the attribute value.
+They will replace the attributes in the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The executable query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPlainQuery" returntype="string">
+          <description>Gets the sql plain query with no further edit.</description>
+          <parameters/>
+          <returndescription>The sql query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="loadInfo" returntype="void">
+          <description>Loads the information (attributes) from the index.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="updateIndexInfo" returntype="void">
+          <description>Updates the query index with the attributes.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the query's directory name.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The query directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

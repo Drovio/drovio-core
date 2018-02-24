@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\loaders">
+  <class name="ModuleLoader" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1362649380</datecreated>
+      <daterevised>1409902695</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Loader</title>
+      <description>Loads and executes the module with the given id and action (in case of auxiliary)</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="loadingDepth" static="true">
+          <description>The module loading depth.</description>
+        </prop>
+        <prop type="integer" name="moduleID" static="true">
+          <description>The current module id loading.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="string" static="true">
+          <description>Loads and executes a given module</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If empty, get the default module's view name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The module execution output.</returndescription>
+          <throws/>
+        </method>
+        <method name="incLoadingDepth" returntype="void" static="true">
+          <description>Increase the loading depth of modules by one.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="decLoadingDepth" returntype="void" static="true">
+          <description>Decrease the loading depth of modules by one.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLoadingDepth" returntype="integer" static="true">
+          <description>Get the current module's loading depth, starting from 0.</description>
+          <parameters/>
+          <returndescription>The current loading depth.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleResources" returntype="array" static="true">
+          <description>Get all the loading module related resources.</description>
+          <parameters/>
+          <returndescription>An array of resource id as key and as value an array of resource css and js data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getModuleRsrcArray" returntype="array" static="true">
+          <description>Get the given module's resource array including the inner modules.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to get the resource from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of resources by id.
+The array has a key of the resource id and a value of the resource attributes.
+For testers, it includes as extra information the module id and the tester mode.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="checkAuth" returntype="mixed" static="true">
+          <description>Checks if the user can execute given the access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The access status.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True if user can execute, HTMLPageReport content otherwise.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

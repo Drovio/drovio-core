@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\">
+  <class name="BootLoader" abstract="">
+    <info>
+      <version>6.0</version>
+      <build>4</build>
+      <datecreated>1406660053</datecreated>
+      <daterevised>1450206895</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Resource Boot Loader</title>
+      <description>This is the manager class for loading and general handling the system's resources (javascript and css).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RSRC_CSS">
+        <description>The css resource type.</description>
+      </const>
+      <const type="string" name="RSRC_JS">
+        <description>The js resource type.</description>
+      </const>
+      <const type="string" name="RSRC_HD_KEY">
+        <description>The resource header key.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="exportCSS" returntype="boolean" static="true">
+          <description>Export a css package to the project's last version folder.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to publish the resource for.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version to export the css to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exportJS" returntype="boolean" static="true">
+          <description>Export a js package to the project's last version folder.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to publish the resource for.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version to export the js to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadResourceCSS" returntype="string" static="true">
+          <description>Load a css resource from the production.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id of the resource.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The css resource content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadResourceJS" returntype="string" static="true">
+          <description>Load a js resource from the production.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id of the resource.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The js resource content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="resolveURLs" returntype="string" static="true">
+          <description>Resolve all urls in a given content.
+Resolves all global and project-relative urls.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The content to be resolved.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project version for the project-relative urls.</description>
+            </parameter>
+            <parameter name="$protocol" type="string" defaultvalue="">
+              <description>The url protocol to resolve to.
+If empty, the protocol will be taken from the current protocol under which the code is running.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The content with resolved urls.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getResourceUrl" returntype="string" static="true">
+          <description>Get a project's resource url from the library domain from the given version.</description>
+          <parameters>
+            <parameter name="$resourceType" type="string" defaultvalue="">
+              <description>The resource type.
+See class constants.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to get the resource for.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project version.
+If empty, get the latest version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resolved resource url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTesterResourceUrl" returntype="string" static="true">
+          <description>Get a project's tester resource url from the system.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The project specific url resource loader.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project's tester resource url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getResourceArray" returntype="array" static="true">
+          <description>Get a ready resource array for the server report.</description>
+          <parameters>
+            <parameter name="$projectType" type="string" defaultvalue="">
+              <description>The project type.
+It is used to distinguish resources from each other.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$css" type="string" defaultvalue="">
+              <description>The resource css url, if any.</description>
+            </parameter>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The resource js url, if any.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>Whether this is a tester resource url.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A bootloader resource array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRsrcID" returntype="string" static="true">
+          <description>Get the resource hash id.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setResourceAttributes" returntype="void" static="true">
+          <description>Set BootLoader's resource attributes to a given DOMElement resource.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The resource type.
+See class constants.</description>
+            </parameter>
+            <parameter name="$resource" type="DOMelement" defaultvalue="">
+              <description>The resource element from the html document.</description>
+            </parameter>
+            <parameter name="$projectType" type="string" defaultvalue="">
+              <description>The project type to be resource category.</description>
+            </parameter>
+            <parameter name="$rsrcID" type="string" defaultvalue="">
+              <description>The resource id.</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Whether this is a static resource or a dynamic and can be reloaded (for css only).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="exportResource" returntype="boolean" static="true">
+          <description>Export a resource package to the project's last version folder.</description>
+          <parameters>
+            <parameter name="$resourceType" type="string" defaultvalue="">
+              <description>The resource type.
+See class constants.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to export the resource to.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version to export the resource to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadResource" returntype="string" static="true">
+          <description>Load a resource from the production.</description>
+          <parameters>
+            <parameter name="$resourceType" type="string" defaultvalue="">
+              <description>The resource type.
+See class constants.</description>
+            </parameter>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id of the resource.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version to export the resource to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string" static="true">
+          <description>Returns the hashed file name of the resource package.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The file prefix.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The resource type.
+See class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource file name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createIndex" returntype="void" static="true">
+          <description>Creates the resource index in the exported folder.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The exported folder.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

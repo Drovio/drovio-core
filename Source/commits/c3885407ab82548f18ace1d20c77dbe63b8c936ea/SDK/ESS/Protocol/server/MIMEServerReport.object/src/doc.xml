@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="MIMEServerReport" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366113060</datecreated>
+      <daterevised>1406663209</daterevised>
+      <extends>
+        <object>\ESS\Protocol\reports\MIMEServerReport</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Multipurpose Internet Mail Extensions Server Report</title>
+      <description>Returns an http response and performs a download of a server file.</description>
+      <deprecated>Use \ESS\Protocol\reports\MIMEServerReport instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\">
+  <class name="RCPageReport" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1402466873</datecreated>
+      <daterevised>1402466873</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback Core Page Report</title>
+      <description>Generates an automated report notification when there is an access problem or when there is an exception caught during execution.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="reportContent">
+          <description>The report content to send to RCServerReport.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="RCPageReport">
+          <description>Builds the report notification object.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The notification type.</description>
+            </parameter>
+            <parameter name="$msgType" type="string" defaultvalue="">
+              <description>The message type.</description>
+            </parameter>
+            <parameter name="$msgId" type="string" defaultvalue="">
+              <description>The message id to be loaded.</description>
+            </parameter>
+            <parameter name="$extraContext" type="string" defaultvalue="">
+              <description>Any extra context for the notification.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The RCPageReport object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Gets the HTMLServerReport.</description>
+          <parameters/>
+          <returndescription>The HTMLServerReport string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

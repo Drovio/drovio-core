@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\parsers">
+  <class name="phpParser" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395665467</datecreated>
+      <daterevised>1395665568</daterevised>
+      <extends>\API\Developer\content\document\parsers\codeParser</extends>
+      <implements/>
+      <throws/>
+      <title>PHP Parser</title>
+      <description>Php parser helper for handling the language features.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="start_delimiters" static="true">
+          <description>Php code start delimiters.</description>
+        </prop>
+        <prop type="array" name="end_delimiters" static="true">
+          <description>Php code end delimiters.</description>
+        </prop>
+        <prop type="string" name="comment_prefix" static="true">
+          <description>One line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_start" static="true">
+          <description>Multi line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_end" static="true">
+          <description>Multi line comment endfix.</description>
+        </prop>
+        <prop type="string" name="variable_prefix" static="true">
+          <description>Php code variable prefix.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="wrap" returntype="string" static="true">
+          <description>Wraps code to php delimiters.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The code to be wrapped.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The wrapped code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unwrap" returntype="string" static="true">
+          <description>Unwraps code from any tags and delimiters of php.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The code to be unwrapped.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The unwrapped code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="comment" returntype="string" static="true">
+          <description>Creates a php comment.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment's content.</description>
+            </parameter>
+            <parameter name="$multi" type="boolean" defaultvalue="">
+              <description>If true, create a multiline comment.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment created.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="variable" returntype="string" static="true">
+          <description>Creates and returns a php-like variable name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The variable string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getClassCode" returntype="string" static="true">
+          <description>Creates and returns an empty php class with the constructor function.</description>
+          <parameters>
+            <parameter name="$className" type="string" defaultvalue="">
+              <description>The class' name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The class initial code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="syntax" returntype="mixed" static="true">
+          <description>Checks the syntax structure of a php file. Returns TRUE if syntax is ok, the error otherwise.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The php file path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if there is no error, otherwise it returns the error.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

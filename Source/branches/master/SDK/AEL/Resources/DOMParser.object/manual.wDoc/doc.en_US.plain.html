@@ -1,0 +1,53 @@
+<h1>Working with xml files</h1>
+<p>This class provides a simple interface for manipulating xml files.</p>
+<p>All the paths given are application root folder relative, according to parameters given in constructor.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Resources\DOMParser;
+
+// Initialize xml parser in team mode
+$xmlParser = new DOMParser($mode = DOMParser::ACCOUNT_MODE, $shared = FALSE);
+
+// Create a new file with a root
+$root = $xmlParser->create("root_element");
+$xmlParser->append($root);
+$xmlParser->save($path = "/users/", $fileName = "list.xml", $format = FALSE);
+
+
+// Create a new element and append it to root
+$user1 = $xmlParser->create("user", "", "uid1");
+$xmlParser->append($root, $user1);
+
+// Update the file
+$xmlParser->update();</pre>
+</div>
+<h2>Loading existing files and reading through the data</h2>
+<div class="code">
+	<pre>// Loading existing files
+	
+// Initialize xml parser in team mode
+$xmlParser = new DOMParser($mode = DOMParser::ACCOUNT_MODE, $shared = FALSE);
+
+// Load the file we created
+try
+{
+	$xmlParser->load($path = "/users/list.xml", $preserve = FALSE);
+}
+catch (Exception $ex)
+{
+	// File does not exist, we have to create it
+}
+
+// Get all the users as a NodeList using XPath
+$users = $xmlParser->evaluate("//user");
+foreach ($users as $userElement)
+	echo $xmlParser->attr($userElement, "id");
+	
+// Remove user with id 2
+$user2 = $xmlParser->evaluate("//user[@id='uid2']")->item(0);
+$xmlParser->replace($user2, NULL);
+
+// Update the file
+$xmlParser->update();</pre>
+</div>

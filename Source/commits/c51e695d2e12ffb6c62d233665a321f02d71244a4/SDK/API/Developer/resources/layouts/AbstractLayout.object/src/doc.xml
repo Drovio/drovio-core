@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="AbstractLayout" abstract="true" namespace="\resources\layouts">
+    <info>
+      <version/>
+      <datecreated>1365416340</datecreated>
+      <daterevised>1366973245</daterevised>
+      <extends/>
+      <implements/>
+      <title>Layout Object</title>
+      <description>Main for system and ebuilder layout manipulation</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FOLDER_EXT" class="undefined">
+        <description>The layout folder extension.</description>
+      </const>
+      <const type="string" name="STRUCT_ROOT" class="undefined">
+        <description>The root element in strucrure.xml file</description>
+      </const>
+      <const type="string" name="LAYOUT_ROOT_FOLDER">
+        <description>The root resource folder that containig all layouts.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="name">
+          <description>The layout name.</description>
+        </prop>
+        <prop type="string" name="path">
+          <description>The layout structure.  Plain, non whitespace string.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="string" name="folderPath">
+          <description>The current working folder path, with all layouts</description>
+        </prop>
+        <prop type="string" name="layoutType" class="undefined">
+          <description>Holds the layout type name, given by inheritance class</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAllLayouts" returntype="string">
+          <description>Lists all layouts in current folder</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="getStructure" returntype="string">
+          <description>Returns the structure from loaded layout, returns NULL if nothing is loaded</description>
+          <parameters>
+            <parameter name="$format" type="Bolean" defaultvalue="">
+              <description>Indicates whatever it will be returned an xml formated string or a plain, non whitespace string.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="getModel" returntype="string">
+          <description>Returns the model from loaded layout, returns NULL if nothing is loaded</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new layout with the given name.
+Return true if successful , false if not</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="saveModel" returntype="boolean">
+          <description>Save the layout's model in file
+Return true on success, false elsewhere</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The layout's model</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="saveStructure" returntype="boolean">
+          <description>Save the layout's structure in file</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The layout's structure</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Deletes the layout given by name. Removes index.xml entry and deletes layout's folder and files</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters>
+            <parameter name="$filePath" type="string" defaultvalue="">
+              <description>That subfolder that contains the layouts under layout root path</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="initialize" returntype="boolean">
+          <description>Loads the layout given by name
+Return FALSE if layout not found</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Layout name for loading</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

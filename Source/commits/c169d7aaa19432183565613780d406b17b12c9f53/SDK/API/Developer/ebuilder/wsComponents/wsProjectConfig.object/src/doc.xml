@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\ebuilder\wsComponents">
+  <class name="wsProjectConfig" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395089276</datecreated>
+      <daterevised>1395089276</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Project Config</title>
+      <description>Class to set and alter website project's settings</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="filename">
+          <description>The filepath (inclunding name) for the config file</description>
+        </prop>
+        <prop type="DOMParser" name="parser">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The contructor method</description>
+          <parameters>
+            <parameter name="$filename" type="string" defaultvalue="">
+              <description>The filepath (inclunding name) for the config file</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="wsProjectConfig">
+          <description>Returns the object instance</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create the config file</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTemplate" returntype="boolean">
+          <description>Set the value of template option into the file</description>
+          <parameters>
+            <parameter name="$value" type="The template id" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTemplate" returntype="string">
+          <description>Return the template id that is used for the website</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setServer" returntype="void">
+          <description>Set the value of server option into the file</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The server's name</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The server's address</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServer" returntype="array">
+          <description>Get the Server's properties</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The server's name</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array{name, address}</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServerList" returntype="array">
+          <description>A list of all register servers</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="load" returntype="boolean">
+          <description>Loads the file into context ($parser variable)</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

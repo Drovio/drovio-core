@@ -1,0 +1,2 @@
+SHOW COLUMNS
+FROM {table}

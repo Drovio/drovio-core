@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents\htmlComponents">
+  <class name="weblink" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363096860</datecreated>
+      <daterevised>1387188045</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Hyperlink Factory</title>
+      <description>It is used for building fast weblinks</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="object" static="true">
+          <description>Builds the weblink DOMElement</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href attribute value.</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target value.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The content of the hyperlink.
+It can be text or a DOMElement.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The weblink object.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

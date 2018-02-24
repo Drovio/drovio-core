@@ -1,0 +1,20 @@
+.wide {
+	height:100%;
+	position: relative;
+}
+.wide > .dropPool {
+	display: none !important;
+}
+.wide .wideContainer {
+	height: 100%;
+}
+.wide > .result {
+	display: none !important;
+}
+.wide .editorAreaFormContent {
+	height: 100%;
+}
+.wide .editorContainer {
+	height: 100%;
+	padding-left: 29px;
+}

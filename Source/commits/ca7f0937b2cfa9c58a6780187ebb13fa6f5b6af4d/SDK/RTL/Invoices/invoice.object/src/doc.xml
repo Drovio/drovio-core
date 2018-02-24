@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Invoices" namespace="\">
+  <class name="invoice" abstract="">
+    <info>
+      <version>4.0</version>
+      <build>2</build>
+      <datecreated>1442681385</datecreated>
+      <daterevised>1443880097</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company retail invoice manager</title>
+      <description>Manages company invoices.
+This class can create an invoice pending, add products and payments and then close it to print or save.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The retail database connection manager.</description>
+        </prop>
+        <prop type="string" name="invoiceID">
+          <description>The invoice id.</description>
+        </prop>
+        <prop type="boolean" name="valid">
+          <description>Whether the invoice is valid with the current company.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new invoice manager instance.</description>
+          <parameters>
+            <parameter name="$invoiceID" type="string" defaultvalue="">
+              <description>The invoice id to manage.
+Leave empty for new invoices.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new pending invoice in the database.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The invoice type id.
+Use the getInvoiceTypes() function.</description>
+            </parameter>
+            <parameter name="$typeInvoiceID" type="integer" defaultvalue="">
+              <description>The invoice incremental id regarding the invoice type.
+Leave empty for auto increment according to previous value.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$date" type="string" defaultvalue="">
+              <description>The date that the invoice was supposed to be created.
+Leave empty for current date and time.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInvoiceID" returntype="string">
+          <description>Get the current invoice id.
+Usually used after the creation process.</description>
+          <parameters/>
+          <returndescription>The current invoice id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setCustomer" returntype="boolean">
+          <description>Set the invoice customer value.</description>
+          <parameters>
+            <parameter name="$customerID" type="string" defaultvalue="">
+              <description>The customer person id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setSellerInfo" returntype="boolean">
+          <description>Set invoice seller info.</description>
+          <parameters>
+            <parameter name="$sellerInfo" type="string" defaultvalue="">
+              <description>The invoice seller info.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setNotes" returntype="boolean">
+          <description>Set the invoice notes.</description>
+          <parameters>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>The invoice notes.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateExtraInformation" returntype="boolean">
+          <description>Update invoice extra information about shipping, delivery etc.</description>
+          <parameters>
+            <parameter name="$wayOfPayment" type="string" defaultvalue="">
+              <description>Way of payment.</description>
+            </parameter>
+            <parameter name="$purposeOfTrafficking" type="string" defaultvalue="">
+              <description>Purpose of trafficking.</description>
+            </parameter>
+            <parameter name="$wayOfShipping" type="string" defaultvalue="">
+              <description>Way of shipping.</description>
+            </parameter>
+            <parameter name="$shippingLocation" type="string" defaultvalue="">
+              <description>Shipping location.</description>
+            </parameter>
+            <parameter name="$deliveryLocation" type="string" defaultvalue="">
+              <description>Delivery location.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addProduct" returntype="boolean">
+          <description>Add a product to the current invoice.
+If the product already exists, the new amount will be added and the discount will be replaced.</description>
+          <parameters>
+            <parameter name="$productID" type="string" defaultvalue="">
+              <description>The product id.</description>
+            </parameter>
+            <parameter name="$price" type="float" defaultvalue="">
+              <description>The product's price for this invoice.</description>
+            </parameter>
+            <parameter name="$amount" type="float" defaultvalue="">
+              <description>The product amount for this invoice.
+The amount will be added if there the product already exists.</description>
+            </parameter>
+            <parameter name="$discount" type="float" defaultvalue="">
+              <description>The product discount, if any.
+This is value and not percentage over the total price (per 1 amount) after taxes.
+It is 0 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addPayment" returntype="boolean">
+          <description>Add an invoice payment.</description>
+          <parameters>
+            <parameter name="$paymentType" type="integer" defaultvalue="">
+              <description>The payment type id.</description>
+            </parameter>
+            <parameter name="$payment" type="float" defaultvalue="">
+              <description>The payment value.</description>
+            </parameter>
+            <parameter name="$notes" type="string" defaultvalue="">
+              <description>Payment notes (e.x. card bank owner etc.).</description>
+            </parameter>
+            <parameter name="$referenceID" type="string" defaultvalue="">
+              <description>The payment reference id.
+This can be used to reference other invoices for proof of payment.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="close" returntype="boolean">
+          <description>Mark the current invoice as completed and it cannot be further edited.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the invoice from the system.
+The invoice must be editable.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get all invoice information.</description>
+          <parameters>
+            <parameter name="$includeProducts" type="boolean" defaultvalue="">
+              <description>Set whether to include the product list into the information.
+It will be under the 'products' field.
+It is FALSE by default.</description>
+            </parameter>
+            <parameter name="$includePayments" type="boolean" defaultvalue="">
+              <description>Set whether to include the payments into the information.
+It will be under the 'payments' field.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTotalPrice" returntype="float">
+          <description>Get invoice total product price (including taxes).</description>
+          <parameters/>
+          <returndescription>The invoice total price (including taxes).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTotalPayments" returntype="float">
+          <description>Get invoice total payments value.</description>
+          <parameters/>
+          <returndescription>The total payments.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBalance" returntype="float">
+          <description>Get the current invoice balance (total price - payments).</description>
+          <parameters/>
+          <returndescription>The current invoice balance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInvoiceTypes" returntype="array" static="true">
+          <description>Get all invoice types.</description>
+          <parameters>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>Whether to return a compact array of only ids and titles or full type information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all invoice types by id and title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllInvoices" returntype="array" static="true">
+          <description>Get all completed invoices for the given period of time.</description>
+          <parameters>
+            <parameter name="$fromTime" type="integer" defaultvalue="">
+              <description>The from time timestamp.
+Use unix timestamp format.
+It is 0 by default.</description>
+            </parameter>
+            <parameter name="$toTime" type="integer" defaultvalue="">
+              <description>The to time timestamp.
+Use unix timestamp format.
+It is empty by default, which means up until now.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The creator/owner account id for the invoices.
+Leave empty to skip this filter.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all invoices.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllPendingInvoices" returntype="array" static="true">
+          <description>Get all pending (not completed) invoices for the given period of time.</description>
+          <parameters>
+            <parameter name="$fromTime" type="integer" defaultvalue="">
+              <description>The from time timestamp.
+Use unix timestamp format.
+It is 0 by default.</description>
+            </parameter>
+            <parameter name="$toTime" type="integer" defaultvalue="">
+              <description>The to time timestamp.
+Use unix timestamp format.
+It is empty by default, which means up until now.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The creator/owner account id for the invoices.
+Leave empty to skip this filter.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all invoices.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the current invoice is owner by the current company.</description>
+          <parameters>
+            <parameter name="$editable" type="boolean" defaultvalue="">
+              <description>Extra check whether the invoice is editable (not completed) or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

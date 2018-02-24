@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTMLContent" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365154860</datecreated>
+      <daterevised>1402471688</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Content Object</title>
+      <description>Creates an html content object for the modules.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="moduleID">
+          <description>The module's id that loads this object.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the HTMLContent.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id for this content (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="HTMLContent" class="undefined">
+          <description>Build the outer html content container.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element's id.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The element's class.</description>
+            </parameter>
+            <parameter name="$loadHtml" type="boolean" defaultvalue="">
+              <description>Load inner html from external file.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildElement" returntype="HTMLContent">
+          <description>Build the HTMLContent element with an element that the user built.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The user's element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append" returntype="mixed">
+          <description>Appends an element to the HTMLContent root element.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns NULL if the element given is empty. Returns the HTMLContent object otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActionFactory" returntype="ActionFactory">
+          <description>Creates a new Action Factory.</description>
+          <parameters/>
+          <returndescription>Returns an instance of the Action Factory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWeblink" returntype="DOMElement">
+          <description>Builds a weblink and gets the DOMElement.</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The weblink href attribute.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The weblink content. It can be text or DOMElement.</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target attribute. It is "_self" by default.</description>
+            </parameter>
+            <parameter name="$moduleID" type="string" defaultvalue="">
+              <description>The module id for module action.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The view name for the module action, if any.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The DOMElement object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleContainer" returntype="DOMElement" static="true">
+          <description>Builds a module container and returns the DOMElement.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module ID.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module (if any).</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module with GET method during loading.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the module to load at startup (next content.modified).</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id of the module container as a DOM Object.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The outer container.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportContent" returntype="void">
+          <description>Adds a report data content to the server report.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The DOMElement report content.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder of the content (as a css selector).</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The HTMLServerReport replace or append method (use const).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addReportAction" returntype="void">
+          <description>Adds a report action content to the server report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The action type.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The action value (if any, empty by default).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string" class="undefined">
+          <description>Returns the HTML Report for this html content.</description>
+          <parameters>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder to get the content.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The report method. For more information, see HTMLServerReport.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNavigationGroup" returntype="DOMElement" static="true">
+          <description>Gets a DOMElement with a navigation group attribute.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element id.</description>
+            </parameter>
+            <parameter name="$groupSelector" type="string" defaultvalue="">
+              <description>The navigation group selector.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The navigation group DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getParentFilename" returntype="string">
+          <description>Gets the parent's file name.</description>
+          <parameters/>
+          <returndescription>The parent's script name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="loadHTML" returntype="HTMLContent">
+          <description>Loads the html content of the php file.</description>
+          <parameters/>
+          <returndescription>The HTMLContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadLiterals" returntype="HTMLContent">
+          <description>Loads the literals inside the html.</description>
+          <parameters/>
+          <returndescription>The HTMLContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

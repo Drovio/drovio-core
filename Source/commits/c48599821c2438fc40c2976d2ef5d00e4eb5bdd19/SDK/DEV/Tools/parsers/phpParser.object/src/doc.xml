@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\parsers">
+  <class name="phpParser" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>4</build>
+      <datecreated>1395665467</datecreated>
+      <daterevised>1406051201</daterevised>
+      <extends>
+        <object>\DEV\Tools\codeParser</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>PHP Parser</title>
+      <description>Php parser helper for handling the language features.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="start_delimiters" static="true">
+          <description>Php code start delimiters.</description>
+        </prop>
+        <prop type="array" name="end_delimiters" static="true">
+          <description>Php code end delimiters.</description>
+        </prop>
+        <prop type="string" name="comment_prefix" static="true">
+          <description>One line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_start" static="true">
+          <description>Multi line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_end" static="true">
+          <description>Multi line comment endfix.</description>
+        </prop>
+        <prop type="string" name="variable_prefix" static="true">
+          <description>Php code variable prefix.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="wrap" returntype="string" static="true">
+          <description>Wraps code to php delimiters.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The code to be wrapped.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The wrapped code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unwrap" returntype="string" static="true">
+          <description>Unwraps code from any tags and delimiters of php.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The code to be unwrapped.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The unwrapped code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="comment" returntype="string" static="true">
+          <description>Creates a php comment.</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The comment's content.</description>
+            </parameter>
+            <parameter name="$multi" type="boolean" defaultvalue="">
+              <description>If true, create a multiline comment.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment created.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="variable" returntype="string" static="true">
+          <description>Creates and returns a php-like variable name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The variable's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The variable string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getClassCode" returntype="string" static="true">
+          <description>Creates and returns an empty php class with the constructor function.</description>
+          <parameters>
+            <parameter name="$className" type="string" defaultvalue="">
+              <description>The class' name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The class initial code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="syntax" returntype="mixed" static="true">
+          <description>Checks the syntax structure of a php file. Returns TRUE if syntax is ok, the error otherwise.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The php file path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if there is no error, otherwise it returns the error.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUses" returntype="array" static="true">
+          <description>Given a php code, it detects all used classes.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The php code to get the uses from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array that lists all uses. Each entry has the following info...
+path: The use path of the class,
+alias: The alias of the class throughout the script or NULL,
+inactive: If set, it means that this use has been declared but not used in the script.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMetrics" returntype="array" static="true">
+          <description>Parses a string of code and returns the calculated metrics for that piece of code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The code to be parsed in order to calculate its metrics.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array holding the metrics for the specific piece of code as follows...
+LOC: Total lines in the file as received,
+CLOC: Lines of comments,
+SLOC-P: Lines of pure physical code,
+BLOC: Number of blank lines,
+NOF: Number of functions,
+LOC-PF: This is the lines of pure code devided by the number of functions. This approximates to the lines per function.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="normalizeUse" returntype="array" static="true">
+          <description>Normalizes a use path based on a usemap.</description>
+          <parameters>
+            <parameter name="$use" type="string" defaultvalue="">
+              <description>The path of the class being used.</description>
+            </parameter>
+            <parameter name="$useMap" type="array" defaultvalue="">
+              <description>The array of uses that have been defined in a given file. Warning: this array is being altered in a semi-transparent way by the function.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array with the normalized path and an alias where it exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="person" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1388486040</datecreated>
+      <daterevised>1437727763</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Person Class</title>
+      <description>Manages all person data.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="info" static="true">
+          <description>All person info.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Get all person info from the logged in person.</description>
+          <parameters/>
+          <returndescription>An array of all person information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUsername" returntype="string" static="true">
+          <description>Get the person's username.
+If person doesn't have username, return the email.</description>
+          <parameters/>
+          <returndescription>The person's username.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMail" returntype="string" static="true">
+          <description>Get the person's mail.</description>
+          <parameters/>
+          <returndescription>The person's mail.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFirstname" returntype="string" static="true">
+          <description>Get the person's firstname.</description>
+          <parameters/>
+          <returndescription>The person's firstname.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLastname" returntype="string" static="true">
+          <description>Get the person's lastname.</description>
+          <parameters/>
+          <returndescription>The person's lastname.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPersonValue" returntype="string" static="true">
+          <description>Get a person's information value from the database.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The information name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The information value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

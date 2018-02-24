@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\units\modules">
+  <class name="SmoduleGroup" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1383742787</datecreated>
+      <daterevised>1383743016</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Group Manager</title>
+      <description>Gets information about module groups.</description>
+      <deprecated>Soon to be moved.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Gets module group information from database.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of information as fetched from the database.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="trail" returntype="string" static="true">
+          <description>Gets the path to the group folder.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+            <parameter name="$delimiter" type="string" defaultvalue="">
+              <description>The delimiter for the path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The full path to the group folder (including parents).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="dirName" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

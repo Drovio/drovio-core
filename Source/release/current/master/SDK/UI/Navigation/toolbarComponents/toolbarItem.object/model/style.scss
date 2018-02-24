@@ -1,0 +1,12 @@
+.toolbarItem {
+	width: 16px;
+	height: 16px;
+	margin: 6px;
+	cursor: pointer;
+}
+.uiToolbar.orientH > .toolbarItem {
+	float: left;
+}
+.uiToolbar.orientV > .toolbarItem {
+	clear: both;
+}

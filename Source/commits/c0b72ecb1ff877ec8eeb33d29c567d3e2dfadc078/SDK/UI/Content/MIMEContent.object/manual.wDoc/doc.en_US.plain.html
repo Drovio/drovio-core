@@ -1,0 +1,19 @@
+<h1>MIME Async Content Builder</h1>
+<p>MIMEContent is a MIME content builder that allows the developers to deliver asynchronously mime files.</p>
+<div class="code">
+	<pre>// Building a custom MIME content
+	
+// Use the class
+use \UI\Content\MIMEContent;
+
+// Create the object
+$mimeContent = new MIMEContent();
+
+
+// Set the file to be downloaded
+$mimeContent->set("/profile/photos/ph_0123132.jpg", $type = MIMEContent::CONTENT_APP_STREAM);
+
+
+// Get the report immediately to download the file
+return $mimeContent->getReport($suggestedFileName = "", $ignore_user_abort = FALSE, $removeFile = FALSE);</pre>
+</div>

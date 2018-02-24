@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1490764371047"><title>Remove account from userGroup</title><description></description><access></access><attributes><attr id="account_id"></attr><attr id="group_id"></attr></attributes></query>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="logger" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>4</build>
+      <datecreated>1392022356</datecreated>
+      <daterevised>1415869495</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer's System Logger</title>
+      <description>Logs all messages of any priority and category.
+It creates a log viewer.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="EMERGENCY">
+        <description>The system is unusable.</description>
+      </const>
+      <const type="string" name="ALERT">
+        <description>Action must be taken immediately.</description>
+      </const>
+      <const type="string" name="CRITICAL">
+        <description>Critical conditions.</description>
+      </const>
+      <const type="string" name="ERROR">
+        <description>Error conditions.</description>
+      </const>
+      <const type="string" name="WARNING">
+        <description>Warning conditions.</description>
+      </const>
+      <const type="string" name="NOTICE">
+        <description>Normal, but significant condition.</description>
+      </const>
+      <const type="string" name="INFO">
+        <description>Informational message.</description>
+      </const>
+      <const type="string" name="DEBUG">
+        <description>Debugging message.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="logPool" static="true">
+          <description>The array of log messages.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="void" static="true">
+          <description>Logs or inserts a log message to the pool.</description>
+          <parameters>
+            <parameter name="$message" type="string" defaultvalue="">
+              <description>The log short message.</description>
+            </parameter>
+            <parameter name="$priority" type="integer" defaultvalue="">
+              <description>Priority indicator as defined by logger constants</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log long description. It supports arrays and numbers. It is written with print_r().</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="flush" returntype="array" static="true">
+          <description>Gets all log messages as array</description>
+          <parameters/>
+          <returndescription>All log messages from the pool.
+An array where each entry has a log array with its contents.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="clear" returntype="void" static="true">
+          <description>Clears all log messages</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLevelName" returntype="string" static="true">
+          <description>Gets the level name given the level code.</description>
+          <parameters>
+            <parameter name="$level" type="integer" defaultvalue="">
+              <description>The log level code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The level name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLevels" returntype="array" static="true">
+          <description>Get all logger priority levels.</description>
+          <parameters/>
+          <returndescription>An array of levels by level code and description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="void" static="true">
+          <description>Activate logger.</description>
+          <parameters>
+            <parameter name="$priority" type="integer" defaultvalue="">
+              <description>The logger priority. It prevents from logging unwanted messages instead of later filtering the view.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="void" static="true">
+          <description>Deactivate logger.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="mixed" static="true">
+          <description>Gets the status of the logger.</description>
+          <parameters/>
+          <returndescription>For active logger, it returns the priority, otherwise it returns false.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="record" returntype="void" static="true">
+          <description>Record the message given to the log pool. It inserts extra information depending on the log type.</description>
+          <parameters>
+            <parameter name="$messageLog" type="array" defaultvalue="">
+              <description>The messageLog array as created by the log function.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

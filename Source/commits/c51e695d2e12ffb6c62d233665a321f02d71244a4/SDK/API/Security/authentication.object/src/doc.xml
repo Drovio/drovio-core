@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="authentication" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1366714620</datecreated>
+      <daterevised>1375977762</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Authentication manager</title>
+      <description>Authenticates all user's transactions with the system's modules and authorizes.</description>
+      <deprecated>This class is deprecated. Use \API\Security\privileges instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get_access" returntype="string" static="true">
+          <description>Check if a user is authorized to execute a specific policy (module id)
+It returns according to access:
+-onauth: user can execute but needs password (protected)
+-auth: user cannot execute but can request access (public)
+-uc: page is under construction
+-off: page is offline
+-user: user can execute freely
+-user_open: user can execute freely, after authorization took place
+-no: user cannot execute (protected or private)</description>
+          <parameters>
+            <parameter name="$policyID" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$reqAccountID" type="integer" defaultvalue="">
+              <description>The account's id which requests the access</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_innerAccess" returntype="mixed" static="true">
+          <description>Load inner policies access status</description>
+          <parameters>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>An array of module ids</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="can_proceed" returntype="boolean" static="true">
+          <description>Checks if the user can procced with the execution of the code given the access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The access status code.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="_get_keyringStatus" returntype="string" static="true">
+          <description>Return the keyring status of the authentication keychain.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_get_policyStatus" returntype="string" static="true">
+          <description>Returns module status
+Returns:
+-on: if command is online and working
+-off: if command is offline and not working any more
+-uc: if command is under construction and no user has the privilege to</description>
+          <parameters>
+            <parameter name="$policyID" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_clear_session" returntype="boid" static="true">
+          <description>Clear all session variables for policies</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_get_sessionAccess" returntype="string" static="true">
+          <description>Get the session stored policy access.</description>
+          <parameters>
+            <parameter name="$policyId" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="_set_sessionPolicy" returntype="void" static="true">
+          <description>Set session variable access status</description>
+          <parameters>
+            <parameter name="$policyID" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$status" type="string" defaultvalue="">
+              <description>The access status code</description>
+            </parameter>
+            <parameter name="$force" type="boolean" defaultvalue="">
+              <description>If TRUE, forces the rewrite of the variable.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_set_keyring" returntype="void" static="true">
+          <description>Set the authentication keyring value</description>
+          <parameters>
+            <parameter name="$status" type="string" defaultvalue="">
+              <description>The keyring status (activate or deactivate)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_destroy_keyring" returntype="void" static="true">
+          <description>Destroy the keyring variable.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_log_policy" returntype="void" static="true">
+          <description>Log policy executions.</description>
+          <parameters>
+            <parameter name="$policyID" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$allowed" type="boolean" defaultvalue="">
+              <description>Indicator whether the user was allowed to execute the module</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account under which the user executed the module</description>
+            </parameter>
+            <parameter name="$parameters" type="string" defaultvalue="">
+              <description>Any other execution parameters</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="_get_policyAccessStatus" returntype="mixed" static="true">
+          <description>Check if a user is authorized to execute a specific set of commands
+Returns the command as a row if user can execute or needs access
+-user: user or guest can execute freely
+-onauth: user can execute but needs password (protected)
+-auth: user cannot execute but can request access (public)
+-uc: page is under construction
+-off: page is offline
+-no: user cannot execute (protected)</description>
+          <parameters>
+            <parameter name="$dbc" type="interDbConnection" defaultvalue="">
+              <description>The interDbConnection identifier</description>
+            </parameter>
+            <parameter name="$module" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account's id</description>
+            </parameter>
+            <parameter name="$company_id" type="integer" defaultvalue="">
+              <description>The company's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="testerStatus" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$module_id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$access" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

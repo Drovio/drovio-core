@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="ActionFactory" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363090980</datecreated>
+      <daterevised>1382101965</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Action Factory</title>
+      <description>This is the factory for attaching all possible actions to handlers.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setModuleAction" returntype="void" static="true">
+          <description>Attaches the module's GET action.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder container. For more information, see \ESS\Protocol\server\ModuleProtocol.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setPopupAction" returntype="void" static="true">
+          <description>Attaches the popup action.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReportRedirect" returntype="string" static="true">
+          <description>Creates an action report for page redirect.</description>
+          <parameters>
+            <parameter name="$location" type="string" defaultvalue="">
+              <description>The redirect header location.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The subdomain of the location (if any).</description>
+            </parameter>
+            <parameter name="$formSubmit" type="boolean" defaultvalue="">
+              <description>Indicates whether the report will contain a submit action.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportReload" returntype="string" static="true">
+          <description>Creates an action report for page reload.</description>
+          <parameters>
+            <parameter name="$formSubmit" type="boolean" defaultvalue="">
+              <description>Indicates whether the report will contain a submit action.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

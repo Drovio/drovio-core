@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\">
+  <class name="RCPage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1402466593</datecreated>
+      <daterevised>1402467838</daterevised>
+      <extends>\ESS\Templates\HTMLPageTemplate</extends>
+      <implements/>
+      <throws/>
+      <title>Redback Core HTML Page</title>
+      <description>Builds the redback's core spine of an HTML page and sets the events to fill the blanks (modules).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="HOLDER">
+        <description>The page holder.</description>
+      </const>
+      <const type="string" name="REPORT">
+        <description>The page report holder.</description>
+      </const>
+      <const type="string" name="HELPER">
+        <description>The page helper holder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="moduleID">
+          <description>The module that the page will load.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the Redback Core Page with the module id to load.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id that the page will load.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="RCPage" static="true">
+          <description>Builds the spine of the page</description>
+          <parameters>
+            <parameter name="$subdomain" type="string" defaultvalue="">
+              <description>The subdomain where the page will be built.</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be loaded asynchronously or statically.</description>
+            </parameter>
+            <parameter name="$meta" type="boolean" defaultvalue="">
+              <description>Indicates whether to include meta tags in the html head.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="addResources" returntype="void">
+          <description>Adds the initial static resources to the page header (including initial packages for styles and javascript).</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="populateBody" returntype="void" static="true">
+          <description>Builds the body container.</description>
+          <parameters>
+            <parameter name="$subdomain" type="string" defaultvalue="">
+              <description>The subdomain where the page will be built</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Defines whether the module will be loaded asynchronously or statically.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildConnectionToolbar" returntype="void">
+          <description>Builds the page account connection toolbar on the top of the page.</description>
+          <parameters>
+            <parameter name="$mainContainer" type="DOMElement" defaultvalue="">
+              <description>The content container inside the page container.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageTitle" returntype="string">
+          <description>Gets the page title according to access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageNotification" returntype="DOMElement">
+          <description>Creates a page notification for each access status.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The notification element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStaticResources" returntype="void">
+          <description>Sets the page's resources when the page is static.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id from which the resources will be loaded.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

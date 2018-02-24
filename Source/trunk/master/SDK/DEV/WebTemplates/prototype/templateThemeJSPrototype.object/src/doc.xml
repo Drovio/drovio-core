@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\prototype">
+  <class name="templateThemeJSPrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1442509021</datecreated>
+      <daterevised>1442530554</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Template Theme JS Prototype</title>
+      <description>Manages a template javascript object.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="templateTheme">
+          <description>The template theme prototype object.</description>
+        </prop>
+        <prop type="string" name="jsFilePath">
+          <description>The script file path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of the theme js prototype.</description>
+          <parameters>
+            <parameter name="$indexFilePath" type="string" defaultvalue="">
+              <description>The template's index file path.</description>
+            </parameter>
+            <parameter name="$themeFolderPath" type="string" defaultvalue="">
+              <description>The theme folder path.</description>
+            </parameter>
+            <parameter name="$jsFilePath" type="string" defaultvalue="">
+              <description>The script file path.
+Leave empty for new scripts.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new javascript file.</description>
+          <parameters>
+            <parameter name="$jsFilePath" type="string" defaultvalue="">
+              <description>The script file path.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The javascript name.
+This is needed for indexing.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the script's js.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The script's js.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Get the script's js.</description>
+          <parameters/>
+          <returndescription>The script's js.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the script from the theme.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The script's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

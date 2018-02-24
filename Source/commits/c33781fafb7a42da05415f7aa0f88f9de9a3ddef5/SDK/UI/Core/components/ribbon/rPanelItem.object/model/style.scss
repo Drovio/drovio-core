@@ -1,0 +1,36 @@
+.panelItem {
+	& {
+		padding: 5px;
+		border-bottom: 1px solid #CCC;
+		background-color: #FFF;
+		display: block;
+		cursor: pointer;
+		overflow: auto;
+		min-width: 200px;
+		line-height: 16px;
+		color: #545454;
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+	&:hover {
+		background-color: #545454;
+		color: #FFF;
+	}
+	.itemImg {
+		float: left;
+		width: 16px;
+		height: 16px;
+		margin-right: 10px;
+		vertical-align:middle;
+	}
+	.itemImg img {
+		height: inherit;
+		width: inherit;
+	}
+	.itemTitle {
+		overflow: auto;
+		vertical-align: middle;
+		display: block;
+	}
+}

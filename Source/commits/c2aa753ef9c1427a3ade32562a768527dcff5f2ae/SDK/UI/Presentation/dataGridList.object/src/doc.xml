@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\">
+  <class name="dataGridList" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1366878720</datecreated>
+      <daterevised>1419330165</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Data Grid List</title>
+      <description>The Data Grid List can be used to present multiple data in the form of a grid.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>Object's id</description>
+        </prop>
+        <prop type="DOMElement" name="gridList">
+          <description>Object's root list element</description>
+        </prop>
+        <prop type="integer" name="hSize">
+          <description>Horizontal capacity</description>
+        </prop>
+        <prop type="boolean" name="checkable">
+          <description>If set to TRUE a checkbox will be prepended in each row</description>
+        </prop>
+        <prop type="array" name="checkList">
+          <description>A list of the row checkboxes</description>
+        </prop>
+        <prop type="array" name="columnRatios">
+          <description>Requested width ratios for the columns</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The constructor class. Use this to create a dataGridList object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="dataGridList">
+          <description>Creates the dataGridList container</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the container</description>
+            </parameter>
+            <parameter name="$checkable" type="boolean" defaultvalue="">
+              <description>If set to TRUE, the dataGridList will have a checkbox at the start of each row</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The dataGridList object.</returndescription>
+          <throws/>
+        </method>
+        <method name="setColumnRatios" returntype="void">
+          <description>Sets the ratios of the columns widths.</description>
+          <parameters>
+            <parameter name="$ratios" type="array" defaultvalue="">
+              <description>The columns width ratios. Must contain numeric values between 0 and 1 (excluding) or else the requested ratios will be ignored.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setHeaders" returntype="void">
+          <description>Creates headers in the dataGridList</description>
+          <parameters>
+            <parameter name="$headers" type="array" defaultvalue="">
+              <description>An array with the header contents (can be text or DOMElement)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="insertRow" returntype="mixed">
+          <description>Creates a grid row with the specified contents.
+If no arguments are passed, the returned value is FALSE.
+If more than three arguments are passed, those are ignored.</description>
+          <parameters>
+            <parameter name="$contents" type="array" defaultvalue="">
+              <description>Array with text or DOMElements</description>
+            </parameter>
+            <parameter name="$checkName" type="string" defaultvalue="">
+              <description>The name of the row's checkbox (This is ignored if list is not checkable)</description>
+            </parameter>
+            <parameter name="$checked" type="boolean" defaultvalue="">
+              <description>If list is checkable initializes the row's checkbox in $checked state</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="insertSimpleRow" returntype="DOMElement">
+          <description>Assistant function in inserting a row into the dataGridList</description>
+          <parameters>
+            <parameter name="$contents" type="array" defaultvalue="">
+              <description>Array with text or DOMElements</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>Extra classes for styling specific rows (used for header)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The row inserted.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertCheckRow" returntype="void">
+          <description>Assistant function in prepending a checkbox in a row.</description>
+          <parameters>
+            <parameter name="$row" type="DOMElement" defaultvalue="">
+              <description>Row to insert checkbox</description>
+            </parameter>
+            <parameter name="$checkName" type="string" defaultvalue="">
+              <description>Name of the checkbox</description>
+            </parameter>
+            <parameter name="$checked" type="boolean" defaultvalue="">
+              <description>Initial state of the checkbox</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,58 @@
+.uiVCSControl {
+	border: 1px solid rgba(166, 166, 166, 1);
+	width: 900px;
+	background-color: #FFF;
+	overflow: auto;
+}
+.uiVCSControl .header {
+	border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+	color: rgb(100, 100, 100);
+	margin-bottom: 15px;
+}
+.uiVCSControl .header h2 {
+	margin: 5px 10px;
+}
+.uiVCSControl .body {
+	min-height: 20px;
+	padding: 3px;
+}
+.uiVCSControl #commitItems {
+	max-height: 200px;
+}
+.uiVCSControl .uiCommitSummText {
+	border: 1px solid rgba(166, 166, 166, 1);
+	margin-top: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+}
+.uiVCSControl .uiCommitDescText {
+	border: 1px solid rgba(166, 166, 166, 1);
+	margin-top: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	height: 60px;
+	max-height: 100px;
+	resize: vertical;
+}
+.uiVCSControl #commitBtn {
+	float: right;
+}
+
+.uiVCSControl .footer {
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+	background-color: rgba(166, 166, 166, 0.1);
+	padding: 5px;
+	color: rgba(166, 166, 166, 0.5);
+	clear: both;
+}
+.uiVCSControl .footer .closeBtn {
+	float: right;
+	cursor: pointer;
+	color: rgba(166, 166, 166, 1);
+}
+.uiVCSControl h3.vcsHeader {
+	color: rgb(166, 166, 166);
+	margin: 5px 10px;
+}

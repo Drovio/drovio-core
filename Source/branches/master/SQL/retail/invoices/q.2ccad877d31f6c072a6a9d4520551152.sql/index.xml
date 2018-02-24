@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="16711162163164"><title>Create new invoice</title><description></description><access></access><attributes><attr id="cid"></attr><attr id="type"></attr><attr id="time"></attr><attr id="date"></attr><attr id="aid"></attr></attributes></query>

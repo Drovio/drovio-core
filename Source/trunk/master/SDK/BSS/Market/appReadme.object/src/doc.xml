@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="Market" namespace="\">
+  <class name="appReadme" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1436359274</datecreated>
+      <daterevised>1436359274</daterevised>
+      <extends>
+        <object>\DEV\Projects\projectReadme</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Readme document manager.</title>
+      <description>Reads the application's production readme document.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the document manager.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.
+Leave empty for latest version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,106 @@
+.logViewer {
+	position: relative;
+	overflow: auto;
+	border: 1px solid rgba(166, 166, 166, 0.3);
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.logViewer .controls {
+	overflow: auto;
+	border-bottom: 1px solid rgba(166, 166, 166, 0.4);
+	background-color: rgba(166, 166, 166, 0.1);
+	height: 12.5%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.logViewer .controls .filterBox {
+	float: left;
+	padding: 3px;
+	margin: 0px 5px;
+}
+#loggerPriorityForm {
+	float: left;
+}
+.logViewer .controls .clear {
+	float: right;
+	padding: 7px;
+	cursor: pointer;
+	line-height: 15px;
+}
+.logViewer #logData {
+	overflow: auto;
+	padding: 3px;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position: absolute;
+	top: 35px;
+	bottom: 0px;
+	width: 100%;
+}
+.logViewer .logItem {
+	border: 1px solid rgba(166, 166, 166, 0.3);
+	margin: 3px 0px;
+}
+.logViewer .logItem .logHeader {
+	padding: 3px;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.logViewer .logItem .logHeader .exp {
+	float: right;
+}
+.logViewer .logItem.open .logHeader .exp.minus, .logViewer .logItem .logHeader .exp.minus {
+	display: block;
+}
+.logViewer .logItem.open .logHeader .exp.plus, .logViewer .logItem .logHeader .exp.minus {
+	display: none;
+}
+.logViewer .logItem .logDetails {
+	display: none;
+	white-space: pre-wrap;
+}
+.logViewer .logItem.open .logDetails {
+	display: block;
+}
+.logViewer .logItem .logDetails .logDesc, .logViewer .logItem .logDetails .logTrace {
+	overflow: auto;
+}
+.logViewer .logItem.emergency .logHeader {
+	background-color: #C00403;
+	font-weight: bold;
+	color: #FFF;
+}
+.logViewer .logItem.critical .logHeader {
+	background-color: #FFE8D9;
+	font-weight: bold;
+}
+.logViewer .logItem.alert .logHeader {
+	background-color: #FFE8D9;
+	font-weight: bold;
+}
+.logViewer .logItem.error .logHeader {
+	background-color: #F6DAD9;
+}
+.logViewer .logItem.warning .logHeader {
+	background-color: #FFE8D9;
+}
+.logViewer .logItem.notice .logHeader {
+	background-color: #D9E8F6;
+}
+.logViewer .logItem.info .logHeader {
+	background-color: #D9E8F6;
+}
+.logViewer .logItem.debug .logHeader {
+	background-color: #ECF5E4;
+}
+
+.logViewer .logItem .traceitem > span{
+	display: block;
+}
+.logViewer .loggerPool {
+	display: none;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\server">
+  <class name="AsCoProtocol" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1362640680</datecreated>
+      <daterevised>1406656583</daterevised>
+      <extends>
+        <object>\ESS\Protocol\AsCoProtocol</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Asynchronous Communication Protocol</title>
+      <description>Responsible class (in Javascript) for handling all communication protocols with the server.</description>
+      <deprecated>Use \ESS\Protocol\AsCoProtocol instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

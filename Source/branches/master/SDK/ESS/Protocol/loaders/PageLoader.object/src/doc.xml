@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\loaders">
+  <class name="PageLoader" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1362649320</datecreated>
+      <daterevised>1424170335</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Page Loader</title>
+      <description>Loads a system's page according to page settings and parameters. It attaches the module receptor.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="void" static="true">
+          <description>Loads a page with the defined module</description>
+          <parameters>
+            <parameter name="$pageID" type="int" defaultvalue="">
+              <description>The page's id from the database.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="28348777353962"><title>Add an invoice payment</title><description></description><access></access><attributes><attr id="iid"></attr><attr id="type"></attr><attr id="payment"></attr><attr id="notes"></attr><attr id="ref"></attr></attributes></query>

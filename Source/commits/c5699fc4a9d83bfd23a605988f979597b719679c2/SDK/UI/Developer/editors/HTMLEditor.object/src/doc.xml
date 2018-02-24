@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="HTMLEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1410181742</datecreated>
+      <daterevised>1410181742</daterevised>
+      <extends>
+        <object>\UI\Developer\editors\CSSEditor</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>WYSIWYG HTML Editor.</title>
+      <description>A simple HTML Editor.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

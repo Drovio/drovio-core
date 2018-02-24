@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\">
+  <class name="HttpResponse" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1406661639</datecreated>
+      <daterevised>1415194224</daterevised>
+      <extends>
+        <object>\ESS\Protocol\http\HTTPResponse</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTTP Response Handler</title>
+      <description>Manages and adapts the http response according to redback rules.</description>
+      <deprecated>Use \ESS\Protocol\http\HTTPResponse instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

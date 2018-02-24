@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents">
+  <class name="HTMLNavToolbar" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365145320</datecreated>
+      <daterevised>1402467395</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Navigation Toolbar</title>
+      <description>Builds the system's top navigation toolbar</description>
+      <deprecated>Use \UI\Core\components\RNavToolbar instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

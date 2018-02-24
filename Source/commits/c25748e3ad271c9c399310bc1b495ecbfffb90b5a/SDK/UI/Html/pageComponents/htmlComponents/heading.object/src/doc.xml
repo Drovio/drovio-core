@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents\htmlComponents">
+  <class name="heading" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363096440</datecreated>
+      <daterevised>1402393205</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Header Factory</title>
+      <description>Builds headers.</description>
+      <deprecated>No longer needed and used.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="DOMElement" static="true">
+          <description>Creates a header with the given size</description>
+          <parameters>
+            <parameter name="$size" type="integer" defaultvalue="">
+              <description>The header size, must be numeric and from 1 to 7.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The header's content.
+It can be string or DOMElement.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

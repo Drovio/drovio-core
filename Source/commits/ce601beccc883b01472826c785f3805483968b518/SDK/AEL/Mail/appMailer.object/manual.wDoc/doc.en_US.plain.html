@@ -1,0 +1,32 @@
+<h1>Application Mailer</h1>
+<p>Using this application mailer it is easy to send email using the mailgun API.</p>
+<p>You can use this class to send mail in two modes:</p>
+<ul>
+	<li><b>- Application Mode</b></li>
+	<li><b>- Team Mode</b></li>
+</ul>
+<h2>Application Mode</h2>
+<p>When using application mode for the mailer, the from address will be have the following format:</p>
+<div class="code">
+	<pre>Account Title &lt;[username]@[application_name].apps.drov.io&gt;</pre>
+</div>
+<h2>Team Mode</h2>
+<p>When using team mode for the mailer, the from address will be have the following format:</p>
+<div class="code">
+	<pre>Account Title &lt;[username]@[team_name].drov.io&gt;</pre>
+</div>
+<h2>Example</h2>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Mail\appMailer;
+
+// Create an appmailer instance in application mode
+$appMail = new appMailer(appMailer::MODE_APP);
+
+// Add recipient
+$appMail-&gt;addRecipient("john.doe@example.com");
+
+// Send the email
+$response = $appMail-&gt;send("Mail Subject", "Mail Content!", appMailer::CONTENT_TXT);</pre>
+</div>
+<p>This class is part of the premium SDK.</p>

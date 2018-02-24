@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\">
+  <class name="appSettings" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1444087790</datecreated>
+      <daterevised>1444087790</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application settings manager</title>
+      <description>Manages settings for an application.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ACCOUNT_MODE">
+        <description>The account settings mode.</description>
+      </const>
+      <const type="integer" name="TEAM_MODE">
+        <description>The team settings mode.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the settings manager.</description>
+          <parameters>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The settings mode.
+See class constants for options.
+It is in account mode by default.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, the appSettings will have access to the shared application data folder.
+It is FALSE by default.</description>
+            </parameter>
+            <parameter name="$settingsFolder" type="string" defaultvalue="">
+              <description>The settings' file folder path.
+Default value is '/Settings/'.</description>
+            </parameter>
+            <parameter name="$filename" type="string" defaultvalue="">
+              <description>The settings file name.
+Default value is 'Settings'.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

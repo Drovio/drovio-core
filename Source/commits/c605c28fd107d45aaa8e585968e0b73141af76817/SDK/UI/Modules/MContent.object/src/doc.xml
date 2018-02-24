@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Modules" namespace="\">
+  <class name="MContent" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1403516046</datecreated>
+      <daterevised>1432210083</daterevised>
+      <extends>
+        <object>\UI\Content\HTMLContent</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Module Content builder</title>
+      <description>Builds a module content with a specified id and class.
+It loads module's html and can parse module's literals.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="moduleID">
+          <description>The module's id that loads this object.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the Module Content object.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id for this content (if any).
+Empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="MContent">
+          <description>Build the outer html content container.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element's id. Empty by default.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The element's class. Empty by default.</description>
+            </parameter>
+            <parameter name="$loadHTML" type="boolean" defaultvalue="">
+              <description>Indicator whether to load html from the designer file.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The MContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActionFactory" returntype="ActionFactory">
+          <description>Creates a new Action Factory instance.</description>
+          <parameters/>
+          <returndescription>An instance of the Action Factory object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleContainer" returntype="DOMElement" static="true">
+          <description>Builds an async module container and returns the DOMElement.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module ID to load async.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name for the module action, if any.
+If empty, get the default module view.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module with GET method during loading.
+It is an array (attrName =&amp;gt; attrValue)</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the module to load at startup (next content.modified).</description>
+            </parameter>
+            <parameter name="$containerID" type="string" defaultvalue="">
+              <description>The id attribute of the module container DOM Object.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>Set the page loading indicator.</description>
+            </parameter>
+            <parameter name="$preload" type="boolean" defaultvalue="">
+              <description>Set the container to preload the content synchronously.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The outer module receiver container.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadView" returntype="mixed">
+          <description>Load a module view.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to load.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name to load.
+If empty, get the module view that match the module's name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module view return content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWeblink" returntype="DOMElement">
+          <description>Builds an html weblink and adds a module action to it, if any.</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The weblink href attribute.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The weblink content.
+It can be text or DOMElement.</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target attribute. It is "_self" by default.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id for module action.
+This can be used to load a page module async and redirect.
+It can be used only for urls of the same subdomain.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name for the module action, if any.
+If empty, get the default module view.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module as name =&amp;gt; value.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The weblink extra class attribute.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The DOMElement object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="mixed">
+          <description>Returns the HTML Report for this html content.</description>
+          <parameters>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder to put the content to.
+It is a css selector.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>The report method.
+For more information, see HTMLServerReport.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The html server report output or the module output if it is an internal call.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="loadHTML" returntype="MContent">
+          <description>Loads the html content of the view.
+It resolves all the resource urls properly.</description>
+          <parameters/>
+          <returndescription>The MContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadLiterals" returntype="MContent">
+          <description>Loads module's literals in the designer's html file.</description>
+          <parameters/>
+          <returndescription>The MContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getParentFilename" returntype="string">
+          <description>Gets the parent's filename for loading the html from external file.</description>
+          <parameters/>
+          <returndescription>The parent script name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="setModuleResource" returntype="void">
+          <description>Adds a header to the report including all the module resources (css and js) of the loading module and the connected  to this.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

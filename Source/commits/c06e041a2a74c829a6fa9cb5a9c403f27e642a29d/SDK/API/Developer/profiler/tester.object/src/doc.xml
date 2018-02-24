@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="tester" abstract="true" namespace="">
+    <info>
+      <version/>
+      <datecreated>1364471100</datecreated>
+      <daterevised>1392023798</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Tester Profile</title>
+      <description>Manages all the testing configuration.</description>
+      <deprecated>Use \DEV\Profiler\tester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Comm" namespace="\mail">
+  <class name="mailer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1404727608</datecreated>
+      <daterevised>1420973752</daterevised>
+      <extends>
+        <object>\API\Comm\mail\mailer</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback mailer</title>
+      <description>This class is the main handler for sending mail messages from the redback.gr mail server.
+It supports the predefined accounts such as support, info, admin and no-reply</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="SEND">
+        <description>The send mode operation for the mailer.</description>
+      </const>
+      <const type="string" name="RCVE">
+        <description>The receive mode operation for the mailer.</description>
+      </const>
+      <const type="string" name="BOTH">
+        <description>This supports both send and receive modes for mailer.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.
+Initializes the mailer object.</description>
+          <parameters>
+            <parameter name="$account" type="string" defaultvalue="">
+              <description>The email login account name, which credentials will be used for class interaction.</description>
+            </parameter>
+            <parameter name="$mode" type="string" defaultvalue="">
+              <description>The type of configuration set.
+SEND: to enable send mail options.
+RCVE: to enable receive mail options
+BOTH: to enable both, send and receive mail options.
+
+Use class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadConfiguration" returntype="array">
+          <description>Load the email configuration credentials for the given account name.</description>
+          <parameters>
+            <parameter name="$account" type="string" defaultvalue="">
+              <description>The mail account name to load the configuration.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account configuration settings as parsed from the settings file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

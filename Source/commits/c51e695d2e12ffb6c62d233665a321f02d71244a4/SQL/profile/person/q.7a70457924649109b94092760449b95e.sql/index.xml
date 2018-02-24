@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="120297203"><title>Get Addresses</title><description>Get all the addresses of a person</description><access>1</access><attributes><attr id="uid"></attr></attributes></query>

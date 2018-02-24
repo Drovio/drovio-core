@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="packageIndex" abstract="" namespace="\components\prime\indexing">
+    <info>
+      <version/>
+      <datecreated>1374576947</datecreated>
+      <daterevised>1374576947</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Library package index manager.</title>
+      <description>Manages all package indexing.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="INDEX_FILE">
+        <description>The index filename.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="createMapIndex" returntype="boolean" static="true">
+          <description>Creates the package index.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createReleaseIndex" returntype="boolean" static="true">
+          <description>Creates the package release index.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addLibraryEntry" returntype="boolean" static="true">
+          <description>Adds a package entry to the library index file.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createNSIndex" returntype="void" static="true">
+          <description>Creates a namespace index.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="array" static="true">
+          <description>Returns all namespaces in a given package.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all namespaces.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageObjects" returntype="array" static="true">
+          <description>Gets all objects in a given package.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of objects (including their info [title, name, lib, pkg, ns]).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSObjects" returntype="array" static="true">
+          <description>Gets all objects in a given namespace.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of objects (including their info [title, name, import(namespace)]).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleasePackageObjects" returntype="array" static="true">
+          <description>Gets all released objects in a given package.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of object names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectReleaseEntry" returntype="boolean" static="true">
+          <description>Adds an object entry to the release package index.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The mapping path.</description>
+            </parameter>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

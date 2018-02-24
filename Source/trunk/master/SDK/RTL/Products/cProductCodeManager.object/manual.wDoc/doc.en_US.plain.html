@@ -1,0 +1,69 @@
+<h1>Retail product code manager</h1>
+<p>Every product can have many different codes including EAN, UPC etc. but only one code per type. So, a product can have only one EAN code and one UPC. Product codes are being used only as reference and can change any time. However, a code is considered the identity of the product, so changing a code should happen only when mistakes happen.</p>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProduct;
+use \RTL\Products\cProductCodeManager;
+
+// Get product id
+$productID = engine::getVar("id");
+
+// Create an empty instance
+$codeManager = new cProductCodeManager($productID);
+
+// Set a new product code
+$codeManager-&gt;set($productCodeType = 1, $productCode = "446516543126542", $expirationTime = "");
+
+
+// To update a product code, we will call the same function as above
+// This will see that there is a code of the same type and it will update
+$codeManager-&gt;set($productCodeType = 1, $productCode = "446516543126742", $expirationTime = "");
+
+
+// Remove a code from the database
+// This action cannot be undone
+$codeManager-&gt;remove($productCodeType = 2);</pre>
+</div>
+<h2>Getting all product codes</h2>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProduct;
+use \RTL\Products\cProductCodeManager;
+
+// Get product id
+$productID = engine::getVar("id");
+
+// Get all product codes
+$codeManager = new cProductCodeManager($productID);
+$codes = $codeManager-&gt;getAllCodes();
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [product_id] =&gt; "1_1"
+            [type_id] =&gt; "1"
+            [code] =&gt; "446516543126742"
+            [expiration_time] =&gt; 
+        )
+)</pre>
+</div>
+<h2>Select a product code type</h2>
+<p>When creating or updating a product code, we need to provide a code type. This class can provide us with a list of all code types that the SDK supports:</p>
+<div class="code">
+	<pre>// Use classes
+use \RTL\Products\cProductCodeManager;
+
+// Get all code types
+$types = new cProductCodeManager::getCodeTypes();
+
+// The above should return something like this:
+// It is: key =&gt; title
+Array
+(
+    [0] =&gt; "EAN"
+    [1] =&gt; "UPC"
+    [2] =&gt; "ISBN"
+)</pre>
+</div>

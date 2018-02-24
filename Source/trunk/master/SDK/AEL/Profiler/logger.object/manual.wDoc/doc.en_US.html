@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Application logging</h1>
+<p>Although the platform does not have a debugging environment with direct access to the server, there are tools that help log and debug messages whithout interrupting the normal flow of the application. So, instead of using the network in developer tools and watching the output of the view (echoing the debug messages), you can use logger to log messages and access them through the developer control panel on the toolbar.</p>
+<h3>Usage Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Profiler\logger;
+
+// Log a simple message
+logger::getInstance()-&gt;log("This is a simple debug log message", $level = logger::DEBUG);
+
+// We can create more permanent logs and even write them to file logs (this is done automatically above one level)
+logger::getInstance()-&gt;log("The view will throw this exception because something went really wrong!", $level = logger::ERROR);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

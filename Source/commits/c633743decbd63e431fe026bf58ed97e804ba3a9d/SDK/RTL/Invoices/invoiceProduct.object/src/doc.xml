@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Invoices" namespace="\">
+  <class name="invoiceProduct" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1442662492</datecreated>
+      <daterevised>1442678945</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Invoice Product Manager</title>
+      <description>Manages products that are part of an invoice.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The retail database connection manager.</description>
+        </prop>
+        <prop type="string" name="invoiceID">
+          <description>The invoice id.</description>
+        </prop>
+        <prop type="string" name="productID">
+          <description>The product id.</description>
+        </prop>
+        <prop type="boolean" name="valid">
+          <description>Whether the invoice is valid with the current company and it is not closed.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of the invoice product manager.</description>
+          <parameters>
+            <parameter name="$invoiceID" type="string" defaultvalue="">
+              <description>The invoice reference id.</description>
+            </parameter>
+            <parameter name="$productID" type="string" defaultvalue="">
+              <description>The product id.
+Leave empty to add new products.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Add a new product into the invoice.
+If you wish to change the product's info, call update().</description>
+          <parameters>
+            <parameter name="$productID" type="string" defaultvalue="">
+              <description>The product id to add.</description>
+            </parameter>
+            <parameter name="$price" type="float" defaultvalue="">
+              <description>The product's price.</description>
+            </parameter>
+            <parameter name="$amount" type="float" defaultvalue="">
+              <description>The product amount.
+It is 1 by default.</description>
+            </parameter>
+            <parameter name="$discount" type="float" defaultvalue="">
+              <description>The product discount, if any.
+This is value and not percentage over the total price (per 1 amount) after taxes.
+It is 0 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the product already exists in the invoice.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove a product from an invoice.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update a product into an invoice (amount, discount, price).</description>
+          <parameters>
+            <parameter name="$price" type="float" defaultvalue="">
+              <description>The product's price.</description>
+            </parameter>
+            <parameter name="$amount" type="float" defaultvalue="">
+              <description>The product amount.
+It is 1 by default.</description>
+            </parameter>
+            <parameter name="$discount" type="float" defaultvalue="">
+              <description>The product discount, if any.
+This is value and not percentage over the total price (per 1 amount) after taxes.
+It is 0 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get the invoice product info.</description>
+          <parameters/>
+          <returndescription>Invoice product info including title, amount, price, discount etc.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllProducts" returntype="array">
+          <description>Get all invoice products.</description>
+          <parameters/>
+          <returndescription>An array of all invoice product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the current invoice is owned by the current team.</description>
+          <parameters>
+            <parameter name="$editable" type="boolean" defaultvalue="">
+              <description>Extra check whether the invoice is editable (not completed) or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

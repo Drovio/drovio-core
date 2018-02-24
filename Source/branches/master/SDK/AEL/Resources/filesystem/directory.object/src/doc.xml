@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\filesystem">
+  <class name="directory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1430815200</datecreated>
+      <daterevised>1440847140</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application directory manager.</title>
+      <description>Handles application directories.
+Adds extra functions like getting directory contents and other.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ACCOUNT_MODE">
+        <description>The account directory mode.</description>
+      </const>
+      <const type="integer" name="TEAM_MODE">
+        <description>The team directory mode.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="mode">
+          <description>The directory mode for the class instance.</description>
+        </prop>
+        <prop type="boolean" name="shared">
+          <description>Shared or private application data.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of an application directory manager.</description>
+          <parameters>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The directory mode.
+See class constants for options.
+It is in account mode by default.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, the directory class will have access to the shared application data folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContentList" returntype="array">
+          <description>Get directory content list.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Whether to include hidden files (files that start with a dot) in the results.</description>
+            </parameter>
+            <parameter name="$includeDotFolders" type="boolean" defaultvalue="">
+              <description>Whether to include dot folders ('.', '..') in the results.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all the contents of a directory.
+['dirs'] for directories
+['files'] for files</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContentDetails" returntype="array">
+          <description>Get directory contents in details.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Whether to include hidden files (files that start with a dot) in the results.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns all the content details of a folder in an array:
+['dirs'] for directories
+['files'] for files</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isEmpty" returntype="void">
+          <description>Checks if a directory is empty.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the directory is empty, false otherwise.
+It returns NULL if an error occurred or the directory doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPath" returntype="string">
+          <description>Get the root folder for the object.</description>
+          <parameters/>
+          <returndescription>The root folder, according to mode and shared variable.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

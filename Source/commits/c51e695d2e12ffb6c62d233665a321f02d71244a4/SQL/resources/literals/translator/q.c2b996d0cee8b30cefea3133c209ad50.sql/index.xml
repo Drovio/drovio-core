@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1180496398"><title>Revoke Vote Translation</title><description>Set a null translation vote. Remove the vote completely.</description><access>1</access><attributes><attr id="translation_id"></attr><attr id="translator_id"></attr></attributes></query>

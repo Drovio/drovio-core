@@ -1,0 +1,65 @@
+<h1>Global DOM Handler</h1>
+<p>In Redback we build dynamic html using DOM in the server side because it provides flexibility, no syntax errors and handling of the entire Document at any part of the code. For this reason, we have created a global object that interacts with the Document and it is able to create new elements, insert them to the Document, perform XPath queries to search for specific elements and even remove or replace other elements.</p>
+<p>The DOM class offers an interface to create new elements in a single line providing content and the most common attributes. DOM can add data attributes given an array or even handle the inner html. Let us see some examples:</p>
+<div class="code">
+	<pre>// By the moment our code is running, there is an initialized DOMDocument in memory
+	
+// Create a new div element #div_id.div_class
+$div = DOM::create($tag = "div", $content = "", $id = "div_id", $class = "div_class");
+
+// Create a h1 title and append it to the previous div
+$title = DOM::create($tag = "h1", $content = "This is the title.", $id = "", $class = "title");
+DOM::append($div, $title);
+
+// We can set the content of the element to be another element for less lines of code
+$sub_content = DOM::create($tag = "span", $content = "This is the subtitle.", $id = "", $class = "subtitle_content");
+$subtitle = DOM::create($tag = "h2", $sub_content, $id = "", $class = "subtitle");
+DOM::append($div, $subtitle);
+
+
+// We can search for a specific element
+// The search can be done only for elements that are appended to the Document
+$subtitle_content = DOM::evaluate("//h2[@class='subtitle']/*[@class='subtitle_content']")->item(0); // This will return NULL
+
+// But if we append the div to the Document
+DOM::append($div);
+$subtitle_content = DOM::evaluate("//h2[@class='subtitle']/*[@class='subtitle_content']")->item(0); // This will return the DOMElement
+
+
+// Adding data attributes just made easy
+// Create the data array
+$data = array();
+$data['id'] = "user_id";
+$data['name'] = "user_name";
+
+// (This is an inherited function from the DOMPrototype)
+DOM::data($div, $name = "user-info", $data);</pre>
+</div>
+<h3>Tips and Tricks</h3>
+<p>The DOM interface allows the user to create html in any way they want. However, this sometimes can be a little tricky, using special entities and other stuff.</p>
+<div class="code">
+	<pre>// Special entities must be inserted with innerHTML() and not as content
+	
+// Creating a div with htmlentities
+// The following line will not encode the html entities.
+$div = DOM::create($tag = "div", $content = "This is a bull: &_bull;", $id = "div_id", $class = "div_class");
+
+// If we would like to insert entities we would do:
+$div = DOM::create($tag = "div", $content = "", $id = "div_id", $class = "div_class");
+$html = "This is a bull: &_bull;";
+DOM::innerHTML($div, $html);
+
+// P.S. I use the &_bull; and not the correct one for presentation code reasons</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>DOM also provides a javascript interface for building DOMElements faster, using jQuery the platform provides. We can create elements in a single row:</p>
+<div class="code">
+	<pre>// Create a simple div
+// Returns a jQuery object
+// DOM.create(tag, context, id, itemClass);
+var div = DOM.create("div", "This is the div content", "div_id", "div_class");
+
+// Append to body
+// div is a jQuery object
+jq("body").append(div);</pre>
+</div>

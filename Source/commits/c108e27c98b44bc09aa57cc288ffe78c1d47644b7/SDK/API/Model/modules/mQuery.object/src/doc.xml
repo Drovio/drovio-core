@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\modules">
+  <class name="mQuery" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1399291883</datecreated>
+      <daterevised>1399291883</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Query Manager</title>
+      <description>Loads the module sql query from the module's deployed folder.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="moduleID">
+          <description>The module id.</description>
+        </prop>
+        <prop type="string" name="queryName">
+          <description>The module's query name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.
+Initializes the object.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$queryName" type="string" defaultvalue="">
+              <description>The module's query name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="string">
+          <description>Gets the query in sql code.</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes as name =&amp;gt; value to be replaced inside the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The sql query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

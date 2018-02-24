@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="layoutManager" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1362651360</datecreated>
+      <daterevised>1367225401</daterevised>
+      <extends/>
+      <implements/>
+      <title>Layout Loader and Manager</title>
+      <description>Loads any layout for the module's page and appends content to it.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CSS_EXPORT_PATH">
+        <description>Holds the path that css files will be exported on release procedeure.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" name="load" returntype="DOMElement">
+          <description>Loads the layout from the resources directory.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout's name</description>
+            </parameter>
+            <parameter name="$deprecated" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="append" returntype="boolean">
+          <description>Append a given DOMElement to a layout's section.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The layout's id.</description>
+            </parameter>
+            <parameter name="$sectionId" type="string" defaultvalue="">
+              <description>The section's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The element to be appended to the section.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="getList" returntype="void" class="undefined">
+          <description>Get the list of all layouts as an associative array (id =&gt; name)</description>
+          <parameters>
+            <parameter name="$deprecated" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="getFilePath" returntype="string">
+          <description>Constructs and return filepath for exported system layout css</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method static="true" name="getFilename" returntype="string">
+          <description>Return the hashed filename of layout css file</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method static="true" name="export" returntype="integer">
+          <description>Exportes all system layout styles in one css file at given location.
+Return Null on failure or the css file size on seccess</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

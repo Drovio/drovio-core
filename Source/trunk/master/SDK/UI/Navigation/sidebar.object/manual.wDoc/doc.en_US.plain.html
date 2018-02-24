@@ -1,0 +1,26 @@
+<h1>Generic UI sidebar</h1>
+<p>This sidebar extends the toolbar behavior and builds a vertical toolbar (on a side, left or right)</p>
+<div class="code">
+	<pre>// Create a toolbar and insert it into a container
+	
+// Use the class
+use \UI\Navigation\sidebar;
+
+// Create the container
+$container = DOM::create("div", "", "", "sidebar_container");
+DOM::append($body, $container);
+
+// Create the sidebar
+$sideb = new sidebar();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+// We set the parent as element to perform the proper changes to the css
+$sideNav = $sideb->build($dock = sidebar::LEFT, $container, $id = "", $class = "")->get();
+DOM::append($container, $sideNav);
+
+
+// After we insert the sidebar, we can append tools
+$tool = DOM::create("div", "", "", "side_tool save");
+$sideb->insertTool($tool);</pre>
+</div>

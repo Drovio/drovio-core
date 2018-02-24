@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\info">
+  <class name="cProductInfoCategory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1418740374</datecreated>
+      <daterevised>1418743796</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company Product Info Category Manager</title>
+      <description>Manages product info categories for generic use and for the current company.
+
+NOTE: You must be company manager or product manager to manage data through this class.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="categoryID">
+          <description>The info category id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the info category.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The info category id.
+Leave empty for new product.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean">
+          <description>Add a new info category.
+
+NOTE:
+To add a company specific category, you must be company manager.
+To add a new generic category you must be product manager.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The category title.</description>
+            </parameter>
+            <parameter name="$generic" type="boolean" defaultvalue="">
+              <description>If set to TRUE, this will be a generic category. If FALSE, it will be a company specific category.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addToHierarchy" returntype="boolean">
+          <description>Add this category to a given hierarchy.
+
+NOTE:
+To modify a company specific category, you must be company manager.
+To modify a new generic category you must be product manager.</description>
+          <parameters>
+            <parameter name="$hierarchyID" type="integer" defaultvalue="">
+              <description>The hierarchy id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get category information.</description>
+          <parameters/>
+          <returndescription>An array of information for this category.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean">
+          <description>Validate the current category whether it is generic or owned by the current company.</description>
+          <parameters>
+            <parameter name="$strict" type="boolean" defaultvalue="">
+              <description>If strict, it will only check if the category is owned by the current company.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the category is valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCategories" returntype="array">
+          <description>Get all product info categories in the system.
+It includes generic and company specific categories.</description>
+          <parameters>
+            <parameter name="$hierarchyID" type="integer" defaultvalue="">
+              <description>The hierarchy id to match the categories.
+Leave empty to ignore hierarchy.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product info categories.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

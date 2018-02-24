@@ -1,0 +1,45 @@
+.uiCommitManager {
+	border: 1px solid rgba(166, 166, 166, 1);
+	width: 900px;
+	background-color: #FFF;
+	overflow: auto;
+}
+.uiCommitManager .commitSection {
+	min-height: 20px;
+	padding: 3px;
+}
+.uiCommitManager h3.vcsHeader {
+	color: rgb(166, 166, 166);
+	margin: 5px 10px;
+}
+.uiCommitManager #commitItems, .uiCommitManager #fCommitItems {
+	max-height: 200px;
+}
+.uiCommitManager .uiCommitSummText {
+	border: 1px solid rgba(166, 166, 166, 1);
+	margin-top: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+}
+.uiCommitManager .uiCommitDescText {
+	border: 1px solid rgba(166, 166, 166, 1);
+	margin-top: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	height: 60px;
+	max-height: 100px;
+	resize: vertical;
+}
+.uiCommitManager #commitBtn {
+	float: right;
+}
+
+.uiCommitManager .footer {
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+	background-color: rgba(166, 166, 166, 0.1);
+	padding: 5px;
+	color: rgba(166, 166, 166, 0.5);
+	clear: both;
+}

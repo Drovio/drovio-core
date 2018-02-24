@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\">
+  <class name="website" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>4</build>
+      <datecreated>1404122287</datecreated>
+      <daterevised>1419975724</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Website Manager Class</title>
+      <description>This is the main class for managing a website project.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="PROJECT_TYPE">
+        <description>The project type code as it stored in database.</description>
+      </const>
+      <const type="string" name="INDEX_FILE">
+        <description>The index file name.</description>
+      </const>
+      <const type="string" name="PAGES_FOLDER">
+        <description>The name of the pages folder.</description>
+      </const>
+      <const type="string" name="SOURCE_FOLDER">
+        <description>The website's source folder.</description>
+      </const>
+      <const type="string" name="SOURCE_INDEX">
+        <description>The source index file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize a website project.</description>
+          <parameters>
+            <parameter name="$id" type="sting" defaultvalue="">
+              <description>The website's id.
+Leave empty for new website or name initialization.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$name" type="sting" defaultvalue="">
+              <description>The website's unique name.
+Leave empty for new website or id initialization.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addObjectIndex" returntype="boolean">
+          <description>Adds an object's index to the website index file.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object type.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if object already exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeObjectIndex" returntype="boolean">
+          <description>Remove an object from the website's index file.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object group.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Get the vcs item id.</description>
+          <parameters>
+            <parameter name="$suffix" type="string" defaultvalue="">
+              <description>The id suffix.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="boolean">
+          <description>Publish the current website to the given version.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to publish the website.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The source's branch name to publish.</description>
+            </parameter>
+            <parameter name="$innerSitePath" type="string" defaultvalue="">
+              <description>The inner site path to publish to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createStructure" returntype="boolean">
+          <description>Creates the (folder / file) structure of the project at creation.</description>
+          <parameters/>
+          <returndescription>True on success, false elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createWebsiteIndex" returntype="boolean">
+          <description>Creates the mapping / index file of the project at creation.</description>
+          <parameters/>
+          <returndescription>True on success, false elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createSourceMap" returntype="void">
+          <description>Creates the website source map index file.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getIndexObjects" returntype="array">
+          <description>Get objects from the website index.</description>
+          <parameters>
+            <parameter name="$group" type="string" defaultvalue="">
+              <description>The object's group.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all object names by group.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

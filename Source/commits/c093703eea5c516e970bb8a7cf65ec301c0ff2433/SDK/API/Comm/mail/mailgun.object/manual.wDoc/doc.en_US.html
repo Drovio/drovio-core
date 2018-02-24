@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Mailgun interface</h1>
+<p>You can use this interface to send emails with a mailgun api key from any domain. We don't store any information anywhere.</p>
+<p>This class is provided to save some time and instead of doing the full API requests, we do it for you.</p>
+<h2>Sending a simple email</h2>
+<p>Mailgun provides the simplest interface for sending an email, and we are passing it through to the entire SDK:</p>
+<div class="code">
+	<pre>// Use the class
+use \API\Comm\mail\mailgun;
+
+// Create a mailgun instance with the desired domain
+// We are using version 3, the default one
+$mailgun = new mailgun($domain = "test.domain", $apikey = "api:key-02517816282e426db57914d4b68d2437", $version = 3);
+
+// Set the sender address
+$mailgun-&gt;setFrom($from = "my_email@test.domain");
+
+// Add a recipient
+$mailgun-&gt;addRecipient($address = "customer@company.company_domain", $type = self::RCP_TO);
+
+// Send the email
+// It supports both text and html content
+$mailgun-&gt;send($subject = "Test email", $textContent = "This is a test email", $htmlContent = "<span style="font-family: monospace; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;"><h1>This is a test email</h1></span><span style="font-family: monospace;">");</span><br></pre>
+</div>
+<h2>Attachments</h2>
+<p>The mailgun API allows us to add attachments to the email. This class provides direct access to the team directory and you can attach a file directly by giving the inner path.</p>
+<div class="code">
+	<pre>// Use the class
+use \API\Comm\mail\mailgun;
+
+// Create a mailgun instance
+$mailgun = new mailgun($domain = "test.domain", $apikey = "api:key-02517816282e426db57914d4b68d2437", $version = 3);
+$mailgun-&gt;setFrom($from = "my_email@test.domain");
+
+// Add attachment given the file path
+$filePath = "/path/to/file";
+$mailgun-&gt;addAttachment($filePath);
+
+// Send the email with the attachment
+$mailgun-&gt;send($subject = "Test email", $textContent = "This is a test email", $htmlContent = "<h1>This is a test email</h1>");</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 18 October, 2015 [en_US]</p></div>
+</div></body></html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Generic UI navigation bar</h1>
+<p>This navigation bar extends the toolbar behavior and builds a horizontal toolbar (on the top or on the bottom)</p>
+<div class="code">
+	<pre>// Create a toolbar and insert it into a container
+	
+// Use the class
+use \UI\Navigation\navigationBar;
+
+// Create the container
+$container = DOM::create("div", "", "", "sidebar_container");
+DOM::append($body, $container);
+
+// Create the navbar
+$navb = new navigationBar();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+// We set the parent as element to perform the proper changes to the css
+$navBar = $navb-&gt;build($dock = navigationBar::TOP, $container, $id = "", $class = "")-&gt;get();
+DOM::append($container, $navBar);
+
+
+// After we insert the navigation bar, we can append tools
+$tool = DOM::create("div", "", "", "nav_tool delete");
+$navb-&gt;insertTool($tool);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 17:06</p></div>
+</div></body></html>

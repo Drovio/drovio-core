@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\test">
+  <class name="viewTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396858803</datecreated>
+      <daterevised>1396858803</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application View Tester</title>
+      <description>Manages the application view testing.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

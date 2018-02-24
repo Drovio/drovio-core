@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTMLContent" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1365154860</datecreated>
+      <daterevised>1432117181</daterevised>
+      <extends>
+        <object>\UI\Content\HTMLContent</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML Content Object</title>
+      <description>Creates an html content object for the modules.</description>
+      <deprecated>Use \UI\Content\HTMLContent instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\">
+  <class name="notification" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363000440</datecreated>
+      <daterevised>1400340235</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>System Notification</title>
+      <description>Creates a UI notification for all usages.
+It can be used to notify the user for changes and updates, show warning messages or show succeed messages after a successful post.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="ERROR">
+        <description>The error notification indicator.</description>
+      </const>
+      <const type="string" name="WARNING">
+        <description>The warning notification indicator.</description>
+      </const>
+      <const type="string" name="INFO">
+        <description>The info notification indicator.</description>
+      </const>
+      <const type="string" name="SUCCESS">
+        <description>The success notification indicator.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="body">
+          <description>The notification's body.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="notification">
+          <description>Builds the notification.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The notification's type. See class constants for better explanation.</description>
+            </parameter>
+            <parameter name="$header" type="boolean" defaultvalue="">
+              <description>Specified whether the notification will have header</description>
+            </parameter>
+            <parameter name="$timeout" type="boolean" defaultvalue="">
+              <description>Sets the notification to fadeout after 1.5 seconds.</description>
+            </parameter>
+            <parameter name="$disposable" type="boolean" defaultvalue="">
+              <description>Lets the user to be able to close the notification.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The notification object.</returndescription>
+          <throws/>
+        </method>
+        <method name="append" returntype="object">
+          <description>Appends a DOMElement to notification body</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The element to be appended</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The notification object.</returndescription>
+          <throws/>
+        </method>
+        <method name="appendCustomMessage" returntype="object" class="undefined">
+          <description>Creates and appends a custom notification message.</description>
+          <parameters>
+            <parameter name="$message" type="mixed" defaultvalue="">
+              <description>The message content (string or DOMElement)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The notification object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getMessage" returntype="DOMelement">
+          <description>Returns a system notification message.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The notification type.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The message id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The notification message span.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHead" returntype="notification">
+          <description>Builds the notification header</description>
+          <parameters>
+            <parameter name="$title" type="DOMElement" defaultvalue="">
+              <description>The header's title</description>
+            </parameter>
+            <parameter name="$disposable" type="boolean" defaultvalue="">
+              <description>Adds a close button to header and lets the user to be able to close the notification.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The notification object.</returndescription>
+          <throws/>
+        </method>
+        <method name="buildBody" returntype="notification">
+          <description>Builds the notification body</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The notification object.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

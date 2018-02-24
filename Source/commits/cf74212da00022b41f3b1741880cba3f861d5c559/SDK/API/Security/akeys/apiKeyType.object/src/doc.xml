@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\akeys">
+  <class name="apiKeyType" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1444481815</datecreated>
+      <daterevised>1444488508</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>API Key types</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAllKeyTypes" returntype="array" static="true">
+          <description>Get all key types.</description>
+          <parameters>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>If compact, get all keys by id and name.
+Otherwise, get full key types array.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all key types.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getKeyTypeByGroupName" returntype="array" static="true">
+          <description>Get the api key type that matches the given user group name.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The key type information array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getKeyTypeByGroupID" returntype="array" static="true">
+          <description>Get the api key type that matches the given user group id.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The key type information array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

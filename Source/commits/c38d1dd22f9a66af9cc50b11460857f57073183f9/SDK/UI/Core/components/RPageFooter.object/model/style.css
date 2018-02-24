@@ -1,0 +1,27 @@
+.uiMainFooter {
+	overflow: auto;
+	max-width: 1200px;
+	margin: auto;
+	padding: 8px 8px 30px;
+	text-align: right;
+	color: #555459;
+	box-sizing: border-box;
+}
+
+.uiMainFooter .lContainer {
+	float: left;
+}
+
+.uiMainFooter .lContainer .logo {
+	float: left;
+	font-weight: bold;
+}
+
+.uiMainFooter a {
+	font-weight: normal;
+	display: inline-block;
+}
+
+.uiMainFooter a:hover {
+	text-decoration: underline;
+}

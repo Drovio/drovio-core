@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="281209424"><title>Get UserID By Username</title><description>Get user's id by username</description><access>1</access><attributes><attr id="username"></attr></attributes></query>

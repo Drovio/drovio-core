@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\versionControl">
+  <class name="vcsTrunk" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363196520</datecreated>
+      <daterevised>1384418652</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Version Control System Trunk Manager</title>
+      <description>Handles all the repository's trunk files</description>
+      <deprecated>Use misc\vcs instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="DIR">
+        <description>The trunk folder</description>
+      </const>
+      <const type="string" name="INDEX">
+        <description>The trunk index file</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="directory">
+          <description>The repository directory</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The object's name</description>
+        </prop>
+        <prop type="string" name="type">
+          <description>The object's filetype</description>
+        </prop>
+        <prop type="string" name="path">
+          <description>The object's inner path.</description>
+        </prop>
+        <prop type="vcsBranch" name="vcsBranch">
+          <description>The branch manager object</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes the object's properties.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The repository directory.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The object's filetype</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The object's inner path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createStructure" returntype="boolean" class="undefined">
+          <description>Creates the trunk folder structure.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="createBranch" returntype="boolean">
+          <description>Creates a branch in the trunk's folder.</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="deleteBranch" returntype="boolean">
+          <description>Deletes a branch from the trunk's folder</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getBase" returntype="DOMElement">
+          <description>Gets the object's trunk base from the given branch.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file.</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch's name.</description>
+            </parameter>
+            <parameter name="$forceCreate" type="boolean" defaultvalue="">
+              <description>If TRUE and the base doesn't exist, it creates it. Otherwise, it returns the base (NULL if not exists).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getBaseByTitle" returntype="DOMElement">
+          <description>Gets the object's trunk base from the given branch by object title.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the index file.</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch's name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPath" returntype="string">
+          <description>Gets the object's relative path to trunk of the given branch.</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateBase" returntype="boolean">
+          <description>Updates the trunk's base</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch where the update will be done.</description>
+            </parameter>
+            <parameter name="$newBase" type="DOMElement" defaultvalue="">
+              <description>The new base element. If NULL, the base will be deleted.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateBaseContent" returntype="boolean">
+          <description>Updates the contents of the base only.</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The branch where the update will be done.</description>
+            </parameter>
+            <parameter name="$contents" type="DOMElement" defaultvalue="">
+              <description>The new contents of the item base.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getAllItems" returntype="array">
+          <description>Gets all items in the given repository.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser to load the xml file.</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The given branch to search for items.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of node items.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Templates" namespace="\">
+  <class name="HTMLPageTemplate" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362650880</datecreated>
+      <daterevised>1395997102</daterevised>
+      <extends>\ESS\Prototype\html\HTMLPagePrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Redback HTML Page Template</title>
+      <description>This is the base template for all redback pages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="HTMLPageTemplate">
+          <description>Builds the base template with all the necessary head tags. It doesn't include building anything about user interface.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The page title head meta.</description>
+            </parameter>
+            <parameter name="$lang" type="string" defaultvalue="">
+              <description>The current page language.</description>
+            </parameter>
+            <parameter name="$meta" type="boolean" defaultvalue="">
+              <description>Indicates whether to include meta (description and keywords) in the page.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>This object</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="addStyle" returntype="DOMElement" static="true">
+          <description>Inserts a css line.</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href attribute of the link</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Whether the css resource is static or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The css element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addScript" returntype="DOMElement" static="true">
+          <description>Inserts a script line</description>
+          <parameters>
+            <parameter name="$src" type="string" defaultvalue="">
+              <description>The URL source file of the script</description>
+            </parameter>
+            <parameter name="$bottom" type="boolean" defaultvalue="">
+              <description>Indicator whether the script tag will be placed at the bottom of the page.
+The default value is FALSE.</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Whether the js resource is static or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The js element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="setHead" returntype="void">
+          <description>Inserts all the meta tags, scripts and styles to head.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addNoScript" returntype="void">
+          <description>Inserts the noscript tag.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

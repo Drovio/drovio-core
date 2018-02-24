@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="weblink" namespace="\pageComponents\htmlComponents">
+    <info>
+      <version/>
+      <datecreated>March 12, 2013, 16:01 (EET)</datecreated>
+      <daterevised>March 12, 2013, 16:01 (EET)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Hyperlink Factory</title>
+      <description>It is used for building fast weblinks</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" static="true" returntype="DOMELement">
+          <description>Builds the weblink DOMElement</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href attribute value.</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target value.</description>
+            </parameter>
+            <parameter name="$content" type="mixed" defaultvalue="">
+              <description>The content of the hyperlink.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

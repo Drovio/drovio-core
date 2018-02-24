@@ -1,0 +1,29 @@
+<h1>Platform Generic Form Item</h1>
+<p>Form builder/factory allows the creation of items with all the appropriate attributes in single-line calls. formItem is an internal object that is being used by the form builder in order to have less, more flexible and smarter code.</p>
+<h3>PHP Examples</h3>
+<div class="code">
+	<pre>// Single-line creator of a form item
+	
+// Use class
+use \UI\Forms\formControls\formItem;
+
+// Create a form item
+$fi = new formItem();
+
+// This is a UIObject, so we build
+// We use the chain pattern to get the DOMElement immediately
+$item = $fi->build($tag = "select", $name = "gender", $id = "", $value = "", $class = "", $context = "")->get();
+
+// Append item to anything
+DOM::append($anything, $item);</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>formItem also provides a javascript interface where a developer can create form items on the client side dynamically.</p>
+<div class="code">
+	<pre>// Create a form item in a single line
+// formItem.create(tag, name, id, value, itemClass);
+var fi = formItem.create("input", "username", "item_id", "john", "item_class");
+
+// Append to form
+jq("form.userform").append(fi);</pre>
+</div>

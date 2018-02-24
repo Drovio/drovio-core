@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="directory" abstract="" namespace="\filesystem">
+    <info>
+      <version/>
+      <datecreated>1365505380</datecreated>
+      <daterevised>1372163612</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Directory</title>
+      <description>System's directory object. Used to acquire a directory's details</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getContentList" returntype="array" static="true">
+          <description>Returns all the contents of a folder in an array.
+['dirs'] for directories
+['files'] for files</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Include hidden files (files that start with a dot) in the results</description>
+            </parameter>
+            <parameter name="$includeDotFolders" type="boolean" defaultvalue="">
+              <description>Include dot folders ('.', '..') in the results</description>
+            </parameter>
+            <parameter name="$relativeNames" type="boolean" defaultvalue="">
+              <description>Return content names, instead of paths</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getContentDetails" returntype="array" static="true">
+          <description>Returns all the content details of a folder in an array:
+['dirs'] for directories
+['files'] for files
+
+Each elements holds the following details (keys):
+	name		-&amp;gt; File's name
+	path		-&amp;gt; File's path
+	extension	-&amp;gt; File's Extnsion
+	lastModified	-&amp;gt; Last Modified Date (unformated)
+	size		-&amp;gt; File's size
+	type		-&amp;gt; File's type</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory we are searching</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Include hidden files (files that start with a dot) in the results</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="isEmpty" returntype="mixed" static="true">
+          <description>Checks if a directory is empty.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The path of the folder</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the folder</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns if the given directory is empty [TRUE] or not [FALSE]. Returns NULL if an error occurs.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="normalize" returntype="string" static="true">
+          <description>Normalizes a path by collapsing redundant slashes.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The path to be normalized.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

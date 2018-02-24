@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ebLibrary" abstract="" namespace="\components\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1369729616</datecreated>
+      <daterevised>1374589688</daterevised>
+      <extends>\API\Developer\components\prime\libraryManager</extends>
+      <implements/>
+      <throws/>
+      <title>Ebuilder Library Manager</title>
+      <description>Handles all operations with ebuilder libraries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the ebLibrary.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="pack" returntype="boolean">
+          <description>Packs a library in a new or existing archive</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>Name of the library to pack</description>
+            </parameter>
+            <parameter name="$archivePath" type="string" defaultvalue="">
+              <description>Directory of the new or existing archive</description>
+            </parameter>
+            <parameter name="$archiveName" type="string" defaultvalue="">
+              <description>Name of the archive. If empty, a new archive will be created in $directory</description>
+            </parameter>
+            <parameter name="$innerArchiveDirectory" type="string" defaultvalue="">
+              <description>Inner directory inside the archive, where the library will be packed. Only has meaning if $archive is supplied</description>
+            </parameter>
+          </parameters>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\ebuilder">
+  <class name="template" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1370376016</datecreated>
+      <daterevised>1387883427</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Template</title>
+      <description>Object class for ebuilder template.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="defaultStatusCode">
+          <description>The starting default code of a new template object. Set to 1 means "project mode"</description>
+        </prop>
+        <prop type="integer" name="workingFolder">
+          <description>The current loaded template's id</description>
+        </prop>
+        <prop type="array" name="xmlRoots">
+          <description>Mapping array for all xml prime nodes tags used</description>
+        </prop>
+        <prop type="DOMparser" name="parser">
+          <description>Global DOMparser object, loaded with templates setting.xml</description>
+        </prop>
+        <prop type="array" name="xmlNodes">
+          <description>Mapping array for all xml secondary nodes tags used</description>
+        </prop>
+        <prop type="array" name="readOnly" static="true">
+          <description>Mapping template object possible status. Represents a lectical presentation of bmapp_projectStatus codes.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters>
+            <parameter name="$path" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$readOnly" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="bolean">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSettingsXML" returntype="string">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllStructures" returntype="array">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStructureXML" returntype="string">
+          <description/>
+          <parameters>
+            <parameter name="$pageStructureName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$format" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStructureCSS" returntype="string">
+          <description/>
+          <parameters>
+            <parameter name="$pageStructureName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllThemes" returntype="array">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getThemeCSS" returntype="string">
+          <description/>
+          <parameters>
+            <parameter name="$themeName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAssetsPath" returntype="string">
+          <description/>
+          <parameters>
+            <parameter name="$rootRelative" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageSequence" returntype="array">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="themeThumbs" returntype="array">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="initializeRepository" returntype="boolean">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createPageStructure" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$pageStructureName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$layoutName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createTheme" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$themeName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="savePageStructureXML" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$pageStructureName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="savePageStructureCSS" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$pageStructureName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="saveTheme" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$themeName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deletePageStructure" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$pageStructureName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteTheme" returntype="boolean">
+          <description/>
+          <parameters>
+            <parameter name="$themeName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="boolean">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSimpleArea" returntype="boolean" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getEditableArea" returntype="boolean" static="true">
+          <description>-----------------------------------------------------------------DELETE</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getGlobalArea" returntype="boolean" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean">
+          <description>validates page structure integrity</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="initSettingsXml" returntype="void">
+          <description>Building the settings.xml file at template creation phase</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteTemplateFolder" returntype="boolean">
+          <description>Deletes the given folder in the template contex, if given folder is empty deletes the entire template folder. Recursive deletetion is optional</description>
+          <parameters>
+            <parameter name="$folderName" type="string" defaultvalue="">
+              <description>The name of folder which goint to be deleted</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>If true, deletes the folder and its contents</description>
+            </parameter>
+          </parameters>
+          <returndescription>Return true on success, false elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

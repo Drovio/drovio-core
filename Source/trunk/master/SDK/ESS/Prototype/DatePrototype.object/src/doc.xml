@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="DatePrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1395648055</datecreated>
+      <daterevised>1429260707</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Date Prototype</title>
+      <description>Includes some prototype functions for formatting date and time.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

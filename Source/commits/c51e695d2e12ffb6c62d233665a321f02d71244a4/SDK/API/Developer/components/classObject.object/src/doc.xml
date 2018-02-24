@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="classObject" abstract="" namespace="\components">
+    <info>
+      <version/>
+      <datecreated>1368103140</datecreated>
+      <daterevised>1368789828</daterevised>
+      <extends>\API\Developer\versionControl\vcsManager</extends>
+      <implements/>
+      <title>Abstract Class Object</title>
+      <description>Handles the basics of a class object handler including the capability of documentation.</description>
+      <deprecated>Use \API\Developer\components\prime\classObject instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

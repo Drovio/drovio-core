@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Literals" namespace="\">
+  <class name="literalManager" abstract="">
+    <info>
+      <version>4.0</version>
+      <build>3</build>
+      <datecreated>1405929443</datecreated>
+      <daterevised>1436164223</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Project's Literal Manager</title>
+      <description>This class is the base responsible class for handling project literals.
+It provides interface for getting, adding, removing and updating literals and scopes.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="array" static="true">
+          <description>Get all literals from the given scope.
+It includes all scope's literals, translated (in the current system locale) and not (in the default system locale).</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to get the literals from.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope to get the literals from.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to get the literals from.
+If NULL, get the current system locale.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all literals in the requested locale.
+They are separated in 'translated' and 'nonTranslated' groups nested in the array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createScope" returntype="boolean" static="true">
+          <description>Create a new literal scope in the project.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The scope's project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The scope name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getScopes" returntype="array" static="true">
+          <description>Get all project's literal scopes.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id to get the scopes for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all scopes.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeScope" returntype="boolean" static="true">
+          <description>Remove a literal scope from the project.
+This will remove all literals that are children of this scope.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The scope's project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The scope name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateScope" returntype="boolean" static="true">
+          <description>Update the name of a literal scope.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The scope's project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The scope name to update.</description>
+            </parameter>
+            <parameter name="$newScope" type="string" defaultvalue="">
+              <description>The new scope name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get information about a given literal.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The literal information in array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="add" returntype="boolean" static="true">
+          <description>Add a new literal to the default locale.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean" static="true">
+          <description>Update literal's value to the default locale.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's new value</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's new description</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a literal from the system.
+It removes the literal and all its translations.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="wrap" returntype="DOMElement" static="true">
+          <description>Wrap the literal into a simple span.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The literal span element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

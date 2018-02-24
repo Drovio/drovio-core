@@ -1,0 +1,95 @@
+/*____________________ Navigation Menu ____________________*/
+.simpleMenu {
+	display:block;
+	text-align:left;
+	padding-top:3px;
+	padding-bottom:8px;
+}
+.simpleMenu > .simpleMenuHeader {
+	margin-bottom:3px;
+	font-size:9px;
+	font-weight:bold;
+	color: rgba(166, 166, 166, 1);
+}
+.simpleMenu > ul {
+	list-style:none;
+	display:block;
+	margin:0px;
+	padding:0px;
+}
+.simpleMenu > ul > .simpleMenuListItem {
+	position:relative;
+	list-style:none;
+	margin:0px;
+	display:block;
+	width:auto;
+	min-height:19px;
+	text-indent:3px;
+	font-size:11px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.simpleMenu > ul > .simpleMenuListItem.selected > a {
+	background-color:rgba(166, 166, 166, 0.3);
+	font-weight:bold;
+}
+.simpleMenuListItem > a > .pointer {
+	display: none;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top:1.7px;
+	left:100%;
+	background-color: #FFF;
+	border-left:solid 1px rgba(166, 166, 166, 0.5);
+	border-bottom:solid 1px rgba(166, 166, 166, 0.5);
+	transform:rotate(45deg);
+	transform-origin:0% 0%;
+	-ms-transform:rotate(45deg); /* IE 9 */
+	-ms-transform-origin:0% 0%;
+	-moz-transform:rotate(45deg); /* Firefox */
+	-moz-transform-origin:0% 0%;
+	-webkit-transform:rotate(45deg); /* Safari and Chrome */
+	-webkit-transform-origin:0% 0%;
+	-o-transform:rotate(45deg); /* Opera */
+	-o-transform-origin:0% 0%;
+}
+/*.simpleMenuListItem.selected > a > .pointer { display:inline; }*/
+.simpleMenu > ul > .simpleMenuListItem.selected > a:hover { background-color:rgba(166, 166, 166, 0.3); }
+.simpleMenu > ul > .simpleMenuListItem > a:hover { background-color:rgba(166, 166, 166, 0.1); }
+.simpleMenu > ul > .simpleMenuListItem > a {
+	display:block;
+	padding:0px;
+	text-decoration:none;
+	color: #000;
+	white-space: nowrap;
+	overflow:hidden;
+	position:relative;
+	font-weight:normal;
+}
+.simpleMenuListItem > a.visited {
+	text-decoration:none;
+	color: #000;
+}
+.simpleMenuListItemIco {
+	position: absolute;
+	height:19px;
+	width:19px;
+	margin-right:1px;
+	top: 0px;
+	left: -21px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.simpleMenuListItemText {
+	display:block;
+	width:100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow:hidden;
+	line-height:19px;
+}
+/* Icons */
+.simpleMenuListItemIco.loading { background-image:url(/Library/Media/images/icons/16x16/loader.svg); }
+.simpleMenuListItemIco.fld { background-image:url(/Library/Media/images/icons/19x19/folder_ico.svg); }
+.simpleMenuListItemIco.cmd { background-image:url(/Library/Media/images/icons/19x19/command_ico.svg); }

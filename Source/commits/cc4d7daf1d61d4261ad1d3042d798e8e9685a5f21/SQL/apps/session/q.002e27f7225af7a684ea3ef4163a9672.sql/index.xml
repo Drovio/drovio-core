@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="18925875172694"><title>Set App Session Version Info</title><description>Sets / Updated the Application Version at the Application Session Table</description><access></access><attributes><attr id="uid"></attr><attr id="application_id"></attr><attr id="version"></attr><attr id="account_id"></attr><attr id="time_created"></attr></attributes></query>

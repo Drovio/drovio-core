@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\">
+  <class name="codeMirror" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1444662440</datecreated>
+      <daterevised>1445036851</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>CodeMirror object</title>
+      <description>This class creates a code mirror html instance which will be initialized</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PHP">
+        <description>php code editor type.</description>
+      </const>
+      <const type="string" name="XML">
+        <description>xml code editor type.</description>
+      </const>
+      <const type="string" name="CSS">
+        <description>css code editor type.</description>
+      </const>
+      <const type="string" name="JS">
+        <description>js code editor type.</description>
+      </const>
+      <const type="string" name="SQL">
+        <description>sql code editor type.</description>
+      </const>
+      <const type="string" name="NO_PARSER">
+        <description>no specific code editor type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="type">
+          <description>The editor type (syntax language).</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The editor name for saving the code.</description>
+        </prop>
+        <prop type="boolean" name="readOnly">
+          <description>Read only flag.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a codeMirror instance.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The code type.
+See class constants.
+Default value is no parser.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the editor.
+This is the name of the textarea that will be used in the form posting.
+Default value is 'wideContent'.</description>
+            </parameter>
+            <parameter name="$readOnly" type="boolean" defaultvalue="">
+              <description>Read only mode for the editor.
+Default value is false.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="codeMirror">
+          <description>Builds a code mirror instance.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The initial code.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The element id.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The element extra class.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The codeMirror object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

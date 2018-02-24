@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UBA" package="Comm" namespace="\">
+  <class abstract="" name="dbConnection">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1448993884</datecreated>
+      <daterevised>1448993884</daterevised>
+      <extends>
+        <object>\SYS\Comm\db\adbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>dbConnection</title>
+      <description>Manages the connection to the database.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method returntype="dbConnection" name="__construct">
+          <description>Creates a dbConnection object.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$teamName">
+              <description>The team name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

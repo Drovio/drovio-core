@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProductCodeManager" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1418652976</datecreated>
+      <daterevised>1441035290</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company product code manager</title>
+      <description>Manages product codes for company products.
+If the product doesn't have a global reference, adding a new code will create the reference.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The retail database connection manager.</description>
+        </prop>
+        <prop type="integer" name="productID">
+          <description>The product id.</description>
+        </prop>
+        <prop type="boolean" name="valid">
+          <description>Whether the product is valid with the current company.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company product.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The company product id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set" returntype="boolean">
+          <description>Add a new product code to this product.
+This will also update a code of the same type.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type.
+It references to EAN, UPC and other code types as retrieved from the database.</description>
+            </parameter>
+            <parameter name="$productCode" type="string" defaultvalue="">
+              <description>The product code.</description>
+            </parameter>
+            <parameter name="$expirationTime" type="integer" defaultvalue="">
+              <description>The timestamp of the code expiration time.
+Leave empty if this information is not available.
+If empty, the expiration time will be set for the next 3-5 years.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure (the code already exists).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove a code from a product.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllCodes" returntype="array">
+          <description>Get all product codes.</description>
+          <parameters/>
+          <returndescription>An array of all product code info.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCodeTypes" returntype="array" static="true">
+          <description>Get all product code types.</description>
+          <parameters/>
+          <returndescription>An array of all product code types by id and title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the given product is of the current company.</description>
+          <parameters/>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

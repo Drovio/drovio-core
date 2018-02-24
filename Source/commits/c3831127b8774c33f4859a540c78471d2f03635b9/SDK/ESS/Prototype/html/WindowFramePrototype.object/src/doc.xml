@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="WindowFramePrototype" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1368103882</datecreated>
+      <daterevised>1382533642</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Window Frame Prototype</title>
+      <description>It's the window frame prototype for building frames (windows, dialogs etc.).</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="body">
+          <description>The frame's body container.</description>
+        </prop>
+        <prop type="string" name="id">
+          <description>The frame id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the frame.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The frame id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="WindowFramePrototype">
+          <description>Builds the window frame structure.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The frame's title.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The frame's class.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="append" returntype="WindowFramePrototype">
+          <description>Appends a DOMElement to frame body.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setAction" returntype="void" static="true">
+          <description>Sets the popup action to a given DOMElement item of the page.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item that will trigger the popup.</description>
+            </parameter>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary (if any).</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>The arguments to pass to the module.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getFrame" returntype="string">
+          <description>Gets the frame object with a server report.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The report's content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

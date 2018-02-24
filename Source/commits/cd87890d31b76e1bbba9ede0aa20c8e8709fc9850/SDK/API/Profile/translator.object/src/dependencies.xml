@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\SYS\Comm\db\dbConnection"></use><use path="\API\Model\units\sql\dbQuery"></use><use path="\API\Platform\importer"></use><use path="\API\Security\privileges"></use><use path="\API\Security\account" alias="sAccount"></use><use path="\API\Resources\storage\session"></use><use path="\API\Geoloc\locale"></use></dependencies>

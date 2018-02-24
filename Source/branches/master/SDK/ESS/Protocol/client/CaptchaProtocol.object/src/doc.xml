@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client">
+  <class name="CaptchaProtocol" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362649080</datecreated>
+      <daterevised>1425306846</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>CAPTCHA Protocol</title>
+      <description>This protocol defines how all the available captcha mechanisms will interact with the server and validate themselves.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" returntype="void" static="true">
+          <description>Set captcha value as a session variable</description>
+          <parameters>
+            <parameter name="$formID" type="int" defaultvalue="">
+              <description>The id of the form that contains the captcha</description>
+            </parameter>
+            <parameter name="$captchaValue" type="string" defaultvalue="">
+              <description>The value that the captcha was initialized with</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validate captcha value</description>
+          <parameters>
+            <parameter name="$formID" type="int" defaultvalue="">
+              <description>The id of the form that is validating</description>
+            </parameter>
+            <parameter name="$captchaValue" type="string" defaultvalue="">
+              <description>The value that the form received and wants to validate</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

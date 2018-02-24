@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profile" namespace="\">
+  <class name="developer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1413969507</datecreated>
+      <daterevised>1429686626</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Profile</title>
+      <description>Manages the developer's profile.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="moduleInWorkspace" returntype="boolean" static="true">
+          <description>Checks if the developer has the given module in the workspace.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="moduleGroupInWorkspace" returntype="void" static="true">
+          <description>Checks if the developer has the given module group in the workspace.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The module group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="masterGroup" returntype="boolean" static="true">
+          <description>Checks if the developer has the given module group in the workspace as master.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The module group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="execute" returntype="boolean" static="true">
+          <description>Execute the given query with the current user.</description>
+          <parameters>
+            <parameter name="$dbq" type="dbQuery" defaultvalue="">
+              <description>The query to execute.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>The query attributes.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The result status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

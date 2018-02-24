@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="sqlTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387550925</datecreated>
+      <daterevised>1392026121</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>SQL Query Tester Manager</title>
+      <description>Manages sql query tester mode.</description>
+      <deprecated>Use DEV\Profiler\test\sqlTester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

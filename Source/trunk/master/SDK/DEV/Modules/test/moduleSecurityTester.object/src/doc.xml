@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\test">
+  <class name="moduleSecurityTester" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1429687459</datecreated>
+      <daterevised>1429687459</daterevised>
+      <extends>
+        <object>\DEV\Profiler\tester</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Module Security Tester Manager</title>
+      <description>Manages the security testing for modules.
+If enabled, the privileges will allow testing modules with access status 'user'.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activates the security tester mode.</description>
+          <parameters/>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivates the security tester mode.</description>
+          <parameters/>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Gets the security tester mode.</description>
+          <parameters/>
+          <returndescription>True if mode is on, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="account" abstract="">
+    <info>
+      <version>14.0</version>
+      <build>1</build>
+      <datecreated>1373017114</datecreated>
+      <daterevised>1447268061</daterevised>
+      <extends>
+        <object>\API\Login\account</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Singleton class for managing the drovio account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="account" name="instance" static="true">
+          <description>The platform account instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="account" static="true">
+          <description>Get an account instance.</description>
+          <parameters/>
+          <returndescription>The account instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="authenticate" returntype="boolean">
+          <description>Authenticates an account with the given username and password.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account username.
+Email is also supported.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean">
+          <description>Login the account using the drovio identity.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account password.</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user or not.
+Duration: 1 month.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on authentication failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountID" returntype="integer">
+          <description>Gets the current logged in account id.</description>
+          <parameters/>
+          <returndescription>The account id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMX" returntype="string">
+          <description>Gets the current mx id.</description>
+          <parameters/>
+          <returndescription>The current mx id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSessionID" returntype="string">
+          <description>Gets the account session id.</description>
+          <parameters/>
+          <returndescription>The account session id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPersonID" returntype="integer">
+          <description>Gets the person id of the logged in account.</description>
+          <parameters/>
+          <returndescription>The person id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean">
+          <description>Validates if the user is logged in.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="resetPassword" returntype="boolean" static="true">
+          <description>Update the account's password given the reset id token.</description>
+          <parameters>
+            <parameter name="$resetID" type="string" defaultvalue="">
+              <description>The reset id.</description>
+            </parameter>
+            <parameter name="$newPassword" type="string" defaultvalue="">
+              <description>The new account password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountFolder" returntype="mixed" static="true">
+          <description>Gets the account's folder. The folder is created if doesn't exist.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the folder for.
+
+NOTICE: This doesn't work when in secure mode.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account folder path.
+If there is no active account, it returns FALSE.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProfileUrl" returntype="string">
+          <description>Get a file's url relative to the account's profile.</description>
+          <parameters>
+            <parameter name="$innerPath" type="string" defaultvalue="">
+              <description>The inner file path.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.
+Leave empty for the current account.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The profile file url.
+NULL if the file doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServicesFolder" returntype="void" static="true">
+          <description>Get a service's folder inside the account root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+            <parameter name="$systemAppData" type="boolean" defaultvalue="">
+              <description>This indicates the service folder as System App and will be placed in a special folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the account info.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the information for.
+Leave empty for the current account.
+It is empty by default.
+If it's not the current account, only public information will be returned.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of the account information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateProfileImage" returntype="boolean" static="true">
+          <description>Update the account profile image.</description>
+          <parameters>
+            <parameter name="$image" type="data" defaultvalue="">
+              <description>The image data.
+The image should be in png format.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.
+If empty or in secure mode this will be the current account.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeAccount" returntype="boolean">
+          <description>Remove the current account from the system.
+The application will not run in secure mode.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getAccountFolderPath" returntype="string" static="true">
+          <description>Get the account folder path for any account.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account to get the folder path for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder url path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderID" returntype="string" static="true">
+          <description>Gets the unique folder id for the requested use.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The prefix of the folder.</description>
+            </parameter>
+            <parameter name="$folderID" type="string" defaultvalue="">
+              <description>The id to be hashed.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The extension of the folder (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

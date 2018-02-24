@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\apps">
+  <class name="application" abstract="">
+    <info>
+      <version>3.1</version>
+      <build>1</build>
+      <datecreated>1417790297</datecreated>
+      <daterevised>1433859949</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Model Manager</title>
+      <description>Provides na interface for some basic functionality for applications.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getApplicationManifests" returntype="array" static="true">
+          <description>Get all application manifest permissions from the application library path.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all manifests' information by id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationPath" returntype="string" static="true">
+          <description>Gets the application's library path to the given version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application library path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationInfo" returntype="array" static="true">
+          <description>Get application information for a given version regarding the release version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.
+If empty, get the last published and approved version.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all application information including release title, project description, icon url and more.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationIconUrl" returntype="mixed" static="true">
+          <description>Get the application's icon url according to the given version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$applicationVersion" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the icon url or NULL if the application doesn't have an icon.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamApplicationFolder" returntype="mixed" static="true">
+          <description>Get the application service path inside the team folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountApplicationFolder" returntype="mixed" static="true">
+          <description>Get the application service path inside the account folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamApplicationPath" returntype="mixed" static="true">
+          <description>Get the application service path inside the team folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated>Use getTeamApplicationFolder() instead.</deprecated>
+        </method>
+        <method name="getAccountApplicationPath" returntype="mixed" static="true">
+          <description>Get the application service path inside the account folder.</description>
+          <parameters/>
+          <returndescription>The application path or NULL if there is no active application.</returndescription>
+          <throws/>
+          <deprecated>Use getAccountApplicationFolder() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getAppFolderName" returntype="string" static="true">
+          <description>Get the application folder name as a service.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application service folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

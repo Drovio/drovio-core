@@ -1,0 +1,99 @@
+body {
+	font-family: "Lucida Grande", "Verdana", "Lucida Sans Unicode", sans-serif;
+	font-size:11px;
+	margin:0px;
+}
+a, a.visited, a:hover {
+	text-decoration:none;
+	outline:none;
+	color: #353535;
+}
+a img {
+	border: none;
+	outline: none;	
+}
+#pageReport {
+	padding: 10px;
+	padding-bottom:0px;
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	z-index: 5;
+	width: 80%;
+}
+#pageReport:empty {
+	display: none;
+	padding:0px;
+}
+#pageContainer {
+	height:100%;
+}
+#pageHelper {
+	display: none !important;
+}
+.uiPageContainer:empty, .uiPageContainer > .moduleContainer:empty {
+	min-height: 500px;
+	background: url('%resources%/global/splash.png') no-repeat center;
+	background-size: 250px;
+}
+.connectionToolbar {
+	padding: 5px 20px;
+	background-color: rgba(166, 166, 166, 0.1);
+	border-bottom: 1px solid rgba(166, 166, 166, 0.3);
+	overflow: auto;
+	height: 80px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.connectionToolbar .centerContainer {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: auto;
+}
+.connectionToolbar .regContainer {
+	float: left;
+	margin-top: 25px;
+	line-height: 15px;
+}
+.connectionToolbar .regContainer h4 {
+	float: left;
+	font-weight: normal;
+	margin: 0px;
+}
+.connectionToolbar .regContainer .regBtn {
+	float: left;
+	font-weight: bold;
+	color: rgb(192, 4, 3);
+	font-size: 13px;
+	margin: 0px 15px;
+}
+.connectionToolbar .loginContainer {
+	float: right;
+}
+.loginContainer .uDiv, .loginContainer .pDiv {
+	float: left;
+	margin: 0px 5px;
+}
+.loginContainer .loginLabel {
+	display: block;
+	padding: 3px 0px;
+	text-align: left;
+}
+.loginContainer input[type='text'], .loginContainer input[type='password'] {
+	display: block;
+}
+.loginContainer .rrow {
+	float: left;
+}
+#lgBtn {
+	margin-top: 19px;
+	padding: 3px 8px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.loginContainer .fLink {
+	display: inline-block;
+	padding: 5px 0px;
+}

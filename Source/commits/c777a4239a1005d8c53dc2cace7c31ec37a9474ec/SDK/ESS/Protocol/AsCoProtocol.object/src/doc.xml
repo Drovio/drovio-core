@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\">
+  <class name="AsCoProtocol" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1406656588</datecreated>
+      <daterevised>1449323266</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Asynchronous Communication Protocol</title>
+      <description>Responsible class (in Javascript) for handling all communication protocols with any server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="requestPath" static="true">
+          <description>The ajax request url origin.</description>
+        </prop>
+        <prop type="string" name="requestSub" static="true">
+          <description>The ajax request subdomain origin.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" returntype="void" static="true">
+          <description>Sets the ascop variables.</description>
+          <parameters>
+            <parameter name="$ASCOP" type="array" defaultvalue="">
+              <description>The ascop array attributes.
+It must include the REQUEST_PATH and the REQUEST_SUB variables.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exists" returntype="boolean" static="true">
+          <description>Returns whether the ascop variable exists (it is an async request of context).</description>
+          <parameters/>
+          <returndescription>True if exists, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubdomain" returntype="string" static="true">
+          <description>Get the request subdomain origin.
+If empty, it's the www.</description>
+          <parameters/>
+          <returndescription>The subdomain where the request is made from.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPath" returntype="string" static="true">
+          <description>Get the request url origin.</description>
+          <parameters/>
+          <returndescription>The page url making the request.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

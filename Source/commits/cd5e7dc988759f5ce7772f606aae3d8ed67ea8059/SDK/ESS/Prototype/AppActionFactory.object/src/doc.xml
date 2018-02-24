@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="AppActionFactory" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1409834016</datecreated>
+      <daterevised>1417432684</daterevised>
+      <extends>
+        <object>\ESS\Prototype\ReportFactory</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback's Action Factory for Applications</title>
+      <description>This is a class for attaching all kind of actions and listeners to elements to be handled in the client side and communicate with the server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setAction" returntype="void" static="true">
+          <description>Creates an application async action listener to the given item.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler item to invoke the action.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application's view name to load.
+If empty, get the application's default view.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder container for the content that will be loaded.
+It is a css selector for the context.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the view through the GET method.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+It is false by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAppAction" returntype="void" static="true">
+          <description>Creates an application action listener to the given item.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler item to invoke the action.</description>
+            </parameter>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application's view name to load.
+If empty, get the application's default view.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder container for the content that will be loaded.
+For more information, see \ESS\Protocol\ApplicationProtocol.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the view.
+For more information, see \ESS\Protocol\ApplicationProtocol.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+It is false by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated>Use setAction() instead.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

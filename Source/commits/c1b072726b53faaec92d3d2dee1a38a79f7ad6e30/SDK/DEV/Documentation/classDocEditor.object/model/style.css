@@ -1,0 +1,520 @@
+.documentorContainer {
+	padding: 5px 10px;
+	height: 100%;
+	position:relative;
+	overflow:auto;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+.documentorContainer > .docuTool {
+	padding:4px;
+	margin-bottom:5px;
+	display: inline-block;
+	height: 16px;
+	cursor: pointer;
+}
+.documentorContainer > .docuTool > .refresh {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	opacity: 0.7;
+	cursor: pointer;
+	background-image: url('%resources%/global/devIcons.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0px -48px;
+}
+.documentorContainer > .docuTool > .refresh + span {
+	padding-left: 3px;
+	position: relative;
+	bottom: 4px;
+}
+.documentorContainer > .docuTool:hover .refresh {
+	opacity:1;
+}
+
+.documentorContainer .documentor {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	position:relative;
+	width:100%;
+}
+
+.documentorContainer .documentor > textarea[name="classXMLModel"] {
+	display:none;
+}
+.documentorContainer .documentor textarea:not([name="classXMLModel"]) {
+	max-width:100%;
+}
+
+.documentorContainer .documentor .expanderList .className {
+	font-size: 15px;
+	font-weight: bold;
+}
+.documentorContainer .documentor .expanderList .className span:not(:only-child) {
+	cursor:pointer;
+}
+.documentorContainer .documentor .expanderList .className .backArrow {
+	padding-right:5px;
+}
+.documentorContainer .documentor .infoTileWrapper {
+	padding: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position:relative;
+}
+.documentorContainer .documentor .infoTileWrapper > .className {
+    font-size:15px;
+    font-weight:bold;
+}
+.documentorContainer .documentor .infoTileWrapper > .classAbstract {
+    display:block;
+    position:absolute;
+    top:5px;
+    right:80px;
+    text-align:right;
+    z-index:1;
+    color:#6495ED;
+}
+.documentorContainer .documentor .infoTileWrapper > .className, .documentorContainer .documentor .infoTileWrapper > .classNamespace, .documentorContainer .documentor .infoTileWrapper > .classRelations, .documentorContainer .documentor .infoTileWrapper > .classDescription {
+    display:block;
+}
+.documentorContainer .documentor .deprecatedOverlay, .documentorContainer .documentor .discontinuedOverlay {
+    opacity:0;
+    position:absolute;
+    /*background-image: linear-gradient(-45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent);
+    background-image: -webkit-linear-gradient(-45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent);*/
+    border: 3px solid #FA8072;
+    background-size: 20px 20px;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    pointer-events:none;
+}
+.documentorContainer .documentor .discontinued .discontinuedOverlay {
+    background-image: linear-gradient(-45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent), linear-gradient(45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent);
+    background-image: -webkit-linear-gradient(-45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent), -webkit-linear-gradient(45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent), -moz-linear-gradient(45deg, rgba(250, 128, 114, 1) 25%, transparent 25%, transparent 50%, rgba(250, 128, 114, 1) 50%, rgba(250, 128, 114, 1) 75%, transparent 75%, transparent);
+    background-size: 12px 12px;
+}
+.documentorContainer .documentor .deprecated > .deprecatedOverlay, .documentorContainer .documentor .discontinued > .discontinuedOverlay {
+    opacity:1;
+    background-repeat: repeat;
+    display:block;
+    /*pointer-events:auto;*/
+}
+.documentorContainer .documentor .infoTileWrapper > .topRightInfo {
+    display:block;
+    position:absolute;
+    top:21px;
+    right:5px;
+    text-align:right;
+    z-index:1;
+}
+.documentorContainer .documentor .infoTileWrapper > .topRightInfo > .classVersion, .documentorContainer .documentor .infoTileWrapper > .topRightInfo > .classCreated, .documentorContainer .documentor .infoTileWrapper > .topRightInfo > .classRevised {
+    display:block;
+}
+.documentorContainer .documentor .infoTileWrapper > .classRelations {
+    position:relative;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 32px 0;
+}
+.documentorContainer .documentor .infoTileWrapper > .classRelations > .classExtends, .documentorContainer .documentor .infoTileWrapper > .classRelations > .classImplements {
+    display: inline-block;
+    width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    position:relative;
+}
+.documentorContainer .documentor .infoTileWrapper > .classNamespace > label, .documentorContainer .documentor .infoTileWrapper > .classRelations > .classExtends > label, .documentorContainer .documentor .infoTileWrapper > .classRelations > .classImplements > label {
+    position: relative;
+    left: 20px;    
+}
+.documentorContainer .documentor .infoTileWrapper > .classNamespace > span, .documentorContainer .documentor .infoTileWrapper > .classRelations > .classExtends > span, .documentorContainer .documentor .infoTileWrapper > .classRelations > .classImplements > span {
+    display:block;
+    position: relative;
+    left: 0px;
+}
+.documentorContainer .documentor .infoTileWrapper > .classDescription > input:not(.classThrows) {
+    display:block;
+    padding:3px;
+    width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.documentorContainer .documentor .infoTileWrapper > .classDescription > .classThrows {
+    display:block;
+    padding:3px;
+    width:50%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    margin-top:5px;
+    position:relative;
+    left:50%;
+}
+.documentorContainer .documentor .infoTileWrapper .objectsWrapper {
+    width:100%;
+    line-height:14px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    cursor:pointer;
+    text-align:right;
+    margin-top:5px;
+}
+
+.documentorContainer .documentor .infoTileWrapper .objectsWrapper .objectBox {
+    border: 1px solid rgba(192, 4, 3, 0.3);
+    height: 25px;
+    padding: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    margin: 0px 3px;
+    margin-bottom:3px;
+    display: inline-block;
+    background-color: rgba(192, 4,3, 0.15);
+}
+
+.documentorContainer .documentor .infoTileWrapper > .classDescription > textarea {
+    display:block;
+    margin-top:5px;
+    padding:3px;
+    width:100%;
+    height:80px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.documentorContainer .documentor .constantTileWrapper {
+    padding: 5px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    overflow: hidden;
+    position:relative;
+}
+.documentorContainer .documentor .constantTileWrapper > .constantName {
+    display:block;
+    padding-bottom:10px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.documentorContainer .documentor .constantTileWrapper > input {
+    padding:3px;	
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    margin:0;
+}
+.documentorContainer .documentor .constantTileWrapper > .constantType {
+    width:25%;
+    margin-right:2%;
+}
+.documentorContainer .documentor .constantTileWrapper > .constantDescription {
+    width:73%;
+}
+
+.documentorContainer .documentor .propertyTileWrapper {
+    padding: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    position:relative;
+    overflow: hidden;
+}
+.documentorContainer .documentor .propertyTileWrapper:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+.documentorContainer .documentor .propertyTileWrapper > .propertyStatic {
+    display:block;
+    position:absolute;
+    top:5px;
+    right:5px;
+    text-align:right;
+    z-index:1;
+    color:#4169E1;
+}
+.documentorContainer .documentor .propertyTileWrapper > .propertyName {
+    display:block;
+    padding-bottom:10px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.documentorContainer .documentor .propertyTileWrapper > input {
+    padding:3px;	
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    margin:0;
+}
+.documentorContainer .documentor .propertyTileWrapper > .propertyType {
+    width:25%;
+    margin-right:2%;
+}
+.documentorContainer .documentor .propertyTileWrapper > .propertyDescription {
+    width: 73%;
+}
+
+.documentorContainer .documentor .methodTileWrapper {
+    padding: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    position:relative;
+}
+.documentorContainer .documentor .methodTileWrapper:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodStatic {
+    display:block;
+    position:absolute;
+    top:5px;
+    right:5px;
+    text-align:right;
+    z-index:1;
+    color:#4169E1;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodAbstract {
+    display:block;
+    position:absolute;
+    top:22px;
+    right:5px;
+    text-align:right;
+    z-index:1;
+    color:#6495ED;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodStatic:empty {
+    display:none;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodName > .methodReturnType {
+    padding:3px;
+    width:25%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodName {
+    display:block;
+    padding-bottom:7px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodName :last-child {
+    padding-left:10px;
+    font-weight: bold;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodDescription {
+    padding:5px;
+    width: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    height: 60px;
+}
+.documentorContainer .documentor .methodTileWrapper > .methodReturnDescription {
+    padding:5px;
+    width: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    height: 45px;
+}
+
+.documentorContainer .documentor .methodTileWrapper > .methodThrows {
+    display:block;
+    padding:3px;
+    width:50%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    margin:0;
+    position:relative;
+    left:50%;
+}
+
+.documentorContainer .documentor .methodTileWrapper .objectsWrapper {
+    width:100%;
+    line-height:14px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    cursor:pointer;
+    text-align:right;
+}
+
+.documentorContainer .documentor .methodTileWrapper .objectsWrapper .objectBox {
+    border: 1px solid rgba(192, 4, 3, 0.3);
+    height: 24px;
+    padding: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    margin: 0px 3px;
+    margin-bottom:2px;
+    display: inline-block;
+    background-color: rgba(192, 4,3, 0.15);
+}
+
+.documentorContainer .documentor .methodTileWrapper > .argumentsHeader {
+    display:block;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.documentorContainer .documentor .argumentTileWrapper {
+    padding: 8px;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+    border: 1px solid rgb(166, 166, 166);
+    margin:0 5px;
+    position:relative;
+    background-image: linear-gradient(-66deg, rgba(166, 166, 166, 0.18) 25%, transparent 25%, transparent 50%, rgba(166, 166, 166, 0.18) 50%, rgba(166, 166, 166, 0.18) 75%, transparent 75%, transparent 100%);
+    background-image: -webkit-linear-gradient(-66deg, rgba(166, 166, 166, 0.18) 25%, transparent 25%, transparent 50%, rgba(166, 166, 166, 0.18) 50%, rgba(166, 166, 166, 0.18) 75%, transparent 75%, transparent 100%);
+    background-image: -moz-linear-gradient(-66deg, rgba(166, 166, 166, 0.18) 25%, transparent 25%, transparent 50%, rgba(166, 166, 166, 0.18) 50%, rgba(166, 166, 166, 0.18) 75%, transparent 75%, transparent 100%);
+}
+.documentorContainer .documentor .argumentTileWrapper:not(:last-child) {
+	border-bottom: 1px solid rgba(166, 166, 166, 0.5);
+}
+.documentorContainer .documentor .argumentTileWrapper:not(:first-child) {
+	border-top: none;
+}
+.documentorContainer .documentor .argumentTileWrapper > .argumentName {
+    display:block;
+    padding-bottom:5px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.documentorContainer .documentor .argumentTileWrapper > .argumentType {
+    padding:3px;
+    width:50%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.documentorContainer .documentor .argumentTileWrapper > .argumentDefault {
+    padding:3px;
+    width:50%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    display:inline-block;
+    padding-bottom:10px;
+    text-align:center;
+    position:relative;
+}
+.documentorContainer .documentor .argumentTileWrapper > .argumentDescription {
+    padding:3px;
+    width:100%;
+    height: 80px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+
+
+
+.documentorContainer .documentor .discontinuedTile {
+    display:block;
+    position:absolute;
+    top:0;
+    width:90px;
+    padding-top:5px;
+    padding-left:5px;
+    padding-right:5px;
+    border: 1px dashed #000;
+    border-top: none;
+    text-align:center;
+    z-index:3;
+    background-color:#F5F5F5;
+}
+.documentorContainer .documentor .deprecatedTile {
+    display:block;
+    position:relative;
+    width:100%;
+    padding:5px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    text-align:right;
+}
+.documentorContainer .documentor .deprecatedTile label {
+	cursor:pointer;
+}
+.documentorContainer .documentor .infoTileWrapper > .discontinuedTile {
+    right:80px;
+}
+.documentorContainer .documentor .constantTileWrapper > .discontinuedTile, .documentorContainer .documentor .propertyTileWrapper > .discontinuedTile, .documentorContainer .documentor .methodTileWrapper > .discontinuedTile {
+    right:60px;
+}
+.documentorContainer .documentor .discontinued > .discontinuedTile {
+    background-color:#FA8072;
+    border: 1px solid #000;
+    border-top: none;
+}
+.documentorContainer .documentor .deprecated > .deprecatedTile {
+    background-color:#FA8072;
+    transition: background-color 300ms;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+}
+.documentorContainer .documentor .deprecatedTile > .deprecatedDescription {
+    display:none;
+    opacity:0;
+    padding:3px;
+    width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+}
+.documentorContainer .documentor .deprecated > .deprecatedTile > .deprecatedDescription {
+    display:inline-block;
+    opacity:1;
+    transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+}
+.documentorContainer .documentor .discontinuedTile :not(label) {
+    display:none;
+}
+
+.documentorContainer .expanderCounter {
+	position: absolute;
+	right: 5px;
+	padding: 0 8px;
+	border-radius: 3px;
+	background: rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0px 0px 5px #fff;
+}
+.documentorContainer .docToggleWrap.elevated {
+	background:#fff;
+}
+.documentorContainer .docToggleWrap.elevated .expanderCounter {
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	box-shadow: inset 0px 0px 5px #000;
+}
+
+.documentorContainer .missingCounter {
+	position: absolute;
+	right: 40px;
+	padding: 0 8px;
+	border-radius: 3px;
+	background: rgba(255,255,255,0.6);
+	color: #c00403;
+	box-shadow: inset 0px 0px 5px #fff;
+	font-weight: bold;
+}
+
+.documentorContainer .docToggleWrap.elevated .missingCounter {
+	background: rgba(192, 4, 3, 0.6);
+	color: #fff;
+	box-shadow: inset 0px 0px 5px #c00403;
+}

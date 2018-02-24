@@ -1,0 +1,172 @@
+<?php
+//#section#[header]
+// Namespace
+namespace UI\Apps;
+
+// Use Important Headers
+use \API\Platform\importer;
+use \Exception;
+
+// Check Platform Existance
+if (!defined('_RB_PLATFORM_'))
+	throw new Exception("Platform is not defined!");
+//#section_end#
+//#section#[class]
+/**
+ * @library	UI
+ * @package	Apps
+ * @namespace	\
+ * 
+ * @copyright	Copyright (C) 2014 Skyworks SD. All rights reserved.
+ */
+
+importer::import("AEL", "Literals", "appLiteral");
+importer::import("AEL", "Platform", "application");
+importer::import("UI", "Content", "HTMLContent");
+importer::import("UI", "Html", "DOM");
+
+use \AEL\Literals\appLiteral;
+use \AEL\Platform\application;
+use \UI\Content\HTMLContent;
+use \UI\Html\DOM;
+
+/**
+ * Application Content Builder
+ * 
+ * Builds an application content with a specified container's id and class.
+ * It loads application view's html and can parse application's literals.
+ * 
+ * @version	0.1-2
+ * @created	August 23, 2014, 16:56 (EEST)
+ * @revised	August 23, 2014, 17:04 (EEST)
+ */
+class APPContent extends HTMLContent
+{
+	/**
+	 * The default application content holder.
+	 * 
+	 * @type	string
+	 */
+	const HOLDER = "#applicationContainer";
+	
+	/**
+	 * The application's id that loads this object.
+	 * 
+	 * @type	integer
+	 */
+	protected $appID;
+	
+	/**
+	 * Initializes the Application Content object.
+	 * 
+	 * @param	integer	$appID
+	 * 		The application's id for this content (if any).
+	 * 		It is empty by default.
+	 * 
+	 * @return	void
+	 */
+	public function __construct($appID = "")
+	{
+		$this->appID = $appID;
+	}
+	
+	/**
+	 * Build the outer html content container.
+	 * 
+	 * @param	string	$id
+	 * 		The element's id. Empty by default.
+	 * 
+	 * @param	string	$class
+	 * 		The element's class. Empty by default.
+	 * 
+	 * @param	boolean	$loadHTML
+	 * 		Indicator whether to load html from the designer file.
+	 * 
+	 * @return	APPContent
+	 * 		The APPContent object.
+	 */
+	public function build($id = "", $class = "", $loadHTML = FALSE)
+	{
+		// Build HTMLContent
+		parent::build($id, $class, $loadHTML);
+		
+		// Return MContent object
+		return $this;
+	}
+	
+	/**
+	 * Loads application's literals in the designer's html file.
+	 * 
+	 * @return	APPContent
+	 * 		The APPContent object.
+	 */
+	protected function loadLiterals()
+	{
+		// Check if application id is not set
+		if (empty($this->appID))
+			return;
+
+		// Load application literals
+		$containers = DOM::evaluate("//*[@data-literal]");
+		foreach ($containers as $container)
+		{
+			// Get literal attributes
+			$value = DOM::attr($container, "data-literal");
+			$attributes = json_decode($value, true);
+			
+			// Get literal
+			$literal = appLiteral::get($attributes['scope'], $attributes['name']);
+			
+			// If literal is valid, append to container
+			if (!empty($literal))
+				DOM::append($container, $literal);
+			
+			// Remove literal attribute
+			DOM::attr($container, "data-literal", null);
+		}
+		
+		return $this;
+	}
+	
+	/**
+	 * Get the ServerReport of this HTML Application Cpontent or the object holder.
+	 * 
+	 * @param	string	$holder
+	 * 		The content holder. If empty, it gets the default application content holder.
+	 * 
+	 * @return	mixed
+	 * 		The server report or the object holder.
+	 */
+	public function getReport($holder = "")
+	{
+		// Support loading an application view inside another view
+		// Check the Application's loading depth if it is bigger than 1
+		// If more than one, it's an inner loading and return DOMElement
+		if (application::getLoadingDepth() > 1)
+		{
+			application::decLoadingDepth();
+			return $this->get();
+		}
+		
+		// Get page holder if empty
+		if (empty($holder))
+			$holder = self::HOLDER;
+		
+		// Return report
+		return parent::getReport($holder);
+	}
+	
+	/**
+	 * Gets the parent's filename for loading the html from external file.
+	 * 
+	 * @return	string
+	 * 		The parent script name.
+	 */
+	protected function getParentFilename()
+	{
+		$stack = debug_backtrace();
+		return $stack[3]['file'];
+	}
+}
+//#section_end#
+?>

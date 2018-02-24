@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Documentation" namespace="\">
+  <class name="classDocEditor" abstract="">
+    <info>
+      <version/>
+      <datecreated>1404480838</datecreated>
+      <daterevised>1404480923</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Class Documentation Editor</title>
+      <description>Handles the documentation process of the classes. Used to display the documentor tool and as a bridge between user and documentor classes</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="linkedEditor">
+          <description>The editor with the code that needs to be documented</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Creates and initializes a classDocumentor object.</description>
+          <parameters>
+            <parameter name="$editor" type="DOMElement" defaultvalue="">
+              <description>The associated editor which contents need to be documented</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="classDocEditor">
+          <description>Builds and returns a classDocumentor object</description>
+          <parameters>
+            <parameter name="$manual" type="string" defaultvalue="">
+              <description>Existing manual for the editor's code</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>Name of the documenting area</description>
+            </parameter>
+          </parameters>
+          <returndescription>The built object [this]</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

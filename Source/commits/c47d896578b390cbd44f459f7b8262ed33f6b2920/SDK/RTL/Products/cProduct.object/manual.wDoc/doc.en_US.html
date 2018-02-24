@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Retail product manager</h1>
+<p>This is the basic class for managing retail products. It provide an interface to the Retail SDK for creating, updating and removing products for the current company (extends team).</p>
+<h2>Creating a new product</h2>
+<div class="code">
+	<pre>// Use the class
+use \RTL\Products\cProduct;
+
+// Create an empty instance
+$product = new cProduct();
+
+// Create a new product
+$status = $product-&gt;create($title = "iPhone");
+</pre>
+</div>
+<h2>Update information and remove products</h2>
+<p>Using the retail SDK you have full access to the products of the team, allowing to edit and remove products as well:</p>
+<div class="code">
+	<pre>// Use the class
+use \RTL\Products\cProduct;
+
+// Create an existing product instance
+$product = new cProduct("1_1");
+
+// Update information
+$product-&gt;update($title = "Apple iPhone");
+
+
+// And if we want to remove the product, we simply write:
+// This action cannot be undone
+$product-&gt;remove();</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 01 September, 2015 [en_US]</p></div>
+</div></body></html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Documentation" namespace="\">
+  <class name="classDocEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1404480838</datecreated>
+      <daterevised>1432639088</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Class Documentation Editor</title>
+      <description>Handles the documentation process of the classes. Used to display the documentor tool and as a bridge between user and documentor classes</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="linkedEditor">
+          <description>The editor with the code that needs to be documented</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Creates and initializes a classDocumentor object.</description>
+          <parameters>
+            <parameter name="$editor" type="DOMElement" defaultvalue="">
+              <description>The associated editor which contents need to be documented.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="classDocEditor">
+          <description>Build a class documentation editor.</description>
+          <parameters>
+            <parameter name="$manual" type="string" defaultvalue="">
+              <description>The existing manual for the given code.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the documentation to be stored when the code will be submitted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The classDocEditor object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getTemplates" returntype="DOMElement" static="true">
+          <description>Fetches the templates to be used by the documentation editor.</description>
+          <parameters/>
+          <returndescription>A hidden pool with the templates.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfoTemplate" returntype="DOMELement" static="true">
+          <description>Creates a template for the class info</description>
+          <parameters/>
+          <returndescription>Returns the class info template</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConstantTemplate" returntype="DOMElement" static="true">
+          <description>Creates a template for the constants</description>
+          <parameters/>
+          <returndescription>Returns the constants template</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPropertyTemplate" returntype="DOMElement" static="true">
+          <description>Creates a template for the properties</description>
+          <parameters/>
+          <returndescription>Returns the properties template</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMethodTemplate" returntype="DOMElement" static="true">
+          <description>Creates a template for the methods</description>
+          <parameters/>
+          <returndescription>Returns the methods template</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

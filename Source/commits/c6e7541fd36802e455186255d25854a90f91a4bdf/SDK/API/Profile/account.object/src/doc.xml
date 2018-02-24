@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="account" abstract="">
+    <info>
+      <version>5.3</version>
+      <build>1</build>
+      <datecreated>1373017114</datecreated>
+      <daterevised>1433863104</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account Manager Class</title>
+      <description>Manages the active account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="boolean" name="loggedIn" static="true">
+          <description>Indicates whether the account is logged in for this run.</description>
+        </prop>
+        <prop type="integer" name="accountID" static="true">
+          <description>The current account id.</description>
+        </prop>
+        <prop type="integer" name="personID" static="true">
+          <description>The current person id (if any).</description>
+        </prop>
+        <prop type="integer" name="sessionID" static="true">
+          <description>The current session id.</description>
+        </prop>
+        <prop type="string" name="mxID" static="true">
+          <description>The current mx id.</description>
+        </prop>
+        <prop type="array" name="accountData" static="true">
+          <description>All the stored account data.</description>
+        </prop>
+        <prop type="string" name="salt" static="true">
+          <description>The session salt.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="authenticate" returntype="boolean" static="true">
+          <description>Authenticates an account with the given username and password.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The person's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+            <parameter name="$accountID" type="string" defaultvalue="">
+              <description>The account id to authenticate. If empty, get the current account id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean" static="true">
+          <description>Authenticates an account and sets it as logged in.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The person's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user in the database or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validates if the user is logged in.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteActiveSession" returntype="boolean" static="true">
+          <description>Deletes a given account session.</description>
+          <parameters>
+            <parameter name="$sessionID" type="string" defaultvalue="">
+              <description>The account session id to be deleted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="logout" returntype="void" static="true">
+          <description>Logout the account from the system.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="switchAccount" returntype="boolean" static="true">
+          <description>Switch from one account to another.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The new account id to switch to.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The new account's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns TRUE on success and FALSE if the current account is locked and cannot switch.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updatePassword" returntype="boolean" static="true">
+          <description>Update current account password.</description>
+          <parameters>
+            <parameter name="$currentPassword" type="string" defaultvalue="">
+              <description>The current account password.</description>
+            </parameter>
+            <parameter name="$newPassword" type="string" defaultvalue="">
+              <description>The new account password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="resetPassword" returntype="boolean" static="true">
+          <description>Reset the account password using the reset id created by the reset form.</description>
+          <parameters>
+            <parameter name="$resetID" type="string" defaultvalue="">
+              <description>The account reset password id.</description>
+            </parameter>
+            <parameter name="$newPassword" type="string" defaultvalue="">
+              <description>The new account password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="rememberme" returntype="boolean" static="true">
+          <description>Gets whether the system remembers the logged in account.</description>
+          <parameters/>
+          <returndescription>True if the system remembers the account, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountID" returntype="integer" static="true">
+          <description>Gets the current logged in account id.</description>
+          <parameters/>
+          <returndescription>The account id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMX" returntype="string" static="true">
+          <description>Gets the current mx id.</description>
+          <parameters/>
+          <returndescription>The current mx id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSessionID" returntype="integer" static="true">
+          <description>Gets the account session id.</description>
+          <parameters/>
+          <returndescription>The account session id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPersonID" returntype="integer" static="true">
+          <description>Gets the person id of the logged in person.</description>
+          <parameters/>
+          <returndescription>The person id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isLocked" returntype="boolean" static="true">
+          <description>Checks whether this account is locked.</description>
+          <parameters/>
+          <returndescription>True if locked, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountFolder" returntype="mixed" static="true">
+          <description>Gets the account's folder. The folder is created if doesn't exist.</description>
+          <parameters/>
+          <returndescription>The account folder path.
+If there is no active account, it returns FALSE.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServicesFolder" returntype="void" static="true">
+          <description>Get a service's folder inside the account root folder.</description>
+          <parameters>
+            <parameter name="$serviceName" type="string" defaultvalue="">
+              <description>The service name.</description>
+            </parameter>
+            <parameter name="$systemAppData" type="boolean" defaultvalue="">
+              <description>This indicates the service folder as System App and will be placed in a special folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account service folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isAdmin" returntype="boolean" static="true">
+          <description>Checks whether the account is admin.</description>
+          <parameters/>
+          <returndescription>True if admin, false otherwise (shared).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountTitle" returntype="string" static="true">
+          <description>Gets the account title for the logged in account.</description>
+          <parameters/>
+          <returndescription>The account display title.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUsername" returntype="mixed" static="true">
+          <description>Get the account's username.</description>
+          <parameters>
+            <parameter name="$emailFallback" type="boolean" defaultvalue="">
+              <description>Set TRUE to return the connected person's email if the account's username is empty.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Return the account username.
+If account doesn't have username, return the email of the person connected to this account.
+If there is no connected account, return NULL.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Gets the account info.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get the information for.
+Leave empty for the current account.
+It is empty by default.
+If it's not the current account, only public information will be returned.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of the account information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createSession" returntype="void" static="true">
+          <description>Creates a new account session.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The logged in generated salt.</description>
+            </parameter>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id (if any).</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user in the database or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSaltedMix" returntype="string" static="true">
+          <description>Returns the salted mix of account, person and salt.</description>
+          <parameters>
+            <parameter name="$sessionID" type="string" defaultvalue="">
+              <description>The account session id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The account salt.</description>
+            </parameter>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The salted mix to store to cookies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSalt" returntype="string" static="true">
+          <description>Gets the stored salt for the current account session.</description>
+          <parameters/>
+          <returndescription>The stored salt.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSessionData" returntype="void" static="true">
+          <description>Updates the account's data to the session.</description>
+          <parameters>
+            <parameter name="$accountData" type="mixed" defaultvalue="">
+              <description>The account data.
+If not given, it is loaded from the database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSessionData" returntype="array" static="true">
+          <description>Get all current session data from the database for the current account.</description>
+          <parameters/>
+          <returndescription>An array of all session data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountValue" returntype="string" static="true">
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <description>Gets an account value from the session. If the session is not set yet, updates from the database.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The value name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+          <returndescription>The account value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array" static="true">
+          <description>Gets an account's information.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to get information for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of account data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderID" returntype="string" static="true">
+          <description>Gets the unique folder id for the requested use.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The prefix of the folder.</description>
+            </parameter>
+            <parameter name="$folderID" type="string" defaultvalue="">
+              <description>The id to be hashed.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The extension of the folder (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components">
+  <class name="ajaxManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366634340</datecreated>
+      <daterevised>1387877906</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>AJAX Developer Manager</title>
+      <description>Include developer's information.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RELEASE_PATH">
+        <description>The ajax page's release path.</description>
+      </const>
+      <const type="string" name="MAP_PATH">
+        <description>The map root folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPages" returntype="array" static="true">
+          <description>Get all pages in a given directory.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The full directory name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exportPages" returntype="void" static="true">
+          <description>Export all ajax pages.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectories" returntype="array" static="true">
+          <description>Get all ajax page directories.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Defines the result output format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of directories or a full array of directories separated by "/".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getSubDirs" returntype="array" static="true">
+          <description>Gets all sub directories of a given directory.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the xml file.</description>
+            </parameter>
+            <parameter name="$sub" type="DOMElement" defaultvalue="">
+              <description>The parent directory element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array for each subdirectory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDirsString" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the xml file.</description>
+            </parameter>
+            <parameter name="$sub" type="DOMElement" defaultvalue="">
+              <description>The parent directory element.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Navigation" namespace="\">
+  <class name="scrollable" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1379330597</datecreated>
+      <daterevised>1441552973</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Scrollable</title>
+      <description>Defines scrollable areas and manages page scroll at will.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

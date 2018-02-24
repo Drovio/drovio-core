@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="2413142951952"><title>Get App Session Version Info</title><description>Gets the Application Version from the Application Session Table</description><access></access><attributes><attr id="uid"></attr><attr id="application_id"></attr></attributes></query>

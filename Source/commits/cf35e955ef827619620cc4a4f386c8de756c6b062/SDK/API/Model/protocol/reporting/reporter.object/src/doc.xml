@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="reporter" namespace="">
+    <info>
+      <version/>
+      <datecreated/>
+      <daterevised/>
+      <extends/>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \ESS\Protocol\server\Reporter instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" static="true" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$context" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="error" static="true" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="statusReport" static="true" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$status" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\parsers">
+  <class name="JShrink" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1446230536</datecreated>
+      <daterevised>1446423093</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>JShrink Minifier</title>
+      <description>Usage - JShrink::minify($js);
+Usage - JShrink::minify($js, $options);
+Usage - JShrink::minify($js, array('flaggedComments' =&amp;amp;gt; false));</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="input">
+          <description>The input javascript to be minified.</description>
+        </prop>
+        <prop type="integer" name="index">
+          <description>The location of the character (in the input string) that is next to be processed.</description>
+        </prop>
+        <prop type="string" name="a">
+          <description>The first of the characters currently being looked at.</description>
+        </prop>
+        <prop type="string" name="b">
+          <description>The next character being looked at (after a);</description>
+        </prop>
+        <prop type="string" name="c">
+          <description>This character is only active when certain look ahead actions take place.</description>
+        </prop>
+        <prop type="array" name="options">
+          <description>Contains the options for the current minification process.</description>
+        </prop>
+        <prop type="array" name="defaultOptions" static="true">
+          <description>Contains the default options for minification. This array is merged with the one passed in by the user to create the request specific set of options (stored in the $options attribute).</description>
+        </prop>
+        <prop type="array" name="locks">
+          <description>Contains lock ids which are used to replace certain code patterns and prevent them from being minified</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="minify" returntype="mixed" static="true">
+          <description>Takes a string containing javascript and removes unneeded characters in order to shrink the code without altering it's functionality.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The raw javascript to be minified.</description>
+            </parameter>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>Various runtime options in an associative array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The minified code if success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="minifyDirectToOutput" returntype="void">
+          <description>Processes a javascript string and outputs only the required characters stripping out all unneeded characters.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The raw javascript to be minified.</description>
+            </parameter>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>Various runtime options in an associative array.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="initialize" returntype="void">
+          <description>Initializes internal variables, normalizes new lines.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The raw javascript to be minified.</description>
+            </parameter>
+            <parameter name="$options" type="array" defaultvalue="">
+              <description>Various runtime options in an associative array.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loop" returntype="void">
+          <description>The primary action occurs here. This function loops through the input string, outputting anything that's relevant and discarding anything that is not.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="clean" returntype="void">
+          <description>Resets attributes that do not need to be stored between requests so that the next request is ready to go.
+Another reason for this is to make sure the variables are cleared and are not taking up memory.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getChar" returntype="string">
+          <description>Gets the next string for processing based off of the current index.</description>
+          <parameters/>
+          <returndescription>The next string for processing.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReal" returntype="string">
+          <description>This function gets the next "real" character.
+It is essentially a wrapper around the getChar function that skips comments.
+This has significant performance benefits as the skipping is done using native functions (ie, c code) rather than in script php.</description>
+          <parameters/>
+          <returndescription>Next 'real' character to be processed.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="processOneLineComments" returntype="string">
+          <description>Removed one line comments, with the exception of some very specific types ofconditional comments.</description>
+          <parameters>
+            <parameter name="$startIndex" type="integer" defaultvalue="">
+              <description>The index point where "getReal" function started.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="processMultiLineComments" returntype="mixed">
+          <description>Skips multiline comments where appropriate, and includes them where needed.
+Conditional comments and "license" style blocks are preserved.</description>
+          <parameters>
+            <parameter name="$startIndex" type="integer" defaultvalue="">
+              <description>The index point where "getReal" function started.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws>
+            <exception>RuntimeException</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="getNext" returntype="mixed">
+          <description>Pushes the index ahead to the next instance of the supplied string.
+If it is found the first character of the string is returned and the index is set to it's position.</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The string.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the first character of the string or false.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="saveString" returntype="void">
+          <description>When a javascript string is detected this function crawls for the end of it and saves the whole string.</description>
+          <parameters/>
+          <returndescription/>
+          <throws>
+            <exception>RuntimeException</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="saveRegex" returntype="void">
+          <description>When a regular expression is detected this function crawls for the end of it and saves the whole regex.</description>
+          <parameters/>
+          <returndescription/>
+          <throws>
+            <exception>RuntimeException</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="isAlphaNumeric" returntype="boolean" static="true">
+          <description>Checks to see if a character is alphanumeric.</description>
+          <parameters>
+            <parameter name="$char" type="string" defaultvalue="">
+              <description>Just one character</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if is alphanumeric, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="lock" returntype="string">
+          <description>Replace patterns in the given string and store the replacement.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The string to lock.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The locked string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unlock" returntype="string">
+          <description>Replace "locks" with the original characters.</description>
+          <parameters>
+            <parameter name="$js" type="string" defaultvalue="">
+              <description>The string to unlock.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The unlocked string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

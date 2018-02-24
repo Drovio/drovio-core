@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="BugTracker" namespace="\">
+  <class name="btLibrary" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1413623686</datecreated>
+      <daterevised>1420449187</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Bug Tracker Library Manager</title>
+      <description/>
+      <deprecated>Use \BT\Projects\btLibrary instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPublicProjects" returntype="array" static="true">
+          <description>Get all public projects.</description>
+          <parameters/>
+          <returndescription>An array of all public project information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamProjects" returntype="array" static="true">
+          <description>Get all projects of the current active team.</description>
+          <parameters/>
+          <returndescription>An array of all team project information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

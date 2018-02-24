@@ -1,0 +1,10 @@
+.ribbonPanel {
+	display:block;
+	width:auto;
+	float:left;
+	padding:2px;
+	margin:3px;
+	border:1px solid rgba(166, 166, 166, 0.5);
+	-webkit-border-radius:3px;
+	background-color:rgba(166, 166, 166, 0.3);
+}

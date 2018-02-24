@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebEngine" namespace="\">
+  <class name="webManager" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>2</build>
+      <datecreated>1414696879</datecreated>
+      <daterevised>1415350463</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web SDK Manager Class</title>
+      <description>Class is responsible for publishing / releasing the Web SDK and building the appropriate Packages Bundles for uploading the Web Core to a remote server</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="PROJECT_CODE">
+        <description>The 'Web Project' code</description>
+      </const>
+      <const type="string" name="RELEASE_PATH">
+        <description>The Web SDK release path</description>
+      </const>
+      <const type="string" name="DOCS_PATH">
+        <description>The Web SDK documention path</description>
+      </const>
+      <const type="string" name="MODEL_PATH">
+        <description>The Web SDK model path</description>
+      </const>
+      <const type="string" name="PACKAGES_PATH">
+        <description>The Web SDK zip packages loacation path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="publish" returntype="void" static="true">
+          <description>Publishes all the SDK Libraries.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

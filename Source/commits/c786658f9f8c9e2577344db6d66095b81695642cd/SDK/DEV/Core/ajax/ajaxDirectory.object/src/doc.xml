@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\ajax">
+  <class name="ajaxDirectory" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1396271598</datecreated>
+      <daterevised>1418894082</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>AJAX Directory Manager</title>
+      <description>Manages all the ajax directories (in and out of repository).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="RELEASE_PATH">
+        <description>The ajax page's release path.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPages" returntype="array" static="true">
+          <description>Get all pages in a given directory (on the first level).</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The full directory name separated by "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all pages in the given directory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publish" returntype="void" static="true">
+          <description>Publish all ajax pages to development server.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch to publish from.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectories" returntype="array" static="true">
+          <description>Get all ajax page directories.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Defines the result output format.
+If TRUE, the result is an array of all directories separated by "/".
+If FALSE, the result is a nested array for each directory as a tree.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of directories or a full array of directories separated by "/".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMapFilepath" returntype="string" static="true">
+          <description>Gets the map index file path.</description>
+          <parameters/>
+          <returndescription>The map index file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMapFilepath" returntype="string" static="true">
+          <description>Updates the map file vcs item.</description>
+          <parameters/>
+          <returndescription>The item's trunk path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create an ajax directory.</description>
+          <parameters>
+            <parameter name="$dirName" type="string" defaultvalue="">
+              <description>The directory name.</description>
+            </parameter>
+            <parameter name="$parentDir" type="string" defaultvalue="">
+              <description>The parent directory.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove an ajax directory.
+The directory must be empty of pages and other directories.</description>
+          <parameters>
+            <parameter name="$dirName" type="string" defaultvalue="">
+              <description>The directory full path, separated by "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getMapfileItemID" returntype="string" static="true">
+          <description>Get the map file item id.</description>
+          <parameters/>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDirs" returntype="array" static="true">
+          <description>Gets all sub directories of a given directory.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the xml file.</description>
+            </parameter>
+            <parameter name="$sub" type="DOMElement" defaultvalue="">
+              <description>The parent directory element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array for each subdirectory.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDirsString" returntype="array" static="true">
+          <description>Gets all sub directories of a given directory.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the xml file.</description>
+            </parameter>
+            <parameter name="$sub" type="DOMElement" defaultvalue="">
+              <description>The parent directory element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array with all subdirectories separated by "/".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

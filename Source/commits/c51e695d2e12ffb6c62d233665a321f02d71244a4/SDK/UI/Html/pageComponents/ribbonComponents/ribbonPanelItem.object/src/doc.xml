@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ribbonPanelItem" abstract="" namespace="\pageComponents\ribbonComponents">
+    <info>
+      <version/>
+      <datecreated>April 5, 2013, 10:07 (EEST)</datecreated>
+      <daterevised>April 5, 2013, 10:07 (EEST)</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>Ribbon Panel Item</title>
+      <description>Creates a simple panel item for the current ribbon control.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="ribbonPanelItem">
+          <description>Builds the panel item.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>Defines the vertical size of the item.
+Accepted values:
+- "small"
+- "big"
+If none of the above, the "small" will be selected.</description>
+            </parameter>
+            <parameter name="$title" type="mixed" defaultvalue="">
+              <description>The title of the panel.
+This can be string or DOMElement.</description>
+            </parameter>
+            <parameter name="$imgURL" type="string" defaultvalue="">
+              <description>The image URL of the panel ico.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Defines whether the item is selected.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="addWebNavigation" returntype="void">
+          <description>Adds web navigation to the item</description>
+          <parameters>
+            <parameter name="$href" type="string" defaultvalue="">
+              <description>The href attribute</description>
+            </parameter>
+            <parameter name="$target" type="string" defaultvalue="">
+              <description>The target attribute</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Profile" namespace="\">
+  <class name="person" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1444303768</datecreated>
+      <daterevised>1445196778</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Person Identity</title>
+      <description>Manages a person identity</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="teamName" static="true">
+          <description>The team name to access the identity database.</description>
+        </prop>
+        <prop type="array" name="info" static="true">
+          <description>All person information.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The identity database connection.</description>
+        </prop>
+        <prop type="array" name="instances" static="true">
+          <description>An array of instances for each team identity (in case of multiple instances).</description>
+        </prop>
+        <prop type="string" name="staticTeamName" static="true">
+          <description>Static team name for compatibility.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="person" static="true">
+          <description>Get an identity person instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The person instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="void" static="true">
+          <description>Initialize the identity.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team to access the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get all person info from the logged in person.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id to get information for.
+Leave empty for current person.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all person information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean" static="true">
+          <description>Update person basic information.</description>
+          <parameters>
+            <parameter name="$firstname" type="string" defaultvalue="">
+              <description>The person firstname.</description>
+            </parameter>
+            <parameter name="$lastname" type="string" defaultvalue="">
+              <description>The person lastname.</description>
+            </parameter>
+            <parameter name="$middle_name" type="string" defaultvalue="">
+              <description>The person middle name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMail" returntype="string" static="true">
+          <description>Get person's email.</description>
+          <parameters/>
+          <returndescription>The person's mail.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFirstname" returntype="string" static="true">
+          <description>Get the person's firstname.</description>
+          <parameters/>
+          <returndescription>The person's firstname.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLastname" returntype="string" static="true">
+          <description>Get the person's lastname.</description>
+          <parameters/>
+          <returndescription>The person's lastname.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new person instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getPersonValue" returntype="string" static="true">
+          <description>Get a person's information value from the database.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The information name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The information value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

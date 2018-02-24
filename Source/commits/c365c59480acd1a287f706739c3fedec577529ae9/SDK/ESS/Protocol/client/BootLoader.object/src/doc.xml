@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client">
+  <class name="BootLoader" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1364377980</datecreated>
+      <daterevised>1395821529</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Resource Boot Loader</title>
+      <description>The manager class for loading and general handling the system's resources (javascript and css).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="URL_CSS_LOADER" class="undefined">
+        <description>The css package loader file.</description>
+      </const>
+      <const type="string" name="URL_JS_LOADER" class="undefined">
+        <description>The js package loader file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="startupPackages" static="true" class="undefined">
+          <description>List of startup sdk packages for the module loaded</description>
+        </prop>
+        <prop type="integer" name="moduleID" static="true" class="undefined">
+          <description>The module loaded.</description>
+        </prop>
+        <prop type="array" name="prefix" static="true">
+          <description>A list of prefixes for css and hs.</description>
+        </prop>
+        <prop type="array" name="revPrefix" static="true">
+          <description>The reverse array of prefix.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getResource" returntype="string" static="true">
+          <description>Get a system resource url.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The attribute type, "css" or "js".</description>
+            </parameter>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The resource category, "Modules" or "Packages".</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>The package tester status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource url with any attributes it may has.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSSUrl" returntype="string" static="true">
+          <description>Returns the url for the css package loader.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>Indicator that specifies whether the resource will be loaded from the exported resources or from the repositories.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The url to be loaded.</returndescription>
+          <throws/>
+        </method>
+        <method name="getJSUrl" returntype="string" static="true">
+          <description>Returns the url for the javascript package loader.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>Indicator that specifies whether the resource will be loaded from the exported resources or from the repositories.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The url to be loaded.</returndescription>
+          <throws/>
+        </method>
+        <method name="loadCSS" returntype="void" static="true">
+          <description>Loads a css package file from the exported resources (by id).</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The hashname of the file.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadFriendCSS" returntype="void" static="true">
+          <description>Loads a css package file from the exported resources (by library and package).</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The category package (subfolder).</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadJS" returntype="void" static="true">
+          <description>Loads a javascript package file from the exported resources (by id).</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The hashname of the file.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadFriendJS" returntype="void" static="true">
+          <description>Loads a js package file from the exported resources (by library and package).</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The category package (subfolder).</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="exportCSS" returntype="boolean" static="true">
+          <description>Export a css package to the resource library folder.</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The category package (subfolder).</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="exportJS" returntype="void" static="true">
+          <description>Export a javascript package to the resource library folder.</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The category package (subfolder).</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addStartupPackage" returntype="void" static="true" class="undefined">
+          <description>Adds a startup sdk package index for the module loading.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The package's library.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getStartupPackages" returntype="array" static="true" class="undefined">
+          <description>Returns the startup packages as a list of attributes.
+Depending on the package's tester status, it returns array of attributes for loading the resources from BootLoader.</description>
+          <parameters/>
+          <deprecated>This function is deprecated.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setModuleResource" returntype="void" static="true" class="undefined">
+          <description>Sets the loaded module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The loaded module's id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getModuleResource" returntype="array" static="true" class="undefined">
+          <description>Returns the module resource as an array.
+Depending on the module's tester status, it returns the id in the proper format.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getURL" returntype="string" static="true">
+          <description>Forms the url according to parameters given.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The base url.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>Indicator that specifies whether the resource will be loaded from the exported resources or from the repositories.
+In this function, defines whether the url will be hashed or not.</description>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The resource url.</returndescription>
+          <throws/>
+        </method>
+        <method name="getFileName" returntype="string" static="true">
+          <description>Returns the hashed file name of the resource package.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The file prefix.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The resource type, "css" or "js".</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The resource file name.</returndescription>
+          <throws/>
+        </method>
+        <method name="getRsrcID" returntype="string" static="true" class="undefined">
+          <description>Get the resource hash id.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The resource hash id.</returndescription>
+          <throws/>
+        </method>
+        <method name="createIndex" returntype="void" static="true">
+          <description>Creates the resource index in the exported folder.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The exported folder.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The index title.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

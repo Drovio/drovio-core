@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <form class="simpleForm">
+	<div class="formReport"/>
+	<div class="formBody">
+		<div class="simpleFormRow"/>
+	</div>
+	<div class="formControls"/>
+</form>
+</model>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="AccountManager" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1366362780</datecreated>
+      <daterevised>1406887879</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract Account Manager</title>
+      <description>General account manager for all accounts (person and company) in the system.</description>
+      <deprecated>Use \API\Profile\account instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAccountFolder" returntype="mixed" static="true">
+          <description>Gets the account's folder. The folder is created if doesn't exist.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The account folder path. If there is no active account, it returns FALSE.</returndescription>
+          <throws/>
+        </method>
+        <method name="getCompanyFolder" returntype="mixed" static="true">
+          <description>Gets the company's folder. The folder is created if doesn't exist.</description>
+          <parameters/>
+          <returndescription>The company folder path. If there is no active company, return FALSE.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getFolderID" returntype="string" static="true">
+          <description>Gets the unique folder id for the requested use.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The prefix of the folder.</description>
+            </parameter>
+            <parameter name="$folderID" type="string" defaultvalue="">
+              <description>The id to be hashed.</description>
+            </parameter>
+            <parameter name="$extension" type="string" defaultvalue="">
+              <description>The extension of the folder (if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

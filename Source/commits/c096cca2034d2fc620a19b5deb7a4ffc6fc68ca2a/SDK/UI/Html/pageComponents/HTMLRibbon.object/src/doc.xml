@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents">
+  <class name="HTMLRibbon" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365145980</datecreated>
+      <daterevised>1402468710</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Toolbar Ribbon Object</title>
+      <description>Builds the system's ribbon.</description>
+      <deprecated>Use \UI\Core\components\RTRibbon instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

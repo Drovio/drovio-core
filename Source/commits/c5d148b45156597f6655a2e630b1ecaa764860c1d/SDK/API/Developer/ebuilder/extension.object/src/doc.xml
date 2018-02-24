@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="extension" abstract="" namespace="\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1370441433</datecreated>
+      <daterevised>1375262714</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>extension development manager</title>
+      <description>Manages extension development proccess, release and deploy procedures.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="MAPPING_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="SOURCE_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="STYLES_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="SCRIPTS_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="VIEWS_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="MEDIA_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="CONFIG_FOLDER">
+        <description/>
+      </const>
+      <const type="" name="REPOSITORY">
+        <description/>
+      </const>
+      <const type="" name="RELEASE">
+        <description/>
+      </const>
+      <const type="" name="CONTENT">
+        <description/>
+      </const>
+      <const type="" name="RESOURCES">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="namePrefix">
+          <description/>
+        </prop>
+        <prop type="" name="folderExt">
+          <description/>
+        </prop>
+        <prop type="" name="parser">
+          <description/>
+        </prop>
+        <prop type="" name="isDeployed">
+          <description/>
+        </prop>
+        <prop type="" name="objectId">
+          <description/>
+        </prop>
+        <prop type="" name="groupId">
+          <description/>
+        </prop>
+        <prop type="" name="workingFolder">
+          <description/>
+        </prop>
+        <prop type="" name="libName">
+          <description/>
+        </prop>
+        <prop type="" name="defaultLocale" static="true">
+          <description/>
+        </prop>
+        <prop type="" name="defaultStatusCode">
+          <description/>
+        </prop>
+        <prop type="" name="cfVarJqUsage">
+          <description/>
+        </prop>
+        <prop type="" name="cfVarAssets">
+          <description/>
+        </prop>
+        <prop type="" name="status" static="true">
+          <description/>
+        </prop>
+        <prop type="" name="query" static="true">
+          <description/>
+        </prop>
+        <prop type="" name="xmlNodes">
+          <description/>
+        </prop>
+        <prop type="" name="xmlIdPrefix">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getJqUsage" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAssetsExistance" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setJqUsage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$jqUsage" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAssetsExistance" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$assets" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$objectId" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="reCreate" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$description" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$category" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateExtensionConfig" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSrcPackage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSrcNamespace" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSrcObject" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addScript" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addView" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addTheme" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addExtensionLiteral" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$templateId" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$description" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMainStyle" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$code" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllViews" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllJsScripts" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllThemes" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibraryObjects" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageList" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$fullNames" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageObjects" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSObjects" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSrcObject" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getScript" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTheme" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMainStyle" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getView" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMediaFolder" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getContentFolder" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUserConfigurator" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getExtensionConfig" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteSrcPackage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteSrcNamespace" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parentNs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteSrcObject" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$packageName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$objectName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nsName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteScript" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteView" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteTheme" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteExtensionLiteral" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getExtensionInfo" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getUserExtensions" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$group" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$status" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllCategories" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="release" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deploy" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadExtensionConfig" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildCatalogs" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="initStructure" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="initIndexXML" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createExtensionConfig" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createUserConfig" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createHistoryIndexing" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateHistoryIndexing" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$description" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addStyle" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="objectExists" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$rootName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nodeName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$idPrefix" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getObjectsList" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$rootName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nodeName" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

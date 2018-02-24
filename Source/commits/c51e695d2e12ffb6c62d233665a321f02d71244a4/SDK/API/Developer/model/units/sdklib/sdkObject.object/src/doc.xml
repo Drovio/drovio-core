@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="sdkObject" abstract="" namespace="\model\units\sdklib">
+    <info>
+      <version/>
+      <datecreated>1372845506</datecreated>
+      <daterevised>1372845506</daterevised>
+      <extends>\API\Developer\model\version\vcs</extends>
+      <implements/>
+      <throws/>
+      <title>SDK Object Manager</title>
+      <description>Handles all the information for SDK Objects.</description>
+      <deprecated>Use \API\Developer\components\sdk\sdkObject instead.</deprecated>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE" class="undefined">
+        <description>The object's file type</description>
+      </const>
+      <const type="string" name="SOURCE_FOLDER" class="undefined">
+        <description>The object's source folder path</description>
+      </const>
+      <const type="string" name="MODEL_FOLDER" class="undefined">
+        <description>The object's model folder path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="libName">
+          <description>The object's library name</description>
+        </prop>
+        <prop type="string" name="packageName">
+          <description>The object's package name</description>
+        </prop>
+        <prop type="string" name="nsName">
+          <description>The object's namespaces (separated by "::")</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>The object's title</description>
+        </prop>
+        <prop type="string" name="prdDirectory">
+          <description>The SDK's production directory</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes the object.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads the object's information</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_sourceCode" returntype="string">
+          <description>Returns the php source code of the object</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_sourceMan" returntype="string">
+          <description>Returns the documentation of the source code of the object in xml format.</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_jsCode" returntype="string">
+          <description>Returns the javascript code of the object</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_modelCSS" returntype="string">
+          <description>Returns the CSS code of the object</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="sdkObject">
+          <description>Create a new SDK Object</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title</description>
+            </parameter>
+            <parameter name="$phpFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a php source code file</description>
+            </parameter>
+            <parameter name="$jsFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a javascript file</description>
+            </parameter>
+            <parameter name="$cssFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a CSS file</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="sdkObject" static="true">
+          <description>Delete the entire object and all its resource files</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="void">
+          <description>Updates the status of the object by creating the necessary folders</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="boolean">
+          <description>Export object files to latest</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update_sourceCode" returntype="boolean">
+          <description>Updates the object's source code</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update_sourceMan" returntype="void">
+          <description>Updates the object's documentation</description>
+          <parameters>
+            <parameter name="$man" type="string" defaultvalue="">
+              <description>The documentation in xml format</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update_JSCode" returntype="boolean">
+          <description>Updates the object's javascript code</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The javascript code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update_modelCSS" returntype="boolean">
+          <description>Updates the object's CSS</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The CSS code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update_objModel" returntype="void">
+          <description>Updates the object's model</description>
+          <parameters>
+            <parameter name="$model" type="string" defaultvalue="">
+              <description>The object's model in xml format.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="generate_sourceMan" returntype="">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="set_title" returntype="void">
+          <description>Sets the object's title</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The title value</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_title" returntype="string">
+          <description>Returns the object's title</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibrary" returntype="string" class="undefined">
+          <description>Returns the object's library</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackage" returntype="string" class="undefined">
+          <description>Returns the object's package</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNamespace" returntype="string" class="undefined">
+          <description>Returns the object's namespace (separated with ::)</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="wrap_sourceCode" returntype="void">
+          <description>Wraps the source code with the proper delimiters and inserts the header.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code body.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get_indexInfo" returntype="DOMElement">
+          <description>Get the object's index Base</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser to parse the index file</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="load_indexInfo" returntype="void">
+          <description>Load all the index info</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="initFiles" returntype="void">
+          <description>Initialize object files</description>
+          <parameters>
+            <parameter name="$phpFile" type="boolean" defaultvalue="">
+              <description>Indicator whether the object has php source code</description>
+            </parameter>
+            <parameter name="$jsFile" type="boolean" defaultvalue="">
+              <description>Indicator whether the object has javascript code</description>
+            </parameter>
+            <parameter name="$cssFile" type="boolean" defaultvalue="">
+              <description>Indicator whether the object has CSS code</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildHeader" returntype="void" class="undefined">
+          <description/>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

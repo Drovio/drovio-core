@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Local Storage manager</h1>
+<p>An easy way to manage local and session storage.</p>
+<h2 id="javascript_interface">Javascript interface</h2>
+<div class="code">
+	<pre>// Javascript interface
+	
+// Set a value
+Function:	set()
+Description:	Set a localStorage or sessionStorage value. It will transform almost any object to string. Set st_session to true to set sessionStorage, if not set it will be considered false.
+Usage:		dlocalStorage.set(st_name, st_value, st_session);
+Example:	dlocalStorage.set("storage_var_name", "storage_a_value", false);
+
+// Get a value from local or session storage
+Function:	get()
+Description:	Get a value from the storage. Set st_session to true to get from sessionStorage, if not set it will be considered false.
+Usage:		dlocalStorage.get(st_name, st_session);
+Example:	dlocalStorage.get("storage_var_name", false);
+
+// Remove a value from local or session storage
+Function:	remove()
+Description:	Remove a value from the storage. Set st_session to true to remove from sessionStorage, if not set it will be considered false.
+Usage:		dlocalStorage.remove(st_name, st_session);
+Example:	dlocalStorage.remove("storage_var_name", false);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 20 November, 2015 [en_US]</p></div>
+</div></body></html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\components">
+  <class name="RPageFooter" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1402467776</datecreated>
+      <daterevised>1402470099</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Redback's Page Footer</title>
+      <description>Builds the basic global footer for all pages across all domains in redback.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="RPageFooter">
+          <description>Builds the navigation footer.</description>
+          <parameters/>
+          <returndescription>The page footer object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getBull" returntype="DOMElement">
+          <description>Creates a span with &amp;amp;bull; as value.</description>
+          <parameters/>
+          <returndescription>The bull span.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

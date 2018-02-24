@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\\facebookAccount"></use><use path="\API\Platform\importer"></use><use path="\ESS\Environment\url"></use><use path="\API\Profile\account"></use><use path="\DRVC\Social\facebookAccount" alias="IDFacebookAccount"></use></dependencies>

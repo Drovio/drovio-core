@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1628491456"><title>Update Page</title><description>Update a page information</description><access>1</access><attributes><attr id="mid"></attr><attr id="name"></attr><attr id="fid"></attr><attr id="static"></attr><attr id="sitemap"></attr><attr id="pid"></attr></attributes></query>

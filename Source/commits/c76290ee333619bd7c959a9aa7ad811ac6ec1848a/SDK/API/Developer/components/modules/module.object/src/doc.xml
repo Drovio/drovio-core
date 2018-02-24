@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\components\modules">
+  <class name="module" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363344540</datecreated>
+      <daterevised>1389773491</daterevised>
+      <extends>\API\Developer\components\AbstractModule</extends>
+      <implements/>
+      <throws/>
+      <title>Module Manager</title>
+      <description>The system's module (not auxiliary) handler.</description>
+      <deprecated>Use units\modules\module instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" returntype="module">
+          <description>Initialize an existing module</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new module</description>
+          <parameters>
+            <parameter name="$parentID" type="integer" defaultvalue="">
+              <description>The module group's id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The module's title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The module's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Deletes an existing module.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the information of a module.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The new description</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code of the module.</description>
+            </parameter>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>An array of package imports.</description>
+            </parameter>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>An array of inner modules.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="initializeInfo" returntype="void" class="undefined">
+          <description>Initialize Info and VCS.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getFileName" returntype="string">
+          <description>Gets the hashed filename of the module.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

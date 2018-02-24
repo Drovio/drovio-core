@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Interactive" namespace="\forms">
+  <class name="formAutoSuggest" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362993960</datecreated>
+      <daterevised>1438010911</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Form Auto Suggest</title>
+      <description>Displays a popup with suggestions upon input value.
+It allows to be connected with modules and applications.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="engage" returntype="void" static="true">
+          <description>Adds a autosuggest controller to the given element.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element where the controller will be attached.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The action script where the suggestions will come from.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="engageModule" returntype="void" static="true">
+          <description>Engage the auto suggest engine to a module.
+
+NOTE: This doesn't work when on secure mode!</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element where the controller will be attached.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module view name to load.
+Leave empty for the module default view.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes to pass to the module view.
+It is empty array by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="engageApp" returntype="void" static="true">
+          <description>Engage the auto suggest engine to the current application.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element where the controller will be attached.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The application view name to load.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes to pass to the application view.
+It is empty array by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string" static="true">
+          <description>Get a specific report for the autosuggest control.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The report content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report string output.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

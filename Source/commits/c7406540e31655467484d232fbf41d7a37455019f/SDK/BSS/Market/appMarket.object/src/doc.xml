@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="Market" namespace="\">
+  <class name="appMarket" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1428046961</datecreated>
+      <daterevised>1431332888</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>BOSS' Application Market Manager</title>
+      <description>Manages the applications in the BOSS' library (market) for a given team (or the current team).</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="buyApplication" returntype="boolean" static="true">
+          <description>Buy an application for a team.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version to buy.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id or empty to get the current team.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamApplications" returntype="array" static="true">
+          <description>Get all applications purchased by a team.</description>
+          <parameters/>
+          <returndescription>Include all application information including last application version (in case there is a newer version) and icon_url for current and newer (if any) version.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationInfo" returntype="array" static="true">
+          <description>Get application information for a given version for the BOSS market.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all application information including release title, project description, icon url and more.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLastApplicationVersion" returntype="string" static="true">
+          <description>Gets the last version of a given application.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The last application version for the BOSS platform.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamAppVersion" returntype="string" static="true">
+          <description>Get the team's current application version.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$live" type="boolean" defaultvalue="">
+              <description>If set to true, get the live version from the database and skip session storage.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application version string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateTeamAppVersion" returntype="boolean" static="true">
+          <description>Updates the team's application version for the current account to the next declared version (if any).
+
+Returning true doesn't mean that there was an update.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setTeamAppVersion" returntype="boolean" static="true">
+          <description>Set the next version of a project for a team.
+The project must be in the team's library.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The app's version selected by the team.</description>
+            </parameter>
+            <parameter name="$teamID" type="integer" defaultvalue="">
+              <description>The team id or empty to get the current team.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationPermissions" returntype="array" static="true">
+          <description>Get all application manifest permissions information.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all manifest information of the application.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBossApplications" returntype="array" static="true">
+          <description>Get boss public applications.</description>
+          <parameters>
+            <parameter name="$start" type="integer" defaultvalue="">
+              <description>For pagination purposes, indicates the start index from 0.
+It is 0 by default.</description>
+            </parameter>
+            <parameter name="$count" type="integer" defaultvalue="">
+              <description>For pagination purposes, in combination with the $start attribute, it marks the number of results.
+It is 30 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all application info including release title, project description, icon url and more.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamPrivateApplications" returntype="array" static="true">
+          <description>Get all team private applications as marked from the project settings.</description>
+          <parameters>
+            <parameter name="$start" type="integer" defaultvalue="">
+              <description>For pagination purposes, indicates the start index from 0.
+It is 0 by default.</description>
+            </parameter>
+            <parameter name="$count" type="integer" defaultvalue="">
+              <description>For pagination purposes, in combination with the $start attribute, it marks the number of results.
+It is 30 by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all application info including release title, project description, icon url and more.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getAccountAppVersion" returntype="string" static="true">
+          <description>Get the application version for the current account for the current team from the account's folder.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The account's application version.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAccountAppVersion" returntype="boolean" static="true">
+          <description>Set the project version for the current account for the current team from the account's folder.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version string.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

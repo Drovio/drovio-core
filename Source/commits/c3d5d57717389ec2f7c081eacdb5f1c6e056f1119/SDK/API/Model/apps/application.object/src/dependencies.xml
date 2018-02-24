@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\API\Resources\DOMParser"></use><use path="\API\Platform\importer"></use><use path="\API\Model\core\manifests" alias="coreManifests"></use><use path="\DEV\Projects\projectLibrary"></use><use path="\AEL\Platform\application" alias="AELApplication"></use><use path="\API\Profile\team"></use><use path="\API\Profile\account"></use><use path="\DEV\Apps\test\appTester"></use><use path="\DEV\Apps\appManifest"></use><use path="\DEV\Resources\paths"></use></dependencies>

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<div class="wDoc">
+<div class="header"></div>
+<div class="body"><div class="popupManual">
+	<style type="text/css">
+		.popupManual .legend > span {
+			padding: 0 3px;
+			cursor: pointer;
+		}
+		.popupManual .legend > span:hover {
+			border-bottom:1px solid black;
+		}
+		.popupManual .examples > .box {
+			width: 95%;
+			margin: 0 auto;
+			box-shadow: inset 0 0 3px black;
+			padding: 5px;
+			box-sizing: border-box;
+			position:relative;
+			margin-top:40px;
+			background:transparent;
+		}
+		.popupManual .examples > .box > .content {
+			position:relative;
+			height: 302px;
+		}
+		.popupManual .examples > .box > .content > .options {
+			height:100%;
+		}
+		.popupManual .examples > .box > .content > .display {
+			position: absolute;
+			right: 0;
+			width: 70%;
+			height: 300px;
+			border: 1px solid lightgrey;
+			top: 0;
+			background:white;
+		}
+		.popupManual .examples > .box > .title {
+			position: absolute;
+			top: -20px;
+			left: 0px;
+			font-size: 12px;
+			text-transform:uppercase;
+		}
+		.popupManual .examples > .box:not(.blue) {
+			transition: background 900ms;
+			-webkit-transition: background 900ms;
+		}
+		.popupManual .examples > .box.blue {
+			background:lightblue;
+			transition: background 300ms;
+			-webkit-transition: background 300ms;
+		}
+		.popupManual .examples > .box > .title:first-letter {
+			font-size: 20px;
+		}
+	</style>
+<h2>How to use the popup functionality from the js.</h2>
+	<div class="usage">
+		<p>The generic call is the following:</p>
+		<p><b>sender.popup(content, <i>parent</i>)</b></p>
+		<dl>
+<dt>sender</dt>
+			<dd>The element that requests the popup. This element is linked with the popup. The popup can be attached to the sender and is disposed if the sender is removed from the document. There is no default sender. The sender is the element that calls the popup. <u>Each sender can be associated with one popup at a time, only!</u>
+</dd>
+			<dt>content</dt>
+			<dd>The popups content. This is the body of the popup. It also can hold the settings of the popup during initialization. After initialization the settings are transfered to the popup itself. Default value is empty (no content).</dd>
+			<dt>parent (optional)</dt>
+			<dd>The popup's container. It is the element where the popup will be appended to. Depending on this, the functionality of the popup may slightly change. This also makes it posible to have multiple popups in a document. Default value is the document.body's jquery object. <u>Each parent can have only one popup at a time, only!</u>
+</dd>
+		</dl>
+<p>
+		</p>
+<h3>Settings</h3>
+		
+		<p>The popup's settings can be passed through its content in the form of data- attributes (data-popup-settings, data-popup-extra) or by using the popup's settings variables (jqObject.popup.[...]). The settings are transfered to the popup as data with the same grouping. The settings can be combined with each other.</p>
+		<h4>Popup Settings</h4>
+		<dl>
+<dt>Binding</dt>
+			<dd>Popup's binding. For how long the popup with be functional in each case. Default value is "on" and means that the popup with be functional any time it is invoked. It can also be set to "one" and then the popup will work only the first time it is invoked. This option can be set in data-popup-settings' binding attribute, or in jqObject.popup.binding (or equivalent, such as element.popup.binding).</dd>
+			<dt>Type</dt>
+			<dd>Popup's type. The default value is obedient and as such, the popup will be disposed when someone clicks somewhere else in the parent. This can be set to persistent to prevent this functionality. As well as that, the keyword "toggle" can be set along the previous ones to provide toggle functionality to the popup. This option can be set in data-popup-settings' type attribute, or in jqObject.popup.type (or equivalent, such as element.popup.type).</dd>
+			<dt>Timeout</dt>
+			<dd>Popup's timeout flag. If set to true, then the popup will be disposed after 3 seconds, unless someone hovers inside. This option can be set in data-popup-settings' timeout attribute, or in jqObject.popup.withTimeout (or equivalent, such as element.popup.withTimeout).</dd>
+			<dt>Background</dt>
+			<dd>Popup's background flag. If set to true, then the popup will be accompanied by a background semi-transparent overlay. This option can be set in data-popup-settings' background attribute, or in jqObject.popup.withBackground (or equivalent, such as element.popup.withBackgroun). This option should be used only when the parent of the popup is the document's body.</dd>
+			<dt>Fade</dt>
+			<dd>Popup's fade flag. If set to true, then the popup will appear and disappear with a fading motion. This option can be set in data-popup-settings' fade attribute, or in jqObject.popup.withFade (or equivalent, such as element.popup.withFade). In future editions, there might be a mechanism to allow the user to change the in-out effects of the popup.</dd>
+		</dl>
+<h4>Popup Extra</h4>
+		<dl>
+<dt>ID</dt>
+			<dd>The popup's id. Self explanatory. Default value is a randomly generated id that starts with "pp_" and is followed by a random number. This option can be set in data-popup-extra's id attribute, or in jqObject.popup.id (or equivalent, such as element.popup.id).</dd>
+			<dt>Position</dt>
+			<dd>The popup's positioning instruction or data. The use and meaning of the instructions will be presented in folowing examples. This instruction tells the popup where to appear on screen. This option can be set in data-popup-extra's position attribute, or in jqObject.popup.position (or equivalent, such as element.popup.position). Can be a string instruction, or a javascript / JSON object with the actuall positioning data, as defined in css and for the css attributes "top", "bottom", "left", "right", and "position". Warning: In the latter case, the popup is positioned according to the "position" css attribute. Default value is "absolute" and positioning takes place in relation to the parent.</dd>
+			<dt>Distance Offset | Align Offset</dt>
+			<dd>Those two options have meaning only when the popup is attached to the sender and define the deviation of the popup from the sender in terms of distance and alignment. Default values are 0.</dd>
+		</dl>
+</div>
+	<hr>
+<div class="exampleLegend">
+		<h2>Examples</h2>
+		<div class="legend"> <span>Content</span>|<span>Parent</span>|<span>Sender</span>|<span>Binding</span>|<span>Type</span>|<span>Timeout</span>|<span>Background</span>|<span>Fade</span>|<span>Position</span>|<span>Distance</span>|<span>Alignment</span> </div>
+	</div>
+	<div class="examples">
+		<div class="box">
+			<div class="title">Content</div>
+			<div class="content">
+				<div id="contentOpts" class="options">
+				<textarea style="width:29%;height:49%;box-sizing:border-box;resize:none;"><div style="width:100px;height:100px;background:red;"></div>
+</textarea><div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup(<i>content</i>); </div>
+			</div>
+			<div id="contentDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Parent</div>
+		<div class="content">
+			<div id="parentOpts" class="options">
+				<input type="radio" name="parent" value="#parentDisp #parentBox1" checked>
+				First Box
+				<input type="radio" name="parent" value="#parentDisp #parentBox2">
+				Second Box
+				<input type="radio" name="parent" value="#parentDisp">
+				Document Body
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup(content, <i>parent</i>); </div>
+			</div>
+			<div id="parentDisp" class="display">
+				<div id="parentBox1" style="width: 200px;height: 150px;border: 1px solid black;position: relative;left: 15px;top: 26px;"></div>
+				<div id="parentBox2" style="width: 200px;height: 150px;border: 1px solid black;position: absolute;right: 5px;top: 5px;"></div>
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Sender</div>
+		<div class="content">
+			<div id="senderOpts" class="options">
+				<input type="radio" name="sender" value="#senderDisp #senderBox1" checked>
+				Box
+				<input type="radio" name="sender" value="#senderDisp button">
+				Button
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> <i>sender</i>.popup(content, parent);					//+ "proper positioning" (Check Positioning section) </div>
+			</div>
+			<div id="senderDisp" class="display">
+				<div id="senderBox1" style="width: 200px;height: 150px;border: 1px solid black;position: relative;left: 15px;top: 26px;"></div>
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Binding</div>
+		<div class="content">
+			<div id="bindingOpts" class="options">
+				<input type="radio" name="binding" value="on" checked>
+				on
+				<input type="radio" name="binding" value="one">
+				one
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.binding = "<span>on</span>";					sender.popup(content); </div>
+			</div>
+			<div id="bindingDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Type</div>
+		<div class="content">
+			<div id="typeOpts" class="options">
+				<input type="radio" name="type" value="obedient" checked>
+				obedient
+				<input type="radio" name="type" value="persistent">
+				persistent
+				<input type="checkbox" name="binding" value="toggle">
+				toggle
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.type = "<span>obedient</span>";					sender.popup(content); </div>
+			</div>
+			<div id="typeDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Timeout</div>
+		<div class="content">
+			<div id="timeoutOpts" class="options">
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.withTimeout = true;					sender.popup(content); </div>
+			</div>
+			<div id="timeoutDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Background</div>
+		<div class="content">
+			<div id="backgroundOpts" class="options">
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.withBackground = true;					sender.popup(content); </div>
+			</div>
+			<div id="backgroundDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Fade</div>
+		<div class="content">
+			<div id="fadeOpts" class="options">
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.withFade = true;					sender.popup(content); </div>
+			</div>
+			<div id="fadeDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Position</div>
+		<div class="content">
+			<div id="positionOpts" class="options">
+				<div style="width:29%;height:100%;box-sizing:border-box;display:block;position:absolute;bottom:0;">
+					<input type="radio" name="position" value="window" checked>
+					Window
+					<input type="radio" name="position" value="parent">
+					Parent
+					<input type="radio" name="position" value="sender">
+					Sender
+					<div>
+						<div style="width:30%;height:49%;box-sizing:border-box;display:block;position:absolute;top:0;right:30%;">
+							<input type="radio" name="positionEntry" value="1">
+							1
+							<input type="radio" name="positionEntry" value="bottom">
+							2|bottom
+							<input type="radio" name="positionEntry" value="3">
+							3
+							<input type="radio" name="positionEntry" value="left">
+							4|left
+							<input type="radio" name="positionEntry" value="center" checked>
+							5|center </div>
+						<div style="width:30%;height:49%;box-sizing:border-box;display:block;position:absolute;top:0;right:0;">
+							<input type="radio" name="positionEntry" value="right">
+							6|right
+							<input type="radio" name="positionEntry" value="7">
+							7
+							<input type="radio" name="positionEntry" value="top">
+							8|top
+							<input type="radio" name="positionEntry" value="9">
+							9
+							<input type="radio" name="positionEntry" value="user">
+							user </div>
+						<div style="width:100%;height:49%;box-sizing:border-box;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.position = "<span>center</span>";							sender.popup(content);							or							sender.popup.position = {<i>top</i>|<i>bottom</i>|<i>left</i>|<i>right</i>, "position":"fixed"};							sender.popup(content); </div>
+					</div>
+					<div style="display:none;">
+						<div style="width:70%;height:49%;box-sizing:border-box;display:block;position:absolute;top:0;right:0;"> top:
+							<input name="positionEntry2" type="text">
+							left:
+							<input name="positionEntry2" type="text">
+							bottom:
+							<input name="positionEntry2" type="text">
+							right:
+							<input name="positionEntry2" type="text">
+</div>
+						<div style="width:100%;height:49%;box-sizing:border-box;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.position = {"top":"<span></span>", "left":"<span></span>", "bottom":"<span></span>", "right":"<span></span>", "position":"absolute"};							sender.popup(content, <i>parent</i>); </div>
+					</div>
+					<div style="display:none;">
+						<div style="width:30%;height:49%;box-sizing:border-box;display:block;position:absolute;top:0;right:30%;"> Orientation
+							<input type="radio" name="positionEntry3" value="top" checked>
+							top
+							<input type="radio" name="positionEntry3" value="left">
+							left
+							<input type="radio" name="positionEntry3" value="bottom">
+							bottom
+							<input type="radio" name="positionEntry3" value="right">
+							right </div>
+						<div style="width:30%;height:49%;box-sizing:border-box;display:block;position:absolute;top:0;right:0;"> Alignment
+							<input type="radio" name="positionEntry4" value="top">
+							top
+							<input type="radio" name="positionEntry4" value="left" checked>
+							left
+							<input type="radio" name="positionEntry4" value="bottom">
+							bottom
+							<input type="radio" name="positionEntry4" value="right">
+							right
+							<input type="radio" name="positionEntry4" value="center">
+							center </div>
+						<div style="width:100%;height:49%;box-sizing:border-box;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.position = "<span>top</span>|<span>left</span>";							sender.popup(content, <i>parent</i>); </div>
+					</div>
+				</div>
+			</div>
+			<div id="positionDisp" class="display">
+				<button style="top:45%;position:absolute;left:45%;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Distance</div>
+		<div class="content">
+			<div id="distanceOpts" class="options">
+				<input type="radio" name="distance" value="-2">
+				-2px
+				<input type="radio" name="distance" value="-1">
+				-1px
+				<input type="radio" name="distance" value="0" checked>
+				0
+				<input type="radio" name="distance" value="10">
+				10px
+				<input type="radio" name="distance" value="20">
+				20px
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.distanceOffset = <span>0</span>;					sender.popup(content); </div>
+			</div>
+			<div id="distanceDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="title">Alignment</div>
+		<div class="content">
+			<div id="alignOpts" class="options">
+				<input type="radio" name="align" value="-2">
+				-2px
+				<input type="radio" name="align" value="-1">
+				-1px
+				<input type="radio" name="align" value="0" checked>
+				0
+				<input type="radio" name="align" value="10">
+				10px
+				<input type="radio" name="align" value="20">
+				20px
+				<div style="width:29%;height:49%;box-sizing:border-box;resize:none;display:block;border:1px solid lightgrey;padding:5px;position:absolute;bottom:0;"> sender.popup.alignOffset = <span>0</span>;					sender.popup(content); </div>
+			</div>
+			<div id="alignDisp" class="display">
+				<button style="bottom:0;position:absolute;left:0;">Show Popup</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+</div>
+
+
+
+
+<div class="footer"><p class="updated">Document updated 05 March, 2015 at 17:13</p></div>
+</body></html>

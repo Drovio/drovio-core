@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Security" namespace="\">
+  <class name="permissions" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1448203804</datecreated>
+      <daterevised>1448203804</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Account permission manager with groups</title>
+      <description>Handles account permissions using user groups.
+This class handles accounts into groups.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activate the permissions feature for the current identity database.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="boolean" static="true">
+          <description>Check if the permissions feature is enabled for the current identity database.</description>
+          <parameters/>
+          <returndescription>True if enabled, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllGroups" returntype="array" static="true">
+          <description>Get all permission groups.</description>
+          <parameters/>
+          <returndescription>An associative array of groups by id and name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addGroup" returntype="boolean" static="true">
+          <description>Add a new permission group to the database.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeGroup" returntype="boolean" static="true">
+          <description>Remove a permission group from the database.
+All account connections to this group will also be removed.</description>
+          <parameters>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.
+Set empty to select by name.</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.
+Set empty to select by id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAccountGroups" returntype="array" static="true">
+          <description>Get all groups that the given account is member of.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An associative array of all groups that the given account is member of.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAccountGroup" returntype="boolean" static="true">
+          <description>Add given account to given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeAccountGroup" returntype="boolean" static="true">
+          <description>Remove given account from given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateAccountGroup" returntype="boolean" static="true">
+          <description>Validate if the given account id is member of the given group id.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if account is member, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateAccountGroupName" returntype="string" static="true">
+          <description>Validate if the given account id is member of the given group name.
+NOTE: The group name is case sensitive.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if account is member, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDbConnection" returntype="dbConnection" static="true">
+          <description>Get the identity dbConnection instance for the current team.</description>
+          <parameters/>
+          <returndescription>The dbConnection instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

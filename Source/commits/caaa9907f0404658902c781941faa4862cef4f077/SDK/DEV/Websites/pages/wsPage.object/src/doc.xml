@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\pages">
+  <class name="wsPage" abstract="">
+    <info>
+      <version>5.1</version>
+      <build>7</build>
+      <datecreated>1410368905</datecreated>
+      <daterevised>1441271152</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Page</title>
+      <description>It handles the entire page object, including source, view and javascript.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The object type / extension</description>
+      </const>
+      <const type="string" name="PAGE_TYPE">
+        <description>The page type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="website" name="website">
+          <description>The website object</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The object name.</description>
+        </prop>
+        <prop type="string" name="folder">
+          <description>The page folder. Empty for root pages.</description>
+        </prop>
+        <prop type="array" name="wsdk_dependencies">
+          <description>The array of Web SDK dependencies.</description>
+        </prop>
+        <prop type="array" name="ws_dependencies">
+          <description>The array of Website Source dependencies.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor. Initializes the object's variables.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The page folder.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.
+For creating new page, leave this empty.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new website page.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPHPCode" returntype="string">
+          <description>Get the page's php code.</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>If true, returns the entire php code as is form the file, otherwise it returns only the view code section.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updatePHPCode" returntype="boolean">
+          <description>Updates the page's php code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The page's php code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSingleDependencies" returntype="array">
+          <description>Get all dependencies from the object given the dependencies' file.</description>
+          <parameters>
+            <parameter name="$depFile" type="string" defaultvalue="">
+              <description>The dependencies' xml file.
+You can load the trunk's file or the release's file.</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>Whether the given path is root relative or not.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all dependencies including the use 'path' and use 'alias'.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateSingleDependencies" returntype="mixed">
+          <description>Validate page view dependencies comparing the uses with the imports.</description>
+          <parameters/>
+          <returndescription>TRUE if everything is OK.
+An array of missing dependencies if there are missing dependencies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMetrics" returntype="array" static="true">
+          <description>Get all source code's metrics data for the given object.</description>
+          <parameters>
+            <parameter name="$metFile" type="string" defaultvalue="">
+              <description>The metrics' xml file.
+You can load the trunk's file or the release's file.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all metrics data. Including:
+LOC
+CLOC
+SLOC-P
+NOF
+LOC-PF.
+For more information on explanation, see the DEV\Tools\phpParser.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSS" returntype="string">
+          <description>Gets the page's style code.</description>
+          <parameters>
+            <parameter name="$normalCss" type="boolean" defaultvalue="">
+              <description>If true, return the parsed css code, else it returns the initial scss.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The style css.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCSS" returntype="boolean">
+          <description>Updates the page's css code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The page's new css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getJS" returntype="string">
+          <description>Gets the page's javascript code.</description>
+          <parameters/>
+          <returndescription>The page's javascript code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateJS" returntype="boolean">
+          <description>Updates the page's javascript code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The page's new javascript code</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTML" returntype="string">
+          <description>Gets the page's html content.</description>
+          <parameters/>
+          <returndescription>The html content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateHTML" returntype="boolean">
+          <description>Updates the page's html content.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The page's new html content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the page from the website.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateDependencies" returntype="boolean">
+          <description>Update the page's information, source dependencies.</description>
+          <parameters>
+            <parameter name="$sdk_dependencies" type="array" defaultvalue="">
+              <description>The page's dependencies to the Web SDK.
+The array's format is in the key. Each key is like [library,package].</description>
+            </parameter>
+            <parameter name="$ws_dependencies" type="array" defaultvalue="">
+              <description>The page's dependencies to the website source.
+The array's format is in the key. Each key is like [library,package].</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDependencies" returntype="array">
+          <description>Gets the page's dependencies.</description>
+          <parameters/>
+          <returndescription>An array of web sdk and website source dependencies:
+dependencies['sdk']
+dependencies['ws']</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSettings" returntype="boolean">
+          <description>Update page settings.</description>
+          <parameters>
+            <parameter name="$settings" type="array" defaultvalue="">
+              <description>An array of all page settings by name and value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSettings" returntype="array">
+          <description>Get all page settings.</description>
+          <parameters/>
+          <returndescription>All page settings in an array by name and value.
+All settings names are upper case.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHeader" returntype="string">
+          <description>Builds the php code header.</description>
+          <parameters/>
+          <returndescription>The php code header.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildSourceCode" returntype="string">
+          <description>Builds the source code with the given header and body.</description>
+          <parameters>
+            <parameter name="$header" type="string" defaultvalue="">
+              <description>The header code.</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The body code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The final source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSingleDependencies" returntype="boolean">
+          <description>Update source code dependencies.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code to parse the dependencies from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMetrics" returntype="boolean">
+          <description>Update the source code's metrics data.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code to parse the metrics from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultSourceCode" returntype="string">
+          <description>Gets the page's default source code.</description>
+          <parameters/>
+          <returndescription>The default template source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadInfo" returntype="void">
+          <description>Loads the page's info from the index file.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDependencies" returntype="void">
+          <description>Sets the dependencies as a normalized dependency array.</description>
+          <parameters>
+            <parameter name="$wsdk_dependencies" type="array" defaultvalue="">
+              <description>The page's dependencies to the Web SDK.
+The array's format is in the key. Each key is like [library,package].</description>
+            </parameter>
+            <parameter name="$ws_dependencies" type="array" defaultvalue="">
+              <description>The page's dependencies to the website source.
+The array's format is in the key. Each key is like [library,package].</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Gets the vcs item's id.</description>
+          <parameters>
+            <parameter name="$old" type="boolean" defaultvalue="">
+              <description>Support the compatibility for old items that used only the page name.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPageFolder" returntype="string">
+          <description>Get the page folder path.</description>
+          <parameters/>
+          <returndescription>The page folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createStructure" returntype="void">
+          <description>Creates the page's inner file structure.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

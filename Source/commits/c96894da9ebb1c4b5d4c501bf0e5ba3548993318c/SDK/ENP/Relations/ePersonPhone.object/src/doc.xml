@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ENP" package="Relations" namespace="\">
+  <class name="ePersonPhone" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1440070102</datecreated>
+      <daterevised>1440951862</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Person phone manager</title>
+      <description>Manages all person's phones.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="personID">
+          <description>The current person id.</description>
+        </prop>
+        <prop type="integer" name="phoneID">
+          <description>The current phone id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="boolean" name="valid">
+          <description>Whether the person is valid with the current company.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of the person phone manager.</description>
+          <parameters>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id to manage phones for.</description>
+            </parameter>
+            <parameter name="$phoneID" type="integer" defaultvalue="">
+              <description>The phone id.
+Leave empty for new phones.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new person phone.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The phone type id.
+See getPhoneTypes() for more information.</description>
+            </parameter>
+            <parameter name="$phone" type="string" defaultvalue="">
+              <description>The phone number.
+It should be without country code.</description>
+            </parameter>
+            <parameter name="$countryID" type="integer" defaultvalue="">
+              <description>The country code.
+See Geoloc API for more information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the phone information.</description>
+          <parameters>
+            <parameter name="$typeID" type="integer" defaultvalue="">
+              <description>The phone type id.
+See getPhoneTypes() for more information.</description>
+            </parameter>
+            <parameter name="$phone" type="string" defaultvalue="">
+              <description>The phone number.
+It should be without country code.</description>
+            </parameter>
+            <parameter name="$countryID" type="integer" defaultvalue="">
+              <description>The country code.
+See Geoloc API for more information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove current phone from person.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get phone information.</description>
+          <parameters/>
+          <returndescription>An array with phone information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPhoneTypes" returntype="array" static="true">
+          <description>Get all phone types.</description>
+          <parameters/>
+          <returndescription>An array of phone types by id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllPhones" returntype="array">
+          <description>Get all person phones.</description>
+          <parameters/>
+          <returndescription>An array of all person phones an their info</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validate" returntype="boolean">
+          <description>Validate whether the given person is member of the current team.</description>
+          <parameters/>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

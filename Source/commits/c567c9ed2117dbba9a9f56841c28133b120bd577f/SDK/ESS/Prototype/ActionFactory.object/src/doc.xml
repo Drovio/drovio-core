@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="ActionFactory" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1363090980</datecreated>
+      <daterevised>1409310190</daterevised>
+      <extends>
+        <object>\ESS\Prototype\ReportFactory</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback's Action Factory</title>
+      <description>This is a class for attaching all kind of actions and listeners to elements to be handled in the client side and communicate with the server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="setModuleAction" returntype="void" static="true">
+          <description>Creates a module action listener to the given item.
+This listener invokes a module GET action to the specified module and view.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler item to invoke the action.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If it left empty, it gets the default module's view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder container for the content that will be loaded.
+For more information, see \ESS\Protocol\ModuleProtocol.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module.</description>
+            </parameter>
+            <parameter name="$loading" type="boolean" defaultvalue="">
+              <description>If true, set the page loading indicator.
+False by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setPopupAction" returntype="void" static="true">
+          <description>Attaches the popup action.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The handler item to invoke the action.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.
+If it left empty, it gets the default module's view.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A set of attributes to be passed to the module.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Merged with setModuleAction. The popup is invoked by the content loaded.</deprecated>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

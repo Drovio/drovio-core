@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Forms" namespace="\formReport">
+  <class name="formErrorNotification" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1363004160</datecreated>
+      <daterevised>1403981450</daterevised>
+      <extends>\UI\Forms\formReport\formNotification</extends>
+      <implements/>
+      <throws/>
+      <title>Form Error Notification</title>
+      <description>Builds an error notification and inserts messages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="treeView" name="treeView">
+          <description>The error treeView that contains the errors.</description>
+        </prop>
+        <prop type="DOMElement" name="errorList">
+          <description>The treeView's outer list</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="formErrorNotification">
+          <description>Builds the error notification</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addErrorHeader" returntype="DOMElement">
+          <description>Inserts an error header to the error treeView.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The header's id.</description>
+            </parameter>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>The error header (string or DOMElement)</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addErrorDescription" returntype="DOMElement">
+          <description>Inserts an error description to the given error header.</description>
+          <parameters>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The error header</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The description's id</description>
+            </parameter>
+            <parameter name="$description" type="mixed" defaultvalue="">
+              <description>The error description (string or DOMElement)</description>
+            </parameter>
+            <parameter name="$extra" type="string" defaultvalue="">
+              <description>Extra description content.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getErrorMessage" returntype="DOMElement">
+          <description>Creates a span with an error message for the report.</description>
+          <parameters>
+            <parameter name="$messageID" type="string" defaultvalue="">
+              <description>The error message id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Returns a form error notification report.
+It prevents the reset action of the form.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

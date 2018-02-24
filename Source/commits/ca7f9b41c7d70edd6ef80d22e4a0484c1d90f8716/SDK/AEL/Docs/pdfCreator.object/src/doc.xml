@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Docs" namespace="\">
+  <class name="pdfCreator" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1443121647</datecreated>
+      <daterevised>1443466171</daterevised>
+      <extends>
+        <object>\GTL\Docs\pdf\pdfDoc</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>PDF Creator</title>
+      <description>Creates pdf files.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="ImageFromTeam" returntype="v">
+          <description>Puts an image to the pdf from the team private directory.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The file path inside the apps's team private directory.
+For more parameter information, see the tFPDF manual.</description>
+            </parameter>
+            <parameter name="$x" type="float" defaultvalue="">
+              <description>The x position.</description>
+            </parameter>
+            <parameter name="$y" type="float" defaultvalue="">
+              <description>The y position.</description>
+            </parameter>
+            <parameter name="$w" type="float" defaultvalue="">
+              <description>The image width.</description>
+            </parameter>
+            <parameter name="$h" type="float" defaultvalue="">
+              <description>The image height.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The image type.</description>
+            </parameter>
+            <parameter name="$link" type="string" defaultvalue="">
+              <description>The image link.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="ImageFromTeamShared" returntype="void">
+          <description>Puts an image to the pdf from the team shared directory.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The file path inside the apps's team shared directory.
+For more parameter information, see the tFPDF manual.</description>
+            </parameter>
+            <parameter name="$x" type="float" defaultvalue="">
+              <description>The x position.</description>
+            </parameter>
+            <parameter name="$y" type="float" defaultvalue="">
+              <description>The y position.</description>
+            </parameter>
+            <parameter name="$w" type="float" defaultvalue="">
+              <description>The image width.</description>
+            </parameter>
+            <parameter name="$h" type="float" defaultvalue="">
+              <description>The image height.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The image type.</description>
+            </parameter>
+            <parameter name="$link" type="string" defaultvalue="">
+              <description>The image link.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\database\connections">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1366713060</datecreated>
+      <daterevised>1415616120</daterevised>
+      <extends>
+        <object>\API\Comm\database\dbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Database Connection</title>
+      <description>Connects to any database with the proper database connector.</description>
+      <deprecated>Use \API\Comm\database\dbConnection instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

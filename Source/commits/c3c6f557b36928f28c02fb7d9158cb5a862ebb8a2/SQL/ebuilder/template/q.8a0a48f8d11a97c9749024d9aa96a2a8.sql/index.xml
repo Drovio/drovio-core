@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1053660758"><title>Get Template Info</title><description>Returns full temp[late object info (title, description, group, type) given the templates id and the current locale</description><access>1</access><attributes><attr id="locale"></attr><attr id="id"></attr></attributes></query>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Profile" namespace="\">
+  <class name="stUnit" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1443876556</datecreated>
+      <daterevised>1443876556</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Storage unit manager</title>
+      <description>This class manages all the company's storage units.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The retail database connection manager.</description>
+        </prop>
+        <prop type="integer" name="stUnitID">
+          <description>The storage unit id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the storage unit.</description>
+          <parameters>
+            <parameter name="$stUnitID" type="string" defaultvalue="">
+              <description>The storage unit id.
+Leave empty for new units.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new storage unit.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The storage unit title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The storage unit description.
+This is optional.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the storage unit information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The storage unit title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The storage unit description.
+This is optional.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the current storage unit from the system.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get storage unit information.</description>
+          <parameters/>
+          <returndescription>An array of all storage unit information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStorageUnitID" returntype="string">
+          <description>Get the current storage unit id.</description>
+          <parameters/>
+          <returndescription>The storage unit id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

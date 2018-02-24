@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\pageComponents">
+  <class name="HTMLNavFooter" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1366979462</datecreated>
+      <daterevised>1402467779</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Navigation Footer</title>
+      <description>The footer of the page with some basic navigation to the site.</description>
+      <deprecated>Use \UI\Core\components\RPageFooter instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

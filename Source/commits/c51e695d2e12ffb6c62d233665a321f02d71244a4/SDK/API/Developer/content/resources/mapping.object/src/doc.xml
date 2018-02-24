@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="mapping" abstract="" namespace="\content\resources">
+    <info>
+      <version/>
+      <datecreated>March 22, 2013, 11:23 (EET)</datecreated>
+      <daterevised>March 22, 2013, 11:23 (EET)</daterevised>
+      <extends>\API\Content\resources\mapping</extends>
+      <implements/>
+      <title>SDK Developer Mapping</title>
+      <description>Handles all developer's mapping of the SDK objects.</description>
+      <deprecated>This class is no longer used. Operations have been merged with sdkLibrary, sdkPackage and sdkObject classes.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create_library" static="true" returntype="boolean">
+          <description>Create an SDK Library Index file</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+          </parameters>
+          <deprecated>Merged with sdkLibrary::create() function.</deprecated>
+        </method>
+        <method name="create_package" static="true" returntype="boolean">
+          <description>Create a package index into the given library</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name</description>
+            </parameter>
+          </parameters>
+          <deprecated>Merged with sdkPackage-&amp;gt;create() function.</deprecated>
+        </method>
+        <method name="create_namespace" static="true" returntype="boolean">
+          <description>Create a package namespace</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace name</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent's namespace. Multiple namespaces can be separated with "\" or "::".</description>
+            </parameter>
+          </parameters>
+          <deprecated>Merged with sdkPackage-&amp;gt;createNS() function.</deprecated>
+        </method>
+        <method name="create_object" static="true" returntype="void">
+          <description>Create a package object index</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The library name</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The package name</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The namespace. Namespaces separated by "::".</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name</description>
+            </parameter>
+            <parameter name="$objectTitle" type="string" defaultvalue="">
+              <description>The object's title</description>
+            </parameter>
+          </parameters>
+          <deprecated>Merged with sdkObject-&amp;gt;create() function.</deprecated>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\">
+  <class name="validator" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1433343525</datecreated>
+      <daterevised>1433343525</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Information/Type validator</title>
+      <description>Validates specific types of input like mails, usernames etc.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="EMAIL_REGEXP">
+        <description>Email Regular Expression</description>
+      </const>
+      <const type="string" name="USERNAME_REGEXP">
+        <description>Username Regular Expression</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="validEmail" returntype="boolean" static="true">
+          <description>Check if the given value is a valid email.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The email to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the email is a valid one, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validUsername" returntype="boolean" static="true">
+          <description>Check if the given value is a valid username.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The username to check</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if the username is a valid one, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

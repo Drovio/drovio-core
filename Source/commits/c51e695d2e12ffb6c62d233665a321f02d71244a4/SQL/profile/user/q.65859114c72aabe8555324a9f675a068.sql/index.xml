@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1589356652"><title>Get User Profile</title><description>Get a person data by user id</description><access>1</access><attributes><attr id="uid"></attr></attributes></query>

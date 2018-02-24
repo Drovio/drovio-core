@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Application platform manager</h1>
+<p>Every application when is being executed has access to the platform application manager. This class allows developers mostly to import classes form the application source.</p>
+<h3>PHP Example</h3>
+<div class="code">
+	<pre>// In application source object
+	
+// Import other application classes
+application::import($package = "Main", $class = "test/testObject");
+
+// Use the object
+use \APP\Main\test\testObject;</pre>
+</div>
+<p>This is the master class from which APPContent gets access like loading views and managing loading depth of views.</p>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

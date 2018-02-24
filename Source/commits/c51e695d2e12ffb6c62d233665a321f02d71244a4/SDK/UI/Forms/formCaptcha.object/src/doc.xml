@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="formCaptcha" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 12:09 (EET)</datecreated>
+      <daterevised>March 11, 2013, 12:09 (EET)</daterevised>
+      <extends>\UI\Forms\special\formCaptcha</extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Forms\special\formCaptcha instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\">
+  <class name="ftp" abstract="">
+    <info>
+      <version>6.1</version>
+      <build>1</build>
+      <datecreated>1404812920</datecreated>
+      <daterevised>1432299919</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>FTP Manager</title>
+      <description>Creates an ftp connection and manages all file transports and directory actions.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="resource" name="connectionID">
+          <description>FTP stream</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__destruct" returntype="void">
+          <description>Ensures that any ftp connection is successfully closed before the destruction of the class</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="connect" returntype="boolean">
+          <description>Connect to an ftp server</description>
+          <parameters>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The FTP server address.
+This parameter shouldn't have any trailing slashes and shouldn't be prefixed with ftp://.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The ftp user username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The ftp user password.</description>
+            </parameter>
+            <parameter name="$passive" type="boolean" defaultvalue="">
+              <description>Turns on the passive mode.
+In passive mode, data connections are initiated by the client, rather than by the server.
+It may be needed if the client is behind firewall.
+Default value is FALSE.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="put" returntype="boolean">
+          <description>Uploads a file to the given location</description>
+          <parameters>
+            <parameter name="$localFilePath" type="string" defaultvalue="">
+              <description>The local file path.</description>
+            </parameter>
+            <parameter name="$remoteFilePath" type="string" defaultvalue="">
+              <description>The remote file path.</description>
+            </parameter>
+            <parameter name="$remoteFileName" type="string" defaultvalue="">
+              <description>The remote file name.
+It is used basically for saving the file with different name. If $dName is empty the file name assumed to be concacated with the filepath ($dPath).</description>
+            </parameter>
+            <parameter name="$mode" type="mixed" defaultvalue="">
+              <description>The ftp mode.
+Leave empty for auto mode.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="write" returntype="boolean">
+          <description>Creates a files to the given remote path and writes its contents</description>
+          <parameters>
+            <parameter name="$remoteFilePath" type="string" defaultvalue="">
+              <description>The remote file path.</description>
+            </parameter>
+            <parameter name="$contents" type="string" defaultvalue="">
+              <description>The contents to be written to the file.</description>
+            </parameter>
+            <parameter name="$remoteFileName" type="string" defaultvalue="">
+              <description>The remote file name.
+It is used basically for saving the file with different name. If $dName is empty the file name assumed to be concacated with the filepath ($dPath).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="makeDir" returntype="boolean">
+          <description>Creates a folder to the remote location</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirContents" returntype="mixed">
+          <description>Returns a list of files in the given directory.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The directory to be listed.
+Note that to avoid some issues with filenames containing spaces and other characters, this parameter should be escaped.</description>
+            </parameter>
+            <parameter name="$parameters" type="string" defaultvalue="">
+              <description>Additional parameters to be considered in oder to return more info about eac file.
+The Default is '-la'</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of filenames from the specified directory on success or FALSE on error.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConnection" returntype="resource">
+          <description>Returns the ftp connection object</description>
+          <parameters/>
+          <returndescription>The connection resource.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="changeDir" returntype="boolean">
+          <description>Tries to change the current ftp working directory.
+If the create flag is TRUE, the target directory will be created if is not exists and then it will be set as current.</description>
+          <parameters>
+            <parameter name="$directory" type="string" defaultvalue="">
+              <description>The target directory.</description>
+            </parameter>
+            <parameter name="$create" type="boolean" defaultvalue="">
+              <description>Create the directory if doesn't exist.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on Success, False elsewhere</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="close" returntype="void">
+          <description>Closes the ftp connection</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

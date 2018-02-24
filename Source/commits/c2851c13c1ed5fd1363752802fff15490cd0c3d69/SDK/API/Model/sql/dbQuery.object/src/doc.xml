@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\sql">
+  <class name="dbQuery" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1408013149</datecreated>
+      <daterevised>1408013149</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Redback database query</title>
+      <description>Represents a redback's database query object.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The query id.</description>
+        </prop>
+        <prop type="string" name="domain">
+          <description>The query domain.</description>
+        </prop>
+        <prop type="string" name="directory">
+          <description>The query library directory.</description>
+        </prop>
+        <prop type="boolean" name="forceDeployed">
+          <description>Whether to force load from deployed library.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor function. Initializes the query variables.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+            <parameter name="$domain" type="string" defaultvalue="">
+              <description>The query domain.</description>
+            </parameter>
+            <parameter name="$forceDeployed" type="" defaultvalue="">
+              <description>Setting this variable to true, the system will load the query from the deployed sql library overriding the sql tester mode status.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="string">
+          <description>Returns the executable query from the library.</description>
+          <parameters>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An associative array of the query attributes.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The executable sql query.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getFileName" returntype="string">
+          <description>Get the filename of the query to be stored to the exported library.</description>
+          <parameters/>
+          <returndescription>The query php filename.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="168706013"><title>Grant Privileges</title><description>Grant module privileges to a userGroup</description><access>1</access><attributes><attr id="gid"></attr><attr id="mid"></attr></attributes></query>

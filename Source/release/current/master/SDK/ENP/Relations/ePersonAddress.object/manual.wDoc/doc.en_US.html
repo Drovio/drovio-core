@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Relations person address manager</h1>
+<p>Every relation person can have 0 or more addresses and they can by of different type (home, work etc.). You can add addresses to a person as easy as two lines of code and you can edit and remove them even easier:</p>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePerson;
+use \ENP\Relations\ePersonAddress;
+
+// Get person id
+$personID = engine::getVar("id");
+
+// Create an empty address instance
+$pAddress = new ePersonAddress($personID);
+
+// Create new address
+$pAddress-&gt;create($typeID, $address = "Egnatia", $postal_code = "54621", $city = "Thessaloniki", $countryID = "");
+
+
+// Update the address info
+$pAddress-&gt;update($typeID, $address = "Egnatia road", $postal_code = "54621", $city = "Thessaloniki", $countryID = "87");</pre>
+</div>
+<h2>Getting all addresses</h2>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePerson;
+use \ENP\Relations\ePersonAddress;
+
+// Get person id
+$personID = engine::getVar("id");
+
+// Get all person addresses
+$pAddress = new ePersonAddress($personID);
+$addresses = $pAddress-&gt;getAllAddresses();
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; "1_1_1"
+            [person_id] =&gt; "1"
+            [address_id] =&gt; "1"
+            [type_id] =&gt; "2"
+            [address] =&gt; "Egnatia road"
+            [postal_code] =&gt; "54621"
+            [city] =&gt; "Thessaloniki"
+            [country_id] =&gt; 87
+            [pin] =&gt; "40.6308652,22.9532752"
+            [country] =&gt; 87
+            [type] =&gt; "Home"
+            [country] =&gt; "Greece"
+        )
+)</pre>
+</div>
+<h2>Select an address type</h2>
+<p>When creating or updating an address, we need to provide an address type. This class can provide us with a list of all address types that the SDK supports:</p>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePersonAddress;
+
+// Get all address types
+$types = new ePersonAddress::getAddressTypes();
+
+// The above should return something like this:
+// It is: key =&gt; title
+Array
+(
+    [0] =&gt; "Home"
+    [1] =&gt; "Work"
+    [2] =&gt; "Fax"
+)</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 01 September, 2015 [en_US]</p></div>
+</div></body></html>

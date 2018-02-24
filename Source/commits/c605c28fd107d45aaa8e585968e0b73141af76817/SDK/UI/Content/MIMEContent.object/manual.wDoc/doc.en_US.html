@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>MIME Async Content Builder</h1>
+<p>MIMEContent is a MIME content builder that allows the developers to deliver asynchronously mime files.</p>
+<div class="code">
+	<pre>// Building a custom MIME content
+	
+// Use the class
+use \UI\Content\MIMEContent;
+
+// Create the object
+$mimeContent = new MIMEContent();
+
+
+// Set the file to be downloaded
+$mimeContent-&gt;set("/profile/photos/ph_0123132.jpg", $type = self::CONTENT_APP_STREAM);
+
+
+// Get the report immediately to download the file
+return $mimeContent-&gt;getReport($suggestedFileName = "", $ignore_user_abort = FALSE, $removeFile = FALSE);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 14:02</p></div>
+</div></body></html>

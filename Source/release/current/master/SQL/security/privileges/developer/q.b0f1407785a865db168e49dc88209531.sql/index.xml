@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1114590665"><title>Revoke Master Access</title><description>Restricts master access from a developer for a module group</description><access>1</access><attributes><attr id="aid"></attr><attr id="gid"></attr></attributes></query>

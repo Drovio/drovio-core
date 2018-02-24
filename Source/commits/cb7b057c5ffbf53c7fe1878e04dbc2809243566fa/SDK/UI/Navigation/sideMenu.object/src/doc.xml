@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Navigation" namespace="\">
+  <class name="sideMenu" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1363096920</datecreated>
+      <daterevised>1438077285</daterevised>
+      <extends>
+        <object>\UI\Prototype\MenuPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Sidebar menu.</title>
+      <description>Creates a vertical sidebar menu.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="sideMenu">
+          <description>Builds the entire menu.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the menu.</description>
+            </parameter>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>The header of the menu.
+It can be a string or a DOMElement (span).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The sideMenu object.</returndescription>
+          <throws/>
+        </method>
+        <method name="setHeader" returntype="sideMenu">
+          <description>Sets the menu's header.</description>
+          <parameters>
+            <parameter name="$header" type="mixed" defaultvalue="">
+              <description>The header of the menu.
+It can be a string or a DOMElement (span).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The sideMenu object.</returndescription>
+          <throws/>
+        </method>
+        <method name="insertListItem" returntype="DOMElement">
+          <description>Creates a menu list item and inserts it to the sideMenu.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The item's content.</description>
+            </parameter>
+            <parameter name="$selected" type="boolean" defaultvalue="">
+              <description>Sets the current item selected.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The list item</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

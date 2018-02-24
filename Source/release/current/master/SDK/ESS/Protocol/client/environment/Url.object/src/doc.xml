@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client\environment">
+  <class name="Url" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362649140</datecreated>
+      <daterevised>1406652150</daterevised>
+      <extends>
+        <object>\ESS\Protocol\environment\Url</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>URL Resolver</title>
+      <description>Resolves urls according to static and subdomain</description>
+      <deprecated>Use \ESS\Protocol\environment\Url instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

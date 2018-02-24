@@ -1,0 +1,1 @@
+SHOW TABLES LIKE 'ID_PM_%';

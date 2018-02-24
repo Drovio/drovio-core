@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="INU" package="Developer" namespace="\">
+  <class name="redWIDE" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366972718</datecreated>
+      <daterevised>1410178915</daterevised>
+      <extends>
+        <object>\UI\Developer\devTabber</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Web Integrated Development Environment</title>
+      <description>A tab-oriented object for handling multiple data objects.</description>
+      <deprecated>Use \UI\Developer\devTabber instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

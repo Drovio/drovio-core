@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Resources" namespace="\settings">
+  <class name="dbSettings" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1419201072</datecreated>
+      <daterevised>1419254200</daterevised>
+      <extends>
+        <object>\API\Resources\settingsManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Platform database server manager</title>
+      <description>Manages all database server settings.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="serverName">
+          <description>The server name id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize settings manager.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The server name.
+For new servers, set the name here and call create().</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new server entry in the list.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateServer" returntype="boolean">
+          <description>Update the server details.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The server url.</description>
+            </parameter>
+            <parameter name="$dbName" type="string" defaultvalue="">
+              <description>The database name.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The server username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The server password.</description>
+            </parameter>
+            <parameter name="$dbms" type="string" defaultvalue="">
+              <description>The server dbms.
+For now it supports only MySQL, and this is the default value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServers" returntype="array" static="true">
+          <description>Get all stored servers.</description>
+          <parameters/>
+          <returndescription>An array of all server names.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="addServer" returntype="boolean">
+          <description>Add a new server to the list.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The server name to add.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

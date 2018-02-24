@@ -1,0 +1,415 @@
+/*____________________ views.fileExplorer ____________________*/
+
+.fileExplorer {
+	min-width:800px;
+	position:relative;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.fileExplorer > .toolbar {
+	position:absolute;
+	height:36px;
+	line-height:26px;
+	padding:5px;
+	/*width:50%;*/
+	width:auto;
+	border-left:1px solid rgba(166, 166, 166, 1);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	right:0;
+	top:0;
+	text-align:right;
+}
+
+.fileExplorer > .toolbar .hiddenFiles {
+	display:inline-block;
+	margin: 0px;
+	top: 4px;
+	margin-left: 2px;
+}
+
+.fileExplorer > .pathbar {
+	position:absolute;
+	height:36px;
+	/*width:50%;*/
+	width:auto;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	left:0;
+	top:0;
+	padding:5px;
+	line-height:26px;
+	font-size:16px;
+}
+
+.fileExplorer > .pathbar .pathRelation {
+	cursor:default;
+	padding:0 5px;
+}
+
+.fileExplorer > .pathbar .pathElement {
+	cursor:pointer;
+}
+
+.fileExplorer > .pathbar .pathElement:hover {
+	text-decoration:underline;
+}
+
+.fileExplorer > .pathbar .hiddenPath {
+	cursor:pointer;
+	padding: 0 8px;
+}
+
+.fileExplorer > .pathbar .hiddenPath:hover {
+	box-shadow: 0 0 2px #000;
+}
+
+.fileExplorer > .fileViewer {
+	position:absolute;
+	top:35px;
+	bottom:0;
+	left:0;
+	right:0;
+	border-top:1px solid rgba(166, 166, 166, 1);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.fileExplorer > .fileViewer > .fileViewerWrapper {
+	height:100%;
+}
+
+.fileExplorer > .fileViewer .previewWrapper {
+	height:48px;
+	width:48px;
+	margin:5px 0;
+	margin-right:8px;
+	display:inline-block;
+	vertical-align:middle;
+	background-size:100% 100%;
+}
+.fileExplorer > .fileViewer .previewWrapper img {
+	opacity:0;
+}
+
+.fileExplorer > .fileViewer .previewWrapper img.reveal {
+    opacity:1;
+    -webkit-animation : reveal 300ms;
+}
+@-webkit-keyframes reveal {
+    0% {opacity:0;}
+    50% {opacity:1;-webkit-transform:scale(1.1);}
+    100% {opacity:1;-webkit-transform:scale(1);}
+}
+
+.fileExplorer > .fileViewer .previewIcon {
+	height:48px;
+	width:48px; 
+}
+.fileExplorer > .fileViewer .uploadStatus {
+	background: url('%resources%/INU/fileExplorer/uploadResult.svg') no-repeat;
+	background-position:48px 0;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .uploadingIcon {
+	background: url('%resources%/INU/fileExplorer/blue_uploading.svg') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .uploadSuccess {
+	background: url('%resources%/INU/fileExplorer/uploadResult.svg') no-repeat;
+	background-position:0 0;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .uploadError {
+	background: url('%resources%/INU/fileExplorer/uploadResult.svg') no-repeat;
+	background-position:-48px 0;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .folderIcon {
+	background: url('%resources%/INU/fileExplorer/folder.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .brokenIcon {
+	background: url('%resources%/INU/fileExplorer/brokenFile.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .phpfi {
+	background: url('%resources%/INU/fileExplorer/php.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .jsfi {
+	background: url('%resources%/INU/fileExplorer/javascript.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .cssfi {
+	background: url('%resources%/INU/fileExplorer/css.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .txtfi {
+	background: url('%resources%/INU/fileExplorer/document.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .htmlfi {
+	background: url('%resources%/INU/fileExplorer/html.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .xmlfi {
+	background: url('%resources%/INU/fileExplorer/xml.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .zipfi {
+	background: url('%resources%/INU/fileExplorer/zip.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .picfi {
+	background: url('%resources%/INU/fileExplorer/document.png') no-repeat center;
+	display:inline-block;
+}
+.fileExplorer > .fileViewer .brokenfi {
+	background: url('%resources%/INU/fileExplorer/document.png') no-repeat center;
+	display:inline-block;
+}
+
+.fileExplorer > .fileViewer > .stateViewer {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+.fileExplorer > .fileViewer > .stateViewer span {
+	position: relative;
+	top: 25%;
+}
+
+.fileExplorer > .fileViewer .uploadProgress .progressBar {
+	background: rgba(124, 252, 0, 0.5);
+	width: 0;
+	display: inline-block;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+}
+
+.fileExplorer > .fileViewer .uploadProgress .progressBar.invalid {
+	background: rgba(192, 4, 3, 0.5);
+}
+
+.fileExplorer > .fileViewer .successfulUpload, .fileExplorer > .fileViewer .failedUpload, .fileExplorer > .fileViewer .unkFailedUpload, .fileExplorer > .fileViewer .failedConn, .fileExplorer .folderFail, .fileExplorer .renameFail {
+	font-size: 16px;
+}
+
+.fileExplorer > .fileViewer .folderName {
+	cursor:pointer;
+}
+
+.fileExplorer > .fileViewer .folderName:hover {
+	text-decoration:underline;
+}
+
+.fileExplorer > .fileViewer .fileName {
+	cursor:pointer;
+}
+
+.fileExplorer > .fileViewer .fileName:hover {
+	text-decoration:underline;
+}
+
+.fileExplorer #fediframe {
+	display:none;
+}
+
+.fileExplorer > .folderView {
+	display:none;
+}
+
+.fileExplorer .folderViewWrapper {
+	position: relative;
+	min-width: 400px;
+	min-height:165px;
+	height: 300px;
+	border:1px solid rgb(166, 166, 166);
+	background: #fff;
+	padding:5px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.fileExplorer .folderViewWrapper > .fepHeader{
+	display:block;
+	margin: 0;
+	padding: 3px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	line-height: 16px;
+	height:30px;
+	padding-bottom:8px;
+}
+
+.fileExplorer .folderViewWrapper > .fepControlsWrapper {
+	padding: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	min-width: 200px;
+	width: 30%;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 40px;
+	line-height: 32px;
+}
+
+.fileExplorer .folderViewWrapper > .fepFolderTreeWrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 35px;
+	bottom: 40px;
+	overflow:auto;
+	margin: 5px 30px;
+	box-shadow: 0px 0px 1px rgb(166, 166, 166);
+	padding: 5px;
+}
+
+.fileExplorer .folderViewWrapper > .fepFolderTreeWrapper .selected > .treeItemContent {
+	background: rgba(0,0,0,0.2);
+}
+
+.fileExplorer > .messageArea {
+	display:none;
+}
+
+.fileExplorer .preventDeleteWrapper {
+	position: relative;
+	width: 400px;
+	min-width:300px;
+	min-height:150px;
+	height: 150px;
+	border:1px solid rgb(166, 166, 166);
+	background: #fff;
+	padding:5px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.fileExplorer .preventDeleteWrapper > .fepControlsWrapper {
+	padding: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	min-width: 200px;
+	width: 30%;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 40px;
+	line-height: 32px;
+}
+
+.fileExplorer .preventDeleteWrapper > .pdMessageWrapper {
+	text-align:justify;
+	margin: 5px 30px;
+	padding: 5px;
+}
+
+.fileExplorer .hiddenPathPopup {
+	font-size: 16px;
+	min-width: 300px;
+	max-height:500px;
+	overflow-y:auto;
+	padding:5px;
+}
+
+.fileExplorer .hiddenPathPopup > .pathElement {
+	display:block;
+	line-height: 30px;
+	min-height: 30px;
+	padding: 5px;
+	border-bottom: 1px solid rgb(166, 166, 166);
+	cursor:pointer;
+	transition: background 0.3s;
+	-webkit-transition: background 0.3s;
+}
+.fileExplorer .hiddenPathPopup > .pathElement:first-child, .fileExplorer .hiddenPathPopup > .pathElement:last-child {
+	background: rgba(166, 166, 166, 0.1);
+}
+.fileExplorer .hiddenPathPopup > .pathElement:last-child {
+	border: none;
+}
+.fileExplorer .hiddenPathPopup > .pathElement:hover {
+	background: rgba(0, 0, 0, 0.1);
+	transition: background 0.3s;
+	-webkit-transition: background 0.3s;
+}
+
+.fileExplorer > .toolbar > .prefIcon {
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	position: relative;
+	vertical-align: middle;
+	top: -3px;
+	background: url('%resources%/INU/fileExplorer/fileExplorerPreferences.svg');
+	margin:3px;
+	cursor: pointer;
+}
+
+.fileExplorer .preferencesArea {
+	display:block;
+	padding:10px;
+	text-align:center;
+}
+.fileExplorer > .preferencesArea {
+	display:none;
+}
+.fileExplorer > .notificationsArea {
+	display:none;
+}
+
+.fileExplorer > .toolbar > .viewIcon {
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	position: relative;
+	vertical-align: middle;
+	top: -3px;
+	background: url('%resources%/INU/fileExplorer/ViewsSprite.svg');
+	margin:3px;
+}
+.fileExplorer > .toolbar > .viewIcon:hover {
+	cursor: pointer;
+}
+.fileExplorer > .toolbar > .gridIcon {
+	background-position: 22px 0px;
+}
+.fileExplorer > .toolbar > .gridIcon:hover {
+	background-position: 22px 22px;
+}
+.fileExplorer > .toolbar > .thumbIcon {
+	background-position: 22px 22px;
+}
+.fileExplorer > .toolbar > .thumbIcon:hover {
+	background-position: 22px 0px;
+}
+.fileExplorer .pendingDownload {
+	width:400px;
+}
+
+.filePreviewWrapper {
+	overflow-y: auto;
+	overflow-x: hidden;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	padding:5px;
+	background:#fff;
+	border:1px solid #ccc;
+	max-height:400px;
+	overflow:auto;
+}

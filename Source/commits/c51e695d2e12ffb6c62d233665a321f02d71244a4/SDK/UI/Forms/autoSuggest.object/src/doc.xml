@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="autoSuggest" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 11:34 (EET)</datecreated>
+      <daterevised>March 11, 2013, 11:34 (EET)</daterevised>
+      <extends>\UI\Interactive\forms\formAutoSuggest</extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Interactive\forms\formAutoSuggest instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

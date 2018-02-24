@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebTemplates" namespace="\prototype">
+  <class name="templateThemeCSSPrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1442509019</datecreated>
+      <daterevised>1442509019</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Template Theme CSS Prototype</title>
+      <description>Manages a template style object.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The style file type extension.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="templateThemePrototype" name="templateTheme">
+          <description>The template theme prototype object.</description>
+        </prop>
+        <prop type="string" name="cssFolderPath">
+          <description>The css folder path.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of the theme css prototype.</description>
+          <parameters>
+            <parameter name="$indexFilePath" type="string" defaultvalue="">
+              <description>The template's index file path.</description>
+            </parameter>
+            <parameter name="$themeFolderPath" type="string" defaultvalue="">
+              <description>The theme folder path.</description>
+            </parameter>
+            <parameter name="$cssFolderPath" type="string" defaultvalue="">
+              <description>The style folder path.
+Leave empty for new styles.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new css object.</description>
+          <parameters>
+            <parameter name="$cssFolderPath" type="string" defaultvalue="">
+              <description>The style folder path.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The css name.
+This is needed for indexing.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the style's css.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The style css.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Get the style's css.</description>
+          <parameters>
+            <parameter name="$normalCss" type="boolean" defaultvalue="">
+              <description>Get normal css or scss content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The style's css.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the current style from the theme.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The style's name to remove from indexing.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStyleFolder" returntype="string" static="true">
+          <description>Get the name of the style smart object folder.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The style name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The style folder name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

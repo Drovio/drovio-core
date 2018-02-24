@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\modules">
+  <class name="module" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1399281006</datecreated>
+      <daterevised>1399290992</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Model Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Gets the module's information.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module information in an array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the module's directory name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The module's directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="runView" returntype="mixed" static="true">
+          <description>Load a module's view and return the content.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view return value.</returndescription>
+          <throws/>
+          <deprecated>Use loadView() instead.</deprecated>
+        </method>
+        <method name="loadView" returntype="mixed" static="true">
+          <description>Load a module's view and return the content.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view return value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getQuery" returntype="object" static="true">
+          <description>Get a module's query as a dbQuery object to be executed by the interDbConnection class.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$queryName" type="string" defaultvalue="">
+              <description>The query name.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of attributes by name and value for the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The db query object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasCSS" returntype="boolean" static="true">
+          <description>Gets whether this module has css code.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module has css, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="hasJS" returntype="boolean" static="true">
+          <description>Gets whether this module has js code.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if module has js, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

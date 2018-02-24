@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="FormPrototype" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362650700</datecreated>
+      <daterevised>1405602272</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Form Builder Prototype</title>
+      <description>It's the prototype for building every form in the system.
+All the form objects must inherit this FormPrototype in order to build the spine of a form well-formed.
+It implements the FormProtocol.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="formID">
+          <description>The form's id.</description>
+        </prop>
+        <prop type="DOMElement" name="formReport">
+          <description>The form report element container.</description>
+        </prop>
+        <prop type="DOMElement" name="formBody">
+          <description>The form body element container.</description>
+        </prop>
+        <prop type="boolean" name="pu">
+          <description>Defines whether the form will prevent page unload on edit.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Defines the form ID.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The form element id.</description>
+            </parameter>
+            <parameter name="$preventUnload" type="boolean" defaultvalue="">
+              <description>If true, the browser will prevent the page unload if there are any unsaved/unposted data in the form.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="FormPrototype">
+          <description>Builds the form spine and sets the UIObject</description>
+          <parameters>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The form's action attribute (if any).</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The FormPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="append" returntype="FormPrototype">
+          <description>Appends a DOMElement to the form body.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The FormPrototype object.</returndescription>
+          <throws/>
+        </method>
+        <method name="appendReport" returntype="FormPrototype">
+          <description>Appends a DOMElement to the form report container.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The FormPrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAsync" returntype="FormPrototype">
+          <description>Sets the async attribute to the given form element.
+An async form posts through our Async Communication Protocol to the defined action url.</description>
+          <parameters/>
+          <returndescription>The FormPrototype object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setHiddenValue" returntype="void">
+          <description>Store a hidden input's value for validation during post.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The input name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The input value.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFormID" returntype="string" class="undefined">
+          <description>Get the form's id.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The form's id attribute as set when the form was built.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1261801596"><title>Get Company Position Info</title><description>Get company position by id</description><access>1</access><attributes><attr id="id"></attr></attributes></query>

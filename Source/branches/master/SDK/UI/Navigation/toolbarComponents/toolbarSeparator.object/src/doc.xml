@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Navigation" namespace="\toolbarComponents">
+  <class name="toolbarSeparator" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1372860134</datecreated>
+      <daterevised>1405604702</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Toolbar Separator</title>
+      <description>Creates toolar separator.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="toolbarSeparator">
+          <description>Builds the separator.</description>
+          <parameters/>
+          <returndescription>The toolbarSeparator object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

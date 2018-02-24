@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Content" namespace="\">
+  <class name="HTMLFrame" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>4</build>
+      <datecreated>1413808781</datecreated>
+      <daterevised>1432558196</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML iframe content</title>
+      <description>Creates an iframe based on the HTMLPagePrototype.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="HTMLFrame">
+          <description>Build the frame element.</description>
+          <parameters>
+            <parameter name="$src" type="string" defaultvalue="">
+              <description>The address of the document to embed in the &amp;lt;iframe&amp;gt;.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name attribute of the &amp;lt;iframe&amp;gt;.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id attribute of the &amp;lt;iframe&amp;gt;.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class attribute of the &amp;lt;iframe&amp;gt;.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$sandbox" type="array" defaultvalue="">
+              <description>A list of extra restrictions for the content in the &amp;lt;iframe&amp;gt;. Includes:
+allow-forms
+allow-same-origin
+allow-scripts
+allow-top-navigation.
+
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The HTMLFrame object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="formItem" abstract="" namespace="\formControls">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 14:52 (EET)</datecreated>
+      <daterevised>April 18, 2013, 13:09 (EEST)</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>Form Item</title>
+      <description>Represents the minimum form control item.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="formItem">
+          <description>Builds the form control item.</description>
+          <parameters>
+            <parameter name="$tag" type="string" defaultvalue="">
+              <description>The item's tagName</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The item's name</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The item's value</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The item's class.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

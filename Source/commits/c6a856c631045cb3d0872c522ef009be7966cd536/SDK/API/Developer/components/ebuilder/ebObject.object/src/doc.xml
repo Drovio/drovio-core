@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ebObject" abstract="" namespace="\components\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1369743901</datecreated>
+      <daterevised>1379760800</daterevised>
+      <extends>\API\Developer\components\prime\classObject</extends>
+      <implements/>
+      <throws/>
+      <title>Ebuilder Object Manager</title>
+      <description>Handles all the information for eBuilder Objects.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MODEL_FOLDER">
+        <description>The object's model folder path</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+Initializes the object.</description>
+          <parameters>
+            <parameter name="$libName" type="string" defaultvalue="">
+              <description>The object's library.</description>
+            </parameter>
+            <parameter name="$packageName" type="string" defaultvalue="">
+              <description>The object's package.</description>
+            </parameter>
+            <parameter name="$nsName" type="string" defaultvalue="">
+              <description>The object's namespace.</description>
+            </parameter>
+            <parameter name="$objectName" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads the object's information</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getSourceCode" returntype="string">
+          <description>Returns the php source code of the object</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateSourceCode" returntype="boolean">
+          <description>Updates the source code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new source code.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadSourceCode" returntype="boolean">
+          <description>Runs (includes) the trunk's source code file and returns the include result.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getSourceDoc" returntype="string">
+          <description>Returns the documentation of the source code of the object in xml format.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateSourceDoc" returntype="boolean">
+          <description>Updates the object's documentation.</description>
+          <parameters>
+            <parameter name="$man" type="string" defaultvalue="">
+              <description>The object's documentation in xml format.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getJSCode" returntype="string">
+          <description>Returns the javascript code of the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateJSCode" returntype="boolean">
+          <description>Updates the javascript code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new javascript code.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadJSCode" returntype="void">
+          <description>Runs (includes) the trunk's javascript file.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCSSCode" returntype="string">
+          <description>Returns the css code of the object.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateCSSCode" returntype="boolean">
+          <description>Updates the css code of the object.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new css code.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadCSSCode" returntype="void">
+          <description>Runs (includes) the trunk's css file.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCSSModel" returntype="string">
+          <description>Returns the object's model in xml format.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="updateCSSModel" returntype="boolean">
+          <description>Updates the object's model.</description>
+          <parameters>
+            <parameter name="$model" type="string" defaultvalue="">
+              <description>The new model in xml format.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="create" returntype="sdkObject">
+          <description>Create a new SDK Object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The object's title.</description>
+            </parameter>
+            <parameter name="$phpFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a php source code file</description>
+            </parameter>
+            <parameter name="$jsFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a javascript file</description>
+            </parameter>
+            <parameter name="$cssFile" type="boolean" defaultvalue="">
+              <description>Indicator whether this object will have a css file</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="export" returntype="boolean">
+          <description>Export object files to latest.
+Inner release.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getHeadJSCode" returntype="string">
+          <description>Returns the head's javascript code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getHeadCSSCode" returntype="string">
+          <description>Returns the head's css code.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="sdkObject">
+          <description>Delete the entire object and all its resource files.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update" returntype="void">
+          <description>Updates the status of the object by creating the necessary folders</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="setTitle" returntype="void">
+          <description>Sets the object's title.</description>
+          <parameters>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The new title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getTitle" returntype="string">
+          <description>Gets the object's title.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getLibrary" returntype="string">
+          <description>Gets the object's library.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getPackage" returntype="string">
+          <description>Gets the object's package.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getNamespace" returntype="string">
+          <description>Gets the object's namespace.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="createIndex" returntype="boolean">
+          <description>Creates object index entry to developer's map.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="buildIndexBase" returntype="DOMElement">
+          <description>Builds the object's index base.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser to create the base.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="loadInfo" returntype="void">
+          <description>Load all the index info</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="buildHeader" returntype="string">
+          <description>Build the source's header and returns it.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addPackageEntry" returntype="boolean">
+          <description>Inserts object's index entry to release package.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="initFiles" returntype="void">
+          <description>Init all object's files.</description>
+          <parameters>
+            <parameter name="$phpFile" type="boolean" defaultvalue="">
+              <description>Indicator whether to build php source code file.</description>
+            </parameter>
+            <parameter name="$jsFile" type="boolean" defaultvalue="">
+              <description>Indicator whether to build javascript file.</description>
+            </parameter>
+            <parameter name="$cssFile" type="boolean" defaultvalue="">
+              <description>Indicator whether to build css file.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,79 @@
+.uiHistoryManager {
+	width: 900px;
+	background-color: #FFF;
+	overflow: auto;
+}
+
+.uiHistoryManager .historySection {
+	min-height: 20px;
+	padding: 3px;
+}
+
+.uiHistoryManager h3.vcsHeader {
+	color: #5E6570;
+	font-weight: bold;
+	margin: 5px;
+}
+
+.uiHistoryManager .cmContainer .controls {
+	margin-top: 15px;
+	padding: 5px;
+	border-top: 1px solid rgba(166, 166, 166, 0.5);
+	overflow: auto;
+}
+
+.uiHistoryManager .cmContainer .controls .pagination {
+	float: left;
+}
+
+.uiHistoryManager .cmContainer .controls .pagination .navBtn {
+	width: 75px;
+	text-align: center;
+	margin: 0px 5px;
+	color: #999;
+}
+
+.uiHistoryManager .cmContainer .controls .pagination .navBtn.active {
+	color: #000;
+	cursor: pointer;
+}
+
+.uiHistoryManager .cmContainer .controls .pagination .navBtn.active:hover {
+	color: #C00403;
+}
+
+.uiHistoryManager .cmContainer .controls .pagesInfo {
+	float: right;
+	color: #999;
+}
+
+.uiHistoryManager #restoreBtn {
+	width: 50%;
+	margin: 5px 25%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background: #5E6570;
+	border: 1px solid #5E6570;
+	color: #FFF;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	cursor: pointer;
+	padding: 5px 10px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 12px;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.uiHistoryManager #restoreBtn:hover {
+	background: #3CB0F7;
+	border: 1px solid #3CB0F7;
+	color: #FFF;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}

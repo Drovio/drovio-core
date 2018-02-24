@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\DEV\Version\vcs"></use><use path="\API\Resources\DOMParser"></use><use path="\API\Platform\importer"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\DEV\Projects\project"></use><use path="\API\Resources\filesystem\folderManager"></use><use path="\DEV\Websites\wsSettings"></use></dependencies>

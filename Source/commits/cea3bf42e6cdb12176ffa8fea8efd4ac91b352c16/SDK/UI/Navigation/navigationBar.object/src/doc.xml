@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Navigation" namespace="\">
+  <class name="navigationBar" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>2</build>
+      <datecreated>1370680901</datecreated>
+      <daterevised>1432217080</daterevised>
+      <extends>
+        <object>\UI\Navigation\toolbar</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Horizontal Navigation Bar</title>
+      <description>Creates an horizontal navigation toolbar.
+It can be placed on the top or the bottom of a pane.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="TOP">
+        <description>Top navigation toolbar indicator.</description>
+      </const>
+      <const type="string" name="BOTTOM">
+        <description>Bottom navigation toolbar indicator.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="navigationBar">
+          <description>Builds the navigation toolbar.</description>
+          <parameters>
+            <parameter name="$dock" type="string" defaultvalue="">
+              <description>The navigation toolbar dock position.
+Use class constants to set.</description>
+            </parameter>
+            <parameter name="$parent" type="DOMElement" defaultvalue="">
+              <description>The toolbar parent to set extra attributes for css.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The toolbar unique id.
+If empty, it will get a random unique id.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The toolbar extra class for custom styling.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the navigationBar object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

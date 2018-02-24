@@ -1,0 +1,71 @@
+.uiToolbar {
+	& {
+		position: absolute;
+		overflow: hidden;
+		background: #e3e3e3;
+		
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	&.orientH {
+		height: 30px;
+		width: 100%;
+		background: linear-gradient(#e9e9e9, #d9d9d9);
+		background: -webkit-linear-gradient(#e9e9e9, #d9d9d9);
+		background: -moz-linear-gradient(#e9e9e9, #d9d9d9);
+	}
+	&.orientV {
+		width: 30px;
+		height: 100%;
+		background: linear-gradient(to right, #e9e9e9, #d9d9d9);
+		background: -webkit-linear-gradient(left, #e9e9e9, #d9d9d9);
+		background: -moz-linear-gradient(right, #e9e9e9, #d9d9d9);
+	}
+	&.dockT {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		border-bottom: 1px solid #999;
+	}
+	&.dockB {
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		border-top: 1px solid #999;
+	}
+	&.dockL {
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		border-right: 1px solid #999;
+	}
+	&.dockR {
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		border-left: 1px solid #999;
+	}
+}
+.toolbarContainer {
+	& {
+		position: relative;
+		min-height: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	&.dockL {
+		padding-left: 30px !important;
+	}
+	&.dockR {
+		padding-right: 30px !important;
+	}
+	&.dockT {
+		padding-top: 30px !important;
+	}
+	&.dockB {
+		padding-bottom: 30px !important;
+	}
+}

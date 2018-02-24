@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\">
+  <class name="codeEditor" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1396437323</datecreated>
+      <daterevised>1410184528</daterevised>
+      <extends>
+        <object>\INU\Developer\codeEditor</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="PHP">
+        <description/>
+      </const>
+      <const type="" name="XML">
+        <description/>
+      </const>
+      <const type="" name="CSS">
+        <description/>
+      </const>
+      <const type="" name="JS">
+        <description/>
+      </const>
+      <const type="" name="SQL">
+        <description/>
+      </const>
+      <const type="" name="NO_TYPE">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$editable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getParsersInfo" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$parser" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWorker" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildToolbar" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addCodeMap" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTypedCodeMap" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

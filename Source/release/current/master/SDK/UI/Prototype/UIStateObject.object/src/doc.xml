@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Prototype" namespace="\">
+  <class name="UIStateObject" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1438073765</datecreated>
+      <daterevised>1448038628</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>UI State Object</title>
+      <description>Saves and gets the state of a ui object during execution and after page reload.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

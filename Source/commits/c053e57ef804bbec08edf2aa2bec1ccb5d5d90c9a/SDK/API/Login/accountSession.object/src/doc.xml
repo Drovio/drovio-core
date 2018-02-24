@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Login" namespace="\">
+  <class name="accountSession" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447267966</datecreated>
+      <daterevised>1447267966</daterevised>
+      <extends>
+        <object>\DRVC\Profile\accountSession</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Login Account Session Handler</title>
+      <description>It extends the drovio identity account session to manage sessions for the drovio platform.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="accountSession" name="instance" static="true">
+          <description>The platform accountSession instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="accountSession" static="true">
+          <description>Get the accountSession instance.</description>
+          <parameters>
+            <parameter name="$mxID" type="string" defaultvalue="">
+              <description>The account's mx id (if any).
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The accountSession instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new account session.
+It works only for the current account.</description>
+          <parameters>
+            <parameter name="$salt" type="string" defaultvalue="">
+              <description>The logged in generated salt.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.
+It will be ignored and get the current account id instead.</description>
+            </parameter>
+            <parameter name="$personID" type="integer" defaultvalue="">
+              <description>The person id (if any).
+It will be ignored and get the current person id instead.</description>
+            </parameter>
+            <parameter name="$rememberme" type="boolean" defaultvalue="">
+              <description>Whether to remember the user in the database or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="void">
+          <description>Updates the current account's data to the session.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get all current session data from the database for the current account.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.
+It will be ignored and get the current account id instead.</description>
+            </parameter>
+            <parameter name="$sessionID" type="integer" defaultvalue="">
+              <description>The session id.
+Leave empty for current session.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all session data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Deletes a given account session.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.
+It will be ignored and get the current account id instead.</description>
+            </parameter>
+            <parameter name="$sessionID" type="integer" defaultvalue="">
+              <description>The session id.
+Leave empty for current session.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSalt" returntype="string">
+          <description>Gets the stored salt for the current account session.</description>
+          <parameters/>
+          <returndescription>The stored session salt.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getActiveSessions" returntype="array">
+          <description>Get all active sessions of the current account.</description>
+          <parameters/>
+          <returndescription>An array of all active sessions' details.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMX" returntype="string">
+          <description>Gets the current mx id.</description>
+          <parameters/>
+          <returndescription>The current mx id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new accountSession instance for the platform identity.</description>
+          <parameters>
+            <parameter name="$mxID" type="string" defaultvalue="">
+              <description>The account's mx id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Resources" namespace="\pages">
+  <class name="domain" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1404838326</datecreated>
+      <daterevised>1420186975</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Sub-Domain Manager</title>
+      <description>Manages all Redback's subdomains.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Creates a new subdomain.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the subdomain.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The subdomain inner system path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete a subdomain (it must be empty of folders and pages)</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The subdomain name to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated>Use remove() instead.</deprecated>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a subdomain (it must be empty of folders and pages)</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The subdomain name to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get a subdomain's info.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The domain name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all domain information or NULL if the subdomain doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\reports">
+  <class name="MIMEServerReport" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1406663364</datecreated>
+      <daterevised>1419325840</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Multipurpose Internet Mail Extensions (MIME) Server Report</title>
+      <description>Returns an http response and performs a download of a server file.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="void" static="true">
+          <description>Sets the response headers and reads the given file to be downloaded.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The path of the file to be downloaded.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The response file Content-type.
+See HttpResponse content types.</description>
+            </parameter>
+            <parameter name="$suggestedFileName" type="string" defaultvalue="">
+              <description>The suggested file name for downloading the server file.
+Leave empty and it will be the file original name.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$ignore_user_abort" type="boolean" defaultvalue="">
+              <description>Indicator for aborting the running script upon user cancelation.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setHeaders" returntype="void" static="true">
+          <description>Set the httpResponse headers.</description>
+          <parameters>
+            <parameter name="$file" type="string" defaultvalue="">
+              <description>The given file path.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The response file Content-type.
+See HttpResponse content types.</description>
+            </parameter>
+            <parameter name="$suggestedFileName" type="string" defaultvalue="">
+              <description>The suggested file name for downloading the server file.
+Leave empty and it will be the file original name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="339316696254"><title>Create an exception log</title><description></description><access></access><attributes><attr id="project_id"></attr><attr id="code"></attr><attr id="message"></attr><attr id="trace"></attr><attr id="server_info"></attr><attr id="extra_info"></attr><attr id="time"></attr></attributes></query>

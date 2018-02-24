@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="Umodule" abstract="" namespace="\model\units\modules">
+    <info>
+      <version/>
+      <datecreated>March 16, 2013, 10:51 (EET)</datecreated>
+      <daterevised>March 20, 2013, 10:27 (EET)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Module Manager</title>
+      <description>The system's module (not auxiliary) handler.</description>
+      <deprecated>Use \API\Developer\components\modules\ instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" returntype="void">
+          <description>Initialize an existing module</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update the module's content</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The module's title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The module's description</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The module's source code</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch where the update will be performed</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new module</description>
+          <parameters>
+            <parameter name="$parent_id" type="integer" defaultvalue="">
+              <description>The module group's id</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The module's title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The module's description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Delete a module</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="update_indexInfo" returntype="void">
+          <description>Update the module index information</description>
+          <parameters>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The vcs branch</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="_get_fileName" returntype="string">
+          <description>Get the filename of the module</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

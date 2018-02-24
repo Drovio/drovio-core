@@ -1,0 +1,65 @@
+<h1>Relations person mail manager</h1>
+<p>Every relation person can have 0 or more email addresses and they can by of different type (home, work etc.). You can add mail addresses to a person as easy as two lines of code and you can edit and remove them even easier:</p>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePerson;
+use \ENP\Relations\ePersonMail;
+
+// Get person id
+$personID = engine::getVar("id");
+
+// Create an empty mail instance
+$pMail = new ePersonMail($personID);
+
+// Create new mail (work, home etc.)
+$pMail-&gt;create($typeID = 1, $mailAddress = "john_doe@unknown.com");
+
+
+// Update the mail info
+$pMail-&gt;update($typeID = 1, $mailAddress = "john_doe@example.com")</pre>
+</div>
+<h2>Getting all mail addresses</h2>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePerson;
+use \ENP\Relations\ePersonMail;
+
+// Get person id
+$personID = engine::getVar("id");
+
+// Get all person mail addresses
+$pMail = new ePersonMail($personID);
+$allMail = $pMail-&gt;getAllMail();
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; "1_1_1"
+            [person_id] =&gt; "1"
+            [mail_id] =&gt; "1"
+            [type_id] =&gt; "1"
+            [mail] =&gt; "john_doe@example.com"
+            [type] =&gt; "Home"
+        )
+)</pre>
+</div>
+<h2>Select a mail type</h2>
+<p>When creating or updating a mail address, we need to provide an address type. This class can provide us with a list of all address types that the SDK supports:</p>
+<div class="code">
+	<pre>// Use classes
+use \ENP\Relations\ePersonMail;
+
+// Get all mail address types
+$types = new ePersonMail::getMailTypes();
+
+// The above should return something like this:
+// It is: key =&gt; title
+Array
+(
+    [0] =&gt; "Home"
+    [1] =&gt; "Work"
+    [2] =&gt; "Fax"
+)</pre>
+</div>

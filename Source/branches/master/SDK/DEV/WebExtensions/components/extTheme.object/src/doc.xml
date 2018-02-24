@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebExtensions" namespace="\components">
+  <class name="extTheme" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1400829387</datecreated>
+      <daterevised>1400829387</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Extension Theme</title>
+      <description>The extension theme manager class.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="FILE_TYPE">
+        <description>The object's file type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="extension" name="ext">
+          <description>The extension object.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The theme name.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The vcs manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the style object.</description>
+          <parameters>
+            <parameter name="$extID" type="integer" defaultvalue="">
+              <description>The extension id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The object's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new theme.</description>
+          <parameters>
+            <parameter name="$themeName" type="string" defaultvalue="">
+              <description>The theme name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the theme css code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The css code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="string">
+          <description>Gets the theme's css code.</description>
+          <parameters/>
+          <returndescription>The css code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the vcs item's id.</description>
+          <parameters/>
+          <returndescription>The item's hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

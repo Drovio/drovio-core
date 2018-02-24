@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="WebEngine" namespace="\">
+  <class name="distroManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1415358727</datecreated>
+      <daterevised>1415358727</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web Distribution Package Manager</title>
+      <description>It is responsible for creating the mapping file for distribution packages for web core.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMParser" name="xmlParser">
+          <description>The DOMParser object that edits the map file.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the class and load the map file.
+The file will be created, if accidentally erased.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new distribution package.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The distribution name.</description>
+            </parameter>
+            <parameter name="$libPackages" type="array" defaultvalue="">
+              <description>An array of all SDK library packages to include in the distribution.
+[library] =&amp;gt; list(packageName).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the distribution name already exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update a distribution with the given library packages and a new name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The distribution name.</description>
+            </parameter>
+            <parameter name="$libPackages" type="array" defaultvalue="">
+              <description>An array of all SDK library packages to include in the distribution.
+[library] =&amp;gt; list(packageName).</description>
+            </parameter>
+            <parameter name="$newName" type="string" defaultvalue="">
+              <description>The new distribution name (optional).
+Leave empty not to change the name.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the distribution doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove a given distribution from the distribution list.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The distribution name to remove.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDistros" returntype="array">
+          <description>Get all web core distributions.</description>
+          <parameters/>
+          <returndescription>An array of all distributions by name that include all library packages.
+[distrName] =&amp;gt; list(libraries), where
+libraries =&amp;gt; list(packageName).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

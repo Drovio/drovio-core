@@ -1,0 +1,24 @@
+.uiMainFooter {
+	overflow:auto;
+}
+.uiMainFooter > .content {
+	min-width: 700px;
+	max-width: 1200px;
+	margin: auto;
+	padding: 8px 8px 30px;
+	text-align: right;
+	color: #C00403;
+	font-size: 10px;
+	box-sizing: border-box;
+}
+.uiMainFooter .faded {
+	color:rgba(192,4,3,0.7);
+}
+.uiMainFooter a {
+	color: rgba(120, 120, 120, 1);
+	font-weight: normal;
+	display: inline-block;
+}
+.uiMainFooter a:hover {
+	text-decoration: underline;
+}

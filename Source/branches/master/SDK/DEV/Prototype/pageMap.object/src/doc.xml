@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Prototype" namespace="\">
+  <class name="pageMap" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1419952332</datecreated>
+      <daterevised>1437125927</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Page map index manager.</title>
+      <description>Creates a map for the pages including folders and pages.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MAP_FILE">
+        <description>The default map file name.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="folderPath">
+          <description>The folder path of the file.</description>
+        </prop>
+        <prop type="string" name="mapFile">
+          <description>The map file name.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method for object initialization.</description>
+          <parameters>
+            <parameter name="$folderPath" type="string" defaultvalue="">
+              <description>The folder path for the map file.</description>
+            </parameter>
+            <parameter name="$mapFile" type="string" defaultvalue="">
+              <description>The map file name.
+By default the MAP_FILE constant is used.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createMapFile" returntype="boolean">
+          <description>Create the map file.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFolder" returntype="boolean">
+          <description>Create a new folder in the map.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The name of the folder to create.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeFolder" returntype="boolean">
+          <description>Remove a folder from the map.
+The folder must be empty of pages and other folders.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolders" returntype="array">
+          <description>Get an array of all the folders under the given path.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>Whether to return a single compact array with folders separated by "/" or a nested array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all the folders under the given path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createPage" returntype="boolean">
+          <description>Create a page in the given folder.
+It updates the library index and creates a new page object.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>The page name.</description>
+            </parameter>
+            <parameter name="$pageType" type="string" defaultvalue="">
+              <description>The page type.
+You can specify a page type in order to handle pages differently.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removePage" returntype="boolean">
+          <description>Remove a page from the map.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$pageName" type="string" defaultvalue="">
+              <description>The page name to be removed.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderPages" returntype="array">
+          <description>Get all pages in a given folder.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Get all pages analysed by type.
+If FALSE, return all the pages in an array with no types.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all pages.
+If full, pages are grouped by type.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

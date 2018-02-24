@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\phpmailer">
+  <class name="POP3" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1404728697</datecreated>
+      <daterevised>1415616779</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>PHPMailer - PHP POP Before SMTP Authentication Class</title>
+      <description>Specifically for PHPMailer to allow POP before SMTP authentication.
+This class is rfc 1939 compliant and implements all the commands required for POP3 connection, authentication and disconnection.</description>
+      <deprecated>Use \API\Comm\mail\phpmailer\pop3 instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public">
+        <prop type="integer" name="POP3_PORT">
+          <description>Default POP3 port</description>
+        </prop>
+        <prop type="integer" name="POP3_TIMEOUT">
+          <description>Default Timeout</description>
+        </prop>
+        <prop type="string" name="CRLF">
+          <description>POP3 Carriage Return + Line Feed</description>
+        </prop>
+        <prop type="string" name="host">
+          <description>POP3 Mail Server</description>
+        </prop>
+        <prop type="integer" name="port">
+          <description>POP3 Port</description>
+        </prop>
+        <prop type="integer" name="tval">
+          <description>POP3 Timeout Value</description>
+        </prop>
+        <prop type="string" name="username">
+          <description>POP3 Username</description>
+        </prop>
+        <prop type="string" name="password">
+          <description>POP3 Password</description>
+        </prop>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="connection" name="pop_conn">
+          <description>The pop3 connection object.</description>
+        </prop>
+        <prop type="boolean" name="connected">
+          <description>Whether the class is connected to server.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor, sets the initial values</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Authorise" returntype="void">
+          <description>Combination of public events - connect, login, disconnect</description>
+          <parameters>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The server host string.</description>
+            </parameter>
+            <parameter name="$port" type="integer" defaultvalue="">
+              <description>The server's port number.</description>
+            </parameter>
+            <parameter name="$tval" type="integer" defaultvalue="">
+              <description>The timeout value.</description>
+            </parameter>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Connect" returntype="boolean">
+          <description>Connect to the POP3 server</description>
+          <parameters>
+            <parameter name="$host" type="string" defaultvalue="">
+              <description>The server host name.</description>
+            </parameter>
+            <parameter name="$port" type="string" defaultvalue="">
+              <description>The server's port number.</description>
+            </parameter>
+            <parameter name="$tval" type="integer" defaultvalue="">
+              <description>The timeout value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The connection status.
+True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Login" returntype="boolean">
+          <description>Login to the POP3 server (does not support APOP yet)</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The account's username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The account's password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Disconnect" returntype="void">
+          <description>Disconnect from the POP3 server</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getResponse" returntype="string">
+          <description>Get the socket response back.</description>
+          <parameters>
+            <parameter name="$size" type="integer" defaultvalue="">
+              <description>The maximum number of bytes to retrieve</description>
+            </parameter>
+          </parameters>
+          <returndescription>The server's response.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="sendString" returntype="integer">
+          <description>Send a string down the open socket connection to the POP3 server.</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The string to be sent to the socket.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The number of bytes sent.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="checkResponse" returntype="boolean">
+          <description>Checks the POP3 server response for +OK or -ERR</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The server's response.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if response is +OK, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Platform Generic Form Builder</h1>
+<p>Form builder/factory allows the developer to create a form based on the platform FormPrototype, which provides an interface for form structure and better interaction, and to enrich the form with items, inputs, labels and buttons acting as builder.</p>
+<p>Build a simple form:</p>
+<div class="code">
+	<pre>// Create a form, build and append items and inputs
+	
+// Create a form
+$form = new Form();
+
+// This is a UIObject (extends formItem), so we build
+// It supports multipart forms with a single parameter
+$profileForm = $form-&gt;build($action = "/profile/user/info.php", $async = TRUE, $fileUpload = FALSE)-&gt;get();
+
+// Append form to form container
+DOM::append($formContainer, $profileForm);</pre>
+</div>
+<p>Now that we have created the form, we can fill it with labels and inputs. We are going to create a simple label and input for the user first name:</p>
+<div class="code">
+	<pre>// We assume that we have the same form object
+	
+// Create the input
+$input = $form-&gt;getInput($type = "text", $name = "firstname", $value = "", $class = "", $autofocus = FALSE, $required = FALSE);
+// Get input id
+$inputID = DOM::attr($input, "id");
+
+// Create the label for the input
+$label = $form-&gt;getLabel($text = "First name", $for = $inputID, $class = "");
+// Append the label to the form
+$form-&gt;append($label);
+// Append the input to the form
+$form-&gt;append($input);</pre>
+</div>
+<h3>Hidden inputs and validation</h3>
+<p>When a form creates hidden inputs on the server side, there is a validation engine that stores all those pairs (name and value) in order to be validated when the post is done. This validation engine checks that none of the hidden values has been altered by the user in order to force a specific behavior. This will result in a form invalidation status showing an error notification to the user.</p>
+<p>This is an automated check that happens by the platform in a loose way. A developer can invoke checks to prevent the script from posting from other sources (API) by calling the validate() function. This function will check whether there is a stored form with hidden values, will cross-check those values and return whether the values are valid or not. Example:</p>
+<div class="code">
+	<pre>// We are posting this script, so there is a check
+if (engine::isPost())
+{
+	// We handle the posted information here
+	// First we check if the form validates
+	// We can choose to clear the form from the session memory
+	if (!Form::validate($clear = FALSE))
+	{
+		// Return an error notification
+	}
+	
+	// Everything is ok, proceed with the script
+}</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>Form builder also provides a javascript interface where a developer can create an entire form with its inputs on the client side dynamically. We do not recommend creating hidden values on the client because the validation mechanism of the platform will invalidate the form.</p>
+<div class="code">
+	<pre>// Create and add inputs to the form
+Function:	getInput()
+Description:	Get any type of input using the form builder
+Usage:		Form.getInput(form, type, name, value, inputClass, autofocus, required);
+Example:
+// Create form input
+var jqForm = jq("form.userForm");
+var input = Form.getInput(jqForm, "text", "firstname", "", "", true, true);
+
+// Append input to form
+jqForm.append(input);
+
+
+Function:	getLabel()
+Description:	Get a label using the form builder
+Usage:		Form.getLabel(form, text, forInputID, labelClass);
+
+Function:	getButton()
+Description:	Get a form button of type button
+Usage:		Form.getButton(form, title, name, buttonClass);
+
+Function:	getSubmitButton()
+Description:	Get a form button of type submit (positive button)
+Usage:		Form.getSubmitButton(title, id, name);
+
+Function:	getResetButton()
+Description:	Get a form button of type reset
+Usage:		Form.getResetButton(title, id);
+
+Function:	getTextarea()
+Description:	Get a form textarea
+Usage:		Form.getTextarea(form, name, value, areaClass, autofocus);
+
+Function:	getInputID()
+Description:	Generate an input id for the given name
+Usage:		Form.getInputID(form, name);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 10:32</p></div>
+</div></body></html>

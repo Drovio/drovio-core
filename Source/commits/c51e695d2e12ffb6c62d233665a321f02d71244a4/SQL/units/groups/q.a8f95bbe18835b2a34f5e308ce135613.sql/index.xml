@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1005596402"><title>Get Groups By Depth</title><description>Get the groups with the specified depth</description><access>1</access><attributes><attr id="depth"></attr></attributes></query>

@@ -1,0 +1,212 @@
+.registerDialog {
+	position: relative;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 25px;
+	text-align: center;
+	min-width: 300px;
+	max-width: 530px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: auto;
+}
+
+.registerDialog .header {
+	overflow: auto;
+}
+.registerDialog .header .logo {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	float: left;
+	background: url('%{cdn}/media/logos/dlogo.png') no-repeat center;
+	background-size: cover;
+}
+
+.registerDialog .header .ltitle {
+	line-height: 60px;
+	font-weight: normal;
+	font-size: 24px;
+	color: #555459;
+	margin: 10px 0px;
+	padding: 0px 10px;
+}
+
+.registerDialog .header.dialog .ltitle {
+	float: left;
+}
+
+.registerDialog .header .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background: url('%{media}/global/closeX.svg') no-repeat center;
+	background-position: 0px -24px;
+	background-size: cover;
+	cursor: pointer;
+}
+.registerDialog .main {
+	clear: both;
+	overflow: auto;
+}
+.registerDialog .main .social {
+	overflow: auto;
+	max-width: 300px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.registerDialog .main .social .btn_social {
+	float: left;
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	background: url('%{media}/login/socialIcons.svg') no-repeat;
+	background-size: cover;
+	background-position: 0px 0px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	opacity: 1;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.registerDialog .main .social .btn_social.fb {
+	background-color: #3c589a;
+	background-position: 0px 0px;
+}
+
+.registerDialog .main .social .btn_social.gp {
+	background-color: #dd4b39;
+	background-position: 0px -40px;
+}
+
+.registerDialog .main .social .btn_social.gh {
+	background-color: #5E6570;
+	background-position: 0px -80px;
+}
+
+.registerDialog .main .social .btn_social:hover {
+	opacity: 0.75;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+}
+
+.registerDialog .main .login_or {
+	margin-top: 10px;
+	color: #555459;
+	text-align: center;
+}
+
+.registerDialog .main .uiRegInput {
+	width: 100%;
+	padding: 10px 12px;
+	margin: 5px 0px;
+	font-size: 14px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-color: #777;
+	color: #777;
+	outline-color: #CCC;
+}
+
+.registerDialog .main .uiRegInput.small {
+	width: 48%;
+	float: left;
+}
+
+.registerDialog .main .uiRegInput.small.f {
+	float: right;
+}
+
+.registerDialog .main .lpinp {
+	width: 100%;
+	font-size: 12px;
+	padding: 5px;
+	margin: 5px 0px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-color: #777;
+	color: #555;
+	outline: none;
+}
+
+.registerDialog .main button[type='submit'] {
+	padding: 8px 10px;
+	width: 150px;
+	margin: 0px auto;
+	margin-top: 15px;
+	font-size: 13px;
+	border-color: rgba(0, 0, 0, 0.1);
+	background: #ff5252;
+	background-image: -webkit-linear-gradient(top, #ff6161 0%, #ff4343 100%);
+	background-image: -o-linear-gradient(top, #ff6161 0%, #ff4343 100%);
+	background-image: linear-gradient(to bottom, #ff6161 0%, #ff4343 100%);
+	background-repeat: repeat-x;
+	color: #FFF;
+	transition: background .2s ease-in-out;
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+}
+
+.registerDialog .main button[type='submit']:hover {
+	border-color: rgba(0, 0, 0, 0.1);
+	background: #ff4343;
+	background-image: -webkit-linear-gradient(top, #ff5252 0%, #ff2e2e 100%);
+	background-image: -o-linear-gradient(top, #ff5252 0%, #ff2e2e 100%);
+	background-image: linear-gradient(to bottom, #ff5252 0%, #ff2e2e 100%);
+	background-repeat: repeat-x;
+	color: white;
+	outline: none;
+	transition: background .2s ease-in-out;
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+}
+.registerDialog .footer {
+	border-top: 1px solid #CCC;
+	margin-top: 10px;
+	color: #777;
+	font-weight: normal;
+	padding-top: 10px;
+}
+
+.registerDialog .footer h4 {
+	display: inline-block;
+	padding: 0px 5px;
+	margin: 5px 0px;
+}
+
+.registerDialog .footer .terms a {
+	color: #ff5252;
+	font-weight: bold;
+}
+
+.registerDialog .footer .terms:hover a {
+	text-decoration: underline;
+}
+
+.registerDialog .footer .menu a {
+	color: #ff5252;
+}
+
+.registerDialog .footer .menu:hover a {
+	text-decoration: underline;
+}

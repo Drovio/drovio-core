@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\sdk">
+  <class name="privileges" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1414153041</datecreated>
+      <daterevised>1424171124</daterevised>
+      <extends>
+        <object>\DEV\Core\privileges</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Open SDK Packages Manager</title>
+      <description>Handles all SDK packages that are open to developers.</description>
+      <deprecated>Use \DEV\Core\privileges instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

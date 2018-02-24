@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="treeView">
+	<ul class="treeViewList">
+		<li class="treeItem">
+			<div class="treeItemContent">
+				<span>Simple Item</span>
+			</div>
+		</li>
+		<li class="treeItem" expandable="expandable">
+			<div class="treePointer"/>
+			<div class="treeItemContent">
+				<span>Expandable Item</span>
+			</div>
+			<ul class="treeViewList">
+				<li class="treeItem">
+					<div class="treeItemContent">
+						<span>Simple Item</span>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li class="treeItem" expandable="semi-expandable">
+			<div class="treePointer"/>
+			<div class="treeItemContent">
+				<span>Semi-Expandable Item</span>
+			</div>
+			<ul class="treeViewList">
+				<li class="treeItem">
+					<div class="treeItemContent">
+						<span>Simple Item</span>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</model>

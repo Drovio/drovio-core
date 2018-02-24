@@ -1,0 +1,59 @@
+.uiTlbRibbon {
+	display:none;
+	background-color:#FFF;
+	width:100%;
+}
+.uiTlbRibbon.inline {
+	border-bottom:1px solid rgba(166, 166, 166, 1);
+	position:fixed;
+	z-index:90;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.rtribbon {
+	min-width:100px;
+}
+.rtribbon .colGroup {
+	padding: 3px;
+	overflow-x: auto;
+}
+.uiTlbRibbon.inline .rtribbon .colGroup {
+	min-height: 54px;
+	z-index: 90;
+	padding: 4px 3px 3px;
+}
+.rtribbon .colGroup > .collection {
+	width:auto;
+	overflow:auto;
+}
+.uiTlbRibbon.inline .rtribbon .collection {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+.rtribbon .collection > .panel {
+	min-height:42px;
+}
+.rtribbon .collection:empty {
+	height: 100px;
+	background: url('%resources%/global/splash.png') no-repeat center;
+	background-size: 50px;
+}
+.rtribbon .statusbar {
+	width: 100%;
+	line-height: 16px;
+	padding: 2px 0px;
+	height: 21px;
+	text-align: center;
+	background: linear-gradient(#f2f2f2, #e2e2e2);
+	background: -webkit-linear-gradient(#f2f2f2, #e2e2e2);
+	background: -moz-linear-gradient(#f2f2f2, #e2e2e2);
+	border-top: 1px solid #e2e2e2;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: auto;
+	color: #777;
+}
+.rtribbon .statusbar:empty {
+	display: none;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Profile" namespace="\">
+  <class name="company" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>2</build>
+      <datecreated>1414073058</datecreated>
+      <daterevised>1418202590</daterevised>
+      <extends>
+        <object>\API\Profile\team</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company Manager Class</title>
+      <description>Manages the active company and its information.
+The company as entity extends the team, so the class extends the team class.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="companyData" static="true">
+          <description>All the company data.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="array" static="true">
+          <description>Gets the company info.</description>
+          <parameters/>
+          <returndescription>An array of the all company data separated to team data and to company data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCompanyID" returntype="integer" static="true">
+          <description>Get the current company id.</description>
+          <parameters/>
+          <returndescription>The current company id (at this version it is the team id).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCompanySSN" returntype="string" static="true">
+          <description>Get the current company ssn value.</description>
+          <parameters/>
+          <returndescription>The current company ssn value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBranchList" returntype="array" static="true">
+          <description>Get all company branches.</description>
+          <parameters/>
+          <returndescription>An array of all company branches and their information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStorageUnits" returntype="array" static="true">
+          <description>Get all company storage units.</description>
+          <parameters/>
+          <returndescription>An array of all storage units.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getInfo" returntype="array" static="true">
+          <description>Gets the given company's information from the database.</description>
+          <parameters>
+            <parameter name="$companyID" type="integer" defaultvalue="">
+              <description>The company data to get info for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of company data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCompanyValue" returntype="void" static="true">
+          <description>Gets a company value from the session. If the session is not set yet, updates from the database.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The value name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The company value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

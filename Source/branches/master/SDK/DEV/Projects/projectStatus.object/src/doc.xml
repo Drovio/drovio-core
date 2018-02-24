@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Projects" namespace="\">
+  <class name="projectStatus" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1392718978</datecreated>
+      <daterevised>1408021064</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Project Status Manager</title>
+      <description>Manages project statuses.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new project status.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The status name-description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project status id if success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStatus" returntype="array" static="true">
+          <description>Get all project status.</description>
+          <parameters/>
+          <returndescription>An array of all status information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,28 @@
+<h1>Form Error Notification Object</h1>
+<p>An extension of the Form Notification Object is the error notification object. This object allows the developer to create a specific error notification that is equipped with an embedded list where errors can be appended. Examples:</p>
+<div class="code">
+	<pre>// Create a form error notification in response of a form post
+	
+// Use the class
+use \UI\Forms\formReport\formErrorNotification;
+	
+// Create the notification object
+$ntf = new formErrorNotification();
+
+// This is a UIObject, so we build
+// We do not have to get the DOMElement in this case, just build
+// There are no parameters in the build process because they are predefined as error notification
+$ntf->build();
+
+// We add an error header
+$header = $ntf->addHeader("Password error", $id = "");
+
+// We can add multiple descriptions to the above header
+// to describe why the error occurred
+$ntf->addDescription($header, "The password is a required field.", $extra = "", $id = "");
+$ntf->addDescription($header, "The password must include numbers, characters and dragon bones...", $extra = "", $id = "");
+
+// After we finish building the notification, we return the report
+// The report prevents the reset of the form (only passwords are being reset)
+return $ntf->getReport();</pre>
+</div>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Developer" namespace="\editors">
+  <class name="CSSEditor" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>1</build>
+      <datecreated>1410181191</datecreated>
+      <daterevised>1437044709</daterevised>
+      <extends>
+        <object>\UI\Developer\editors\WViewEditor</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>CSS Editor control</title>
+      <description>This is a simple html editor with a preview and a css code part.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

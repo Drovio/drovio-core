@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Identity" namespace="\">
+  <class name="permissions" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1450352997</datecreated>
+      <daterevised>1450352997</daterevised>
+      <extends>
+        <object>\DRVC\Profile\permissions</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Account permission manager with groups</title>
+      <description>Manages permissions for the current team.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="permissions" name="instance" static="true">
+          <description>The platform permissions instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="permissions" static="true">
+          <description>Get the permissions instance.</description>
+          <parameters/>
+          <returndescription>The permissions instance</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new permissions instance for the current team identity.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

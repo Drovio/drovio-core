@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="sidebar" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1370680743</datecreated>
+      <daterevised>1370680743</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Side Bar</title>
+      <description>Creates a specific side toolbar.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="LEFT">
+        <description>Left sidebar indicator.</description>
+      </const>
+      <const type="string" name="RIGHT">
+        <description>Right sidebar indicator.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="sidebar`">
+          <description>Builds the sidebar.</description>
+          <parameters>
+            <parameter name="$dock" type="string" defaultvalue="">
+              <description>The sidebar dock position.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The sidebar element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="extManager" abstract="" namespace="\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1374071034</datecreated>
+      <daterevised>1374071034</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="" name="PATH_PROJECT">
+        <description/>
+      </const>
+      <const type="" name="PATH_DEPLOY">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="projectPath">
+          <description/>
+        </prop>
+        <prop type="" name="deployPath">
+          <description/>
+        </prop>
+        <prop type="" name="query" static="true">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getExtensionInfo" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="extensionContainer" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="insertToWebsite" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$destination" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

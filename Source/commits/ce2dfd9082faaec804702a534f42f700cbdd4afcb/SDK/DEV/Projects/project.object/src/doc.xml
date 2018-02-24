@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Projects" namespace="\">
+  <class name="project" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1392717877</datecreated>
+      <daterevised>1408128900</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer Project</title>
+      <description>Manages developer projects, creating, updating and getting the proper information.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="id">
+          <description>The project id.</description>
+        </prop>
+        <prop type="string" name="name">
+          <description>The project unique name.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the project by id or by name.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The project name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="mixed" static="true">
+          <description>Create a new developer project.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project title.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The project type.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>If success, return the project id created. FALSE otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="mixed" static="true">
+          <description>Gets the project information with the given id or name.</description>
+          <parameters/>
+          <returndescription>An array of information if project found, NULL otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getID" returntype="integer">
+          <description>Gets the project id.</description>
+          <parameters/>
+          <returndescription>The project id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean" static="true">
+          <description>Updates a project's basic information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project's new title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project's new description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setName" returntype="boolean" static="true">
+          <description>Sets the unique project name.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The project's unique name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setCategory" returntype="boolean" static="true">
+          <description>Sets the project's category.</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The project category.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateStatus" returntype="boolean" static="true">
+          <description>Update a project's status.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRootFolder" returntype="string">
+          <description>Gets the project's roof repository folder</description>
+          <parameters/>
+          <returndescription>The project's root folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRepository" returntype="string" static="true">
+          <description>Get the project's repository folder.</description>
+          <parameters/>
+          <returndescription>The project's repository folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getResourcesFolder" returntype="void">
+          <description>Get the project's resources folder.</description>
+          <parameters/>
+          <returndescription>The project's resources folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publishResources" returntype="boolean">
+          <description>Publishes the resources of the current project to the given folder.
+You can provide a specific inner folder for partial coverage.
+It cleans the publish folder before copying.</description>
+          <parameters>
+            <parameter name="$publishFolder" type="string" defaultvalue="">
+              <description>The published resource folder.</description>
+            </parameter>
+            <parameter name="$innerFolder" type="string" defaultvalue="">
+              <description>The inner folder of the resources to be published.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPublishedPath" returntype="string" static="true">
+          <description>Get the project's publish folder.</description>
+          <parameters/>
+          <returndescription>The project's publish folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleases" returntype="array">
+          <description>Get all project releases.</description>
+          <parameters/>
+          <returndescription>All project releases.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="release" returntype="boolean">
+          <description>Add an account to the project.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project release version.</description>
+            </parameter>
+            <parameter name="$changelog" type="string" defaultvalue="">
+              <description>The project release changelog.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validates whether the logged in account has access to this project.</description>
+          <parameters/>
+          <returndescription>True is account has access, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="array" static="true">
+          <description>Gets all team's projects.</description>
+          <parameters/>
+          <returndescription>An array of all projects.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleaseLog" returntype="array">
+          <description>Get the release log from the project log.</description>
+          <parameters/>
+          <returndescription>An array of the release log.
+
+Schema:
+['version']['timestamp']
+['version']['changelog']</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadInfo" returntype="void">
+          <description>Load project info from database if project id is not set.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateReleaseLog" returntype="boolean">
+          <description>Update the project status log with a new entry.</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version of the release.</description>
+            </parameter>
+            <parameter name="$changelog" type="string" defaultvalue="">
+              <description>The release changelog.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

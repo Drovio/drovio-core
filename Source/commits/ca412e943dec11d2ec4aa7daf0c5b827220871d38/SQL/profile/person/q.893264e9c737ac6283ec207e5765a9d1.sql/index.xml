@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="107598002"><title>Update Personal Info</title><description>Update the personal information of a person by user</description><access>1</access><attributes><attr id="firstname"></attr><attr id="lastname"></attr><attr id="pid"></attr></attributes></query>

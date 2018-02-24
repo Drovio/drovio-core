@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1647945435111"><title>Get project release history</title><description></description><access></access><attributes><attr id="pid"></attr><attr id="branch"></attr><attr id="version"></attr></attributes></query>

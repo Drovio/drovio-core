@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="page" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395651044</datecreated>
+      <daterevised>1395653487</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Page Manager</title>
+      <description>Manages all platform pages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a page into the given folder</description>
+          <parameters>
+            <parameter name="$folderID" type="integer" defaultvalue="">
+              <description>The folder's id</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page filename.
+Extension not included, all pages are .php.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean" static="true">
+          <description>Update an already existing page.
+This includes moving it from one folder to another.</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page's id</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module that this page will load at runtime.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page's filename</description>
+            </parameter>
+            <parameter name="$folderID" type="integer" defaultvalue="">
+              <description>The page's folder id.</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Indicator whether this page is being loaded statically or async.</description>
+            </parameter>
+            <parameter name="$sitemap" type="boolean" defaultvalue="">
+              <description>Indicator whether this page will be included in the Redback's sitemap.</description>
+            </parameter>
+            <parameter name="$attributes" type="array" defaultvalue="">
+              <description>An array of attributes.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete a page</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id to delete.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array" static="true">
+          <description>Get page information by page id.</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all page information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="mixed" static="true">
+          <description>Loads the page file to be executed.
+Throws an exception if the page doesn't exist.</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id to be loaded.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page output, usually the page html.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="path" returntype="string" static="true">
+          <description>Get the full path of the page</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The full page path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildPage" returntype="string" static="true">
+          <description>Builds the page content.</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The page php content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

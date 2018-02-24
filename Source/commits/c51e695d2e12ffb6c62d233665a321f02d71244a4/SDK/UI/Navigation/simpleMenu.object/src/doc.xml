@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="simpleMenu" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1368015138</datecreated>
+      <daterevised>1368015138</daterevised>
+      <extends>\UI\Navigation\menu_prototype</extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Navigation\sideMenu instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="base_menu">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build_menu" returntype="void">
+          <description>Creates the navigation menu</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$header" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$inline" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_header" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$menu" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_subList" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$holder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_listItem" returntype="void">
+          <description>Creates and inserts a listItem to $holder</description>
+          <parameters>
+            <parameter name="$holder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$selected" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_listItem" returntype="void">
+          <description>Creates a list item</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$selected" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_listItemContent" returntype="void">
+          <description>Creates the container and the content of the weblink of the menu item</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method static="true" name="add_static_navigation" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_ref" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_targetcontainer" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_targetgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_navgroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$nav_display" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="add_web_navigation" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$navigation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

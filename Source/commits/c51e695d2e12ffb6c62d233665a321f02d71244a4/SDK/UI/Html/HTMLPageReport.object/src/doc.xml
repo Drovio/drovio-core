@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="HTMLPageReport" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1376295742</datecreated>
+      <daterevised>1376295865</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>HTML Page Report</title>
+      <description>Generates page reports.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="reportContent">
+          <description>The report content to send to HTMLServerReport.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="HTMLPageReport">
+          <description>Builds the report notification object.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The notification type.</description>
+            </parameter>
+            <parameter name="$msgType" type="string" defaultvalue="">
+              <description>The message type.</description>
+            </parameter>
+            <parameter name="$msgId" type="string" defaultvalue="">
+              <description>The message id to be loaded.</description>
+            </parameter>
+            <parameter name="$extraContext" type="string" defaultvalue="">
+              <description>Any extra context for the notification.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The HTMLPageReport object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Gets the HTMLServerReport.</description>
+          <parameters/>
+          <returndescription>The HTMLServerReport string.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

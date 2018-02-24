@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="26765983177913"><title>Create/Register account</title><description></description><access></access><attributes><attr id="firstname"></attr><attr id="lastname"></attr><attr id="email"></attr><attr id="title"></attr><attr id="password"></attr></attributes></query>

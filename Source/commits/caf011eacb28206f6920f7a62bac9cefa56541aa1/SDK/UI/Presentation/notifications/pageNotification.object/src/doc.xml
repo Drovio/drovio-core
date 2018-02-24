@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Presentation" namespace="\notifications">
+  <class name="pageNotification" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1446080382</datecreated>
+      <daterevised>1446080382</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Page notification</title>
+      <description>Displays notifications on the bottom left position of the page.
+It is mostly designed to be used from javascript.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="pageNotification">
+          <description>Build the page notification object.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The notification id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The notification title.</description>
+            </parameter>
+            <parameter name="$actionTitle" type="string" defaultvalue="">
+              <description>The notification action title.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The pageNotification object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

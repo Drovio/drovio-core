@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\UI\Presentation\gridSplitter"></use><use path="\UI\Presentation\togglers\toggler"></use><use path="\UI\Forms\Form"></use><use path="\API\Platform\importer"></use><use path="\UI\Html\DOM"></use><use path="\ESS\Prototype\UIObjectPrototype"></use></dependencies>

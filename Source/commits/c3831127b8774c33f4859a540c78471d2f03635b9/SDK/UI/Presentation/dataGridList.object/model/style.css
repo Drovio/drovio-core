@@ -1,0 +1,130 @@
+.dataGridWrapper {
+	max-height: inherit;
+	height: inherit;
+}
+
+.dataGridList {
+	list-style: none;
+	padding: 0px;
+	margin:0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	max-height: inherit;
+	height: inherit;
+}
+
+.dataGridList textarea {
+	resize:none;
+}
+
+.dataGridList .dataGridHeader {
+	/*background-color: rgba(182, 182, 182, 1);*/
+	cursor: pointer;
+	position: absolute;
+	height: 24px;
+	z-index: 1;
+	width:100%;
+	border: 1px solid rgb(166, 166, 166);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background: #e3e3e3;
+	background: linear-gradient(#f9f9f9, #e9e9e9);
+	background: -webkit-linear-gradient(#f9f9f9, #e9e9e9);
+	background: -moz-linear-gradient(#f9f9f9, #e9e9e9);
+}
+.dataGridList .dataGridHeader .dataGridCell .dataGridTextWrapper {
+	line-height: 22px;
+}
+.dataGridList .dataGridHeader .dataGridCell.selected {
+	/*background-color: #bebebe;*/
+/*	background: -webkit-linear-gradient(left, #bebebe, rgba(166, 166, 166, 0.8));
+	background: -moz-linear-gradient(left, #bebebe, rgba(166, 166, 166, 0.8));
+	background: -ms-linear-gradient(left, #bebebe, rgba(166, 166, 166, 0.8)); 
+	background: -o-linear-gradient(left, #bebebe, rgba(166, 166, 166, 0.8));*/
+}
+
+.dataGridList .dataGridHeader .dataGridCell:hover {
+	cursor:pointer;
+}
+.dataGridList .dataGridHeader .dataGridCell:hover .sortingIcon {
+	visibility:visible;
+}
+
+.dataGridList .dataGridHeader .dataGridCell .sortingIcon {
+	visibility:hidden;
+	display:inline-block;
+	width:8px;
+	height:8px;
+	margin-left:5px;
+	background:url('%resources%/icons/custom/list_arrow.svg') no-repeat center;
+	background-position: cover;
+}
+.dataGridList .dataGridHeader .dataGridCell.selected:not(.ascending) .sortingIcon {
+	visibility:visible;
+	-webkit-transition: -webkit-transform 500ms;
+	-webkit-transform: rotate(-90deg);
+}
+.dataGridList .dataGridHeader .dataGridCell.selected.ascending .sortingIcon {
+	visibility:visible;
+	-webkit-transition: -webkit-transform 500ms;
+	-webkit-transform: rotate(90deg);
+}
+
+.dataGridList .dataGridHeader .dataGridCheck > input {
+	/*position: relative;
+	left: -1px;
+	top: -1px;*/
+}
+
+.dataGridList .dataGridContentWrapper {
+	position:relative;
+	overflow: auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	max-height: inherit;
+	height: inherit;
+	padding-top: 24px;
+	border-bottom: 1px solid rgb(166, 166, 166);
+	border-left: 1px solid rgb(166, 166, 166);
+	border-right: 1px solid rgb(166, 166, 166);
+}
+
+.dataGridList .dataGridRow:nth-child(even) {
+	background-color: rgba(166, 166, 166, 0.1);
+}
+
+.dataGridWrapper.checkable .dataGridList .dataGridRow:hover {
+	background-color: rgba(166, 166, 166, 0.2);
+}
+
+.dataGridWrapper.checkable .dataGridList .dataGridRow.selected {
+	background-color: rgba(166, 166, 166, 0.5);
+}
+
+.dataGridList .dataGridRow {
+	position:relative;
+}
+
+.dataGridList .dataGridCell, .dataGridList .dataGridCheck {
+	display: inline-block;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+	vertical-align: middle;
+	padding: 0px 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.dataGridList .dataGridCheck {
+	width:8%;
+}
+.dataGridList .dataGridCell .dataGridTextWrapper {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 18px;
+	display: inline-block;
+	width: 100%;
+}

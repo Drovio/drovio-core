@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\storage">
+  <class name="cookies" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1374479397</datecreated>
+      <daterevised>1415088420</daterevised>
+      <extends>
+        <object>\ESS\Environment\cookies</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Cookie's Manager</title>
+      <description>Manages all cookie interaction for the system</description>
+      <deprecated>Use \ESS\Environment\cookies instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

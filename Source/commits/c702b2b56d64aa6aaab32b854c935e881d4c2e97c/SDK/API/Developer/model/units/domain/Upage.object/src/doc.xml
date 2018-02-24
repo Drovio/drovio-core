@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\model\units\domain">
+  <class name="Upage" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1373021570</datecreated>
+      <daterevised>1395651070</daterevised>
+      <extends>\API\Model\units\domain\Spage</extends>
+      <implements/>
+      <throws/>
+      <title>Page Manager</title>
+      <description>The system's page manager.</description>
+      <deprecated>Use \API\Resources\pages\page instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a page into the given folder</description>
+          <parameters>
+            <parameter name="$folder_id" type="integer" defaultvalue="">
+              <description>The folder's id</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page filename.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="update" returntype="boolean" static="true">
+          <description>Update an already existing page.
+This includes moving it from one folder to another.</description>
+          <parameters>
+            <parameter name="$page_id" type="integer" defaultvalue="">
+              <description>The page's id</description>
+            </parameter>
+            <parameter name="$module_id" type="integer" defaultvalue="">
+              <description>The module that this page loads</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The page's filename</description>
+            </parameter>
+            <parameter name="$folder_id" type="integer" defaultvalue="">
+              <description>The parent's folder id</description>
+            </parameter>
+            <parameter name="$static" type="boolean" defaultvalue="">
+              <description>Indicator whether this page is being loaded statically or async</description>
+            </parameter>
+            <parameter name="$sitemap" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="delete" returntype="boolean" static="true">
+          <description>Delete a page</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id to delete.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildPage" returntype="string" static="true">
+          <description>Build the page contents.</description>
+          <parameters>
+            <parameter name="$pageID" type="integer" defaultvalue="">
+              <description>The page id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the page contents as php code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

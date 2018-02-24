@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div class="gridView">
+	<ul class="gridViewList">
+		<li class="outerCellView">
+			<ul class="innerCellView">
+				<li class="gridCell">
+					<div class="cell"/>
+				</li>
+				<li class="gridCell">
+					<div class="cell"/>
+				</li>
+			</ul>
+		</li>
+		<li class="outerCellView">
+			<ul class="innerCellView">
+				<li class="gridCell">
+					<div class="cell"/>
+				</li>
+				<li class="gridCell">
+					<div class="cell"/>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</model>

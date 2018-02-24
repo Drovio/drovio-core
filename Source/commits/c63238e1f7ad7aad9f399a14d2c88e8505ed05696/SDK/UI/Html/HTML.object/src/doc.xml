@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTML" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387462494</datecreated>
+      <daterevised>1387462494</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>HTML Handler</title>
+      <description>HTML extends DOM handler for html specific functions.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="addClass" returntype="boolean" static="true">
+          <description>Adds a class to the given DOMElement.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to add the class.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the class already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeClass" returntype="boolean" static="true">
+          <description>Removes a class from a given DOMElement.</description>
+          <parameters>
+            <parameter name="$elem" type="DOMElement" defaultvalue="">
+              <description>The element to add the class.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the class already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

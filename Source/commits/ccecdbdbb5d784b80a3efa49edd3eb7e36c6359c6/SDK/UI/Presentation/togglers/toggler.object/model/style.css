@@ -1,0 +1,51 @@
+.toggler {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.toggler > .togHeader {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid rgba(166, 166, 166, 0.7);
+	background-color: rgba(166, 166, 166, 0.2);
+	padding: 3px;
+	min-height: 32px;
+	line-height: 24px;
+	cursor: pointer;
+}
+.toggler.open > .togHeader {
+	border-bottom: 1px solid rgba(166, 166, 166, 0.2);
+}
+
+.toggler > .togHeader .togIcon {
+	width: 24px;
+	height: 24px;
+	float: left;
+	background: url(/Library/Media/images/icons/24x24/simpleRoundArrow.svg) center no-repeat;
+	margin-right: 5px;
+	transform:rotate(0deg);
+	transition: transform 200ms;
+	-moz-transform:rotate(0deg);
+	-moz-transition: -moz-transform 200ms;
+	-webkit-transform:rotate(0deg);
+	-webkit-transition: -webkit-transform 200ms;
+	-o-transform:rotate(0deg);
+}
+.toggler.open > .togHeader .togIcon {
+	transform: rotate(90deg);
+	transition: transform 200ms;
+	-moz-transform: rotate(90deg);
+	-moz-transition: -moz-transform 200ms;
+	-webkit-transform:rotate(90deg);
+	-webkit-transition: -webkit-transform 200ms;
+	-o-transform:rotate(90deg);
+}
+
+.toggler > .togBody {
+	display: none;
+	padding: 3px;
+	border: 1px solid rgba(166, 166, 166, 0.7);
+	border-top: none;
+}
+.toggler.open > .togBody {
+	display: block;
+}

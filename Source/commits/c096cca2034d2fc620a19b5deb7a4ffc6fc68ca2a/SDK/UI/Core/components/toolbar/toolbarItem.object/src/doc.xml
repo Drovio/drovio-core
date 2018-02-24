@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Core" namespace="\components\toolbar">
+  <class name="toolbarItem" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1402469037</datecreated>
+      <daterevised>1402469037</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>Toolbar menu item.</title>
+      <description>Builds a toolbar menu item for all uses.
+The toolbar item can be of 3 different scopes as mentioned in the build function, one for every case of visibility.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="toolbarItem">
+          <description>Builds the toolbar item.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The item title (if any).</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the item (if any).</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class of the item (if any).</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>This defines the scope where the item will be visible.
+The acceptable values:
+- "global", for global appearance
+- "domain", for domain appearance
+- "page", for this page only.
+The above indicate what items will be removed on the next clearance of the toolbar.</description>
+            </parameter>
+            <parameter name="$ico" type="mixed" defaultvalue="">
+              <description>Defines whether this item will have an ico. It can be used as DOMElement to set the ico.</description>
+            </parameter>
+            <parameter name="$index" type="integer" defaultvalue="">
+              <description>The item's index position among other items in the toolbar.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The toolbarItem object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

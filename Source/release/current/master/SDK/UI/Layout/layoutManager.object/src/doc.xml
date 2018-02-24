@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Layout" namespace="\">
+  <class name="layoutManager" abstract="">
+    <info>
+      <version/>
+      <datecreated>1404469646</datecreated>
+      <daterevised>1404469646</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>System Layout Loader and Manager</title>
+      <description>Manages all page layouts in the system, including export and loading.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CSS_EXPORT_PATH">
+        <description>Holds the path where the layout css will be exported on release procedure.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getFilePath" returntype="string" static="true">
+          <description>Get the filepath for the system's layout css path.</description>
+          <parameters/>
+          <returndescription>The full system's layout css exported path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFilename" returntype="string" static="true">
+          <description>Get the hashed filename of layout css file</description>
+          <parameters/>
+          <returndescription>The hashed filename.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="boolean" static="true">
+          <description>Exports all system layout styles in one css file at a standard location.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

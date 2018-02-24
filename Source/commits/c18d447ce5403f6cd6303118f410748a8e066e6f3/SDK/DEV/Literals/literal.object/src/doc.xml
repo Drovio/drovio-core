@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Literals" namespace="\">
+  <class name="literal" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1405931013</datecreated>
+      <daterevised>1406117720</daterevised>
+      <extends>
+        <object>\DEV\Literals\literalController</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Literal Handler</title>
+      <description>Handles all translated and non-translated literals.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="translatedLiterals" static="true">
+          <description>Stores the translated literals in the language requested</description>
+        </prop>
+        <prop type="array" name="nonTranslatedLiterals" static="true">
+          <description>Stores the non translated literals in the language requested</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="mixed" static="true">
+          <description>Get a literal value.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$attributes" type="array" defaultvalue="">
+              <description>An array of attributes to pass to the literal.</description>
+            </parameter>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description>Whether the literal will be wrapped inside a span.</description>
+            </parameter>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to get the literals from.
+If NULL, get the current system locale.
+NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The literal span if wrap is requested or the literal value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean" static="true">
+          <description>Add a new literal to the default locale.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's value.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean" static="true">
+          <description>Update a literal to the default locale.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The literal's new value.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The literal's new description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean" static="true">
+          <description>Remove a literal.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+            <parameter name="$scope" type="string" defaultvalue="">
+              <description>The literal's scope.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The literal's name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

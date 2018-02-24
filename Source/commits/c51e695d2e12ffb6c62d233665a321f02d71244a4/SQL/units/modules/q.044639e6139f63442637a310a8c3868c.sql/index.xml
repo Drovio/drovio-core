@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="2030152463"><title>Get All Module Details Not Open</title><description>Get all modules details except those that their scope scope has been set to 'open'</description><access>1</access><attributes></attributes></query>

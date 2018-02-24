@@ -1,0 +1,80 @@
+#rb_gMapHolder {
+	height: 100%;
+	width:auto;
+	margin: 0;
+	overflow:auto;
+}
+rb_gMapHeader { }
+.rb_gMapCnt { }
+#form { }
+#gMap { }
+/*Delivery Area Control CSS BEGIN*/
+#gMapDeliveryAreaControl {
+	height: auto;
+	width:auto;
+	margin: 0;
+}
+#gMapPointList { width: auto; }
+.deliveryMap {
+	height: 100%;
+	width: 100%;
+	min-height: 300px;
+	min-width: 300px;
+	margin: 0;
+}
+/*Delivery Area Control CSS END*/
+
+/*Adrress Control CSS BEGIN*/
+.rb_gMapGeoResult {
+	float: left;
+	min-width: 100pxpx;
+	height: 100%;
+	width: 25%;
+}
+.rb_gMapControlRow {
+	width:100%;
+	height:auto;
+}
+.rb_addressTlb { }
+.rb_notification { }
+.gMapAddress:hover { background:#FFFFCC; }
+.addressMap {
+	min-height: 200px;
+	min-width: 200px;
+	height: 100%;
+	width: 75%;
+	margin: 0;
+}
+/*Adrress Control CSS END*/
+
+/*Delivery Finder Control CSS BEGIN**/
+.deliveryFinderMap {
+	height: 500px;
+	width: 680px;
+	float:right;
+	margin: 0
+}
+.rd_dlvFSidebar {
+	width: 270px;
+	max-width: 270px;
+	overflow:scroll;
+}
+/*Delivery Finder Control CSS END*/
+/*Pin View Control CSS BEGIN**/
+.pinView {
+	height: 100%;
+	width: 100%;
+	min-height: 400px;
+	min-width: 300px;
+}
+/*Pin View Control CSS END*/
+
+/*Set Area Control CSS BEGIN**/
+.setArea {
+	height: 100%;
+	width: 100%;
+	min-height: 400px;
+	min-width: 300px;
+}
+/*Set Area Control CSS END*/
+

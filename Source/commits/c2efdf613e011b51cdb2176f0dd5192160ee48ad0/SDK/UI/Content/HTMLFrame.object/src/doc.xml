@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Content" namespace="\">
+  <class name="HTMLFrame" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1413808781</datecreated>
+      <daterevised>1413811558</daterevised>
+      <extends>
+        <object>\ESS\Prototype\html\HTMLPagePrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML iframe content</title>
+      <description>Creates an iframe based on the HTMLPagePrototype.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the iframe document.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="append" returntype="void">
+          <description>Append a DOMElement to the frame body.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="DOMElement">
+          <description>Get the iframe DOMElement object.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The frame name attribute.</description>
+            </parameter>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The frame id attribute.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The frame class attribute.</description>
+            </parameter>
+            <parameter name="$sandbox" type="array" defaultvalue="">
+              <description>iframe sandbox attributes in array values.
+You can include the allowed values:
+allow-forms
+allow-same-origin
+allow-scripts
+allow-top-navigation</description>
+            </parameter>
+          </parameters>
+          <returndescription>The iframe DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

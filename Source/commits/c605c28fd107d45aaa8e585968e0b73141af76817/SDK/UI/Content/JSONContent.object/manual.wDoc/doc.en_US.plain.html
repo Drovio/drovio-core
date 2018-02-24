@@ -1,0 +1,23 @@
+<h1>JSON Async Content Builder</h1>
+<p>JSONContent allows developers to build a customized json content and return it to the client using Redback server report mechanism.</p>
+<p>A JSONContent can include any information and it is usually accompanied with an action, unless if the client called a script using the JSONServerReport.request() and there is a callback for the response.</p>
+<p>The response follows the report mechanism of the platform and it is in JSON format.</p>
+<div class="code">
+	<pre>// Building a custom JSON content
+	
+// Use the class
+use \UI\Content\JSONContent;
+
+// Create the object
+$jsonContent = new JSONContent();
+
+// Create an array of information to return to the client
+$info = array();
+$info['userInfo'] = $userInfo;
+$info['notification_settings'] = $notificationSettings;
+
+// After we have created the array, we send the report to the client
+// We leave the other parameters as is in order to work with the platform
+// Those parameters can be used in combination with the Redback API Protocol to serve content to other apps
+return $jsonContent->getReport($info, $allowOrigin = "", $withCredentials = TRUE, $key = "");</pre>
+</div>

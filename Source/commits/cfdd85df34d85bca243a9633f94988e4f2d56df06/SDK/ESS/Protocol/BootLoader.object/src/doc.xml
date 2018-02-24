@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\">
+  <class name="BootLoader" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>3</build>
+      <datecreated>1406660053</datecreated>
+      <daterevised>1408007888</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Resource Boot Loader</title>
+      <description>This is the manager class for loading and general handling the system's resources (javascript and css).</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="URL_CSS_LOADER">
+        <description>The css package loader file in testing mode.</description>
+      </const>
+      <const type="string" name="URL_JS_LOADER">
+        <description>The js package loader file in testing mode.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="startupPackages" static="true">
+          <description>List of startup sdk packages for the module loaded</description>
+        </prop>
+        <prop type="integer" name="moduleID" static="true">
+          <description>The module being loaded at this call.</description>
+        </prop>
+        <prop type="array" name="prefix" static="true">
+          <description>A list of prefixes for css and hs.</description>
+        </prop>
+        <prop type="array" name="revPrefix" static="true">
+          <description>The reverse array of prefix.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getResource" returntype="string" static="true">
+          <description>Get a system resource url.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The attribute type, "css" or "js".</description>
+            </parameter>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The resource category, "Modules" or "Packages".</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The resource library.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The resource package.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>The package tester status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource url with any attributes it may has.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSSUrl" returntype="string" static="true">
+          <description>Returns the url for the css package loader.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>Indicator that specifies whether the resource will be loaded from the exported resources or from the repositories.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The url to be loaded.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getJSUrl" returntype="string" static="true">
+          <description>Returns the url for the javascript package loader.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$tester" type="string" defaultvalue="">
+              <description>Indicator that specifies whether the resource will be loaded from the exported resources or from the repositories.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The url to be loaded.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exportCSS" returntype="boolean" static="true">
+          <description>Export a css package to the resource library folder.</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The category package (subfolder).</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exportJS" returntype="boolean" static="true">
+          <description>Export a javascript package to the resource library folder.</description>
+          <parameters>
+            <parameter name="$category" type="string" defaultvalue="">
+              <description>The category package (subfolder).</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>The resource content.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setModuleResource" returntype="void" static="true">
+          <description>Sets the module id being loaded.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id being loaded.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getModuleResource" returntype="array" static="true">
+          <description>Returns the module resource as an array.
+Depending on the module's tester status, it returns the id in the proper format.</description>
+          <parameters/>
+          <returndescription>The module resource for the BootLoader.</returndescription>
+          <throws/>
+          <deprecated>Use getModuleResources() instead.</deprecated>
+        </method>
+        <method name="getModuleResources" returntype="array" static="true">
+          <description>Get all module resources that are related to the BootLoader's loaded module.</description>
+          <parameters/>
+          <returndescription>An array of resource id as key and as value an array of resource css and js data.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getModuleRsrcArray" returntype="array" static="true">
+          <description>Get the given module's resource array including the inner modules.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to get the resource from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of resources by id.
+The array has a key of the resource id and a value of the resource attributes.
+For testers, it includes as extra information the module id and the tester mode.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getURL" returntype="string" static="true">
+          <description>Forms the url according to parameters given.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The base url.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$tester" type="boolean" defaultvalue="">
+              <description>Indicator that specifies whether the resource will be loaded from the exported resources or from the repositories.
+In this function, defines whether the url will be hashed or not.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The url resource type (Modules or Packages).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource url.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string" static="true">
+          <description>Returns the hashed file name of the resource package.</description>
+          <parameters>
+            <parameter name="$prefix" type="string" defaultvalue="">
+              <description>The file prefix.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The resource type, "css" or "js".</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource file name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getRsrcID" returntype="string" static="true">
+          <description>Get the resource hash id.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The resource hash id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createIndex" returntype="void" static="true">
+          <description>Creates the resource index in the exported folder.</description>
+          <parameters>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The exported folder.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The index title.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

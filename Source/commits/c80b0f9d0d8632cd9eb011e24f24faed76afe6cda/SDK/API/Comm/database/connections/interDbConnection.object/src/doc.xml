@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Comm" namespace="\database\connections">
+  <class name="interDbConnection" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1366713120</datecreated>
+      <daterevised>1406654607</daterevised>
+      <extends>
+        <object>\SYS\Comm\db\dbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Internal Database Connection</title>
+      <description>Connects to system's database and executes the queries</description>
+      <deprecated>Use \SYS\Comm\db\dbConnection instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

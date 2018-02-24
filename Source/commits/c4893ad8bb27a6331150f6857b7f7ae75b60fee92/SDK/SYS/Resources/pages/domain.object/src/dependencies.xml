@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\API\Model\sql\dbQuery"></use><use path="\SYS\Comm\db\dbConnection"></use><use path="\API\Platform\importer"></use><use path="\SYS\Resources\pages\pageFolder"></use><use path="\API\Resources\filesystem\fileManager"></use><use path="\DEV\Resources\paths"></use><use path="\\page"></use><use path="\API\Resources\filesystem\folderManager"></use><use path="\DEV\Tools\parsers\phpParser"></use></dependencies>

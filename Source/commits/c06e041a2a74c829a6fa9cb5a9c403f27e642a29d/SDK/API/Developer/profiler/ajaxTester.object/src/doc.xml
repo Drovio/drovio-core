@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\profiler">
+  <class name="ajaxTester" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1387550587</datecreated>
+      <daterevised>1392025869</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Ajax File Tester Manager</title>
+      <description>Manages ajax file tester mode.</description>
+      <deprecated>Use DEV\Profiler\test\ajaxTester instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

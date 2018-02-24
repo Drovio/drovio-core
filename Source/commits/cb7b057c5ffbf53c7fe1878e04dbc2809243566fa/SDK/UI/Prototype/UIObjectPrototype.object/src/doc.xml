@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Prototype" namespace="\">
+  <class name="UIObjectPrototype" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1438073291</datecreated>
+      <daterevised>1438073291</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>UI Object Prototype</title>
+      <description>It is the prototype for all ui objects.
+All ui objects must inherit this class and implement the "build" method to build the object.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="DOMElement" name="UIObjectHolder">
+          <description>The UI Object Holder</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="this" abstract="true">
+          <description>It's the abstract Object Builder Function.</description>
+          <parameters/>
+          <returndescription>It should return the current object (this) to support chain pattern.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="DOMElement">
+          <description>Get the object holder.</description>
+          <parameters/>
+          <returndescription>The object holder DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="append" returntype="void">
+          <description>Append a DOMElement to the root object holder.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The element to be appended to the object holder.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="set" returntype="void">
+          <description>Sets the UI Object Holder that the inherited class has created.</description>
+          <parameters>
+            <parameter name="$object" type="DOMElement" defaultvalue="">
+              <description>The object holder.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

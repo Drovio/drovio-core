@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1830667908"><title>Get Group Subtree</title><description>Get the subtree of a group</description><access>1</access><attributes><attr id="pid"></attr><attr id="from_depth"></attr><attr id="to_depth"></attr></attributes></query>

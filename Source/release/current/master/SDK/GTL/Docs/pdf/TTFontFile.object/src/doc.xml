@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\pdf">
+  <class name="TTFontFile" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1443386494</datecreated>
+      <daterevised>1443387587</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>TTF Font File parser</title>
+      <description>Parses a ttf font file and generates  helper files for the tFPDF unicode.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public">
+        <prop type="" name="maxUni">
+          <description/>
+        </prop>
+        <prop type="" name="_pos">
+          <description/>
+        </prop>
+        <prop type="" name="numTables">
+          <description/>
+        </prop>
+        <prop type="" name="searchRange">
+          <description/>
+        </prop>
+        <prop type="" name="entrySelector">
+          <description/>
+        </prop>
+        <prop type="" name="rangeShift">
+          <description/>
+        </prop>
+        <prop type="" name="tables">
+          <description/>
+        </prop>
+        <prop type="" name="otables">
+          <description/>
+        </prop>
+        <prop type="" name="filename">
+          <description/>
+        </prop>
+        <prop type="" name="fh">
+          <description/>
+        </prop>
+        <prop type="" name="hmetrics">
+          <description/>
+        </prop>
+        <prop type="" name="glyphPos">
+          <description/>
+        </prop>
+        <prop type="" name="charToGlyph">
+          <description/>
+        </prop>
+        <prop type="" name="ascent">
+          <description/>
+        </prop>
+        <prop type="" name="descent">
+          <description/>
+        </prop>
+        <prop type="" name="name">
+          <description/>
+        </prop>
+        <prop type="" name="familyName">
+          <description/>
+        </prop>
+        <prop type="" name="styleName">
+          <description/>
+        </prop>
+        <prop type="" name="fullName">
+          <description/>
+        </prop>
+        <prop type="" name="uniqueFontID">
+          <description/>
+        </prop>
+        <prop type="" name="unitsPerEm">
+          <description/>
+        </prop>
+        <prop type="" name="bbox">
+          <description/>
+        </prop>
+        <prop type="" name="capHeight">
+          <description/>
+        </prop>
+        <prop type="" name="stemV">
+          <description/>
+        </prop>
+        <prop type="" name="italicAngle">
+          <description/>
+        </prop>
+        <prop type="" name="flags">
+          <description/>
+        </prop>
+        <prop type="" name="underlinePosition">
+          <description/>
+        </prop>
+        <prop type="" name="underlineThickness">
+          <description/>
+        </prop>
+        <prop type="" name="charWidths">
+          <description/>
+        </prop>
+        <prop type="" name="defaultWidth">
+          <description/>
+        </prop>
+        <prop type="" name="maxStrLenRead">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMetrics" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="readTableDirectory" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="sub32" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="calcChecksum" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$data" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_table_pos" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="seek" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$pos" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="skip" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$delta" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="seek_table" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$offset_in_table" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="read_tag" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="read_short" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="unpack_short" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="read_ushort" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="read_ulong" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_ushort" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$pos" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_ulong" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$pos" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="pack_short" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$val" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="splice" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$stream" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$offset" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_set_ushort" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$stream" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$offset" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_set_short" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$stream" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$offset" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$val" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_chunk" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$pos" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$length" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="get_table" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$data" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="extractInfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="makeSubset" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$subset" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getGlyphData" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$originalGlyphIdx" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$maxdepth" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$depth" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$points" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$contours" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getGlyphs" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$originalGlyphIdx" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$start" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$glyphSet" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$subsetglyphs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHMTX" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$numberOfHMetrics" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$numGlyphs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$glyphToChar" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$scale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHMetric" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$numberOfHMetrics" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$gid" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLOCA" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$indexToLocFormat" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$numGlyphs" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCMAP4" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$unicode_cmap_offset" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$glyphToChar" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$charToGlyph" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="endTTFile" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$stm" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

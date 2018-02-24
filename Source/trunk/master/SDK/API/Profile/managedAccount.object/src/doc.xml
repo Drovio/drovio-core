@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Profile" namespace="\">
+  <class name="managedAccount" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1447167032</datecreated>
+      <daterevised>1447268245</daterevised>
+      <extends>
+        <object>\API\Login\managedAccount</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Managed Account Handler for Drovio</title>
+      <description>This class is responsible for managed accounts (not admin) for the drovio platform.</description>
+      <deprecated>Use \API\Login\managedAccount instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

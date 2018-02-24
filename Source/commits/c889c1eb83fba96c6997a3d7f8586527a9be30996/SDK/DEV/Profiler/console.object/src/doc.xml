@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="console" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392631525</datecreated>
+      <daterevised>1404304533</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Server Console Class</title>
+      <description>This class allows users of Redback and developers to run free code and get the results of the execution.
+Simple users can just execute php code, while redback developers have access to the SDK through the importer.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="php" returntype="string" static="true">
+          <description>Runs a given php code in redback php server.
+The code is safely escaped to prevent malicious functions.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The php code.</description>
+            </parameter>
+            <parameter name="$headers" type="boolean" defaultvalue="">
+              <description>This allows to add specific headers to the php code in order to use the system's SDK.</description>
+            </parameter>
+            <parameter name="$dependencies" type="array" defaultvalue="">
+              <description>An array of dependencies for the code to run.
+It works only when headers are specified.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php code output.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="addHeaders" returntype="string" static="true">
+          <description>Adds the proper headers to the php code to be enabled to run.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The user's php code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new code with the headers.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addSystemDependencies" returntype="string" static="true">
+          <description>Adds redback sdk dependencies in the code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The php code to run.</description>
+            </parameter>
+            <parameter name="$dependencies" type="array" defaultvalue="">
+              <description>An array of dependencies.
+It supports only packages for now.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new code with the dependencies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <div id="redWIDE" class="wide">
+  <div id="dropPool"/>
+  <div id="WIDETabber" class="tabControl editable">
+    <div class="tabs">
+      <ul>
+        <li class="tabMenuItem editable selected" data-static-nav="">
+		<span class="tabMenuItemText">WIDE::Tab</span>
+          <div class="closeButton"/>
+        </li>
+      </ul>
+    </div>
+    <div class="pages">
+      <div id="aux_tab" class="tabPageContainer editable" data-targetgroupid="pageCollection_WIDETabber">
+        <form id="frm" method="POST" role="editor" locale="el_GR" class="uiSimpleForm" data-module="">
+          <div class="form_report reportContainer"/>
+          <div class="form_body">            
+            <div class="editorAreaFormContent">
+              <div class="headersContainer">
+                <div class="headersOuterWrapper">
+                  <div class="headersInnerWrapper">
+                    <div class="headersSideMenu"> </div>
+                    <div id="headersViewer_aux_143_1915943187" class="headersViewer">
+                      <div class="headersViewerWrapper"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="editorContainer">
+                <div id="codEd_2087673520" class="codeEditor">
+                  <div class="codeEditor_habitat">
+                    <div class="scriptLines"/>
+                    <div class="scriptWrapper">
+                      <div class="typingWrapper">
+                        <div id="presentationArea" class="presentationArea"> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sideToolArea">
+                <div class="toolGroup codeGroup">
+                  <div class="sideTool save saveModule" data-action=""/>
+                  <div class="sideTool commit" data-gt=""/>
+                </div>
+                <div class="toolSeparator"/>
+                <div class="toolGroup infoGroup">
+                  <div class="sideTool headers"/>
+                  <div class="sideTool mlgMan" data-gt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="controls"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</model>

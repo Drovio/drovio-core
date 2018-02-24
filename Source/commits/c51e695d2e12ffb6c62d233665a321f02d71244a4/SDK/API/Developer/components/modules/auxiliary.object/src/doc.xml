@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="auxiliary" abstract="" namespace="\components\modules">
+    <info>
+      <version/>
+      <datecreated>March 15, 2013, 12:46 (EET)</datecreated>
+      <daterevised>March 15, 2013, 16:07 (EET)</daterevised>
+      <extends>\API\Developer\components\AbstractModule</extends>
+      <implements/>
+      <title>Module Auxiliary Manager</title>
+      <description>The system's auxiliary handler.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop name="seed" type="integer" class="undefined">
+          <description>The auxiliary's seed</description>
+        </prop>
+        <prop name="auxTitle" type="string" class="undefined">
+          <description>The object's title</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="initialize" returntype="auxiliary" class="undefined">
+          <description>Inherited method. Initializes the object's variables.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The module's id</description>
+            </parameter>
+            <parameter name="$seed" type="integer" defaultvalue="">
+              <description>The auxiliary seed.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The auxiliary's title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the entire object.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The new description.</description>
+            </parameter>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The new source code.</description>
+            </parameter>
+            <parameter name="$imports" type="array" defaultvalue="">
+              <description>The array of imports.</description>
+            </parameter>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>The array of inner modules used by this object.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new auxiliary module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The parent's (module) id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The auxiliary's title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The auxiliary's description.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="delete" returntype="boolean">
+          <description>Deletes the auxiliary completely</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="getSeed" returntype="integer" class="undefined">
+          <description>Returns the auxiliary's seed.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="getTitle" returntype="string" class="undefined">
+          <description>Returns the auxiliary's title.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="getParentTitle" returntype="string" class="undefined">
+          <description>Returns the auxiliary parent's title.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="setTitle" returntype="void" class="undefined">
+          <description>Sets the title of the object.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new title.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="initializeInfo" returntype="void" class="undefined">
+          <description>Initializes all the object's information and variables.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="getIndexBase" returntype="DOMElement" class="undefined">
+          <description>Creates the index base element.</description>
+          <parameters>
+            <parameter name="$builder" type="DOMParser" defaultvalue="">
+              <description>The parser used to create the element.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="getFileName" returntype="string" class="undefined">
+          <description>Gets the hashed filename of the object.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Identity" namespace="\">
+  <class name="accountSession" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1445611049</datecreated>
+      <daterevised>1447182109</daterevised>
+      <extends>
+        <object>\DRVC\Profile\accountSession</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Identity Account Session Manager</title>
+      <description>Manages account session for the current team.
+Fetch all active sessions for a given account</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="accountSession" name="instance" static="true">
+          <description>The platform accountSession instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="accountSession" static="true">
+          <description>Get the account session instance.</description>
+          <parameters/>
+          <returndescription>The account session instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="__construct" returntype="void">
+          <description>Create a new account session instance for the current team identity.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

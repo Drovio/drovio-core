@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="HTMLNavFooter" abstract="" namespace="\pageComponents">
+    <info>
+      <version/>
+      <datecreated>1366979462</datecreated>
+      <daterevised>1366979462</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <title>HTML Navigation Footer</title>
+      <description>The footer of the page with some basic navigation to the site.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="build" returntype="HTMLNavFooter">
+          <description>Builds the navigation footer</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="addBull" returntype="void">
+          <description>Adds a &amp;amp;bull; character to the given container.</description>
+          <parameters>
+            <parameter name="$container" type="DOMElement" defaultvalue="">
+              <description>The given container</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="getBull" returntype="DOMElement">
+          <description>Creates a span with &amp;amp;bull; as value.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

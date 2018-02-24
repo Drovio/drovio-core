@@ -1,0 +1,51 @@
+/*____________________ ui.forms.components.contentPresenter ____________________*/
+.contentPresenter {
+	overflow:auto;
+	position:relative;
+	min-height:32px;
+	border:1px solid rgba(166, 166, 166, 0.7);
+	margin:5px 0px;
+}
+.contentPresenter .control[role='cancel'] { display:none; }
+.contentPresenter .title {
+	font-size:12px;
+	border-bottom:1px solid rgba(166, 166, 166, 0.4);
+	background-color:rgba(166, 166, 166, 0.3);
+	padding:5px 10px;
+}
+.contentPresenter .presenter { margin:5px 0px; overflow:auto; }
+.contentPresenter .presenter > .uiFormHeader { padding-left:25px; }
+.contentPresenter .presenter > .group { overflow:auto; }
+.contentPresenter > .control {
+	float:right;
+	position:absolute;
+	top:3px;
+	right:3px;
+	z-index:5;
+	border:none;
+	box-shadow: none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	width:16px;
+	height:16px;
+	background-color:transparent;
+	
+	font-size:11px;
+	cursor:pointer;
+	margin:2px;
+}
+.contentPresenter .uiContentLabel {
+	float:left;
+	padding:3px 0px;
+	text-align:right;
+	margin-right:5px;
+	font-weight:bold;
+}
+.contentPresenter > .control.edit {
+	background-image:url(/Library/Media/images/icons/16x16/btn_edit.svg);
+}
+.contentPresenter > .control.cancel {
+	background-image:url(/Library/Media/images/icons/16x16/btn_cancel.svg);
+}
+.contentPresenter .editor { display:none; margin:5px 0px; }
+

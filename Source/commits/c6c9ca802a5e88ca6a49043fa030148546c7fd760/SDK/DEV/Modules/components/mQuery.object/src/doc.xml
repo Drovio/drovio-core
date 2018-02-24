@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\components">
+  <class name="mQuery" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396428476</datecreated>
+      <daterevised>1398865250</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module Query Manager</title>
+      <description>Manages the module's sql queries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="queriesRoot">
+          <description>The module's queries root.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The module vcs manager object.</description>
+        </prop>
+        <prop type="integer" name="moduleID">
+          <description>The module id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the view.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The module vcs manager object.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$queriesRoot" type="string" defaultvalue="">
+              <description>The query's root directory.</description>
+            </parameter>
+            <parameter name="$queryID" type="string" defaultvalue="">
+              <description>The query id.
+(Leave empty for new queries).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new query.</description>
+          <parameters>
+            <parameter name="$viewID" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The query title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The query description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the query's repository item and calls the parent function to update the sql object.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The query title.</description>
+            </parameter>
+            <parameter name="$query" type="string" defaultvalue="">
+              <description>The SQL plain query.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The query description.</description>
+            </parameter>
+            <parameter name="$attributes" type="array" defaultvalue="">
+              <description>An array of description for each attribute in the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getObjectFullPath" returntype="string">
+          <description>Implementation of the abstract function from the parent class.
+Returns the full path of the object inside the repository.</description>
+          <parameters/>
+          <returndescription>The object's full path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getItemID" returntype="string">
+          <description>Gets the query's vcs item id.</description>
+          <parameters/>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the query's directory name.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The query id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

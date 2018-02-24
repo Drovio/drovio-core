@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Version" namespace="\">
+  <class name="vcs" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>2</build>
+      <datecreated>1392198927</datecreated>
+      <daterevised>1420194041</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Version Control System</title>
+      <description>Manages version control for a given repository.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="VERSION">
+        <description>The current version.</description>
+      </const>
+      <const type="string" name="VCS_FOLDER">
+        <description>The inner version control folder.</description>
+      </const>
+      <const type="string" name="TRUNK_FOLDER">
+        <description>The trunk folder.</description>
+      </const>
+      <const type="string" name="BRANCHES_FOLDER">
+        <description>The branches folder.</description>
+      </const>
+      <const type="string" name="COMMITS_FOLDER">
+        <description>The commits folder.</description>
+      </const>
+      <const type="string" name="RELEASE_FOLDER">
+        <description>The release folder.</description>
+      </const>
+      <const type="string" name="HISTORY_FOLDER">
+        <description>The history release folder.</description>
+      </const>
+      <const type="string" name="CURRENT_VERSION_FOLDER">
+        <description>The current version release folder.</description>
+      </const>
+      <const type="string" name="MASTER_BRANCH">
+        <description>The initial master branch.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="dbc">
+          <description>The repository root folder.</description>
+        </prop>
+        <prop type="string" name="projectID">
+          <description>Defines whether the repository will include release or not.</description>
+        </prop>
+        <prop type="string" name="repository">
+          <description>The repository folder.</description>
+        </prop>
+        <prop type="array" name="items" static="true">
+          <description>All the project's items.</description>
+        </prop>
+        <prop type="array" name="authors" static="true">
+          <description>All the project's authors.</description>
+        </prop>
+        <prop type="array" name="branches" static="true">
+          <description>All the project's branches.</description>
+        </prop>
+        <prop type="array" name="releases" static="true">
+          <description>All the project's releases.</description>
+        </prop>
+        <prop type="string" name="workingBranch" static="true">
+          <description>Current working branch for author.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method. Initializes class' variables.</description>
+          <parameters>
+            <parameter name="$projectID" type="integer" defaultvalue="">
+              <description>The project id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createStructure" returntype="void">
+          <description>Creates the repository vcs structure.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createBranch" returntype="boolean">
+          <description>Creates a new branch to the repository.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The new branch name.</description>
+            </parameter>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent of the new branch.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if the branch already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createItem" returntype="mixed">
+          <description>Creates a new item in the repository.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The unique id of the item in the repository.</description>
+            </parameter>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The item's inner path in the repository.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The item's name with the extension.</description>
+            </parameter>
+            <parameter name="$smart" type="boolean" defaultvalue="">
+              <description>Whether the item is a smart object.</description>
+            </parameter>
+          </parameters>
+          <returndescription>False if an item exists with the same id, the item's trunk path otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteItem" returntype="boolean">
+          <description>Delete an item from the vcs db and repository.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item id to be deleted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateItem" returntype="mixed">
+          <description>Updates the item's info and sets the item to be included on the next commit.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id to update.</description>
+            </parameter>
+            <parameter name="$forceCommit" type="boolean" defaultvalue="">
+              <description>Defines whether this item will be forced to commit (it is used for newly created items).</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's trunk path or FALSE if the item id doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemTrunkPath" returntype="mixed">
+          <description>Gets the item's path to the trunk.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's trunk path or FALSE if the item id doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemBranchPath" returntype="mixed">
+          <description>Gets the item's path to the working branch.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's working branch path or FALSE if the item id doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemHeadPath" returntype="mixed">
+          <description>Get the item's path to the head branch.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's head branch path or FALSE if the item id doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="commit" returntype="boolean">
+          <description>Commits a given list of items.</description>
+          <parameters>
+            <parameter name="$summary" type="string" defaultvalue="">
+              <description>The commit summary.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The commit extended description.</description>
+            </parameter>
+            <parameter name="$commitItems" type="array" defaultvalue="">
+              <description>An array of this repository's item ids to include in the commit.
+These ids must match with the ids that the author's working index has.</description>
+            </parameter>
+            <parameter name="$tags" type="string" defaultvalue="">
+              <description>A list of tags for this commit in a string form.
+Tags are comma separated by.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure or if there are no items to commit.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="checkout" returntype="boolean">
+          <description>Sets the head of this repository to the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to checkout.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="release" returntype="mixed">
+          <description>Creates a release of this project, of the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to release.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version of the release.
+If must be valid version number ({major}.{minor}).</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The release title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The release description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The release folder or FALSE in case of an error.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="merge" returntype="boolean">
+          <description>Merges a given branch to another branch.</description>
+          <parameters>
+            <parameter name="$branch1" type="string" defaultvalue="">
+              <description>The branch to be merged.</description>
+            </parameter>
+            <parameter name="$branch2" type="string" defaultvalue="">
+              <description>The branch to be merged to.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="restore" returntype="boolean">
+          <description>Restore an item from a given commit id to the working branch trunk.</description>
+          <parameters>
+            <parameter name="$commitID" type="string" defaultvalue="">
+              <description>The commit id to load the item from.</description>
+            </parameter>
+            <parameter name="$itemID" type="string" defaultvalue="">
+              <description>The item id to restore.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHeadBranch" returntype="string">
+          <description>Gets the current head branch of this repository.</description>
+          <parameters/>
+          <returndescription>The branch name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setWorkingBranch" returntype="boolean">
+          <description>Sets the working branch for the current author.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch to set as working.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWorkingBranch" returntype="string">
+          <description>Gets the current author's working branch.</description>
+          <parameters/>
+          <returndescription>The branch name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInfo" returntype="array">
+          <description>Gets information about this repository.</description>
+          <parameters/>
+          <returndescription>Returns an array of information as follows:
+info['branches'] = the number of branches.
+info['commits'] = the total number of commits.
+info['releases'] = the total number of releases.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBranches" returntype="array">
+          <description>Gets all the branches of this repository.</description>
+          <parameters/>
+          <returndescription>An array of all branches by name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleases" returntype="array">
+          <description>Gets all the releases of this repository per branch.</description>
+          <parameters/>
+          <returndescription>An array of information as follows:
+releases['branchName'] =
+array['releaseID'] =
+[title] = The release title
+[version] = The release version
+[build] = The release version build
+[time] = The release time
+[description] = The release description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCurrentRelease" returntype="string">
+          <description>Gets the current release folder path for the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to get the release folder.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The path to the release folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBranchCommits" returntype="array">
+          <description>Gets all the commits of a given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The banch to get the commits from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of commits as follows:
+info[commitID] =
+[time] = "commit time"
+[parent] = "commit parent"
+[author] = "commit author"
+[description] = "commit description".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemCommits" returntype="array">
+          <description>Gets all the commits that the given item is part of.</description>
+          <parameters>
+            <parameter name="$itemID" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of commits as follows:
+info[commitID] =
+[time] = "commit time"
+[parent] = "commit parent"
+[author] = "commit author"
+[description] = "commit description".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCommitItems" returntype="array">
+          <description>Gets all item info that were included in the given commit id.</description>
+          <parameters>
+            <parameter name="$commitID" type="string" defaultvalue="">
+              <description>The commit id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of item information as follows:
+item['itemID'] =
+info['path'] = "The item's path"
+info['name'] = "The item's name"
+info['folder'] = "Whether the item is object as folder [T/F]".</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getWorkingItems" returntype="array">
+          <description>Get the current working items.</description>
+          <parameters/>
+          <returndescription>An array of items as follows:
+item[itemID][path]
+item[itemID][force].</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAuthors" returntype="array">
+          <description>Get all the project accounts and all the active authors (accounts with commits).</description>
+          <parameters/>
+          <returndescription>An array of id=&amp;gt;authorName.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getItemPath" returntype="string">
+          <description>Gets the item's inner path.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item id.</description>
+            </parameter>
+            <parameter name="$branch" type="string" defaultvalue="">
+              <description>The parent branch of the item.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item's inner path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemInfo" returntype="array">
+          <description>Gets the given item's information.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The item's id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns an array of information as follows:
+info['path'] = The item's path.
+info['name'] = The item's name (including the extension).
+info['folder'] = Whether the item is an object folder [T/F].</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCommitFolder" returntype="string">
+          <description>Gets the commit folder of the repository.</description>
+          <parameters>
+            <parameter name="$commitID" type="string" defaultvalue="">
+              <description>The commit id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The commit's folder.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setLastCommit" returntype="boolean">
+          <description>Sets the last commit of the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name.</description>
+            </parameter>
+            <parameter name="$commitID" type="string" defaultvalue="">
+              <description>The last commit id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false if the branch doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLastCommit" returntype="string">
+          <description>Gets the last commit id of the given branch.</description>
+          <parameters>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The commit id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateVersion" returntype="boolean">
+          <description>Validates a given version.
+It must be bigger than 0.0</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The version string.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAuthorID" returntype="string">
+          <description>Gets the current author's id.</description>
+          <parameters/>
+          <returndescription>The author id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFolderStructure" returntype="void">
+          <description>Creates all the structure folders of this repository.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createIndexStructure" returntype="void">
+          <description>Creates all the index files of this repository.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

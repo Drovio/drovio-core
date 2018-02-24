@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Profile" namespace="\">
+  <class name="branch" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1417611700</datecreated>
+      <daterevised>1441182360</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company Branch Manager</title>
+      <description>Creates and updates branches.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="branchID">
+          <description>The company branch id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback retail database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company branch.</description>
+          <parameters>
+            <parameter name="$branchID" type="integer" defaultvalue="">
+              <description>The branch id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new company branch.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The branch title.</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The branch address.
+It could include a full address with postal code, city and country.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Update branch information.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The new branch title.</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The new branch address.
+It could include a full address with postal code, city and country.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove a branch from the database.
+It should be empty of products or other references.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getBranchID" returntype="string">
+          <description>Get the current company branch id.</description>
+          <parameters/>
+          <returndescription>The current branch id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

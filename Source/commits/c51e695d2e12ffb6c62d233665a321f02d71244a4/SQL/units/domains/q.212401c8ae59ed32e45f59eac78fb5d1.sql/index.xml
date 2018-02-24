@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="758802961"><title>Get Domain Info</title><description>Get a system domain by description</description><access>1</access><attributes><attr id="name"></attr></attributes></query>

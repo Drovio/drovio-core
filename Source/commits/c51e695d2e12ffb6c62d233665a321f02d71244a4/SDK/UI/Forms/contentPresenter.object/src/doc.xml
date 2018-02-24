@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="contentPresenter" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1367315354</datecreated>
+      <daterevised>1367315354</daterevised>
+      <extends/>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Forms\templates\contentPresenter instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="" name="form_builder">
+          <description/>
+        </prop>
+        <prop type="" name="holder_div">
+          <description/>
+        </prop>
+        <prop type="" name="presenter_div">
+          <description/>
+        </prop>
+        <prop type="" name="form_div">
+          <description/>
+        </prop>
+        <prop type="" name="form">
+          <description/>
+        </prop>
+        <prop type="" name="editable">
+          <description/>
+        </prop>
+        <prop type="" name="id">
+          <description/>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$builder" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$action" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$editable" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_full_presenter" returntype="void">
+          <description/>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="insert_content" returntype="void">
+          <description>Insert simple content (text etc.)</description>
+          <parameters>
+            <parameter name="$tag" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$autofocus" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hidden" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_resource" returntype="void">
+          <description>Insert resource content (radio | checkbox | resource[select] etc.)</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$resource" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$required" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hidden" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$multi" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_header" returntype="void">
+          <description>Inserts a header into the form</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_present_group" returntype="void">
+          <description>Returns data group for the presenter</description>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$value" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$hidden" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="get_content_label" returntype="void">
+          <description>Creates a label to show the content of the data</description>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

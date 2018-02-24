@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Analytics" namespace="\">
+  <class name="analyzer" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1407863371</datecreated>
+      <daterevised>1424113723</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Analytics Class - Analyzer</title>
+      <description>Class to store, load and analyze object visits and loads</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="projectID">
+          <description>The project id</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The Constructor Method</description>
+          <parameters>
+            <parameter name="$projectID" type="string" defaultvalue="">
+              <description>The project id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="log" returntype="void">
+          <description>Log a request</description>
+          <parameters>
+            <parameter name="$page" type="string" defaultvalue="">
+              <description>The page url that is requested, can be given as parameter, otherwise it will be taken from the $_SERVER</description>
+            </parameter>
+            <parameter name="$context" type="string" defaultvalue="">
+              <description>The current contexts that is loaded e.g moduleID, appView, extenssionView</description>
+            </parameter>
+            <parameter name="$extras" type="string" defaultvalue="">
+              <description>Extra paremeters to log</description>
+            </parameter>
+            <parameter name="$origin" type="string" defaultvalue="">
+              <description>The requesters' origin page (http referrer)</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

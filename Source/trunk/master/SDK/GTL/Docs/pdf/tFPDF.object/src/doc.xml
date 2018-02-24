@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="GTL" package="Docs" namespace="\pdf">
+  <class name="tFPDF" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>2</build>
+      <datecreated>1443384556</datecreated>
+      <daterevised>1443386155</daterevised>
+      <extends/>
+      <implements/>
+      <throws>
+        <exception>Exception</exception>
+      </throws>
+      <title>PDF Generator with php</title>
+      <description>This class is a modified version of FPDF that adds UTF-8 support.
+Moreover, it embeds only the necessary parts of the fonts that are used in the document, making the file size much smaller than if the whole fonts were embedded.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="VERSION">
+        <description>The class version.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="boolean" name="unifontSubset">
+          <description>The unifont subset indicator.</description>
+        </prop>
+        <prop type="integer" name="page">
+          <description>current page number</description>
+        </prop>
+        <prop type="integer" name="n">
+          <description>current object number</description>
+        </prop>
+        <prop type="array" name="offsets">
+          <description>array of object offsets</description>
+        </prop>
+        <prop type="object" name="buffer">
+          <description>buffer holding in-memory PDF</description>
+        </prop>
+        <prop type="array" name="pages">
+          <description>array containing pages</description>
+        </prop>
+        <prop type="string" name="state">
+          <description>current document state</description>
+        </prop>
+        <prop type="boolean" name="compress">
+          <description>compression flag</description>
+        </prop>
+        <prop type="integer" name="k">
+          <description>scale factor (number of points in user unit)</description>
+        </prop>
+        <prop type="string" name="DefOrientation">
+          <description>default orientation</description>
+        </prop>
+        <prop type="string" name="CurOrientation">
+          <description>current orientation</description>
+        </prop>
+        <prop type="array" name="StdPageSizes">
+          <description>standard page sizes</description>
+        </prop>
+        <prop type="string" name="DefPageSize">
+          <description>default page size</description>
+        </prop>
+        <prop type="string" name="CurPageSize">
+          <description>current page size</description>
+        </prop>
+        <prop type="array" name="PageSizes">
+          <description>used for pages with non default sizes or orientations</description>
+        </prop>
+        <prop type="float" name="wPt">
+          <description>width of current page in points</description>
+        </prop>
+        <prop type="float" name="hPt">
+          <description>height of current page in points</description>
+        </prop>
+        <prop type="float" name="w">
+          <description>width of current page in user unit</description>
+        </prop>
+        <prop type="float" name="h">
+          <description>height of current page in user unit</description>
+        </prop>
+        <prop type="integer" name="lMargin">
+          <description>left margin</description>
+        </prop>
+        <prop type="integer" name="tMargin">
+          <description>top margin</description>
+        </prop>
+        <prop type="integer" name="rMargin">
+          <description>right margin</description>
+        </prop>
+        <prop type="integer" name="bMargin">
+          <description>page break margin</description>
+        </prop>
+        <prop type="integer" name="cMargin">
+          <description>cell margin</description>
+        </prop>
+        <prop type="integer" name="x">
+          <description>current x position in user unit</description>
+        </prop>
+        <prop type="integer" name="y">
+          <description>current y position in user unit</description>
+        </prop>
+        <prop type="integer" name="lasth">
+          <description>height of last printed cell</description>
+        </prop>
+        <prop type="integer" name="LineWidth">
+          <description>line width in user unit</description>
+        </prop>
+        <prop type="string" name="fontpath">
+          <description>path containing fonts</description>
+        </prop>
+        <prop type="array" name="CoreFonts">
+          <description>array of core font names</description>
+        </prop>
+        <prop type="array" name="fonts">
+          <description>array of used fonts</description>
+        </prop>
+        <prop type="array" name="FontFiles">
+          <description>array of font files</description>
+        </prop>
+        <prop type="array" name="diffs">
+          <description>array of encoding differences</description>
+        </prop>
+        <prop type="string" name="FontFamily">
+          <description>current font family</description>
+        </prop>
+        <prop type="string" name="FontStyle">
+          <description>current font style</description>
+        </prop>
+        <prop type="boolean" name="underline">
+          <description>underlining flag</description>
+        </prop>
+        <prop type="string" name="CurrentFont">
+          <description>current font info</description>
+        </prop>
+        <prop type="float" name="FontSizePt">
+          <description>current font size in points</description>
+        </prop>
+        <prop type="float" name="FontSize">
+          <description>current font size in user unit</description>
+        </prop>
+        <prop type="string" name="DrawColor">
+          <description>commands for drawing color</description>
+        </prop>
+        <prop type="string" name="FillColor">
+          <description>commands for filling color</description>
+        </prop>
+        <prop type="string" name="TextColor">
+          <description>commands for text color</description>
+        </prop>
+        <prop type="boolean" name="ColorFlag">
+          <description>indicates whether fill and text colors are different</description>
+        </prop>
+        <prop type="float" name="ws">
+          <description>word spacing</description>
+        </prop>
+        <prop type="array" name="images">
+          <description>array of used images</description>
+        </prop>
+        <prop type="array" name="PageLinks">
+          <description>array of links in pages</description>
+        </prop>
+        <prop type="array" name="links">
+          <description>array of internal links</description>
+        </prop>
+        <prop type="boolean" name="AutoPageBreak">
+          <description>automatic page breaking</description>
+        </prop>
+        <prop type="integer" name="PageBreakTrigger">
+          <description>threshold used to trigger page breaks</description>
+        </prop>
+        <prop type="boolean" name="InHeader">
+          <description>flag set when processing header</description>
+        </prop>
+        <prop type="boolean" name="InFooter">
+          <description>flag set when processing footer</description>
+        </prop>
+        <prop type="string" name="ZoomMode">
+          <description>zoom display mode</description>
+        </prop>
+        <prop type="string" name="LayoutMode">
+          <description>layout display mode</description>
+        </prop>
+        <prop type="string" name="title">
+          <description>title</description>
+        </prop>
+        <prop type="string" name="subject">
+          <description>subject</description>
+        </prop>
+        <prop type="string" name="author">
+          <description>author</description>
+        </prop>
+        <prop type="string" name="keywords">
+          <description>keywords</description>
+        </prop>
+        <prop type="string" name="creator">
+          <description>creator</description>
+        </prop>
+        <prop type="integer" name="AliasNbPages">
+          <description>alias for total number of pages</description>
+        </prop>
+        <prop type="float" name="PDFVersion">
+          <description>PDF version number</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$unit" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetMargins" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$left" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$top" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$right" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetLeftMargin" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$margin" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetTopMargin" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$margin" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetRightMargin" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$margin" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetAutoPageBreak" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$auto" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$margin" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetDisplayMode" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$zoom" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$layout" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetCompression" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$compress" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetTitle" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$title" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$isUTF8" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetSubject" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$subject" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$isUTF8" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetAuthor" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$author" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$isUTF8" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetKeywords" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$keywords" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$isUTF8" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetCreator" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$creator" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$isUTF8" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AliasNbPages" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$alias" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Error" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$msg" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Open" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Close" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddPage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="PageNo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetDrawColor" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$r" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$g" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$b" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetFillColor" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$r" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$g" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$b" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetTextColor" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$r" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$g" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$b" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="GetStringWidth" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetLineWidth" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$width" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Line" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x1" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y1" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$x2" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y2" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Rect" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$w" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$style" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddFont" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$family" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$style" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$uni" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetFont" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$family" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$style" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetFontSize" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AddLink" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetLink" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$link" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$page" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Link" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$w" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$link" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Text" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$txt" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="AcceptPageBreak" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Cell" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$w" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$txt" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$border" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$ln" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$align" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$fill" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$link" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="MultiCell" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$w" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$txt" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$border" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$align" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$fill" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Write" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$txt" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$link" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Ln" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Image" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$w" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$h" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$link" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="GetX" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetX" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="GetY" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetY" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="SetXY" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="Output" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$dest" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="_dochecks" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_getfontpath" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_checkoutput" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_getpagesize" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_beginpage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$orientation" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$size" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_endpage" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_loadfont" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$font" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_escape" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_textstring" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_UTF8toUTF16" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_dounderline" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$x" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$y" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$txt" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_parsejpg" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_parsepng" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_parsepngstream" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$f" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_readstream" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$f" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$n" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_readint" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$f" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_parsegif" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$file" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_newobj" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putstream" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_out" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$s" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putpages" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putfonts" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putTTfontwidths" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$font" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$maxUni" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putimages" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putimage" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$info" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putxobjectdict" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putresourcedict" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putresources" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putinfo" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putcatalog" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_putheader" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_puttrailer" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="_enddoc" returntype="void">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="UTF8ToUTF16BE" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$str" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$setbom" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="UTF8StringToArray" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$str" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

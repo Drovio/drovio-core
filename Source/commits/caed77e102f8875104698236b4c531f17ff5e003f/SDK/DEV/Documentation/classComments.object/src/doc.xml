@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Documentation" namespace="\">
+  <class name="classComments" abstract="">
+    <info>
+      <version/>
+      <datecreated>1404469713</datecreated>
+      <daterevised>1404469713</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Documentation class that handles the code commenting and parsing</title>
+      <description>This class is responsible to comment the code based on a given documentation xml and parse documentation info from the code to construct that xml</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="ml_comment_start" static="true">
+          <description>Multi line comment prefix.</description>
+        </prop>
+        <prop type="string" name="ml_comment_end" static="true">
+          <description>Multi line comment endfix.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="stripSourceCode" returntype="string" static="true">
+          <description>Strips specific comments from the code</description>
+          <parameters>
+            <parameter name="$sourceCode" type="string" defaultvalue="">
+              <description>The code from which to strip comments</description>
+            </parameter>
+          </parameters>
+          <returndescription>The stripped source code</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="pretifySourceCode" returntype="string" static="true">
+          <description>Position comment blocks in specific spots in the given code</description>
+          <parameters>
+            <parameter name="$sourceCode" type="string" defaultvalue="">
+              <description>The code to comment</description>
+            </parameter>
+            <parameter name="$manual" type="string" defaultvalue="">
+              <description>The code's manual from which the comment blocks will be created.</description>
+            </parameter>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>Code class' library</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>Code class' package</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>Code class' namespace</description>
+            </parameter>
+          </parameters>
+          <returndescription>The pretified source code</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="documentationComment" returntype="string" static="true">
+          <description>Creates a documentation comment block</description>
+          <parameters>
+            <parameter name="$content" type="string" defaultvalue="">
+              <description>Content of the block</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment block</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDescriptionLine" returntype="string">
+          <description>Creates and returns a line for a comment block</description>
+          <parameters>
+            <parameter name="$values" type="mixed" defaultvalue="">
+              <description>Values to present in the line</description>
+            </parameter>
+            <parameter name="$tag" type="string" defaultvalue="">
+              <description>Tag name of the line</description>
+            </parameter>
+            <parameter name="$tabs" type="integer" defaultvalue="">
+              <description>Number of tabs between tag and values</description>
+            </parameter>
+          </parameters>
+          <returndescription>The created line</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getClassStampComments" returntype="string">
+          <description>Creates and returns a comment block that holds the objects generic info, such as library, namespace, etc</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>This value is presented as the object's library</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>This value is presented as the object's package</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>This value is presented as the object's namespace</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment block</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getClassInfoComments" returntype="string">
+          <description>Creates and returns a comment block that holds the objects class info, such as description, version, etc</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>This value is presented as the object's title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>This value is presented as the object's description</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>This value is presented as the object's version</description>
+            </parameter>
+            <parameter name="$created" type="mixed" defaultvalue="">
+              <description>This value is presented as the object's creation date. Should be an integer or string timestamp</description>
+            </parameter>
+            <parameter name="$revised" type="mixed" defaultvalue="">
+              <description>This value is presented as the object's last modification date. Should be an integer or string unformated timestamp</description>
+            </parameter>
+            <parameter name="$throws" type="string" defaultvalue="">
+              <description>The exceptions thrown in the class. Should be a comma separated string.</description>
+            </parameter>
+            <parameter name="$deprecated" type="string" defaultvalue="">
+              <description>This value is presented as the object's deprecation description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment block</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPropertyComments" returntype="string">
+          <description>Creates and returns a comment block that holds a class' property info, namely description and type.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>This value is presented as the property's description.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>This value is presented as the property's type.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment block</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMethodComments" returntype="string">
+          <description>Creates and returns a comment block that holds an objects method info, such as description, return value, etc</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>This value is presented as the method's description.</description>
+            </parameter>
+            <parameter name="$args" type="array" defaultvalue="">
+              <description>Holds the method parameters' info. Should have the following keys: 'type', 'name', 'description'.</description>
+            </parameter>
+            <parameter name="$return" type="string" defaultvalue="">
+              <description>This value is presented as the method's return type.</description>
+            </parameter>
+            <parameter name="$returnDesc" type="string" defaultvalue="">
+              <description>The description of the returning value, if not void</description>
+            </parameter>
+            <parameter name="$throws" type="string" defaultvalue="">
+              <description>The exceptions thrown by the method. Should be a comma separated string</description>
+            </parameter>
+            <parameter name="$deprecated" type="string" defaultvalue="">
+              <description>This value is presented as the method's deprecation description.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The comment block</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

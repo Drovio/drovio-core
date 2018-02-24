@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\reports">
+  <class name="HTMLServerReport" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1406663113</datecreated>
+      <daterevised>1406709183</daterevised>
+      <extends>
+        <object>\ESS\Protocol\reports\JSONServerReport</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>HTML Server Report</title>
+      <description>Creates an asynchronous server report in HTML format according to user request.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="REPLACE_METHOD">
+        <description>The replace method identifier.</description>
+      </const>
+      <const type="string" name="APPEND_METHOD">
+        <description>The append method identifier.</description>
+      </const>
+      <const type="string" name="CONTENT_DATA">
+        <description>The content "data" type.</description>
+      </const>
+      <const type="string" name="CONTENT_ACTION">
+        <description>The content "action" type.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="get" returntype="string" static="true">
+          <description>Returns the server report</description>
+          <parameters/>
+          <returndescription>The html server report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addContent" returntype="void" static="true">
+          <description>Adds a content report to the report stack.</description>
+          <parameters>
+            <parameter name="$content" type="DOMElement" defaultvalue="">
+              <description>The body of the report content.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The content's type.
+See class constants.
+It is CONTENT_DATA by default.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder where the content will be inserted in the DOM.
+It's a CSS selector.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>Defines whether the content will replace the existing or will be appended.
+See class constants.
+It is REPLACE_METHOD by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getReport" returntype="string" static="true">
+          <description>Builds the entire report with the head and the body and returns the html generated.</description>
+          <parameters/>
+          <returndescription>The generated html server report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReportContent" returntype="array" static="true">
+          <description>Creates a report content as a DOMElement inside the report.</description>
+          <parameters>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The content's type.
+See class constants.
+It is CONTENT_DATA by default.</description>
+            </parameter>
+            <parameter name="$context" type="DOMElement" defaultvalue="">
+              <description>The report context.</description>
+            </parameter>
+            <parameter name="$holder" type="string" defaultvalue="">
+              <description>The holder where the content will be inserted in the DOM.
+It's a CSS selector.
+Empty by default.</description>
+            </parameter>
+            <parameter name="$method" type="string" defaultvalue="">
+              <description>Defines whether the content will replace the existing or will be appended.
+See class constants.
+It is REPLACE_METHOD by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The report content array for the server report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="setModuleResource" returntype="void" static="true">
+          <description>Adds a header to the report indicating the module being loaded.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

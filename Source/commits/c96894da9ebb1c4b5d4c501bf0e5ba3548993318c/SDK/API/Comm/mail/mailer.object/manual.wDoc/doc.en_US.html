@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Platform mailer</h1>
+<p>This class uses a php mailer and provides access to an interface for sending mail. Read the examples for a simple guide through.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \API\Comm\mail\mailer;
+
+// Create a mailer instance
+$mailer = new mailer();
+
+// Initialize options (this example is for a custom mailing system)
+
+// Call initialize function to initialize
+$this-&gt;initialize();
+
+// Create options array
+$options = array();
+
+// Load Common Domain / Server Configuration
+$options['Hostname'] = 'mail.example.com';
+
+// Load Crendetials
+$domain = "example.com";
+$options['SMTPUsername'] = "username@example.com";
+$options['SMTPPassword'] = "this_should_be_your_account_password";
+
+// Load options in send mode
+// PROPERTIES FOR SMTP
+//Requireed - Stop Script
+//Optional - Set Defaults
+$options['SMTPHost'] = 'mail.example.com';
+$options['SMTPPort'] = 25;
+//$optionSetArray['SMTPSecure']= '';
+$options['SMTPAuth'] = true;
+$options['SMTPAuthType'] = 'LOGIN';
+//$commonOptioset['SMTPRealm']= '';
+//$commonOptioset['SMTPWorkstation']= '';
+//$commonOptioset['SMTPTimeout']= 10;
+
+// Load Additional Mail Configuration Options
+$options['ContentType'] = 'text/plain';
+$options['Encoding']= '8bit';
+$options['WordWrap'] = 0;
+//$optionSetArray['ReturnPath'] = '';
+//$optionSetArray['ConfirmReadingTo']= '';	
+
+// Set mail options
+$this-&gt;options($options);	
+
+		
+// Prepare to send mail
+
+// Set mail subject
+$mailer-&gt;subject($subject = "Mail Subject");
+
+// Set HTML message
+$mailer-&gt;MsgHTML($messageHTML = "HTML Message for mail");
+
+// Add recipients
+$mailer-&gt;AddAddress($mail = "recipient@mail.com", $name = "Recipient name");
+
+
+// Send mail
+$sender = array();
+$sender["no-reply@example.com"] = 'Example NoReply';
+return $mailer-&gt;send($subject, $sender);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 30 August, 2015 [en_US]</p></div>
+</div></body></html>

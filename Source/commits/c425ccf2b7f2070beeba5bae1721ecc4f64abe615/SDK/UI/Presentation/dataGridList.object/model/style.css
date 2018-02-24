@@ -1,0 +1,116 @@
+.uiDataGridList {
+	height: inherit;
+	max-height: inherit;
+	border: 1px solid rgb(166, 166, 166);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.gridList {
+	list-style: none;
+	padding: 0px;
+	margin:0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	height: inherit;
+	max-height: inherit;
+}
+
+.gridList textarea {
+	resize:none;
+}
+
+.gridList .dataGridHeader {
+	cursor: pointer;
+	position: absolute;
+	height: 24px;
+	z-index: 1;
+	width:100%;
+	border-bottom: 1px solid rgb(166, 166, 166);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background: #e3e3e3;
+	background: linear-gradient(#f9f9f9, #e9e9e9);
+	background: -webkit-linear-gradient(#f9f9f9, #e9e9e9);
+	background: -moz-linear-gradient(#f9f9f9, #e9e9e9);
+}
+.gridList .dataGridHeader .dataGridCell .dataGridTextWrapper {
+	line-height: 22px;
+}
+.gridList .dataGridHeader .dataGridCell:hover {
+	cursor:pointer;
+}
+.gridList .dataGridHeader .dataGridCell:hover .sortingIcon {
+	visibility:visible;
+}
+
+.gridList .dataGridHeader .dataGridCell .sortingIcon {
+	visibility:hidden;
+	display:inline-block;
+	width:8px;
+	height:8px;
+	margin-left:5px;
+	background:url('%resources%/icons/custom/list_arrow.svg') no-repeat center;
+	background-position: cover;
+}
+.gridList .dataGridHeader .dataGridCell.selected:not(.ascending) .sortingIcon {
+	visibility:visible;
+	-webkit-transition: -webkit-transform 500ms;
+	-webkit-transform: rotate(-90deg);
+}
+.gridList .dataGridHeader .dataGridCell.selected.ascending .sortingIcon {
+	visibility:visible;
+	-webkit-transition: -webkit-transform 500ms;
+	-webkit-transform: rotate(90deg);
+}
+
+.gridList .dataGridContentWrapper {
+	position:relative;
+	overflow: auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: inherit;
+	max-height: inherit;
+	padding-top: 24px;
+}
+
+.gridList .dataGridRow:nth-child(even) {
+	background-color: rgba(166, 166, 166, 0.1);
+}
+
+.uiDataGridList.checkable .gridList .dataGridRow:hover {
+	background-color: rgba(166, 166, 166, 0.2);
+}
+
+.uiDataGridList.checkable .gridList .dataGridRow.selected {
+	background-color: rgba(166, 166, 166, 0.5);
+}
+
+.gridList .dataGridRow {
+	position:relative;
+}
+
+.gridList .dataGridCell, .gridList .dataGridCheck {
+	display: inline-block;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+	vertical-align: middle;
+	padding: 0px 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.gridList .dataGridCheck {
+	width:8%;
+}
+.gridList .dataGridCell .dataGridTextWrapper {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 18px;
+	display: inline-block;
+	width: 100%;
+}

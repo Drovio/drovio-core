@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BT" package="Comm" namespace="\">
+  <class name="dbConnection" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1420447171</datecreated>
+      <daterevised>1420447171</daterevised>
+      <extends>
+        <object>\API\Comm\database\dbConnection</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Redback Issues Database Connection handler</title>
+      <description>Connects to Redback's issue tracker database and executes all the red sql queries.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="settingsManager" name="settings" static="true">
+          <description>The database server settings manager object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the redback's issues database connector.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="execute" returntype="mixed">
+          <description>Executes a red sql query (dbQuery) to the redback issues database.</description>
+          <parameters>
+            <parameter name="$dbQuery" type="dbQuery" defaultvalue="">
+              <description>The query to be executed.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>A number of attributes to be passed as arguments to the query.
+It is an associative array to respond to the sql parameters.</description>
+            </parameter>
+          </parameters>
+          <returndescription>For successful SELECT, SHOW, DESCRIBE or EXPLAIN queries mysqli_query() will return a mysqli_result object.
+For other successful queries mysqli_query() will return TRUE.
+Returns FALSE on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getServerSettings" returntype="settingsManager">
+          <description>Gets the server credentials handler.</description>
+          <parameters/>
+          <returndescription>The settingsManager object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

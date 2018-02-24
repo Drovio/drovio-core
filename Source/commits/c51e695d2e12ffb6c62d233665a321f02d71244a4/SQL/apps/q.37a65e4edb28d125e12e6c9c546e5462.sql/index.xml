@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1622380717"><title>Get author's application by id</title><description>Get2</description><access>1</access><attributes><attr id="appID"></attr><attr id="accountID"></attr></attributes></query>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies><use path="\Exception"></use><use path="\API\Platform\importer"></use><use path="\DEV\Core\sql\sqlDomain"></use><use path="\DEV\Core\sdk\sdkLibrary"></use><use path="\DEV\Core\ajax\ajaxDirectory"></use><use path="\UI\Layout\layoutManager"></use><use path="\DEV\Projects\project"></use></dependencies>

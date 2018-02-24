@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="userConnectControls" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1369310465</datecreated>
+      <daterevised>1369310465</daterevised>
+      <extends/>
+      <implements/>
+      <title/>
+      <description>Use
+</description>
+      <deprecated>This class is deprecated and the object is no longer needed. It is transferred to a module.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method static="true" name="get" returntype="void">
+          <description>Create and return the control</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\ui">
+  <class name="logViewer" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1410183674</datecreated>
+      <daterevised>1416569448</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>System's log record viewer.</title>
+      <description>This is a ui element for viewing all the system's logs.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="POOL">
+        <description>The ui control's class for landing the log data.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="logViewer">
+          <description>Builds a toggler containing all the logs.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The log viewer element id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The logViewer element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLogs" returntype="DOMElement" static="true">
+          <description>Creates a toggler containing all the logs.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The toggler id.</description>
+            </parameter>
+            <parameter name="$head" type="string" defaultvalue="">
+              <description>The toggler head.</description>
+            </parameter>
+          </parameters>
+          <returndescription>A toggler element.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildControls" returntype="void">
+          <description>Builds the ui logger controls.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFilterBox" returntype="DOMElement">
+          <description>Creates a checkbox filter box.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The checkbox title.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The checkbox name.</description>
+            </parameter>
+            <parameter name="$checked" type="boolean" defaultvalue="">
+              <description>Sets the checkbox checked.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The filterbox DOMElement.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="traceToDom" returntype="DOMElement" static="true">
+          <description>Creates a DOMElement from a given backtrace.</description>
+          <parameters>
+            <parameter name="$trace" type="array" defaultvalue="">
+              <description>The debug backtrace.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The backtrace DOMElement for the logViewer.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

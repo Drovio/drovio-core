@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="status" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392113057</datecreated>
+      <daterevised>1392113057</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Platform status handler</title>
+      <description>Sets and gets the platform status data.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="STATUS_FILE">
+        <description>The status resource index file.</description>
+      </const>
+      <const type="string" name="PROJECT_DEPLOY">
+        <description>The project deploy type attribute name.</description>
+      </const>
+      <const type="string" name="PROJECT_PUBLISH">
+        <description>The project publish type attribute name.</description>
+      </const>
+      <const type="string" name="STATUS_OK">
+        <description>The platform status code for healthy platform.</description>
+      </const>
+      <const type="string" name="STATUS_ERROR">
+        <description>The platform status code for platform with errors.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the platform status parser.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateProject" returntype="boolean">
+          <description>Updates a project's version.</description>
+          <parameters>
+            <parameter name="$projectName" type="string" defaultvalue="">
+              <description>The project's name.</description>
+            </parameter>
+            <parameter name="$projectVersion" type="string" defaultvalue="">
+              <description>The project version to declare.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The project version type.
+Use status constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProjects" returntype="array">
+          <description>Get all project versions.</description>
+          <parameters/>
+          <returndescription>An array of project versions by project name and version type.
+[projectName][deploy] = "2.0.0";
+[projectName][publish] = "1.0.0";</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setStatus" returntype="boolean">
+          <description>Sets a specific platform status given a status code (class constant) and status description.</description>
+          <parameters>
+            <parameter name="$statusValue" type="string" defaultvalue="">
+              <description>The status description.</description>
+            </parameter>
+            <parameter name="$statusCode" type="string" defaultvalue="">
+              <description>The status code.
+Use class constants.
+Otherwise it will be considered non valid and will return false.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getStatus" returntype="array">
+          <description>Gets the platform status with code and description.</description>
+          <parameters/>
+          <returndescription>An array of one element, code =&amp;gt; description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createFile" returntype="boolean">
+          <description>Creates the status index file.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

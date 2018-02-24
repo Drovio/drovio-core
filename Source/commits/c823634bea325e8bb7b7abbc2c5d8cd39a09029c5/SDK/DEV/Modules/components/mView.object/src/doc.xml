@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Modules" namespace="\components">
+  <class name="mView" abstract="">
+    <info>
+      <version>2.0</version>
+      <build>2</build>
+      <datecreated>1396427726</datecreated>
+      <daterevised>1430123340</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Module View Controller</title>
+      <description>Manages a module view</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="id">
+          <description>The view id.</description>
+        </prop>
+        <prop type="string" name="viewsRoot">
+          <description>The module's views root.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The module vcs manager object.</description>
+        </prop>
+        <prop type="integer" name="moduleID">
+          <description>The module id.</description>
+        </prop>
+        <prop type="array" name="dependencies">
+          <description>The array of dependencies.</description>
+        </prop>
+        <prop type="array" name="innerModules">
+          <description>The array of inner modules.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initializes the view.</description>
+          <parameters>
+            <parameter name="$vcs" type="vcs" defaultvalue="">
+              <description>The module vcs manager object.</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewsRoot" type="string" defaultvalue="">
+              <description>The view's root directory.</description>
+            </parameter>
+            <parameter name="$viewID" type="string" defaultvalue="">
+              <description>The view id.
+(Leave empty for new views).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new view.</description>
+          <parameters>
+            <parameter name="$viewID" type="string" defaultvalue="">
+              <description>The view id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean">
+          <description>Update the view's information (including dependencies and inner modules).</description>
+          <parameters>
+            <parameter name="$dependencies" type="array" defaultvalue="">
+              <description>An array of dependencies.
+It has as a key the [Library,Object] value.</description>
+            </parameter>
+            <parameter name="$innerModules" type="array" defaultvalue="">
+              <description>An array of inner modules.
+The key is the module id, the value is either the friendlyName of the module or 'off' in case of deletion.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDependencies" returntype="array">
+          <description>Gets the view dependencies.</description>
+          <parameters/>
+          <returndescription>An array by library for each package and object (if any)</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getInnerModules" returntype="array">
+          <description>Gets the view inner modules</description>
+          <parameters/>
+          <returndescription>An array of inner modules, the name as id and the content as the module id reference.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getHTML" returntype="string">
+          <description>Gets the view's html code.</description>
+          <parameters/>
+          <returndescription>The html code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getCSS" returntype="string">
+          <description>Gets the view's css code.</description>
+          <parameters>
+            <parameter name="$normalCss" type="boolean" defaultvalue="">
+              <description>If true, return the parsed css code, else it returns the initial scss.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The css code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateView" returntype="boolean">
+          <description>Updates the view's html and css.</description>
+          <parameters>
+            <parameter name="$html" type="string" defaultvalue="">
+              <description>The view html.</description>
+            </parameter>
+            <parameter name="$scss" type="string" defaultvalue="">
+              <description>The view css in scss format.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPHPCode" returntype="string">
+          <description>Gets the view's php code.</description>
+          <parameters/>
+          <returndescription>The php code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="run" returntype="mixed">
+          <description>Runs the view from the trunk.</description>
+          <parameters/>
+          <returndescription>The view result.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updatePHPCode" returntype="boolean">
+          <description>Updates the view's php code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The php code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSingleDependencies" returntype="void">
+          <description>Get all dependencies from the object given the dependencies' file.</description>
+          <parameters>
+            <parameter name="$depFile" type="string" defaultvalue="">
+              <description>The dependencies' xml file.
+You can load the trunk's file or the release's file.</description>
+            </parameter>
+            <parameter name="$rootRelative" type="boolean" defaultvalue="">
+              <description>Whether the given path is root relative or not.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all dependencies including the use 'path' and use 'alias'.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validateSingleDependencies" returntype="mixed">
+          <description>Validate module view dependencies comparing the uses with the imports.</description>
+          <parameters/>
+          <returndescription>TRUE if everything is OK.
+An array of missing dependencies if there are missing dependencies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getMetrics" returntype="void" static="true">
+          <description>Get all source code's metrics data for the given object.</description>
+          <parameters>
+            <parameter name="$metFile" type="string" defaultvalue="">
+              <description>The metrics' xml file.
+You can load the trunk's file or the release's file.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all metrics data. Including:
+LOC
+CLOC
+SLOC-P
+NOF
+LOC-PF.
+For more information on explanation, see the DEV\Tools\phpParser.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getJSCode" returntype="string">
+          <description>Gets the view's js code.</description>
+          <parameters/>
+          <returndescription>The js code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateJSCode" returntype="boolean">
+          <description>Updates the view's code.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The js code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Removes the view from the vcs repository.
+Use the module class to remove the view instead, to remove from the index.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="setInnerModules" returntype="void">
+          <description>Sets the inner modules for this view.
+Modules that are marked for deletion have a value of "off".
+The rest are formed from their arrays, respectively, which in turn are then unset.</description>
+          <parameters>
+            <parameter name="$inner" type="array" defaultvalue="">
+              <description>The array of inner modules given by key and value.
+As key it's the module id and the value will be either "off" for module deletion or a friendly name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDependencies" returntype="void">
+          <description>Sets the dependencies as a normalized dependency array.</description>
+          <parameters>
+            <parameter name="$dependencies" type="array" defaultvalue="">
+              <description>The array of dependencies.
+It's an empty array with keys in the [library, object] form.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadInfo" returntype="void">
+          <description>Loads the view's info from the index file.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildHeader" returntype="string">
+          <description>Builds the view's php header.</description>
+          <parameters>
+            <parameter name="$wrapped" type="boolean" defaultvalue="">
+              <description>Chooses whether to wrap the code in the header section or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php header including all inner modules and dependencies.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildImports" returntype="string">
+          <description>Builds the imports section in the header.</description>
+          <parameters/>
+          <returndescription>The import section of the header.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateSingleDependencies" returntype="boolean">
+          <description>Update source code dependencies.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code to parse the dependencies from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMetrics" returntype="boolean">
+          <description>Update the source code's metrics data.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The source code to parse the metrics from.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDefaultSourceCode" returntype="string">
+          <description>Gets the view's default source code.</description>
+          <parameters/>
+          <returndescription>The default template source code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemPath" returntype="string">
+          <description>Gets the view's item trunk path.</description>
+          <parameters>
+            <parameter name="$update" type="boolean" defaultvalue="">
+              <description>Indicates whether the item should be updated in the vcs.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The item trunk path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Gets the view's vcs item id.</description>
+          <parameters/>
+          <returndescription>The item id.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDirectoryName" returntype="string" static="true">
+          <description>Gets the view's directory name.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The view id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The directory name.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

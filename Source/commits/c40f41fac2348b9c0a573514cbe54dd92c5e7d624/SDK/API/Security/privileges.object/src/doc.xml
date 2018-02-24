@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\">
+  <class name="privileges" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1372765220</datecreated>
+      <daterevised>1414138082</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Privileges Manager</title>
+      <description>Manages all the privileges the account has according to user groups and module access privileges.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="array" name="moduleAccess" static="true">
+          <description>All module access during this script execution. Expands incrementally.</description>
+        </prop>
+        <prop type="array" name="keyAccess" static="true">
+          <description>All key access during this script execution. Expands incrementally.</description>
+        </prop>
+        <prop type="array" name="userGroups" static="true">
+          <description>All account's user groups.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="moduleAccess" returntype="string" static="true">
+          <description>Gets the access of the given module for the logged in user (or guest).
+Given a condition key, it can check the group participation under condition.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The access status.
+- "Open" for modules that are open o everyone.
+- "User" for modules that are open for registered users.
+- "No" to deny access because user is not in user group or guest.
+- "Uc" when module is under construction and the access is denied for now.
+- "Off" when the module is set as deleted and it won't be restored.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="canProceed" returntype="boolean" static="true">
+          <description>Returns whether the module can proceed with execution according to given access.</description>
+          <parameters>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The module access.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if can proceed, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="keyAccess" returntype="mixed" static="true">
+          <description>Checks if the current account has specific access with the key type given.
+The key type defines a context that the function gets from the core and the check is based on this context.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to check for key access.</description>
+            </parameter>
+            <parameter name="$keyType" type="integer" defaultvalue="">
+              <description>The key type according to the database.</description>
+            </parameter>
+            <parameter name="$key" type="string" defaultvalue="">
+              <description>The key to match.
+Empty by default.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>False if there is no specific access.
+True if there is a key matching the given key or if there are multiple keys.
+The key string if there is no given key.</returndescription>
+          <throws/>
+        </method>
+        <method name="accountToGroup" returntype="boolean" static="true">
+          <description>Checks whether the current account exists in a given groupName.</description>
+          <parameters>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if exists, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAccountToGroupID" returntype="void" static="true">
+          <description>Adds an account to a given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to add to the group.</description>
+            </parameter>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id to add the account to.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="addAccountToGroup" returntype="void" static="true">
+          <description>Adds an account to a given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="leaveAccountFromGroupID" returntype="void" static="true">
+          <description>Removes an account from a given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to remove from the group.</description>
+            </parameter>
+            <parameter name="$groupID" type="integer" defaultvalue="">
+              <description>The group id to remove the account from.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="leaveAccountFromGroup" returntype="void" static="true">
+          <description>Removes an account from a given group.</description>
+          <parameters>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+            <parameter name="$groupName" type="string" defaultvalue="">
+              <description>The group name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getDBModuleAccess" returntype="string" static="true">
+          <description>Gets the access from the database.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The access status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="testerStatus" returntype="string" static="true">
+          <description>Fixes the access status if the user is tester of the given module.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$access" type="string" defaultvalue="">
+              <description>The old access status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The new access status.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getDBKeyAccess" returntype="mixed" static="true">
+          <description>Gets the key access from the database.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id to check for key access.</description>
+            </parameter>
+            <parameter name="$accountID" type="integer" defaultvalue="">
+              <description>The account id to check for the key.</description>
+            </parameter>
+            <parameter name="$keyType" type="integer" defaultvalue="">
+              <description>The key type to check.</description>
+            </parameter>
+            <parameter name="$keyContext" type="integer" defaultvalue="">
+              <description>The key context.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>False if there is no specific access.
+True if there is a key matching the given key or if there are multiple keys.
+The key string if there is no given key.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

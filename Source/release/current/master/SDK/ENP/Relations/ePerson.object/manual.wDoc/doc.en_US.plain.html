@@ -1,0 +1,68 @@
+<h1>Relations person manager</h1>
+<p>This is the basic class for managing team relations, and more specific relation persons. It provide an interface to the Relations SDK for creating, updating and removing relations for the current team.</p>
+<h2>Creating a new person</h2>
+<div class="code">
+	<pre>// Use the class
+use \ENP\Relations\ePerson;
+
+// Create an empty instance
+$person = new ePerson();
+
+// Create a new person
+$status = $person-&gt;create($firstname = "John", $lastname = "Doe", $middlename = "Will");</pre>
+</div>
+<h2>Update information and remove persons</h2>
+<p>Using the relation SDK you have full access to the relations of the team, allowing to edit and remove persons as well:</p>
+<div class="code">
+	<pre>// Use the class
+use \ENP\Relations\ePerson;
+
+// Create an existing person instance
+$person = new ePerson("1_1");
+
+// Update information
+$person-&gt;update($firstname = "Jane", $lastname = "Doe", $middlename = "Maria", $notes = "This is a test note");
+
+
+// And if we want to remove the person, we simply write:
+// This action cannot be undone
+$person-&gt;remove();</pre>
+</div>
+<h2>Connection to platform users</h2>
+<p>Relation persons can be "connected" to platform users using their email. Using the&nbsp;getDrovioPersonsByMail() function you can get a list of all the users that the current person matches given their email address.</p>
+<div class="code">
+	<pre>// Get all matched persons
+// This function will return an array of user person ids (not accounts)
+$persons = $person-&gt;getDrovioPersonsByMail();
+
+// You can connect to the first person
+if (!empty($persons))
+{
+	// Connect to the first person id
+	$personID = $persons[0];
+	$status = $person-&gt;connectToPerson($personID);
+}
+
+// Now get the connected person information
+$connectedPersonInfo = $person-&gt;getConnectedPersonInfo();
+
+// The above should return something like this:
+Array
+(
+    [0] =&gt; Array
+        (
+            [profile_url] =&gt; http://drov.io/profile/index.php?id=1
+            [accountID] =&gt; 1
+            [accountTitle] =&gt; John Doe
+            [username] =&gt; 
+        )
+
+    [1] =&gt; Array
+        (
+            [profile_url] =&gt; http://drov.io/profile/index.php?id=2
+            [accountID] =&gt; 2
+            [accountTitle] =&gt; John Doe fake
+            [username] =&gt; 
+        )
+)</pre>
+</div>

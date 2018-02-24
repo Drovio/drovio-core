@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="UIObjectPrototype" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 7, 2013, 10:07 (UTC)</datecreated>
+      <daterevised>March 7, 2013, 10:07 (UTC)</daterevised>
+      <extends/>
+      <implements/>
+      <title>UI Object Prototype</title>
+      <description>It is the prototype for all ui objects.
+All ui objects must inherit this class and implement the "build" method to build the object.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop name="UIObjectHolder" type="DOMElement">
+          <description>The UI Object Holder</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="mixed">
+          <description>It's the abstract Object Builder Function</description>
+          <parameters/>
+        </method>
+        <method name="get" returntype="DOMElement">
+          <description>Returns the UI Object Holder</description>
+          <parameters/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="set" returntype="void">
+          <description>Sets the UI Object Holder that the inherited class has created.</description>
+          <parameters>
+            <parameter name="$object" type="DOMElement" defaultvalue="">
+              <description>The object holder.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

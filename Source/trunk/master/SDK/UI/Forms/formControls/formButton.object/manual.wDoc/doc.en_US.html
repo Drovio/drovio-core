@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Platform Generic Form Button</h1>
+<p>Developers can create specific form buttons to match the platform or create their own buttons using formItem (or formInput).  formbutton is an internal object that is being used by the form builder in order to have less, more flexible and smarter code.</p>
+<p>The formButton extends the formItem which minimizes the code even more, allowing the platform to be faster and more efficient. Example:</p>
+<div class="code">
+	<pre>// Single-line creator of a form button
+	
+// Create a form button
+$fb = new formButton();
+
+// This is a UIObject (extends formItem), so we build
+// We use the chain pattern to get the DOMElement immediately
+// The type must be a valid button type, otherwise it will return NULL object
+$button = $fi-&gt;build($title = "Submit", $type = "submit", $id = "", $name = "", $positive = FALSE)-&gt;get();
+
+// Append input to form inner container
+DOM::append($formContainer, $button);
+
+
+// We can also create buttons that look positive, like OK, Save, Execute
+// While buttons like NO, Cancel, Reset look like simple buttons
+$button = $fi-&gt;build($title = "Submit", $type = "submit", $id = "", $name = "", $positive = TRUE)-&gt;get();
+
+// Append input to form inner container
+DOM::append($formContainer, $button);</pre>
+</div>
+<h3>Javascript interface + examples</h3>
+<p>formButton also provides a javascript interface where a developer can create form buttons on the client side dynamically.</p>
+<div class="code">
+	<pre>// Create a form button in a single line
+// formButton.function(title, type, id, name, positive);
+var fb = formButton.function("Submit", "submit", "button_id", "", true);
+
+// Append to form
+jq("form.userform").append(fb);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 20 May, 2015 at 16:04</p></div>
+</div></body></html>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\log">
+  <class name="activityLogger" abstract="true">
+    <info>
+      <version>1.0</version>
+      <build>4</build>
+      <datecreated>1392028162</datecreated>
+      <daterevised>1418216876</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract System Activity Logger</title>
+      <description>Logs activity to a given folder.
+Keeps logs per day in separate files.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="EMERGENCY">
+        <description>The system is unusable.</description>
+      </const>
+      <const type="integer" name="ALERT">
+        <description>Action must be taken immediately.</description>
+      </const>
+      <const type="integer" name="CRITICAL">
+        <description>Critical conditions.</description>
+      </const>
+      <const type="integer" name="ERROR">
+        <description>Error conditions.</description>
+      </const>
+      <const type="integer" name="WARNING">
+        <description>Warning conditions.</description>
+      </const>
+      <const type="integer" name="NOTICE">
+        <description>Normal, but significant condition.</description>
+      </const>
+      <const type="integer" name="INFO">
+        <description>Informational message.</description>
+      </const>
+      <const type="integer" name="DEBUG">
+        <description>Debugging message.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="log" returntype="boolean">
+          <description>Creates a new entry log.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The log description.</description>
+            </parameter>
+            <parameter name="$level" type="integer" defaultvalue="">
+              <description>The log level.
+Use the class constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLogs" returntype="string">
+          <description>Get all logs for the given day.</description>
+          <parameters>
+            <parameter name="$day" type="integer" defaultvalue="">
+              <description>The relative day interval in the past, starting from 0 as today, to get the logs.
+0: today
+1: yesterday
+2: day before yesterday
+...</description>
+            </parameter>
+          </parameters>
+          <returndescription>All logs of the given day.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLevelName" returntype="mixed" static="true">
+          <description>Gets the level name given the level code.</description>
+          <parameters>
+            <parameter name="$level" type="integer" defaultvalue="">
+              <description>The log level code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The level name or NULL if given level is not valid.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLevels" returntype="array" static="true">
+          <description>Get all logger priority levels.</description>
+          <parameters/>
+          <returndescription>An array of levels by level code and description.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getLogFolder" returntype="string" abstract="true">
+          <description>Gets the log folder for the activity.
+It is abstract to let the inherited class decide the folder of its preference.</description>
+          <parameters/>
+          <returndescription>The full log file path (without systemRoot).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="getLogFile" returntype="string" abstract="true">
+          <description>Get the log file according to the given time.</description>
+          <parameters>
+            <parameter name="$time" type="integer" defaultvalue="">
+              <description>The relative timestamp.
+Leave NULL for current day.
+Add timestamp for past days.
+It is NULL by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The full log file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

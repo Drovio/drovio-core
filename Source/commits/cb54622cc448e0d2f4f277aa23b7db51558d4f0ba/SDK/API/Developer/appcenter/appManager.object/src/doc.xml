@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\appcenter">
+  <class name="appManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1370340390</datecreated>
+      <daterevised>1396808698</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Manager</title>
+      <description>Manager for the user's application folder.</description>
+      <deprecated>Use \DEV\Apps\appManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="devRootFolder">
+          <description>The developer's application root folder.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method. Initializes the Developer's service.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getDevAppFolder" returntype="string">
+          <description>Gets the application's folder inside the user's folder.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The application folder path.</returndescription>
+          <throws/>
+        </method>
+        <method name="getPublishedAppFolder" returntype="string" static="true">
+          <description>Gets the application's publish folder.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application publish folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="openApplication" returntype="void" static="true">
+          <description>Opens an application for editing (session storage).</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="closeApplication" returntype="void" static="true">
+          <description>Closes an open application (remove from session).</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationData" returntype="array" static="true">
+          <description>Validates and returns information of a given application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of application data, as fetched from database.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateApplicationData" returntype="boolean" static="true">
+          <description>Updates application's information.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$fullName" type="string" defaultvalue="">
+              <description>The full name of the application.</description>
+            </parameter>
+            <parameter name="$privacy" type="string" defaultvalue="">
+              <description>The scope identifier.
+private | public</description>
+            </parameter>
+            <parameter name="$tags" type="string" defaultvalue="">
+              <description>The application tags separated by space.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The unique name identifier of the application.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The application description</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSharedLibraryList" returntype="array" static="true">
+          <description>Gets the redback's shared library list.</description>
+          <parameters/>
+          <returndescription>The shared library in a $library =&amp;gt; $object array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="validateApplication" returntype="boolean" static="true">
+          <description>Checks whether the application is open.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if application is open, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

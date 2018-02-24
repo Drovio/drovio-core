@@ -1,0 +1,639 @@
+.wViewEditor {
+	width: 100%;
+	height: 100%;
+}
+.wViewEditor .previewContainer {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-bottom: 30px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	float: left;
+}
+
+.wViewEditor .previewContainer:only-of-type {
+	border:1px solid transparent;
+}
+
+.wViewEditor .structureWrapper, .wViewEditor .previewWrapper {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	padding: 5px;
+}
+
+.wViewEditor .modelEditor {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 30px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+}
+
+.wViewEditor .viewOptions {
+	position: absolute;
+	top: 0;
+	right: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 6px 3px;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.wViewEditor .viewOptions .horizontalSplit, .wViewEditor .viewOptions .verticalSplit {
+	height:26px;
+	width:26px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	pointer-events: all;
+	padding:3px;
+	opacity:0.1;
+	cursor:pointer;
+	border:1px solid #999;
+}
+
+.wViewEditor .viewOptions .horizontalSplit {
+	display:inline-block;
+}
+
+.wViewEditor .viewOptions .verticalSplit {
+	position:relative;
+}
+
+.wViewEditor .viewOptions .horizontalSplit:hover, .wViewEditor .viewOptions .verticalSplit:hover {
+	opacity:1;
+}
+
+.wViewEditor .previewBar {
+	line-height:30px;
+	width:100%;
+	height:30px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	text-align:center;
+	border-top: 1px solid #999;
+	cursor: default;
+	position:absolute;
+	bottom:1px;
+	left:1px;
+	right:1px;
+}
+
+.wViewEditor .previewBar .previewTool {
+	height:24px;
+	line-height:24px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	cursor:pointer;
+	display:inline-block;
+	margin-left:5px;
+	width:100px;
+}
+
+.wViewEditor .previewBar .previewTool > * {
+	height:100%;
+	width:100%;
+	box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	border: 1px solid #999;
+	display:inline-block;
+	outline:none;
+	margin:0;
+}
+
+.wViewEditor .previewBar .previewTool.active > * {
+	box-shadow: inset 0px 0px 3px #999;
+}
+
+.wViewEditor .previewBar .previewTool > span {
+	padding:1px 3px;
+}
+
+.wViewEditor .previewBar .previewTool > select {
+	padding:3px;
+}
+
+.wViewEditor .structureWrapper > .path {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-bottom: 1px dashed black;
+	margin: 0px 20px;
+	cursor: default;
+	line-height: 20px;
+	min-height: 21px;
+}
+
+.wViewEditor .structureWrapper > .pathSibling {
+	height:20px;
+	line-height:20px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	margin: 0px 20px;
+}
+
+.wViewEditor .structureWrapper > .pathSibling:hover {
+	cursor: pointer;
+    	text-decoration:line-through;
+}
+
+.wViewEditor .structureWrapper > .path > .element {
+	position:relative;
+	transition: background-color 1s;
+    	-moz-transition: background-color 1s;
+    	-webkit-transition: background-color 1s;
+    	-o-transition: background-color 1s;
+}
+
+.wViewEditor .structureWrapper > .path > .element > edit {
+	display:none;
+}
+
+.wViewEditor .structureWrapper > .path > .element:hover, .wViewEditor .structureWrapper > .path > .pseudoClass:hover, .wViewEditor .structureWrapper > .path > .pseudoElement:hover {
+	cursor: pointer;
+    	background-color:rgba(100, 149, 237, 0.5);
+    	transition: background-color 0.3s;
+    	-moz-transition: background-color 0.3s;
+    	-webkit-transition: background-color 0.3s;
+    	-o-transition: background-color 0.3s;
+}
+
+.wViewEditor .structureWrapper > .path > .element:hover > .edit {
+	display:inline-block;
+	height:8px;
+	width:8px;
+	background:black;
+	position:absolute;
+	top:-2px;
+	transition: height 0.5s, width 0.5s;
+    	-moz-transition: height 0.5s, width 0.5s;
+    	-webkit-transition: height 0.5s, width 0.5s;
+    	-o-transition: height 0.5s, width 0.5s;
+}
+
+.wViewEditor .structureWrapper > .path > .element:hover > .edit:hover {
+	height:12px;
+	width:12px;
+	transition: height 0.3s, width 0.3s;
+    	-moz-transition: height 0.3s, width 0.3s;
+    	-webkit-transition: height 0.3s, width 0.3s;
+    	-o-transition: height 0.3s, width 0.3s;
+}
+
+.wViewEditor .structureWrapper > .path > .relation {
+	transition: background-color 1s;
+    	-moz-transition: background-color 1s;
+    	-webkit-transition: background-color 1s;
+    	-o-transition: background-color 1s;
+}
+
+.wViewEditor .structureWrapper > .path > .relation:hover {
+	cursor: pointer;
+    	background-color:rgba(192, 4, 3, 0.6);
+    	transition: background-color 0.3s;
+    	-moz-transition: background-color 0.3s;
+    	-webkit-transition: background-color 0.3s;
+    	-o-transition: background-color 0.3s;
+}
+
+.wViewEditor .structureWrapper > .path > .plus:only-child, .wViewEditor .structureWrapper > .path > .plus:not(:first-of-type) {
+	display:none;
+}
+
+.wViewEditor .structureWrapper > .path > .plus {
+	width:16px;
+	height:16px;
+	background: orange;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.wViewEditor .structureWrapper > .path > .plus:hover {
+	cursor:pointer;
+}
+
+.wViewEditor .structureWrapper > .path > .pseudoClass:hover, .wViewEditor .structureWrapper > .path > .pseudoElement:hover {
+	background-color:rgba(192, 4, 3, 0.6);
+	transition: background-color 0.3s;
+    	-moz-transition: background-color 0.3s;
+    	-webkit-transition: background-color 0.3s;
+    	-o-transition: background-color 0.3s;
+	cursor:crosshair;
+}
+
+.wViewEditor .structureWrapper > .path .editableArea {
+	cursor:text;
+	outline:none;
+	height:20px;
+}
+
+.wViewEditor .structureWrapper > .path .editableArea:empty:not(:focus) {
+	padding-left:3px;
+}
+
+.wViewEditor .structureWrapper > .path .element > .equality:hover {
+	background:rgba(100, 149, 237, 1);
+}
+
+.wViewEditor /* Structure Viewer */
+.structureWrapper > .structureViewer {
+	padding:5px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.wViewEditor .structureWrapper > .structureViewer * {
+	padding-left: 20px;
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-webkit-transition: background-color .2s;
+	cursor: default;
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementTag, .wViewEditor .structureWrapper > .structureViewer .elementClass, .wViewEditor .structureWrapper > .structureViewer .elementId, .wViewEditor .structureWrapper > .structureViewer .elementAttr {
+	padding-left:0 !important;
+	display:inline;
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementClass.mirror, .wViewEditor .structureWrapper > .structureViewer .elementTag.mirror {
+	background-color:rgba(143, 188, 143, 0.2);
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-webkit-transition: background-color .2s;
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementClass:hover, .wViewEditor .structureWrapper > .structureViewer .elementTag:hover, .wViewEditor .structureWrapper > .structureViewer .elementId:hover, .wViewEditor .structureWrapper > .structureViewer .elementAttr:hover {
+	cursor: pointer;
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-webkit-transition: background-color .2s;
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementClass:hover {
+	background-color:rgba(100, 149, 237, 0.6);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementTag:hover {
+	background-color:rgba(100, 149, 237, 0.3);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementId:hover {
+	background-color:rgba(100, 149, 237, 1);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementAttr:hover {
+	background-color:rgba(100, 149, 237, 0.6);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementClass.active, .wViewEditor .structureWrapper > .structureViewer .elementTag.active, .wViewEditor .structureWrapper > .structureViewer .elementId.active, .wViewEditor .structureWrapper > .structureViewer .elementAttr.active {
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-webkit-transition: background-color .2s;
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementClass.active {
+	background-color:rgba(143, 188, 143, 0.6);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementTag.active {
+	background-color:rgba(143, 188, 143, 0.3);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementId.active {
+	background-color:rgba(143, 188, 143, 1);
+}
+
+.wViewEditor .structureWrapper > .structureViewer .elementAttr.active {
+	background-color:rgba(143, 188, 143, 0.6);
+}
+
+.wViewEditor .structureWrapper > .structureViewer *.hover {
+	background-color:rgb(173, 216, 230);
+	transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-webkit-transition: background-color .2s;
+}
+
+.wViewEditor /* Structure Holder */
+.structureWrapper > .structureHolder {
+	display:none;
+}
+
+.wViewEditor /* Pseudoelements wrapper */
+.structureWrapper > .pseudoWrapper {
+	display:none;
+	position:absolute;
+	white-space:nowrap;
+	height:300px;
+	border:1px solid black;
+	overflow:hidden;
+	background-color:lightBlue;
+}
+
+.wViewEditor .structureWrapper > .pseudoWrapper > .pseudo-classes {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	border-right:1px solid black;
+	display:inline-block;
+	height:100%;
+	overflow:auto;
+}
+
+.wViewEditor .structureWrapper > .pseudoWrapper > .pseudo-elements {
+	display:inline-block;
+	vertical-align:top;
+	height:100%;
+	overflow:auto;
+}
+
+.wViewEditor .structureWrapper > .pseudoWrapper > .pseudo-classes > div:hover, .wViewEditor .structureWrapper > .pseudoWrapper > .pseudo-elements > div:hover {
+	background-color:lightGray;
+	cursor:pointer;
+}
+
+.wViewEditor /* cssContainer */
+> .cssContainer {
+	height:100%;
+}
+
+.wViewEditor > .cssContainer .currentSelectorPath {
+	width:250px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	padding:5px;
+	background:white;
+	margin-top:2px;
+	margin-left:2px;
+}
+
+.wViewEditor .cssContainer .cssCoder {
+	height:100%;
+}
+
+.wViewEditor .cssContainer > .cssCoder {
+	display:none;
+}
+
+.wViewEditor .cssContainer > .cssCoder.selected {
+	display:block;
+}
+
+.wViewEditor .cssContainer .propertiesView {
+	height:100%;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertiesContainer {
+	height:100%;
+	padding:5px;
+	padding-left:7px;
+	padding-top:8px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper {
+	position:relative;
+	width:100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > label {
+	width:50%;
+	display:inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	text-align:right;
+	padding-right:5px;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > input, .wViewEditor .cssContainer .propertiesView .propertyWrapper > select {
+	width:50%;
+	display:inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	padding:3px;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > select {
+	padding-left:0;
+}
+
+.wViewEditor /* These go to the selection input, .wViewEditor and selection + input tools, .wViewEditor respectively (maybe) */
+.cssContainer .propertiesView .propertyWrapper > .selectionInput {
+    	position:relative;
+    	display:inline-block;
+    	width:50%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	overflow:auto;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .selectionInput > select {
+    	/*width:300px;*/
+	padding:3px;
+	outline:none;
+	width:100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .selectionInput > input {
+	width:80%;
+    	padding:3px;
+    	margin-left:1px;
+    	outline:none;
+    	position:absolute;
+    	top:1px;
+    	left:0;
+    	border:1px solid transparent;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .lengthInput, .wViewEditor .cssContainer .propertiesView .propertyWrapper > .timeInput, .wViewEditor .cssContainer .propertiesView .propertyWrapper > .angleInput {
+	position:relative;
+    	display:inline-block;
+    	width:50%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .lengthInput input, .wViewEditor .cssContainer .propertiesView .propertyWrapper > .timeInput input, .wViewEditor .cssContainer .propertiesView .propertyWrapper > .angleInput input {
+	width:70%;
+	display:inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	padding:3px;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .lengthInput select, .wViewEditor .cssContainer .propertiesView .propertyWrapper > .timeInput select, .wViewEditor .cssContainer .propertiesView .propertyWrapper > .angleInput select {
+	width:30%;
+	display:inline-block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	padding:3px;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport {
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	position:absolute;
+	width:auto;
+	height:10px;
+	padding-right:5px;
+	top:0;
+	right:50%;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport:empty {
+	display:none;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport span {
+	width:10px;
+	height:10px;
+	background-repeat: no-repeat;
+	background-size: 10px 10px;
+	display:table-cell;
+	opacity:0;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport .firefox {
+	background-image:url('%{media}/icons/20x20/firefox_logo.gif');
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport .chrome {
+	background-image:url('%{media}/icons/20x20/chrome_logo.gif');
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport .safari {
+	background-image:url('%{media}/icons/20x20/safari_logo.gif');
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport .opera {
+	background-image:url('%{media}/icons/20x20/opera_logo.gif');
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper > .browserSupport .iexplorer {
+	background-image:url('%{media}/icons/20x20/iexplorer_logo.gif');
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper.focused > .browserSupport :not(.unsupported) {
+	opacity: 1;
+}
+
+.wViewEditor .cssContainer .propertiesView .propertyWrapper.focused > .browserSupport .unsupported {
+	opacity: 0.3;
+}
+
+.wViewEditor /* CSS Tools */
+.cssContainer .cssTool {
+	line-height:11px;
+	height:11px;
+	padding:3px 6px;
+	opacity: 0.7;
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wViewEditor .cssContainer .cssTool:hover {
+	opacity:1;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+	border: 1px solid transparent;
+}
+
+.wViewEditor /* This is temp for the toolbar */
+.cssContainer .cssTool.restore {
+	position:absolute;
+	right:0;
+	margin-right:5px;
+	cursor:default;
+	box-shadow: none;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	opacity: 0.3;
+}
+
+.wViewEditor .cssContainer .searchCss {
+	position:relative;
+	left:10px;
+	border: 1px solid #999;
+	background:transparent;
+	outline:none;
+	margin:0;
+	padding:1px 3px;
+}
+
+.wViewEditor /* Tiles */
+.cssContainer .cssTile {
+    border:1px solid black;
+    position:relative;
+    padding:5px;
+    padding-top:0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.wViewEditor .cssContainer .cssTile > .cssTileHeader {
+    background-color:white;
+    position:relative;
+    left:3px;
+    top:-4px;
+    padding:0 7px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.wViewEditor /* temp left */
+.cssContainer > .search {
+	position:absolute;
+	display:block !important;
+	right:0;
+	top:0;
+}
+
+.wViewEditor .cssContainer > .save {
+	position:absolute;
+	display:block !important;
+	right:0;
+	bottom:0;
+}
+
+.wViewEditor /* maximized */
+.structureWrapper.maximized, .wViewEditor .cssEditor .previewWrapper.maximized {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:white;
+	border:none;
+	z-index:1;
+}
+
+.wViewEditor .structureWrapper > .maximize, .wViewEditor .cssEditor > .previewWrapper > .maximize {
+	display:none;
+}
+
+.wViewEditor .structureWrapper:hover > .maximize, .wViewEditor .cssEditor > .previewWrapper:hover > .maximize {
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	top:5px;
+	right:5px;
+	background-color:grey;
+}

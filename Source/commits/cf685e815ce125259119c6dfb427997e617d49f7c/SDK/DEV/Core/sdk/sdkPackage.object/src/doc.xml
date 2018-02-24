@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Core" namespace="\sdk">
+  <class name="sdkPackage" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1396351013</datecreated>
+      <daterevised>1410862838</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Core SDK Package Manager</title>
+      <description>Handles all operations with Core SDK packages.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="sourceMap" name="sourceMap" static="true">
+          <description>The sourceMap object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean">
+          <description>Create a new SDK package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Delete a package in the SDK.
+The package must be empty.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createNS" returntype="boolean">
+          <description>Create a namespace in the given package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (if any, separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeNS" returntype="boolean">
+          <description>Delete a namespace in the core SDK.
+The namespace must be empty.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The namespace, separated by "::".</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getNSList" returntype="array">
+          <description>Gets all namespaces in a given package, with an optional parent namespace.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>A nested array of namespaces.</description>
+            </parameter>
+            <parameter name="$parentNs" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::", if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of namespaces.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="load" returntype="void">
+          <description>Loads all objects in the given package.
+If the package is tester, it loads the objects from the repository trunk.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadCSS" returntype="string">
+          <description>Loads a style package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The entire package css code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="loadJS" returntype="string">
+          <description>Loads a javascript package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The entire package javascript code.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPackageObjects" returntype="array">
+          <description>Get all objects in a package.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$namespace" type="string" defaultvalue="">
+              <description>The parent namespace (separated by "::", if any).</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of the object information including title, name, package, library and namespace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="loadSourceMap" returntype="object">
+          <description>Initializes the source map object for getting the source information from the source index.</description>
+          <parameters/>
+          <returndescription>The sourceMap object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateMapFile" returntype="void">
+          <description>Updates the source map index file in the vcs.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReleaseObjectPath" returntype="string" static="true">
+          <description>Gets the release object path.</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>The library name.</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>The package name.</description>
+            </parameter>
+            <parameter name="$object" type="string" defaultvalue="">
+              <description>The object name (including namespace separated by "::").</description>
+            </parameter>
+          </parameters>
+          <returndescription>The release system object path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

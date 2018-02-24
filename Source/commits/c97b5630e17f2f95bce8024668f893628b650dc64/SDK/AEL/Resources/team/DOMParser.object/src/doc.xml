@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\team">
+  <class name="DOMParser" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1417791141</datecreated>
+      <daterevised>1418041366</daterevised>
+      <extends>
+        <object>\API\Resources\DOMParser</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>DOMParser for Applications</title>
+      <description>Class for parsing xml files in the application folder.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="load" returntype="DOMDocument">
+          <description>Loads an existing xml document.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The document relative path to the team's application folder.</description>
+            </parameter>
+            <parameter name="$preserve" type="boolean" defaultvalue="">
+              <description>Indicates whether the parser will preserve whitespaces during load.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The document loaded.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="save" returntype="boolean">
+          <description>Saves the file in the given filepath.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The relative path in the team's application folder.</description>
+            </parameter>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The filename.
+Leave empty if the file name is included in the path.</description>
+            </parameter>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicator whether the parser will save formated xml or unformatted.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean">
+          <description>Updates the file loaded before by the load() function.</description>
+          <parameters>
+            <parameter name="$format" type="boolean" defaultvalue="">
+              <description>Indicator whether the parser will save formated xml or not.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

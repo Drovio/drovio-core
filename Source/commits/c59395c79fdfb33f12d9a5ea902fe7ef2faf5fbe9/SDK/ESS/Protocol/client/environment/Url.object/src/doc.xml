@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client\environment">
+  <class name="Url" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1362649140</datecreated>
+      <daterevised>1397241304</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>URL Resolver</title>
+      <description>Resolves urls according to static and subdomain</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="resolve" returntype="string" static="true">
+          <description>Resolves a given URL and transforms it if necessary to a developer server's URL</description>
+          <parameters>
+            <parameter name="$sub" type="string" defaultvalue="">
+              <description>The subdomain.</description>
+            </parameter>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The URL</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The resolved url.</returndescription>
+          <throws/>
+        </method>
+        <method name="resource" returntype="string" static="true">
+          <description>Resolves a resource's URL for the needs of the testing/developer server</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The resource's URL</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The resource url.</returndescription>
+          <throws/>
+        </method>
+        <method name="checkSubdomain" returntype="boolean" static="true">
+          <description>Check for subdomain redirection</description>
+          <parameters>
+            <parameter name="$sub" type="string" defaultvalue="">
+              <description>The subdomain.</description>
+            </parameter>
+            <parameter name="$subPath" type="string" defaultvalue="">
+              <description>The inner subdomain path.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>True if subdomain is ok, false otherwise.</returndescription>
+          <throws/>
+        </method>
+        <method name="getDomain" returntype="string" static="true">
+          <description>Get system domain.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription>The host domain.</returndescription>
+          <throws/>
+        </method>
+        <method name="getSubDomain" returntype="string" static="true">
+          <description>Gets the current url subdomain.</description>
+          <parameters/>
+          <returndescription>Returns empty if its the tester subdomain or the active subdomain.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="redirect" returntype="boolean" static="true">
+          <description>Decides whether it is secure to redirect to a given URL outside Redback</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url to redirect.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="get" returntype="string" static="true" class="undefined">
+          <description>Creates and returns a url with parameters in url encoding.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The base url.</description>
+            </parameter>
+            <parameter name="$params" type="array" defaultvalue="">
+              <description>An array of parameters as key =&amp;gt; value.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>A well formed url.</returndescription>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="urlInfo" returntype="array" static="true">
+          <description>Gets the info of the url in an array.</description>
+          <parameters/>
+          <returndescription>An array that contains the 'sub' and the 'domain'.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

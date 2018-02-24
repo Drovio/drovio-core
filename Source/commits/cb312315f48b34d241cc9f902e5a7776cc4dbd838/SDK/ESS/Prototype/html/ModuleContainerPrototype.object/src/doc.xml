@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\html">
+  <class name="ModuleContainerPrototype" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1362650760</datecreated>
+      <daterevised>1410161729</daterevised>
+      <extends>
+        <object>\ESS\Prototype\content\ModuleContainerPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Module Container</title>
+      <description>Builds a module container element.
+This will be filled asynchronously on content.modified with the module assigned.</description>
+      <deprecated>Use \ESS\Prototype\content\ModuleContainerPrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

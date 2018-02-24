@@ -1,0 +1,19 @@
+<h1>System Notification Object</h1>
+<p>Notifications is one of the most important components in the system. We can see them pretty much everywhere there is interaction. On every form, error or success a notification of some kind will appear.</p>
+<p>Developers are allowed to create a notification in four different types: success, error, warning and info. And they can customize the content as much as they want in order to have the desired outcome.</p>
+<div class="code">
+	<pre>// Create a simple success notification
+	
+// Use the class
+use \UI\Presentation\notification;	
+	
+// Create the notification object
+$ntf = new notification();
+
+// This is a UIObject, so we build
+// There is the chain pattern, so we get the DOMElement immediately
+$notification = $ntf->build($type = notification::SUCCESS, $header = TRUE, $timeout = FALSE, $disposable = FALSE)->get();
+
+// Append the notification to the container
+DOM::append($container, $notification);</pre>
+</div>

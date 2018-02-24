@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\apps">
+  <class name="appSessionManager" abstract="">
+    <info>
+      <version>4.0</version>
+      <build>1</build>
+      <datecreated>1425324018</datecreated>
+      <daterevised>1431275094</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Session Manager</title>
+      <description>Manages the application session, in both client side by set / get the respective cookies and in server side by handling the session entries stored in database.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The database connection manager.</description>
+        </prop>
+        <prop type="string" name="userSessionID" static="true">
+          <description>The current user's unique session id.</description>
+        </prop>
+        <prop type="string" name="guestUserSessionID">
+          <description>The guest's unique session id.</description>
+        </prop>
+        <prop type="array" name="userSession" static="true">
+          <description>The current user's application session.</description>
+        </prop>
+        <prop type="appSessionManager" name="instance" static="true">
+          <description>The singleton instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="appSessionManager" static="true">
+          <description>Gets the singleton instance of this object.</description>
+          <parameters/>
+          <returndescription>The appSessionManager instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setVersion" returntype="boolean">
+          <description>Sets the application version for the current user session.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The application version.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getVersion" returntype="string">
+          <description>Get the current session application version for the given application id.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application version.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getApplicationStats" returntype="array">
+          <description>Get application session statistics including guest and registered users session count.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id to get statistics for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of 'guests' and 'users' session count.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="__construct" returntype="void">
+          <description>Constructs the object and sets the respective appSession Cookie.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get application information from the current session.
+If there is no session for the requested application, one is created.</description>
+          <parameters>
+            <parameter name="$applicationID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Application information including version.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="removeDbEntry" returntype="boolean">
+          <description>Removes the database entry for a given application id for the current session.</description>
+          <parameters>
+            <parameter name="$userSessionID" type="string" defaultvalue="">
+              <description>The user session id.</description>
+            </parameter>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

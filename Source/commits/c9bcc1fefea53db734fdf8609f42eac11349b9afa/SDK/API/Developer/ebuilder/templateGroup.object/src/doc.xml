@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\ebuilder">
+  <class name="templateGroup" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1372438757</datecreated>
+      <daterevised>1388417854</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use API/Developer/projects/projectCategory instead</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getAllCategories" returntype="void" static="true">
+          <description/>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createCategory" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$name" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$description" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$parent" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteCategory" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$groupId" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="mashGroupChange" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$oldGroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$newGroup" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

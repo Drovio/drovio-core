@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="notification" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 13:05 (EET)</datecreated>
+      <daterevised>March 11, 2013, 13:05 (EET)</daterevised>
+      <extends>\UI\Notifications\message</extends>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \UI\Presentation\notification instead.</deprecated>
+    </info>
+    <constants>
+      <const name="support_path" type="">
+        <description/>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop name="holder" type="">
+          <description/>
+        </prop>
+        <prop name="body" type="">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build_notification" returntype="void">
+          <description/>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$header" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$footer" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="append_content" returntype="void">
+          <description>Sets the content of the body</description>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_notification" returntype="void">
+          <description>Gets the notification holder</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_message" returntype="void">
+          <description>Loads a system notification</description>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="load_notification_message" returntype="void">
+          <description>Loads a system notification</description>
+          <parameters>
+            <parameter name="$type" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$locale" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="_get_footerContent" returntype="void">
+          <description>Constructs the notification footer</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

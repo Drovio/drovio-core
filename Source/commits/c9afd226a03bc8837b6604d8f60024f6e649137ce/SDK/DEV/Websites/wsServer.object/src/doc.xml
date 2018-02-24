@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\">
+  <class name="wsServer" abstract="">
+    <info>
+      <version>3.1</version>
+      <build>1</build>
+      <datecreated>1412359743</datecreated>
+      <daterevised>1414086059</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Server</title>
+      <description>A class to manage website's server.xml file. That file keeps all the required information for the various the user has configure to use with the website project</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CON_TYPE_FTP">
+        <description>The FTP connection type identifier</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="website" name="website">
+          <description>The website object.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The website vcs manager object.</description>
+        </prop>
+        <prop type="DOMParser" name="xmlParser">
+          <description>The parser containing the settings file</description>
+        </prop>
+        <prop type="string" name="settingsFile">
+          <description>The settings filepath</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The class contructor method</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The project id</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates the settings file.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure or if settings file already exists.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setServer" returntype="boolean">
+          <description>Set the value of server option into the file</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The server's id. Leave it empty to create an new server object</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The server's name</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The server's address</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setServerExtra" returntype="boolean">
+          <description>Sets the 'extra properties of a server object'</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The server object id</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The description property to be set</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type property to be set</description>
+            </parameter>
+            <parameter name="$conType" type="string" defaultvalue="">
+              <description>The connection type property to be set</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServer" returntype="array">
+          <description>Get the Server's object properties</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the server object</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array{name, address} of server object properties</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deleteServer" returntype="boolean">
+          <description>Deletes a server configuration</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The server object id</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServerList" returntype="array">
+          <description>A list of all registered servers</description>
+          <parameters/>
+          <returndescription>array of all servers names</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setFTPconfig" returntype="boolean">
+          <description>Sets the FTP connection type properties into the server object</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The server object id</description>
+            </parameter>
+            <parameter name="$user" type="string" defaultvalue="">
+              <description>The FTP username</description>
+            </parameter>
+            <parameter name="$pass" type="string" defaultvalue="">
+              <description>The FTP password</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFTPconfig" returntype="array">
+          <description>Gets the FTP connection type properties</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The server object id</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array of FTP connection type properties {username, password}</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConnectionTypes" returntype="array" static="true">
+          <description>Get the supported connection types</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="update" returntype="boolean">
+          <description>Writes / Saves the loaded xml settings file to disk</description>
+          <parameters/>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setProperty" returntype="void">
+          <description>Alters or creates a property of the given object</description>
+          <parameters>
+            <parameter name="$object" type="DOMNode" defaultvalue="">
+              <description>The object in which the property will be added or altered</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The property name</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The property value</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getItemID" returntype="string">
+          <description>Gets the file's item id for the vcs.</description>
+          <parameters/>
+          <returndescription>The vcs hashed id</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

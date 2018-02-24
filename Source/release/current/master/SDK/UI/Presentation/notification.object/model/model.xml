@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model><div class="uiNotification info">
+	<div class="uiNtfHead">
+		<span>Information</span>
+		<span class="closeBtn"/>
+	</div>
+	<div class="uiNtfBody">
+		<span class="uiNtfIcon"/>
+		<h2>Notification Body Header</h2>
+		<p>Notification body content</p>
+		<div class="customMessage">This is a custom message</div>
+	</div>
+</div>
+<div class="uiNotification success">
+	<div class="uiNtfHead">
+		<span>Success</span>
+		<span class="closeBtn"/>
+	</div>
+	<div class="uiNtfBody">
+		<span class="uiNtfIcon"/>
+		<h2>Notification Body Header</h2>
+		<p>Notification body content</p>
+		<div class="customMessage">This is a custom message</div>
+	</div>
+</div>
+<div class="uiNotification warning">
+	<div class="uiNtfHead">
+		<span>Warning</span>
+		<span class="closeBtn"/>
+	</div>
+	<div class="uiNtfBody">
+		<span class="uiNtfIcon"/>
+		<h2>Notification Body Header</h2>
+		<p>Notification body content</p>
+		<div class="customMessage">This is a custom message</div>
+	</div>
+</div>
+<div class="uiNotification error">
+	<div class="uiNtfHead">
+		<span>Error</span>
+		<span class="closeBtn"/>
+	</div>
+	<div class="uiNtfBody">
+		<span class="uiNtfIcon"/>
+		<h2>Notification Body Header</h2>
+		<p>Notification body content</p>
+		<div class="customMessage">This is a custom message</div>
+	</div>
+</div></model>

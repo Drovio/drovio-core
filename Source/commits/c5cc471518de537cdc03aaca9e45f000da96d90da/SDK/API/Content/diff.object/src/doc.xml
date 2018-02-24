@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Content" namespace="\">
+  <class name="diff" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1400002428</datecreated>
+      <daterevised>1400329924</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Diff</title>
+      <description>Given two strings (text) finds and annotates the diferences between</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="char" name="MODE_WORD">
+        <description>split mode is by word</description>
+      </const>
+      <const type="char" name="MODE_CHAR">
+        <description>split mode is by character</description>
+      </const>
+      <const type="char" name="MODE_LINE">
+        <description>split mode is by line</description>
+      </const>
+      <const type="char" name="CH_ADD">
+        <description>Type of change is addition</description>
+      </const>
+      <const type="char" name="CH_DEL">
+        <description>Type of change is deletions</description>
+      </const>
+      <const type="char" name="CH_NON">
+        <description>Not a change</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public">
+        <prop type="string" name="error">
+          <description>Holds possible errors during a functions executio</description>
+        </prop>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="originalText">
+          <description>The original text</description>
+        </prop>
+        <prop type="string" name="alteredText">
+          <description>The altered text</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>The class constructor</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="init" returntype="void">
+          <description>Initalazes the object giving the two strings to be compared</description>
+          <parameters>
+            <parameter name="$originalText" type="string" defaultvalue="">
+              <description>The original text</description>
+            </parameter>
+            <parameter name="$alteredText" type="string" defaultvalue="">
+              <description>The altered text</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="diff" returntype="mixed">
+          <description>Finds the differences between two strings</description>
+          <parameters>
+            <parameter name="$mode" type="char" defaultvalue="">
+              <description>The type by which the comparison will be made. Use MODE_ constants to set this values. The default is MODE_CHAR</description>
+            </parameter>
+            <parameter name="$generatePatch" type="boolean" defaultvalue="">
+              <description>Flag which indicates if a patch (array) will be also be constructed for each change</description>
+            </parameter>
+          </parameters>
+          <returndescription>The array of the changes between the two strings or null on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="patch" returntype="string">
+          <description>Applies the patch creates previously, using diff funtion, on the original text and return the result</description>
+          <parameters>
+            <parameter name="$difference" type="array" defaultvalue="">
+              <description>An array of arrays (a list of changes), each one containing information about a change. The nested arrays must contain the 'patch' property.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="splitString" returntype="array">
+          <description>Splits a string by word or line according to seperator indicator and end (line) indicator</description>
+          <parameters>
+            <parameter name="$string" type="string" defaultvalue="">
+              <description>The string to be splited</description>
+            </parameter>
+            <parameter name="$separators" type="string" defaultvalue="">
+              <description>The seperators indicators</description>
+            </parameter>
+            <parameter name="$end" type="string" defaultvalue="">
+              <description>The end line indicators</description>
+            </parameter>
+            <parameter name="$positions" type="pointer" defaultvalue="">
+              <description>(By reference) The positions table which hold the positions that the string was splited</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

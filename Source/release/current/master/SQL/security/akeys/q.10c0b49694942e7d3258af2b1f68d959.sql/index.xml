@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="26056232758189"><title>Validate key type</title><description>Checks if there is a key with the given features (type and stuff) and it is valid.</description><access></access><attributes><attr id="type"></attr><attr id="aid"></attr><attr id="tid"></attr><attr id="pid"></attr></attributes></query>

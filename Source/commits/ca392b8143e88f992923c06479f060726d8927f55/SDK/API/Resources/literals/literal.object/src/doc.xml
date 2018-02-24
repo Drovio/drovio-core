@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\literals">
+  <class name="literal" abstract="">
+    <info>
+      <version/>
+      <datecreated>1366714800</datecreated>
+      <daterevised>1404892934</daterevised>
+      <extends>
+        <object>\API\Literals\literal</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Literal Handler</title>
+      <description>Handles all translated and non-translated literals.</description>
+      <deprecated>Use \API\Literals\literal instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

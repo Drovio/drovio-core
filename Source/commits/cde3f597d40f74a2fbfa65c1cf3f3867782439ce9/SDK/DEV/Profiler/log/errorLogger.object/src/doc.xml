@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\log">
+  <class name="errorLogger" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1392029543</datecreated>
+      <daterevised>1392029543</daterevised>
+      <extends>\DEV\Profiler\log\activityLogger</extends>
+      <implements/>
+      <throws/>
+      <title>System Error Logger</title>
+      <description>Logs all errors and exceptions of the system.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="logTime">
+          <description>The logger run time.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Logger constructor function.</description>
+          <parameters>
+            <parameter name="$time" type="integer" defaultvalue="">
+              <description>The logger run time.
+It can be altered manually for reading older logs.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="log" returntype="boolean">
+          <description>Logs a given exception in the system.</description>
+          <parameters>
+            <parameter name="$ex" type="Exception" defaultvalue="">
+              <description>The exception to log.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="getLogFile" returntype="string">
+          <description>Gets the log file.</description>
+          <parameters/>
+          <returndescription>The log inner file path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

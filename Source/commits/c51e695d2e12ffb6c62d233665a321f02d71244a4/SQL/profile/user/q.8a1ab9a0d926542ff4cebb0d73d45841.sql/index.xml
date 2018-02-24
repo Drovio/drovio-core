@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1798463593"><title>Update Username</title><description>Update a user's username</description><access>1</access><attributes><attr id="username"></attr><attr id="uid"></attr></attributes></query>

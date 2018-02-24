@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\">
+  <class name="appManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>5</build>
+      <datecreated>1421248045</datecreated>
+      <daterevised>1445939839</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application General Resource Manager</title>
+      <description>Provides some interface about the application resources.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ACCOUNT_MODE">
+        <description>The account file mode.</description>
+      </const>
+      <const type="integer" name="TEAM_MODE">
+        <description>The team file mode.</description>
+      </const>
+      <const type="string" name="SHARED_FOLDER">
+        <description>The shared folder path for the directory.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getRootFolder" returntype="string" static="true">
+          <description>Get the application root folder.
+Choose between</description>
+          <parameters>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The file mode.
+See class constants for options.
+It is in account mode by default.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, it will return the shared root folder for applications.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application root folder according to the given parameters.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

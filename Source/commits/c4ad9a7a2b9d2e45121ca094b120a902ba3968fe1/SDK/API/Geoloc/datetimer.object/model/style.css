@@ -1,0 +1,7 @@
+abbr,
+abbr[title],
+acronym[title],
+abbr.timestamp {
+	border: none;
+	display: inline-block;
+}

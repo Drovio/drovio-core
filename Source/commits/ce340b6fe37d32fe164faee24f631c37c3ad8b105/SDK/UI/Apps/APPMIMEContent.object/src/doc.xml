@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Apps" namespace="\">
+  <class name="APPMIMEContent" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1442091491</datecreated>
+      <daterevised>1442327862</daterevised>
+      <extends>
+        <object>\UI\Content\MIMEContent</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Multipurpose Internet Mail Extensions (MIME) Content Builder</title>
+      <description>Builds a MIME server report and it can be used to download an application file.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ACCOUNT_MODE">
+        <description>The account file mode.</description>
+      </const>
+      <const type="integer" name="TEAM_MODE">
+        <description>The team file mode.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" returntype="APPMIMEContent">
+          <description>Prepares the file to be downloaded.</description>
+          <parameters>
+            <parameter name="$fileName" type="string" defaultvalue="">
+              <description>The relative path of the file to be downloaded.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the file.
+See HTTPResponse constants for a list of file types.</description>
+            </parameter>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The file mode.
+See class constants for options.
+It is in account mode by default.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>Whether to use the shared folder location or not.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The APPMIMEContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setFileContents" returntype="APPMIMEContent">
+          <description>Prepares the file contents to be downloaded.</description>
+          <parameters>
+            <parameter name="$contents" type="mixed" defaultvalue="">
+              <description>The contents to be downloaded.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The type of the contents given.
+See HTTPResponse constants for a list of file types.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The APPMIMEContent object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

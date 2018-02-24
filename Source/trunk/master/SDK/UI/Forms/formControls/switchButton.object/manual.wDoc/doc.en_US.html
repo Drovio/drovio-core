@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Interactive Switch Button</h1>
+<p>Switch button is a simple Drovio control that provides functionality to turn on and off switches. Instead of a normal checkbox, you can use this switch butto</p>
+<p>Build a switch button and append to a form:</p>
+<div class="code">
+	<pre>// Use the class
+use \UI\Forms\formControls\switchButton;
+
+// It is a UIObject, so we have to initialize and build
+$sb = new switchButton();
+$switchButton = $sb-&gt;build($active = FALSE, $name = "", $value = "", $class = "")-&gt;get();
+DOM::append($form, $switchButton);</pre>
+</div>
+<p>The above code will create a normal switch button. It can be appended to forms and act as a normal checkbox.</p>
+</div>
+<div class="footer"><p class="updated">Document updated 16 November, 2015 [en_US]</p></div>
+</div></body></html>

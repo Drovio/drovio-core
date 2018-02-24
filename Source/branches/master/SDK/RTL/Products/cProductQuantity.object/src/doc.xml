@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProductQuantity" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1418729094</datecreated>
+      <daterevised>1441115934</daterevised>
+      <extends>
+        <object>\RTL\Products\cProductStock</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company Product Quantity Manager</title>
+      <description>Manages product quantities in branches and in storages.</description>
+      <deprecated>Use \RTL\Products\cProductStock instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

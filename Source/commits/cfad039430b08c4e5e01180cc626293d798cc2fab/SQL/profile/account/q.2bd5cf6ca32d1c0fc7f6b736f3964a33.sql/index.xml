@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="27857013413845"><title>Get non-activated person</title><description>Get a person that is not activated to check for registration</description><access></access><attributes><attr id="email"></attr></attributes></query>

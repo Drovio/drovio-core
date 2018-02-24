@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\environment">
+  <class name="Url" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1406651907</datecreated>
+      <daterevised>1414063335</daterevised>
+      <extends>
+        <object>\ESS\Environment\url</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>URL Resolver</title>
+      <description>This class is responsible for url resolving.
+It is used for resolving urls for resources and redirections.</description>
+      <deprecated>Use \ESS\Environment\url instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

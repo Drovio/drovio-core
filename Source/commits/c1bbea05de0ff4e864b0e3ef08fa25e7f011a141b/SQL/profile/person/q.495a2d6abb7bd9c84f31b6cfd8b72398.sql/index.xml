@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1361147110"><title>Register Person and Account</title><description>Create a person with the user and the administrator account</description><access>1</access><attributes><attr id="firstname"></attr><attr id="lastname"></attr><attr id="email"></attr><attr id="password"></attr></attributes></query>

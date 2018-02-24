@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Developer" namespace="\content\document\parsers">
+  <class name="jsParser" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1365679860</datecreated>
+      <daterevised>1395665814</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Javascript Parser</title>
+      <description>Parses and formats javascript files.</description>
+      <deprecated>Use \DEV\Tools\parsers\jsParser instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="format" returntype="string" static="true">
+          <description>Formats the given javascript code.
+For now, it just removes comments.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The javascript code to be formatted.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

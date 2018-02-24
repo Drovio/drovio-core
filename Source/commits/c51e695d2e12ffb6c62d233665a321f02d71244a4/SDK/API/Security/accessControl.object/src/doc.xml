@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="accessControl" namespace="\">
+    <info>
+      <version/>
+      <datecreated>March 8, 2013, 8:41 (UTC)</datecreated>
+      <daterevised>March 8, 2013, 8:41 (UTC)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Internal Access Control</title>
+      <description>This is the proxy class which is responsible for letting the API execute internal functions and prevent others from executing closed functions and features.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="internalCall" static="true" returntype="boolean">
+          <description>Check if the call was internal (SDK Library)</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="libCall" static="true" returntype="boolean">
+          <description>Checks if the execution call is from the given library</description>
+          <parameters>
+            <parameter name="$lib" type="string" defaultvalue="">
+              <description>The library to check</description>
+            </parameter>
+            <parameter name="$level" type="string" defaultvalue="">
+              <description>The level of the stack trace to check.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method name="_check_class" returntype="boolean">
+          <description>Checks the trace given for the specified class</description>
+          <parameters>
+            <parameter name="$trace" type="array" defaultvalue="">
+              <description>The execution stack trace as given by the debug_backtrace() function.</description>
+            </parameter>
+            <parameter name="$class" type="string" defaultvalue="">
+              <description>The class library which the call must abide.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

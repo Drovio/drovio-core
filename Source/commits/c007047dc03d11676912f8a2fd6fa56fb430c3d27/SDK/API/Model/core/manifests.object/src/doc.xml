@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\core">
+  <class name="manifests" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1430987618</datecreated>
+      <daterevised>1430989313</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Core manifest manager</title>
+      <description>Reads all the core manifests from the production.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getManifests" returntype="array" static="true">
+          <description>Get all enabled core manifests along with their protected packages.
+It includes private manifests.</description>
+          <parameters/>
+          <returndescription>An array of all manifests by manifest id.
+Includes name, title, description and packages by library.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="dvbLib" abstract="" namespace="\components\sql">
+    <info>
+      <version/>
+      <datecreated>1372847258</datecreated>
+      <daterevised>1375977392</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Developer's Database Library Manager</title>
+      <description>Manages global functions for database domains.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MAP_PATH">
+        <description>The path for the sql map file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getDomainList" returntype="array" static="true">
+          <description>Gets the list of all domains</description>
+          <parameters>
+            <parameter name="$full" type="boolean" defaultvalue="">
+              <description>Defines whether the returned array will be an array of full names or a nested array.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns a list of domains. If full, the array is a list of fullnames. Otherwise, it is a nested array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="export" returntype="void" static="true">
+          <description>Export entire query library.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getSubDomains" returntype="array">
+          <description>Get the subdomains of a domain as a nested array. It is a recursive function.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the map file.</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The base domain element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Nested array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSubDomainsString" returntype="array">
+          <description>Get the subdomains of a domain as a fullname array.</description>
+          <parameters>
+            <parameter name="$parser" type="DOMParser" defaultvalue="">
+              <description>The parser used to parse the map file.</description>
+            </parameter>
+            <parameter name="$base" type="DOMElement" defaultvalue="">
+              <description>The base domain element.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

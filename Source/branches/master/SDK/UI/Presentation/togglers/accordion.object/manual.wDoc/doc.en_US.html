@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Accordion</h1>
+<p>An accordion is a set of togglers build together side-by-side. The accordion has a functionality of closing all other togglers when a specific toggler opens.</p>
+<div class="code">
+	<pre>// Create an accordion and add togglers
+	
+// Use the class
+use \UI\Presentation\togglers\accordion;
+
+// Create an accordion object
+$accordion = new accordion();
+
+// This is a UIObject, so we build
+// It supports the chain pattern, so we get the element immediately
+$accObject = $accordion-&gt;build($id = "accrd_id")-&gt;get();
+
+// Append to body
+DOM::append($body, $accObject);
+
+
+// We can insert slices at will, the accordion uses inner togglers
+$title = "User Information";
+$userInfo = DOM::create("div", "", "", "userInfoContainer");
+$accordion-&gt;addSlice($id = "user_info", $title, $userInfo, $selected = FALSE);
+
+$title = "Security Settings";
+$securitySettings = DOM::create("div", "", "", "securitySettings");
+$accordion-&gt;addSlice($id = "security_settings", $title, $securitySettings, $selected = FALSE);</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 21 May, 2015 at 13:19</p></div>
+</div></body></html>

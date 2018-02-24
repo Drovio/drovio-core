@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Login" namespace="\">
+  <class name="registerDialog" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>4</build>
+      <datecreated>1431515279</datecreated>
+      <daterevised>1437744120</daterevised>
+      <extends>
+        <object>\ESS\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Platform Register Dialog</title>
+      <description>Creates a register dialog for use in pages and in applications.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="REG_TYPE_PAGE">
+        <description>The page registration type. It reloads the page after the registration.</description>
+      </const>
+      <const type="string" name="REG_TYPE_APP">
+        <description>The application registration type. It reloads the page after the registration.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="header">
+          <description>The header element.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="registerDialog">
+          <description>Builds the registration dialog object.</description>
+          <parameters>
+            <parameter name="$regtype" type="string" defaultvalue="">
+              <description>The registration dialog type.
+See class constants for more information.</description>
+            </parameter>
+            <parameter name="$return_url" type="string" defaultvalue="">
+              <description>Provide a redirect url after successful registration.
+Leave empty for default action (reload or redirect to my).
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The register dialog object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getReport" returntype="string">
+          <description>Get the registration dialog server report in popup form.</description>
+          <parameters>
+            <parameter name="$background" type="boolean" defaultvalue="">
+              <description>Whether the popup will have a background overlay.
+It is TRUE by default.</description>
+            </parameter>
+            <parameter name="$fade" type="boolean" defaultvalue="">
+              <description>Whether the popup will show with a fade.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The server report context.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="buildHeader" returntype="void">
+          <description>Build the dialog header.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildMainForm" returntype="void">
+          <description>Build the main dialog form.</description>
+          <parameters>
+            <parameter name="$regtype" type="string" defaultvalue="">
+              <description>The registration dialog type.
+See class constants for more information.</description>
+            </parameter>
+            <parameter name="$return_url" type="string" defaultvalue="">
+              <description>Provide a redirect url after successful registration.
+Leave empty for default action (reload or redirect to my).
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="buildFooter" returntype="void">
+          <description>Build the dialog footer.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

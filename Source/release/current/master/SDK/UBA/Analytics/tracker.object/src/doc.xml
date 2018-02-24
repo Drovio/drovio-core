@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UBA" package="Analytics" namespace="\">
+  <class abstract="" name="tracker">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1448993557</datecreated>
+      <daterevised>1448997926</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Tracker</title>
+      <description>Object that handles recording tracked events into the database.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const name="TIME_SPAN" type="integer">
+        <description>15 minutes in milliseconds</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop name="teamName" type="string">
+          <description>The team name</description>
+        </prop>
+        <prop name="dbc" type="dbConnection">
+          <description>Connection to the tracker database.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method static="true" returntype="tracker" name="getInstance">
+          <description>Get a tracker instance.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$teamName">
+              <description>The team name, required for the tracker database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The tracker instance</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method static="true" returntype="mixed" name="getEverything">
+          <description>Return all the row in the events_detailed table or False if query fails.</description>
+          <parameters/>
+          <returndescription>All rows in events_detailed on success or False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method static="true" returntype="void" name="track">
+          <description>Records an event in the tracker database and updates the aggregated records.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$event_name">
+              <description>The name of the event.</description>
+            </parameter>
+            <parameter defaultvalue="" type="integer" name="$user_id">
+              <description>The user id.</description>
+            </parameter>
+            <parameter defaultvalue="" type="integer" name="$session_id">
+              <description>The session id.</description>
+            </parameter>
+            <parameter defaultvalue="" type="array" name="$attrsParameter">
+              <description>All the other information apart from the primary key that must be added to the query.</description>
+            </parameter>
+            <parameter defaultvalue="" type="integer" name="$timestamp">
+              <description>If no value is given the current timestamp is will be set.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method returntype="void" name="__construct">
+          <description>Creates a tracker object.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$teamName">
+              <description>The team name required for the tracker database.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private">
+        <method static="true" returntype="array" name="prepareAttributes">
+          <description>Prepares the attributes for recording detailed or aggregated events.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$event_name">
+              <description>The event name.</description>
+            </parameter>
+            <parameter defaultvalue="" type="integer" name="$timestamp">
+              <description>The current timestamp.</description>
+            </parameter>
+            <parameter defaultvalue="" type="integer" name="$user_id">
+              <description>The user id.</description>
+            </parameter>
+            <parameter defaultvalue="" type="integer" name="$session_id">
+              <description>The session id.</description>
+            </parameter>
+            <parameter defaultvalue="" type="array" name="$attrsParameter">
+              <description>All parameters apart from the keys should be set in this array. The keys expected here are: {'event_name', 'user_id', 'session_id', 'city', 'region', 'country', 'browser', 'browser_version', 'device', 'current_url', 'initial_referrer', 'initial_referrer_domain', 'operating_system', 'referrer', 'referring_domain', 'screen_height', 'screen_width', 'utm_parameters'}.</description>
+            </parameter>
+            <parameter defaultvalue="" type="string" name="$recordType">
+              <description>"detailed" or "aggregated".</description>
+            </parameter>
+          </parameters>
+          <returndescription>array()</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method static="true" returntype="mixed" name="performQuery">
+          <description>Performs the query given and return the result or False for failure.</description>
+          <parameters>
+            <parameter defaultvalue="" type="string" name="$queryId">
+              <description>The id of the tracker query. Note that all queries must be from \UBA\Analytics\tracker.</description>
+            </parameter>
+            <parameter defaultvalue="" type="array" name="$attrs">
+              <description>All the required information the must be added to the query.</description>
+            </parameter>
+          </parameters>
+          <returndescription>False on fail and the result otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

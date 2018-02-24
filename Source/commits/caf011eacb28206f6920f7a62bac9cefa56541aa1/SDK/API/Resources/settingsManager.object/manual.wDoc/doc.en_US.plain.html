@@ -1,0 +1,23 @@
+<h1>Settings manager</h1>
+<p>This class provides an interface for manipulating xml-specific files, settings.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \API\Resources\settingsManager;
+
+// Create an instance
+$settings = new settingsManager($path = "/profile/", $fileName = "settings", $rootRelative = TRUE);
+
+// Set profile image url
+$settings->set("profile_image_url", "http://example.com/profile.png");
+
+// Get all settings
+// This call will return an array of all settings by name
+$profileSettings = $settings->get();
+
+// Output
+// $profileSettings['name'] = "John Doe";
+// $profileSettings['receive_mails'] = 1;
+// $profileSettings['google_plus_profile_url'] = "https://plus.google.com/profile/user/1";
+// $profileSettings['profile_image_url'] = "http://example.com/profile.png";</pre>
+</div>

@@ -1,0 +1,44 @@
+<h1>Platform engine</h1>
+<p>This class is somehow the main 'engine' of the platform that is the second thing to be initialized (after importer) and manages the core engine (sessions, dates etc) and the request.</p>
+<h2>Simple, know-how, engine stuff</h2>
+<p>Engine starts on every script like this:</p>
+<div class="code">
+	<pre>// We do not have to use anything, the class is always available
+
+// Engine start
+// This function initializes:
+// - datetimer (dates, formatting, timezones)
+// - locale (browser locale or account locale)
+// - session and request info
+engine::start();
+
+// Restart engine
+// This function resets:
+// - session and debugging modes
+engine::restart();</pre>
+</div>
+<h2>Handling the current request and controlling the flow</h2>
+<p>engine class knows everything about the request like methods (GET or POST) and the variables (and cookies) being transfer.</p>
+<div class="code">
+	<pre>// We do not have to use anything, the class is always available
+
+// The engine started the first time it ran and it analyzed the request
+// Checking if it is a post (we can include put as well)
+if (engine::isPost($includePut = FALSE))
+{
+	// Store information to db or anything
+}</pre>
+</div>
+<h2>Getting variables from the request</h2>
+<div class="code">
+	<pre>// We do not have to use anything, the class is always available
+
+// The engine started the first time it ran and it analyzed the request
+// Checking if it is a post (we can include put as well)
+if (engine::isPost($includePut = FALSE))
+{
+	// Get product id and initialze a class
+	// This function also has access to cookies transferred
+	$productID = engine::getVar("pid");
+}</pre>
+</div>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="817801431"><title>Get Person Info By SSN</title><description>Get person information by ssn</description><access>1</access><attributes><attr id="ssn"></attr></attributes></query>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DRVC" package="Social" namespace="\">
+  <class name="githubAccount" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1447333181</datecreated>
+      <daterevised>1447355694</daterevised>
+      <extends>
+        <object>\DRVC\Social\externalLoginAccount</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Github Account Login</title>
+      <description>Manages github login for the identity account.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="githubAccount" name="instance" static="true">
+          <description>The github account instance.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getInstance" returntype="githubAccount" static="true">
+          <description>Get a github account instance.</description>
+          <parameters>
+            <parameter name="$teamName" type="string" defaultvalue="">
+              <description>The team name for the identity database.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The githubAccount instance.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="login" returntype="boolean">
+          <description>Login via github login.
+It creates an account session.</description>
+          <parameters>
+            <parameter name="$code" type="string" defaultvalue="">
+              <description>The github authorization code to get the access token.</description>
+            </parameter>
+            <parameter name="$clientID" type="string" defaultvalue="">
+              <description>The github client id.</description>
+            </parameter>
+            <parameter name="$clientSecret" type="string" defaultvalue="">
+              <description>The github client secret.</description>
+            </parameter>
+            <parameter name="$redirectURI" type="string" defaultvalue="">
+              <description>The github redirect_uri parameter.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

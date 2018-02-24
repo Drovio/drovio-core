@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BT" package="Projects" namespace="\">
+  <class name="btProject" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1420448566</datecreated>
+      <daterevised>1420448566</daterevised>
+      <extends>
+        <object>\DEV\Projects\project</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Bug Tracker project</title>
+      <description>Manages a Bug Tracker project and its information.
+It can create virtual Bug Tracker projects for a team.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="mixed">
+          <description>Create a virtual Bug Tracker project.
+The request must be from a registered account.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The project title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The project description.
+It can be empty.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The project id on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getIssues" returntype="array">
+          <description>Get all issues of a project in a given version (optional).</description>
+          <parameters>
+            <parameter name="$version" type="string" defaultvalue="">
+              <description>The project's version.
+You can leave empty for all versions.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all issues in the given version.
+If no version is given, the array contains all issues for all versions by version id (key).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

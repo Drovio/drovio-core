@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\team">
+  <class name="folderManager" abstract="">
+    <info>
+      <version>3.0</version>
+      <build>1</build>
+      <datecreated>1417424158</datecreated>
+      <daterevised>1421223611</daterevised>
+      <extends>
+        <object>\AEL\Resources\folderManager</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Application Folder manager for teams</title>
+      <description>Manages all team folders for the current running application.
+
+NOTE: For each call it checks if there is an active application. If not, returns false every time.
+All paths are relative to the application root folder or the application shared folder root.
+The shared folder is one for all applications, so be careful of what you are storing there.</description>
+      <deprecated>Use \AEL\Resources\folderManager instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="mixed" static="true">
+          <description>Create a new instance of a folderManager.</description>
+          <parameters>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, the DOMParser will have access to the shared application data folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

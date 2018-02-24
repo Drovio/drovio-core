@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Invoices" namespace="\">
+  <class name="invoicePrint" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1443123188</datecreated>
+      <daterevised>1443123188</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Invoice Print Engine</title>
+      <description>Manages to print an invoice to a document.
+It supports only pdf for the moment.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="invoiceID">
+          <description>The invoice id.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create an invoice print instance.</description>
+          <parameters>
+            <parameter name="$invoiceID" type="string" defaultvalue="">
+              <description>The invoice id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="exportPDF" returntype="boolean">
+          <description>Export the pdf to the given filepath.</description>
+          <parameters>
+            <parameter name="$filePath" type="string" defaultvalue="">
+              <description>The team file path to save the pdf file.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>Whether to use the shared folder or not.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createInvoicePDF" returntype="mixed">
+          <description>Create the invoice pdf using the default schema.</description>
+          <parameters>
+            <parameter name="$pdf" type="pdfCreator" defaultvalue="">
+              <description>The pdf creator object.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The pdf file.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

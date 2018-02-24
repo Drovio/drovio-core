@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Temp" namespace="\">
+  <class name="vcs2" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1399723352</datecreated>
+      <daterevised>1399723352</daterevised>
+      <extends>\DEV\Version\vcs</extends>
+      <implements/>
+      <throws/>
+      <title>VCS Manager</title>
+      <description>Created for migration reasons.</description>
+      <deprecated>Use \DEV\Version\vcs instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

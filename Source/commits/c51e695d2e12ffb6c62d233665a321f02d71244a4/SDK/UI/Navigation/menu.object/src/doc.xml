@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="menu_prototype" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1366977793</datecreated>
+      <daterevised>1366977793</daterevised>
+      <extends/>
+      <implements/>
+      <title/>
+      <description>Usage
+</description>
+      <deprecated>Use \ESS\Prototype\html\MenuPrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="" name="menu">
+          <description/>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>_____ Constructor</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="get_menu" returntype="void">
+          <description>Create a menu holder</description>
+          <parameters>
+            <parameter name="$id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="insert_listItem" returntype="void">
+          <description>Inserts a list item to a given subList</description>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$item" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_subList" returntype="void">
+          <description>Returns the subList of the given item (if any)</description>
+          <parameters>
+            <parameter name="$listItem" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="get_listItem" returntype="void">
+          <description>Create a list item</description>
+          <parameters>
+            <parameter name="$content" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$class" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="insert_subList" returntype="void">
+          <description>Inserts a sublist to a given list item</description>
+          <parameters>
+            <parameter name="$listItem" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Profiler" namespace="\">
+  <class name="tester" abstract="true">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1392023750</datecreated>
+      <daterevised>1408812001</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Abstract Tester Profile</title>
+      <description>Manages all the testing configuration.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="array" name="status" static="true">
+          <description>Inner status value holder.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activate the tester mode for the given mode.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The tester mode name.</description>
+            </parameter>
+            <parameter name="$value" type="mixed" defaultvalue="">
+              <description>The value to store as activated (True or another value).</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivate the tester mode for the given mode.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The tester mode name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="status" returntype="mixed" static="true">
+          <description>Gets the tester mode status.</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The tester mode name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns the tester mode status balu</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

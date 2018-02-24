@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="SYS" package="Geoloc" namespace="\">
+  <class name="locale" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1412871875</datecreated>
+      <daterevised>1427047651</daterevised>
+      <extends>
+        <object>\API\Geoloc\locale</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>System Locale Manager</title>
+      <description>Adds, removes, activates and deactivates locale.
+Also provides active and available locale listing.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="active" returntype="array" static="true">
+          <description>Gets all active locale.</description>
+          <parameters/>
+          <returndescription>An array of all active locale.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="available" returntype="array" static="true">
+          <description>Gets all available locale.</description>
+          <parameters/>
+          <returndescription>An array of all available locale.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="add" returntype="boolean" static="true">
+          <description>Add a new locale as inactive.</description>
+          <parameters>
+            <parameter name="$language" type="integer" defaultvalue="">
+              <description>The language id.</description>
+            </parameter>
+            <parameter name="$country" type="integer" defaultvalue="">
+              <description>The country id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="activate" returntype="boolean" static="true">
+          <description>Activate a locale and set available for users.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to activate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="deactivate" returntype="boolean" static="true">
+          <description>Deactivate a locale and remove from user's selection.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The locale to deactivate.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setDefault" returntype="boolean" static="true">
+          <description>Set the system's default locale.</description>
+          <parameters>
+            <parameter name="$locale" type="string" defaultvalue="">
+              <description>The default locale value.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

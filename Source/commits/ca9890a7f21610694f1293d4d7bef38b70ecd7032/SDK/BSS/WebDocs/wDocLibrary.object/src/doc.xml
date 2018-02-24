@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BSS" package="WebDocs" namespace="\">
+  <class name="wDocLibrary" abstract="">
+    <info>
+      <version>0.2</version>
+      <build>1</build>
+      <datecreated>1409922393</datecreated>
+      <daterevised>1410273213</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Web Documents Library Manager</title>
+      <description>This is the class that is responsible for managing the folders and documents of the Web Docs service.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="PUBLIC_FOLDER">
+        <description>The library's public folder.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="serviceFolder">
+          <description>The Web Docs service root folder.</description>
+        </prop>
+        <prop type="DOMParser" name="dom_parser">
+          <description>The library index' DOMParser object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor method.
+It is responsible for creating the library index (if not any) and initializing the library.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getLibFolders" returntype="array">
+          <description>Get an array of all the folders under the given path.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$compact" type="boolean" defaultvalue="">
+              <description>Whether to return a single compact array with folders separated by "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>A nested array of all the folders under the given path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createFolder" returntype="boolean">
+          <description>Create a new folder in the doc library.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The parent folder to create the folder to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$folder" type="string" defaultvalue="">
+              <description>The name of the folder to create.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="createDoc" returntype="mixed">
+          <description>Create a document in the given folder.
+It updates the library index and creates a new wDoc.
+The initial context of the document will be saved in the user's active locale.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to create the document to.
+Separate each folder with "/".</description>
+            </parameter>
+            <parameter name="$docName" type="string" defaultvalue="">
+              <description>The document name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>If success, it returns the wDoc object, otherwise it returns NULL.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getFolderDocs" returntype="array">
+          <description>Get all documents in a given folder.</description>
+          <parameters>
+            <parameter name="$parent" type="string" defaultvalue="">
+              <description>The folder to look down from.
+The default value is empty, for the root.
+Separate each folder with "/".</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all documents.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="init" returntype="void">
+          <description>Initializes the DOMParser object and loads the library index file.
+If the index file doesn't exist, it creates it.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,58 @@
+/*____________________ UI.Html.pageComponents.HTMLRibbon ____________________*/
+.uiTlbRibbon {
+	display:none;
+	background-color:#FFF;
+	width:100%;
+}
+.uiTlbRibbon.inline {
+	border-bottom:1px solid rgba(166, 166, 166, 1);
+	position:fixed;
+	z-index:90;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.ribbon {
+	min-width:100px;
+}
+.inline .uiTlbRibbon {
+	border-top:1px solid rgba(166, 166, 166, 1);
+}
+.colGroup { padding:3px; }
+.inline .colGroup {
+	min-height:54px;
+	z-index:90;
+	padding:4px 3px 3px;
+}
+.colGroup {
+	overflow-x:auto;
+}
+.colGroup > .collection {
+	width:auto;
+	overflow:auto;
+}
+.inline .collection {
+	overflow-x:auto;
+	overflow-y:hidden;
+}
+.uiTlbRibbon .collection > .panel { min-height:42px; }
+
+.ribbon > .tools {
+	width: 100%;
+	height: 20px;
+	background: rgba(166, 166, 166, 0.6);
+	background: linear-gradient(#ddd, #bbb);
+	background: -webkit-linear-gradient(#ddd, #bbb);
+	background: -moz-linear-gradient(#ddd, #bbb);
+	border-top: 1px solid rgba(166, 166, 166, 0.7);
+	overflow: auto;
+}
+.tools > .pin {
+	width:16px;
+	height:16px;
+	margin:2px;
+	float:left;
+	background-image:url(/Library/Media/images/icons/16x16/pin.svg);
+	background-position:0px 0px;
+	cursor:pointer;
+}
+.inline .tools > .pin { background-position:-16px 0px; }

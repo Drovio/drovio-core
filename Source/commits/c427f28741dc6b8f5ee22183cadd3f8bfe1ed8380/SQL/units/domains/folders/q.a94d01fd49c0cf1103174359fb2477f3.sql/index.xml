@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1020682090"><title>Create Folder</title><description>Crate a system folder</description><access>1</access><attributes><attr id="parent_id"></attr><attr id="name"></attr><attr id="domain"></attr></attributes></query>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="25218440938487"><title>Create account session</title><description></description><access></access><attributes><attr id="aid"></attr><attr id="salt"></attr><attr id="ip"></attr><attr id="date"></attr><attr id="userAgent"></attr><attr id="rememberme"></attr></attributes></query>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="HTMLRibbon" abstract="" namespace="\pageComponents">
+    <info>
+      <version/>
+      <datecreated>1365145980</datecreated>
+      <daterevised>1373968172</daterevised>
+      <extends>\ESS\Prototype\UIObjectPrototype</extends>
+      <implements/>
+      <throws/>
+      <title>HTML Toolbar Ribbon Object</title>
+      <description>Builds the system's ribbon.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="DOMElement" name="colGroup">
+          <description>The collection group for the ribbon panel groups.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="build" returntype="HTMLRibbon">
+          <description>Builds the ribbon.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCollectionGroup" returntype="DOMElement">
+          <description>Returns the current collection group.</description>
+          <parameters/>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="insertCollection" returntype="DOMElement">
+          <description>Inserts a collection into the collection group.
+It returns the collection added.</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the collection</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load at open.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the collection to load during startup.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="getCollection" returntype="DOMElement" static="true">
+          <description>Creates and returns a collection</description>
+          <parameters>
+            <parameter name="$id" type="string" defaultvalue="">
+              <description>The id of the collection</description>
+            </parameter>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module's id to load at open.</description>
+            </parameter>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The name of the auxiliary of the module.</description>
+            </parameter>
+            <parameter name="$startup" type="boolean" defaultvalue="">
+              <description>Sets the collection to load during startup.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="insertItem" returntype="void" static="true">
+          <description>Appends a given item to a given collection.</description>
+          <parameters>
+            <parameter name="$collection" type="DOMElement" defaultvalue="">
+              <description>The receptor collection</description>
+            </parameter>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The appended item</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+        <method name="addNavigation" returntype="void" static="true">
+          <description>Inserts action to specific toolbar navigation item.</description>
+          <parameters>
+            <parameter name="$item" type="DOMElement" defaultvalue="">
+              <description>The item that will receive the action.</description>
+            </parameter>
+            <parameter name="$refId" type="string" defaultvalue="">
+              <description>The collection reference id.</description>
+            </parameter>
+            <parameter name="$ribbonType" type="string" defaultvalue="">
+              <description>The ribbon appearance type.
+Accepted values:
+- "float", this will show the ribbon as popup.
+- "inline", this will show the ribbon as ribbon.</description>
+            </parameter>
+            <parameter name="$type" type="string" defaultvalue="">
+              <description>The popup type.
+See PopupPrototype.</description>
+            </parameter>
+            <parameter name="$pinnable" type="boolean" defaultvalue="">
+              <description>Defines whether the ribbon will be pinnable for this action.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription/>
+          <throws/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

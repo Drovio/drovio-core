@@ -1,0 +1,141 @@
+<h1>Application HTML Async Content Builder</h1>
+<p>APPContent extends HTMLContent and it is the main component for building application web views. In each application, when a view is being called, an APPContent object runs on the back in order to load all the necessary components and build the UI for the user.</p>
+<p>Through this class, the application can deliver UI content or even action events. It also can create containers where another application view will be loaded sync or async.</p>
+<div class="code">
+	<pre>// Building an application view
+	
+// Use the class
+use \UI\Apps\APPContent;
+
+// Create the object
+$appContent = new APPContent();
+
+// This is a UIObject, so we build
+// We also load the static view html content
+$appContent-&gt;build($id = "container_id", $class = "container_class", $loadHTML = TRUE);
+
+
+// We can create DOMElements using DOM or HTML and append them in the content
+$div = DOM::create("div", "", "", "mainContainer");
+$htmlContent-&gt;append($div);
+
+
+// In case of static html, we can search using HTML and alter the content
+$ctitle = HTML::select(".container_class .ctitle")-&gt;item(0);
+HTML::innerHTML($ctitle, "This is the new title.");
+
+
+// After we have created the content, we send the report to the client
+// Leave the holder empty to let the platform engine to choose
+// We can choose to replace all the inner html of the destination
+return $appContent-&gt;getReport($holder = "", $method = APPContent::REPLACE_METHOD);</pre>
+</div>
+<h2>Application action factory</h2>
+<p>APPContent class provides access to AppActionFactory which can enable actions to any DOMElement using click listeners.</p>
+<div class="code">
+	<pre>// Use the class
+use \UI\Apps\APPContent;
+
+// Create the object
+$appContent = new APPContent();
+
+// See the action factory manual to learn about actions
+$actionFactory = $appContent-&gt;getActionFactory();
+
+// This is a UIObject, so we build
+// We also load the static view html content
+$appContent-&gt;build($id = "container_id", $class = "container_class", $loadHTML = TRUE);
+
+
+// Create a button and add an application listener with action factory
+$button = DOM::create("div", "Click me!", "", "button");
+$actionFactory-&gt;setAction($button, "application_view_to_load");
+
+
+// Send the report
+return $appContent-&gt;getReport($holder = "", $method = APPContent::REPLACE_METHOD);</pre>
+</div>
+<h3>Loading application views</h3>
+<p>APPContent can load other application views in two different ways:</p>
+<ul>
+	<li>1. Just load the view using loadView() and append to a parent element</li>
+	<li>2. Create a view container. The view container allows the view to load sync or async, providing attributes (for async) and even reload in the future using jq("view-container-selector").trigger("reload");</li>
+</ul>
+<p>Example:</p>
+<div class="code">
+	<pre>// Use the class
+use \UI\Apps\APPContent;
+
+// Create the object
+$appContent = new APPContent();
+
+// See the action factory manual to learn about actions
+$actionFactory = $appContent-&gt;getActionFactory();
+
+// This is a UIObject, so we build
+// We also load the static view html content
+$appContent-&gt;build($id = "container_id", $class = "container_class", $loadHTML = TRUE);
+
+
+// Load a view and append it to the APPContent main holder
+$first_view = $appContent-&gt;loadView("first_view");
+$appContent-&gt;append($first_view);
+
+
+// Create an application view container
+// This will create the container and it will load the view async when the DOM is ready
+$appViewContainer = $appContent-&gt;getAppViewContainer($viewName = "second_view", $attr = array(), $startup = TRUE, $containerID = "", $loading = FALSE, $preload = FALSE);
+
+
+// Send the report
+return $appContent-&gt;getReport($holder = "", $method = APPContent::REPLACE_METHOD);</pre>
+</div>
+<h3>Loading application literals and logging</h3>
+<p>APPContent can use internally the appLiteral class (AEL\Literals\appLiteral) to load literals into the view:</p>
+<div class="code">
+	<pre>// Use the class
+use \UI\Apps\APPContent;
+
+// Create the object
+$appContent = new APPContent();
+
+// See the action factory manual to learn about actions
+$actionFactory = $appContent-&gt;getActionFactory();
+
+// This is a UIObject, so we build
+// We also load the static view html content
+$appContent-&gt;build($id = "container_id", $class = "container_class", $loadHTML = TRUE);
+
+
+// Create a header with an application literal
+$literal = $appContent-&gt;getLiteral($scope = "app.scope", $name = "app_literal_name", $attributes = array(), $wrapped = TRUE);
+$hd = DOM::create("h2", $title, "", "hd");
+$appContent-&gt;append($hd);
+
+
+// We can also log a status
+$appContent->log("App execution goes well so far...");
+
+
+// Create an application view container
+// This will create the container and it will load the view async when the DOM is ready
+$appViewContainer = $appContent-&gt;getAppViewContainer($viewName = "second_view", $attr = array(), $startup = TRUE, $containerID = "", $loading = FALSE, $preload = FALSE);
+
+
+// Send the report
+return $appContent-&gt;getReport($holder = "", $method = APPContent::REPLACE_METHOD);</pre>
+</div>
+<h2>Dynamic content in the designer html</h2>
+<p>APPContent contains mechanisms that allow the developer to insert dynamic content inside the static html. Using data attributes, the content can include literals and resolve urls.</p>
+<h3>Dynamic Literals</h3>
+<p>We can set an element to load an application literal as child using the data-literal attribute as follows:</p>
+<div class="code">
+	<pre>data-literal='{"scope":"app_scope","name":"lbl_title"}'</pre>
+</div>
+<h3>Dynamic Urls</h3>
+<p>Urls and hrefs can be placed normally if you want to refer to an outside source. However, if you want to refer to a platform specific url, we recommend using the engine to resolve the url according to the current url status:</p>
+<div class="code">
+	<pre>data-href='{"domain":"developers","page":"/docs/index.php"}'
+	
+The above will resolve into: https://developers.drov.io/docs/index.php</pre>
+</div>

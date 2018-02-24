@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\">
+  <class name="cProductManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1418654009</datecreated>
+      <daterevised>1418654009</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Company Product Manager</title>
+      <description>Fetches products by hierarchy or by title.
+Future to be extended with more functionality and getters.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getProductsByHierarchy" returntype="array" static="true">
+          <description>Get all company products inside a given hierarchy id.</description>
+          <parameters>
+            <parameter name="$hierarchyID" type="integer" defaultvalue="">
+              <description>The hierarchy id to get the products for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProductsByTitle" returntype="array" static="true">
+          <description>Get all company products that match the given title.</description>
+          <parameters>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The title match.
+It is an SQL-like match query.
+Default value is '%'.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

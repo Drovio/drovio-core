@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Prototype" namespace="\">
+  <class name="UIObjectPrototype" abstract="true">
+    <info>
+      <version>1.0</version>
+      <build>1</build>
+      <datecreated>1362650820</datecreated>
+      <daterevised>1438073284</daterevised>
+      <extends>
+        <object>\UI\Prototype\UIObjectPrototype</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>UI Object Prototype</title>
+      <description>It is the prototype for all ui objects.
+All ui objects must inherit this class and implement the "build" method to build the object.</description>
+      <deprecated>Use \UI\Prototype\UIObjectPrototype instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

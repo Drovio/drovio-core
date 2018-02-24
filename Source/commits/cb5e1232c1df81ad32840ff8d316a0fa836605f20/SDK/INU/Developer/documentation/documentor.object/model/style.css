@@ -1,0 +1,66 @@
+.documentor {
+	height:100%;
+}
+
+.documentor > .controlBar {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid grey;
+	
+}
+
+.documentor .toolbarItem {
+	cursor: pointer;
+	height: 16px;
+	margin: 6px; 
+	width: 80px;
+	text-align: center;
+}
+
+.documentor > .dropPool {
+	overflow-y: scroll;
+	height:100%;
+}
+
+.documentor .presenter {
+	border: 1px solid rgba(166, 166, 166, 0.5);
+	margin: 10px;
+	padding: 5px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-shadow: 0px 0px 15px #AAA;
+}
+
+.documentor .presenter .itemControlBar {
+	height:20px;
+}
+
+.documentor .itemControlBar > .control{
+	cursor: pointer;
+	float:right;
+}
+.documentor .itemControlBar > .control span{
+	padding:0px 5px 0px 5px;
+}
+
+.documentor .itemControlBar > .control:hover{
+	color:blue;
+}
+
+.documentor .itemControlBar > .separator{
+	float:right;
+}
+
+.documentor .viewer {
+	margin: 8px;
+}
+
+.documentor .presenter .editor{
+}
+
+.documentor .ddMenuGroup{
+	display: block;
+	position: fixed;
+	background: white;
+}

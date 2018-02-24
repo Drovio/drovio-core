@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="AEL" package="Resources" namespace="\">
+  <class name="folderManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1421223351</datecreated>
+      <daterevised>1421223351</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Folder manager</title>
+      <description>Manages all application folders for the current running application.
+
+NOTE: For each call it checks if there is an active application. If not, returns false every time.
+All paths are relative to the application root folder or the application shared folder root.
+The shared folder is one for all applications, so be careful of what you are storing there.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ACCOUNT_MODE">
+        <description>The account file mode.</description>
+      </const>
+      <const type="integer" name="TEAM_MODE">
+        <description>The team file mode.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="integer" name="mode">
+          <description>The file mode for the class instance.</description>
+        </prop>
+        <prop type="boolean" name="shared">
+          <description>Shared or private application data.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Create a new instance of an application folder manager.</description>
+          <parameters>
+            <parameter name="$mode" type="integer" defaultvalue="">
+              <description>The file mode.
+See class constants for options.
+It is in account mode by default.</description>
+            </parameter>
+            <parameter name="$shared" type="boolean" defaultvalue="">
+              <description>If set to true, the fileManager will have access to the shared application data folder.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Creates a new folder in the specified location in the account application folder.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The folder's parent path, or the folder's path, if the name is omitted.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder's name.
+You can leave it empty if the folder name is included in the path value.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>Allows the creation of nested directories specified in the pathname.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove a folder from the specified location in the account application folder.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The folder's parent path, or the folder's path, if the name is omitted.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder's name.
+You can leave it empty if the folder name is included in the path value.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$recursive" type="boolean" defaultvalue="">
+              <description>Remove all inner contents of the folder recursively.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="clean" returntype="boolean">
+          <description>Empties a directory of all files and folders.</description>
+          <parameters>
+            <parameter name="$path" type="string" defaultvalue="">
+              <description>The folder's parent path, or the folder's path, if the name is omitted.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The folder's name.
+You can leave it empty if the folder name is included in the path value.
+It is empty by default.</description>
+            </parameter>
+            <parameter name="$includeHidden" type="boolean" defaultvalue="">
+              <description>Whether to include hidden files and folders.
+It is TRUE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="copy" returntype="boolean">
+          <description>Copy a folder (recursively) in the specified location in the account application folder.</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source folder path.</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The destination folder path.</description>
+            </parameter>
+            <parameter name="$contents_only" type="boolean" defaultvalue="">
+              <description>Defines whether only the contents of the folder will be copied or the folder selected also.
+It is FALSE by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="move" returntype="boolean">
+          <description>Move a folder in the specified location in the account application folder.</description>
+          <parameters>
+            <parameter name="$source" type="string" defaultvalue="">
+              <description>The source folder path.</description>
+            </parameter>
+            <parameter name="$destination" type="string" defaultvalue="">
+              <description>The destination folder path.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, False on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getPath" returntype="string">
+          <description>Get the root folder for the object.</description>
+          <parameters/>
+          <returndescription>The root folder, according to mode and shared variable.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

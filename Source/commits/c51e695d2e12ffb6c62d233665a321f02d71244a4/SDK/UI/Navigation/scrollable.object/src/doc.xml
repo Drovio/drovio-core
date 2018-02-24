@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="scrollable" abstract="" namespace="\">
+    <info>
+      <version/>
+      <datecreated>1379330597</datecreated>
+      <daterevised>1379330597</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Scrollable</title>
+      <description>Defines scrollable areas and manages page scroll at will.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

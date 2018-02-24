@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\">
+  <class name="appManager" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396808773</datecreated>
+      <daterevised>1396886740</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPublishedAppFolder" returntype="string" static="true">
+          <description>Gets the application's publish folder.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The application publish folder path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getSharedLibraryList" returntype="array" static="true">
+          <description>Gets the redback's shared library list.</description>
+          <parameters/>
+          <returndescription>The shared library in a $library =&amp;gt; $object array.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="publishApp" returntype="void" static="true">
+          <description>Publish the given application.
+It publishes the application to the review folder.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$branchName" type="string" defaultvalue="">
+              <description>The branch name to publish.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

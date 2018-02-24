@@ -1,0 +1,62 @@
+#uiUserConnect {
+	overflow: auto;
+	padding: 30px 100px;
+	width:500px;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.40);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.8);
+}
+#uiUserConnect .uiConnectHeader {
+	margin: 0;
+	padding-bottom: 20px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+	text-shadow:0 0 15px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.3);
+	font-size:22px;
+}
+
+#uiUserConnect .connectBox {
+	float: left;
+	width: 200px;
+}
+.connectBox .headerBox {
+	font-size: 14px;
+	color: #303030;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #AAA;
+	text-shadow:0 0 15px rgba(255, 255, 255, 0.3), 0 0 0 rgba(0, 0, 0, 0.3);
+}
+.connectBox .navLink {
+	display: block;
+	max-width: 250px;
+	padding: 15px 50px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#BBB));
+	border:1px solid rgba(166, 166, 166,1);
+	text-align:center;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+	color: rgba(100, 100, 100, 1);
+	font-weight: bold;
+	font-size:16px;
+	cursor: pointer;
+}
+.connectBox .navLink:hover {
+	text-decoration: none;
+	background-color:#EEE;
+	color: rgba(50, 50, 50, 1);
+	border:1px solid rgba(100, 100, 100,1);
+}
+#uiUserConnect .connectSeparator {
+	float: left;
+	width: 100px;
+	min-height: 75px;
+	line-height: 75px;
+	text-align: center;
+}
+

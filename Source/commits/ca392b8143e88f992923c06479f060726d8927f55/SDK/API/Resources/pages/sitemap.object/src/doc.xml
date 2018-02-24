@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Resources" namespace="\pages">
+  <class name="sitemap" abstract="">
+    <info>
+      <version/>
+      <datecreated>1396598493</datecreated>
+      <daterevised>1404892877</daterevised>
+      <extends>
+        <object>\SYS\Resources\pages\sitemap</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Sitemap Manager</title>
+      <description>Generates the Redback Sitemap file</description>
+      <deprecated>Use \SYS\Resources\pages\sitemap instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

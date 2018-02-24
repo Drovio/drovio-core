@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="formValidator" namespace="\forms">
+    <info>
+      <version/>
+      <datecreated>March 11, 2013, 10:56 (EET)</datecreated>
+      <daterevised>March 11, 2013, 10:56 (EET)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Form Validator</title>
+      <description>A visual javascript form validator.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="engage" static="true" returntype="void">
+          <description>Attaches a formValidator to a given form.</description>
+          <parameters>
+            <parameter name="$form" type="DOMElement" defaultvalue="">
+              <description>The form where the validator will be attached</description>
+            </parameter>
+            <parameter name="$mode" type="string" defaultvalue="">
+              <description>The mode of the validator.
+Accepted values:
+- "verbose" : show all messages (default)
+- "icon" : show only icons</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="addAnnotation" static="true" returntype="void">
+          <description>Adds input information to the given element</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The input element</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The annotation title</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The annotation description</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="addValidator" static="true" returntype="void">
+          <description>Adds a specific validator to the input.</description>
+          <parameters>
+            <parameter name="$element" type="DOMElement" defaultvalue="">
+              <description>The input element where the validator will be attached.</description>
+            </parameter>
+            <parameter name="$validator" type="string" defaultvalue="">
+              <description>The validator's unique name.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

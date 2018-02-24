@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Model" namespace="\units\domain">
+  <class name="SpageFolder" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1395651548</datecreated>
+      <daterevised>1395651548</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title/>
+      <description/>
+      <deprecated>Use \API\Resources\pages\pageFolder instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="info" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$folder_id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="trail" returntype="void" static="true">
+          <description/>
+          <parameters>
+            <parameter name="$folder_id" type="" defaultvalue="">
+              <description/>
+            </parameter>
+            <parameter name="$delimiter" type="" defaultvalue="">
+              <description/>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="ebManager" abstract="" namespace="\components\ebuilder">
+    <info>
+      <version/>
+      <datecreated>1375091917</datecreated>
+      <daterevised>1375092416</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Ebuilder Manager</title>
+      <description>Manages ebuilder's libraries, scripts, and resources.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="ARCHIVES">
+        <description>Ebuilder archive directory</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="packCore" returntype="boolean" static="true">
+          <description>Packs eBuilder's core into an archive</description>
+          <parameters/>
+          <returndescription>Status of the process</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="packSource" returntype="void" static="true">
+          <description>Packs a (library's) package(s) into its respective archive</description>
+          <parameters>
+            <parameter name="$library" type="string" defaultvalue="">
+              <description>Name of the library</description>
+            </parameter>
+            <parameter name="$package" type="string" defaultvalue="">
+              <description>Name of a specific package</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="packResources" returntype="void" static="true">
+          <description>Packs ebuilder's resources in an archive</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="packStyles" returntype="string" static="true">
+          <description>Collects ebuilder's styles</description>
+          <parameters/>
+          <returndescription>The collection of the styles</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="packScripts" returntype="string" static="true">
+          <description>Collects ebuilder's scripts</description>
+          <parameters/>
+          <returndescription>The collection of scripts</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="identifyObject" returntype="array" static="true">
+          <description>Receives an object's full name, and breaks it into its respective parts</description>
+          <parameters>
+            <parameter name="$objFullName" type="string" defaultvalue="">
+              <description>The object's full name</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array that holds the object's name, the object package's name, and the object's namespace.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

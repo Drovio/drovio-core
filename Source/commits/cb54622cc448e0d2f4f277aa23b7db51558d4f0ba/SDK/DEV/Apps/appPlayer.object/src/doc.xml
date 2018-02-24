@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\">
+  <class name="appPlayer" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1396858440</datecreated>
+      <daterevised>1396858440</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Player</title>
+      <description>Inits and runs the application.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="init" returntype="void" static="true">
+          <description>Initializes the application importer.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getView" returntype="string" static="true">
+          <description>Gets the html content of the requested view of the running application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view html content.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="play" returntype="mixed" static="true">
+          <description>Runs the requested view php code for the running application.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The php code return value.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getViewName" returntype="string" static="true">
+          <description>Get the published view name.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The view name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The published view name (no extensions included).</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="getViewPath" returntype="string" static="true">
+          <description>Gets the application's developer folder path to the view (no extensions included).</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+            <parameter name="$viewName" type="" defaultvalue="">
+              <description>The view name. If empty, get the application startup view from settings.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The view path.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

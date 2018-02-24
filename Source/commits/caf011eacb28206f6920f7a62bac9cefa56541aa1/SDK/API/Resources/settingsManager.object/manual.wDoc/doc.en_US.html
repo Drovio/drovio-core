@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div class="wDoc">
+<div class="header"></div>
+<div class="body">
+<h1>Settings manager</h1>
+<p>This class provides an interface for manipulating xml-specific files, settings.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \API\Resources\settingsManager;
+
+// Create an instance
+$settings = new settingsManager($path = "/profile/", $fileName = "settings", $rootRelative = TRUE);
+
+// Set profile image url
+$settings-&gt;set("profile_image_url", "http://example.com/profile.png");
+
+// Get all settings
+// This call will return an array of all settings by name
+$profileSettings = $settings-&gt;get();
+
+// Output
+// $profileSettings['name'] = "John Doe";
+// $profileSettings['receive_mails'] = 1;
+// $profileSettings['google_plus_profile_url'] = "https://plus.google.com/profile/user/1";
+// $profileSettings['profile_image_url'] = "http://example.com/profile.png";</pre>
+</div>
+</div>
+<div class="footer"><p class="updated">Document updated 29 August, 2015 [en_US]</p></div>
+</div></body></html>

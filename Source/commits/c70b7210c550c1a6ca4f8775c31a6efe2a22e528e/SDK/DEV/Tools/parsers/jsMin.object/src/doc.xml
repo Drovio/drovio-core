@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Tools" namespace="\parsers">
+  <class name="jsMin" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1411558149</datecreated>
+      <daterevised>1411558385</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>jsMin for minifying a javascript document.</title>
+      <description>This class includes the right functions for minifying a given javascript document.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="integer" name="ORD_LF">
+        <description>The line feed ord number.</description>
+      </const>
+      <const type="integer" name="ORD_SPACE">
+        <description>The space ord number.</description>
+      </const>
+      <const type="integer" name="ACTION_KEEP_A">
+        <description>The 'keep a' action code.</description>
+      </const>
+      <const type="integer" name="ACTION_DELETE_A">
+        <description>The 'delete a' action code.</description>
+      </const>
+      <const type="integer" name="ACTION_DELETE_A_B">
+        <description>The 'delete a and b' action code.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="string" name="a">
+          <description>The first character to check.</description>
+        </prop>
+        <prop type="string" name="b">
+          <description>The second character to check.</description>
+        </prop>
+        <prop type="string" name="input">
+          <description>The input javascript document to minify.</description>
+        </prop>
+        <prop type="integer" name="inputIndex">
+          <description>The current parser index.</description>
+        </prop>
+        <prop type="integer" name="inputLength">
+          <description>The total input length in characters.</description>
+        </prop>
+        <prop type="string" name="lookAhead">
+          <description>The next character.</description>
+        </prop>
+        <prop type="string" name="output">
+          <description>The generated output.</description>
+        </prop>
+      </scope>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Constructor Method.
+Initializes the given javascript input.</description>
+          <parameters>
+            <parameter name="$input" type="string" defaultvalue="">
+              <description>The javascript input to be minified.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected">
+        <method name="action" returntype="void">
+          <description>Action -- do something! What to do is determined by the $command argument.
+
+Action treats a string as a single character.
+Action recognizes a regular expression if it is preceded by ( or , or =.
+
+throws Exception If parser errors are found:
+- Unterminated string literal
+- Unterminated regular expression set in regex literal
+- Unterminated regular expression literal</description>
+          <parameters>
+            <parameter name="$command" type="integer" defaultvalue="">
+              <description>One of class constants:
+ACTION_KEEP_A
+- Output A. Copy B to A. Get the next B.
+ACTION_DELETE_A
+- Copy B to A. Get the next B. (Delete A).
+ACTION_DELETE_A_B
+- Get the next B. (Delete B).</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="get" returntype="mixed">
+          <description>Get next char. Convert ctrl char to space.</description>
+          <parameters/>
+          <returndescription>The next char as string or null if there is no chars left.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="isAlphaNum" returntype="boolean">
+          <description>Is $c a letter, digit, underscore, dollar sign, or non-ASCII character.</description>
+          <parameters>
+            <parameter name="$c" type="string" defaultvalue="">
+              <description>The string to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns true if the given character is alpha num, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="min" returntype="string">
+          <description>Perform the minification.</description>
+          <parameters/>
+          <returndescription>The minified result.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="next" returntype="string">
+          <description>Get the next character, skipping over comments.
+peek() is used to see if a '/' is followed by a '/' or '*'.</description>
+          <parameters/>
+          <returndescription>The next character.</returndescription>
+          <throws>
+            <exception>Exception</exception>
+          </throws>
+          <deprecated/>
+        </method>
+        <method name="peek" returntype="string">
+          <description>Get next char.
+If is ctrl character, translate to a space or newline.</description>
+          <parameters/>
+          <returndescription>The next character.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

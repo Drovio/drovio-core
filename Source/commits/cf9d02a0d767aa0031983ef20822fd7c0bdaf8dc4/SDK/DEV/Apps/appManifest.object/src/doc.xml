@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Apps" namespace="\">
+  <class name="appManifest" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1424882104</datecreated>
+      <daterevised>1424963712</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Application Manifest Manager</title>
+      <description>Manages the application manifest file.
+It sets application's permissions for the SDK and other important settings that the application needs to work.</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="MANIFEST_FILE">
+        <description>The manifest index file.</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="application" name="app">
+          <description>The application object.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the manifest manager.</description>
+          <parameters>
+            <parameter name="$appID" type="integer" defaultvalue="">
+              <description>The application id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getPermissions" returntype="array">
+          <description>Get all application protected permissions regarding the SDK usage.</description>
+          <parameters/>
+          <returndescription>An array of all permission package ids.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setPermissions" returntype="boolean">
+          <description>Set the application permission packages.</description>
+          <parameters>
+            <parameter name="$permissions" type="array" defaultvalue="">
+              <description>An array of all permission package ids to set for the application.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="create" returntype="void">
+          <description>Creates the manifest index file for the first time.</description>
+          <parameters/>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

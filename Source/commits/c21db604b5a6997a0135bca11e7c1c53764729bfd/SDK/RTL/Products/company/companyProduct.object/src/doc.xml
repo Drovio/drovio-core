@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="RTL" package="Products" namespace="\company">
+  <class name="companyProduct" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>2</build>
+      <datecreated>1415001293</datecreated>
+      <daterevised>1415869765</daterevised>
+      <extends>
+        <object>\RTL\Products\globalProduct</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Company Product Manager</title>
+      <description/>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected">
+        <prop type="integer" name="companyProductID">
+          <description>The company product id.</description>
+        </prop>
+      </scope>
+      <scope type="private">
+        <prop type="dbConnection" name="dbc">
+          <description>The Redback database connection manager.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the company product.</description>
+          <parameters>
+            <parameter name="$id" type="integer" defaultvalue="">
+              <description>The company product id.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="void">
+          <description>Create a new company product.</description>
+          <parameters>
+            <parameter name="$productCodeType" type="integer" defaultvalue="">
+              <description>The product code type.
+It references to EAN, UPC and other code types.</description>
+            </parameter>
+            <parameter name="$productCode" type="integer" defaultvalue="">
+              <description>The unique product code (EAN, UPC etc.)</description>
+            </parameter>
+            <parameter name="$productHierarchy" type="integer" defaultvalue="">
+              <description>The product hierarchy id.</description>
+            </parameter>
+            <parameter name="$title" type="string" defaultvalue="">
+              <description>The product title.</description>
+            </parameter>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The product description.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get product information about a company product.</description>
+          <parameters>
+            <parameter name="$includeGlobal" type="boolean" defaultvalue="">
+              <description>If set to TRUE, the array will include global product information.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of product information.
+It can include global product information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

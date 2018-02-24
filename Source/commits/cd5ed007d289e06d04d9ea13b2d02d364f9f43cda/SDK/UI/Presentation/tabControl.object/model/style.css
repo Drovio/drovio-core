@@ -1,0 +1,109 @@
+/*____________________ ui.presentation.tabControl ____________________*/
+.tabControl {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	width:100%;
+	height: 100%;
+	position:relative;
+	border:1px solid rgba(166, 166, 166, 0.8);
+}
+.tabControl > .tabs {
+	position:relative;
+	min-width:0px;
+	padding:0px;
+	overflow:hidden;
+	background-color:#CCC;
+}
+.tabControl > .tabs > ul {
+	overflow:auto;
+	height:25px;
+	border-bottom:1px solid rgba(166, 166, 166, 0.8);
+	list-style:none;
+	display:block;
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.tabControl .tabMenuItem {
+	float:left;
+	text-indent:0px;
+	cursor:default;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	border-right:1px solid rgba(166, 166, 166, 0.8);
+	position:relative;
+	list-style:none;
+	margin:0px;
+	display:block;
+	width:auto;
+	min-height:19px;
+	font-size:11px;
+	vertical-align:middle;
+	width: 200px;
+	min-width:50px;
+	text-align: center;
+}
+.tabControl.full .tabMenuItem {
+	width: auto;
+}
+.tabMenuItem.editable > .closeButton {
+	display:block;
+	position:absolute;
+	top:5px;
+	right:0px;
+	width:16px;
+	height:16px;
+	background-image:url(/Library/Media/images/icons/16x16/glppCloseButton.svg);
+	opacity:0.5;
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer;
+	background-color: transparent;
+}
+.tabMenuItem.editable > .closeButton:hover {
+	opacity:1;
+}
+.tabMenuItem.selected, .tabMenuItem.selected:hover {
+	font-weight:normal;
+	background-color:#FFF;
+}
+.tabMenuItem:hover {
+	background-color:rgba(256, 256, 256, 0.4);
+}
+.tabMenuItem .tabMenuItemText {
+	display:block;
+	padding:0px 5px;
+	line-height:24px;
+	width:auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tabMenuItem.editable .tabMenuItemText{
+	padding-right:23px;
+}
+.tabControl.pos-absolute > .pages {
+	position:absolute;
+	top:25px;
+	bottom:0px;
+}
+.tabControl > .pages {
+	clear:both;
+	width:100%;
+	min-height:20px;
+	position: absolute;
+	top: 25px;
+	bottom: 0px;
+}
+.tabControl > .pages > .tabPageContainer {
+	padding:0px;
+	height:100%;
+	overflow:auto;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}

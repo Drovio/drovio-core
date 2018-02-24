@@ -1,0 +1,43 @@
+<h1>Working with application files</h1>
+<p>Applications have access to accounts but also to teams as well. Each application can create files in account mode (files available for the current account only) and in team mode (files available to the entire team). All files are being created using relative paths and always having the file contents.</p>
+<p>Applications can store files as private so that only the current application has access to them, or as shared where all applications can have access.</p>
+<p>All the paths given are application root folder relative, according to parameters given in constructor.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \AEL\Resources\filesystem\fileManager;
+
+// Create a private file in team mode
+$fm = new fileManager($mode = fileManager::TEAM_MODE, $shared = FALSE);
+$fm-&gt;create($file = "/day1/log.txt", $contents = "This is a new log line", $recursive = TRUE);
+
+
+// Append a file
+// Get current contents
+$fileContents = $fm-&gt;get($file = "/day1/log.txt");
+
+// Add more
+$fileContents .= "\n";
+$fileContents .= "This is a second log line";
+
+// Write them to the file
+$fm-&gt;put($file = "/day1/log.txt", $fileContents);
+
+
+// Create a private file in account mode
+$fm = new fileManager($mode = fileManager::ACCOUNT_MODE, $shared = FALSE);
+$fm-&gt;create($file = "/personal/info.txt", $contents = "My name is John!", $recursive = TRUE);
+
+
+
+// Create a shared file in team or account mode
+// This file is accessible to all applications using the same lines of code
+$fm = new fileManager($mode = fileManager::ACCOUNT_MODE, $shared = TRUE);
+
+// Read an existing file
+$contents = $fm-&gt;get($file = "/path/to/file.txt");
+
+// Write new contents
+$contents .= "This is a new content";
+$fm-&gt;create($file = "/path/to/file.txt", $contents);</pre>
+</div>

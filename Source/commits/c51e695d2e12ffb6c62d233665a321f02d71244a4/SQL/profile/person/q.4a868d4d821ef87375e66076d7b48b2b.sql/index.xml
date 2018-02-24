@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="1916130585"><title>Create Personal Address</title><description>Create a personal address</description><access>1</access><attributes><attr id="pid"></attr><attr id="description"></attr><attr id="address"></attr><attr id="zipcode"></attr><attr id="area"></attr><attr id="cid"></attr><attr id="tid"></attr></attributes></query>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="16471472824431"><title>Get all completed invoices</title><description></description><access></access><attributes><attr id="cid"></attr><attr id="ftime"></attr><attr id="ttime"></attr><attr id="aid"></attr></attributes></query>

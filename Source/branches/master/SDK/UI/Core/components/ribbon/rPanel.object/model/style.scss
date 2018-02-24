@@ -1,0 +1,9 @@
+.rPanel {
+	display: block;
+	width: auto;
+	padding: 3px;
+	border-bottom: 1px solid #CCC;
+}
+.rPanel:last-child {
+	border-bottom: none;
+}

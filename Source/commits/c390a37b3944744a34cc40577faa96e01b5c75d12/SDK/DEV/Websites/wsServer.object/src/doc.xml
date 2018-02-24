@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\">
+  <class name="wsServer" abstract="">
+    <info>
+      <version>6.1</version>
+      <build>1</build>
+      <datecreated>1412359743</datecreated>
+      <daterevised>1418666709</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Website Server</title>
+      <description>A class to manage website's server.xml file. That file keeps all the required information for the various the user has configure to use with the website project</description>
+      <deprecated/>
+    </info>
+    <constants>
+      <const type="string" name="CON_TYPE_FTP">
+        <description>The FTP connection type identifier</description>
+      </const>
+      <const type="string" name="CON_TYPE_SFTP">
+        <description>The SFTP connection type identifier</description>
+      </const>
+    </constants>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop type="string" name="serverID">
+          <description>The server id.</description>
+        </prop>
+        <prop type="website" name="website">
+          <description>The website object.</description>
+        </prop>
+        <prop type="vcs" name="vcs">
+          <description>The website vcs manager object.</description>
+        </prop>
+        <prop type="DOMParser" name="xmlParser">
+          <description>The parser used to parse the file.</description>
+        </prop>
+        <prop type="string" name="serversFile">
+          <description>The servers filepath.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="__construct" returntype="void">
+          <description>Initialize the server manager class.</description>
+          <parameters>
+            <parameter name="$websiteID" type="string" defaultvalue="">
+              <description>The website id.</description>
+            </parameter>
+            <parameter name="$serverID" type="string" defaultvalue="">
+              <description>The server id to manage.
+Leave empty for new servers.
+It is empty by default.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="create" returntype="boolean">
+          <description>Create a new server</description>
+          <parameters>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The server name.</description>
+            </parameter>
+            <parameter name="$address" type="string" defaultvalue="">
+              <description>The server address.</description>
+            </parameter>
+            <parameter name="$connectionType" type="string" defaultvalue="">
+              <description>The server connection type (ftp or sftp).
+For more information see the class' constants.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateInfo" returntype="boolean">
+          <description>Update the basic server info, such us description, type and connection type.</description>
+          <parameters>
+            <parameter name="$description" type="string" defaultvalue="">
+              <description>The server description.</description>
+            </parameter>
+            <parameter name="$serverType" type="string" defaultvalue="">
+              <description>The server type.
+It can be anything, usually the presentation layer defines some specific types.</description>
+            </parameter>
+            <parameter name="$connectionType" type="string" defaultvalue="">
+              <description>The server connection type (ftp or sftp).
+For more information see the class' constants.</description>
+            </parameter>
+            <parameter name="$httpdocs" type="string" defaultvalue="">
+              <description>The root folder on server where the website will be installed in and ger served from.</description>
+            </parameter>
+            <parameter name="$webroot" type="string" defaultvalue="">
+              <description>The trailing path of server url under where the site will be installed</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="updateCredentials" returntype="boolean">
+          <description>Update the server connection credentials.</description>
+          <parameters>
+            <parameter name="$username" type="string" defaultvalue="">
+              <description>The server username.</description>
+            </parameter>
+            <parameter name="$password" type="string" defaultvalue="">
+              <description>The server password.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="remove" returntype="boolean">
+          <description>Remove the current server from the server list.</description>
+          <parameters/>
+          <returndescription>True on success, false on failure</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="info" returntype="array">
+          <description>Get current server info.</description>
+          <parameters/>
+          <returndescription>An array of server information, including:
+- name,
+- description,
+- type,
+- connection,
+- address,
+- httpdocs,
+- webroot,
+- username,
+- password.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServerList" returntype="array">
+          <description>Get all website servers.</description>
+          <parameters/>
+          <returndescription>An array of all server information.
+Each server has the information defined in the info() function.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getConnectionTypes" returntype="array" static="true">
+          <description>Get the supported connection types.</description>
+          <parameters/>
+          <returndescription>An array of all connection types supporter.
+Currently they are only ftp and sftp.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="createServersFile" returntype="boolean">
+          <description>Create the servers index file.</description>
+          <parameters/>
+          <returndescription>True on success or if the file already exists, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getServerInfo" returntype="array">
+          <description>Get server information for a given server id.</description>
+          <parameters>
+            <parameter name="$serverID" type="string" defaultvalue="">
+              <description>The server id to get the info for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of server information, including:
+- name,
+- description,
+- type,
+- connection,
+- address,
+- httpdocs,
+- webroot,
+- username,
+- password.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getProperty" returntype="mixed">
+          <description>Get a server property, except from name.</description>
+          <parameters>
+            <parameter name="$object" type="DOMElement" defaultvalue="">
+              <description>The object to get the property from.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The property name.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The property value or NULL if the property doesn't exist.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setProperty" returntype="void">
+          <description>Set a property for the given object.</description>
+          <parameters>
+            <parameter name="$object" type="DOMNode" defaultvalue="">
+              <description>The object to set the property for.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The property name.</description>
+            </parameter>
+            <parameter name="$value" type="string" defaultvalue="">
+              <description>The property value.</description>
+            </parameter>
+          </parameters>
+          <returndescription/>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>

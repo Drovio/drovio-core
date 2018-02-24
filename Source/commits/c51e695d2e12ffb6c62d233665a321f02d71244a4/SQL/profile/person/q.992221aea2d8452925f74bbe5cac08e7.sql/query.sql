@@ -1,0 +1,1 @@
+SELECT COUNT(RB_person.id) FROM RB_person;

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="API" package="Security" namespace="\akeys">
+  <class name="apiKeyOrigin" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1447788629</datecreated>
+      <daterevised>1447788629</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>API key allowed origin manager</title>
+      <description>Manages API key allowed origins including validation.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="create" returntype="boolean" static="true">
+          <description>Create a new API key origin.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key.</description>
+            </parameter>
+            <parameter name="$origin" type="string" defaultvalue="">
+              <description>The allowed origin.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="update" returntype="boolean" static="true">
+          <description>Update an existing API key origin.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key.</description>
+            </parameter>
+            <parameter name="$origin" type="string" defaultvalue="">
+              <description>The allowed origin.</description>
+            </parameter>
+            <parameter name="$newOrigin" type="string" defaultvalue="">
+              <description>The new allowed origin.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True on success, false on failure.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getAllOrigins" returntype="array" static="true">
+          <description>Get all API key allowed origins.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The API key to get all origins for.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array of all allowed origins.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="validate" returntype="boolean" static="true">
+          <description>Validate whether the given key is valid for the given origin.</description>
+          <parameters>
+            <parameter name="$akey" type="string" defaultvalue="">
+              <description>The key to validate.</description>
+            </parameter>
+            <parameter name="$origin" type="string" defaultvalue="">
+              <description>The origin to check.</description>
+            </parameter>
+          </parameters>
+          <returndescription>True if valid, false otherwise.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

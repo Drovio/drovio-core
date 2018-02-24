@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Html" namespace="\">
+  <class name="HTMLPageReport" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1376295742</datecreated>
+      <daterevised>1402466927</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>HTML Page Report</title>
+      <description>Generates page reports.</description>
+      <deprecated>Use \UI\Core\RCPageReport instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

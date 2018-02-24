@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+  <a href="#" target="_self" class="tlbNavItem">
+	<div class="navMenuHeader">
+		<span class="title">Item Title</span>
+		<span class="navIco"/>
+	</div>
+</a>
+</model>

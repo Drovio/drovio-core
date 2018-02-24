@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="UI" package="Interactive" namespace="\forms">
+  <class name="switchButton" abstract="">
+    <info>
+      <version>1.0</version>
+      <build>3</build>
+      <datecreated>1364469060</datecreated>
+      <daterevised>1424963705</daterevised>
+      <extends>
+        <object>\UI\Forms\Form</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Switch Button</title>
+      <description>Displays an interactive switch button.
+It is an autonomous form that works separately from other forms.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="build" returntype="switchButton">
+          <description>Builds the switch button.</description>
+          <parameters>
+            <parameter name="$action" type="string" defaultvalue="">
+              <description>The form action attribute.
+Leave empty to engage with modules.</description>
+            </parameter>
+            <parameter name="$active" type="boolean" defaultvalue="">
+              <description>Indicates whether the switch is on or off.</description>
+            </parameter>
+            <parameter name="$name" type="string" defaultvalue="">
+              <description>The name of the switch for the post action.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+          <returndescription>The switchButton object.</returndescription>
+          <throws/>
+        </method>
+        <method name="engageModule" returntype="boolean">
+          <description>Sets the module action for the switch.</description>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of extra attributes for the request.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The switchButton object.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="setAction" returntype="switchButton">
+          <description>Sets the module action for the switch.</description>
+          <description/>
+          <parameters>
+            <parameter name="$moduleID" type="integer" defaultvalue="">
+              <description>The module id.</description>
+            </parameter>
+            <parameter name="$viewName" type="string" defaultvalue="">
+              <description>The module's view name.</description>
+            </parameter>
+            <parameter name="$attr" type="array" defaultvalue="">
+              <description>An array of extra attributes for the request.</description>
+            </parameter>
+          </parameters>
+          <deprecated>Use engageModule() instead.</deprecated>
+          <deprecated>Use engageModule() instead.</deprecated>
+          <returndescription>The switchButton object.</returndescription>
+          <throws/>
+        </method>
+        <method name="getReport" returntype="string" static="true">
+          <description>Returns the switchButton status report.</description>
+          <parameters>
+            <parameter name="$status" type="boolean" defaultvalue="">
+              <description>The return status.</description>
+            </parameter>
+          </parameters>
+          <returndescription>Returns html or json report.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual>
+  <class name="AsCoProtocol" abstract="" namespace="\server">
+    <info>
+      <version/>
+      <datecreated>March 7, 2013, 9:18</datecreated>
+      <daterevised>April 5, 2013, 10:09 (EEST)</daterevised>
+      <extends/>
+      <implements/>
+      <title>Asynchronous Communication Protocol</title>
+      <description>Responsible class (in Javascript) for handling all communication protocols with the server.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private">
+        <prop name="requestPath" static="true" type="string" class="undefined">
+          <description>The ajax request url origin.</description>
+        </prop>
+        <prop name="requestSub" static="true" type="string" class="undefined">
+          <description>The ajax request subdomain origin.</description>
+        </prop>
+      </scope>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="set" static="true" returntype="void" class="undefined">
+          <description>Sets the ascop variables.</description>
+          <parameters>
+            <parameter name="$ASCOP" type="array" defaultvalue="">
+              <description>The ascop array attributes.</description>
+            </parameter>
+          </parameters>
+          <deprecated/>
+        </method>
+        <method name="getSubdomain" static="true" returntype="string" class="undefined">
+          <description>Get the request subdomain origin.
+If empty, it's the www.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+        <method name="getPath" static="true" returntype="string" class="undefined">
+          <description>Get the request url origin.</description>
+          <parameters/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

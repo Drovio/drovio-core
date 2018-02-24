@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="ESS" package="Protocol" namespace="\client\environment">
+  <class name="cookies" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1362649260</datecreated>
+      <daterevised>1406654935</daterevised>
+      <extends>
+        <object>\ESS\Protocol\environment\Cookies</object>
+      </extends>
+      <implements/>
+      <throws/>
+      <title>Cookie's Manager</title>
+      <description>Manages all cookie interaction for the system</description>
+      <deprecated>Use \ESS\Protocol\environment\Cookies instead.</deprecated>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

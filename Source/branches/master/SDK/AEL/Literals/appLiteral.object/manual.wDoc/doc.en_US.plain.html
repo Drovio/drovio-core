@@ -1,0 +1,23 @@
+<h1>Application literals</h1>
+<p>Using appLiteral, developers have full access (read-only) to the application literals. This class allows to read literals of the appliction for any locale available (active from the system) and even activate the translation mode when the user is a translator.</p>
+<p>We recommend using the translator wrapping where is applicable.</p>
+<h3>PHP Example</h3>
+<div class="code">
+	<pre>// Use the appLiteral to load literals from any scope
+	
+// Use the class
+use \AEL\Literals\appLiteral;
+
+// Get a literal from a specific scope
+// The 'wrapped' parameter will enable translation when active
+$literal = appLiteral::get($scope = "app_scope", $name = "app_literal_name", $attributes = array(), $wrapped = TRUE, $locale = NULL);
+
+
+// Using attributes in application literals
+$attributes = array();
+$attributes['fname'] = "John";
+$literal = appLiteral::get($scope = "app_scope", $name = "app_literal_name", $attributes, $wrapped = TRUE, $locale = NULL);
+
+// The above example will take the literal: Hello %{fname}!
+// And evaluate it to: Hello John!</pre>
+</div>

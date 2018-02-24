@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="BT" package="Projects" namespace="\">
+  <class name="btLibrary" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1420449189</datecreated>
+      <daterevised>1420449189</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>Bug Tracker Library Manager</title>
+      <description>Gets But Tracker projects.
+It includes open projects and team projects.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getPublicProjects" returntype="array" static="true">
+          <description>Get all public projects.
+These projects allow creating issues from any user.</description>
+          <parameters/>
+          <returndescription>An array of all public project information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+        <method name="getTeamProjects" returntype="array" static="true">
+          <description>Get all projects of the current active team.
+These projects may be open or not. They can be managed by team administrator.</description>
+          <parameters/>
+          <returndescription>An array of all team project information.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

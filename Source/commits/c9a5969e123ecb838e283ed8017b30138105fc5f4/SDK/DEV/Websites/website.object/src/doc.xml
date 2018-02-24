@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="DEV" package="Websites" namespace="\">
+  <class name="website" abstract="" namespace="">
+    <info>
+      <version/>
+      <datecreated>1404122287</datecreated>
+      <daterevised>1404122287</daterevised>
+      <extends>\DEV\Projects\project</extends>
+      <implements/>
+      <throws/>
+      <title>Website Manager Class</title>
+      <description>This is the main class for managing a website project.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </methods>
+  </class>
+</manual>

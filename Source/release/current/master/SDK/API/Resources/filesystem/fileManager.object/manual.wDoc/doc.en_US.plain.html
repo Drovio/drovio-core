@@ -1,0 +1,23 @@
+<h1>System file manager</h1>
+<p>You can access any file in the system using this file manager.</p>
+<p>Functions of this class are accessible only through the SDK. Modules and other views cannot have access and create/remove/edit files.</p>
+<h3>Example</h3>
+<div class="code">
+	<pre>// Use the class
+use \API\Resources\filesystem\fileManager;
+
+// Create a file
+fileManager::create($file = "/day1/log.txt", $contents = "This is a new log line", $recursive = TRUE);
+
+
+// Append a file
+// Get current contents
+$fileContents = fileManager::get($file = "/day1/log.txt");
+
+// Add more
+$fileContents .= "\n";
+$fileContents .= "This is a second log line";
+
+// Write them to the file
+fileManager::put($file = "/day1/log.txt", $fileContents);</pre>
+</div>
