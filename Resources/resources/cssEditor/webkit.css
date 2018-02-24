@@ -1,0 +1,1239 @@
+.cssEditor .previewWrapper meta {
+    display: none
+}
+
+.cssEditor .previewWrapper title {
+    display: none
+}
+
+.cssEditor .previewWrapper link {
+    display: none
+}
+
+.cssEditor .previewWrapper style {
+    display: none
+}
+
+.cssEditor .previewWrapper script {
+    display: none
+}
+
+#if defined(ENABLE_IFRAME_SEAMLESS) && ENABLE_IFRAME_SEAMLESS
+.cssEditor .previewWrapper:-webkit-seamless-document {
+    margin: 0px;
+}
+#endif
+
+.cssEditor .previewWrapper p {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1__qem;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+.cssEditor .previewWrapper div {
+    display: block
+}
+
+.cssEditor .previewWrapper layer {
+    display: block
+}
+
+.cssEditor .previewWrapper article, .cssEditor .previewWrapper aside, .cssEditor .previewWrapper footer, .cssEditor .previewWrapper header, .cssEditor .previewWrapper hgroup, .cssEditor .previewWrapper main, .cssEditor .previewWrapper nav, .cssEditor .previewWrapper section {
+    display: block
+}
+
+.cssEditor .previewWrapper marquee {
+    display: inline-block;
+    overflow: -webkit-marquee
+}
+
+.cssEditor .previewWrapper address {
+    display: block
+}
+
+.cssEditor .previewWrapper blockquote {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+.cssEditor .previewWrapper figcaption {
+    display: block
+}
+
+.cssEditor .previewWrapper figure {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+.cssEditor .previewWrapper q {
+    display: inline
+}
+
+.cssEditor .previewWrapper q:before {
+    content: open-quote;
+}
+
+.cssEditor .previewWrapper q:after {
+    content: close-quote;
+}
+
+.cssEditor .previewWrapper center {
+    display: block;
+    text-align: -webkit-center
+}
+
+.cssEditor .previewWrapper hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px
+}
+
+.cssEditor .previewWrapper map {
+    display: inline
+}
+
+#if defined(ENABLE_DIALOG_ELEMENT) && ENABLE_DIALOG_ELEMENT
+.cssEditor .previewWrapper dialog:not([open]) { display: none; }
+.cssEditor .previewWrapper dialog {
+    position: absolute;
+    left: 0; right: 0;
+    margin: auto;
+    border: solid;
+    padding: 1em;
+    background: white;
+    color: black;
+}
+#endif
+
+.cssEditor .previewWrapper h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67__qem;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper :-webkit-any(article,aside,nav,section) h1 {
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+}
+
+.cssEditor .previewWrapper :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h1 {
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+}
+
+.cssEditor .previewWrapper :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h1 {
+    font-size: 1.00em;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+}
+
+.cssEditor .previewWrapper :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h1 {
+    font-size: .83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+}
+
+.cssEditor .previewWrapper :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h1 {
+    font-size: .67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+}
+
+.cssEditor .previewWrapper h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper h4 {
+    display: block;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper h5 {
+    display: block;
+    font-size: .83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper h6 {
+    display: block;
+    font-size: .67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray
+}
+
+.cssEditor .previewWrapper thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit
+}
+
+.cssEditor .previewWrapper tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit
+}
+
+.cssEditor .previewWrapper tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit
+}
+
+.cssEditor .previewWrapper table > tr {
+    vertical-align: middle;
+}
+
+.cssEditor .previewWrapper col {
+    display: table-column
+}
+
+.cssEditor .previewWrapper colgroup {
+    display: table-column-group
+}
+
+.cssEditor .previewWrapper tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit
+}
+
+.cssEditor .previewWrapper td, .cssEditor .previewWrapper th {
+    display: table-cell;
+    vertical-align: inherit
+}
+
+.cssEditor .previewWrapper th {
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper caption {
+    display: table-caption;
+    text-align: -webkit-center
+}
+
+.cssEditor .previewWrapper ul, .cssEditor .previewWrapper menu, .cssEditor .previewWrapper dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px
+}
+
+.cssEditor .previewWrapper ol {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px
+}
+
+.cssEditor .previewWrapper li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.cssEditor .previewWrapper ul ul, .cssEditor .previewWrapper ol ul {
+    list-style-type: circle
+}
+
+.cssEditor .previewWrapper ol ol ul, .cssEditor .previewWrapper ol ul ul, .cssEditor .previewWrapper ul ol ul, .cssEditor .previewWrapper ul ul ul {
+    list-style-type: square
+}
+
+.cssEditor .previewWrapper dd {
+    display: block;
+    -webkit-margin-start: 40px
+}
+
+.cssEditor .previewWrapper dl {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+.cssEditor .previewWrapper dt {
+    display: block
+}
+
+.cssEditor .previewWrapper ol ul, .cssEditor .previewWrapper ul ol, .cssEditor .previewWrapper ul ul, .cssEditor .previewWrapper ol ol {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0
+}
+
+.cssEditor .previewWrapper form {
+    display: block;
+    margin-top: 0__qem;
+}
+
+.cssEditor .previewWrapper label {
+    cursor: default;
+}
+
+.cssEditor .previewWrapper legend {
+    display: block;
+    -webkit-padding-start: 2px;
+    -webkit-padding-end: 2px;
+    border: none
+}
+
+.cssEditor .previewWrapper fieldset {
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    border: 2px groove ThreeDFace;
+    min-width: -webkit-min-content;
+}
+
+.cssEditor .previewWrapper button {
+    -webkit-appearance: button;
+}
+
+.cssEditor .previewWrapper input, .cssEditor .previewWrapper textarea, .cssEditor .previewWrapper keygen, .cssEditor .previewWrapper select, .cssEditor .previewWrapper button, .cssEditor .previewWrapper isindex, .cssEditor .previewWrapper meter, .cssEditor .previewWrapper progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+.cssEditor .previewWrapper input, .cssEditor .previewWrapper textarea, .cssEditor .previewWrapper keygen, .cssEditor .previewWrapper select, .cssEditor .previewWrapper button, .cssEditor .previewWrapper isindex {
+    margin: 0__qem;
+    font: -webkit-small-control;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+
+.cssEditor .previewWrapper input[type="hidden"] {
+    display: none
+}
+
+.cssEditor .previewWrapper input, .cssEditor .previewWrapper input[type="password"], .cssEditor .previewWrapper input[type="search"], .cssEditor .previewWrapper isindex {
+    -webkit-appearance: textfield;
+    padding: 1px;
+    background-color: white;
+    border: 2px inset;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+}
+
+.cssEditor .previewWrapper input[type="search"] {
+    -webkit-appearance: searchfield;
+    box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper input::-webkit-textfield-decoration-container {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-user-modify: read-only !important;
+    content: none !important;
+}
+
+.cssEditor .previewWrapper input[type="search"]::-webkit-textfield-decoration-container {
+    direction: ltr;
+}
+
+.cssEditor .previewWrapper input::-webkit-clear-button {
+    -webkit-appearance: searchfield-cancel-button;
+    display: inline-block;
+    -webkit-box-flex: 0;
+    -webkit-user-modify: read-only !important;
+    margin-left: 2px;
+}
+
+.cssEditor .previewWrapper input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: searchfield-decoration;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: searchfield-results-decoration;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper input[type="search"]::-webkit-search-results-button {
+    -webkit-appearance: searchfield-results-button;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-user-modify: read-only !important;
+}
+
+#if defined(ENABLE_DATALIST_ELEMENT) && ENABLE_DATALIST_ELEMENT
+.cssEditor .previewWrapper datalist {
+    display: none;
+}
+#endif
+
+#if defined(ENABLE_INPUT_MULTIPLE_FIELDS_UI) && ENABLE_INPUT_MULTIPLE_FIELDS_UI
+#if defined(ENABLE_INPUT_TYPE_DATE) && ENABLE_INPUT_TYPE_DATE
+.cssEditor .previewWrapper input[type="date"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_DATETIME) && ENABLE_INPUT_TYPE_DATETIME
+.cssEditor .previewWrapper input[type="datetime"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_DATETIMELOCAL) && ENABLE_INPUT_TYPE_DATETIMELOCAL
+.cssEditor .previewWrapper input[type="datetime-local"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_MONTH) && ENABLE_INPUT_TYPE_MONTH
+.cssEditor .previewWrapper input[type="month"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_TIME) && ENABLE_INPUT_TYPE_TIME
+.cssEditor .previewWrapper input[type="time"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_WEEK) && ENABLE_INPUT_TYPE_WEEK
+.cssEditor .previewWrapper input[type="week"] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+#endif
+
+.cssEditor .previewWrapper input::-webkit-datetime-edit {
+    -webkit-flex: 1;
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.cssEditor .previewWrapper input::-webkit-datetime-edit-fields-wrapper {
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    padding: 1px 0;
+    white-space: pre;
+}
+
+.cssEditor .previewWrapper input::-webkit-datetime-edit-ampm-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-day-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-hour-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-millisecond-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-minute-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-month-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-second-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-week-field,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-year-field {
+    -webkit-user-modify: read-only !important;
+    border: none;
+    display: inline;
+    font: inherit !important;
+    padding: 1px;
+}
+
+.cssEditor .previewWrapper input::-webkit-datetime-edit-ampm-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-day-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-hour-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-millisecond-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-minute-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-month-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-second-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-week-field:focus,
+.cssEditor .previewWrapper input::-webkit-datetime-edit-year-field:focus {
+    background-color: highlight;
+    color: highlighttext;
+    outline: none;
+}
+
+.cssEditor .previewWrapper input::-webkit-datetime-edit-year-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-month-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-week-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-day-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-ampm-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-hour-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-millisecond-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-minute-field[disabled],
+.cssEditor .previewWrapper input::-webkit-datetime-edit-second-field[disabled] {
+    color: GrayText;
+}
+
+.cssEditor .previewWrapper input::-webkit-datetime-edit-text {
+    -webkit-user-modify: read-only !important;
+    display: inline;
+    font: inherit !important;
+}
+
+.cssEditor .previewWrapper input[type="date"]::-webkit-inner-spin-button,
+.cssEditor .previewWrapper input[type="datetime"]::-webkit-inner-spin-button,
+.cssEditor .previewWrapper input[type="datetime-local"]::-webkit-inner-spin-button,
+.cssEditor .previewWrapper input[type="month"]::-webkit-inner-spin-button,
+.cssEditor .previewWrapper input[type="time"]::-webkit-inner-spin-button,
+.cssEditor .previewWrapper input[type="week"]::-webkit-inner-spin-button {
+    display: inline-block;
+    position: static;
+    -webkit-margin-start: 2px;
+}
+
+#else
+
+#if defined(ENABLE_INPUT_TYPE_DATE) && ENABLE_INPUT_TYPE_DATE
+.cssEditor .previewWrapper input[type="date"] {
+    -webkit-align-items: center;
+    -webkit-appearance: menulist-button;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+    width: 10em;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_DATETIME) && ENABLE_INPUT_TYPE_DATETIME
+.cssEditor .previewWrapper input[type="datetime"] {
+    -webkit-align-items: center;
+    -webkit-appearance: menulist-button;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+    width: 10em;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_DATETIMELOCAL) && ENABLE_INPUT_TYPE_DATETIMELOCAL
+.cssEditor .previewWrapper input[type="datetime-local"] {
+    -webkit-align-items: center;
+    -webkit-appearance: menulist-button;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+    width: 10em;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_MONTH) && ENABLE_INPUT_TYPE_MONTH
+.cssEditor .previewWrapper input[type="month"] {
+    -webkit-align-items: center;
+    -webkit-appearance: menulist-button;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+    width: 10em;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_TIME) && ENABLE_INPUT_TYPE_TIME
+.cssEditor .previewWrapper input[type="time"] {
+    -webkit-align-items: center;
+    -webkit-appearance: menulist-button;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+    width: 10em;
+}
+#endif
+#if defined(ENABLE_INPUT_TYPE_WEEK) && ENABLE_INPUT_TYPE_WEEK
+.cssEditor .previewWrapper input[type="week"] {
+    -webkit-align-items: center;
+    -webkit-appearance: menulist-button;
+    display: -webkit-inline-flex;
+    overflow: hidden;
+    width: 10em;
+}
+#endif
+
+.cssEditor .previewWrapper input::-webkit-date-and-time-value {
+    margin: 1px 24px 1px 4px;
+    white-space: pre;
+}
+#endif
+
+.cssEditor .previewWrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button;
+    display: block;
+    position: relative;
+    cursor: default;
+    height: 1.5em;
+    vertical-align: top;
+    -webkit-box-flex: 0;
+    -webkit-user-select: none;
+    -webkit-user-modify: read-only !important;
+}
+
+#if defined(ENABLE_INPUT_SPEECH) && ENABLE_INPUT_SPEECH
+.cssEditor .previewWrapper input::-webkit-input-speech-button {
+    -webkit-appearance: -webkit-input-speech-button;
+    display: block;
+    vertical-align: top;
+    -webkit-box-flex: 0;
+    -webkit-user-modify: read-only !important;
+}
+#endif
+
+.cssEditor .previewWrapper keygen, .cssEditor .previewWrapper select {
+    border-radius: 5px;
+}
+
+.cssEditor .previewWrapper keygen::-webkit-keygen-select {
+    margin: 0px;
+}
+
+.cssEditor .previewWrapper textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    border: 1px solid;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-box-orient: vertical;
+    resize: auto;
+    cursor: auto;
+    padding: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.cssEditor .previewWrapper ::-webkit-input-placeholder {
+    -webkit-text-security: none;
+    color: darkGray;
+    display: block !important;
+    pointer-events: none !important;
+}
+
+.cssEditor .previewWrapper input::-webkit-input-placeholder, .cssEditor .previewWrapper isindex::-webkit-input-placeholder {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: hidden;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper input[type="password"] {
+    -webkit-text-security: disc !important;
+}
+
+.cssEditor .previewWrapper input[type="hidden"], .cssEditor .previewWrapper input[type="image"], .cssEditor .previewWrapper input[type="file"] {
+    -webkit-appearance: initial;
+    padding: initial;
+    background-color: initial;
+    border: initial;
+}
+
+.cssEditor .previewWrapper input[type="file"] {
+    -webkit-box-align: baseline;
+    color: inherit;
+    text-align: start !important;
+}
+
+.cssEditor .previewWrapper input:-webkit-autofill {
+    background-color: #FAFFBD !important;
+    background-image:none !important;
+    color: #000000 !important;
+}
+
+.cssEditor .previewWrapper input[type="radio"], .cssEditor .previewWrapper input[type="checkbox"] {
+    margin: 3px 0.5ex;
+    padding: initial;
+    background-color: initial;
+    border: initial;
+}
+
+.cssEditor .previewWrapper input[type="button"], .cssEditor .previewWrapper input[type="submit"], .cssEditor .previewWrapper input[type="reset"] {
+    -webkit-appearance: push-button;
+    white-space: pre
+}
+
+.cssEditor .previewWrapper input[type="file"]::-webkit-file-upload-button {
+    -webkit-appearance: push-button;
+    -webkit-user-modify: read-only !important;
+    white-space: nowrap;
+    margin: 0;
+    font-size: inherit;
+}
+
+.cssEditor .previewWrapper input[type="button"], .cssEditor .previewWrapper input[type="submit"], .cssEditor .previewWrapper input[type="reset"], .cssEditor .previewWrapper input[type="file"]::-webkit-file-upload-button, .cssEditor .previewWrapper button {
+    -webkit-align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: ButtonText;
+    padding: 2px 6px 3px 6px;
+    border: 2px outset ButtonFace;
+    background-color: ButtonFace;
+    box-sizing: border-box
+}
+
+.cssEditor .previewWrapper input[type="range"] {
+    -webkit-appearance: slider-horizontal;
+    padding: initial;
+    border: initial;
+    margin: 2px;
+    color: #909090;
+}
+
+.cssEditor .previewWrapper input[type="range"]::-webkit-slider-container, .cssEditor .previewWrapper input[type="range"]::-webkit-media-slider-container {
+    -webkit-flex: 1;
+    min-width: 0;
+
+    box-sizing: border-box;
+    -webkit-user-modify: read-only !important;
+    display: -webkit-flex;
+    -webkit-align-contents: center;
+}
+
+.cssEditor .previewWrapper input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-flex: 1;
+    min-width: 0;
+    -webkit-align-self: center;
+
+    box-sizing: border-box;
+    -webkit-user-modify: read-only !important;
+    display: block;
+}
+
+.cssEditor .previewWrapper input[type="range"]::-webkit-slider-thumb, .cssEditor .previewWrapper input[type="range"]::-webkit-media-slider-thumb {
+    -webkit-appearance: sliderthumb-horizontal;
+    box-sizing: border-box;
+    -webkit-user-modify: read-only !important;
+    display: block;
+}
+
+.cssEditor .previewWrapper input[type="button"]:disabled, .cssEditor .previewWrapper input[type="submit"]:disabled, .cssEditor .previewWrapper input[type="reset"]:disabled,
+.cssEditor .previewWrapper input[type="file"]:disabled::-webkit-file-upload-button, .cssEditor .previewWrapper button:disabled,
+.cssEditor .previewWrapper select:disabled, .cssEditor .previewWrapper keygen:disabled, .cssEditor .previewWrapper optgroup:disabled, .cssEditor .previewWrapper option:disabled,
+.cssEditor .previewWrapper select[disabled]>option {
+    color: GrayText
+}
+
+.cssEditor .previewWrapper input[type="button"]:active, .cssEditor .previewWrapper input[type="submit"]:active, .cssEditor .previewWrapper input[type="reset"]:active, .cssEditor .previewWrapper input[type="file"]:active::-webkit-file-upload-button, .cssEditor .previewWrapper button:active {
+    border-style: inset
+}
+
+.cssEditor .previewWrapper input[type="button"]:active:disabled, .cssEditor .previewWrapper input[type="submit"]:active:disabled, .cssEditor .previewWrapper input[type="reset"]:active:disabled, .cssEditor .previewWrapper input[type="file"]:active:disabled::-webkit-file-upload-button, .cssEditor .previewWrapper button:active:disabled {
+    border-style: outset
+}
+
+.cssEditor .previewWrapper area, .cssEditor .previewWrapper param {
+    display: none
+}
+
+.cssEditor .previewWrapper input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper input[type="radio"] {
+    -webkit-appearance: radio;
+    box-sizing: border-box;
+}
+
+#if defined(ENABLE_INPUT_TYPE_COLOR) && ENABLE_INPUT_TYPE_COLOR
+
+.cssEditor .previewWrapper input[type="color"] {
+    -webkit-appearance: square-button;
+    width: 44px;
+    height: 23px;
+}
+
+.cssEditor .previewWrapper input[type="color"]::-webkit-color-swatch-wrapper {
+    display:-webkit-box;
+    padding: 4px 2px;
+    box-sizing: border-box;
+    -webkit-user-modify: read-only !important;
+    width: 100%;
+    height: 100%
+}
+
+.cssEditor .previewWrapper input[type="color"]::-webkit-color-swatch {
+    background-color: #000000;
+    border: 1px solid #777777;
+    -webkit-box-flex: 1;
+    -webkit-user-modify: read-only !important;
+}
+
+#if defined(ENABLE_DATALIST_ELEMENT) && ENABLE_DATALIST_ELEMENT
+
+.cssEditor .previewWrapper input[type="color"][list] {
+    -webkit-appearance: menulist;
+    width: 88px;
+    height: 23px;
+}
+
+.cssEditor .previewWrapper input[type="color"][list]::-webkit-color-swatch-wrapper {
+    padding-left: 8px;
+    padding-right: 24px;
+}
+
+.cssEditor .previewWrapper input[type="color"][list]::-webkit-color-swatch {
+    border-color: #000000;
+}
+
+#endif // defined(ENABLE_DATALIST_ELEMENT) && ENABLE_DATALIST_ELEMENT
+
+#endif // defined(ENABLE_INPUT_TYPE_COLOR) && ENABLE_INPUT_TYPE_COLOR
+
+#if defined(ENABLE_CALENDAR_PICKER) && ENABLE_CALENDAR_PICKER
+.cssEditor .previewWrapper input::-webkit-calendar-picker-indicator {
+    display: inline-block;
+    width: 0.66em;
+    height: 0.66em;
+    padding: 0.17em 0.34em;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper input::-webkit-calendar-picker-indicator:hover {
+    background-color: #eee;
+}
+#endif // ENABLE_CALENDAR_PICKER
+
+.cssEditor .previewWrapper select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    border: 1px solid;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+}
+
+.cssEditor .previewWrapper select[size],
+.cssEditor .previewWrapper select[multiple],
+.cssEditor .previewWrapper select[size][multiple] {
+    -webkit-appearance: listbox;
+    -webkit-box-align: start;
+    border: 1px inset gray;
+    border-radius: initial;
+    white-space: initial;
+}
+
+.cssEditor .previewWrapper select[size="0"],
+.cssEditor .previewWrapper select[size="1"] {
+    -webkit-appearance: menulist;
+    -webkit-box-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    white-space: pre;
+}
+
+.cssEditor .previewWrapper optgroup {
+    font-weight: bolder;
+}
+
+.cssEditor .previewWrapper option {
+    font-weight: normal;
+}
+
+.cssEditor .previewWrapper output {
+    display: inline;
+}
+
+.cssEditor .previewWrapper ::-webkit-validation-bubble {
+    display: inline-block;
+    z-index: 2147483647;
+    position: absolute;
+    opacity: 0.95;
+    line-height: 0;
+    margin: 0;
+    -webkit-text-security: none;
+    -webkit-transition: opacity 05.5s ease;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper ::-webkit-validation-bubble-message {
+    display: -webkit-box;
+    position: relative;
+    top: -4px;
+    font: message-box;
+    color: black;
+    min-width: 50px;
+    max-width: 200px;
+    border: solid 2px #400;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8ecec), to(#e8cccc));
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 4px 4px 4px rgba(100,100,100,0.6),
+        inset -2px -2px 1px #d0c4c4,
+        inset 2px 2px 1px white;
+    -webkit-user-modify: read-only !important;
+    line-height: normal;
+    white-space: normal;
+    z-index: 2147483644;
+}
+
+.cssEditor .previewWrapper ::-webkit-validation-bubble-text-block {
+    -webkit-box-flex: 1;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper ::-webkit-validation-bubble-heading {
+    font-weight: bold;
+    -webkit-user-modify: read-only !important;
+}
+
+.cssEditor .previewWrapper ::-webkit-validation-bubble-arrow {
+    display: inline-block;
+    position: relative;
+    left: 32px;
+    width: 16px;
+    height: 16px;
+    background-color: #f8ecec;
+    border-width: 2px 0 0 2px;
+    border-style: solid;
+    border-color: #400;
+    box-shadow: inset 2px 2px 1px white;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotate(45deg);
+    -webkit-user-modify: read-only !important;
+    z-index: 2147483645;
+}
+
+.cssEditor .previewWrapper ::-webkit-validation-bubble-arrow-clipper {
+    display: block;
+    overflow: hidden;
+    height: 16px;
+    -webkit-user-modify: read-only !important;
+}
+
+#if defined(ENABLE_METER_ELEMENT) && ENABLE_METER_ELEMENT
+
+.cssEditor .previewWrapper meter {
+    -webkit-appearance: meter;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1em;
+    width: 5em;
+    vertical-align: -0.2em;
+}
+
+.cssEditor .previewWrapper meter::-webkit-meter-inner-element {
+    -webkit-appearance: inherit;
+    box-sizing: inherit;
+    -webkit-user-modify: read-only !important;
+    height: 100%;
+    width: 100%;
+}
+
+.cssEditor .previewWrapper meter::-webkit-meter-bar {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#ddd), color-stop(0.20, #eee), color-stop(0.45, #ccc), color-stop(0.55, #ccc));
+    height: 100%;
+    width: 100%;
+    -webkit-user-modify: read-only !important;
+    box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper meter::-webkit-meter-optimum-value {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ad7), to(#ad7), color-stop(0.20, #cea), color-stop(0.45, #7a3), color-stop(0.55, #7a3));
+    height: 100%;
+    -webkit-user-modify: read-only !important;
+    box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper meter::-webkit-meter-suboptimum-value {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fe7), to(#fe7), color-stop(0.20, #ffc), color-stop(0.45, #db3), color-stop(0.55, #db3));
+    height: 100%;
+    -webkit-user-modify: read-only !important;
+    box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper meter::-webkit-meter-even-less-good-value {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f77), to(#f77), color-stop(0.20, #fcc), color-stop(0.45, #d44), color-stop(0.55, #d44));
+    height: 100%;
+    -webkit-user-modify: read-only !important;
+    box-sizing: border-box;
+}
+#endif
+
+#if defined(ENABLE_PROGRESS_ELEMENT) && ENABLE_PROGRESS_ELEMENT
+
+.cssEditor .previewWrapper progress {
+    -webkit-appearance: progress-bar;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1em;
+    width: 10em;
+    vertical-align: -0.2em;
+}
+
+.cssEditor .previewWrapper progress::-webkit-progress-inner-element {
+    -webkit-appearance: inherit;
+    box-sizing: inherit;
+    -webkit-user-modify: read-only;
+    height: 100%;
+    width: 100%;
+}
+
+.cssEditor .previewWrapper progress::-webkit-progress-bar {
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    -webkit-user-modify: read-only !important;
+    box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper progress::-webkit-progress-value {
+    background-color: green;
+    height: 100%;
+    width: 50%; 
+    -webkit-user-modify: read-only !important;
+    box-sizing: border-box;
+}
+#endif
+
+.cssEditor .previewWrapper u, .cssEditor .previewWrapper ins {
+    text-decoration: underline
+}
+
+.cssEditor .previewWrapper strong, .cssEditor .previewWrapper b {
+    font-weight: bold
+}
+
+.cssEditor .previewWrapper i, .cssEditor .previewWrapper cite, .cssEditor .previewWrapper em, .cssEditor .previewWrapper var, .cssEditor .previewWrapper address, .cssEditor .previewWrapper dfn {
+    font-style: italic
+}
+
+.cssEditor .previewWrapper tt, .cssEditor .previewWrapper code, .cssEditor .previewWrapper kbd, .cssEditor .previewWrapper samp {
+    font-family: monospace
+}
+
+.cssEditor .previewWrapper pre, .cssEditor .previewWrapper xmp, .cssEditor .previewWrapper plaintext, .cssEditor .previewWrapper listing {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1__qem 0
+}
+
+.cssEditor .previewWrapper mark {
+    background-color: yellow;
+    color: black
+}
+
+.cssEditor .previewWrapper big {
+    font-size: larger
+}
+
+.cssEditor .previewWrapper small {
+    font-size: smaller
+}
+
+.cssEditor .previewWrapper s, .cssEditor .previewWrapper strike, .cssEditor .previewWrapper del {
+    text-decoration: line-through
+}
+
+.cssEditor .previewWrapper sub {
+    vertical-align: sub;
+    font-size: smaller
+}
+
+.cssEditor .previewWrapper sup {
+    vertical-align: super;
+    font-size: smaller
+}
+
+
+.cssEditor .previewWrapper nobr {
+    white-space: nowrap
+}
+
+.cssEditor .previewWrapper :focus { 
+    outline: auto 5px -webkit-focus-ring-color
+}
+
+.cssEditor .previewWrapper:focus, .cssEditor .previewWrapper input[readonly]:focus { 
+    outline: none
+}
+
+.cssEditor .previewWrapper applet:focus, .cssEditor .previewWrapper embed:focus, .cssEditor .previewWrapper iframe:focus, .cssEditor .previewWrapper object:focus {
+    outline: none
+}
+  
+.cssEditor .previewWrapper input:focus, .cssEditor .previewWrapper textarea:focus, .cssEditor .previewWrapper isindex:focus, .cssEditor .previewWrapper keygen:focus, .cssEditor .previewWrapper select:focus {
+    outline-offset: -2px
+}
+
+.cssEditor .previewWrapper input[type="button"]:focus,
+.cssEditor .previewWrapper input[type="checkbox"]:focus,
+.cssEditor .previewWrapper input[type="file"]:focus,
+.cssEditor .previewWrapper input[type="hidden"]:focus,
+.cssEditor .previewWrapper input[type="image"]:focus,
+.cssEditor .previewWrapper input[type="radio"]:focus,
+.cssEditor .previewWrapper input[type="reset"]:focus,
+.cssEditor .previewWrapper input[type="search"]:focus,
+.cssEditor .previewWrapper input[type="submit"]:focus,
+.cssEditor .previewWrapper input[type="file"]:focus::-webkit-file-upload-button {
+    outline-offset: 0
+}
+    
+.cssEditor .previewWrapper a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+.cssEditor .previewWrapper a:-webkit-any-link:active {
+    color: -webkit-activelink
+}
+
+.cssEditor .previewWrapper ruby, .cssEditor .previewWrapper rt {
+    text-indent: 0; 
+}
+
+.cssEditor .previewWrapper rt {
+    line-height: normal;
+    -webkit-text-emphasis: none;
+}
+
+.cssEditor .previewWrapper ruby > rt {
+    display: block;
+    font-size: 50%;
+    text-align: start;
+}
+
+.cssEditor .previewWrapper ruby > rp {
+    display: none;
+}
+
+.cssEditor .previewWrapper noframes {
+    display: none
+}
+
+.cssEditor .previewWrapper frameset, .cssEditor .previewWrapper frame {
+    display: block
+}
+
+.cssEditor .previewWrapper frameset {
+    border-color: inherit
+}
+
+.cssEditor .previewWrapper iframe:not([seamless]) {
+    border: 2px inset
+}
+
+.cssEditor .previewWrapper iframe[seamless] {
+    display: block
+}
+
+.cssEditor .previewWrapper details {
+    display: block
+}
+
+.cssEditor .previewWrapper summary {
+    display: block
+}
+
+.cssEditor .previewWrapper summary::-webkit-details-marker {
+    display: inline-block;
+    width: 0.66em;
+    height: 0.66em;
+    margin-right: 0.4em;
+}
+
+#if defined(ENABLE_TEMPLATE_ELEMENT) && ENABLE_TEMPLATE_ELEMENT
+.cssEditor .previewWrapper template {
+    display: none
+}
+#endif
+
+.cssEditor .previewWrapper bdi, .cssEditor .previewWrapper output {
+    unicode-bidi: -webkit-isolate;
+}
+
+.cssEditor .previewWrapper bdo {
+    unicode-bidi: bidi-override;
+}
+
+.cssEditor .previewWrapper @page {
+    size: auto;
+    margin: auto;
+    padding: 0px;
+    border-width: 0px;
+}

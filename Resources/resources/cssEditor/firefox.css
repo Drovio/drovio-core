@@ -1,0 +1,666 @@
+.cssEditor .previewWrapper [dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+.cssEditor .previewWrapper [dir="ltr"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+.cssEditor .previewWrapper bdi:-moz-dir(ltr), .cssEditor .previewWrapper [dir="auto"]:-moz-dir(ltr) { direction: ltr; }
+.cssEditor .previewWrapper bdi:-moz-dir(rtl), .cssEditor .previewWrapper [dir="auto"]:-moz-dir(rtl) { direction: rtl; }
+
+.cssEditor .previewWrapper address, .cssEditor .previewWrapper address[dir],
+.cssEditor .previewWrapper article, .cssEditor .previewWrapper article[dir],
+.cssEditor .previewWrapper aside, .cssEditor .previewWrapper aside[dir],
+.cssEditor .previewWrapper blockquote, .cssEditor .previewWrapper blockquote[dir],
+.cssEditor .previewWrapper caption, .cssEditor .previewWrapper caption[dir],
+.cssEditor .previewWrapper center, .cssEditor .previewWrapper center[dir],
+.cssEditor .previewWrapper col, .cssEditor .previewWrapper col[dir],
+.cssEditor .previewWrapper colgroup, .cssEditor .previewWrapper colgroup[dir],
+.cssEditor .previewWrapper dd, .cssEditor .previewWrapper dd[dir],
+.cssEditor .previewWrapper dir, .cssEditor .previewWrapper dir[dir],
+.cssEditor .previewWrapper div, .cssEditor .previewWrapper div[dir],
+.cssEditor .previewWrapper dl, .cssEditor .previewWrapper dl[dir],
+.cssEditor .previewWrapper dt, .cssEditor .previewWrapper dt[dir],
+.cssEditor .previewWrapper fieldset, .cssEditor .previewWrapper fieldset[dir],
+.cssEditor .previewWrapper figcaption, .cssEditor .previewWrapper figcaption[dir],
+.cssEditor .previewWrapper figure, .cssEditor .previewWrapper figure[dir],
+.cssEditor .previewWrapper footer, .cssEditor .previewWrapper footer[dir],
+.cssEditor .previewWrapper form, .cssEditor .previewWrapper form[dir],
+.cssEditor .previewWrapper h1, .cssEditor .previewWrapper h1[dir],
+.cssEditor .previewWrapper h2, .cssEditor .previewWrapper h2[dir],
+.cssEditor .previewWrapper h3, .cssEditor .previewWrapper h3[dir],
+.cssEditor .previewWrapper h4, .cssEditor .previewWrapper h4[dir],
+.cssEditor .previewWrapper h5, .cssEditor .previewWrapper h5[dir],
+.cssEditor .previewWrapper h6, .cssEditor .previewWrapper h6[dir],
+.cssEditor .previewWrapper header, .cssEditor .previewWrapper header[dir],
+.cssEditor .previewWrapper hgroup, .cssEditor .previewWrapper hgroup[dir],
+.cssEditor .previewWrapper hr, .cssEditor .previewWrapper hr[dir],
+.cssEditor .previewWrapper legend, .cssEditor .previewWrapper legend[dir],
+.cssEditor .previewWrapper li, .cssEditor .previewWrapper li[dir],
+.cssEditor .previewWrapper listing, .cssEditor .previewWrapper listing[dir],
+.cssEditor .previewWrapper main, .cssEditor .previewWrapper main[dir],
+.cssEditor .previewWrapper marquee, .cssEditor .previewWrapper marquee[dir],
+.cssEditor .previewWrapper menu, .cssEditor .previewWrapper menu[dir],
+.cssEditor .previewWrapper nav, .cssEditor .previewWrapper nav[dir],
+.cssEditor .previewWrapper noframes, .cssEditor .previewWrapper noframes[dir],
+.cssEditor .previewWrapper ol, .cssEditor .previewWrapper ol[dir],
+.cssEditor .previewWrapper p, .cssEditor .previewWrapper p[dir],
+.cssEditor .previewWrapper plaintext, .cssEditor .previewWrapper plaintext[dir],
+.cssEditor .previewWrapper pre, .cssEditor .previewWrapper pre[dir],
+.cssEditor .previewWrapper section, .cssEditor .previewWrapper section[dir],
+.cssEditor .previewWrapper summary, .cssEditor .previewWrapper summary[dir],
+.cssEditor .previewWrapper table, .cssEditor .previewWrapper table[dir],
+.cssEditor .previewWrapper tbody, .cssEditor .previewWrapper tbody[dir],
+.cssEditor .previewWrapper td, .cssEditor .previewWrapper td[dir],
+.cssEditor .previewWrapper tfoot, .cssEditor .previewWrapper tfoot[dir],
+.cssEditor .previewWrapper th, .cssEditor .previewWrapper th[dir],
+.cssEditor .previewWrapper thead, .cssEditor .previewWrapper thead[dir],
+.cssEditor .previewWrapper tr, .cssEditor .previewWrapper tr[dir],
+.cssEditor .previewWrapper ul, .cssEditor .previewWrapper ul[dir],
+.cssEditor .previewWrapper xmp, .cssEditor .previewWrapper xmp[dir] {
+  unicode-bidi: -moz-isolate;
+}
+
+.cssEditor .previewWrapper bdi, .cssEditor .previewWrapper bdi[dir], .cssEditor .previewWrapper output, .cssEditor .previewWrapper output[dir], .cssEditor .previewWrapper [dir="auto"] { 
+  unicode-bidi: -moz-isolate;
+}
+.cssEditor .previewWrapper bdo, .cssEditor .previewWrapper bdo[dir] {
+  unicode-bidi: bidi-override;
+}
+.cssEditor .previewWrapper bdo[dir="auto"] {
+  unicode-bidi: -moz-isolate-override;
+}
+.cssEditor .previewWrapper textarea[dir="auto"], .cssEditor .previewWrapper pre[dir="auto"] { unicode-bidi: -moz-plaintext; }
+
+.cssEditor .previewWrapper article,
+.cssEditor .previewWrapper aside,
+.cssEditor .previewWrapper div,
+.cssEditor .previewWrapper dt,
+.cssEditor .previewWrapper figcaption,
+.cssEditor .previewWrapper footer,
+.cssEditor .previewWrapper form,
+.cssEditor .previewWrapper header,
+.cssEditor .previewWrapper hgroup,
+.cssEditor .previewWrapper main,
+.cssEditor .previewWrapper nav,
+.cssEditor .previewWrapper section {
+  display: block;
+}
+
+.cssEditor .previewWrapper p, .cssEditor .previewWrapper dl, .cssEditor .previewWrapper multicol {
+  display: block;
+  margin: 1em 0;
+}
+
+.cssEditor .previewWrapper dd {
+  display: block;
+  -moz-margin-start: 40px;
+}
+
+.cssEditor .previewWrapper blockquote, .cssEditor .previewWrapper figure {
+  display: block;
+  margin: 1em 40px;
+}
+
+.cssEditor .previewWrapper address {
+  display: block;
+  font-style: italic;
+}
+
+.cssEditor .previewWrapper center {
+  display: block;
+  text-align: -moz-center;
+}
+
+.cssEditor .previewWrapper blockquote[type=cite] {
+  display: block;
+  margin: 1em 0px;
+  -moz-padding-start: 1em;
+  -moz-border-start: solid;
+  border-color: blue;
+  border-width: thin;
+}
+
+.cssEditor .previewWrapper span[_moz_quote=true] {
+  color: blue;
+}
+
+.cssEditor .previewWrapper pre[_moz_quote=true] {
+  color: blue;
+}
+
+.cssEditor .previewWrapper h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: .67em 0;
+}
+
+.cssEditor .previewWrapper h2,
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper h1 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: .83em 0;
+}
+
+.cssEditor .previewWrapper h3,
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper h1 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.cssEditor .previewWrapper h4,
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper h1 {
+  display: block;
+  font-size: 1.00em;
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+.cssEditor .previewWrapper h5,
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper h1 {
+  display: block;
+  font-size: 0.83em;
+  font-weight: bold;
+  margin: 1.67em 0;
+}
+
+.cssEditor .previewWrapper h6,
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper :-moz-any(article, aside, nav, section)
+.cssEditor .previewWrapper h1 {
+  display: block;
+  font-size: 0.67em;
+  font-weight: bold;
+  margin: 2.33em 0;
+}
+
+.cssEditor .previewWrapper listing {
+  display: block;
+  font-family: -moz-fixed;
+  font-size: medium;
+  white-space: pre;
+  margin: 1em 0;
+}
+
+.cssEditor .previewWrapper xmp, .cssEditor .previewWrapper pre, .cssEditor .previewWrapper plaintext {
+  display: block;
+  font-family: -moz-fixed;
+  white-space: pre;
+  margin: 1em 0;
+}
+
+.cssEditor .previewWrapper table {
+  display: table;
+  border-spacing: 2px;
+  border-collapse: separate;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-box-sizing: border-box;
+  text-indent: 0;
+}
+
+.cssEditor .previewWrapper table[align="left"] {
+  float: left;
+}
+
+.cssEditor .previewWrapper table[align="right"] {
+  float: right;
+  text-align: start;
+}
+
+.cssEditor .previewWrapper table[rules] { 
+  border-width: thin;
+  border-style: hidden;
+}
+
+.cssEditor .previewWrapper table:-moz-table-border-nonzero { 
+  border-width: thin;
+  border-style: outset;
+}
+
+.cssEditor .previewWrapper table[frame] {
+  border: thin hidden;
+}
+
+.cssEditor .previewWrapper table[frame="void"]   { border-style: hidden; }
+.cssEditor .previewWrapper table[frame="above"]  { border-style: outset hidden hidden hidden; }
+.cssEditor .previewWrapper table[frame="below"]  { border-style: hidden hidden outset hidden; }
+.cssEditor .previewWrapper table[frame="lhs"]    { border-style: hidden hidden hidden outset; }
+.cssEditor .previewWrapper table[frame="rhs"]    { border-style: hidden outset hidden hidden; }
+.cssEditor .previewWrapper table[frame="hsides"] { border-style: outset hidden; }
+.cssEditor .previewWrapper table[frame="vsides"] { border-style: hidden outset; }
+.cssEditor .previewWrapper table[frame="box"],
+.cssEditor .previewWrapper table[frame="border"] { border-style: outset; }
+
+
+
+.cssEditor .previewWrapper table:-moz-table-border-nonzero > * > tr > td,
+.cssEditor .previewWrapper table:-moz-table-border-nonzero > * > tr > th,
+.cssEditor .previewWrapper table:-moz-table-border-nonzero > * > td,
+.cssEditor .previewWrapper table:-moz-table-border-nonzero > * > th,
+.cssEditor .previewWrapper table:-moz-table-border-nonzero > td,
+.cssEditor .previewWrapper table:-moz-table-border-nonzero > th
+{
+  border-width: thin;
+  border-style: inset;
+}
+
+.cssEditor .previewWrapper table[rules]:not([rules="none"]):not([rules=""]) {
+  border-collapse: collapse;
+}
+
+.cssEditor .previewWrapper table[rules]:not([rules=""])> tr > td,
+.cssEditor .previewWrapper table[rules]:not([rules=""])> * > tr > td,
+.cssEditor .previewWrapper table[rules]:not([rules=""])> tr > th,
+.cssEditor .previewWrapper table[rules]:not([rules=""])> * > tr > th,
+.cssEditor .previewWrapper table[rules]:not([rules=""])> td,
+.cssEditor .previewWrapper table[rules]:not([rules=""])> th
+{
+  border-width: thin;
+  border-style: none;
+}
+
+
+.cssEditor .previewWrapper table[rules][rules="none"]  > tr > td,
+.cssEditor .previewWrapper table[rules][rules="none"] > * > tr > td,
+.cssEditor .previewWrapper table[rules][rules="none"] > tr > th,
+.cssEditor .previewWrapper table[rules][rules="none"] > * > tr > th,
+.cssEditor .previewWrapper table[rules][rules="none"] > td,
+.cssEditor .previewWrapper table[rules][rules="none"] > th
+{
+  border-width: thin;
+  border-style: none;
+}
+
+.cssEditor .previewWrapper table[rules][rules="all"] > tr > td,
+.cssEditor .previewWrapper table[rules][rules="all"] > * > tr > td,
+.cssEditor .previewWrapper table[rules][rules="all"] > tr > th,
+.cssEditor .previewWrapper table[rules][rules="all"] > * > tr > th,
+.cssEditor .previewWrapper table[rules][rules="all"] > td,
+.cssEditor .previewWrapper table[rules][rules="all"] > th 
+{
+  border-width: thin;
+  border-style: solid;
+}
+
+.cssEditor .previewWrapper table[rules][rules="rows"] > tr,
+.cssEditor .previewWrapper table[rules][rules="rows"] > * > tr {
+  border-top-width: thin;
+  border-bottom-width: thin;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+
+.cssEditor .previewWrapper table[rules][rules="cols"] > tr > td,
+.cssEditor .previewWrapper table[rules][rules="cols"] > * > tr > td,
+.cssEditor .previewWrapper table[rules][rules="cols"] > tr > th,
+.cssEditor .previewWrapper table[rules][rules="cols"] > * > tr > th {
+  border-left-width: thin;
+  border-right-width: thin;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.cssEditor .previewWrapper table[rules][rules="groups"] > colgroup {
+  border-left-width: thin;
+  border-right-width: thin;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+.cssEditor .previewWrapper table[rules][rules="groups"] > tfoot,
+.cssEditor .previewWrapper table[rules][rules="groups"] > thead,
+.cssEditor .previewWrapper table[rules][rules="groups"] > tbody {
+  border-top-width: thin;
+  border-bottom-width: thin;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+   
+.cssEditor .previewWrapper caption {
+  display: table-caption;
+  text-align: center;
+}
+
+.cssEditor .previewWrapper table[align="center"] > caption {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cssEditor .previewWrapper table[align="center"] > caption[align="left"] {
+  margin-right: 0;
+}
+
+.cssEditor .previewWrapper table[align="center"] > caption[align="right"] {
+  margin-left: 0;
+}
+
+.cssEditor .previewWrapper tr {
+  display: table-row;
+  vertical-align: inherit;
+}
+
+.cssEditor .previewWrapper col {
+  display: table-column;
+}
+
+.cssEditor .previewWrapper colgroup {
+  display: table-column-group;
+}
+
+.cssEditor .previewWrapper tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+.cssEditor .previewWrapper thead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+
+.cssEditor .previewWrapper tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+}
+
+.cssEditor .previewWrapper table > tr {
+  vertical-align: middle;
+}
+
+.cssEditor .previewWrapper td { 
+  display: table-cell;
+  vertical-align: inherit;
+  text-align: inherit; 
+  padding: 1px;
+}
+
+.cssEditor .previewWrapper th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  padding: 1px;
+}
+
+.cssEditor .previewWrapper tr > form:-moz-is-html, .cssEditor .previewWrapper tbody > form:-moz-is-html,
+.cssEditor .previewWrapper thead > form:-moz-is-html, .cssEditor .previewWrapper tfoot > form:-moz-is-html,
+.cssEditor .previewWrapper table > form:-moz-is-html {
+  display: none !important;
+}
+
+.cssEditor .previewWrapper table[bordercolor] > tbody,
+.cssEditor .previewWrapper table[bordercolor] > thead,
+.cssEditor .previewWrapper table[bordercolor] > tfoot,
+.cssEditor .previewWrapper table[bordercolor] > col,
+.cssEditor .previewWrapper table[bordercolor] > colgroup,
+.cssEditor .previewWrapper table[bordercolor] > tr,
+.cssEditor .previewWrapper table[bordercolor] > * > tr,
+.cssEditor .previewWrapper table[bordercolor]  > tr > td,
+.cssEditor .previewWrapper table[bordercolor] > * > tr > td,
+.cssEditor .previewWrapper table[bordercolor]  > tr > th,
+.cssEditor .previewWrapper table[bordercolor] > * > tr > th {
+  border-color: inherit;
+}
+
+.cssEditor .previewWrapper q:before {
+  content: open-quote;
+}
+
+.cssEditor .previewWrapper q:after {
+  content: close-quote;
+}
+
+.cssEditor .previewWrapper b, .cssEditor .previewWrapper strong {
+  font-weight: bolder;
+}
+
+.cssEditor .previewWrapper i, .cssEditor .previewWrapper cite, .cssEditor .previewWrapper em, .cssEditor .previewWrapper var, .cssEditor .previewWrapper dfn {
+  font-style: italic;
+}
+
+.cssEditor .previewWrapper tt, .cssEditor .previewWrapper code, .cssEditor .previewWrapper kbd, .cssEditor .previewWrapper samp {
+  font-family: -moz-fixed;
+}
+
+.cssEditor .previewWrapper u, .cssEditor .previewWrapper ins {
+  text-decoration: underline;
+}
+
+.cssEditor .previewWrapper s, .cssEditor .previewWrapper strike, .cssEditor .previewWrapper del {
+  text-decoration: line-through;
+}
+
+.cssEditor .previewWrapper blink {
+  text-decoration: blink;
+}
+
+.cssEditor .previewWrapper big {
+  font-size: larger;
+}
+
+.cssEditor .previewWrapper small {
+  font-size: smaller;
+}
+
+.cssEditor .previewWrapper sub {
+  vertical-align: sub;
+  font-size: smaller;
+  line-height: normal;
+}
+
+.cssEditor .previewWrapper sup {
+  vertical-align: super;
+  font-size: smaller;
+  line-height: normal;
+}
+
+.cssEditor .previewWrapper nobr {
+  white-space: nowrap;
+}
+
+.cssEditor .previewWrapper mark {
+  background: yellow;
+  color: black;
+}
+
+.cssEditor .previewWrapper abbr[title], .cssEditor .previewWrapper acronym[title] {
+  border-bottom: dotted 1px;
+}
+
+
+.cssEditor .previewWrapper ul, .cssEditor .previewWrapper menu, .cssEditor .previewWrapper dir {
+  display: block;
+  list-style-type: disc;
+  margin: 1em 0;
+  -moz-padding-start: 40px;
+}
+
+.cssEditor .previewWrapper menu[type="context"] {
+  display: none !important;
+}
+
+.cssEditor .previewWrapper ol {
+  display: block;
+  list-style-type: decimal;
+  margin: 1em 0;
+  -moz-padding-start: 40px;
+}
+
+.cssEditor .previewWrapper li {
+  display: list-item;
+}
+
+.cssEditor .previewWrapper :-moz-any(ul, ol, dir, menu, dl) ul,
+.cssEditor .previewWrapper :-moz-any(ul, ol, dir, menu, dl) ol,
+.cssEditor .previewWrapper :-moz-any(ul, ol, dir, menu, dl) dir,
+.cssEditor .previewWrapper :-moz-any(ul, ol, dir, menu, dl) menu,
+.cssEditor .previewWrapper :-moz-any(ul, ol, dir, menu, dl) dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cssEditor .previewWrapper :-moz-any(ol, ul, menu, dir) ul,
+.cssEditor .previewWrapper :-moz-any(ol, ul, menu, dir) menu,
+.cssEditor .previewWrapper :-moz-any(ol, ul, menu, dir) dir {
+  list-style-type: circle;
+}
+
+.cssEditor .previewWrapper :-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) ul,
+.cssEditor .previewWrapper :-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) menu,
+.cssEditor .previewWrapper :-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) dir {
+  list-style-type: square;
+}
+
+.cssEditor .previewWrapper hr {
+  display: block;
+  height: 2px;
+  border: 1px inset;
+  margin: 0.5em auto 0.5em auto;
+  color: gray;
+  -moz-float-edge: margin-box;
+  -moz-box-sizing: border-box;
+}
+
+.cssEditor .previewWrapper hr[size="1"] {
+  border-style: solid none none none;
+}
+
+.cssEditor .previewWrapper img:-moz-broken::before, .cssEditor .previewWrapper input:-moz-broken::before,
+.cssEditor .previewWrapper img:-moz-user-disabled::before, .cssEditor .previewWrapper input:-moz-user-disabled::before,
+.cssEditor .previewWrapper img:-moz-loading::before, .cssEditor .previewWrapper input:-moz-loading::before,
+.cssEditor .previewWrapper applet:-moz-empty-except-children-with-localname(param):-moz-broken::before,
+.cssEditor .previewWrapper applet:-moz-empty-except-children-with-localname(param):-moz-user-disabled::before {
+  content: -moz-alt-content !important;
+  unicode-bidi: -moz-isolate;
+}
+
+.cssEditor .previewWrapper :-moz-any(object,applet):-moz-any(:-moz-broken,:-moz-user-disabled) > *|* {
+  vertical-align: inherit;
+}
+
+.cssEditor .previewWrapper img:-moz-suppressed, .cssEditor .previewWrapper input:-moz-suppressed, .cssEditor .previewWrapper object:-moz-suppressed,
+embed:-moz-suppressed, applet:-moz-suppressed {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.cssEditor .previewWrapper img[usemap], .cssEditor .previewWrapper object[usemap] {
+  color: blue;
+}
+
+.cssEditor .previewWrapper frameset {
+  display: block ! important;
+  overflow: -moz-hidden-unscrollable;
+  position: static ! important;
+  float: none ! important;
+  border: none ! important;
+}
+
+.cssEditor .previewWrapper frame {
+  border: none ! important;
+}
+
+.cssEditor .previewWrapper iframe {
+  border: 2px inset;
+}
+
+.cssEditor .previewWrapper noframes {
+  display: none;
+}
+
+.cssEditor .previewWrapper spacer {
+  position: static ! important;
+  float: none ! important;
+}
+
+.cssEditor .previewWrapper canvas {
+  -moz-user-select: none;
+}
+
+.cssEditor .previewWrapper :-moz-focusring:not(input):not(button):not(select):not(textarea):not(iframe):not(frame):not(body):not(html) {
+   outline: 1px dotted;
+}
+
+.cssEditor .previewWrapper base, .cssEditor .previewWrapper basefont, .cssEditor .previewWrapper datalist, .cssEditor .previewWrapper meta, .cssEditor .previewWrapper script, .cssEditor .previewWrapper style, .cssEditor .previewWrapper title,
+.cssEditor .previewWrapper noembed, .cssEditor .previewWrapper param {
+   display: none;
+}
+
+.cssEditor .previewWrapper area {
+  display: none ! important;
+}
+
+.cssEditor .previewWrapper iframe:-moz-full-screen {
+  border: none;
+}
+
+.cssEditor .previewWrapper video > xul|videocontrols, .cssEditor .previewWrapper audio > xul|videocontrols {
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-binding: url("chrome://global/content/bindings/videocontrols.xml#videoControls");
+}
+
+.cssEditor .previewWrapper video:not([controls]) > xul|videocontrols,
+.cssEditor .previewWrapper audio:not([controls]) > xul|videocontrols {
+  visibility: hidden;
+  -moz-binding: none;
+}
+
+.cssEditor .previewWrapper audio:not([controls]) {
+  display: none;
+}
+
+.cssEditor .previewWrapper *|*::-moz-html-canvas-content {
+  display: block !important;
+  -moz-transform: translate(0) !important;
+}
+
+.cssEditor .previewWrapper video > div {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.cssEditor .previewWrapper video > div p {
+  color: gold;
+  background-color: rgba(105,105,105,0.4);
+  pointer-events: auto;
+}
+
+.cssEditor .previewWrapper marquee {
+  width: -moz-available;
+  display: inline-block;
+  vertical-align: text-bottom;
+  text-align: start;
+  -moz-binding: url('chrome://xbl-marquee/content/xbl-marquee.xml#marquee-horizontal');
+}
+
+.cssEditor .previewWrapper marquee[direction="up"], .cssEditor .previewWrapper marquee[direction="down"] {
+  -moz-binding: url('chrome://xbl-marquee/content/xbl-marquee.xml#marquee-vertical');
+  height: 200px;
+}
+
+.cssEditor .previewWrapper @media print {
+
+  marquee { -moz-binding: none; }
+
+}

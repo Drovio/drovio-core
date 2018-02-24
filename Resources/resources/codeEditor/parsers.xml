@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parsers>
+	<lang name="php" description="php parser 'assets' path" />
+	<lang name="js" description="javascript parser 'assets' path" />
+	<lang name="css" description="css parser 'assets' path" />
+	<lang name="sql" description="sql parser 'assets' path" />
+	<lang name="xml" description="xml parser 'assets' path" />
+</parsers>

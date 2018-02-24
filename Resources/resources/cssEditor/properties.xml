@@ -1,0 +1,3711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<css>
+	<browsers>
+		<browser name="firefox" prefix="-moz-" />
+		<browser name="opera" prefix="-o-" />
+		<browser name="webkit" prefix="-webkit-" />
+		<browser name="iexplorer" prefix="-ms-" />
+		<browser name="w3c" prefix="" />
+	</browsers>
+	<equality>
+		<operator name="wordEquals" value="~=" />
+		<operator name="langEquals" value="|=" />
+		<operator name="prefix" value="^=" />
+		<operator name="suffix" value="$=" />
+		<operator name="substring" value="*=" />
+		<operator name="equals" value="=" />
+	</equality>
+	<units>
+		<length>
+			<unit value="%" />
+			<unit value="in" />
+			<unit value="cm" />
+			<unit value="mm" />
+			<unit value="em" />
+			<unit value="ex" />
+			<unit value="pt" />
+			<unit value="pc" />
+			<unit value="px" />
+		</length>
+		<time>
+			<unit value="s" />
+			<unit value="ms" />
+		</time>
+		<angle>
+			<unit value="deg" />
+		</angle>
+	</units>
+	<pseudoclasses>
+		<pseudoclass name="active" value=":active" configurable="false">Matches any element that’s being activated by the user.</pseudoclass>
+		<pseudoclass name="checked" value=":checked" configurable="false">Matches elements like checkboxes or radio buttons that are checked.</pseudoclass>
+		<pseudoclass name="disabled" value=":disabled" configurable="false">Matches user interface elements that are disabled.</pseudoclass>
+		<pseudoclass name="empty" value=":empty" configurable="false">Matches elements that have no children.</pseudoclass>
+		<pseudoclass name="enabled" value=":enabled" configurable="false">Matches user interface elements that are enabled.</pseudoclass>
+		<pseudoclass name="first-child" value=":first-child" configurable="false">Matches any element that’s the first child element of its parent.</pseudoclass>
+		<pseudoclass name="first-of-type" value=":first-of-type" configurable="false">Matches the first child element of the specified element type.</pseudoclass>
+		<pseudoclass name="focus" value=":focus" configurable="false">Matches any element that’s currently in focus.</pseudoclass>
+		<pseudoclass name="hover" value=":hover" configurable="false">Matches elements that are being designated by a pointing device.</pseudoclass>
+		<pseudoclass name="lang" value=":lang(C)" configurable="true">Allows elements to be matched on the basis of their languages.</pseudoclass>
+		<pseudoclass name="last-child" value=":last-child" configurable="false">Matches an element that’s the last child element of its parent element.</pseudoclass>
+		<pseudoclass name="last-of-type" value=":last-of-type" configurable="false">Matches the last child element of the specified element type.</pseudoclass>
+		<pseudoclass name="link" value=":link" configurable="false">Matches link elements that are unvisited.</pseudoclass>
+		<pseudoclass name="not" value=":not(S)" configurable="true">Matches elements that aren’t matched by the specified selector.</pseudoclass>
+		<pseudoclass name="nth-child" value=":nth-child(N)" configurable="true">Matches elements on the basis of their positions within a parent element’s list of child elements.</pseudoclass>
+		<pseudoclass name="nth-last-child" value=":nth-last-child(N)" configurable="true">Matches elements on the basis of their positions within a parent element’s list of child elements. The counting starts from the last child.</pseudoclass>
+		<pseudoclass name="nth-last-of-type" value=":nth-last-of-type(N)" configurable="true">Matches elements on the basis of their positions within a parent element’s list of child elements of the same type. The counting starts from the last child.</pseudoclass>
+		<pseudoclass name="nth-of-type" value=":nth-of-type(N)" configurable="true">Matches elements on the basis of their positions within a parent element’s list of child elements of the same type.</pseudoclass>
+		<pseudoclass name="only-child" value=":only-child" configurable="false">Matches an element if it’s the only child element of its parent.</pseudoclass>
+		<pseudoclass name="only-of-type" value=":only-of-type" configurable="false">Matches an element that’s the only child element of its type.</pseudoclass>
+		<pseudoclass name="root" value=":root" configurable="false">Matches the element that’s the root element of the document.</pseudoclass>
+		<pseudoclass name="target" value=":target" configurable="false">Matches an element that’s the target of a fragment identifier in the document’s URI.</pseudoclass>
+		<pseudoclass name="visited" value=":visited" configurable="false">Matches link elements that have been visited.</pseudoclass>
+	</pseudoclasses>
+	<pseudoelements>
+		<pseudoelement name="after" value="::after">Specifies content to be inserted after another element.</pseudoelement>
+		<pseudoelement name="before" value="::before">Specifies content to be inserted before another element.</pseudoelement>
+		<pseudoelement name="first-letter" value="::first-letter">Represents the first character of the first line of text within an element.</pseudoelement>
+		<pseudoelement name="first-line" value="::first-line">Represents the first formatted line of text.</pseudoelement>
+		<pseudoelement name="selection" value="::selection">Represents a part of the document that’s been highlighted by the user.</pseudoelement>
+	</pseudoelements>
+	<properties>
+		<category name="animation" title="Animation" class="animationTile" group-id="animation" group-title="Movement &amp; Transformation">
+			<!--<property name="@keyframes" default-value="" browser-support='{"firefox":"true", "opera":"true", "webkit":"true"}' type="input" syntax="animationname {keyframes-selector {css-styles;}}">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>-->
+			<property name="animation" default-value="none 0 ease 0 1 normal" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="input" syntax="name duration timing-function delay iteration-count direction">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for all the animation properties, except the animation-play-state property</description>
+			</property>
+			<property name="animation-delay" default-value="0" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="time" syntax="time">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies when the animation will start</description>
+			</property>
+			<property name="animation-direction" default-value="normal" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="select" syntax="value">
+				<values>
+					<value>normal</value>
+					<value>alternate</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not the animation should play in reverse on alternate cycles</description>
+			</property>
+			<property name="animation-duration" default-value="0" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="time" syntax="time">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how many seconds or milliseconds an animation takes to complete one cycle</description>
+			</property>
+			<property name="animation-iteration-count" default-value="1" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="mixed" syntax="value">
+				<values>
+					<value></value>
+					<value>infinite</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the number of times an animation should be played</description>
+			</property>
+			<property name="animation-name" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"true"}' type="mixed" syntax="keyframename|none">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a name for the @keyframes animation</description>
+			</property>
+			<property name="animation-play-state" default-value="running" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="select" syntax="paused|running">
+				<values>
+					<value>running</value>
+					<value>paused</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether the animation is running or paused</description>
+			</property>
+			<property name="animation-timing-function" default-value="ease" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="mixed" syntax="value|cubic-bezier(n,n,n,n)">
+				<values>
+					<value>ease</value>
+					<value>ease-in</value>
+					<value>ease-out</value>
+					<value>ease-in-out</value>
+					<value>linear</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the speed curve of the animation</description>
+			</property>
+		</category>
+		<category name="background" title="Background" class="backgroundTile" group-id="background" group-title="Background">
+			<property name="background" default-value="transparent none repeat scroll 0% 0%" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="color position size repeat origin clip attachment image">
+				<values>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the background properties in one declaration</description>
+			</property>
+			<property name="background-attachment" default-value="scroll" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="scroll|fixed|inherit">
+				<values>
+					<value>scroll</value>
+					<value>fixed</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets whether a background image is fixed or scrolls with the rest of the page</description>
+			</property>
+			<property name="background-clip" default-value="border-box" browser-support='{"firefox":"false", "opera":"false", "webkit":"true", "iexplorer":"false"}' type="select" syntax="border-box|padding-box|content-box">
+				<values>
+					<value>border-box</value>
+					<value>padding-box</value>
+					<value>content-box</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the painting area of the background</description>
+			</property>
+			<property name="background-color" default-value="transparent" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color">
+				<values>
+					<value>transparent</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the background color of an element</description>
+			</property>
+			<property name="background-image" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="url()">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the background image for an element</description>
+			</property>
+			<property name="background-origin" default-value="padding-box" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="padding-box|border-box|content-box">
+				<values>
+					<value>padding-box</value>
+					<value>border-box</value>
+					<value>content-box</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the positioning area of the background images</description>
+			</property>
+			<property name="background-position" default-value="0% 0%" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="xpos ypos">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the starting position of a background image</description>
+			</property>
+			<property name="background-repeat" default-value="repeat" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="repeat|repeat-x|repeat-y|no-repeat|inherit">
+				<values>
+					<value>repeat</value>
+					<value>repeat-x</value>
+					<value>repeat-y</value>
+					<value>no-repeat</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets how a background image will be repeated</description>
+			</property>
+			<property name="background-size" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|percentage|cover|contain">
+				<values>
+					<value>auto</value>
+					<value>cover</value>
+					<value>contain</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the size of the background images</description>
+			</property>
+		</category>
+		<category name="border_outline" title="Borders &amp; Outline" class="borderTile" group-id="metrics" group-title="Metrics">
+			<property name="border" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="width style color">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the border properties in one declaration</description>
+			</property>
+			<property name="border-bottom" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="width style color">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the bottom border properties in one declaration</description>
+			</property>
+			<property name="border-bottom-color" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color">
+				<values>
+					<value></value>
+					<value>transparent</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of the bottom border</description>
+			</property>
+			<property name="border-bottom-left-radius" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="length" syntax="length|% [length|%]">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Defines the shape of the border of the bottom-left corner</description>
+			</property>
+			<property name="border-bottom-right-radius" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="length" syntax="length|% [length|%]">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Defines the shape of the border of the bottom-right corner</description>
+			</property>
+			<property name="border-bottom-style" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit">
+				<values>
+					<value></value>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of the bottom border</description>
+			</property>
+			<property name="border-bottom-width" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="thin|medium|thick|length|inherit">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of the bottom border</description>
+			</property>
+			<property name="border-color" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="[color|transparent|inherit]{1,4}">
+				<values>
+					<value></value>
+					<value>transparent</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of the four borders</description>
+			</property>
+			<property name="border-image" default-value="none 100% 1 0 stretch" browser-support='{"firefox":"false", "opera":"false", "webkit":"true"}' type="input" syntax="source slice width outset repeat">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting all the border-image-* properties</description>
+			</property>
+			<property name="border-image-outset" default-value="0" browser-support='{}' type="input" syntax="length|number">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the amount by which the border image area extends beyond the border box</description>
+			</property>
+			<property name="border-image-repeat" default-value="stretch" browser-support='{}' type="select" syntax="stretch|repeat|round">
+				<values>
+					<value>stretch</value>
+					<value>repeat</value>
+					<value>round</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether the image-border should be repeated, rounded or stretched</description>
+			</property>
+			<property name="border-image-slice" default-value="100%" browser-support='{}' type="mixed" syntax="number|%|fill">
+				<values>
+					<value></value>
+					<value>fill</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the inward offsets of the image-border</description>
+			</property>
+			<property name="border-image-source" default-value="none" browser-support='{}' type="mixed" syntax="none|image">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies an image to be used as a border</description>
+			</property>
+			<property name="border-image-width" default-value="1" browser-support='{}' type="mixed" syntax="number|%|auto">
+				<values>
+					<value></value>
+					<value>auto</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the widths of the image-border</description>
+			</property>
+			<property name="border-left" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="width style color">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the left border properties in one declaration</description>
+			</property>
+			<property name="border-left-color" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color">
+				<values>
+					<value></value>
+					<value>transparent</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of the left border</description>
+			</property>
+			<property name="border-left-style" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit">
+				<values>
+					<value></value>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of the left border</description>
+			</property>
+			<property name="border-left-width" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="thin|medium|thick|length|inherit">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of the left border</description>
+			</property>
+			<property name="border-radius" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="length" syntax="1-4 length|% / 1-4 length|%">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting all the four border-*-radius properties</description>
+			</property>
+			<property name="border-right" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="width style color">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the right border properties in one declaration</description>
+			</property>
+			<property name="border-right-color" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color">
+				<values>
+					<value></value>
+					<value>transparent</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of the right border</description>
+			</property>
+			<property name="border-right-style" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit">
+				<values>
+					<value></value>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of the right border</description>
+			</property>
+			<property name="border-right-width" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="thin|medium|thick|length|inherit">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of the right border</description>
+			</property>
+			<property name="border-style" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="[style]{1,4}">
+				<values>
+					<value></value>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of the four borders</description>
+			</property>
+			<property name="border-top" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="width style color">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the top border properties in one declaration</description>
+			</property>
+			<property name="border-top-color" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color">
+				<values>
+					<value></value>
+					<value>transparent</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of the top border</description>
+			</property>
+			<property name="border-top-left-radius" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="length" syntax="length|% [length|%]">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Defines the shape of the border of the top-left corner</description>
+			</property>
+			<property name="border-top-right-radius" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="length" syntax="length|% [length|%]">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Defines the shape of the border of the top-right corner</description>
+			</property>
+			<property name="border-top-style" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit">
+				<values>
+					<value></value>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of the top border</description>
+			</property>
+			<property name="border-top-width" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="thin|medium|thick|length|inherit">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of the top border</description>
+			</property>
+			<property name="border-width" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="thin|medium|thick|length|inherit">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of the four borders</description>
+			</property>
+			<property name="box-decoration-break" default-value="slice" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="box-shadow" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="h-shadow v-shadow blur spread color inset">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Attaches one or more drop-shadows to the box</description>
+			</property>
+			<property name="outline" default-value="invert none medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color style width">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the outline properties in one declaration</description>
+			</property>
+			<property name="outline-color" default-value="invert" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color|invert|inherit">
+				<values>
+					<value>invert</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of an outline</description>
+			</property>
+			<property name="outline-style" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="style">
+				<values>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of an outline</description>
+			</property>
+			<property name="outline-width" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="thin|medium|thick|length|inherit">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of an outline</description>
+			</property>
+		</category>
+		<category name="box" title="Box" class="boxTile" group-id="box" group-title="Box">
+			<property name="overflow-style" default-value="auto" browser-support='{}' type="select" syntax="auto|scrollbar|panner|move|marquee">
+				<values>
+					<value>auto</value>
+					<value>scrollbar</value>
+					<value>panner</value>
+					<value>move</value>
+					<value>marquee</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the preferred scrolling method for elements that overflow</description>
+			</property>
+			<property name="overflow-x" default-value="visible" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="visible|hidden|scroll|auto|no-display|no-content">
+				<values>
+					<value>visible</value>
+					<value>hidden</value>
+					<value>scroll</value>
+					<value>auto</value>
+					<value>no-display</value>
+					<value>no-content</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not to clip the left/right edges of the content, if it overflows the element's content area</description>
+			</property>
+			<property name="overflow-y" default-value="visible" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="visible|hidden|scroll|auto|no-display|no-content">
+				<values>
+					<value>visible</value>
+					<value>hidden</value>
+					<value>scroll</value>
+					<value>auto</value>
+					<value>no-display</value>
+					<value>no-content</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not to clip the top/bottom edges of the content, if it overflows the element's content area</description>
+			</property>
+			<property name="rotation" default-value="0" browser-support='{}' type="angle" syntax="angle">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Rotates an element around a given point defined by the rotation-point property</description>
+			</property>
+			<property name="rotation-point" default-value="50% 50%" browser-support='{}' type="input" syntax="xpos ypos">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Defines a point as an offset from the top left border edge</description>
+			</property>
+		</category>
+		<category name="color" title="Color" class="colorTile" group-id="background" group-title="Background">
+			<property name="color-profile" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Permits the specification of a source color profile other than the default</description>
+			</property>
+			<property name="opacity" default-value="1" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="value">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the opacity level for an element</description>
+			</property>
+			<property name="rendering-intent" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Permits the specification of a color profile rendering intent other than the default</description>
+			</property>
+		</category>
+		<category name="paged_media_content" title="Paged Media" class="pagedTile" group-id="misc" group-title="Miscellaneous">
+			<property name="bookmark-label" default-value="content()" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the label of the bookmark</description>
+			</property>
+			<property name="bookmark-level" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the level of the bookmark</description>
+			</property>
+			<property name="bookmark-target" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the target of the bookmark link</description>
+			</property>
+			<property name="float-offset" default-value="0 0" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Pushes floated elements in the opposite direction of the where they have been floated with float</description>
+			</property>
+			<property name="hyphenate-after" default-value="manual" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the minimum number of characters in a hyphenated word after the hyphenation character</description>
+			</property>
+			<property name="hyphenate-before" default-value="manual" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the minimum number of characters in a hyphenated word before the hyphenation character</description>
+			</property>
+			<property name="hyphenate-character" default-value="manual" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a string that is shown when a hyphenate-break occurs</description>
+			</property>
+			<property name="hyphenate-lines" default-value="manual" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Indicates the maximum number of successive hyphenated lines in an element</description>
+			</property>
+			<property name="hyphenate-resource" default-value="manual" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a comma-separated list of external resources that can help the browser determine hyphenation points</description>
+			</property>
+			<property name="hyphens" default-value="manual" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets how to split words to improve the layout of paragraphs</description>
+			</property>
+			<property name="image-resolution" default-value="normal" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the correct resolution of images</description>
+			</property>
+			<property name="marks" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>3.0</version>
+				</versions>
+				<description>Adds crop and/or cross marks to the document</description>
+			</property>
+			<property name="string-set" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+		</category>
+		<category name="dimension" title="Dimensions" class="dimensionTile" group-id="metrics" group-title="Metrics">
+			<property name="height" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the height of an element</description>
+			</property>
+			<property name="max-height" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|length|%|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the maximum height of an element</description>
+			</property>
+			<property name="max-width" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|length|%|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the maximum width of an element</description>
+			</property>
+			<property name="min-height" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the minimum height of an element</description>
+			</property>
+			<property name="min-width" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the minimum width of an element</description>
+			</property>
+			<property name="width" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the width of an element</description>
+			</property>
+		</category>
+		<category name="flexible_box" title="Flexible Box" class="flexibleBoxTile" group-id="box" group-title="Box">
+			<property name="box-align" default-value="stretch" browser-support='{"firefox":"true", "webkit":"true"}' type="select" syntax="start|end|center|baseline|stretch">
+				<values>
+					<value>stretch</value>
+					<value>start</value>
+					<value>end</value>
+					<value>center</value>
+					<value>baseline</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how to align the child elements of a box</description>
+			</property>
+			<property name="box-direction" default-value="normal" browser-support='{"firefox":"true", "webkit":"true"}' type="select" syntax="normal|reverse|inherit">
+				<values>
+					<value>normal</value>
+					<value>reverse</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies in which direction the children of a box are displayed</description>
+			</property>
+			<property name="box-flex" default-value="0.0" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="input" syntax="value">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether the children of a box is flexible or inflexible in size</description>
+			</property>
+			<property name="box-flex-group" default-value="1" browser-support='{}' type="input" syntax="integer">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Assigns flexible elements to flex groups</description>
+			</property>
+			<property name="box-lines" default-value="single" browser-support='{}' type="select" syntax="single|multiple">
+				<values>
+					<value>single</value>
+					<value>multiple</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether columns will go onto a new line whenever it runs out of space in the parent box</description>
+			</property>
+			<property name="box-ordinal-group" default-value="1" browser-support='{"firefox":"true", "webkit":"true"}' type="input" syntax="integer">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the display order of the child elements of a box</description>
+			</property>
+			<property name="box-orient" default-value="inline-axis" browser-support='{"firefox":"true", "webkit":"true"}' type="select" syntax="horizontal|vertical|inline-axis|block-axis|inherit">
+				<values>
+					<value>inline-axis</value>
+					<value>horizontal</value>
+					<value>vertical</value>
+					<value>block-axis</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether the children of a box should be laid out horizontally	or vertically</description>
+			</property>
+			<property name="box-pack" default-value="start" browser-support='{"firefox":"true", "webkit":"true"}' type="select" syntax="start|end|center|justify">
+				<values>
+					<value>start</value>
+					<value>end</value>
+					<value>center</value>
+					<value>justify</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the horizontal position in horizontal boxes and the vertical position in vertical boxes</description>
+			</property>
+		</category>
+		<category name="font" title="Font" class="fontTile" group-id="text_font" group-title="Text &amp; Font">
+			<!--<property name="@font-face" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="" syntax="">
+				<values>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>-->
+			<property name="font" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="style variant weight size/height family|option">
+				<values>
+					<value></value>
+					<value>caption</value>
+					<value>icon</value>
+					<value>menu</value>
+					<value>message-box</value>
+					<value>small-caption</value>
+					<value>status-bar</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the font properties in one declaration</description>
+			</property>
+			<property name="font-family" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="family-name/generic-family">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the font family for text</description>
+			</property>
+			<property name="font-size" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|option">
+				<values>
+					<value>medium</value>
+					<value>xx-small</value>
+					<value>x-small</value>
+					<value>small</value>
+					<value>large</value>
+					<value>x-large</value>
+					<value>xx-large</value>
+					<value>smaller</value>
+					<value>larger</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the font size of text</description>
+			</property>
+			<property name="font-size-adjust" default-value="none" browser-support='{"firefox":"false"}' type="mixed" syntax="number|none|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>3.0</version>
+				</versions>
+				<description>Preserves the readability of text when font fallback occurs</description>
+			</property>
+			<property name="font-stretch" default-value="normal" browser-support='{}' type="select" syntax="wider|narrower|ultra-condensed|extra-condensed|condensed|semi-condensed|normal|semi-expanded|expanded|extra-expanded|ultra-expanded|inherit">
+				<values>
+					<value>wider</value>
+					<value>narrower</value>
+					<value>ultra-condensed</value>
+					<value>extra-condensed</value>
+					<value>condensed</value>
+					<value>semi-condensed</value>
+					<value>normal</value>
+					<value>semi-expanded</value>
+					<value>expanded</value>
+					<value>extra-expanded</value>
+					<value>ultra-expanded</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>3.0</version>
+				</versions>
+				<description>Selects a normal, condensed, or expanded face from a font family</description>
+			</property>
+			<property name="font-style" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|italic|oblique|inherit">
+				<values>
+					<value>normal</value>
+					<value>italic</value>
+					<value>oblique</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the font style for text</description>
+			</property>
+			<property name="font-variant" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|small-caps|inherit">
+				<values>
+					<value>normal</value>
+					<value>small-caps</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not a text should be displayed in a small-caps font</description>
+			</property>
+			<property name="font-weight" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|bold|bolder|lighter|hundredth|inherit">
+				<values>
+					<value>normal</value>
+					<value>bold</value>
+					<value>bolder</value>
+					<value>lighter</value>
+					<value>100</value>
+					<value>200</value>
+					<value>300</value>
+					<value>400</value>
+					<value>500</value>
+					<value>600</value>
+					<value>700</value>
+					<value>800</value>
+					<value>900</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the weight of a font</description>
+			</property>
+		</category>
+		<category name="generated_content" title="Generated Content" class="generatedTile" group-id="misc" group-title="Miscellaneous">
+			<property name="content" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|normal|counter|attr(attribute)|string|open-quote|close-quote|no-open-quote|no-close-quote|url(url)|inherit">
+				<values>
+					<value>normal</value>
+					<value>none</value>
+					<value>counter</value>
+					<value>string</value>
+					<value>open-quote</value>
+					<value>close-quote</value>
+					<value>no-open-quote</value>
+					<value>no-close-quote</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Used with the :before and :after pseudo-elements, to insert generated content</description>
+			</property>
+			<property name="counter-increment" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|id number|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Increments one or more counters</description>
+			</property>
+			<property name="counter-reset" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|id number|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Creates or resets one or more counters</description>
+			</property>
+			<property name="crop" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows a replaced element to be just a rectangular area of an object, instead of the whole object</description>
+			</property>
+			<property name="move-to" default-value="normal" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Causes an element to be removed from the flow and reinserted at a later point in the document</description>
+			</property>
+			<property name="page-policy" default-value="start" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Determines which page-based occurance of a given element is applied to a counter or string value</description>
+			</property>
+			<property name="quotes" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="string string string string ">
+				<values>
+					<value></value>
+					<value>none</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the type of quotation marks for embedded quotations</description>
+			</property>
+		</category>
+		<category name="grid" title="Grid" class="gridTile" group-id="grid_table" group-title="Grids &amp; Tables">
+			<property name="grid-columns" default-value="none" browser-support='{}' type="mixed" syntax="length|%|none|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the width of each column in a grid</description>
+			</property>
+			<property name="grid-rows" default-value="none" browser-support='{}' type="" syntax="length|%|none|inherit">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the height of each column in a grid</description>
+			</property>
+		</category>
+		<category name="hyperlink" title="Hyperlink" class="hyperlinkTile" group-id="misc" group-title="Miscellaneous">
+			<property name="target" default-value="current window above" browser-support='{}' type="input" syntax="target-name target-new target-position">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting the target-name, target-new, and target-position properties</description>
+			</property>
+			<property name="target-name" default-value="current" browser-support='{}' type="mixed" syntax="current|root|parent|new|modal|name">
+				<values>
+					<value>current</value>
+					<value>root</value>
+					<value>parent</value>
+					<value>new</value>
+					<value>modal</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies where to open links (target destination)</description>
+			</property>
+			<property name="target-new" default-value="window" browser-support='{}' type="select" syntax="window|tab|none">
+				<values>
+					<value>window</value>
+					<value>tab</value>
+					<value>none</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether new destination links should open in a new window or in a new tab of an existing window</description>
+			</property>
+			<property name="target-position" default-value="above" browser-support='{}' type="select" syntax="above|behind|front|back">
+				<values>
+					<value>above</value>
+					<value>behind</value>
+					<value>front</value>
+					<value>back</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies where new destination links should be placed</description>
+			</property>
+		</category>
+		<category name="linebox" title="Linebox" class="lineboxTile" group-id="positioning" group-title="Positioning">
+			<property name="alignment-adjust" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows more precise alignment of elements</description>
+			</property>
+			<property name="alignment-baseline" default-value="baseline" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how an inline-level element is aligned with respect to its parent</description>
+			</property>
+			<property name="baseline-shift" default-value="baseline" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows repositioning of the dominant-baseline relative to the dominant-baseline</description>
+			</property>
+			<property name="dominant-baseline" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a scaled-baseline-table</description>
+			</property>
+			<property name="drop-initial-after-adjust" default-value="text-after-edge" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the alignment point of the drop initial for the primary connection point</description>
+			</property>
+			<property name="drop-initial-after-align" default-value="baseline" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets which alignment line within the initial line box is used at the primary connection point with the initial letter box</description>
+			</property>
+			<property name="drop-initial-before-adjust" default-value="text-before-edge" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the alignment point of the drop initial for the secondary connection point</description>
+			</property>
+			<property name="drop-initial-before-align" default-value="caps-height" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets which alignment line within the initial line box is used at the secondary connection point with the initial letter box</description>
+			</property>
+			<property name="drop-initial-size" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Controls the partial sinking of the initial letter</description>
+			</property>
+			<property name="drop-initial-value" default-value="initial" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Activates a drop-initial effect</description>
+			</property>
+			<property name="inline-box-align" default-value="last" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets which line of a multi-line inline block align with the previous and next inline elements within a line</description>
+			</property>
+			<property name="line-stacking" default-value="" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting the line-stacking-strategy, line-stacking-ruby, and line-stacking-shift properties</description>
+			</property>
+			<property name="line-stacking-ruby" default-value="exclude-ruby" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the line stacking method for block elements containing ruby annotation elements</description>
+			</property>
+			<property name="line-stacking-shift" default-value="consider-shifts" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the line stacking method for block elements containing elements with base-shift</description>
+			</property>
+			<property name="line-stacking-strategy" default-value="inline-line-height" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the line stacking strategy for stacked line boxes within a containing block element</description>
+			</property>
+			<property name="text-height" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the block-progression dimension of the text content area of an inline box</description>
+			</property>
+		</category>
+		<category name="list" title="List" class="listTile" group-id="grid_table" group-title="Grids &amp; Tables">
+			<property name="list-style" default-value="disc outside none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="type position image">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the properties for a list in one declaration</description>
+			</property>
+			<property name="list-style-image" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="url()">
+				<values>
+					<value>none</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies an image as the list-item marker</description>
+			</property>
+			<property name="list-style-position" default-value="outside" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="inside|outside|inherit">
+				<values>
+					<value>outside</value>
+					<value>inside</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies if the list-item markers should appear inside or outside the content flow</description>
+			</property>
+			<property name="list-style-type" default-value="disc for 'ul' and decimal for 'ol'" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="selecy" syntax="option">
+				<values>
+					<value>disc</value>
+					<value>armenian</value>
+					<value>circle</value>
+					<value>cjk-ideographic</value>
+					<value>decimal</value>
+					<value>decimal-leading-zero</value>
+					<value>georgian</value>
+					<value>hebrew</value>
+					<value>hiragana</value>
+					<value>hiragana-iroha</value>
+					<value>inherit</value>
+					<value>katakana</value>
+					<value>katakana-iroha</value>
+					<value>lower-alpha</value>
+					<value>lower-greek</value>
+					<value>lower-latin</value>
+					<value>lower-roman</value>
+					<value>none</value>
+					<value>square</value>
+					<value>upper-alpha</value>
+					<value>upper-latin</value>
+					<value>upper-roman</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the type of list-item marker</description>
+			</property>
+		</category>
+		<category name="margin" title="Margins &amp; Padding" class="marginTile" group-id="metrics" group-title="Metrics">
+			<property name="margin" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value></value>
+					<value>auto</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the margin properties in one declaration</description>
+			</property>
+			<property name="margin-bottom" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value></value>
+					<value>auto</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the bottom margin of an element</description>
+			</property>
+			<property name="margin-left" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value></value>
+					<value>auto</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the left margin of an element</description>
+			</property>
+			<property name="margin-right" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value></value>
+					<value>auto</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the right margin of an element</description>
+			</property>
+			<property name="margin-top" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value></value>
+					<value>auto</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the top margin of an element</description>
+			</property>
+		</category>
+		<category name="marquee" title="Movement" class="movementTile" group-id="animation" group-title="Movement &amp; Transformation">
+			<property name="marquee-direction" default-value="forward" browser-support='{"webkit":"true"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the direction of the moving content</description>
+			</property>
+			<property name="marquee-play-count" default-value="1" browser-support='{"webkit":"true"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets how many times the content move</description>
+			</property>
+			<property name="marquee-speed" default-value="normal" browser-support='{"webkit":"true"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets how fast the content scrolls</description>
+			</property>
+			<property name="marquee-style" default-value="scroll" browser-support='{"webkit":"true"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the style of the moving content</description>
+			</property>
+		</category>
+		<category name="multi_column" title="Columns" class="columnsTile" group-id="grid_table" group-title="Grids &amp; Tables">
+			<property name="column-count" default-value="auto" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="mixed" syntax="number|auto">
+				<values>
+					<value>auto</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the number of columns an element should be divided into</description>
+			</property>
+			<property name="column-fill" default-value="balance" browser-support='{}' type="select" syntax="balance|auto">
+				<values>
+					<value>balance</value>
+					<value>auto</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how to fill columns</description>
+			</property>
+			<property name="column-gap" default-value="normal" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="mixed" syntax="length|normal">
+				<values>
+					<value>normal</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the gap between the columns</description>
+			</property>
+			<property name="column-rule" default-value="medium none black" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="input" syntax="width style color">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting all the column-rule-* properties</description>
+			</property>
+			<property name="column-rule-color" default-value="black" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="input" syntax="color">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the color of the rule between columns</description>
+			</property>
+			<property name="column-rule-style" default-value="none" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="select" syntax="none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset">
+				<values>
+					<value>none</value>
+					<value>hidden</value>
+					<value>dotted</value>
+					<value>dashed</value>
+					<value>solid</value>
+					<value>double</value>
+					<value>groove</value>
+					<value>ridge</value>
+					<value>inset</value>
+					<value>outset</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the style of the rule between columns</description>
+			</property>
+			<property name="column-rule-width" default-value="medium" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="mixed" syntax="thin|medium|thick|length">
+				<values>
+					<value>medium</value>
+					<value>thin</value>
+					<value>thick</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the width of the rule between columns</description>
+			</property>
+			<property name="column-span" default-value="1" browser-support='{"opera":"false", "webkit":"true"}' type="select" syntax="1|all">
+				<values>
+					<value>1</value>
+					<value>all</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how many columns an element should span across</description>
+			</property>
+			<property name="column-width" default-value="auto" browser-support='{"opera":"false", "webkit":"true"}' type="mixed" syntax="auto|length">
+				<values>
+					<value>auto</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the width of the columns</description>
+			</property>
+			<property name="columns" default-value="auto auto" browser-support='{"firefox":"true", "opera":"false", "webkit":"true"}' type="input" syntax="width count">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting column-width and column-count</description>
+			</property>
+		</category>
+		<category name="padding" title="Margins &amp; Padding" class="marginTile" group-id="metrics" group-title="Metrics">
+			<property name="padding" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="(length|%|inherit){0,4}">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets all the padding properties in one declaration</description>
+			</property>
+			<property name="padding-bottom" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the bottom padding of an element</description>
+			</property>
+			<property name="padding-left" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the left padding of an element</description>
+			</property>
+			<property name="padding-right" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the right padding of an element</description>
+			</property>
+			<property name="padding-top" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the top padding of an element</description>
+			</property>
+		</category>
+		<category name="paged_media" title="Paged Media" class="pagedTile" group-id="misc" group-title="Miscellaneous">
+			<property name="fit" default-value="fill" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Gives a hint for how to scale a replaced element if neither its width nor its height property is auto</description>
+			</property>
+			<property name="fit-position" default-value="0% 0%" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Determines the alignment of the object inside the box</description>
+			</property>
+			<property name="image-orientation" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a rotation in the right or clockwise direction that a user agent applies to an image</description>
+			</property>
+			<property name="page" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a particular type of page where an element SHOULD be displayed</description>
+			</property>
+			<property name="size" default-value="auto" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the size and orientation of the containing box for page content</description>
+			</property>
+		</category>
+		<category name="positioning" title="Positioning" class="positioningTile" group-id="positioning" group-title="Positioning">
+			<property name="bottom" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|%|length|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the bottom position of a positioned element</description>
+			</property>
+			<property name="clear" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="left|right|both|none|inherit">
+				<values>
+					<value>none</value>
+					<value>left</value>
+					<value>right</value>
+					<value>both</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies which sides of an element where other floating elements are not allowed</description>
+			</property>
+			<property name="clip" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="rect(top, right, bottom, left)|auto|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Clips an absolutely positioned element</description>
+			</property>
+			<property name="cursor" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="[[&lt;uri&gt;[&lt;x&gt; &lt;y&gt;]?,]*[auto|default|none|context-menu|help|pointer|progress|wait|cell|crosshair|text|vertical-text|alias|copy|move|no-drop|not-allowed|e-resize|n-resize|ne-resize|nw-resize|s-resize|se-resize|sw-resize|w-resize|ew-resize|ns-resize|nesw-resize|nwse-resize|col-resize|row-resize|all-scroll|zoom-in|zoom-out]]">
+				<values>
+					<value>auto</value>
+					<value>default</value>
+					<value>none</value>
+					<value>context-menu</value>
+					<value>help</value>
+					<value>pointer</value>
+					<value>progress</value>
+					<value>wait</value>
+					<value>cell</value>
+					<value>crosshair</value>
+					<value>text</value>
+					<value>vertical-text</value>
+					<value>alias</value>
+					<value>copy</value>
+					<value>move</value>
+					<value>no-drop</value>
+					<value>not-allowed</value>
+					<value>e-resize</value>
+					<value>n-resize</value>
+					<value>ne-resize</value>
+					<value>nw-resize</value>
+					<value>s-resize</value>
+					<value>se-resize</value>
+					<value>sw-resize</value>
+					<value>w-resize</value>
+					<value>ew-resize</value>
+					<value>ns-resize</value>
+					<value>nesw-resize</value>
+					<value>nwse-resize</value>
+					<value>col-resize</value>
+					<value>row-resize</value>
+					<value>all-scroll</value>
+					<value>zoom-in</value>
+					<value>zoom-out</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the type of cursor to be displayed</description>
+			</property>
+			<property name="display" default-value="inline" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="">
+				<values>
+					<value>inline</value>
+					<value>none</value>
+					<value>box</value>
+					<value>flex-box</value>
+					<value>block</value>
+					<value>flex</value>
+					<value>inline-block</value>
+					<value>inline-flex</value>
+					<value>inline-table</value>
+					<value>list-item</value>
+					<value>table</value>
+					<value>table-caption</value>
+					<value>table-cell</value>
+					<value>table-column</value>
+					<value>table-column-group</value>
+					<value>table-footer-group</value>
+					<value>table-header-group</value>
+					<value>table-row</value>
+					<value>table-row-group</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how a certain HTML element should be displayed</description>
+			</property>
+			<property name="float" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="left|right|none|inherit">
+				<values>
+					<value>none</value>
+					<value>left</value>
+					<value>right</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not a box should float</description>
+			</property>
+			<property name="left" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the left position of a positioned element</description>
+			</property>
+			<property name="overflow" default-value="visible" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="visible|hidden|scroll|auto|inherit">
+				<values>
+					<value>visible</value>
+					<value>hidden</value>
+					<value>scroll</value>
+					<value>auto</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies what happens if content overflows an element's box</description>
+			</property>
+			<property name="position" default-value="static" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="static|absolute|fixed|relative|inherit" >
+				<values>
+					<value>static</value>
+					<value>absolute</value>
+					<value>fixed</value>
+					<value>relative</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the type of positioning method used for an element (static, relative, absolute or fixed)</description>
+			</property>
+			<property name="right" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the right position of a positioned element</description>
+			</property>
+			<property name="top" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|length|%|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the top position of a positioned element</description>
+			</property>
+			<property name="visibility" default-value="visible" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="visible|hidden|collapse|inherit">
+				<values>
+					<value>visible</value>
+					<value>hidden</value>
+					<value>collapse</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not an element is visible</description>
+			</property>
+			<property name="z-index" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|number|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the stack order of a positioned element</description>
+			</property>
+		</category>
+		<category name="print" title="Print" class="printTile" group-id="misc" group-title="Miscellaneous">
+			<property name="orphans" default-value="2" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the minimum number of lines that must be left at the bottom of a page when a page break occurs inside an element</description>
+			</property>
+			<property name="page-break-after" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="auto|always|avoid|left|right|inherit">
+				<values>
+					<value>auto</value>
+					<value>always</value>
+					<value>avoid</value>
+					<value>left</value>
+					<value>right</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the page-breaking behavior after an element</description>
+			</property>
+			<property name="page-break-before" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="auto|always|avoid|left|right|inherit">
+				<values>
+					<value>auto</value>
+					<value>always</value>
+					<value>avoid</value>
+					<value>left</value>
+					<value>right</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the page-breaking behavior before an element</description>
+			</property>
+			<property name="page-break-inside" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="auto|avoid|inherit">
+				<values>
+					<value>auto</value>
+					<value>avoid</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the page-breaking behavior inside an element</description>
+			</property>
+			<property name="widows" default-value="2" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the minimum number of lines that must be left at the top of a page when a page break occurs inside an element</description>
+			</property>
+		</category>
+		<category name="ruby" title="Ruby" class="rubyTile" group-id="misc" grout-title="Miscellaneous">
+			<property name="ruby-align" default-value="auto" browser-support='{"iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Controls the text alignment of the ruby text and ruby base contents relative to each other</description>
+			</property>
+			<property name="ruby-overhang" default-value="none" browser-support='{"iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Determines whether, and on which side, ruby text is allowed to partially overhang any adjacent text in addition to its own base, when the ruby text is wider than the ruby base</description>
+			</property>
+			<property name="ruby-position" default-value="before" browser-support='{"iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Controls the position of the ruby text with respect to its base</description>
+			</property>
+			<property name="ruby-span" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Controls the spanning behavior of annotation elements</description>
+			</property>
+		</category>
+		<category name="speech" title="Aural" class="auralTile" group-id="misc" group-title="Miscellaneous">
+			<property name="mark" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting the mark-before and mark-after properties</description>
+			</property>
+			<property name="mark-after" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows named markers to be attached to the audio stream</description>
+			</property>
+			<property name="mark-before" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows named markers to be attached to the audio stream</description>
+			</property>
+			<property name="phonemes" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a phonetic pronunciation for the text contained by the corresponding element</description>
+			</property>
+			<property name="rest" default-value="" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting the rest-before and rest-after properties</description>
+			</property>
+			<property name="rest-after" default-value="" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a rest or prosodic boundary to be observed after speaking an element's content</description>
+			</property>
+			<property name="rest-before" default-value="" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a rest or prosodic boundary to be observed before speaking an element's content</description>
+			</property>
+			<property name="voice-balance" default-value="center" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the balance between left and right channels</description>
+			</property>
+			<property name="voice-duration" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how long it should take to render the selected element's content</description>
+			</property>
+			<property name="voice-pitch" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the average pitch (a frequency) of the speaking voice</description>
+			</property>
+			<property name="voice-pitch-range" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies variation in average pitch</description>
+			</property>
+			<property name="voice-rate" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Controls the speaking rate</description>
+			</property>
+			<property name="voice-stress" default-value="moderate" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Indicates the strength of emphasis to be applied</description>
+			</property>
+			<property name="voice-volume" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Refers to the amplitude of the waveform output by the speech synthesises</description>
+			</property>
+		</category>
+		<category name="table" title="Table" class="tableTile" group-id="grid_table" group-title="Grids &amp; Tables">
+			<property name="border-collapse" default-value="separate" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="collapse|separate|inherit">
+				<values>
+					<value>separate</value>
+					<value>collapse</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not table borders should be collapsed</description>
+			</property>
+			<property name="border-spacing" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length length|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the distance between the borders of adjacent cells</description>
+			</property>
+			<property name="caption-side" default-value="top" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="top|bottom|inherit">
+				<values>
+					<value>top</value>
+					<value>bottom</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the placement of a table caption</description>
+			</property>
+			<property name="empty-cells" default-value="show" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="hide|show|inherit">
+				<values>
+					<value>show</value>
+					<value>hide</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not to display borders and background on empty cells in a table</description>
+			</property>
+			<property name="table-layout" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="auto|fixed|inherit">
+				<values>
+					<value>auto</value>
+					<value>fixed</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the layout algorithm to be used for a table</description>
+			</property>
+		</category>
+		<category name="text" title="Text" class="textTile" group-id="text_font" group-title="Text &amp; Font">
+			<property name="color" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="color|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the color of text</description>
+			</property>
+			<property name="direction" default-value="ltr" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="ltr|rtl|inherit">
+				<values>
+					<value>ltr</value>
+					<value>rtl</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the text direction/writing direction</description>
+			</property>
+			<property name="hanging-punctuation" default-value="none" browser-support='{}' type="select" syntax="none|first|last|allow-end|force-end">
+				<values>
+					<value>none</value>
+					<value>first</value>
+					<value>last</value>
+					<value>allow-end</value>
+					<value>force-end</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether a punctuation character may be placed outside the line box</description>
+			</property>
+			<property name="letter-spacing" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="normal|length|inherit">
+				<values>
+					<value>normal</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Increases or decreases the space between characters in a text</description>
+			</property>
+			<property name="line-height" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="normal|number|length|%|inherit">
+				<values>
+					<value>normal</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the line height</description>
+			</property>
+			<property name="punctuation-trim" default-value="none" browser-support='{}' type="select" syntax="none|start|end|allow-end|adjacent">
+				<values>
+					<value>none</value>
+					<value>start</value>
+					<value>end</value>
+					<value>allow-end</value>
+					<value>adjacent</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether a punctuation character should be trimmed</description>
+			</property>
+			<property name="text-align" default-value="left if direction is ltr, and right if direction is rtl" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="left|right|center|justify|inherit">
+				<values>
+					<value>left</value>
+					<value>right</value>
+					<value>center</value>
+					<value>justify</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the horizontal alignment of text</description>
+			</property>
+			<property name="text-align-last" default-value="start" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Describes how the last line of a block or a line right before a forced line break is aligned when text-align is "justify"</description>
+			</property>
+			<property name="text-decoration" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|underline|overline|line-through|blink|inherit">
+				<values>
+					<value>none</value>
+					<value>underline</value>
+					<value>overline</value>
+					<value>line-through</value>
+					<value>blink</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the decoration added to text</description>
+			</property>
+			<property name="text-indent" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the indentation of the first line in a text-block</description>
+			</property>
+			<property name="text-justify" default-value="auto" browser-support='{"iexplorer":"false"}' type="select" syntax="auto|inter-word|inter-ideograph|inter-cluster|distribute|kashida|trim">
+				<values>
+					<value>auto</value>
+					<value>inter-word</value>
+					<value>inter-ideograph</value>
+					<value>inter-cluster</value>
+					<value>distribute</value>
+					<value>kashida</value>
+					<value>trim</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the justification method used when text-align is "justify"</description>
+			</property>
+			<property name="text-outline" default-value="none" browser-support='{}' type="mixed" syntax="thickness blur color">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a text outline</description>
+			</property>
+			<property name="text-overflow" default-value="clip" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="clip|ellipsis|string">
+				<values>
+					<value>clip</value>
+					<value>ellipsis</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies what should happen when text overflows the containing element</description>
+			</property>
+			<property name="text-shadow" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false"}' type="mixed" syntax="h-shadow v-shadow blur color">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>3.0</version>
+				</versions>
+				<description>Adds shadow to text</description>
+			</property>
+			<property name="text-transform" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|capitalize|uppercase|lowercase|inherit">
+				<values>
+					<value>none</value>
+					<value>capitalize</value>
+					<value>uppercase</value>
+					<value>lowercase</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Controls the capitalization of text</description>
+			</property>
+			<property name="text-wrap" default-value="normal" browser-support='{}' type="select" syntax="normal|none|unrestricted|suppress">
+				<values>
+					<value>normal</value>
+					<value>none</value>
+					<value>unrestricted</value>
+					<value>suppress</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies line breaking rules for text</description>
+			</property>
+			<property name="unicode-bidi" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="vertical-align" default-value="baseline" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="length|%|baseline|sub|super|top|text-top|middle|bottom|text-bottom|inherit">
+				<values>
+					<value>baseline</value>
+					<value>sub</value>
+					<value>super</value>
+					<value>top</value>
+					<value>text-top</value>
+					<value>middle</value>
+					<value>bottom</value>
+					<value>text-bottom</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the vertical alignment of an element</description>
+			</property>
+			<property name="white-space" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|nowrap|pre|pre-line|pre-wrap|inherit">
+				<values>
+					<value>normal</value>
+					<value>nowrap</value>
+					<value>pre</value>
+					<value>pre-line</value>
+					<value>pre-wrap</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how white-space inside an element is handled</description>
+			</property>
+			<property name="word-break" default-value="normal" browser-support='{"firefox":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|break-all|hyphenate">
+				<values>
+					<value>normal</value>
+					<value>break-all</value>
+					<value>hyphenate</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies line breaking rules for non-CJK scripts</description>
+			</property>
+			<property name="word-spacing" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="normal|length|inherit">
+				<values>
+					<value>normal</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>1.0</version>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Increases or decreases the space between words in a text</description>
+			</property>
+			<property name="word-wrap" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|break-word">
+				<values>
+					<value>normal</value>
+					<value>break-word</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows long, unbreakable words to be broken and wrap to the next line</description>
+			</property>
+		</category>
+		<category name="transform" title="Transformation" class="transformationTile" group-id="animation" group-title="Movement &amp; Transformation">
+			<property name="backface-visibility" default-value="visible" browser-support='{"firefox":"true", "webkit":"true"}' type="select" syntax="visible|hidden">
+				<values>
+					<value>visible</value>
+					<value>hidden</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Defines whether or not an element should be visible when not facing the screen</description>
+			</property>
+			<property name="perspective" default-value="none" browser-support='{"webkit":"true"}' type="mixed" syntax="number|none">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the perspective on how 3D elements are viewed</description>
+			</property>
+			<property name="perspective-origin" default-value="50% 50%" browser-support='{"webkit":"true"}' type="input" syntax="x-axis y-axis">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the bottom position of 3D elements</description>
+			</property>
+			<property name="transform" default-value="none" browser-support='{"firefox":"true", "opera":"true", "webkit":"true", "iexplorer":"true"}' type="mixed" syntax="none|transform-functions">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Applies a 2D or 3D transformation to an element</description>
+			</property>
+			<property name="transform-origin" default-value="50% 50% 0" browser-support='{"firefox":"true", "opera":"true", "webkit":"true", "iexplorer":"true"}' type="input" syntax="x-axis y-axis z-axis">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows you to change the position on transformed elements</description>
+			</property>
+			<property name="transform-style" default-value="flat" browser-support='{"webkit":"true"}' type="select" syntax="flat|preserve-3d">
+				<values>
+					<value>flat</value>
+					<value>preserve-3d</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how nested elements are rendered in 3D space</description>
+			</property>
+		</category>
+		<category name="transition" title="Transition" class="transitionTile" group-id="animation" group-title="Movement &amp; Transformation">
+			<property name="transition" default-value="all 0 ease 0" browser-support='{"firefox":"true", "opera":"true", "webkit":"true"}' type="input" syntax="property duration timing-function delay">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>A shorthand property for setting the four transition properties</description>
+			</property>
+			<property name="transition-delay" default-value="0" browser-support='{"firefox":"true", "opera":"true", "webkit":"true"}' type="time" syntax="time">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies when the transition effect will start</description>
+			</property>
+			<property name="transition-duration" default-value="0" browser-support='{"firefox":"true", "opera":"true", "webkit":"true"}' type="time" syntax="time">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies how many seconds or milliseconds a transition effect takes to complete</description>
+			</property>
+			<property name="transition-property" default-value="all" browser-support='{"firefox":"true", "opera":"true", "webkit":"true"}' type="mixed" syntax="none|all|property">
+				<values>
+					<value>all</value>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the name of the CSS property the transition effect is for</description>
+			</property>
+			<property name="transition-timing-function" default-value="ease" browser-support='{"firefox":"true", "opera":"true", "webkit":"true"}' type="mixed" syntax="linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n)">
+				<values>
+					<value>ease</value>
+					<value>linear</value>
+					<value>ease-in</value>
+					<value>ease-out</value>
+					<value>ease-in-out</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the speed curve of the transition effect</description>
+			</property>
+		</category>
+		<category name="user_interface" title="User Interface" class="userInterfaceTile" group-id="misc" group-title="Miscellaneous">
+			<property name="appearance" default-value="normal" browser-support='{"firefox":"true", "webkit":"true"}' type="select" syntax="normal|icon|window|button|menu|field">
+				<values>
+					<value>normal</value>
+					<value>icon</value>
+					<value>window</value>
+					<value>button</value>
+					<value>menu</value>
+					<value>field</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows you to make an element look like a standard user interface element</description>
+			</property>
+			<property name="box-sizing" default-value="content-box" browser-support='{"firefox":"true", "webkit":"true", "iexplorer":"false"}' type="select" syntax="content-box|border-box|inherit">
+				<values>
+					<value>content-box</value>
+					<value>border-box</value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Allows you to define certain elements to fit an area in a certain way</description>
+			</property>
+			<property name="icon" default-value="auto" browser-support='{}' type="mixed" syntax="auto|URL|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Provides the author the ability to style an element with an iconic equivalent</description>
+			</property>
+			<property name="nav-down" default-value="auto" browser-support='{"opera":"false"}' type="mixed" syntax="auto|id|target-name|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies where to navigate when using the arrow-down navigation key</description>
+			</property>
+			<property name="nav-index" default-value="auto" browser-support='{"opera":"false"}' type="mixed" syntax="auto|number|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the tabbing order for an element</description>
+			</property>
+			<property name="nav-left" default-value="auto" browser-support='{"opera":"false"}' type="mixed" syntax="auto|id|target-name|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies where to navigate when using the arrow-left navigation key</description>
+			</property>
+			<property name="nav-right" default-value="auto" browser-support='{"opera":"false"}' type="mixed" syntax="auto|id|target-name|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies where to navigate when using the arrow-right navigation key</description>
+			</property>
+			<property name="nav-up" default-value="auto" browser-support='{"opera":"false"}' type="mixed" syntax="auto|id|target-name|inherit">
+				<values>
+					<value>auto</value>
+					<value>inherit</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies where to navigate when using the arrow-up navigation key</description>
+			</property>
+			<property name="outline-offset" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false"}' type="mixed" syntax="length|inherit">
+				<values>
+					<value></value>
+					<value>inherit</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Offsets an outline, and draws it beyond the border edge</description>
+			</property>
+			<property name="resize" default-value="none" browser-support='{"firefox":"false", "webkit":"false"}' type="select" syntax="none|both|horizontal|vertical">
+				<values>
+					<value>none</value>
+					<value>both</value>
+					<value>horizontal</value>
+					<value>vertical</value>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether or not an element is resizable by the user</description>
+			</property>
+		</category>
+		<category name="aural" title="Aural" class="auralTile" group-id="misc" group-title="Miscellaneous">
+			<property name="azimuth" default-value="center" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="angle|left-side|far-left|left|center-left|center|center-right|right|far-right|right-side|behind|leftwards|rightwards">
+				<values>
+					<value>center</value>
+					<value>left-side</value>
+					<value>far-left</value>
+					<value>left</value>
+					<value>center-left</value>
+					<value>center-right</value>
+					<value>right</value>
+					<value>far-right</value>
+					<value>right-side</value>
+					<value>behind</value>
+					<value>leftwards</value>
+					<value>rightwards</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Sets where the sound should come from</description>
+			</property>
+			<property name="cue" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="cue-before cue-after">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the cue properties in one declaration</description>
+			</property>
+			<property name="cue-after" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|url">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a sound to be played after speaking an element's content</description>
+			</property>
+			<property name="cue-before" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="none|url">
+				<values>
+					<value>none</value>
+					<value></value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a sound to be played before speaking an element's content</description>
+			</property>
+			<property name="elevation" default-value="level" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="angle|below|level|above|higher|lower">
+				<values>
+					<value>level</value>
+					<value>angle</value>
+					<value>below</value>
+					<value>above</value>
+					<value>higher</value>
+					<value>lower</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Sets where the sound should come from</description>
+			</property>
+			<property name="pause" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="pause-before pause-after">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Sets the pause properties in one declaration</description>
+			</property>
+			<property name="pause-after" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="time|%">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a pause after speaking an element's content</description>
+			</property>
+			<property name="pause-before" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="time|%">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies a pause before speaking an element's content</description>
+			</property>
+			<property name="pitch" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="frequency|x-low|low|medium|high|x-high">
+				<values>
+					<value>medium</value>
+					<value>frequency</value>
+					<value>x-low</value>
+					<value>low</value>
+					<value>high</value>
+					<value>x-high</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies the speaking voice</description>
+			</property>
+			<property name="pitch-range" default-value="50" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="number">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies the variation in the speaking voice. (Monotone voice or animated voice?)</description>
+			</property>
+			<property name="play-during" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="auto|none|url|mix|repeat">
+				<values>
+					<value>auto</value>
+					<value>none</value>
+					<value>mix</value>
+					<value>repeat</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies a sound to be played while speaking an element's content</description>
+			</property>
+			<property name="richness" default-value="50" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="number">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies the richness of the speaking voice. (Rich voice or thin voice?)</description>
+			</property>
+			<property name="speak" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="normal|none|spell-out">
+				<values>
+					<value>normal</value>
+					<value>none</value>
+					<value>spell-out</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies whether content will render aurally</description>
+			</property>
+			<property name="speak-as" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="speak-header" default-value="once" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="always|once">
+				<values>
+					<value>once</value>
+					<value>always</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies how to handle table headers. Should the headers be spoken before every cell, or only before a cell with a different header than the previous cell</description>
+			</property>
+			<property name="speak-numeral" default-value="continuous" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="digits|continuous">
+				<values>
+					<value>digits</value>
+					<value>continuous</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies how to speak numbers</description>
+			</property>
+			<property name="speak-punctuation" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="none|code">
+				<values>
+					<value>none</value>
+					<value>code</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies how to speak punctuation characters</description>
+			</property>
+			<property name="speech-rate" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="mixed" syntax="number|x-slow|slow|medium|fast|x-fast|faster|slower">
+				<values>
+					<value>medium</value>
+					<value>number</value>
+					<value>x-slow</value>
+					<value>slow</value>
+					<value>fast</value>
+					<value>x-fast</value>
+					<value>faster</value>
+					<value>slower</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies the speed of the speaking</description>
+			</property>
+			<property name="stress" default-value="50" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="number">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies the "stress" in the speaking voice</description>
+			</property>
+			<property name="voice-family" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="specific-voice|generic-voice">
+				<values>
+					<value>specific-voice</value>
+					<value>generic-voice</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+					<version>3.0</version>
+				</versions>
+				<description>Specifies the voice family of the speaking</description>
+			</property>
+			<property name="volume" default-value="medium" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="select" syntax="number|%|silent|x-soft|soft|medium|loud|x-loud">
+				<values>
+					<value>medium</value>
+					<value>silent</value>
+					<value>x-soft</value>
+					<value>soft</value>
+					<value>loud</value>
+					<value>x-loud</value>
+				</values>
+				<versions>
+					<version>2.0</version>
+					<version>2.1</version>
+				</versions>
+				<description>Specifies the volume of the speaking</description>
+			</property>
+		</category>
+		<category name="misc" title="Miscellaneous" class="miscTile" group-id="misc" group-title="Miscellaneous">
+			<property name="align-content" default-value="stretch" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="align-items" default-value="stretch" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="align-self" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="anchor-point" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="binding" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="bleed" default-value="6pt" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="bookmark-state" default-value="open" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="break-after" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="break-before" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="break-inside" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex-basis" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex-direction" default-value="row" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex-flow" default-value="" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex-grow" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex-shrink" default-value="1" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="flex-wrap" default-value="nowrap" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-feature-settings" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-kerning" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-language-override" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-synthesis" default-value="weight style" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-variant-alternates" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-variant-caps" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-variant-east-asian" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-variant-ligatures" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-variant-numeric" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="font-variant-position" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-cell" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-column" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-column-align" default-value="stretch" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-column-sizing" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-column-span" default-value="1" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-flow" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-row" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-row-align" default-value="stretch" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-row-sizing" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-row-span" default-value="1" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="grid-template" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="image-rendering" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="justify-content" default-value="flex-start" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="line-break" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="marker-offset" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>2.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="marquee-loop" default-value="1" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="order" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="overflow-wrap" default-value="normal" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="presentation-level" default-value="0" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="tab-size" default-value="8" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-decoration-color" default-value="currentColor" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-decoration-line" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-decoration-skip" default-value="objects" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-decoration-style" default-value="solid" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-emphasis" default-value="none" browser-support='{}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-emphasis-color" default-value="currentColor" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-emphasis-position" default-value="above right" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-emphasis-style" default-value="none" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-space-collapse" default-value="collapse" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+			<property name="text-underline-position" default-value="auto" browser-support='{"firefox":"false", "opera":"false", "webkit":"false", "iexplorer":"false"}' type="input" syntax="">
+				<values>
+				</values>
+				<versions>
+					<version>3.0</version>
+				</versions>
+				<description></description>
+			</property>
+		</category>
+	</properties>
+</css>

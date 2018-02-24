@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="cde_templates" class="cld_pool">
+	<div class="infoTemplate">
+		<div class="infoTileWrapper">
+			<span class="className"></span>
+			<div class="deprecatedOverlay"></div>
+			<div class="topRightInfo">
+				<div class="classCreated"></div>
+				<div class="classRevised"></div>
+			</div>
+			<div class="classRelations">
+				<div class="classExtends"></div>
+				<div class="classImplements"></div>
+			</div>
+			<div class="classDescription">
+				<input type="text" title="Title" placeholder="Title" />
+				<textarea title="Description" placeholder="Description"></textarea>
+				<input type="text" title="Exceptions" class="classThrows" placeholder="Exceptions Thrown" />
+			</div>
+			<div class="deprecatedTile">
+				<div class="deprecatedLabel">
+					<label>Deprecated</label>
+					<input type="checkbox" value="deprecated" />
+				</div>
+				<input type="text" placeholder="Description" title="Deprecate instructions" class="deprecatedDescription" />
+			</div>
+		</div>
+	</div>
+	<div class="constantTemplate">
+		<div class="constantTileWrapper">
+			<div class="discontinuedOverlay"></div>
+			<span class="constantName"></span>
+			<input type="text" title="Type" class="constantType" placeholder="Type" />
+			<input type="text" title="Description" class="constantDescription" placeholder="Description" />
+			<div class="discontinuedTile"><label>Discontinued</label></div>
+		</div>
+	</div>
+	<div class="propertyTemplate">
+		<div class="propertyTileWrapper">
+			<div class="discontinuedOverlay"></div>
+			<span class="propertyName"></span>
+			<span class="propertyStatic">STATIC</span>
+			<input type="text" title="Type" class="propertyType" placeholder="Type" />
+			<input type="text" title="Description" class="propertyDescription" placeholder="Description" />
+			<div class="discontinuedTile"><label>Discontinued</label></div>
+		</div>
+	</div>
+	<div class="methodTemplate">
+		<div class="methodTileWrapper">
+			<div class="deprecatedOverlay"></div>
+			<div class="discontinuedOverlay"></div>
+			<div class="methodName">
+				<input type="text" title="Return Type" class="methodReturnType" placeholder="Return Type" />
+				<span></span>
+			</div>
+			<span class="methodStatic">STATIC</span>
+			<span class="methodAbstract">ABSTRACT</span>
+			<textarea title="Description" class="methodDescription" placeholder="Description"></textarea>
+			<textarea title="Return Value Description" class="methodReturnDescription" placeholder="Return Value Description"></textarea>
+			<input type="text" title="Exceptions" class="methodThrows" placeholder="Exceptions Thrown" />
+			<label class="argumentsHeader">Parameters</label>
+			<div class="argumentList">
+				<div class="argumentTileWrapper">
+					<span class="argumentName"></span>
+					<input type="text" title="Type" class="argumentType" placeholder="Type" />
+					<span class="argumentDefault"></span>
+					<textarea title="Description" class="argumentDescription" placeholder="Description"></textarea>
+				</div>
+			</div>
+			<div class="deprecatedTile">
+				<label>Deprecated</label>
+				<input type="checkbox" value="deprecated" />
+				<input type="text" placeholder="Description" title="Deprecate instructions" class="deprecatedDescription" />
+			</div>
+			<div class="discontinuedTile">
+				<label>Discontinued</label>
+			</div>
+		</div>
+	</div>
+</div>

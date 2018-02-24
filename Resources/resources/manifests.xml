@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Manifests>
+  <manifest id="mf1481901838" name="profile_api" enabled="1">
+    <plist>
+      <library name="API">
+        <package name="Profile"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf670959025" name="retail_api" enabled="1" retail="1" enterprise="1">
+    <plist>
+      <library name="RTL">
+        <package name="Finances"/>
+        <package name="Invoices"/>
+        <package name="Products"/>
+        <package name="Profile"/>
+        <package name="Relations"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf313250178" name="bugtracker_api" enabled="1" premium="1">
+    <plist>
+      <library name="BT">
+        <package name="Issues"/>
+        <package name="Projects"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf63194991" name="app_resources" enabled="1">
+    <plist>
+      <library name="AEL">
+        <package name="Resources"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf1365482111" name="boss_dashboard">
+    <plist>
+      <library name="BSS">
+        <package name="Dashboard"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf2124304177" name="boss_market" private="1" enabled="1">
+    <plist>
+      <library name="BSS">
+        <package name="Market"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf660410549" name="enp_api" enterprise="1" enabled="1">
+    <plist>
+      <library name="ENP">
+        <package name="Relations"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf512646576" name="comm_api" premium="1" enabled="1">
+    <plist>
+      <library name="AEL">
+        <package name="Mail"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf829762187" name="identity_api" private="1" enabled="1" premium="1">
+    <plist>
+      <library name="AEL"><package name="Identity"></package></library>
+      <library name="API"><package name="Login"></package></library>
+      <library name="DRVC"><package name="Comm"></package><package name="Profile"></package><package name="Security"></package></library>
+    </plist>
+  </manifest>
+  <manifest id="mf1912149344" name="uba_tracking" private="1" enabled="1">
+    <plist>
+      <library name="UBA">
+        <package name="Analytics"/>
+      </library>
+    </plist>
+  </manifest>
+  <manifest id="mf812288213" name="tracker_api" private="1">
+    <plist/>
+  </manifest>
+</Manifests>

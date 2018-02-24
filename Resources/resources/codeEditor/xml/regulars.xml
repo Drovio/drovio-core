@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regulars>
+	<group name='filter'>
+		<regexp name='stringAreas' class='astring' modifiers='m' priority='major' identifier="'">(['])(?:(?!\1)[^\\]|\\[\w\W])*\1?</regexp>
+		<regexp name='stringAreas' class='qstring' modifiers='m' priority='major' identifier='"'>(["])(?:(?!\1)[^\\]|\\[\w\W])*\1?</regexp>
+	</group>
+</regulars>

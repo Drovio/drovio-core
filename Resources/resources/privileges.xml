@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenAPI>
+  <library name="AEL"><package name="Docs"></package><package name="Environment"></package><package name="Literals"></package><package name="Platform"></package><package name="Profiler"></package><package name="Security"></package></library>
+  <library name="API"><package name="Comm"></package><package name="Geoloc"></package><package name="Platform"></package></library>
+  <library name="BSS"><package name="WebDocs"></package></library>
+  <library name="DEV"><package name="Documentation"></package><package name="Tools"></package></library>
+  <library name="ESS"><package name="Prototype"></package></library>
+  <library name="GTL"><package name="Docs"></package></library>
+  <library name="INU"><package name="Views"></package></library>
+  <library name="UI"><package name="Apps"></package><package name="Content"></package><package name="Developer"></package><package name="Forms"></package><package name="Html"></package><package name="Interactive"></package><package name="Login"></package><package name="Navigation"></package><package name="Presentation"></package><package name="Prototype"></package></library>
+</OpenAPI>

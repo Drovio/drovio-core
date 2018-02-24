@@ -1,0 +1,26 @@
+.cssEditor .previewWrapper, .cssEditor .previewWrapper div, .cssEditor .previewWrapper span, .cssEditor .previewWrapper applet, .cssEditor .previewWrapper object, .cssEditor .previewWrapper iframe, .cssEditor .previewWrapper h1, .cssEditor .previewWrapper h2, .cssEditor .previewWrapper h3, .cssEditor .previewWrapper h4, .cssEditor .previewWrapper h5, .cssEditor .previewWrapper h6, .cssEditor .previewWrapper p, .cssEditor .previewWrapper blockquote, .cssEditor .previewWrapper pre, .cssEditor .previewWrapper a, .cssEditor .previewWrapper abbr, .cssEditor .previewWrapper acronym, .cssEditor .previewWrapper address, .cssEditor .previewWrapper big, .cssEditor .previewWrapper cite, .cssEditor .previewWrapper code, .cssEditor .previewWrapper del, .cssEditor .previewWrapper dfn, .cssEditor .previewWrapper em, .cssEditor .previewWrapper img, .cssEditor .previewWrapper ins, .cssEditor .previewWrapper kbd, .cssEditor .previewWrapper q, .cssEditor .previewWrapper s, .cssEditor .previewWrapper samp, .cssEditor .previewWrapper small, .cssEditor .previewWrapper strike, .cssEditor .previewWrapper strong, .cssEditor .previewWrapper sub, .cssEditor .previewWrapper sup, .cssEditor .previewWrapper tt, .cssEditor .previewWrapper var, .cssEditor .previewWrapper b, .cssEditor .previewWrapper u, .cssEditor .previewWrapper i, .cssEditor .previewWrapper center, .cssEditor .previewWrapper dl, .cssEditor .previewWrapper dt, .cssEditor .previewWrapper dd, .cssEditor .previewWrapper ol, .cssEditor .previewWrapper ul, .cssEditor .previewWrapper li, .cssEditor .previewWrapper fieldset, .cssEditor .previewWrapper form, .cssEditor .previewWrapper label, .cssEditor .previewWrapper legend, .cssEditor .previewWrapper table, .cssEditor .previewWrapper caption, .cssEditor .previewWrapper tbody, .cssEditor .previewWrapper tfoot, .cssEditor .previewWrapper thead, .cssEditor .previewWrapper tr, .cssEditor .previewWrapper th, .cssEditor .previewWrapper td, .cssEditor .previewWrapper article, .cssEditor .previewWrapper aside, .cssEditor .previewWrapper canvas, .cssEditor .previewWrapper details, .cssEditor .previewWrapper embed, .cssEditor .previewWrapper figure, .cssEditor .previewWrapper figcaption, .cssEditor .previewWrapper footer, .cssEditor .previewWrapper header, .cssEditor .previewWrapper hgroup, .cssEditor .previewWrapper menu, .cssEditor .previewWrapper nav, .cssEditor .previewWrapper output, .cssEditor .previewWrapper ruby, .cssEditor .previewWrapper section, .cssEditor .previewWrapper summary, .cssEditor .previewWrapper time, .cssEditor .previewWrapper mark, .cssEditor .previewWrapper audio, .cssEditor .previewWrapper video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.cssEditor .previewWrapper { line-height: 1; }
+.cssEditor .previewWrapper ol, .cssEditor .previewWrapper ul { list-style: none; }
+.cssEditor .previewWrapper table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.cssEditor .previewWrapper caption, .cssEditor .previewWrapper th, .cssEditor .previewWrapper td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+.cssEditor .previewWrapper q, .cssEditor .previewWrapper blockquote { quotes: none; }
+.cssEditor .previewWrapper q:before, .cssEditor .previewWrapper q:after, .cssEditor .previewWrapper blockquote:before, .cssEditor .previewWrapper blockquote:after {
+	content: "";
+	content: none;
+}
+.cssEditor .previewWrapper a img { border: none; }
+.cssEditor .previewWrapper article, .cssEditor .previewWrapper aside, .cssEditor .previewWrapper details, .cssEditor .previewWrapper figcaption, .cssEditor .previewWrapper figure, .cssEditor .previewWrapper footer, .cssEditor .previewWrapper header, .cssEditor .previewWrapper hgroup, .cssEditor .previewWrapper menu, .cssEditor .previewWrapper nav, .cssEditor .previewWrapper section, .cssEditor .previewWrapper summary { display: block; }

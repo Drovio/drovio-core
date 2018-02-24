@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation>
+	<group id="myHome">
+		<menu id="navHome" class="home">
+			<title>
+				<literal>
+					<scope>sub.my</scope>
+					<name>lbl_home</name>
+				</literal>
+			</title>
+			<navigation type="web">
+				<href>my::/</href>
+				<target>_self</target>
+			</navigation>
+			<navigation type="dynamic">
+				<module>39</module>
+				<action></action>
+				<holder></holder>
+			</navigation>
+		</menu>
+	</group>
+	<group id="mySettings">
+		<menu id="navSettings" class="settings">
+			<title>
+				<literal>
+					<scope>sub.my</scope>
+					<name>lbl_accountSettings</name>
+				</literal>
+			</title>
+			<navigation type="web">
+				<href>my::/settings/</href>
+				<target>_self</target>
+			</navigation>
+			<navigation type="dynamic">
+				<module>159</module>
+				<action></action>
+				<holder></holder>
+			</navigation>
+		</menu>
+	</group>
+	<group id="myRelations">
+		<menu id="navRelations" class="relations">
+			<title>
+				<literal>
+					<scope>sub.my</scope>
+					<name>lbl_myRelations</name>
+				</literal>
+			</title>
+			<navigation type="web">
+				<href>my::/relations/</href>
+				<target>_self</target>
+			</navigation>
+			<navigation type="dynamic">
+				<module>259</module>
+				<action></action>
+				<holder></holder>
+			</navigation>
+		</menu>
+	</group>
+	<group id="myServices">
+		<menu id="navServices" class="services">
+			<title>
+				<literal>
+					<scope>sub.my</scope>
+					<name>lbl_services</name>
+				</literal>
+			</title>
+			<navigation type="web">
+				<href>my::/services/</href>
+				<target>_self</target>
+			</navigation>
+			<navigation type="dynamic">
+				<module>98</module>
+				<action></action>
+				<holder></holder>
+			</navigation>
+		</menu>
+	</group>
+</navigation>

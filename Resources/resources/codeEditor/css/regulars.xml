@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regulars>
+	<group name='filter'>
+		<regexp name='multilineComments' class='mlcomment' modifiers='m' priority='major' identifier='/*'>\/\*[\w\W]*?\*\/|\/\*[\w\W]*</regexp>
+		<regexp name='properties' class='prop' modifiers='m' priority='minor'>[\w-]+(?=[ \t]*:)(?=[^{]*})</regexp>
+	</group>
+</regulars>

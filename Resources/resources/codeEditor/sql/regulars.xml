@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regulars>
+	<group name='filter'>
+		<regexp name='stringAreas' class='astring' modifiers='m' priority='major' identifier="'">(['])(?:(?!\1)[^\\]|\\[\w\W])*\1?</regexp>
+		<regexp name='stringAreas' class='qstring' modifiers='m' priority='major' identifier='"'>(["])(?:(?!\1)[^\\]|\\[\w\W])*\1?</regexp>
+		<regexp name='delimiters' class='delimiter' modifiers='' priority='minor'>[\(\)\[\]\{\}]</regexp>
+		<regexp name='delimiters' class='delimiter' modifiers='' priority='minor'>(\bAS\b|\bIN\b|\bIS\b|\bNULL\b|\bASC\b|\bDESC\b|\bAND\b|\bOR\b)</regexp>
+		<regexp name='lineComments' class='lcomment' modifiers='' priority='major'>\-\-[ \t].*\n</regexp>
+		<regexp name='multilineComments' class='mlcomment' modifiers='m' priority='major' identifier='/*'>(\/\*)(?:(?!(\*\/))[^\\]|\\[\w\W])*(\*\/)?</regexp>
+		<regexp name='multilineCommentsBr' class='mlcommentbr' modifiers='m' priority='major'>\{((?!\})[^\v])*.{0,2}</regexp>
+		<regexp name='vars' class='var' modifiers='' priority='minor'>\@[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</regexp>
+	</group>
+</regulars>

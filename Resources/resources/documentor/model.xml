@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="" abstract="" namespace="">
+	<prototypes>
+		<const type="" name="">
+			<description></description>
+		</const>
+		<prop type="" name="">
+			<description></description>
+		</prop>
+		<method name="" returntype="">
+			<description></description>
+			<returndescription/>
+			<parameters/>
+			<throws/>
+			<deprecated/>
+		</method>
+		<parameter name="" type="" defaultvalue="">
+			<description></description>
+		</parameter>
+	</prototypes>
+	<info>
+		<version/>
+		<datecreated></datecreated>
+		<daterevised></daterevised>
+		<extends></extends>
+		<implements/>
+		<throws/>
+		<title></title>
+		<description></description>
+		<deprecated/>
+	</info>
+	<constants/>
+	<properties>
+		<scope type="public"/>
+		<scope type="protected"/>
+		<scope type="private"/>
+	</properties>
+	<methods>
+		<scope type="public"/>
+		<scope type="protected"/>
+		<scope type="private"/>
+	</methods>
+</class>

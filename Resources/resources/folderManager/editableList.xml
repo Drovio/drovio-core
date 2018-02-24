@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folders>
+	<path>\/{1,2}.developer\/{1,2}Repository\/{1,2}.{5,}</path>
+	<path>\/{1,2}.developer\/{1,2}TestingTrunk\/{1,2}.{4,}</path>
+	<path>\/{1,2}.library\/{1,2}.{10,}</path>
+	<path>\/{1,2}.profile\/{1,2}Accounts\/{1,2}.{4,}</path>
+	<path>\/{1,2}.profile\/{1,2}Teams\/{1,2}.{4,}</path>
+	<path>\/{1,2}.cdn\/{1,2}.{4,}</path>
+	<path>\/{1,2}System\/{1,2}Library\/{1,2}.{5,}</path>
+	<path>\/{1,2}System\/{1,2}Resources\/{1,2}.{5,}</path>
+</folders>

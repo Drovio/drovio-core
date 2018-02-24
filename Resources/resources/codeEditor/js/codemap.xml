@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codemap>
+	<group name="cmFunctions" title="Functions" />
+	<group name="cmEvents" title="Events" />
+</codemap>

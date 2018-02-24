@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation id="devHome">
+	<group>
+		<menu id="navHome" class="home">
+			<title>
+				<literal>
+					<scope>sub.developer</scope>
+					<name>toolbarnav.lbl_home</name>
+				</literal>
+			</title>
+		</menu>
+		<collection id="devDeveloper" ribbon="float" type="obedient toggle">
+			<module>100</module>
+			<action>TLB_developer</action>
+			<startup>1</startup>
+		</collection>
+	</group>
+	<group>
+		<menu id="navDashboard" class="dashboard">
+			<title>
+				<literal>
+					<scope>sub.developer</scope>
+					<name>toolbarnav.lbl_dashboard</name>
+				</literal>
+			</title>
+		</menu>
+		<collection id="devDashboard" ribbon="float" type="obedient toggle">
+			<module>100</module>
+			<action>TLB_dashboard</action>
+			<startup>1</startup>
+		</collection>
+	</group>
+</navigation>

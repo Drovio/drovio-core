@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regulars>
+	<group name='filter'>
+		<regexp name='stringAreas' class='astring' modifiers='m' priority='major' identifier="'">(['])(?:(?!\1)[^\\]|\\[\w\W])*\1?</regexp>
+		<regexp name='stringAreas' class='qstring' modifiers='m' priority='major' identifier='"'>(["])(?:(?!\1)[^\\]|\\[\w\W])*\1?</regexp>
+		<regexp name='regexAreas' class='regex' modifiers='' priority='major'>([\/])(?![*])(?:(?!\1)[^\\\r\n]|\\[\w\W])+\1</regexp>
+		<regexp name='delimiters' class='delimiter' modifiers='' priority='minor'>[\(\)\[\]\{\}]</regexp>
+		<regexp name='lineComments' class='lcomment' modifiers='' priority='major'>\/\/.*(?=[\n\r])</regexp>
+		<regexp name='multilineComments' class='mlcomment' modifiers='m' priority='major' identifier='/*'>\/\*[\w\W]*?\*\/|\/\*[\w\W]*</regexp>
+		<regexp name='numbers' class='num' modifiers='' priority='minor'>\b[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\b</regexp>
+	</group>
+</regulars>

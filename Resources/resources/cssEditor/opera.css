@@ -1,0 +1,408 @@
+/* Copyright 2010 Opera Software */
+
+.cssEditor .previewWrapper a {
+	color: #00C;
+	text-decoration: underline;
+}
+
+.cssEditor .previewWrapper a:visited {
+	color: #800080;
+}
+
+.cssEditor .previewWrapper abbr {
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+}
+
+.cssEditor .previewWrapper address {
+	display: block;
+	font-style: italic;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.cssEditor .previewWrapper area {
+	display: none;
+}
+
+.cssEditor .previewWrapper audio {
+	display: none;
+}
+
+.cssEditor .previewWrapper audio[controls] {
+	display: inline;
+}
+
+.cssEditor .previewWrapper b {
+	font-weight: bold;
+}
+
+.cssEditor .previewWrapper base {
+	display: none;
+}
+
+.cssEditor .previewWrapper bdo {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+.cssEditor .previewWrapper blockquote {
+	display: block;
+	margin: 1em 10px 1em 40px;
+}
+
+.cssEditor .previewWrapper [dir=rtl] blockquote {
+	margin: 1em 10px 1em 40px;
+}
+
+.cssEditor .previewWrapper button {
+	border-width: 2px;
+	color: #000;
+	display: inline-block;
+	font-family: use-lang-def;
+	font-size: 13px;
+	font-weight: 400;
+	padding: 1px 8px;
+	text-align: center;
+	text-indent: 0;
+	white-space: nowrap;
+}
+
+.cssEditor .previewWrapper caption {
+	display: table-caption;
+	text-align: center;
+}
+
+.cssEditor .previewWrapper cite {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper code {
+	font-family: use-lang-def;
+	font-size: 0.81em;
+}
+
+.cssEditor .previewWrapper col {
+	display: table-column;
+}
+
+.cssEditor .previewWrapper colgroup {
+	display: table-column-group;
+}
+
+.cssEditor .previewWrapper datalist {
+	display: none;
+}
+
+.cssEditor .previewWrapper dd {
+	margin: 0 0 0 40px;
+}
+
+.cssEditor .previewWrapper [dir=rtl] dd {
+	margin: 0 40px 0 0;
+}
+
+.cssEditor .previewWrapper del {
+	text-decoration: line-through;
+}
+
+.cssEditor .previewWrapper dfn {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper div {
+	display: block;
+}
+
+.cssEditor .previewWrapper dl {
+	display: block;
+	margin: 1em 0;
+}
+
+.cssEditor .previewWrapper dt {
+	display: block;
+}
+
+.cssEditor .previewWrapper em {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper fieldset {
+	border-style: groove;
+	border-width: 2px;
+	display: block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 0.33em 0.67em 0.75em;
+}
+
+.cssEditor .previewWrapper form {
+	display: block;
+}
+
+.cssEditor .previewWrapper h1 {
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0.67em 0;
+}
+
+.cssEditor .previewWrapper h2 {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0.83em 0;
+}
+
+.cssEditor .previewWrapper h3 {
+	display: block;
+	font-size: 1.17em;
+	font-weight: bold;
+	margin: 1em 0;
+}
+
+.cssEditor .previewWrapper h4 {
+	display: block;
+	font-weight: bold;
+	margin: 1em 0;
+}
+
+.cssEditor .previewWrapper h5 {
+	display: block;
+	font-size: 0.83em;
+	font-weight: bold;
+	margin: 1.67em 0;
+}
+
+.cssEditor .previewWrapper h6 {
+	display: block;
+	font-size: 0.67em;
+	font-weight: bold;
+	margin: 2.33em 0;
+}
+
+.cssEditor .previewWrapper hr {
+	border-style: inset;
+	border-width: 1px;
+	box-sizing: content-box;
+	display: block;
+	height: 0;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.cssEditor .previewWrapper i {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper iframe {
+	border-style: inset;
+	border-width: 2px;
+}
+
+.cssEditor .previewWrapper input {
+	border-width: 2px;
+	color: #000;
+	font-family: use-lang-def;
+	font-size: 13px;
+	font-weight: 400;
+	padding: 1px;
+	text-align: default;
+	text-indent: 0;
+	text-transform: none;
+}
+
+.cssEditor .previewWrapper ins {
+	text-decoration: underline;
+}
+
+.cssEditor .previewWrapper kbd {
+	font-family: use-lang-def;
+	font-size: 0.81em;
+}
+
+.cssEditor .previewWrapper keygen {
+	border-width: 2px;
+	color: #000;
+	font-family: use-lang-def;
+	font-size: 13px;
+	font-weight: 400;
+	padding: 1px;
+	text-align: default;
+	text-indent: 0;
+}
+
+.cssEditor .previewWrapper legend {
+	display: block;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.cssEditor .previewWrapper li {
+	display: list-item;
+}
+
+.cssEditor .previewWrapper link {
+	display: none;
+}
+
+.cssEditor .previewWrapper menu {
+	display: block;
+	margin: 1em 0 1em 40px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.cssEditor .previewWrapper [dir=rtl] menu {
+	margin: 1em 40px 1em 0;
+}
+
+.cssEditor .previewWrapper meta {
+	display: none;
+}
+
+.cssEditor .previewWrapper noscript {
+	display: none;
+}
+
+.cssEditor .previewWrapper ol {
+	padding: 0 40px 0 0;
+}
+
+.cssEditor .previewWrapper optgroup {
+	text-indent: 0;
+}
+
+.cssEditor .previewWrapper option {
+	text-indent: 0;
+}
+
+.cssEditor .previewWrapper p {
+	display: block;
+	margin: 1em 0;
+}
+
+.cssEditor .previewWrapper pre {
+	display: block;
+	font-family: use-lang-def;
+	font-size: 0.81em;
+	margin: 1em 0;
+	white-space: pre;
+}
+
+.cssEditor .previewWrapper q {
+	quotes: "\"" "\"" "'" "'";
+}
+
+.cssEditor .previewWrapper samp {
+	font-family: use-lang-def;
+	font-size: 0.81em;
+}
+
+.cssEditor .previewWrapper script {
+	display: none;
+}
+
+.cssEditor .previewWrapper select {
+	border-width: 2px;
+	color: #000;
+	font-family: use-lang-def;
+	font-size: 13px;
+	font-weight: 400;
+	padding: 1px;
+	text-align: default;
+	text-indent: 0;
+}
+
+.cssEditor .previewWrapper strong {
+	font-weight: bold;
+}
+
+.cssEditor .previewWrapper style {
+	display: none;
+}
+
+.cssEditor .previewWrapper sub {
+	vertical-align: sub;
+}
+
+.cssEditor .previewWrapper sup {
+	vertical-align: super;
+}
+
+.cssEditor .previewWrapper table {
+	border-spacing: 2px;
+	display: table;
+
+	text-indent: 0;
+}
+
+.cssEditor .previewWrapper tbody {
+	display: table-row-group;
+	vertical-align: middle;
+}
+
+.cssEditor .previewWrapper td {
+	display: table-cell;
+	padding: 1px;
+	vertical-align: inherit;
+}
+
+.cssEditor .previewWrapper textarea {
+	border-width: 2px;
+	color: #000;
+	font-family: use-lang-def;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: normal;
+	padding: 1px;
+	text-align: default;
+	text-indent: 0;
+	text-transform: none;
+}
+
+.cssEditor .previewWrapper tfoot {
+	display: table-footer-group;
+	vertical-align: middle;
+}
+
+.cssEditor .previewWrapper th {
+	display: table-cell;
+	font-weight: bold;
+	padding: 1px;
+	vertical-align: inherit;
+}
+
+.cssEditor .previewWrapper thead {
+	display: table-header-group;
+	vertical-align: middle;
+}
+
+.cssEditor .previewWrapper title {
+	display: none;
+}
+
+.cssEditor .previewWrapper tr {
+	display: table-row;
+	vertical-align: inherit;
+}
+
+.cssEditor .previewWrapper ul {
+	display: block;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+
+.cssEditor .previewWrapper [dir=rtl] ul {
+	padding: 0 40px 0 0;
+}
+
+.cssEditor .previewWrapper var {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper video {
+	display: inline;
+}

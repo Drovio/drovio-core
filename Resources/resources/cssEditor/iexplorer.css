@@ -1,0 +1,406 @@
+.cssEditor .previewWrapper [dir=rtl] dd {
+	margin: 0 40px 0 0;
+}
+
+.cssEditor .previewWrapper [dir=rtl] menu {
+	padding: 0 30pt 0 0;
+}
+
+.cssEditor .previewWrapper [dir=rtl] ol {
+	padding: 0 30pt 0 0;
+}
+
+.cssEditor .previewWrapper [dir=rtl] ul {
+	padding: 0 30pt 0 0;
+}
+
+.cssEditor .previewWrapper a {
+	color: #06C;
+	text-decoration: underline;
+}
+
+.cssEditor .previewWrapper a:visited {
+	color: #80080;
+}
+
+.cssEditor .previewWrapper address {
+	display: block;
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper b {
+	font-weight: bold;
+}
+
+.cssEditor .previewWrapper bdo {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+.cssEditor .previewWrapper blockquote {
+	display: block;
+	margin: 1em 40px;
+}
+
+.cssEditor .previewWrapper button {
+	background-color: #F0F0F0;
+	border-width: 3px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 10pt;
+	overflow: hidden;
+	padding: 1px 8px;
+	text-align: center;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper caption {
+	display: table-caption;
+	text-align: center;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper cite {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper code {
+	font-family: monospace;
+	font-size: 10pt;
+}
+
+.cssEditor .previewWrapper col {
+	box-sizing: border-box;
+	display: table-column;
+}
+
+.cssEditor .previewWrapper colgroup {
+	box-sizing: border-box;
+	display: table-column-group;
+}
+
+.cssEditor .previewWrapper dd {
+	display: block;
+	margin: 0 0 0 40px;
+}
+
+.cssEditor .previewWrapper del {
+	text-decoration: line-through;
+}
+
+.cssEditor .previewWrapper dfn {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper div {
+	display: block;
+}
+
+.cssEditor .previewWrapper dl {
+	display: block;
+	margin: 1em 0;
+}
+
+.cssEditor .previewWrapper dt {
+	display: block;
+}
+
+.cssEditor .previewWrapper em {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper embed {
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper fieldset {
+	border-style: groove;
+	border-width: 2px;
+	display: block;
+	margin: 0 2px;
+	padding: 0 2px 3px;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper form {
+	display: block;
+}
+
+.cssEditor .previewWrapper h1 {
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0.67em 0;
+	page-break-after: avoid;
+}
+
+.cssEditor .previewWrapper h2 {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0.83em 0;
+	page-break-after: avoid;
+}
+
+.cssEditor .previewWrapper h3 {
+	display: block;
+	font-size: 1.17em;
+	font-weight: bold;
+	margin: 1em 0;
+	page-break-after: avoid;
+}
+
+.cssEditor .previewWrapper h4 {
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 1.33em 0;
+	page-break-after: avoid;
+}
+
+.cssEditor .previewWrapper h5 {
+	display: block;
+	font-size: 0.83em;
+	font-weight: bold;
+	margin: 1.67em 0;
+	page-break-after: avoid;
+}
+
+.cssEditor .previewWrapper h6 {
+	display: block;
+	font-size: 0.67em;
+	font-weight: bold;
+	margin: 2.33em 0;
+	page-break-after: avoid;
+}
+
+.cssEditor .previewWrapper hr {
+	border-style: inset;
+	border-width: 1px;
+	display: block;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+	overflow: hidden;
+	text-align: center;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper i {
+	font-style: italic;
+}
+
+.cssEditor .previewWrapper iframe {
+	background-color: #FFF;
+	height: 150px;
+	width: 300px;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper img {
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper input {
+	background-color: #FFF;
+	border-width: 2px;
+	font-family: sans-serif;
+	font-size: 10pt;
+	overflow: hidden;
+	padding: 1px;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper ins {
+	text-decoration: underline;
+}
+
+.cssEditor .previewWrapper kbd {
+	font-family: monospace;
+	font-size: 10pt;
+}
+
+.cssEditor .previewWrapper legend {
+	padding: 0 2px;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper li {
+	display: list-item;
+}
+
+.cssEditor .previewWrapper menu {
+	display: block;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 1em 0;
+	padding: 0 0 0 30pt;
+}
+
+.cssEditor .previewWrapper object {
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper ol {
+	display: block;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: decimal;
+	margin: 1em 0;
+	padding: 0 0 0 30pt;
+}
+
+.cssEditor .previewWrapper optgroup {
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.cssEditor .previewWrapper option {
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.cssEditor .previewWrapper p {
+	display: block;
+	margin: 1em 0;
+}
+
+.cssEditor .previewWrapper pre {
+	display: block;
+	font-family: monospace;
+	font-size: 10pt;
+	margin: 1em 0;
+	white-space: pre;
+}
+
+.cssEditor .previewWrapper rp {
+	font-size: 6pt;
+}
+
+.cssEditor .previewWrapper rt {
+	display: ruby-text;
+	font-size: 6pt;
+}
+
+.cssEditor .previewWrapper ruby {
+	display: ruby;
+}
+
+.cssEditor .previewWrapper samp {
+	font-family: monospace;
+	font-size: 10pt;
+}
+
+.cssEditor .previewWrapper script {
+	display: none;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper select {
+	background-color: #FFF;
+	border-width: 1px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 10pt;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper small {
+	font-size: 0.83em;
+}
+
+.cssEditor .previewWrapper strong {
+	font-weight: bold;
+}
+
+.cssEditor .previewWrapper style {
+	display: none;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper sub {
+	font-size: 0.83em;
+}
+
+.cssEditor .previewWrapper sup {
+	font-size: 0.83em;
+}
+
+.cssEditor .previewWrapper table {
+	border-color: #F0F0F0;
+	border-spacing: 2px 2px;
+	box-sizing: border-box;
+	display: table;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper tbody {
+	box-sizing: border-box;
+	display: table-row-group;
+	vertical-align: middle;
+}
+
+.cssEditor .previewWrapper td {
+	display: table-cell;
+	padding: 1px;
+	vertical-align: middle;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper textarea {
+	background-color: #FFF;
+	border-width: 1px;
+	font-family: monospace;
+	font-size: 10pt;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 2px;
+	white-space: pre-wrap;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper tfoot {
+	box-sizing: border-box;
+	display: table-footer-group;
+	vertical-align: middle;
+}
+
+.cssEditor .previewWrapper th {
+	display: table-cell;
+	font-weight: bold;
+	padding: 1px;
+	text-align: center;
+	vertical-align: middle;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper thead {
+	box-sizing: border-box;
+	display: table-header-group;
+	vertical-align: middle;
+}
+
+.cssEditor .previewWrapper tr {
+	box-sizing: border-box;
+	display: table-row;
+	vertical-align: middle;
+	zoom: 1;
+}
+
+.cssEditor .previewWrapper ul {
+	display: block;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 1em 0;
+	padding: 0 0 0 30pt;
+}
+
+.cssEditor .previewWrapper var {
+	font-style: italic;
+}
